@@ -5,25 +5,25 @@
   %general-entities;
 ]>
 
-<sect1 id="foreword" xreflabel="Foreword">
+<sect1 id="foreword" xreflabel="Forord">
   <?dbhtml filename="foreword.html"?>
 
 
-  <title>Foreword</title>
+  <title>Forord</title>
 
   <para>
-    This book is meant to be followed after LFS. It is highly recommended to
-    follow BLFS as well. This book depends on a lot of the packages in that
-    book. You may optionally follow GLFS before this book as well, although
-    all packages in this book should not need any lib32 build instructions.
-    This means MLFS is not a requirement.
+    Denne boken er ment å følges etter LFS. Det anbefales på det sterkeste å 
+    følge BLFS også. Denne boken er avhengig av mange av pakkene i den boken. Du 
+    kan eventuelt følge GLFS før denne boken også, selv om alle pakkene i denne 
+    boken ikke trenger noen lib32 byggeinstruksjoner. Dette betyr at MLFS ikke 
+    er et krav.
   </para>
 
-  <para>Enjoy!</para>
+  <para>Nyt!</para>
 
   <blockquote>
 <literallayout>Zeckma
-December 25th, 2024</literallayout>
+25. desember 2024</literallayout>
   </blockquote>
 
 </sect1>

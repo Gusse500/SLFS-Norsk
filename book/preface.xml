@@ -8,19 +8,19 @@
 <preface id="preface" xreflabel="Preface">
   <?dbhtml filename="preface.html" dir="preface"?>
 
-  <title>Preface</title>
+  <title>Forord</title>
 
   <para>
-    There are a number of packages that don't quite belong in the LFS books
-    (LFS, MLFS, BLFS, or GLFS). However, some packages can be confusing to
-    install beyond these books, sometimes requiring multiple patches to even
-    build, or the setup is confusing.
+    Det finnes en rekke pakker som ikke helt hører hjemme i LFS bøkene (LFS, 
+    MLFS, BLFS eller GLFS). Noen pakker kan imidlertid være forvirrende å 
+    installere utover disse bøkene, noen ganger kreve flere oppdateringer for å 
+    bygge, eller oppsettet er forvirrende.
   </para>
 
   <para>
-    This book is meant to solve this very issue, essentially covering a
-    different number of packages that should have a guide but don't belong in
-    the LFS books.
+    Denne boken er ment å løse nettopp dette problemet, og dekker i hovedsak et 
+    antall forskjellige pakker som burde ha en veiledning, men som ikke hører 
+    hjemme i LFS bøkene.
   </para>
 
   <blockquote>

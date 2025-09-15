@@ -9,11 +9,11 @@
   <?dbhtml filename="whoread.html"?>
 
 
-  <title>Who Would Want to Read this Book</title>
+  <title>Hvem ville ønske å lese denne boken</title>
 
   <para>
-    This book is meant for users who want to install various packages not found
-    in any of the LFS books.
+    Denne boken er ment for brukere som ønsker å installere diverse pakker som 
+    ikke finnes i noen av LFS bøkene.
   </para>
 
 </sect1>

@@ -10,10 +10,10 @@
     <date>$Date$</date>
   </glossaryinfo>
   <?dbhtml filename="glossary.html" dir="appendices"?>
-  <title>Glossary</title>
+  <title>Ordliste</title>
 
   <glossdiv>
-    <title>Acronyms</title>
+    <title>Akronymer</title>
 
     <glossentry id="gABI">
       <glossterm>
@@ -21,7 +21,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Application Binary Interface
+          Applikasjons binært grensesnitt
         </para>
       </glossdef>
     </glossentry>
@@ -32,7 +32,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Application Programming Interface
+          Applikasjonsprogrammeringsgrensesnitt
         </para>
       </glossdef>
     </glossentry>
@@ -43,7 +43,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Address Space Layout Randomization
+          Randomisering av adresseromsoppsett
         </para>
       </glossdef>
     </glossentry>
@@ -65,7 +65,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Central Processing Unit
+          Sentralenhet
         </para>
       </glossdef>
     </glossentry>
@@ -76,7 +76,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Concurrent Versions System
+          System for samtidige versjoner
         </para>
       </glossdef>
     </glossentry>
@@ -87,7 +87,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Frequently Asked Questions
+          Ofte Stilte Spørsmål
         </para>
       </glossdef>
     </glossentry>
@@ -98,7 +98,7 @@
       </glossterm>
       <glossdef>
         <para>
-          File Hierarchy Standard
+          Filhierarkistandard
         </para>
       </glossdef>
     </glossentry>
@@ -109,7 +109,7 @@
       </glossterm>
       <glossdef>
         <para>
-          File Transfer Protocol
+          Filoverføringsprotokoll
         </para>
       </glossdef>
     </glossentry>
@@ -120,7 +120,7 @@
       </glossterm>
       <glossdef>
         <para>
-          <acronym>GNU</acronym> Compiler Collection
+          <acronym>GNU</acronym> Kompilatorsamling
         </para>
       </glossdef>
     </glossentry>
@@ -131,7 +131,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Group IDentity
+          Gruppeidentitet
         </para>
       </glossdef>
     </glossentry>
@@ -153,7 +153,7 @@
       </glossterm>
       <glossdef>
         <para>
-          <acronym>GNU</acronym>'s Not Unix
+          <acronym>GNU</acronym> er ikke Unix
         </para>
       </glossdef>
     </glossentry>
@@ -164,7 +164,7 @@
       </glossterm>
       <glossdef>
         <para>
-          General Public License
+          Allmenn offentlig lisens
         </para>
       </glossdef>
     </glossentry>
@@ -175,7 +175,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Graphical User Interface
+          Grafisk brukergrensesnitt
         </para>
       </glossdef>
     </glossentry>
@@ -186,7 +186,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Hierarchical File System
+          Hierarkisk filsystem
         </para>
       </glossdef>
     </glossentry>
@@ -197,7 +197,7 @@
       </glossterm>
       <glossdef>
         <para>
-          HyperText Markup Language
+          Hypertekst markeringsspråk
         </para>
       </glossdef>
     </glossentry>
@@ -208,7 +208,7 @@
       </glossterm>
       <glossdef>
         <para>
-          HyperText Transfer Protocol
+          Hypertekst overføringsprotokoll
         </para>
       </glossdef>
     </glossentry>
@@ -219,7 +219,7 @@
       </glossterm>
       <glossdef>
         <para>
-          HyperText Transfer Protocol Secured
+          Sikret hypertekst overføringsprotokoll
         </para>
       </glossdef>
     </glossentry>
@@ -230,7 +230,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Internet Message Access Protocol
+          Internett meldingstilgangsprotokoll
         </para>
       </glossdef>
     </glossentry>
@@ -241,7 +241,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Internet Protocol
+          Internett protokoll
         </para>
       </glossdef>
     </glossentry>
@@ -252,7 +252,7 @@
       </glossterm>
       <glossdef>
         <para>
-          JavaScript Object Notation
+          JavaScript objektnotasjon
         </para>
       </glossdef>
     </glossentry>
@@ -274,7 +274,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Library General Public License
+          Generell offentlig lisens for bibliotek
         </para>
       </glossdef>
     </glossentry>
@@ -285,7 +285,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Mail Delivery Agent
+          E-post leveringsagent
         </para>
       </glossdef>
     </glossentry>
@@ -296,7 +296,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Massachusetts Institute of Technology
+          Massachusetts Institutt for teknologi
         </para>
       </glossdef>
     </glossentry>
@@ -318,7 +318,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Mail Transport Agent
+          E-post transportagent
         </para>
       </glossdef>
     </glossentry>
@@ -329,7 +329,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Operating System
+          Operativsystem
         </para>
       </glossdef>
     </glossentry>
@@ -340,7 +340,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Portable Document Format
+          Flyttbart dokumentformat
         </para>
       </glossdef>
     </glossentry>
@@ -351,7 +351,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Position Independent Executable
+          Posisjonsuavhengig kjørbar
         </para>
       </glossdef>
     </glossentry>
@@ -362,7 +362,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Random Access Memory
+          Tilfeldig tilgangsminne
         </para>
       </glossdef>
     </glossentry>
@@ -373,7 +373,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Read-Only Memory
+          Kun Lesbart minne
         </para>
       </glossdef>
     </glossentry>
@@ -384,7 +384,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Standard Build Unit
+          Standard byggetid
         </para>
       </glossdef>
     </glossentry>
@@ -395,7 +395,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Software Development Kit
+          Programvareutviklingssett
         </para>
       </glossdef>
     </glossentry>
@@ -417,7 +417,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Secure SHell
+          Sikkert Skall
         </para>
       </glossdef>
     </glossentry>
@@ -428,7 +428,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Secure Sockets Layer
+          Sikkert Sockets Lag
         </para>
       </glossdef>
     </glossentry>
@@ -439,7 +439,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Stack Smash Protection
+          Stabel knusebeskyttelse
         </para>
       </glossdef>
     </glossentry>
@@ -450,7 +450,7 @@
       </glossterm>
       <glossdef>
         <para>
-          STanDard INput
+          Standard Inndata
         </para>
       </glossdef>
     </glossentry>
@@ -461,7 +461,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Set User IDentity
+          Angi brukeridentitet
         </para>
       </glossdef>
     </glossentry>
@@ -483,7 +483,7 @@
       </glossterm>
       <glossdef>
         <para>
-          User IDentity
+          Brukeridentitet
         </para>
       </glossdef>
     </glossentry>
@@ -494,7 +494,7 @@
       </glossterm>
       <glossdef>
         <para>
-          User Interface
+          Brukergrensesnitt
         </para>
       </glossdef>
     </glossentry>
@@ -505,7 +505,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Plural form of Unix
+          Flertallsform av Unix
         </para>
       </glossdef>
     </glossentry>
@@ -516,7 +516,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Uniform Resource Locator
+          Ensartet ressurssøker
         </para>
       </glossdef>
     </glossentry>
@@ -527,7 +527,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Universal Serial Bus
+          Universell seriebuss
         </para>
       </glossdef>
     </glossentry>
@@ -538,7 +538,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Unix-to-Unix Copy Protocol
+          Unix-til-Unix kopiprotokoll
         </para>
       </glossdef>
     </glossentry>
@@ -549,7 +549,7 @@
       </glossterm>
       <glossdef>
         <para>
-          Version Control System
+          Versjonskontrollsystem
         </para>
       </glossdef>
     </glossentry>
@@ -560,7 +560,7 @@
       </glossterm>
       <glossdef>
         <para>
-          World Wide Web Consortium
+          Verdensvevens Konsortium
         </para>
       </glossdef>
     </glossentry>
@@ -571,7 +571,7 @@
       </glossterm>
       <glossdef>
         <para>
-          World Wide Web
+          Verdensveven
         </para>
       </glossdef>
     </glossentry>
@@ -582,7 +582,7 @@
       </glossterm>
       <glossdef>
         <para>
-          eXtensible Markup Language
+          Utvidbart markeringsspråk
         </para>
       </glossdef>
     </glossentry>
@@ -593,7 +593,7 @@
       </glossterm>
       <glossdef>
         <para>
-          eXtensible Style Language
+          Utvidbart stilspråk
         </para>
       </glossdef>
     </glossentry>
@@ -604,7 +604,7 @@
       </glossterm>
       <glossdef>
         <para>
-          eXtensible Style Language Transformation
+          Utvidbart stilspråkforvandling
         </para>
       </glossdef>
     </glossentry>
