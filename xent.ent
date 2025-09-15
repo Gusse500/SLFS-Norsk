@@ -1,136 +1,136 @@
 <!ENTITY source-profile
-  "<para>Now source the main profile:</para>
+  "<para>Nå henter du hovedprofilen:</para>
    <screen><userinput>source /etc/profile</userinput></screen>">
 
 <!ENTITY abi-break
-  "<important><para>Updating this package is known
-  to break ABI.</para></important>">
+  "<important><para>Oppdatering av denne pakken er kjent for å bryte 
+  ABI.</para></important>">
 
 <!ENTITY parallel_issues
-  "<note><para>This package may occasionally fail when
-  building with multiple processors. See <xref
-  linkend='parallel-builds'/> for more information.</para></note>">
+  "<note><para>Denne pakken kan av og til feile når man bygger med flere 
+  prosessorer. Se <xref linkend='parallel-builds'/> for mer 
+  informasjon.</para></note>">
 
 <!ENTITY build-use-internet
-  "<note><para>An Internet connection is needed for building this
-  package. The system certificate store may need to be set up with
-  <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> before
-  building this package.</para></note>">
+  "<note><para>En internettforbindelse er nødvendig for å bygge denne pakken. 
+  Systemsertifikatlageret må kanskje konfigureres med 
+  <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> før du bygger 
+  denne pakken.</para></note>">
 
 <!ENTITY test-use-internet
-  "<note><para>An Internet connection is needed for some tests of
-  this package. The system certificate store may need to be set up
-  with <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink>
-  before testing this package.</para></note>">
+  "<note><para>En internettforbindelse er nødvendig for noen tester av denne 
+  pakken. Systemsertifikatlageret må kanskje konfigureres med 
+  <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> før du tester 
+  denne pakken.</para></note>">
 
 <!ENTITY options-configure
-  "<note><para>Run <command>./configure --help</command> for a full list
-  of options.</para></note>">
+  "<note><para>Kjør <command>./configure --help</command> for en fullstendig 
+  liste over alternativer.</para></note>">
 <!ENTITY options-subconfigure
-  "<note><para>Run <command>../configure --help</command> for a full
-  list of options.</para></note>">
+  "<note><para>Kjør <command>../configure --help</command> for en fullstendig 
+  liste over alternativer.</para></note>">
 <!ENTITY options-meson
-  "<note><para>Inspect <filename>meson_options.txt</filename> or
-  <filename>meson.options</filename> for a full list of
-  options.</para></note>">
+  "<note><para>Undersøk <filename>meson_options.txt</filename> eller 
+  <filename>meson.options</filename> for en fullstendig liste over 
+  alternativer.</para></note>">
 <!ENTITY options-cmake
-  "<note><para>For a full list of options and values, make sure you are
-  in a build directory, then run <command>cmake -LAH ..</command>.
-  </para></note>">
+  "<note><para>For en fullstendig liste over alternativer og verdier, sørg for 
+  at du er i en byggemappe, og kjør deretter 
+  <command>cmake -LAH ..</command>.</para></note>">
 
 <!-- Previously were xincludes. Not all of them from BLFS/xincludes will be
      here, only take what we need. -->
 <!ENTITY cmake-policy-version
   "<para><parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>:
-  This switch allows building this package with cmake-4.0 or newer.</para>">
+  Denne bryteren tillater bygging av denne pakken med cmake-4.0 eller nyere.</para>">
 <!ENTITY cmake-skip-install-rpath
   "<!-- https://wiki.debian.org/RpathIssue/
         https://security.stackexchange.com/questions/161799/ -->
   <para><parameter>-D CMAKE_SKIP_INSTALL_RPATH=ON</parameter>:
-  This switch makes <command>cmake</command> remove hardcoded library search
-  paths (rpath) when installing a binary executable file or a shared library.
-  This package does not need rpath once it's installed into the standard
-  location, and rpath may sometimes cause unwanted effects or even security
-  issues.</para>">
+  Denne bryteren gjør at <command>cmake</command> fjerner hardkodede 
+  biblioteksøk stier (rpath) når du installerer en binær kjørbar fil eller et 
+  delt bibliotek. Denne pakken trenger ikke rpath når den er installert på 
+  standard plassering, og rpath kan noen ganger forårsake uønskede effekter 
+  eller til og med sikkerhetsproblemer.</para>">
 <!ENTITY extraction-unzip
-  "<note><para>During extraction, you may get the following message(s):</para>
+  "<note><para>Under utpakkingen kan du få følgende melding(er):</para>
 <screen><computeroutput>unzip: Cannot set mode for '...': Operation notsupported</computeroutput></screen>
-  <para>You may ignore said message(s), everything is fine. It is caused by
-  an attempt to set the file attributes on a symbolic link, which are
-  ignored on most Unix and Unix-like systems, a notable exception being
+  <para>Du kan ignorere nevnte melding(er), alt er i orden. Det er forårsaket av 
+  et forsøk på å angi filattributtene på en symbolsk lenke, som ignoreres på de 
+  fleste Unix og Unix lignende systemer, med et bemerkelsesverdig unntak 
   macOS.</para></note>">
 <!ENTITY gnu17
-  "<para><envar>C{,XX}FLAGS='std=gnu17'</envar>: These variables ensure this
-  package properly builds as C23 is now the default in GCC-15.x.x.</para>">
+  "<para><envar>C{,XX}FLAGS='std=gnu17'</envar>: Disse variablene sikrer at 
+  denne pakken bygger seg riktig, ettersom C23 nå er standard i 
+  GCC-15.x.x.</para>">
 <!ENTITY long-build-time
-  "<note><para>This may take a while to build. Feel free to do something else
-  while this is building.</para></note>">
+  "<note><para>Dette kan ta litt tid å bygge. Gjør gjerne noe annet mens dette 
+  bygges.</para></note>">
 <!ENTITY meson-buildtype-release
-  "<para><parameter>--buildtype=release</parameter>: Specify a buildtype
-  suitable for stable releases of the package, as the default may
-  produce unoptimized binaries.</para>">
+  "<para><parameter>--buildtype=release</parameter>: Spesifiser en byggetype som 
+  er egnet for stabile utgivelser av pakken, da standardtypen kan produsere 
+  uoptimaliserte binærfiler.</para>">
 <!ENTITY static-libraries
-  "<para><parameter>--disable-static</parameter>: This switch prevents
-  installation of static versions of the libraries.</para>">
+  "<para><parameter>--disable-static</parameter>: Denne bryteren forhindrer 
+  installasjon av statiske versjoner av bibliotekene.</para>">
 <!ENTITY pip3-cmd-explain
   "<sect3 role='commands'>
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-w dist</parameter>: Builds the appropriate
-      <quote>wheel</quote> for this module in the directory
-      <filename class='directory'>dist</filename>.
+      <parameter>-w dist</parameter>: Bygger det passende <quote>wheel</quote> 
+      for denne modulen i mappen <filename class='directory'>dist</filename>.
     </para>
 
     <para>
-      <parameter>--no-build-isolation</parameter>: Tells
-      <command>pip3</command> to run the build in the system environment
-      instead of creating a temporary build environment.
+      <parameter>--no-build-isolation</parameter>: Forteller at 
+      <command>pip3</command> skal kjøre byggingen i systemmiljøet i stedet for 
+      å opprette et midlertidig byggemiljø.
     </para>
 
     <para>
-      <parameter>--no-deps</parameter>: Prevents <command>pip3</command> from
-      building wheels for the project's dependencies.
+      <parameter>--no-deps</parameter>: Forhindrer <command>pip3</command> fra 
+      å bygge wheels for prosjektets avhengigheter.
     </para>
 
     <para>
-      <parameter>--no-index</parameter>: Ignores the package index
-      (only looking at <parameter>--find-links</parameter> URLs instead).
+      <parameter>--no-index</parameter>: Ignorerer pakkeindeksen (ser bare på 
+      <parameter>--find-links</parameter> URL-er i stedet).
     </para>
 
     <para>
-      <parameter>--find-links dist</parameter>: Looks for links to archives
-      such as wheel (<filename class='extension'>.whl</filename>) files in the
-      directory <filename class='directory'>dist</filename>.
+      <parameter>--find-links dist</parameter>: Søker etter lenker til arkiver 
+      som for eksempel wheel (<filename class='extension'>.whl</filename>) filer 
+      i mappen <filename class='directory'>dist</filename>.
     </para>
 
     <para>
-      <parameter>--no-cache-dir</parameter>: Disables the cache to prevent
-      a warning when installing as the &root; user.
+      <parameter>--no-cache-dir</parameter>: Deaktiverer hurtigbufferen for å 
+      forhindre en advarsel ved installasjon som &root; bruker.
     </para>
 
     <para>
-      <parameter>--no-user</parameter>: Prevent mistakenly running the
-      install command as a non-root user.
+      <parameter>--no-user</parameter>: Forhindre at du feilaktig kjører install 
+      kommandoen som en ikke-root bruker.
     </para>
 
     <para>
-      <option>--upgrade</option>: Upgrade the package to the newest
-       available version. This option is used with the install command
-       if a version of the package is already installed.
+      <option>--upgrade</option>: Oppgrader pakken til den nyeste tilgjengelige 
+      versjonen. Dette alternativet brukes med install kommandoen hvis en 
+      versjon av pakken allerede er installert.
     </para>
 
     <para>
-      <option>--force-reinstall</option>: Reinstall the package even if
-      it is up-to-date. This option is used with the install command
-      if reinstalling the package or reverting to an earlier version
-      of the package.
+      <option>--force-reinstall</option>: Installer pakken på nytt selv om den 
+      er oppdatert. Dette alternativet brukes med install kommandoen hvis du 
+      installerer pakken på nytt eller går tilbake til en tidligere versjon av 
+      pakken.
     </para>
 
     <para>
-      <option>--no-deps</option>: Do not install package dependencies.
-      This option may be needed with the <option>--upgrade</option> or
-      <option>--force-reinstall</option> options.
+      <option>--no-deps</option>: Ikke installer pakkeavhengigheter. Dette 
+      alternativet kan være nødvendig med <option>--upgrade</option> eller
+      <option>--force-reinstall</option> alternativene.
     </para>
 
   </sect3>">

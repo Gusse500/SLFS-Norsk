@@ -1,62 +1,61 @@
 # Supplemental Linux From Scratch (SLFS)
 
-This book is dedicated to supplementing an LFS, MLFS, BLFS, and/or GLFS x86-64
-system by providing packages not found in the other LFS books. 
+Denne boken er dedikert til å supplere en LFS, MLFS, BLFS og/eller GLFS x86-64 
+system ved å tilby pakker som ikke finnes i de andre LFS-bøkene.
 
-This book boasts several libraries and utilities not covered in the `*LFS`
-books. On top of that, it also provides: SVR4-related tooling, binary-only
-application support, many graphical environments for both Wayland and X.org,
-both computer and video game console emulators, general gaming software, and
-more.
+Denne boken kan skryte av flere biblioteker og verktøy som ikke er dekket i 
+`*LFS` bøkene. I tillegg til dette gir den også: SVR4 relatert verktøy, støtte 
+for kun binære applikasjoner, mange grafiske miljøer for både Wayland og X.org, 
+emulatorer for både datamaskiner og spillkonsoller, generell spillprogramvare og 
+mer.
 
-# Where to read
+# Hvor man kan lese
 
-Go to https://glfs-book.github.io/slfs/ and start going through the book!
+Gå til https://glfs-book.github.io/slfs/ og begynn å bla gjennom boken!
 
-The book online is rolling release but there is a stable version in the SLFS
-source via the stable branch.
+Boken er under rullende utgivelse på nett, men det finnes en stabil versjon i 
+SLFS kildekoden via den stabile grenen.
 
-You can switch to it by running the following command:
+Du kan bytte til den ved å kjøre følgende kommando:
 
 ```Bash
 git checkout stable
 ```
 
-Then render the book with `make STAB=release [other options]`.
+Gjengi deretter boken med `make STAB=release [andre alternativer]`.
 
-There are also [Releases](https://github.com/glfs-book/slfs/releases) that
-you can download. All of them contain both the SysV and Systemd editions of the
-book, chunked HTML.
+Det finnes også [Releases](https://github.com/glfs-book/slfs/releases) som du 
+kan laste ned. Alle inneholder både SysV og Systemd utgavene av boken, 
+i delt HTML.
 
-# Installation
+# Installasjon
 
-How do I convert these XML files to HTML myself? You need to have some software
-installed that deal with these conversions. Please read the `INSTALL.md` file to
-determine what programs you need to install and where to get instructions to
-install that software.
+Hvordan konverterer jeg disse XML filene til HTML? Du må ha installert 
+programvare som håndterer disse konverteringene. Vennligst les `INSTALL.md` 
+filen for å bestemme hvilke programmer du må installere og hvor du kan få 
+instruksjoner for å installere programvaren.
 
-After that, you can build the HTML with a simple `make` command.
-You can change the revision, ie. systemd vs sysv by adding `REV=<rev>` to the
-`make` command. `<rev>` can be:
-- `sysv` (default)
+Etter det kan du bygge HTML koden med en enkel `make` kommando. Du kan endre 
+revisjonen, f.eks. systemd vs. sysv, ved å legge til `REV=<rev>` til `make` 
+kommandoen. `<rev>` kan være:
+- `sysv` (standard)
 - `systemd`
 
-Example: `make REV=systemd`.
+Eksempel: `make REV=systemd`.
 
-The default target (sysv) builds the HTML in `~/public_html/slfs`,
-whereas for systemd, it would be in `~/public_html/slfs-systemd`.
-It will by default make each package and section its own page then link
-everything together for a smooth experience.
+Standardmålet (sysv) bygger HTML koden i `~/public_html/slfs`,
+mens for systemd ville det være i `~/public_html/slfs-systemd`.
+Som standard vil hver pakke og seksjon være sin egen side, og deretter koble 
+alt sammen for en smidig opplevelse.
 
-You can set a path to the themes by running `make THEME_PATH=<path>`. The
-default is `stylesheets/lfs-xsl`. You can find more at
+Du kan angi en sti til temaene ved å kjøre `make THEME_PATH=<path>`. 
+Standard er `stylesheets/lfs-xsl`. Du finner mer på
 https://github.com/glfs-book/lfs-themes.
 
-The dark theme is also the default, but you can switch the theme by
-running `make THEME=<theme>`. `<theme>` can equal:
+Det mørke temaet er også standard, men du kan bytte tema ved å
+kjøre `make THEME=<theme>`. `<theme>` kan være lik:
 - `light`
 - `dark`
 
-Note that if you set `THEME_PATH`, you can set `THEME` to more
-than just what the available options are shown above, but only the available
-themes that are in that path.
+Note that if you set `THEME_PATH`, kan du sette `THEME` til mer enn bare det 
+som er vist ovenfor, men bare de tilgjengelige temaene som er i den banen.
