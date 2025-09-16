@@ -18,59 +18,59 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to FreeBee</title>
+    <title>Introduksjon til FreeBee</title>
 
     <para>
-      The FreeBee package is an AT&amp;T 3B1/7300 UNIX
+      FreeBee pakken er en AT&amp;T 3B1/7300 UNIX
       PC emulator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&freebee-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&freebee-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required submodule:
+          Nødvendig undermodul:
           <ulink url="https://github.com/kstenerud/Musashi/archive/&musashi-submodule-version;.zip"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required ROMs:
+          Nødvendige ROM-er:
           <ulink url="http://bitsavers.org/pdf/att/3b1/firmware/3b1_roms.zip"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Recommended patch:
+          Anbefalt oppdatering:
           <ulink url="&patch-root;/freebee/freebee-&freebee-minor-version;-system-roms.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">FreeBee Dependencies</bridgehead>
+    <bridgehead renderas="sect3">FreeBee Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distributions) and
+      (for å pakke ut distribusjonene) og
       <ulink url="&blfs-svn;/general/sdl2.html">SDL2</ulink>
     </para>
  
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of FreeBee</title>
+    <title>Installasjon av FreeBee</title>
 
     <para>
-      Unpack the musashi submodule into the right place:
+      Pakk ut musashi undermodulen på riktig sted:
     </para>
 
 <screen><userinput>unzip ../&musashi-submodule-version;.zip -d src/ &amp;&amp;
@@ -80,15 +80,15 @@ mv src/Musashi-&musashi-submodule-version; src/musashi</userinput></screen>
     &extraction-unzip;
 
     <para>
-      Optionally, apply a patch to search for the ROMs in a system-wide
-      location and not the current directory:
+      Du kan eventuelt bruke en oppdatering for å søke etter ROM-ene i hele 
+      systemet og ikke gjeldende mappe:
     </para>
 
 <screen><userinput>patch -Np1 -i ../freebee-&freebee-minor-version;-system-roms.patch</userinput></screen>
 
     <para>
-      Install FreeBee by running the following
-      command:
+      Installer FreeBee ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make src/musashi/m68kops.h &amp;&amp;
@@ -96,7 +96,7 @@ make &amp;&amp;
 make -C tools</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -Dm755 freebee /usr/bin &amp;&amp;
@@ -105,7 +105,7 @@ install -v -m644 freebee.1 /usr/share/man/man1 &amp;&amp;
 install -v -m644 tools/makehdimg.1 /usr/share/man/man1</userinput></screen>
 
     <para>
-      Optionally, install the documentation as the &root; user:
+      Installer eventuelt dokumentasjonen som &root; bruker:
     </para>
 
 <screen role="root" remap="doc"><userinput>install -v -m755 -d /usr/share/doc/freebee-&freebee-minor-version; &amp;&amp;
@@ -115,8 +115,8 @@ install -v -m644 sample.freebee.toml /usr/share/doc/freebee-&freebee-minor-versi
 install -v -m644 doc/3B1\ Memory\ Map.ods /usr/share/doc/freebee-&freebee-minor-version;</userinput></screen>
 
     <para>
-      If you have applied the systemwide ROMs patch, install those ROMs as the
-      &root; user:
+      Hvis du har installert den systemomfattende ROM-oppdateringen, 
+      installerer du disse ROM-ene som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -m755 -d /usr/share/freebee/roms &amp;&amp;
@@ -129,20 +129,20 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>make src/musashi/m68kops.h</command>: This command explicitly
-      generates a header file used during build time to avoid a race condition.
+      <command>make src/musashi/m68kops.h</command>: Denne kommandoen genererer 
+      eksplisitt en deklarasjonsfil som brukes under byggetiden for å unngå en "race condition".
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring FreeBee</title>
+    <title>Konfigurere FreeBee</title>
 
     <sect3 id="freebee-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
         <filename>~/.freebee.toml</filename>
       </para>
@@ -153,48 +153,48 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        If you have not applied the systemwide ROMs patch, you will have to put
-        the <filename class="directory">roms/</filename> folder as documented
-        in the <filename>README</filename> file from
-        <filename>3b1_roms.zip</filename> into every folder you run
-        FreeBee from, although it is possible to
-        explicitly set the ROM path in the FreeBee
-        config file if you do not want to do that.
+        Hvis du ikke har installert den systemomfattende ROM-oppdateringen, må 
+        du installere <filename class="directory">roms/</filename> mappen som 
+        dokumentert i <filename>README</filename> filen fra
+        <filename>3b1_roms.zip</filename> i hver mappe du 
+        kjører FreeBee fra, selv om det er mulig å eksplisitt 
+        angi ROM-banen i FreeBee konfigurasjonsfilen hvis 
+        du ikke vil gjøre det.
       </para>
 
-      <note><para>Refer to the FreeBee documentation
-      to learn how to configure the config file.</para></note>
+      <note><para>Se FreeBee dokumentasjonen for å lære hvordan du 
+      konfigurerer config filen.</para></note>
 
     </sect3>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          freebee and makehdimg
+          freebee og makehdimg
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /usr/share/doc/freebee-&freebee-minor-version; and /usr/share/freebee
+          /usr/share/doc/freebee-&freebee-minor-version; og /usr/share/freebee
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -202,7 +202,7 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
         <term><command>freebee</command></term>
         <listitem>
           <para>
-            is the AT&amp;T 3B1 UNIX PC emulator
+            er AT&amp;T 3B1 UNIX PC emulator
           </para>
           <indexterm zone="freebee freebee">
             <primary sortas="b-freebee">freebee</primary>
@@ -214,7 +214,7 @@ mv -v /usr/share/freebee/roms/15C\ 72-00617.bin /usr/share/freebee/roms/15c.bin<
         <term><command>makehdimg</command></term>
         <listitem>
           <para>
-            creates hard disk images for use with
+            oppretter harddiskbilder for bruk med
             <command>freebee</command>
           </para>
           <indexterm zone="freebee makehdimg">
