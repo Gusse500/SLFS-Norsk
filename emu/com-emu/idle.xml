@@ -18,103 +18,103 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to idle</title>
+    <title>Introduksjon til idle</title>
 
     <para>
-      The idle package is a minimalistic Lisa
+      idle pakken er en minimalistisk Lisa
       1/2 emulator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&idle-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&idle-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required ROMs:
+          Nødvendige ROM-er:
           <ulink url="https://downloads.sourceforge.net/idle-lisa-emu/Windows%20binary/win_sdl_r23/idle_win32_bin.zip"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Nødvendige oppdatering:
           <ulink url="&patch-root;/idle/idle-&idle-minor-version;-fix-sigill.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Recommended patch:
+          Anbefalt oppdatering:
           <ulink url="&patch-root;/idle/idle-&idle-minor-version;-system-roms.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Optional patch:
+          Valgfri oppdatering:
           <ulink url="&patch-root;/idle/idle-&idle-minor-version;-pretend-we-are-a-lisa-2-10.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">idle Dependencies</bridgehead>
+    <bridgehead renderas="sect3">idle Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distributions) and
+      (for å pakke ut distribusjonene) og
       <ulink url="&blfs-svn;/multimedia/sdl.html">sdl12-compat</ulink>
     </para>
  
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of idle</title>
+    <title>Installasjon av idle</title>
 
     <para>
-      Apply a patch to fix various SIGILLs due to security mitigations in
-      modern processors:
+      Installer en oppdatering for å fikse diverse SIGILL-er på grunn av 
+      sikkerhetsforbedringer i moderne prosessorer:
     </para>
 
 <screen><userinput>patch -Np1 -i ../idle-&idle-minor-version;-fix-sigill.patch</userinput></screen>
 
     <para>
-      Optionally, apply a patch to search for the ROMs in a system-wide
-      location and not the current directory:
+      Du kan eventuelt bruke en oppdatering for å søke etter ROM-ene i hele 
+      systemet og ikke gjeldende mappe:
     </para>
 
 <screen><userinput>patch -Np1 -i ../idle-&idle-minor-version;-system-roms.patch</userinput></screen>
 
     <warning><para>
-      <emphasis>ONLY</emphasis> apply the following patch if you
-      <emphasis>REALLY</emphasis> know what you're doing. This patch pretends
-      the Lisa II/5 as properly emulated by the idle
-      emulator is actually a Lisa II/10, without actually introducing any new
-      behaviour or adding any new hardware from the Lisa II/10. It is
-      <emphasis>VERY</emphasis> likely to introduce problems in software
-      specifically coded for the Lisa II/10, or software with proper support
-      for it for that matter. The <emphasis>ONLY</emphasis> thing this
-      patch is good at is making SCO Xenix properly use a 10MB ProFile drive,
-      because SCO Xenix' ProFile driver makes an assumption about the installed
-      hard disk size by looking at the system model, and attempting to format a
-      10MB drive on a Lisa II/5, or a 5MB drive on a Lisa II/10, for that matter,
-      <emphasis>WILL</emphasis> result in errors from
+      <emphasis>BARE</emphasis> bruk følgende oppdatering hvis du 
+      <emphasis>VIRKELIG</emphasis> vet hva du gjør. Denne oppdateringen later 
+      som Lisa II/5 som er riktig etterlignet av idle emulatoren faktisk er en 
+      Lisa II/10, uten å faktisk introdusere noen ny oppførsel eller legge til 
+      ny maskinvare fra Lisa II/10. Det er <emphasis>VELDIG</emphasis> 
+      sannsynlig at den introdusere problemer i programvare spesielt kodet for 
+      Lisa II/10, eller programvare med riktig støtte for den saks skyld. Det 
+      denne oppdateringen er god på er <emphasis>BARE</emphasis>  å få SCO 
+      Xenix til å bruke en 10 MB ProFile stasjon på riktig måte, fordi 
+      SCO Xenix' ProFile driver antar den installerte harddiskstørrelsen ved å 
+      se på systemmodellen og forsøker å formatere en 10 MB stasjon på en 
+      Lisa II/5, eller en 5MB disk på en Lisa II/10, for den saks skyld, det 
+      <emphasis>VIL</emphasis> resultere i feil fra 
       mkfs.</para>
 
-      <para>If, after you read the above, you still want to apply the patch, run
-      the following:</para>
+      <para>Hvis du fortsatt ønsker å installere oppdateringen etter at du har 
+      lest det ovenstående, kjører du følgende:</para>
 
 <!-- computeroutput to potentially avoid jhalfs from blindly running it, second
      to make sure users don't blindly copy from the command block. -->
 <screen><computeroutput>patch -Np1 -i ../idle-&idle-minor-version;-pretend-we-are-a-lisa-2-10.patch</computeroutput></screen></warning>
 
     <para>
-      Install idle by running the following
-      command:
+      Installer idle ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make -f Makefile.unixsdl &amp;&amp;
@@ -122,7 +122,7 @@ make -C tools/obj2asm &amp;&amp;
 make -C tools/xprofile_tool</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -Dm755 idle /usr/bin/idle-emu &amp;&amp;
@@ -130,8 +130,8 @@ install -v -Dm755 tools/obj2asm/mpw_obj2asm /usr/bin &amp;&amp;
 install -v -Dm755 tools/xprofile_tool/xprofile_tool /usr/bin</userinput></screen>
 
     <para>
-      If you have applied the systemwide ROMs patch, install those ROMs as the
-      &root; user:
+      Hvis du har installert den systemomfattende ROM-oppdateringen, 
+      installerer du disse ROM-ene som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -m755 -d /usr/share/idle/bios &amp;&amp;
@@ -142,39 +142,39 @@ rm -rf idle_win32_bin</userinput></screen>
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring idle</title>
+    <title>Konfigurere idle</title>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        If you have not applied the systemwide ROMs patch, you will have to put
-        the <filename class="directory">bios/</filename> folder from
+        Hvis du ikke har installert den systemomfattende ROM-oppdateringen, må 
+        du installere <filename class="directory">bios/</filename> mappen fra
         <filename>idle_win32_bin.zip</filename>
-        into every folder you plan on executing idle
-        from.
+        i hver mappe du planlegger å kjøre idle
+        fra.
       </para>
 
-      <note><para>The ProFile drive image is hardcoded to be in the current
-      directory and is named <filename>profile.raw</filename>.</para></note>
+      <note><para>ProFile stasjonsavbildningen er hardkodet til å være i 
+      gjeldende mappe og har navnet <filename>profile.raw</filename>.</para></note>
 
     </sect3>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          idle-emu, mpw_obj2asm, and xprofile_tool
+          idle-emu, mpw_obj2asm, og xprofile_tool
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/idle
@@ -183,7 +183,7 @@ rm -rf idle_win32_bin</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -191,7 +191,7 @@ rm -rf idle_win32_bin</userinput></screen>
         <term><command>idle-emu</command></term>
         <listitem>
           <para>
-            is the Apple Lisa emulator
+            er Apple Lisa emulatoren
           </para>
           <indexterm zone="idle idle-emu">
             <primary sortas="b-idle-emu">idle-emu</primary>
@@ -203,8 +203,8 @@ rm -rf idle_win32_bin</userinput></screen>
         <term><command>mpw_obj2asm</command></term>
         <listitem>
           <para>
-            is an experimental Macintosh MPW object file
-            disassembler
+            er en eksperimentell Macintosh MPW objektfil 
+            demonterer
           </para>
           <indexterm zone="idle mpw_obj2asm">
             <primary sortas="b-mpw_obj2asm">mpw_obj2asm</primary>
@@ -216,7 +216,7 @@ rm -rf idle_win32_bin</userinput></screen>
         <term><command>xprofile_tool</command></term>
         <listitem>
           <para>
-            is a tool to manipulate X/ProFile drive images
+            er et verktøy for å manipulere X/ProFile stasjonsbilder
           </para>
           <indexterm zone="idle xprofile_tool">
             <primary sortas="b-xprofile_tool">xprofile_tool</primary>
