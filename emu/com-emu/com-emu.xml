@@ -8,12 +8,12 @@
 <chapter id="com-emu">
   <?dbhtml filename="com-emu.html"?>
 
-  <title>Computer Emulators</title>
+  <title>Datamaskinemulatorer</title>
 
   <para>
-    This chapter is dedicated to towards various emulators for old computer
-    hardware, their dependencies, and various tools needed for
-    interoperability with old operating systems running on said hardware.
+    Dette kapittelet er dedikert til ulike emulatorer for gammel datamaskinvare, 
+    deres avhengigheter og diverse verktøy som trengs for interoperabilitet med 
+    gamle operativsystemer som kjører på nevnte maskinvare.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="idle.xml"/>
