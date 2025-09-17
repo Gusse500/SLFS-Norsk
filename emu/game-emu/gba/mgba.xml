@@ -18,43 +18,43 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to mGBA</title>
+    <title>Introduksjon til mGBA</title>
 
     <para>
-      The mGBA package provides a GBA emulator. It
-      can also be used with other emulators.
+      mGBA pakken inneholder en GBA emulator. 
+      Den kan også brukes med andre emulatorer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mgba-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&mgba-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">mgba Dependencies</bridgehead>
+    <bridgehead renderas="sect3">mgba Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/x/libepoxy.html">libepoxy</ulink>,
-      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>, and
+      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>, og
       <xref linkend="libzip"/>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/desktop-file-utils.html">desktop-file-utils</ulink>,
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>,
-      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink> and/or
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink> (for the
-      frontends), and
+      <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink> og/eller
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink> (for 
+      grensesnittene), og
       <ulink url="&blfs-svn;/server/sqlite.html">SQLite</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&arch-pkgs;/core/x86_64/libedit/">editline</ulink>
     </para>
@@ -62,11 +62,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of mGBA</title>
+    <title>Installasjon av mGBA</title>
 
     <para>
-      Install mGBA by running the following
-      commands:
+      Installer mGBA ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -81,7 +81,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
@@ -90,43 +90,43 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-policy-version;
 
     &cmake-skip-install-rpath;
 
     <para>
-      <command>mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</command>: This
-      command ensures the doc folder for this package is consistent with the
-      other packages.
+      <command>mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</command>: 
+      Denne kommandoen sørger for at dokumentmappen for denne pakken er 
+      konsistent med de andre pakkene.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          mgba and mgba-qt
+          mgba og mgba-qt
         </seg>
         <seg>
           libmgba
         </seg>
         <seg>
-          /usr/include/mgba{,-util} and /usr/share/doc/mgba-&mgba-minor-version;
+          /usr/include/mgba{,-util} og /usr/share/doc/mgba-&mgba-minor-version;
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -134,7 +134,7 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
         <term><command>mgba</command></term>
         <listitem>
           <para>
-            is the SDL2 frontend for
+            er SDL2 grensesnittet for
             mGBA
           </para>
           <indexterm zone="mgba mgba-bin">
@@ -147,7 +147,7 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
         <term><command>mgba-qt</command></term>
         <listitem>
           <para>
-            is the Qt-6 frontend for
+            er Qt-6 grensesnittet for
             mGBA
           </para>
           <indexterm zone="mgba mgba-qt">
@@ -160,8 +160,8 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
         <term><filename class="libraryfile">libmgba</filename></term>
         <listitem>
           <para>
-            contains the mGBA core which can be
-            used by frontends and other emulators
+            inneholder mGBA kjernen som kan brukes av 
+            grensesnitt og andre emulatorer
           </para>
           <indexterm zone="mgba libmgba">
             <primary sortas="c-libmgba">libmgba</primary>
