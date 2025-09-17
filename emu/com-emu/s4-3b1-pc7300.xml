@@ -18,56 +18,56 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to s4-3b1-pc7300</title>
+    <title>Introduksjon til s4-3b1-pc7300</title>
 
     <para>
-      The s4-3b1-pc7300 package contains a kernel
-      module and various tools to support reading and and writing to and from
-      CTIX and AT&amp;T 3B1 UNIX System Software hard disks.
+      s4-3b1-pc7300 Pakken inneholder en kjernemodul og diverse verktøy for å 
+      støtte lesing og skriving til og fra
+      CTIX og AT&amp;T 3B1 UNIX Systemprogramvare harddisker.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&s4-3b1-pc7300-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&s4-3b1-pc7300-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">s4-3b1-pc7300 Dependencies</bridgehead>
+    <bridgehead renderas="sect3">s4-3b1-pc7300 Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distribution)
+      (for å pakke ut distribusjonene)
     </para>
  
   </sect2>
@@ -78,9 +78,9 @@
     <title>Kernel Configuration</title>
 
     <para>
-      This package replaces the SYSV kernel module with an better and improved
-      version. Disable the one in the kernel if it's present and recompile the
-      kernel if necessary:
+      Denne pakken erstatter SYSV kjernemodulen med en bedre og forbedret 
+      versjon. Deaktiver den i kjernen hvis den er til stede, og kompiler 
+      kjernen på nytt om nødvendig.:
     </para>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -93,89 +93,89 @@
 -->
 
   <sect2 role="installation">
-    <title>Installation of s4-3b1-pc7300</title>
+    <title>Installasjon av s4-3b1-pc7300</title>
 
     <para>
-      Apply a patch to build the sysv kernel module unconditionally:
+      Installer en oppdatering for å bygge sysv kjernemodulen ubetinget:
     </para>
 
 <screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch</userinput></screen>
 
     <para>
-      Apply a patch to fix building the kernel module:
+      Installer en oppdatering for å fikse byggingen av kjernemodulen:
     </para>
 
 <screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch</userinput></screen>
 
     <para>
-      Apply a second patch to make the kernel module compatible with Linux
+      Installer en ny oppdatering for å gjøre kjernemodulen kompatibel med Linux
       6.16:
     </para>
 
 <screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch</userinput></screen>
 
     <para>
-      Apply a patch to build the supporting library as a shared library instead
-      of a static one:
+      Bruk en patch for å bygge støttebiblioteket som et delt bibliotek i 
+      stedet for et statisk bibliotek:
     </para>
 
 <screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch</userinput></screen>
 
     <para>
-      Compile the kernel module:
+      Kompiler kjernemodulen:
     </para>
 
 <screen><userinput>cd sysv &amp;&amp;
 make -f Makefile.daveb running</userinput></screen>
 
     <tip><para>
-      Be sure to compile this kernel module booted into your LFS system, or if
-      in a chroot, have the same kernel version you built for the target as on
-      the host. Otherwise, directories that are assumed to exist will not be
-      found and the build process will fail.
+      Sørg for å kompilere denne kjernemodulen når du er startet opp i LFS 
+      systemet ditt, eller hvis den er i en chroot, ha samme kjerneversjon som 
+      du bygde for målet som på verten. Ellers vil ikke mapper som antas å 
+      eksistere bli funnet, og byggeprosessen vil mislykkes.
     </para></tip>
 
     <para>
-      Now install the kernel module as the &root; user:
+      Installer nå kjernemodulen som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make -f Makefile.daveb run_install</userinput></screen>
 
     <important>
       <para>
-        When you update the kernel, you will also need to reinstall this
-        kernel module.
+        Når du oppdaterer kjernen, må du også installere denne kjernemodulen 
+        på nytt.
       </para>
 
       <para>
-        This is because there is glue when kernel modules are built. This glue
-        doesn't matter too much with first party modules (modules in the kernel
-        source tree) as the modules are updated at the same time the kernel is.
-        At that point, there is new glue holding them together. However, when
-        it comes to third party modules, they aren't updated when the kernel
-        updates, so this glue the third party modules had on the kernel breaks.
-        This leads to broken kernel modules. This also applies if you stay on
-        the same kernel version but change some options, this can also break
-        the glue.
+        Dette er fordi det er lim når kjernemoduler bygges. Dette limet spiller 
+        ikke så stor rolle med førstepartsmoduler (moduler i kjernens kildetre) 
+        ettersom modulene oppdateres samtidig som kjernen oppdateres. På det 
+        tidspunktet er det nytt lim som holder dem sammen. Men når det gjelder 
+        tredjepartsmoduler, oppdateres de ikke når kjernen oppdateres, så dette 
+        limet tredjepartsmodulene hadde på kjernen brytes sammen. Dette fører 
+        til ødelagte kjernemoduler. Dette gjelder også hvis du forblir på samme 
+        kjerneversjon, men endrer noen alternativer, dette kan også bryte 
+        limet.
       </para>
 
       <para>
-        Be sure that when you reinstall the driver, make sure you are using
-        the new kernel and have the kernel source you built from. Otherwise
-        the driver will fail to install.
+        Sørg for at du bruker den nye kjernen og at du har kjernekildekoden du 
+        bygde fra når du installerer driveren på nytt. Ellers vil ikke driveren 
+        kunne installeres.
       </para>
     </important>
 
     <para>
-      Now install the s4-3b1-pc7300 userland tools
-      by running the following commands:
+      Installer nå userland verktøyene for s4-3b1-pc7300 ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cd .. &amp;&amp;
 make CC="cc -std=gnu17"</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -Dm755 s4date s4disk s4dump s4export s4fs s4fsck \
@@ -189,29 +189,29 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           s4date, s4disk, s4dump, s4export, s4fs, s4fsck, s4import,
-          s4merge, s4mkfs, s4test, and s4vol
+          s4merge, s4mkfs, s4test, og s4vol
         </seg>
         <seg>
           libs4
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -219,8 +219,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4date</command></term>
         <listitem>
           <para>
-            is an SVR2 <command>date</command> that starts in 2000
-            instead of 1900
+            er en SVR2 <command>date</command> som starter i 2000
+            istedenfor 1900
           </para>
           <indexterm zone="s4-3b1-pc7300 s4date">
             <primary sortas="b-s4date">s4date</primary>
@@ -232,7 +232,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4disk</command></term>
         <listitem>
           <para>
-            is a tool to inspect volume images
+            er et verktøy for å inspisere volumbilder
           </para>
           <indexterm zone="s4-3b1-pc7300 s4disk">
             <primary sortas="b-s4disk">s4disk</primary>
@@ -244,8 +244,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4dump</command></term>
         <listitem>
           <para>
-            is a hex/ascii dumper tuned for dumping volume and FS
-            files
+            er en hex/ascii dumper innstilt for dumping av volum og FS 
+            filer
           </para>
           <indexterm zone="s4-3b1-pc7300 s4dump">
             <primary sortas="b-s4dump">s4dump</primary>
@@ -257,7 +257,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4export</command></term>
         <listitem>
           <para>
-            exports FSes from volumes into a mountable image file
+            eksporterer FSer fra volumer til en monterbar bildefil
           </para>
           <indexterm zone="s4-3b1-pc7300 s4export">
             <primary sortas="b-s4export">s4export</primary>
@@ -269,7 +269,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4fs</command></term>
         <listitem>
           <para>
-            is a tool for exploring FS image files
+            er et verktøy for å utforske FS bildefiler
           </para>
           <indexterm zone="s4-3b1-pc7300 s4fs">
             <primary sortas="b-s4fs">s4fs</primary>
@@ -281,8 +281,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4fsck</command></term>
         <listitem>
           <para>
-            is an SVR2 <command>fsck</command> modified to work on
-            a possibly byte-swapped FS image
+            er en SVR2 <command>fsck</command> modifisert for å fungere på et 
+            mulig byte-swapped FS bilde
           </para>
           <indexterm zone="s4-3b1-pc7300 s4fsck">
             <primary sortas="b-s4fsck">s4fsck</primary>
@@ -294,7 +294,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4import</command></term>
         <listitem>
           <para>
-            merges an FS image into a volume file
+            slår sammen et FS bilde til en volumfil
           </para>
           <indexterm zone="s4-3b1-pc7300 s4import">
             <primary sortas="b-s4import">s4import</primary>
@@ -306,8 +306,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4merge</command></term>
         <listitem>
           <para>
-            merges multiple volume images into one, block by
-            block
+            slår sammen flere volumbilder til ett, 
+            blokk for blokk
           </para>
           <indexterm zone="s4-3b1-pc7300 s4merge">
             <primary sortas="b-s4merge">s4merge</primary>
@@ -319,8 +319,8 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4mkfs</command></term>
         <listitem>
           <para>
-            is an SVR2 <command>mkfs</command>, modified to generate
-            a file and handle byte-swapping
+            er en SVR2 <command>mkfs</command>, modifisert for å generere en fil 
+            og behandle byte-swapping
           </para>
           <indexterm zone="s4-3b1-pc7300 s4mkfs">
             <primary sortas="b-s4mkfs">s4mkfs</primary>
@@ -332,7 +332,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4test</command></term>
         <listitem>
           <para>
-            is a filesystem information tool and a test app for libs4
+            er et filsysteminformasjonsverktøy og et testprogram for libs4
           </para>
           <indexterm zone="s4-3b1-pc7300 s4test">
             <primary sortas="b-s4test">s4test</primary>
@@ -344,7 +344,7 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><command>s4vol</command></term>
         <listitem>
           <para>
-            is a tool for advanced manipulation of 3B1 volume images
+            er et verktøy for avansert manipulering av 3B1 volumbilder
           </para>
           <indexterm zone="s4-3b1-pc7300 s4vol">
             <primary sortas="b-s4vol">s4vol</primary>
@@ -356,9 +356,9 @@ ln -svf           /usr/lib/libs4.so.0 /usr/lib/libs4.so.0.0</userinput></screen>
         <term><filename class="libraryfile">libs4</filename></term>
         <listitem>
           <para>
-            provides functions for accessing AT&amp;T 3B1 UNIX
-            PC/PC-7300 hard drives, hard drive images and their
-            filesystems 
+            tilbyr funksjoner for tilgang til AT&amp;T 3B1 UNIX
+            PC/PC-7300 harddisker, harddiskbilder og deres 
+            filsystemer
           </para>
           <indexterm zone="s4-3b1-pc7300 libs4">
             <primary sortas="c-libs4">libs4</primary>
