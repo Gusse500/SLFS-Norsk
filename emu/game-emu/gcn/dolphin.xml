@@ -20,35 +20,35 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Dolphin</title>
+    <title>Introduksjon til Dolphin</title>
 
     <para>
-      The Dolphin package (not to be confused with
-      the <ulink url="&blfs-svn;/kde/dolphin.html">KF6 dolphin file
-      manager</ulink>) provides a GCN and Wii emulator.
+      Dolphin pakken (ikke å forveksle med
+      <ulink url="&blfs-svn;/kde/dolphin.html">KF6 dolphin filbehandler</ulink>) 
+      tilbyr en GCN og Wii emulator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&dolphin-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&dolphin-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Dolphin Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Dolphin Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>,
       &opengl;,
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, og
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/multimedia/alsa-utils.html">alsa-utils</ulink>,
       <ulink url="&blfs-svn;/general/bluez.html">BlueZ</ulink>,
@@ -65,23 +65,23 @@
       <xref linkend="pugixml"/>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
-      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, og
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> and
+      <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> og
       <xref linkend="mbedtls"/>
     </para>
 
   </sect2>
 
   <sect2>
-    <title>Downloading Dolphin</title>
+    <title>Nedlasting av Dolphin</title>
 
     <para>
-      Create a list of the needed tarballs that will be downloaded:
+      Lag en liste over nødvendige tarballer som skal lastes ned:
     </para>
 
 <screen><userinput>cat &gt; dolphin-list &lt;&lt; "EOF"
@@ -108,8 +108,8 @@ libusb/libusb/archive/&dolphin-libusb-external;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
-      Now download the package, its submodules, and needed patches if
-      applicable, using <ulink
+      Last nå ned pakken, undermodulene og nødvendige oppdateringer 
+      hvis aktuelt, ved hjelp av <ulink
       url="&blfs-svn;/basicnet/wget.html">Wget</ulink>:
     </para>
 
@@ -121,10 +121,10 @@ grep -v '^#' ../dolphin-list | wget -i- -c \
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Dolphin</title>
+    <title>Installasjon av Dolphin</title>
 
     <para>
-      Extract all the tarballs:
+      Pakk ut alle tarfiler:
     </para>
 
 <screen><userinput>for i in *.tar.?z*; do
@@ -133,10 +133,10 @@ grep -v '^#' ../dolphin-list | wget -i- -c \
 done</userinput></screen>
 
     <para>
-      Now that everything has been extracted, the required extracted submodules
-      need to be moved into <filename
-      class="directory">dolphin-&dolphin-version;</filename>. Do that by
-      running the following commands:
+      Nå som alt er pakket ut, må de nødvendige utpakkede undermodulene 
+      flyttes inn i <filename
+      class="directory">dolphin-&dolphin-version;</filename>. Gjør det ved å 
+      kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mv -T SFML-* dolphin-&dolphin-version;/Externals/SFML/SFML &amp;&amp;
@@ -156,62 +156,62 @@ mv -T xxHash-* dolphin-&dolphin-version;/Externals/xxhash/xxHash &amp;&amp;
 mv -T zlib-ng-* dolphin-&dolphin-version;/Externals/zlib-ng/zlib-ng</userinput></screen>
 
     <para>
-      If you have not installed <xref linkend="enet"/>, move the submodule into
+      Hvis du ikke har installert <xref linkend="enet"/>, flytt undermodulen inn i
       <filename class="directory">dolphin-&dolphin-version;</filename>:
     </para>
 
 <screen><userinput>mv -T enet-* dolphin-&dolphin-version;/Externals/enet/enet</userinput></screen>
 
     <para>
-      If you have not installed <ulink
-      url="&blfs-svn;/general/fmt.html">fmt</ulink>, move the submodule into
+      Hvis du ikke har installert <ulink
+      url="&blfs-svn;/general/fmt.html">fmt</ulink>, flytt undermodulen inn i
       <filename class="directory">dolphin-&dolphin-version;</filename>:
     </para>
 
 <screen><userinput>mv -T fmt-* dolphin-&dolphin-version;/Externals/fmt/fmt</userinput></screen>
 
     <para>
-      If you have not installed <xref linkend="libspng"/>, move the submodule
-      into <filename class="directory">dolphin-&dolphin-version;</filename>:
+      Hvis du ikke har installert <xref linkend="libspng"/>, flytt undermodulen 
+      inn i <filename class="directory">dolphin-&dolphin-version;</filename>:
     </para>
 
 <screen><userinput>mv -T libspng-* dolphin-&dolphin-version;/Externals/libspng/libspng</userinput></screen>
 
     <para>
-      If you have not installed <ulink
-      url="&blfs-svn;/general/libusb.html">libusb</ulink>, move the submodule
-      into <filename class="directory">dolphin-&dolphin-version;</filename>:
+      Hvis du ikke har installert <ulink
+      url="&blfs-svn;/general/libusb.html">libusb</ulink>, flytt undermodulen 
+      inn i <filename class="directory">dolphin-&dolphin-version;</filename>:
     </para>
 
 <screen><userinput>mv -T libusb-* dolphin-&dolphin-version;/Externals/libusb/libusb</userinput></screen>
 
     <para>
-      Now go into the <filename
-      class="directory">dolphin-&dolphin-version;</filename> directory:
+      Gå nå inn i <filename
+      class="directory">dolphin-&dolphin-version;</filename> mappen:
     </para>
 
 <screen><userinput>cd dolphin-&dolphin-version;</userinput></screen>
 
 <!--
     <para>
-      Apply a patch to force XCB to be used
-      in Dolphin on
-      Wayland to avoid being unable to initialize
-      graphics when launching a game:
+      Installer en patch for å tvinge XCB 
+      til å brukes i Dolphin på Wayland 
+      for å unngå at grafikken ikke kan 
+      initialiseres når et spill startes:
     </para>
 
 <screen><userinput>patch -Np1 -i ../dolphin-xcb_env-1.patch</userinput></screen>
 -->
 
     <para>
-      Remove a dirty suffix that prevents building for netplay support:
+      Fjern et upassende suffiks som forhindrer bygging for nettspill støtte:
     </para>
 
 <screen><userinput>sed -i 's/--dirty/&amp;=""/' CMake/ScmRevGen.cmake</userinput></screen>
 
     <para>
-      Install Dolphin by running the following
-      commands:
+      Installer Dolphin ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -228,7 +228,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -236,66 +236,64 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     &cmake-policy-version;
 
     <para>
-      <parameter>-D ENABLE_TESTS=OFF</parameter>: This parameter disables
-      building unit tests.
+      <parameter>-D ENABLE_TESTS=OFF</parameter>: Denne parameteren deaktiverer 
+      bygging av enhetstester.
     </para>
 
     <para>
-      <parameter>-D USE_SYSTEM_LIBMGBA=OFF</parameter>: This parameter forces
-      the build system to build the vendored copy of
-      mGBA; otherwise, there will be compilation
-      errors if <xref linkend="mgba"/> is installed due to different versions
-      (compiling an older mGBA results in
-      compilation errors because of it requiring an older
-      FFmpeg version).
+      <parameter>-D USE_SYSTEM_LIBMGBA=OFF</parameter>: Denne parameteren 
+      tvinger byggesystemet til å bygge leverandørkopien av mGBA; ellers 
+      vil det være kompileringsfeil hvis <xref linkend="mgba"/> er 
+      installert på grunn av forskjellige versjoner (kompilering av 
+      en eldre mGBA resulterer i kompileringsfeil fordi den 
+      krever en eldre FFmpeg versjon).
     </para>
 
   </sect2>
 
 <!--
   <sect2>
-    <title>Using Dolphin</title>
+    <title>Bruke Dolphin</title>
 
     <para>
-      Using Dolphin is generally straight forward.
-      However, if you are on Wayland, and are not
-      launching the application via a launcher, then the program will most
-      likely not have a variable set in the same breath, which leads to
-      Dolphin not being able to launch any game.
-      You need to run
-      <computeroutput>env QT_QPA_PLATFORM=xcb dolphin-emu</computeroutput> in
-      order to bypass this. You might want to set an alias for
-      <command>dolphin-emu</command> which includes the
-      <computeroutput>env QT_QPA_PLATFORM=xcb</computeroutput> bit, ensuring
-      no matter how the program is launched, it has the variable set.
-      This variable will be set if the method of launching reads from the
-      <filename>.desktop</filename> file, which not all launchers read from.
+      Det er vanligvis enkelt å bruke Dolphin. Men hvis du er 
+      på Wayland og ikke starter applikasjonen via en launcher, 
+      vil programmet mest sannsynlig ikke ha en variabel satt 
+      i samme åndedrag, noe som fører til at Dolphin ikke kan 
+      starte noe spill. Du må kjøre
+      <computeroutput>env QT_QPA_PLATFORM=xcb dolphin-emu</computeroutput> for 
+      å omgå dette. Du bør kanskje sette et alias for
+      <command>dolphin-emu</command> som inkluderer
+      <computeroutput>env QT_QPA_PLATFORM=xcb</computeroutput>, 
+      noe som sikrer uansett hvordan programmet startes, har det variabelen 
+      satt. Denne variabelen vil bli satt hvis oppstartsmetoden leser fra
+      <filename>.desktop</filename> filen, som ikke alle launchere leser fra.
     </para>
 
   </sect2>
 -->
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          dolphin-emu, dolphin-emu-nogui, and dolphin-tool
+          dolphin-emu, dolphin-emu-nogui, og dolphin-tool
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/dolphin-emu
@@ -304,7 +302,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -312,7 +310,7 @@ ninja</userinput></screen>
         <term><command>dolphin-emu</command></term>
         <listitem>
           <para>
-            is the GUI version of Dolphin
+            er GUI versjonen av Dolphin
           </para>
           <indexterm zone="dolphin dolphin-emu">
             <primary sortas="b-dolphin-emu">dolphin-emu</primary>
@@ -324,7 +322,7 @@ ninja</userinput></screen>
         <term><command>dolphin-emu-nogui</command></term>
         <listitem>
           <para>
-            is the command-line version of Dolphin
+            er kommandolinjeversjonen av Dolphin
           </para>
           <indexterm zone="dolphin dolphin-emu-nogui">
             <primary sortas="b-dolphin-emu-nogui">dolphin-emu-nogui</primary>
@@ -336,7 +334,7 @@ ninja</userinput></screen>
         <term><command>dolphin-tool</command></term>
         <listitem>
           <para>
-            has multiple functions such as managing disc images
+            har flere funksjoner, som å administrere diskbilder
           </para>
           <indexterm zone="dolphin dolphin-tool">
             <primary sortas="b-dolphin-tool">dolphin-tool</primary>
