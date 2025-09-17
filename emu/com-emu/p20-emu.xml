@@ -18,95 +18,95 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to p20-emu</title>
+    <title>Introduksjon til p20-emu</title>
 
     <para>
-      The p20-emu package is a Plexus P/20
+      p20-emu pakken er en Plexus P/20
       emulator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&p20-emu-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&p20-emu-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required ROM 1:
+          Påkrevd ROM 1:
           <ulink url="https://github.com/misterblack1/plexus-p20/raw/refs/heads/main/ROMs/U15-MERGED.BIN"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required ROM 2:
+          Påkrevd ROM 2:
           <ulink url="https://github.com/misterblack1/plexus-p20/raw/refs/heads/main/ROMs/U17-MERGED.BIN"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Recommended patch:
+          Anbefalt oppdatering:
           <ulink url="&patch-root;/p20-emu/p20-emu-&p20-emu-minor-version;-no-debug.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Recommended patch:
+          Anbefalt oppdatering:
           <ulink url="&patch-root;/p20-emu/p20-emu-&p20-emu-minor-version;-system-roms.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">p20-emu Dependencies</bridgehead>
+    <bridgehead renderas="sect3">p20-emu Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distribution)
+      (for å pakke ut distribusjonene)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of p20-emu</title>
+    <title>Installasjon av p20-emu</title>
 
     &extraction-unzip;
 
     <para>
-      Apply a patch to build without any debugging information, which allows
-      for a slightly faster binary:
+      Bruk en oppdatering for å bygge uten feilsøkingsinformasjon, noe som gir 
+      en litt raskere binærfil:
     </para>
 
 <screen><userinput>patch -Np1 -i ../p20-emu-&p20-emu-minor-version;-no-debug.patch</userinput></screen>
 
     <para>
-      Optionally, apply a patch to search for the ROMs in a system-wide
-      location and not the current directory:
+      Du kan eventuelt bruke en oppdatering for å søke etter ROM-ene i hele 
+      systemet og ikke gjeldende mappe:
     </para>
 
 <screen><userinput>patch -Np1 -i ../p20-emu-&p20-emu-minor-version;-system-roms.patch</userinput></screen>
 
     <para>
-      Install p20-emu by running the following
-      command:
+      Installer p20-emu ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make Musashi/m68kops.h &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -Dm755 emu /usr/bin/p20-emu</userinput></screen>
 
     <para>
-      If you have applied the systemwide ROMs patch, install those ROMs as the
-      &root; user:
+      Hvis du har installert den systemomfattende ROM-oppdateringen, 
+      installerer du disse ROM-ene som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -m755 -d /usr/share/p20-emu &amp;&amp;
@@ -116,29 +116,29 @@ install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>make Musashi/m68kops.h</command>: This command explicitly
-      generates a header file used during build time to avoid a race condition.
+      <command>make Musashi/m68kops.h</command>: Denne kommandoen genererer 
+      eksplisitt en deklarasjonsfil som brukes under byggetiden for å unngå en "race condition".
     </para>
 
   </sect2>
 
 <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
           p20-emu
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/p20-emu
@@ -147,7 +147,7 @@ install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -155,7 +155,7 @@ install -v -m644 ../U17-MERGED.BIN /usr/share/p20-emu</userinput></screen>
         <term><command>p20-emu</command></term>
         <listitem>
           <para>
-            is the Plexus P/20 emulator
+            er en Plexus P/20 emulator
           </para>
           <indexterm zone="p20-emu p20-emu-bin">
             <primary sortas="b-p20-emu-bin">p20-emu</primary>
