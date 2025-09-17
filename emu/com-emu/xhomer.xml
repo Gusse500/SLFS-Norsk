@@ -18,67 +18,67 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to XHomer</title>
+    <title>Introduksjon til XHomer</title>
 
     <para>
-      The XHomer package provides an emulator for
-      the DEC Pro 350 computer, a PDP-11-based machine that was sold in the
-      early to mid-80s.
+      XHomer pakken inneholder en emulator for DEC Pro 350 datamaskinen, 
+      en PDP-11-basert maskin som ble solgt på begynnelsen til 
+      midten av 80-tallet.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xhomer-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&xhomer-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/xhomer/xhomer-&xhomer-version;-close-properly.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/xhomer/xhomer-&xhomer-version;-fix-util-build.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">XHomer Dependencies</bridgehead>
+    <bridgehead renderas="sect3">XHomer Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/x/installing.html">The X Window System</ulink>
+      <ulink url="&blfs-svn;/x/installing.html">X vindussystemet</ulink>
     </para>
  
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of XHomer</title>
+    <title>Installasjon av XHomer</title>
 
     <para>
-      Apply a patch to allow for proper restoring of terminal settings in
-      certain commonly used scenarios of closing
+      Bruk en oppdatering for å tillate riktig gjenoppretting av 
+      terminalinnstillingene i visse vanlig brukte scenarioer for lukking av 
       XHomer:
     </para>
 
 <screen><userinput>patch -Np1 -i ../xhomer-&xhomer-version;-close-properly.patch</userinput></screen>
 
     <para>
-      Now, apply a patch to fix compilation of misc included utilities:
+      Nå, bruk en oppdatering for å fikse kompilering av diverse inkluderte verktøy:
     </para>
 
 <screen><userinput>patch -Np1 -i ../xhomer-&xhomer-version;-fix-util-build.patch</userinput></screen>
 
     <para>
-      Install XHomer by running the following
-      command:
+      Installer XHomer ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make CC="cc -std=gnu17" &amp;&amp;
@@ -86,7 +86,7 @@ gcc UTILITIES/lbn2xhomer.c -o UTILITIES/lbn2xhomer &amp;&amp;
 gcc UTILITIES/venix2xhomer.c -o UTILITIES/venix2xhomer</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -Dm755 xhomer /usr/bin &amp;&amp;
@@ -94,7 +94,7 @@ install -v -Dm755 UTILITIES/lbn2xhomer /usr/bin &amp;&amp;
 install -v -Dm755 UTILITIES/venix2xhomer /usr/bin</userinput></screen>
 
     <para>
-      Optionally, install the documentation as the &root; user:
+      Installer eventuelt dokumentasjonen som &root; bruker:
     </para>
 
 <screen role="root" remap="doc"><userinput>install -v -m755 -d /usr/share/doc/xhomer-&xhomer-version; &amp;&amp;
@@ -103,19 +103,19 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          xhomer, lbn2xhomer, and venix2xhomer
+          xhomer, lbn2xhomer, og venix2xhomer
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/doc/xhomer-&xhomer-version;
@@ -124,7 +124,7 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -132,7 +132,7 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
         <term><command>xhomer</command></term>
         <listitem>
           <para>
-            is the DEC Pro 350 emulator
+            er en DEC Pro 350 emulator
           </para>
           <indexterm zone="xhomer xhomer-bin">
             <primary sortas="b-xhomer-bin">xhomer</primary>
@@ -144,8 +144,8 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
         <term><command>lbn2xhomer</command></term>
         <listitem>
           <para>
-            converts RX50 disk image files from logical block order
-            to raw sector order
+            konverterer RX50 diskavbildningsfiler fra logisk 
+            blokkrekkefølge til rå sektorrekkefølge
           </para>
           <indexterm zone="xhomer lbn2xhomer">
             <primary sortas="b-lbn2xhomer">lbn2xhomer</primary>
@@ -157,8 +157,8 @@ install -v -m644 DOC/* /usr/share/doc/xhomer-&xhomer-version;</userinput></scree
         <term><command>venix2xhomer</command></term>
         <listitem>
           <para>
-            converts RX50 disk image files produced by Venix
-            to the format required by <command>xhomer</command>
+            konverterer RX50 diskavbildningsfiler produsert av Venix til 
+            formatet som kreves av <command>xhomer</command>
           </para>
           <indexterm zone="xhomer venix2xhomer">
             <primary sortas="b-venix2xhomer">venix2xhomer</primary>
