@@ -5,21 +5,21 @@
   %general-entities;
 ]>
 
-<sect1 id="gba-intro" xreflabel="Introduction to Game Boy Advance Emulation">
+<sect1 id="gba-intro" xreflabel="Introduksjon til Game Boy Advance Emulering">
   <?dbhtml filename="gba-intro.html"?>
 
 
-  <title>Introduction to Game Boy Advance Emulation</title>
+  <title>Introduksjon til Game Boy Advance Emulering</title>
 
   <sect2>
-    <title>What is the Game Boy Advance?</title>
+    <title>Hva er Game Boy Advance?</title>
 
     <para>
-      The Game Boy Advance (GBA) is a video game handheld console made by
-      Nintendo which was available from 2001 to 2010. It uses a 32-bit CPU.
-      It is the successor of the previous Game Boy consoles and is able to
-      play most Game Boy versions that came before. There are a number of GBA
-      emulators. The one in this book is mGBA.
+      Game Boy Advance (GBA) er en håndholdt spillkonsoll laget av Nintendo som 
+      var tilgjengelig fra 2001 til 2010. Den bruker en 32-bits CPU. Den er 
+      etterfølgeren til de tidligere Game Boy konsollene og kan spille de 
+      fleste Game Boy versjonene som kom før. Det finnes en rekke GBA 
+      emulatorer. Den i denne boken er mGBA.
     </para>
 
   </sect2>
@@ -28,10 +28,10 @@
     <title>mGBA</title>
 
     <para>
-      mGBA is a GBA emulator that aims to be more
-      accurate than other GBA emulators, as well as providing a better feature
-      set. It supports GBA games, as well as regular Game Boy and Game Boy
-      Color games.
+      mGBA er en GBA emulator som har som mål å være mer nøyaktig 
+      enn andre GBA emulatorer, samt å tilby et bedre sett med 
+      funksjoner. Den støtter GBA spill, så vel som vanlige 
+      Game Boy og Game Boy Color spill.
     </para>
 
   </sect2>
