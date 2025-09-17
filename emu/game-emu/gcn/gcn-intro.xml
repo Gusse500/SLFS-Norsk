@@ -5,22 +5,22 @@
   %general-entities;
 ]>
 
-<sect1 id="gcn-intro" xreflabel="Introduction to Nintendo GameCube/Wii Emulation">
+<sect1 id="gcn-intro" xreflabel="Introduksjon til Nintendo GameCube/Wii Emulering">
   <?dbhtml filename="gcn-intro.html"?>
 
 
-  <title>Introduction to Nintendo GameCube/Wii Emulation</title>
+  <title>Introduksjon til Nintendo GameCube/Wii Emulering</title>
 
   <sect2>
-    <title>What is the Nintendo GameCube and Wii?</title>
+    <title>Hva er Nintendo GameCube og Wii?</title>
 
     <para>
-      The Nintendo GameCube (GCN/NGC/GC) is a video game console made by
-      Nintendo which was available from 2001 to 2007. It uses a 32-bit CPU.
-      The Wii was also a video game console made by Nintendo, but it was
-      available from 2006 to 2013. It uses a similar CPU and general
-      architecture as the GCN. There are a few emulators for each of the two
-      consoles, but the most prominent one is Dolphin, which is in this book.
+      Nintendo GameCube (GCN/NGC/GC) er en spillkonsoll laget av Nintendo som 
+      var tilgjengelig fra 2001 til 2007. Den bruker en 32-bits CPU. Wii var 
+      også en spillkonsoll laget av Nintendo, men den var tilgjengelig fra 2006 
+      til 2013. Den bruker en lignende CPU og generell arkitektur som GCN. Det 
+      finnes noen få emulatorer for hver av de to konsollene, men den mest 
+      fremtredende er Dolphin, som er med i denne boken.
     </para>
 
   </sect2>
@@ -29,9 +29,9 @@
     <title>Dolphin</title>
 
     <para>
-      Dolphin is a GCN and Wii emulator and is generally considered the gold
-      standard of emulators. It supports multiple controllers, connection
-      methods, general settings, etc.
+      Dolphin er en GCN og Wii emulator og regnes generelt som gullstandarden 
+      for emulatorer. Den støtter flere kontrollere, tilkoblingsmetoder, 
+      generelle innstillinger osv.
     </para>
 
   </sect2>
