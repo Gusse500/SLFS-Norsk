@@ -7,24 +7,23 @@
   <!ENTITY mupen64plus-download-http "https://github.com/mupen64plus/">
 ]>
 
-<sect1 id="m64plus-components" xreflabel="Mupen64Plus Components">
+<sect1 id="m64plus-components" xreflabel="Mupen64Plus Komponenter">
   <?dbhtml filename="m64plus-components.html"?>
 
-  <title>Mupen64Plus Components</title>
+  <title>Mupen64Plus Komponenter</title>
 
   <indexterm zone="m64plus-components">
-    <primary sortas="a-m64plus-components">Mupen64Plus Components</primary>
+    <primary sortas="a-m64plus-components">Mupen64Plus Komponenter</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Mupen64Plus Components</title>
+    <title>Introduksjon til Mupen64Plus Komponenter</title>
 
     <para>
-      This page will install multiple Mupen64Plus
-      components and plugins, as well as a command-line frontend as a bare
-      necessity. If you do not wish to install a graphical frontend, this page
-      will provide all the parts of  Mupen64Plus you
-      will need.
+      Denne siden vil installere flere Mupen64Plus komponenter og programtillegg, 
+      samt et kommandolinjegrensesnitt som en absolutt nødvendighet. Hvis du 
+      ikke ønsker å installere et grafisk grensesnitt, vil denne siden gi deg 
+      alle delene av Mupen64Plus du trenger.
     </para>
 
     &long-build-time;
@@ -32,24 +31,24 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mupen64plus-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&mupen64plus-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Mupen64Plus Components Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Mupen64Plus Komponenter Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
       &glu;,
       <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
       &opengl;,
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, og
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>,
       <ulink url="&blfs-svn;/multimedia/libsamplerate.html">libsamplerate</ulink>,
@@ -57,17 +56,17 @@
       (for <filename>.zip</filename> extraction support),
       <ulink url="&blfs-svn;/general/nasm.html">NASM</ulink>,
       <ulink url="&blfs-svn;/general/opencv.html">opencv</ulink>,
-      <xref linkend="sdl2_net"/>, and
+      <xref linkend="sdl2_net"/>, og
       <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>
     </para>
 
   </sect2>
 
   <sect2>
-    <title>Downloading Mupen64Plus Components</title>
+    <title>Laste ned Mupen64Plus Komponenter</title>
 
     <para>
-      First create a list of files to be downloaded:
+      Lag først en liste over filer som skal lastes ned:
     </para>
 
 <screen><userinput>cat &gt; m64plus-list &lt;&lt; "EOF"
@@ -80,9 +79,9 @@ mupen64plus-ui-console/releases/download/&mupen64plus-ui-console-version;/mupen6
 EOF</userinput></screen>
 
     <para>
-      To download the needed files using
+      For å laste ned de nødvendige filene ved hjelp av
       <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
-      use the following commands: 
+      bruk følgende kommandoer: 
     </para>
 
 <screen><userinput>mkdir m64plus &amp;&amp;
@@ -95,18 +94,18 @@ wget https://github.com/gonetz/GLideN64/archive/&gliden64-version;.tar.gz \
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Mupen64Plus Components</title>
+    <title>Installasjon av Mupen64Plus Komponenter</title>
 
     &as_root;
 
     <para>
-      Next, start a subshell that will exit on error:
+      Deretter starter du et underskall som avsluttes ved feil:
     </para>
 
 <screen><userinput>bash -e</userinput></screen>
 
     <para>
-      Install all the packages by running the following commands:
+      Installer alle pakkene ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>for package in $(grep -v '^#' ../m64plus-list)
@@ -136,7 +135,7 @@ pushd GLideN64-&gliden64-version;/projects/cmake
 popd</userinput></screen>
 
     <para>
-      Finally, exit the shell that was started earlier:
+      Til slutt, avslutt skallet som ble startet tidligere:
     </para>
 
 <screen><userinput>exit</userinput></screen>
@@ -144,102 +143,102 @@ popd</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>NETPLAY=1</parameter>: This enables netplay support which
-      allows you to play with other people online. Omit this if you have not
-      installed <xref linkend="sdl2_net"/>.
+      <parameter>NETPLAY=1</parameter>: Dette aktiverer støtte for nettspill, 
+      som lar deg spille med andre på nett. Utelat dette hvis du ikke har 
+      installert. <xref linkend="sdl2_net"/>.
     </para>
 
     <para>
-      <parameter>-D GL_PROFILE=On</parameter>: This turns on the OpenGL
-      profiling in the GLideN64 plugin.
+      <parameter>-D GL_PROFILE=On</parameter>: Dette slår på OpenGL 
+      profileringen i GLideN64 programtillegget.
     </para>
 
     <para>
-      <parameter>-D MUPENPLUSAPI=On</parameter>: This parameter forces the
-      build system to build the Mupen64Plus version
-      of the GLideN64 plugin.
+      <parameter>-D MUPENPLUSAPI=On</parameter>: Denne parameteren tvinger 
+      byggesystemet til å bygge Mupen64Plus versjonen av GLideN64 
+      programtillegget.
     </para>
 
     <para>
-      <parameter>-D USE_SYSTEM_LIBS=On</parameter>: This parameter forces the
-      build system to use the system-installed dependencies of the
-      GLideN64 plugin.
+      <parameter>-D USE_SYSTEM_LIBS=On</parameter>: Denne parameteren tvinger 
+      byggesystemet å bruke de systeminstallerte avhengighetene til 
+      GLideN64 programtillegget.
     </para>
 
   </sect2>
 
   <sect2 role="using">
-    <title>Using Mupen64Plus</title>
+    <title>Bruke Mupen64Plus</title>
 
     <para>
-      From this point, you have a couple of options on how to interact with
-      Mupen64Plus. You can either use
-      <command>mupen64plus</command>, which is the
-      Mupen64Plus command-line frontend, or you can
-      use a graphical frontend such as <ulink
+      Fra dette punktet har du et par alternativer for hvordan du kan samhandle 
+      med Mupen64Plus. Du kan enten bruke
+      <command>mupen64plus</command>, som er Mupen64Plus 
+      kommandolinjegrensesnitt, eller du kan bruke et 
+      grafisk grensesnitt som <ulink
       url="https://github.com/mupen64plus/mupen64plus-ui-python">mupen64plus-ui-python</ulink>.
-      Graphical frontends generally have many bells and whistles on top of
-      being more user friendly. There are also
-      Mupen64Plus launchers, which instead of using
-      the system-installed Mupen64Plus components,
-      they use their own in-house components/forks. A good launcher is <ulink
-      url="https://github.com/Rosalie241/RMG">RMG</ulink>, well-known for being
-      easy to use and set up, but has more and harsher dependencies.
-      The <command>mupen64plus</command> application can work just as well,
-      however. The rest of this section will cover the
-      <command>mupen64plus</command> program.
+      Grafiske grensesnitt har generelt mange funksjoner i tillegg til at de er 
+      mer brukervennlige. Det finnes også Mupen64Plus 
+      lanseringsprogramvare, som i stedet for å bruke 
+      de systeminstallerte Mupen64Plus komponentene, bruker sine egne interne 
+      komponenter/forks. En god launcher er <ulink
+      url="https://github.com/Rosalie241/RMG">RMG</ulink>, kjent for å være 
+      enkel å bruke og sette opp, men har flere og strengere avhengigheter.
+      <command>mupen64plus</command> applikasjonen kan fungere like bra, 
+      Resten av denne delen vil dekke
+      <command>mupen64plus</command> programmet.
     </para>
 
     <para>
-      You can choose which plugins to use, and there are various plugin types.
-      Generally, the plugin name you will pass will be
+      Du kan velge hvilke programtillegg du vil bruke, og det finnes ulike typer 
+      programtillegg. Vanligvis vil navnet på programtillegget du oppgir være
       <filename>mupen64plus-<replaceable>&lt;TYPE&gt;</replaceable>-<replaceable>&lt;NAME&gt;</replaceable></filename>.
-      <replaceable>&lt;TYPE&gt;</replaceable> can either be
+      <replaceable>&lt;TYPE&gt;</replaceable> kan enten være
       <filename>audio</filename>, <filename>input</filename>,
-      <filename>rsp</filename>, or <filename>video</filename>.
+      <filename>rsp</filename>, eller <filename>video</filename>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem><para>
-        For <filename>audio</filename>, pass
+        For <filename>audio</filename>, bruk
         <computeroutput>--audio mupen64plus-audio-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
       <listitem><para>
-        For <filename>input</filename>, pass
+        For <filename>input</filename>, bruk
         <computeroutput>--input mupen64plus-input-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
       <listitem><para>
-        For <filename>rsp</filename>, pass
+        For <filename>rsp</filename>, bruk
         <computeroutput>--rsp mupen64plus-rsp-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
       <listitem><para>
-        For <filename>video</filename>, pass
+        For <filename>video</filename>, bruk
         <computeroutput>--gfx mupen64plus-video-<replaceable>&lt;NAME&gt;</replaceable></computeroutput>.
       </para></listitem>
     </itemizedlist>
 
     <tip><para>
-      You can find the list of installed plugins in <quote>Contents</quote>.
+      Du finner listen over installerte programtillegg i <quote>Innhold</quote>.
     </para></tip>
 
     <para>
-      After passing the plugins you want once, the program will make those
-      plugins the default and will be used for every run of the program
-      after that. It is recommended to pass what you want to the program on
-      the first run, quit out of the program, configure the plugins, then start
-      emulating the ROMs you wish.
+      Etter at du har sendt inn de ønskede programtilleggene én gang, vil 
+      programmet gjøre disse programtilleggene til standard og vil bli brukt for 
+      hver kjøring av programmet etter det. Det anbefales å sende det du ønsker 
+      til programmet ved første kjøring, avslutte programmet, konfigurere 
+      programtilleggene og deretter begynne å emulere ROM-ene du ønsker.
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring Mupen64Plus</title>
+    <title>Konfigurere Mupen64Plus</title>
 
     <sect3 id="m64plus-components-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
         <filename>~/.config/mupen64plus/mupen64plus.cfg</filename>
       </para>
@@ -250,62 +249,62 @@ popd</userinput></screen>
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        If you plan to only use <command>mupen64plus</command>, the
-        command-line Mupen64Plus frontend, you will
-        have to configure the options manually. You can generate a default
-        configuration file from simply running <command>mupen64plus</command>
-        once. It will stack all the default configuration files from
-        <filename class="directory">/usr/share/mupen64plus</filename> into
-        <filename>~/.config/mupen64plus/mupen64plus.cfg</filename>. It will
-        automatically stack configuration files from the plugins it chooses if
-        you have not passed which plugins you want to use to
-        <command>mupen64plus</command>. If you want to use a different plugin,
-        pass the plugin name to the command, then the program will dump the new
-        defaults to the configuration file if the plugin section is not already
-        there.
+        Hvis du planlegger å bare bruke <command>mupen64plus</command>, 
+        kommandolinjegrensesnittet til Mupen64Plus, må du konfigurere 
+        alternativene manuelt. Du kan generere en standard konfigurasjonsfil 
+        ved å kjøre <command>mupen64plus</command>
+        én gang. Den vil stable alle standardkonfigurasjonsfilene fra
+        <filename class="directory">/usr/share/mupen64plus</filename> inn i
+        <filename>~/.config/mupen64plus/mupen64plus.cfg</filename>. Den vil 
+        automatisk stable konfigurasjonsfiler fra programtilleggene den velger 
+        hvis du ikke har angitt hvilke programtillegg du vil bruke til
+        <command>mupen64plus</command>. Hvis du vil bruke et annet 
+        programtillegg, send programtilleggnavnet til kommandoen, så vil 
+        programmet dumpe de nye standardinnstillingene til konfigurasjonsfilen 
+        hvis programtillegg delen ikke allerede er der.
       </para>
 
       <para>
-        Mapping your controller is the most difficult part but becomes a lot
-        easier if you use <xref linkend="jstest-sdl"/>. First, connect your
-        controller and invoke
-        <computeroutput>jstest-sdl -l</computeroutput>. You should see a
-        controller listed, perhaps multiple entries. In the case that there are
-        two entries for one controller, and one of them at the end says
-        <computeroutput>(IMU)</computeroutput>, you will want to choose the
-        controller that doesn't list <computeroutput>(IMU)</computeroutput> at
-        the end of the name. Each listing will have a joystick number. If you
-        only have one controller connected, it should be
-        <computeroutput>0</computeroutput>. Once you have decided which JS
-        number you are going to test, run
+        Å kartlegge kontrolleren din er den vanskeligste delen, men det blir mye 
+        enklere hvis du bruker <xref linkend="jstest-sdl"/>. Først kobler du til 
+        kontrolleren din og starter
+        <computeroutput>jstest-sdl -l</computeroutput>. Du bør se en kontroller 
+        oppført, kanskje flere oppføringer. I tilfelle det er to oppføringer for 
+        én kontroller, og en av dem på slutten sier
+        <computeroutput>(IMU)</computeroutput>, du vil velge kontrolleren som 
+        ikke har <computeroutput>(IMU)</computeroutput> på slutten av navnet. 
+        Hver oppføring vil ha et joysticknummer. Hvis du bare har én kontroller 
+        tilkoblet, bør den være
+        <computeroutput>0</computeroutput>. Når du har bestemt deg for hvilket 
+        JS nummer du skal teste, kjør
         <computeroutput>jstest-sdl -t <replaceable>&lt;JS&gt;</replaceable></computeroutput>.
-        You should be brought up to a screen with axis, buttons, hats, and
-        balls listings, and depending on the quality of the sticks, the axis
-        listings may already be moving slightly.
+        Du skal nå komme opp til en skjerm med lister over akser, knapper, 
+        hatter og baller, og avhengig av kvaliteten på stikkene, kan det hende 
+        at akselistene allerede beveger seg litt.
       </para>
 
       <para>
-        Now go ahead and edit
-        <filename>~/.config/mupen64plus/mupen64plus.cfg</filename> in the
-        <computeroutput>[Input-SDL-Control1]</computeroutput> section for the
-        first controller. Ensure
-        <computeroutput>mode</computeroutput> is equal to
-        <computeroutput>0</computeroutput> so that you can bind the mappings
-        properly. Now edit each field to that which matches your controller's
-        input scheme that appears in <command>jstest-sdl</command>.
-        Once you feel confident in the mappings, save the file and test the
-        inputs by running a ROM. If all went well, the mappings should work.
-        You may have to edit the deadzones, but hopefully the default should
-        work for you.
+        Nå kan du redigere
+        <filename>~/.config/mupen64plus/mupen64plus.cfg</filename> i
+        <computeroutput>[Input-SDL-Control1]</computeroutput> seksjon for den 
+        første kontrolleren. Sørg for
+        <computeroutput>mode</computeroutput> er lik
+        <computeroutput>0</computeroutput> slik at du kan binde mappingene 
+        riktig. Rediger nå hvert felt til det som samsvarer med kontrollerens 
+        inndataskjema som vises i <command>jstest-sdl</command>.
+        Når du føler deg trygg på mappingene, lagrer du filen og tester 
+        inngangene ved å kjøre en ROM. Hvis alt gikk bra, skal mappingene 
+        fungere. Du må kanskje redigere dødsonene, men forhåpentligvis skal 
+        standardverdien fungere for deg.
       </para>
 
       <para>
-        If you aim to use a graphical frontend, the manual configuration will
-        hopefully not be necessary. Most graphical frontends will handle the
-        configuration for you through the GUI.
+        Hvis du har som mål å bruke et grafisk grensesnitt, vil manuell konfigurasjon 
+        forhåpentligvis ikke være nødvendig. De fleste grafiske grensesnitt vil 
+        håndtere konfigurasjonen for deg via det grafiske brukergrensesnittet.
       </para>
 
     </sect3>
@@ -313,13 +312,13 @@ popd</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Programtillegg</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
@@ -332,18 +331,18 @@ popd</userinput></screen>
           mupen64plus-audio-sdl,
           mupen64plus-input-sdl,
           mupen64plus-rsp-hle,
-          mupen64plus-video-GLideN64, and
+          mupen64plus-video-GLideN64, og
           mupen64plus-video-rice
         </seg>
         <seg>
-          /usr/include/mupen64plus, /usr/lib/mupen64plus, and
+          /usr/include/mupen64plus, /usr/lib/mupen64plus, og
           /usr/share/mupen64plus
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -351,7 +350,7 @@ popd</userinput></screen>
         <term><command>mupen64plus</command></term>
         <listitem>
           <para>
-            is the command-line frontend for
+            er kommandolinjegrensesnittet for 
             Mupen64Plus
           </para>
           <indexterm zone="m64plus-components mupen64plus">
@@ -364,8 +363,8 @@ popd</userinput></screen>
         <term><filename class="libraryfile">libmupen64plus</filename></term>
         <listitem>
           <para>
-            is the Mupen64Plus core that can be used
-            by various frontends and loads the necessary plugins
+            er Mupen64Plus kjernen som kan brukes av forskjellige 
+            brukergrensesnitt og laster inn nødvendige programtillegg
           </para>
           <indexterm zone="m64plus-components libmupen64plus">
             <primary sortas="c-libmupen64plus">libmupen64plus</primary>
