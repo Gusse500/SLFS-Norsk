@@ -5,22 +5,22 @@
   %general-entities;
 ]>
 
-<sect1 id="n64-intro" xreflabel="Introduction to Nintendo 64 Emulation">
+<sect1 id="n64-intro" xreflabel="Introduksjon til Nintendo 64 Emulering">
   <?dbhtml filename="n64-intro.html"?>
 
 
-  <title>Introduction to Nintendo 64 Emulation</title>
+  <title>Introduksjon til Nintendo 64 Emulering</title>
 
   <sect2>
-    <title>What is the Nintendo 64?</title>
+    <title>Hva er Nintendo 64?</title>
 
     <para>
-      The Nintendo 64 (N64) is a video game console made by Nintendo which was
-      available from 1996 to 2002. It uses a 64-bit MIPS CPU and an SGI RCP.
-      As a result of having a different architecture, graphics system, and
-      having different microcodes for each game, it is notoriously difficult
-      to emulate this console. However, there is a prominent collection of
-      software available on Linux that can emulate this console: Mupen64Plus.
+      Nintendo 64 (N64) er en spillkonsoll laget av Nintendo som var 
+      tilgjengelig fra 1996 til 2002. Den bruker en 64-bit MIPS CPU og en SGI 
+      RCP. Som et resultat av en annen arkitektur, grafikksystem og forskjellige 
+      mikrokoder for hvert spill, er det notorisk vanskelig å emulere denne 
+      konsollen. Det finnes imidlertid en fremtredende samling av programvare 
+      tilgjengelig på Linux som kan emulere denne konsollen: Mupen64Plus.
     </para>
 
   </sect2>
@@ -29,10 +29,10 @@
     <title>Mupen64Plus</title>
 
     <para>
-      Mupen64Plus is a collection of packages and pile of plugins that work
-      together to emulate N64 ROMs, whether official or homebrewed. <xref
-      linkend="m64plus-components"/> will install most packages you will need
-      in order to emulate N64 ROMs.
+      Mupen64Plus er en samling pakker og en haug med programtillegg som fungerer 
+      sammen for å emulere N64 ROM-er, enten offisielle eller hjemmelagde. <xref
+      linkend="m64plus-components"/> vil installere de fleste pakkene du 
+      trenger for å emulere N64 ROM-er.
     </para>
 
   </sect2>
