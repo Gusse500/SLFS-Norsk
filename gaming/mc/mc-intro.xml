@@ -5,26 +5,26 @@
   %general-entities;
 ]>
 
-<sect1 id="mc-intro" xreflabel="Introduction to Minecraft">
+<sect1 id="mc-intro" xreflabel="Introduksjon til Minecraft">
   <?dbhtml filename="mc-intro.html"?>
 
 
-  <title>Introduction to Minecraft</title>
+  <title>Introduksjon til Minecraft</title>
 
   <sect2>
-    <title>What is Minecraft?</title>
+    <title>Hva er Minecraft?</title>
 
     <para>
-      Minecraft (now known as Minecraft: Java Edition) is a Java game with
-      cross platform support, unlike Minecraft: Bedrock Edition (now known as
-      simply Minecraft). Minecraft mentions of this book will simply refer to
-      it as Minecraft, but means Minecraft: Java Edition. 
+      Minecraft (nå kjent som Minecraft: Java Edition) er et Java spill med 
+      kryssplattform støtte, i motsetning til Minecraft: Bedrock Edition (nå 
+      kjent som bare Minecraft). Omtaler av denne boken i Minecraft vil ganske 
+      enkelt referere til Minecraft, men betyr Minecraft: Java Edition.
     </para>
 
     <para>
-      Since Minecraft is a Java game, it needs a JDK (Java Development Kit) to
-      run. Beyond that, it also needs a proper launcher. The launcher in this
-      section is <xref linkend="prism-launcher"/>.
+      Siden Minecraft er et Java spill, trenger det en JDK (Java Development 
+      Kit) for å kjøre. Utover det trenger det også en skikkelig starter. 
+      Startere i denne delen er <xref linkend="prism-launcher"/>.
     </para>
 
   </sect2>
