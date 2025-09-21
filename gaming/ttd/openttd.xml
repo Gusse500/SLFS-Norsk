@@ -18,11 +18,11 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to OpenTTD</title>
+    <title>Introduksjon til OpenTTD</title>
 
     <para>
-      The OpenTTD package is an open source and
-      improved-upon version of Transportation Tycoon Deluxe.
+      OpenTTD pakken er åpen kildekode og en forbedret versjon 
+      av Transportation Tycoon Deluxe.
     </para>
 
     &long-build-time;
@@ -30,50 +30,50 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&openttd-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&openttd-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">OpenTTD Dependencies</bridgehead>
+    <bridgehead renderas="sect3">OpenTTD Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Required (for clients; not needed for
-      servers)</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd (for klienter; ikke nødvendig for 
+      servere)</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
-      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, and
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, og
       <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink>
-      (with <ulink url="&blfs-svn;/general/icu.html">ICU</ulink>)
+      (med <ulink url="&blfs-svn;/general/icu.html">ICU</ulink>)
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
       <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>,
-      and <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>
+      og <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink
         url="https://chromium.googlesource.com/breakpad/breakpad">breakpad</ulink>,
-      <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>, and
+      <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>, og
       <ulink url="&arch-pkgs;/extra/x86_64/fluidsynth/">fluidsynth</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of OpenTTD</title>
+    <title>Installasjon av OpenTTD</title>
 
     <para>
-      Install OpenTTD by running the following
-      commands:
+      Installer OpenTTD ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -86,7 +86,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
@@ -95,29 +95,29 @@ mv -v /usr/share/doc/openttd{,-&openttd-version;}</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           openttd
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /usr/share/doc/openttd-&openttd-version; and
+          /usr/share/doc/openttd-&openttd-version; og
           /usr/share/openttd
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -125,7 +125,7 @@ mv -v /usr/share/doc/openttd{,-&openttd-version;}</userinput></screen>
         <term><command>openttd</command></term>
         <listitem>
           <para>
-            is the OpenTTD launcher
+            er OpenTTD starteren
           </para>
           <indexterm zone="openttd openttd-bin">
             <primary sortas="b-openttd-bin">openttd</primary>
