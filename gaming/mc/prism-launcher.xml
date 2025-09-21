@@ -18,71 +18,71 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to PrismLauncher</title>
+    <title>Introduksjon til PrismLauncher</title>
 
     <para>
-      The PrismLauncher package provides a Minecraft
-      Launcher.
+      PrismLauncher pakken inneholder en Minecraft 
+      Starter.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&prism-launcher-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&prism-launcher-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">PrismLauncher Dependencies</bridgehead>
+    <bridgehead renderas="sect3">PrismLauncher Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       &opengl;,
-      <xref linkend="openjdk"/> (and/or
-      <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>), and
+      <xref linkend="openjdk"/> (og/eller
+      <ulink url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink>), og
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>
     </para>
 
     <important><para>
-      While you can install the most recent version of
-      OpenJDK (version 20 and above), you'll need to
-      edit the build system of this package, tick an option in the launcher
-      menu, and will lose support in older Minecraft versions, including mods
-      and other things <emphasis>IF</emphasis> you did not make <xref
-      linkend="openjdk"/> the default JDK. This is because version 20 and above
-      does not support Java 7. Version 19 and below supports Java 7. <xref
-      linkend="openjdk"/> is used as it's an LTS release that gets security
-      updates.
+      Selv om du kan installere den nyeste versjonen av OpenJDK (versjon 20 og 
+      nyere), må du redigere byggesystemet til denne pakken, merke av for et 
+      alternativ i oppstartsmenyen og miste støtte i eldre Minecraft versjoner, 
+      inkludert modifikasjoner og andre ting. <emphasis>HVIS</emphasis> du ikke 
+      har laget <xref
+      linkend="openjdk"/> standard JDK. Dette er fordi versjon 20 og nyere ikke 
+      støtter Java 7. Versjon 19 og eldre støtter Java 7. <xref
+      linkend="openjdk"/> brukes fordi det er en LTS utgivelse som får 
+      sikkerhetsoppdateringer.
     </para></important>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/python-dependencies.html#commonmark">commonmark</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/ghc-filesystem/">ghc_filesystem</ulink>,
       <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/quazip/">QuaZip</ulink>,
-      <xref linkend="scdoc"/>, and
+      <xref linkend="scdoc"/>, og
       <xref linkend="tomlplusplus"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of PrismLauncher</title>
+    <title>Installasjon av PrismLauncher</title>
 
     <para>
-      If you installed <xref linkend="openjdk"/> and it is currently not the
-      default JDK, but wish to make it the default, then run the following
-      command as the &root; user:
+      Hvis du installerte <xref linkend="openjdk"/> og det for øyeblikket ikke 
+      er standard JDK, men ønsker å gjøre det til standard, kjør følgende 
+      kommando som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
 
     <para>
-      If you have installed OpenJDK version 20 or
-      above and have made it the default JDK, edit the build system to allow
-      building with Java 8 instead of 7:
+      Hvis du har installert OpenJDK versjon 20 eller nyere og har gjort det 
+      til standard JDK, rediger byggesystemet for å tillate bygging med Java 
+      8 i stedet for 7:
     </para>
 
 <screen><userinput>sed -e 's/Java 1.7/Java 1.8/g'   \
@@ -91,8 +91,8 @@
     -i libraries/{javacheck,launcher}/CMakeLists.txt</userinput></screen>
 
     <para>
-      Install PrismLauncher by running the following
-      commands:
+      Installer PrismLauncher ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -105,7 +105,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -113,43 +113,43 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring PrismLauncher</title>
+    <title>Konfigurere PrismLauncher</title>
 
     <para>
-      This launcher should walk you through how to set it up. However, one
-      major thing needs to be done if you installed
-      OpenJDK version 20 or above and made it the
-      default. After you create an instance, you will need to edit that
-      instance, go to the <quote>Settings</quote> section, then tick
-      <quote>Skip Java Compatibility Checks</quote> to avoid Minecraft from
-      refusing to launch. This has to be done for every instance. If you
-      installed <xref linkend="openjdk"/> and made it the default JDK, this
-      doesn't need to be done at all.
+      Denne oppstartsprogrammet skal veilede deg gjennom hvordan du konfigurerer 
+      det. Det er imidlertid én viktig ting du må gjøre hvis du installerte 
+      OpenJDK versjon 20 eller nyere og gjorde det til standard. Etter at du har 
+      opprettet en instans, må du redigere den instansen, gå til 
+      <quote>Settings</quote> seksjonen, og kryss deretter av
+      <quote>Skip Java Compatibility Checks</quote> for å unngå at Minecraft 
+      nekter å starte. Dette må gjøres for hver instans. Hvis du installerte 
+      <xref linkend="openjdk"/> og gjort den til standard JDK, trenger ikke 
+      dette å gjøres i det hele tatt.
     </para>
 
     <para>
-      In the case that you are using a newer Minecraft instance and/or have
-      installed mods that require newer versions of a given JDK, you will need
-      to have a multi-JDK setup. This generally entails having multiple JDK
-      builds in <filename class="directory">/opt</filename> and having a
-      default JDK that gets used in all cases unless specified otherwise. An
-      ideal setup is to make <xref linkend="openjdk"/> the default JDK, but
-      also install <ulink
-      url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink> so that the JDK
-      version can be overridden per MC instance. Newer JDK also requires a
-      newer JDK to bootstrap from, so the one provided in this book will not
-      work for newer JDKs. In any case, you will need to copy the same steps in
-      the above paragraph, as well as changing the <quote>Java
-      Installation</quote> to point to the desired JDK. When installing the
-      newer JDK, it is recommended to skip making the symlink on that page so
-      that it doesn't become the default. If you made it the default beforehand
-      but wish to change it, run the following command as the &root; user:
+      Hvis du bruker en nyere Minecraft instans og/eller har installerte mods 
+      som krever nyere versjoner av en gitt JDK, må du ha et multi-JDK oppsett. 
+      Dette innebærer vanligvis å ha flere JDK bygg i 
+      <filename class="directory">/opt</filename> og ha en standard JDK som 
+      brukes i alle tilfeller med mindre annet er spesifisert. Et ideelt oppsett 
+      er å lage <xref linkend="openjdk"/> standard JDK, 
+      men installer også <ulink
+      url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink> slik at JDK 
+      versjonen kan overskrives per MC instans. Nyere JDK krever også en nyere 
+      JDK å starte fra, så den som er gitt i denne boken vil ikke fungere for 
+      nyere JDK-er. Uansett må du kopiere de samme trinnene i avsnittet ovenfor, 
+      samt endre <quote>Java
+      Installasjon</quote> til å peke til ønsket JDK. Når du installerer den 
+      nyere JDK-en, anbefales det å hoppe over å lage symbolsk lenke på den 
+      siden, slik at den ikke blir standard. Hvis du gjorde den til standard på 
+      forhånd, men ønsker å endre den, kjør følgende kommando som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;+&openjdk-build; /opt/jdk</userinput></screen>
 
     <para>
-      A multi-JDK setup may look like this:
+      Et multi-JDK oppsett kan se slik ut:
     </para>
 
 <screen><computeroutput>$ </computeroutput><userinput>ls /opt | grep jdk
@@ -159,27 +159,27 @@ ninja</userinput></screen>
 ...</computeroutput></screen>
 
 <para>
-<userinput>jdk</userinput> can be a symlink to either
-<computeroutput><literal>jdk-&jdk-modern;</literal></computeroutput> or
+<userinput>jdk</userinput> kan være en symbolsk lenke til enten
+<computeroutput><literal>jdk-&jdk-modern;</literal></computeroutput> eller
 <computeroutput><literal>jdk-&openjdk-version;+&openjdk-build;</literal></computeroutput>.
 </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           prismlauncher
         </seg>
         <seg>
-          JavaCheck, NewLaunch, and NewLaunchLegacy (all Java libraries)
+          JavaCheck, NewLaunch, og NewLaunchLegacy (alle Java biblioteker)
         </seg>
         <seg>
           /usr/share/{PrismLauncher,qlogging-categories6}
@@ -188,7 +188,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -196,7 +196,7 @@ ninja</userinput></screen>
         <term><command>prismlauncher</command></term>
         <listitem>
           <para>
-            manages and launches minecraft instances
+            administrerer og starter Minecraft instanser
           </para>
           <indexterm zone="prism-launcher prismlauncher">
             <primary sortas="b-prismlauncher">prismlauncher</primary>
