@@ -5,21 +5,21 @@
   %general-entities;
 ]>
 
-<sect1 id="nds-intro" xreflabel="Introduction to Nintendo DS Emulation">
+<sect1 id="nds-intro" xreflabel="Introduksjon til Nintendo DS Emulering">
   <?dbhtml filename="nds-intro.html"?>
 
 
-  <title>Introduction to Nintendo DS Emulation</title>
+  <title>Introduksjon til Nintendo DS Emulering</title>
 
   <sect2>
-    <title>What is the Nintendo DS?</title>
+    <title>Hva er Nintendo DS?</title>
 
     <para>
-      The Nintendo DS (NDS/DS) is a video game handheld console made by
-      Nintendo which was available from 2004 to 2011. It uses two 32-bit ARM
-      CPUs (a main processor and a coprocessor). A revision came out later, the
-      Nintendo DSi. MelonDS can handle ROMs for both
-      of them.
+      Nintendo DS (NDS/DS) er en håndholdt spillkonsoll laget av Nintendo 
+      som var tilgjengelig fra 2004 til 2011. Den bruker to 32-bits 
+      ARM CPUer (en hovedprosessor og en koprosessor). En revisjon kom 
+      ut senere, Nintendo DSi. Nintendo DS kan håndtere ROM-er for 
+      begge av dem.
     </para>
 
   </sect2>
@@ -28,9 +28,9 @@
     <title>MelonDS</title>
 
     <para>
-      MelonDS is a NDS and NDSi emulator that is
-      fairly new but has less issues that older emulators of its kind. NDSi
-      is a work in progress, however.
+      MelonDS er en NDS og NDSi emulator som er ganske ny, men har færre 
+      problemer enn eldre emulatorer av sitt slag. NDSi er imidlertid et 
+      pågående arbeid.
     </para>
 
   </sect2>
