@@ -18,23 +18,23 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to MelonDS</title>
+    <title>Introduksjon til MelonDS</title>
 
     <para>
-      The MelonDS package provides an NDS emulator.
+      MelonDS pakken tilbyr en NDS emulator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&melonds-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&melonds-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">melonds Dependencies</bridgehead>
+    <bridgehead renderas="sect3">melonds Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <xref linkend="enet"/>,
@@ -42,11 +42,11 @@
       &unzip;,
       &opengl;,
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>, og
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/x/hicolor-icon-theme.html">hicolor-icon-theme</ulink>
     </para>
@@ -54,11 +54,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of MelonDS</title>
+    <title>Installasjon av MelonDS</title>
 
     <para>
-      Install MelonDS by running the following
-      commands:
+      Installer MelonDS ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -72,7 +72,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -80,28 +80,28 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           melonDS
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -109,7 +109,7 @@ ninja</userinput></screen>
         <term><command>melonDS</command></term>
         <listitem>
           <para>
-            is an NDS emulator
+            er en NDS emulator
           </para>
           <indexterm zone="melonds melonDS">
             <primary sortas="b-melonDS">melonDS</primary>
