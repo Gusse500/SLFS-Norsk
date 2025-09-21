@@ -11,7 +11,7 @@ mer.
 
 # Hvor man kan lese
 
-Gå til https://glfs-book.github.io/slfs/ og begynn å bla gjennom boken!
+Gå til https://lfs.freding.no/slfs/ og begynn å bla gjennom boken!
 
 Boken er under rullende utgivelse på nett, men det finnes en stabil versjon i 
 SLFS kildekoden via den stabile grenen.
