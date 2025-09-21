@@ -5,10 +5,10 @@
   %general-entities;
 ]>
 
-<part id="emu" xreflabel="Emulators">
+<part id="emu" xreflabel="Emulatorer">
   <?dbhtml filename="emu.html" dir="emu"?>
 
-  <title>Emulators</title>
+  <title>Emulatorer</title>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="com-emu/com-emu.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="game-emu/game-emu.xml"/>
