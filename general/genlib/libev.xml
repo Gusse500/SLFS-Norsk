@@ -17,18 +17,18 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libev</title>
+    <title>Introduksjon til libev</title>
 
     <para>
-      The libev package is a full-featured,
-      high-performant library containing an event loop loosely modelled after
+      libev pakken er et fullfunksjonelt, høytytende bibliotek som inneholder 
+      en hendelsesløkke løst modellert etter
       <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libev-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libev-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -36,18 +36,18 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libev</title>
+    <title>Installasjon av libev</title>
 
     <para>
-      Install libev by running the following
-      commands:
+      Installer libev ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make   DESTDIR=$PWD/DESTDIR install &amp;&amp;
@@ -58,44 +58,44 @@ ldconfig</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &static-libraries;
 
     <para>
-      <command>rm -v DESTDIR/usr/include/event.h</command>: This command
-      removes a file before installation that conflicts with
-      <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>. If it is
-      not removed, packages that depend on libevent
-      will fail to build as they assume <filename>event.h</filename> is provided
-      by libevent which would be incorrect.
+      <command>rm -v DESTDIR/usr/include/event.h</command>: Denne kommandoen 
+      fjerner en fil før installasjonen som er i konflikt med
+      <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>. Hvis den 
+      ikke fjernes, vil pakker som er avhengige av libevent ikke kunne bygges 
+      fordi de antar <filename>event.h</filename> er levert av libevent, 
+      noe som ville være feil.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libev
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -103,7 +103,7 @@ ldconfig</userinput></screen>
         <term><filename class="libraryfile">libev</filename></term>
         <listitem>
           <para>
-            contains event loop functions
+            inneholder hendelsesløkkefunksjoner
           </para>
           <indexterm zone="libev libev-lib">
             <primary sortas="c-libev-lib">libev</primary>
