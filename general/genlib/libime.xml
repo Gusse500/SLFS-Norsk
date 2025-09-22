@@ -18,11 +18,11 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libime</title>
+    <title>Introduksjon til libime</title>
 
     <para>
-      The libime package provides a library with support functions for
-      implementing generic input methods.
+      libime pakken tilbyr et bibliotek med støttefunksjoner for 
+      implementering av generiske inndatametoder.
     </para>
 
     &build-use-internet;
@@ -30,44 +30,44 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libime-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libime-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required submodule:
+          Påkrevd undermodul:
           <ulink url="https://github.com/kpu/kenlm/archive/&libime-kenlm;.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libime Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libime Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      and <xref linkend="fcitx5"/>
+      og <xref linkend="fcitx5"/>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (to build
-      the documentation)
+      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (for å bygge 
+      dokumentasjonen)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libime</title>
+    <title>Installasjon av libime</title>
 
     <para>
-      Unpack the kenlm submodule into the right place:
+      Pakk ut kenlm undermodulen på riktig sted:
     </para>
 
 <screen><userinput>tar -xvf ../&libime-kenlm;.tar.gz -C src/libime/core &amp;&amp;
@@ -75,8 +75,8 @@ rmdir src/libime/core/kenlm &amp;&amp;
 mv src/libime/core/kenlm-&libime-kenlm; src/libime/core/kenlm</userinput></screen>
 
     <para>
-      Install libime by running the following
-      commands:
+      Installer libime ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -92,20 +92,20 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to 
-      CMake, build the documentation by executing the following commands:
+      Hvis du har sendt <option>-D ENABLE_DOC=ON</option> parameteren til CMake, 
+      bygg dokumentasjonen ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>make doc</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
 
     <para>
-      If you have built the documentation, install it as the &root; user:
+      Hvis du har bygget dokumentasjonen, installer den som &root; bruker:
     </para>
 
 <!-- install doesn't support recursive copy and there's no doc install
@@ -116,47 +116,47 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: This ensures shared
-      libraries are built.
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: Dette sikrer at delte 
+      biblioteker bygges.
     </para>
 
     <para>
-      <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
-      build the documentation (requires doxygen).
+      <option>-D ENABLE_DOC=ON</option>: Bruk denne bryteren hvis du vil 
+      bygge dokumentasjonen (krever doxygen).
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           libime_history, libime_migrate_fcitx4_pinyin,
           libime_migrate_fcitx4_table, libime_pinyindict, libime_prediction,
-          libime_slm_build_binary, and libime_tabledict
+          libime_slm_build_binary, og libime_tabledict
         </seg>
         <seg>
-          libIMECore, libIMEPinyin, and libIMETable
+          libIMECore, libIMEPinyin, og libIMETable
         </seg>
         <seg>
-          /usr/include/LibIME, /usr/lib/libime, and /usr/share/libime
+          /usr/include/LibIME, /usr/lib/libime, og /usr/share/libime
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -164,7 +164,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><command>libime_history</command></term>
         <listitem>
           <para>
-            is a helper tool for dealing with bigrams
+            er et hjelpeverktøy for å håndtere bigrammer
           </para>
           <indexterm zone="libime libime_history">
             <primary sortas="b-libime_history">libime_history</primary>
@@ -176,7 +176,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><command>libime_migrate_fcitx4_pinyin</command></term>
         <listitem>
           <para>
-            is a tool which migrates Fcitx 4 pinyin dictionaries to Fcitx 5
+            er et verktøy som migrerer Fcitx 4 pinyin ordbøker til Fcitx 5
           </para>
           <indexterm zone="libime libime_migrate_fcitx4_pinyin">
             <primary sortas="b-libime_migrate_fcitx4_pinyin">libime_migrate_fcitx4_pinyin</primary>
@@ -188,7 +188,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><command>libime_migrate_fcitx4_table</command></term>
         <listitem>
           <para>
-            is a tool which migrates Fcitx 4 tables to Fcitx 5
+            er et verktøy som migrerer Fcitx 4 tabeller til Fcitx 5
           </para>
           <indexterm zone="libime libime_migrate_fcitx4_table">
             <primary sortas="b-libime_migrate_fcitx4_table">libime_migrate_fcitx4_table</primary>
@@ -200,7 +200,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><command>libime_pinyindict</command></term>
         <listitem>
           <para>
-            is a helper tool for dealing with pinyin dictionaries
+            er et hjelpeverktøy for å håndtere pinyin ordbøker
           </para>
           <indexterm zone="libime libime_pinyindict">
             <primary sortas="b-libime_pinyindict">libime_pinyindict</primary>
@@ -212,7 +212,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><command>libime_prediction</command></term>
         <listitem>
           <para>
-            is a helper tool for dealing with word predictions
+            er et hjelpeverktøy for å håndtere ordforutsigelser
           </para>
           <indexterm zone="libime libime_prediction">
             <primary sortas="b-libime_prediction">libime_prediction</primary>
@@ -224,7 +224,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><command>libime_slm_build_binary</command></term>
         <listitem>
           <para>
-            builds a binary file from an ARPA file for faster load times
+            bygger en binærfil fra en ARPA fil for raskere lastetider
           </para>
           <indexterm zone="libime libime_slm_build_binary">
             <primary sortas="b-libime_slm_build_binary">libime_slm_build_binary</primary>
@@ -236,7 +236,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><command>libime_tabledict</command></term>
         <listitem>
           <para>
-            is a helper tool for dealing with table-based dictionaries
+            er et hjelpeverktøy for å håndtere tabellbaserte ordbøker
           </para>
           <indexterm zone="libime libime_tabledict">
             <primary sortas="b-libime_tabledict">libime_tabledict</primary>
@@ -248,7 +248,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><filename class="libraryfile">libIMECore</filename></term>
         <listitem>
           <para>
-            is the libime core library
+            er libime kjernebiblioteket
           </para>
           <indexterm zone="libime libIMECore">
             <primary sortas="c-libIMECore">libIMECore</primary>
@@ -260,7 +260,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><filename class="libraryfile">libIMEPinyin</filename></term>
         <listitem>
           <para>
-            is the libime pinyin library
+            er libime pinyin biblioteket
           </para>
           <indexterm zone="libime libIMEPinyin">
             <primary sortas="c-libIMEPinyin">libIMEPinyin</primary>
@@ -272,7 +272,7 @@ cp -rv doc/html/* /usr/share/doc/libime-&libime-version;</userinput></screen>
         <term><filename class="libraryfile">libIMETable</filename></term>
         <listitem>
           <para>
-            is the libime table-based input library
+            er libime tabellbaserte inndatabibliotek
           </para>
           <indexterm zone="libime libIMETable">
             <primary sortas="c-libIMETable">libIMETable</primary>
