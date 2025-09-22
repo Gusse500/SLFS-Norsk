@@ -8,11 +8,11 @@
 <chapter id="general-genlib">
   <?dbhtml filename="genlib.html"?>
 
-  <title>General Libraries</title>
+  <title>Generelle biblioteker</title>
 
   <para>
-    This chapter covers many libraries which you may need, especially by
-    packages that appear later in the book.
+    Dette kapittelet dekker mange biblioteker som du kan trenge, 
+    spesielt pakker som vises senere i boken.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="anthy.xml"/>
