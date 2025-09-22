@@ -17,31 +17,31 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fuse2</title>
+    <title>Introduksjon til Fuse2</title>
 
     <para>
-      FUSE, or Filesystem in Userspace, allows userspace programs to create
-      virtual filesystems. This is a really helpful technology, and the current
-      Fuse version is major version 3. Fuse2 on the otherhand is still used by
-      AppImages which rely on this technology. You may extract AppImages as you
-      wish which would bypass this requirement, but other people opt to just
-      install Fuse2 and run the AppImages directly.
+      FUSE, eller Filesystem in Userspace, lar brukerområdeprogrammer opprette 
+      virtuelle filsystemer. Dette er en veldig nyttig teknologi, og den 
+      nåværende Fuse versjonen er hovedversjon 3. Fuse2 brukes derimot fortsatt 
+      av AppImages som er avhengige av denne teknologien. Du kan pakke ut 
+      AppImages som du ønsker, noe som ville omgå dette kravet, men andre velger 
+      å bare installere Fuse2 og kjøre AppImages direkte.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fuse2-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fuse2-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
     <!-- As required -->
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/fuse2/-/raw/main/conditionally-define-closefrom.patch"/>
         </para>
       </listitem>
@@ -50,11 +50,11 @@
   </sect2>
 
   <sect2 role="kernel" id="fuse2-kernel">
-    <title>Kernel Configuration</title>
+    <title>Kjernekonfigurasjon</title>
 
     <para>
-      Enable the following options in the kernel configuration and recompile the
-      kernel if necessary:
+      Aktiver følgende alternativer i kjernekonfigurasjonen og kompiler kjernen 
+      på nytt om nødvendig:
     </para>
 
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
@@ -67,19 +67,19 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fuse2</title>
+    <title>Installasjon av Fuse2</title>
 
     <para>
-      First apply a patch to fix compatibility with glibc-2.34 and up and
-      regenerate the <filename>configure</filename> script:
+      Først installerer du en oppdatering for å fikse kompatibiliteten med 
+      glibc-2.34 og nyere, og regenererer <filename>configure</filename> skriptet:
     </para>
 
 <screen><userinput>patch -Np1 -i ../conditionally-define-closefrom.patch &amp;&amp;
 autoreconf -i -I/usr/share/gettext/m4</userinput></screen>
 
     <para>
-      Install Fuse2 by running the following
-      commands:
+      Installer Fuse2 ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr --disable-static \
@@ -88,7 +88,7 @@ autoreconf -i -I/usr/share/gettext/m4</userinput></screen>
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install &amp;&amp;
@@ -102,12 +102,12 @@ install -v -m644    doc/{how-fuse-works,kernel.txt} \
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring Fuse2</title>
+    <title>Konfigurere Fuse2</title>
 
     <para>
-      Some options regarding mount policy can be set in the file
-      <filename>/etc/fuse.conf</filename>. To install the file, run the
-      following command as the &root; user:
+      Noen alternativer angående monteringsretningslinjer kan angis i filen
+      <filename>/etc/fuse.conf</filename>. For å installere filen, kjør 
+      følgende kommando som &root; bruker:
     </para>
 
 <screen role="root"><userinput>cat &gt; /etc/fuse.conf &lt;&lt; "EOF"
@@ -125,28 +125,28 @@ EOF</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          fusermount, mount.fuse, and ulockmgr_server
+          fusermount, mount.fuse, og ulockmgr_server
         </seg>
         <seg>
-          libfuse and libulockmgr
+          libfuse og libulockmgr
         </seg>
         <seg>
-          /usr/include/fuse and /usr/share/doc/fuse-&fuse2-version;
+          /usr/include/fuse og /usr/share/doc/fuse-&fuse2-version;
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -154,8 +154,8 @@ EOF</userinput></screen>
         <term><command>fusermount</command></term>
         <listitem>
           <para>
-            is a suid root program to mount and unmount
-            Fuse2 filesystems 
+            er et suid root program for å montere og avmontere 
+            Fuse2 filsystemer 
           </para>
           <indexterm zone="fuse2 fusermount">
             <primary sortas="b-fusermount">fusermount</primary>
@@ -167,8 +167,8 @@ EOF</userinput></screen>
         <term><command>mount.fuse</command></term>
         <listitem>
           <para>
-            is the command <command>mount</command> calls to mount a Fuse2
-            filesystem 
+            er kommandoen <command>mount</command> kaller for å montere et 
+            Fuse2 filsystem 
           </para>
           <indexterm zone="fuse2 mount.fuse">
             <primary sortas="b-mount.fuse">mount.fuse</primary>
@@ -180,7 +180,7 @@ EOF</userinput></screen>
         <term><command>ulockmgr_server</command></term>
         <listitem>
           <para>
-            is the Userspace Lock Manager Server for Fuse2 filesystems
+            er låseadministrator for brukerområde serveren for Fuse2 filsystemer
           </para>
           <indexterm zone="fuse2 ulockmgr_server">
             <primary sortas="b-ulockmgr_server">ulockmgr_server</primary>
@@ -192,7 +192,7 @@ EOF</userinput></screen>
         <term><filename class="libraryfile">libfuse</filename></term>
         <listitem>
           <para>
-            contains the Fuse2 API functions
+            inneholder Fuse2 API funksjoner
           </para>
           <indexterm zone="fuse2 libfuse">
             <primary sortas="c-libfuse">libfuse</primary>
@@ -204,8 +204,8 @@ EOF</userinput></screen>
         <term><filename class="libraryfile">libulockmgr</filename></term>
         <listitem>
           <para>
-            starts <command>ulockmgr_server</command> and helps with its
-            execution
+            starter <command>ulockmgr_server</command> og hjelper med 
+            utførelsen
           </para>
           <indexterm zone="fuse2 libulockmgr">
             <primary sortas="c-libulockmgr">libulockmgr</primary>
