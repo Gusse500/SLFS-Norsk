@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY grim-download-http
+    "https://gitlab.freedesktop.org/emersion/grim/-/archive/v&grim-version;/grim-v&grim-version;.tar.gz">
+]>
+
+<sect1 id="grim" xreflabel="grim-&grim-version;">
+  <?dbhtml filename="grim.html"?>
+
+  <title>grim-&grim-version;</title>
+
+  <indexterm zone="grim">
+    <primary sortas="a-grim">grim</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til grim</title>
+
+    <para>
+      grim pakken tilbyr et verktøy for å ta skjermbilder i et Wayland miljø. 
+      Et vanlig oppsett er å kombinere denne pakken med <xref
+      linkend="slurp"/> for å ta et skjermbilde av et bestemt område.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&grim-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">grim Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <xref linkend="scdoc"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av grim</title>
+
+    <para>
+      Installer grim ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          grim
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="grim-bin">
+        <term><command>grim</command></term>
+        <listitem>
+          <para>
+            lager et skjermbilde fra skjermen på Wayland
+          </para>
+          <indexterm zone="grim grim-bin">
+            <primary sortas="b-grim-bin">grim</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
