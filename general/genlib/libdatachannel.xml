@@ -18,62 +18,62 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libdatachannel</title>
+    <title>Introduksjon til libdatachannel</title>
 
     <para>
-      The libdatachannel package provides a WebRTC networking library.
+      Pakken libdatachannel tilbyr et WebRTC nettverksbibliotek.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libdatachannel-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libdatachannel-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required submodule:
+          Påkrevd undermodul:
           <ulink url="https://github.com/SergiusTheBest/plog/archive/&libdatachannel-plog;.tar.gz"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required submodule:
+          Påkrevd undermodul:
           <ulink url="https://github.com/sctplab/usrsctp/archive/&libdatachannel-usrsctp;.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libdatachannel Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libdatachannel Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <xref linkend="libjuice"/> and
+      <xref linkend="libjuice"/> og
       <xref linkend="libsrtp"/>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink> and
+      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink> og
       <xref linkend="nlohmann-json"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libdatachannel</title>
+    <title>Installasjon av libdatachannel</title>
 
     <para>
-      First unpack the submodules:
+      Pakk først ut undermodulene:
     </para>
 
 <screen><userinput>tar -xf ../&libdatachannel-plog;.tar.gz &amp;&amp;
@@ -83,8 +83,8 @@ mv -T plog-*    deps/plog &amp;&amp;
 mv -T usrsctp-* deps/usrsctp</userinput></screen>
 
     <para>
-      Install libdatachannel by running the following
-      commands:
+      Installer libdatachannel ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -105,7 +105,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -113,68 +113,68 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>: This allows
-      building with newer CMake versions.
+      <parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>: Dette tillater 
+      bygging med nyere CMake versjoner.
     </para>
 
     <para>
-      <parameter>-D USE_GNUTLS=0</parameter>: This disables building against
-      the optional GnuTLS.
+      <parameter>-D USE_GNUTLS=0</parameter>: Dette deaktiverer bygging mot den 
+      valgfrie GnuTLS.
     </para>
 
     <para>
-      <parameter>-D USE_NICE=0</parameter>: This ensures <xref
-      linkend="libjuice"/> is used instead of a package not in this book.
+      <parameter>-D USE_NICE=0</parameter>: Dette sikrer at <xref 
+      linkend="libjuice"/> brukes i stedet for en pakke som ikke er i denne boken.
     </para>
 
     <para>
-      <parameter>-D USE_SYSTEM_JUICE=1</parameter>: This links against the
-      system-installed <xref linkend="libjuice"/>.
+      <parameter>-D USE_SYSTEM_JUICE=1</parameter>: Dette lenker mot 
+      systeminstallerte <xref linkend="libjuice"/>.
     </para>
 
     <para>
-      <parameter>-D USE_SYSTEM_SRTP=1</parameter>: This links against the
-      system-installed <xref linkend="libsrtp"/>.
+      <parameter>-D USE_SYSTEM_SRTP=1</parameter>: Dette lenker mot 
+      systeminstallerte <xref linkend="libsrtp"/>.
     </para>
 
     <para>
-      <parameter>-D NO_EXAMPLES=1</parameter>: This disables building examples.
+      <parameter>-D NO_EXAMPLES=1</parameter>: Dette deaktiverer bygging av eksempler.
     </para>
 
     <para>
-      <parameter>-D NO_TESTS=1</parameter>: This disables building tests.
+      <parameter>-D NO_TESTS=1</parameter>: Dette deaktiverer bygging av tester.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libdatachannel
         </seg>
         <seg>
-          /usr/include/rtc and /usr/lib/cmake/LibDataChannel
+          /usr/include/rtc og /usr/lib/cmake/LibDataChannel
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -182,7 +182,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libdatachannel</filename></term>
         <listitem>
           <para>
-            provides functions for WebRTC
+            tilbyr funksjoner for WebRTC
           </para>
           <indexterm zone="libdatachannel lib-libdatachannel">
             <primary sortas="c-lib-libdatachannel">libdatachannel</primary>
