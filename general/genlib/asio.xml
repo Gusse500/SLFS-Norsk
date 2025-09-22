@@ -19,23 +19,23 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to asio</title>
+    <title>Introduksjon til asio</title>
 
     <para>
-      The asio package provides a C++ library for ASynchronous I/O networking.
+      asio pakken tilbyr et C++ bibliotek for asynkron I/O nettverk.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&asio-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&asio-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">asio Dependencies</bridgehead>
+    <bridgehead renderas="sect3">asio Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/boost.html">boost</ulink>
     </para>
@@ -43,11 +43,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of asio</title>
+    <title>Installasjon av asio</title>
 
     <para>
-      Install asio by running the following
-      commands:
+      Installer asio ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cd asio &amp;&amp;
@@ -56,7 +56,7 @@ autoreconf -fi &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -64,19 +64,19 @@ make</userinput></screen>
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/include/asio
