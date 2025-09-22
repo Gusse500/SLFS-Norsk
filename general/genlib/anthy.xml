@@ -20,17 +20,17 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Anthy</title>
+    <title>Introduksjon til Anthy</title>
 
     <para>
-      The Anthy package provides
-      a kana-kanji conversion engine for Japanese.
+      Anthy pakken tilbyr en kana-kanji 
+      konverteringsmotor for japansk.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&anthy-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&anthy-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -38,11 +38,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Anthy</title>
+    <title>Installasjon av Anthy</title>
 
     <para>
-      Install Anthy by executing the following
-      commands:
+      Installer Anthy ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>patch -Np1 -i debian/patches/0001-calctrans-proccorpus.c-Fix-implicit-function-decl-of.patch &amp;&amp;
@@ -51,7 +51,7 @@ autoreconf -fiv &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -59,28 +59,28 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          anthy-agent and anthy-dic-tool
+          anthy-agent og anthy-dic-tool
         </seg>
         <seg>
-          libanthy, libanthydic, and libanthyinput 
+          libanthy, libanthydic, og libanthyinput 
         </seg>
         <seg>
-          /usr/include/anthy and /usr/share/anthy
+          /usr/include/anthy og /usr/share/anthy
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -88,7 +88,7 @@ make</userinput></screen>
         <term><command>anthy-agent</command></term>
         <listitem>
           <para>
-            is a tool which integrates Anthy input into applications 
+            er et verktøy som integrerer Anthy inndata i applikasjoner 
           </para>
           <indexterm zone="anthy anthy-agent">
             <primary sortas="b-anthy-agent">anthy-agent</primary>
@@ -100,7 +100,7 @@ make</userinput></screen>
         <term><command>anthy-dic-tool</command></term>
         <listitem>
           <para>
-            is a utility command for dictionary manipulation
+            er en verktøykommando for ordbokmanipulering
           </para>
           <indexterm zone="anthy anthy-dic-tool">
             <primary sortas="b-anthy-dic-tool">anthy-dic-tool</primary>
@@ -112,7 +112,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libanthy</filename></term>
         <listitem>
           <para>
-            is the Anthy core library
+            er Anthy kjernebiblioteket
           </para>
           <indexterm zone="anthy libanthy">
             <primary sortas="c-libanthy">libanthy</primary>
@@ -124,7 +124,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libanthydic</filename></term>
         <listitem>
           <para>
-            is the Anthy dictionary manipulation library
+            er Anthy biblioteket for manipulering av ordbøker
           </para>
           <indexterm zone="anthy libanthydic">
             <primary sortas="c-libanthydic">libanthydic</primary>
@@ -136,7 +136,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libanthyinput</filename></term>
         <listitem>
           <para>
-            is the Anthy input library
+            er Anthy inndatabiblioteket
           </para>
           <indexterm zone="anthy libanthyinput">
             <primary sortas="c-libanthyinput">libanthyinput</primary>
