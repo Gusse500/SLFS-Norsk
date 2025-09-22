@@ -4,7 +4,10 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY hyprland-download-http "https://github.com/hyprwm/Hyprland/releases/download/v&hyprland-version;/source-v&hyprland-version;.tar.gz">
+  <!ENTITY hyprland-download-http
+    "https://github.com/hyprwm/Hyprland/archive/v&hyprland-version;/Hyprland-&hyprland-version;.tar.gz">
+  <!ENTITY udis86-sub
+    "https://github.com/canihavesomecoffee/udis86/archive/&hypr-udis86-version;/udis86-&hypr-udis86-version;.tar.gz">
 ]>
 
 <sect1 id="hyprland" xreflabel="Hyprland-&hyprland-version;">
@@ -17,12 +20,12 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Hyprland</title>
+    <title>Introduksjon til Hyprland</title>
 
     <para>
-      Hyprland is an independent Wayland compositor aiming to have more
-      features than other Wayland compositors and be highly customizable,
-      written in C++.
+      Hyprland er et uavhengig Wayland kompositorsprogram som har som mål å ha 
+      flere funksjoner enn andre Wayland kompositorsprogramvare og være svært 
+      tilpassbart, skrevet i C++.
     </para>
 
     &long-build-time;
@@ -30,14 +33,24 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&hyprland-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&hyprland-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Hyprland Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Påkrevd undermodul:
+          <ulink url="&udis86-sub;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect3">Hyprland Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
@@ -55,7 +68,7 @@
       <xref linkend="libliftoff"/>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       &wayland-gl;,
-      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (med Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <xref linkend="re2"/>,
       <xref linkend="seatd"/>,
@@ -66,90 +79,84 @@
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
-      <xref linkend="xcb-util-errors"/>, and
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Verktøy</ulink>,
+      <xref linkend="xcb-util-errors"/>, og
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/cpio.html">cpio</ulink>
-      (to build and install plugins)
+      (for å bygge og installere programtillegg)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Hyprland</title>
+    <title>Installasjon av Hyprland</title>
 
     <para>
-      Install Hyprland by running the following
-      commands:
+      Pakk ut udis86 undermodulen på plass:
     </para>
 
-    <screen><userinput>make release PREFIX=/usr</userinput></screen>
-
-<!--
-<screen><userinput>rm -fv scripts/generateVersion.sh &amp;&amp;
-make release PREFIX=/usr</userinput></screen>
--->
+<screen><userinput>tar -xf ../udis86-&hypr-udis86-version;.tar.gz &amp;&amp;
+mv -T udis86-&hypr-udis86-version; subprojects/udis86</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Installer Hyprland ved å kjøre følgende kommandoer:
     </para>
 
-    <screen role="root"><userinput>make install</userinput></screen>
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
 
-<!--
-<screen role="root"><userinput>make install &amp;&amp;
-rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
--->
+cmake -DCMAKE_INSTALL_PREFIX=/usr   \
+      -DCMAKE_BUILD_TYPE=Release    \
+      -DCMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
 
-<!-- Not necessary since 0.49.0
-
-    <para revision="sysv">
-      Finally, remove an a unnecessary Systemd file as the &root; user:
+    <para>
+      Nå, som &root; bruker:
     </para>
 
-<screen role="root" revision="sysv"><userinput>rm -rvf /usr/lib/systemd</userinput></screen>
--->
+<screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
 <!--  
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>rm -fv scripts/generateVersion.sh</command>: This command works
-      around an issue where this package installs an invalid
-      <filename>/usr/include/hyprland/src/version.h</filename> as it is missing
-      all values.
+      <command>rm -fv scripts/generateVersion.sh</command>: Denne kommandoen 
+      arbeider rundt et problem der denne pakken installerer en ugyldig
+      <filename>/usr/include/hyprland/src/version.h</filename> siden den 
+      mangler alle verdier.
     </para>
 
     <para>
-      <command>rm -fv /usr/include/hyprland/src/version.h.in</command>: This
-      command removes an unneeded <filename>.h.in</filename> file, an artifact
-      from the previously explained command.
+      <command>rm -fv /usr/include/hyprland/src/version.h.in</command>: Denne 
+      kommandoen fjerner den unødvendige <filename>.h.in</filename> filen, en 
+      artefakt fra den tidligere forklarte kommandoen.
     </para>
 
   </sect2>
 -->
 
   <sect2 role="configuration">
-    <title>Configuring Hyprland</title>
+    <title>Konfigurere Hyprland</title>
 
     <sect3 id="hyprland-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
-        <filename>~/.config/hypr/hyprland.conf</filename>. The default version
-        is in <filename class="directory">/usr/share/hypr</filename> and will
-        not be used and must be copied to
+        <filename>~/.config/hypr/hyprland.conf</filename>. Standardversjonen er 
+        i <filename class="directory">/usr/share/hypr</filename> og vil ikke 
+        bli brukt og må kopieres til
         <filename class="directory">~/.config/hypr</filename>
       </para>
 
@@ -159,17 +166,17 @@ rm -fv /usr/include/hyprland/src/version.h.in</userinput></screen>
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Create the config file:
+        Opprett konfigurasjonsfilen:
       </para>
 
 <screen><userinput>mkdir -pv ~/.config/hypr &amp;&amp;
 cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
 
       <para>
-        Now inspect the file and make any changes to suit your workflow.
+        Inspiser nå filen og gjør eventuelle endringer som passer til arbeidsflyten din.
       </para>
 
     </sect3>
@@ -177,32 +184,32 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           hyprctl,
-          hyprland (link to Hyprland),
-          Hyprland, and
+          hyprland (lenke til Hyprland),
+          Hyprland, og
           hyprpm
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /usr/include/hyprland, /usr/share/hypr, and
+          /usr/include/hyprland, /usr/share/hypr, og
           /usr/share/wayland-sessions
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -210,7 +217,7 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>hyprctl</command></term>
         <listitem>
           <para>
-            retrieves and configures information about the current instance of
+            henter og konfigurerer informasjon om gjeldende forekomst av
             <command>Hyprland</command>
           </para>
           <indexterm zone="hyprland hyprctl">
@@ -223,7 +230,7 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>hyprland</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>Hyprland</command>
+            er en symbolsk lenke som peker til <command>Hyprland</command>
           </para>
           <indexterm zone="hyprland hyprland-link">
             <primary sortas="b-hyprland-link">hyprland</primary>
@@ -235,7 +242,7 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>Hyprland</command></term>
         <listitem>
           <para>
-            is the Hyprland compositor
+            er Hyprland kompositøren
           </para>
           <indexterm zone="hyprland Hyprland">
             <primary sortas="b-Hyprland">Hyprland</primary>
@@ -247,7 +254,7 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>hyprpm</command></term>
         <listitem>
           <para>
-            is the plugin manager for <command>Hyprland</command>
+            er programtilleggbehandleren for <command>Hyprland</command>
           </para>
           <indexterm zone="hyprland hyprpm">
             <primary sortas="b-hyprpm">hyprpm</primary>
