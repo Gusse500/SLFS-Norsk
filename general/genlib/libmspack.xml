@@ -19,19 +19,19 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libmspack</title>
+    <title>Introduksjon til libmspack</title>
 
     <para>
-      The libmspack package provides a library that
-      handles some Microsoft compression formats such as CAB, CHM, and HLP. It
-      also provides <command>cabextract</command> which extracts Microsoft
-      cabinet files.
+      Pakken libmspack inneholder et bibliotek som håndterer noen 
+      Microsoft komprimeringsformater som CAB, CHM og HLP. Den 
+      tilbyr også <command>cabextract</command> som pakker ut 
+      Microsofts kabinettfiler.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download: <ulink url="&libmspack-download;"/>
+          Nedlasting: <ulink url="&libmspack-download;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -39,11 +39,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libmspack</title>
+    <title>Installasjon av libmspack</title>
 
     <para>
-      Install libmspack by executing the following
-      commands:
+      Installer libmspack ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cd libmspack                                &amp;&amp;
@@ -52,14 +52,14 @@ autoreconf -fi                              &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
 
     <para>
-      Now install the <command>cabextract</command> program by running the
-      following commands:
+      Nå installer <command>cabextract</command> programmet ved å kjøre 
+      følgende kommandoer:
     </para>
 
 <screen><userinput>cd ../cabextract                            &amp;&amp;
@@ -70,7 +70,7 @@ autoreconf -fi -I/usr/share/gettext/m4      &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -78,12 +78,12 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
@@ -93,13 +93,13 @@ make</userinput></screen>
           libmspack
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -107,8 +107,8 @@ make</userinput></screen>
         <term><command>cabextract</command></term>
         <listitem>
           <para>
-            extracts Microsoft cabinet (<filename
-            class="extension">.CAB</filename>) files
+            pakker ut Microsoft-kabinettet (<filename
+            class="extension">.CAB</filename>) filer
           </para>
           <indexterm zone="libmspack cabextract">
             <primary sortas="b-cabextract">cabextract</primary>
@@ -120,8 +120,8 @@ make</userinput></screen>
         <term><filename class="libraryfile">libmspack</filename></term>
         <listitem>
           <para>
-            contains functions for working with some Microsoft compression
-            formats
+            inneholder funksjoner for å arbeide med noen Microsoft 
+            komprimeringsformater
           </para>
           <indexterm zone="libmspack lib-libmspack">
             <primary sortas="c-lib-libmspack">libmspack</primary>
