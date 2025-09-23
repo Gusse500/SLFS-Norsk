@@ -17,30 +17,30 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libsrtp</title>
+    <title>Introduksjon til libsrtp</title>
 
     <para>
-      The libsrtp package provides functions for Secure Realtime Transport
-      Protocol, or SRTP.
+      libsrtp pakken tilbyr funksjoner for Secure Realtime Transport Protocol, 
+      eller SRTP.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libsrtp-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libsrtp-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libsrtp Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libsrtp Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/general/nspr.html">NSPR</ulink> and
+      <ulink url="&blfs-svn;/general/nspr.html">NSPR</ulink> og
       <ulink url="&blfs-svn;/postlfs/nss.html">NSS</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink>
     </para>
@@ -48,11 +48,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libsrtp</title>
+    <title>Installasjon av libsrtp</title>
 
     <para>
-      Install libsrtp by running the following
-      commands:
+      Installer libsrtp ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -67,7 +67,7 @@ meson setup --prefix=/usr                  \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -75,16 +75,16 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libsrtp2
@@ -96,7 +96,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -104,7 +104,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libsrtp2</filename></term>
         <listitem>
           <para>
-            provides functions for SRTP
+            tilbyr funksjoner for SRTP
           </para>
           <indexterm zone="libsrtp libsrtp2">
             <primary sortas="c-libsrtp2">libsrtp2</primary>
