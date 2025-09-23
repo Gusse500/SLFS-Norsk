@@ -17,23 +17,23 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libjuice</title>
+    <title>Introduksjon til libjuice</title>
 
     <para>
-      The libjuice package provides a reimplementation of UDP ICE with NAT.
+      libjuice pakken gir en reimplementering av UDP ICE med NAT.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libjuice-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libjuice-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libjuice Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libjuice Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
@@ -41,11 +41,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libjuice</title>
+    <title>Installasjon av libjuice</title>
 
     <para>
-      Install libjuice by running the following
-      commands:
+      Installer libjuice ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -59,7 +59,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -67,23 +67,23 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           liblibjuice
@@ -95,7 +95,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -103,7 +103,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libjuice</filename></term>
         <listitem>
           <para>
-            provides functions for ICE
+            tilbyr funksjoner for ICE
           </para>
           <indexterm zone="libjuice lib-libjuice">
             <primary sortas="c-lib-libjuice">libjuice</primary>
