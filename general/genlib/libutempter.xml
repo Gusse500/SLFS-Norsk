@@ -17,26 +17,26 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libutempter</title>
+    <title>Introduksjon til libutempter</title>
 
     <para>
-      The libutempter package is a library
-      that allows non-privileged apps to write utmp info.
+      libutempter pakken er et bibliotek som lar ikke-privilegerte 
+      apper skrive utmp informasjon.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libutempter-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libutempter-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/libutempter/libutempter-&libutempter-version;-unbreak-reinstall.patch"/>
         </para>
       </listitem>
@@ -45,11 +45,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libutempter</title>
+    <title>Installasjon av libutempter</title>
 
     <para>
-      Install libutempter by executing the following
-      commands:
+      Installer libutempter ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>patch -Np1 -i ../libutempter-1.2.3-unbreak-reinstall.patch &amp;&amp;
@@ -57,7 +57,7 @@ cd libutempter &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -65,12 +65,12 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
@@ -86,7 +86,7 @@ make</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -94,7 +94,7 @@ make</userinput></screen>
         <term><command>utempter</command></term>
         <listitem>
           <para>
-            is a privileged helper program for utmp/wtmp updates
+            er et privilegert hjelpeprogram for utmp/wtmp oppdateringer
           </para>
           <indexterm zone="libutempter utempter">
             <primary sortas="b-utempter">utempter</primary>
@@ -106,7 +106,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libutempter</filename></term>
         <listitem>
           <para>
-            contains the utempter library interface
+            inneholder grensesnittet til utempter biblioteket
           </para>
           <indexterm zone="libutempter libutempter-bin">
             <primary sortas="c-libutempter">libutempter</primary>
