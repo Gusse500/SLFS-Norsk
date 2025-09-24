@@ -17,24 +17,24 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Mbed TLS</title>
+    <title>Introduksjon til Mbed TLS</title>
 
     <para>
-      The Mbed TLS package provides TLS libraries and aims to flexible and
-      portable.
+      Mbed TLS pakken tilbyr TLS biblioteker og har som mål å være fleksibel 
+      og portabel.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mbedtls-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&mbedtls-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Mbed TLS Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Mbed TLS Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
@@ -42,11 +42,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Mbed TLS</title>
+    <title>Installasjon av Mbed TLS</title>
 
     <para>
-      Install Mbed TLS by running the following
-      commands:
+      Installer Mbed TLS ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -63,7 +63,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr      \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>DESTDIR=$PWD/DESTDIR ninja install &amp;&amp;
@@ -77,40 +77,40 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D USE_SHARED_MBEDTLS_LIBRARY=ON</parameter>: This parameter
-      ensures shared libraries are built.
+      <parameter>-D USE_SHARED_MBEDTLS_LIBRARY=ON</parameter>: Denne parameteren 
+      sørger for at delte biblioteker bygges.
     </para>
 
     <para>
-      <parameter>-D USE_STATIC_MBEDTLS_LIBRARY=OFF</parameter>: This parameter
-      ensures the main libraries are not statically built.
+      <parameter>-D USE_STATIC_MBEDTLS_LIBRARY=OFF</parameter>: Denne 
+      parameteren sørger for at hovedbibliotekene ikke bygges statisk.
     </para>
 
     <para>
-      <parameter>-D ENABLE_TESTING=OFF</parameter>: This parameter disables
-      building tests that make the building process twice as long.
+      <parameter>-D ENABLE_TESTING=OFF</parameter>: Denne parameteren 
+      deaktiverer byggetester som gjør byggeprosessen dobbelt så lang.
     </para>
 
     <para>
-      <command>pushd DESTDIR/usr/bin ...</command>: These commands rename the
-      programs as to not conflict with those that may be installed by other
-      programs.
+      <command>pushd DESTDIR/usr/bin ...</command>: Disse kommandoene gir 
+      programmene nytt navn slik at de ikke kommer i konflikt med de som kan 
+      være installert av andre programmer.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
@@ -172,25 +172,25 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
           mbedtls_ssl_server,
           mbedtls_ssl_server2,
           mbedtls_strerror,
-          mbedtls_udp_proxy, and
+          mbedtls_udp_proxy, og
           mbedtls_zeroize
         </seg>
         <seg>
-          libeverest (static),
+          libeverest (statisk),
           libmbedcrypto,
           libmbedtls,
-          libmbedx509, and
-          libp256m (static)
+          libmbedx509, og
+          libp256m (statisk)
         </seg>
         <seg>
-          /usr/include/{everest,mbedtls,psa} and
+          /usr/include/{everest,mbedtls,psa} og
           /usr/lib/cmake/MbedTLS
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -198,8 +198,8 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
         <term><filename class="libraryfile">libmbedcrypto</filename></term>
         <listitem>
           <para>
-            handles cryptography functions that are needed by other parts of
-            this package and other packages
+            håndterer kryptografifunksjoner som trengs av andre deler av denne 
+            pakken og andre pakker
           </para>
           <indexterm zone="mbedtls libmbedcrypto">
             <primary sortas="c-libmbedcrypto">libmbedcrypto</primary>
@@ -211,7 +211,7 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
         <term><filename class="libraryfile">libmbedtls</filename></term>
         <listitem>
           <para>
-            provides TLS functions
+            tilbyr TLS funksjoner
           </para>
           <indexterm zone="mbedtls libmbedtls">
             <primary sortas="c-libmbedtls">libmbedtls</primary>
@@ -223,8 +223,8 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
         <term><filename class="libraryfile">libmbedx509</filename></term>
         <listitem>
           <para>
-            is used by <filename class="libraryfile">libmbedtls</filename>; it
-            handles X.509 certificates that allow TLS and SSL to be possible
+            brukes av <filename class="libraryfile">libmbedtls</filename>; den 
+            håndterer X.509 sertifikater som tillater TLS og SSL
           </para>
           <indexterm zone="mbedtls libmbedx509">
             <primary sortas="c-libmbedx509">libmbedx509</primary>
