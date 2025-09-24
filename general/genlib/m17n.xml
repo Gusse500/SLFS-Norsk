@@ -18,58 +18,58 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to m17n</title>
+    <title>Introduksjon til m17n</title>
 
     <para>
-      The m17n package provides a library for multilingualization of
-      applications.
+      m17n pakken tilbyr et bibliotek for flerspråklighet av 
+      applikasjoner.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&m17n-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&m17n-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required database:
+          Påkrevd database:
           <ulink url="https://download.savannah.nongnu.org/releases/m17n/m17n-db-&m17n-db-version;.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">m17n Dependencies</bridgehead>
+    <bridgehead renderas="sect3">m17n Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <xref linkend="anthy"/>,
       <ulink url="&blfs-svn;/general/aspell.html">Aspell</ulink>,
       <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
       <ulink url="&blfs-svn;/general/freetype.html">FreeType</ulink>,
       <ulink url="&blfs-svn;/general/fribidi.html">FriBidi</ulink>,
-      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>, and
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>, og
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="https://libgd.github.io/">LibGD</ulink> and
+      <ulink url="https://libgd.github.io/">LibGD</ulink> og
       <ulink url="https://github.com/netkawai/libotf">libotf</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of m17n</title>
+    <title>Installasjon av m17n</title>
 
     <para>
-      First, install the m17n database by running
-      the following commands:
+      Først installerer du m17n databasen ved å kjøre 
+      følgende kommandoer:
     </para>
 
 <screen><userinput>tar -xvf ../m17n-db-&m17n-db-version;.tar.gz &amp;&amp;
@@ -78,14 +78,14 @@ cd m17n-db-&m17n-db-version; &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user, install the database:
+      Nå, som &root; bruker, installer databasen:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
 
     <para>
-      Then, install m17n by running the following
-      commands:
+      Installer deretter m17n ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cd .. &amp;&amp;
@@ -93,7 +93,7 @@ make</userinput></screen>
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -101,28 +101,28 @@ make</userinput></screen>
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          m17n-conv, m17n-date, m17n-db, m17n-dump, m17n-edit, and m17n-view
+          m17n-conv, m17n-date, m17n-db, m17n-dump, m17n-edit, og m17n-view
         </seg>
         <seg>
-          libm17n-core, libm17n-flt, libm17n-gui, and libm17n
+          libm17n-core, libm17n-flt, libm17n-gui, og libm17n
         </seg>
         <seg>
-          /usr/lib/m17n and /usr/share/m17n
+          /usr/lib/m17n og /usr/share/m17n
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -130,7 +130,7 @@ make</userinput></screen>
         <term><command>m17n-conv</command></term>
         <listitem>
           <para>
-            converts files between encodings
+            konverterer filer mellom kodinger
           </para>
           <indexterm zone="m17n m17n-conv">
             <primary sortas="b-m17n-conv">m17n-conv</primary>
@@ -142,7 +142,7 @@ make</userinput></screen>
         <term><command>m17n-date</command></term>
         <listitem>
           <para>
-            displays the system date and time in many locales
+            viser systemets dato og klokkeslett på mange språk
           </para>
           <indexterm zone="m17n m17n-date">
             <primary sortas="b-m17n-date">m17n-date</primary>
@@ -154,7 +154,7 @@ make</userinput></screen>
         <term><command>m17n-db</command></term>
         <listitem>
           <para>
-            prints information about the m17n database
+            skriver ut informasjon om m17n databasen
           </para>
           <indexterm zone="m17n m17n-db">
             <primary sortas="b-m17n-db">m17n-db</primary>
@@ -166,7 +166,7 @@ make</userinput></screen>
         <term><command>m17n-dump</command></term>
         <listitem>
           <para>
-            dumps text as a PNG image file
+            dumper tekst som en PNG bildefil
           </para>
           <indexterm zone="m17n m17n-dump">
             <primary sortas="b-m17n-dump">m17n-dump</primary>
@@ -178,7 +178,7 @@ make</userinput></screen>
         <term><command>m17n-edit</command></term>
         <listitem>
           <para>
-            displays a file on a window and allows users to edit it
+            viser en fil i et vindu og lar brukere redigere den
           </para>
           <indexterm zone="m17n m17n-edit">
             <primary sortas="b-m17n-edit">m17n-edit</primary>
@@ -190,7 +190,7 @@ make</userinput></screen>
         <term><command>m17n-view</command></term>
         <listitem>
           <para>
-            displays a file on a window
+            viser en fil i et vindu
           </para>
           <indexterm zone="m17n m17n-view">
             <primary sortas="b-m17n-view">m17n-view</primary>
@@ -202,7 +202,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libm17n-core</filename></term>
         <listitem>
           <para>
-            is the m17n core library
+            er kjernebiblioteket til m17n
           </para>
           <indexterm zone="m17n libm17n-core">
             <primary sortas="c-libm17n-core">libm17n-core</primary>
@@ -214,7 +214,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libm17n-flt</filename></term>
         <listitem>
           <para>
-            is the m17n Font Layout Table library
+            er m17n biblioteket for fontlayouttabeller
           </para>
           <indexterm zone="m17n libm17n-flt">
             <primary sortas="c-libm17n-flt">libm17n-flt</primary>
@@ -226,7 +226,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libm17n-gui</filename></term>
         <listitem>
           <para>
-            is the m17n GUI drawing/inputting library
+            er m17n GUI tegne-/inndatabiblioteket
           </para>
           <indexterm zone="m17n libm17n-gui">
             <primary sortas="c-libm17n-gui">libm17n-gui</primary>
@@ -238,7 +238,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libm17n</filename></term>
         <listitem>
           <para>
-            is the m17n shell API library
+            er m17n skall API biblioteket
           </para>
           <indexterm zone="m17n libm17n">
             <primary sortas="c-libm17n">libm17n</primary>
