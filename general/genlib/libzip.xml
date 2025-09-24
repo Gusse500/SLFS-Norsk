@@ -18,42 +18,42 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libzip</title>
+    <title>Introduksjon til libzip</title>
 
     <para>
-      The libzip package contains a library and utilities for handling zip
-      archives.
+      libzip pakken inneholder et bibliotek og verktøy for håndtering av zip 
+      arkiver.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libzip-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libzip-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libzip Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libzip Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink> and
+      <ulink url="&blfs-svn;/postlfs/gnutls.html">GnuTLS</ulink> og
       <xref linkend="mbedtls"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libzip</title>
+    <title>Installasjon av libzip</title>
 
     <para>
-      Install libzip by running the following
-      commands:
+      Installer libzip ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -67,7 +67,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -75,24 +75,24 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
           zipcmp,
-          zipmerge, and
+          zipmerge, og
           ziptool
         </seg>
         <seg>
@@ -105,7 +105,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -113,7 +113,7 @@ ninja</userinput></screen>
         <term><command>zipcmp</command></term>
         <listitem>
           <para>
-            compares contents of zip archives
+            sammenligner innholdet i zip arkiver
           </para>
           <indexterm zone="libzip zipcmp">
             <primary sortas="b-zipcmp">zipcmp</primary>
@@ -125,7 +125,7 @@ ninja</userinput></screen>
         <term><command>zipmerge</command></term>
         <listitem>
           <para>
-            merges zip archives
+            slår sammen zip arkiver
           </para>
           <indexterm zone="libzip zipmerge">
             <primary sortas="b-zipmerge">zipmerge</primary>
@@ -137,7 +137,7 @@ ninja</userinput></screen>
         <term><command>ziptool</command></term>
         <listitem>
           <para>
-            modifies zip archives
+            endrer zip arkiver
           </para>
           <indexterm zone="libzip ziptool">
             <primary sortas="b-ziptool">ziptool</primary>
@@ -149,7 +149,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libzip</filename></term>
         <listitem>
           <para>
-            contains functions that can modify and compare zip archives
+            inneholder funksjoner som kan endre og sammenligne zip arkiver
           </para>
           <indexterm zone="libzip libzip-lib">
             <primary sortas="c-libzip-lib">libzip</primary>
