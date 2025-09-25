@@ -7,27 +7,27 @@
   <!ENTITY zlib-download-http "https://zlib.net/fossils/zlib-&zlib-version;.tar.gz">
 ]>
 
-<sect1 id="minizip" xreflabel="minizip from zlib-&zlib-version;">
+<sect1 id="minizip" xreflabel="minizip fra zlib-&zlib-version;">
   <?dbhtml filename="minizip.html"?>
 	
-  <title>minizip from zlib-&zlib-version;</title>
+  <title>minizip fra zlib-&zlib-version;</title>
 
   <indexterm zone="minizip">
     <primary sortas="a-minizip">minizip</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to minizip</title>
+    <title>Introduksjon til minizip</title>
 
     <para>
-      The minizip package provides a library for
-      mini zip and unzip, based on Zlib.
+      Minizip-pakken tilbyr et bibliotek for 
+      mini zip og unzip, basert på Zlib.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&zlib-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&zlib-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -35,17 +35,17 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of minizip</title>
+    <title>Installasjon av minizip</title>
 
     <note><para>
-      You must unpack the downloaded
-      <filename>zlib-&zlib-version;.tar.gz</filename> tarball and navigate to
-      the extracted source directory. This package is inside that source.
+      Du må pakke ut den nedlastede tarballfilen
+      <filename>zlib-&zlib-version;.tar.gz</filename> og naviger til den 
+      utpakkede kildemappen. Denne pakken er inne i den kildekoden.
     </para></note>
 
     <para>
-      Install minizip by running the following
-      commands:
+      Installer minizip ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cd contrib/minizip &amp;&amp;
@@ -57,7 +57,7 @@ autoreconf -fi      &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install &amp;&amp;
@@ -66,35 +66,35 @@ rm -vf /usr/include/minizip/crypt.h</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>mv Makefile{,.orig}; autoconf -fi</command>: These commands
-      remove the pregenerated <filename>Makefile</filename> and generate a new
-      one.
+      <command>mv Makefile{,.orig}; autoconf -fi</command>: Disse kommandoene 
+      fjerner den forhåndsgenererte <filename>Makefile</filename> og genererer 
+      en ny en.
     </para>
 
     &static-libraries;
 
     <para>
-      <command>rm -vf /usr/include/minizip/crypt.h</command>: This command
-      deletes a C header that conflicts with another one, which can cause build
-      issues for other packages.
+      <command>rm -vf /usr/include/minizip/crypt.h</command>: Denne kommandoen 
+      sletter en C deklarasjon som er i konflikt med en annen, noe som kan 
+      forårsake byggeproblemer for andre pakker.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libminizip
@@ -106,7 +106,7 @@ rm -vf /usr/include/minizip/crypt.h</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -114,7 +114,7 @@ rm -vf /usr/include/minizip/crypt.h</userinput></screen>
         <term><filename class="libraryfile">libminizip</filename></term>
         <listitem>
           <para>
-            contains mini zip and unzip functions
+            inneholder mini zip og unzip funksjoner
           </para>
           <indexterm zone="minizip libminizip">
             <primary sortas="c-libminizip">libminizip</primary>
