@@ -18,44 +18,44 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to msgraph</title>
+    <title>Introduksjon til msgraph</title>
 
     <para>
-      The msgraph package contains a shared library for accessing the Microsoft
-      Graph API. This is useful for adding support for OneDrive into gvfs,
-      which is becoming more important for students and remote workers.
+      msgraph pakken inneholder et delt bibliotek for tilgang til Microsoft 
+      Graph API. Dette er nyttig for å legge til støtte for OneDrive i gvfs, noe 
+      som blir stadig viktigere for studenter og eksterne arbeidere.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&msgraph-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&msgraph-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">msgraph Dependencies</bridgehead>
+    <bridgehead renderas="sect3">msgraph Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <!-- The remainder of the dependencies are all required by g-o-a.
            This includes libsoup, libxml2, json-glib, and glib. -->
       <ulink url="&blfs-svn;/gnome/gnome-online-accounts.html">gnome-online-accounts</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock (for tests)</ulink>
+      <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock (for tester)</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of msgraph</title>
+    <title>Installasjon av msgraph</title>
 
     <para>
-      Install msgraph by running the following
-      commands:
+      Installer msgraph ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -65,16 +65,16 @@ meson setup --prefix=/usr --buildtype=release -D tests=false .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      This package does come with a test suite, but it requires the external
-      program
+      Denne pakken kommer med en testpakke, men den krever det eksterne 
+      programmet
       <ulink url="https://gitlab.freedesktop.org/pwithnall/uhttpmock">uhttpmock</ulink>.
-      If you want to run the tests, install uhttpmock and remove the
-      <parameter>-D tests=false</parameter> parameter, and then run
+      Hvis du vil kjøre testene, installer uhttpmock og fjern
+      <parameter>-D tests=false</parameter> parameteren, og deretter kjør
       <command>ninja test</command>.
     </para>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -82,42 +82,42 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="using">
-    <title>Using msgraph</title>
+    <title>Bruke msgraph</title>
 
     <para>
-      To configure msgraph to allow access to Microsoft OneDrive with packages
-      that use gvfs, you should rebuild gvfs in BLFS without the
-      <parameter>-D onedrive=false</parameter> option. After doing this, you
-      should go to GNOME Control Center/GNOME Settings and link your
-      Microsoft account through the Online Accounts section, and you should
-      be able to mount your OneDrive file storage account in Nautilus.
+      For å konfigurere msgraph til å tillate tilgang til Microsoft OneDrive med 
+      pakker som bruker gvfs, bør du gjenoppbygge gvfs i BLFS uten
+      <parameter>-D onedrive=false</parameter> alternativet. Etter å ha gjort 
+      dette, bør du gå til GNOME Kontrollsenter/GNOME-innstillinger og koble til 
+      Microsoft kontoen din via delen Nettkontoer, og du bør kunne koble til 
+      OneDrive fillagringskontoen din i Nautilus.
     </para>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libmsgraph-1
         </seg>
         <seg>
-          /usr/include/msg and
+          /usr/include/msg og
           /usr/share/doc/msgraph-&msgraph-version;
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -125,7 +125,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libmsgraph-1</filename></term>
         <listitem>
           <para>
-            contains functions that allow applications to interact with the
+            inneholder funksjoner som lar applikasjoner samhandle med 
             Microsoft Graph API.
           </para>
           <indexterm zone="msgraph libmsgraph">
