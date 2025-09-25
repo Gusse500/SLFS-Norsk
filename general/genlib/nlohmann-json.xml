@@ -19,24 +19,24 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to nlohmann-json</title>
+    <title>Introduksjon til nlohmann-json</title>
 
     <para>
-      The nlohmann-json package provides a header-only in-memory JSON and interface
-      library for C++, like <xref linkend="glaze"/>.
+      Pakken nlohmann-json tilbyr en header-only in-memory JSON og 
+      grensesnittbibliotek for C++, lik <xref linkend="glaze"/>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&nlohmann-json-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&nlohmann-json-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">nlohmann-json Dependencies</bridgehead>
+    <bridgehead renderas="sect3">nlohmann-json Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
@@ -44,11 +44,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of nlohmann-json</title>
+    <title>Installasjon av nlohmann-json</title>
 
     <para>
-      Install nlohmann-json by running the following
-      commands:
+      Installer nlohmann-json ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -63,7 +63,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -71,32 +71,32 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
       <parameter>-D BUILD_TESTING=OFF -D JSON_BuildTests=OFF</parameter>:
-      This parameter disables building tests.
+      Disse parameterene deaktiverer bygging av tester.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /usr/include/nlohmann and /usr/share/cmake/nlohmann_json
+          /usr/include/nlohmann og /usr/share/cmake/nlohmann_json
         </seg>
       </seglistitem>
     </segmentedlist>
