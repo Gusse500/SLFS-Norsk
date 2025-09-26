@@ -18,33 +18,33 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to QR-Code-generator</title>
+    <title>Introduksjon til QR-Code-generator</title>
 
     <para>
-      The QR-Code-generator package provides a QR code generator.
+      QR-Code-generator pakken inneholder en QR kodegenerator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&qrcodegencpp-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&qrcodegencpp-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required CMake files:
+          Påkrevde CMake filer:
           <ulink url="https://github.com/EasyCoding/qrcodegen-cmake/archive/v&qrcodegencpp-version;-cmake3/qrcodegen-cmake-&qrcodegencpp-version;-cmake3.tar.gz"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">QR-Code-generator Dependencies</bridgehead>
+    <bridgehead renderas="sect3">QR-Code-generator Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
@@ -52,10 +52,10 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of QR-Code-generator</title>
+    <title>Installasjon av QR-Code-generator</title>
 
     <para>
-      First unpack the CMake files:
+      Pakk først ut CMake filene:
     </para>
 
 <screen><userinput>tar -xf ../qrcodegen-cmake-&qrcodegencpp-version;-cmake3.tar.gz &amp;&amp;
@@ -63,8 +63,8 @@ cp -vR qrcodegen-cmake-&qrcodegencpp-version;-cmake3/{cmake,CMakeLists.txt} . &a
 rm -rf qrcodegen-cmake-&qrcodegencpp-version;-cmake3</userinput></screen>
 
     <para>
-      Install QR-Code-generator by running the following
-      commands:
+      Installer QR-Code-generator ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -79,7 +79,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -87,40 +87,40 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: This ensures shared
-      libraries are built.
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: Dette sikrer at delte 
+      biblioteker bygges.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libqrcodegen{,cpp}
         </seg>
         <seg>
-          /usr/include/qrcodegen{,cpp} and /usr/lib/cmake/qrcodegen{,cpp}
+          /usr/include/qrcodegen{,cpp} og /usr/lib/cmake/qrcodegen{,cpp}
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -128,7 +128,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libqrcodegen</filename></term>
         <listitem>
           <para>
-            provides QR code generation functions
+            tilbyr funksjoner for generering av QR koder
           </para>
           <indexterm zone="qrcodegencpp libqrcodegen">
             <primary sortas="c-libqrcodegen">libqrcodegen</primary>
