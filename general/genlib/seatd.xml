@@ -18,45 +18,45 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to seatd</title>
+    <title>Introduksjon til seatd</title>
 
     <para>
-      The seatd package provides a universal seat
-      management library. It is what a lot of Wayland compositors use to manage
-      seats, a session for a user in which applications can interact with.
+      seatd pakken tilbyr et universelt seat administrasjonsbibliotek. Det er 
+      det mange Wayland kompositore bruker til å administrere seater, en økt 
+      for en bruker som applikasjoner kan samhandle med.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&seatd-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&seatd-download-http;"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Download (FTP): <ulink url="&seatd-download-ftp;"/>
+          Nedlasting (FTP): <ulink url="&seatd-download-ftp;"/>
         </para>
       </listitem>
     </itemizedlist>
  
-    <bridgehead renderas="sect3">seatd Dependencies</bridgehead>
+    <bridgehead renderas="sect3">seatd Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       &logind-nocomma;
-      (this package needs a backend to properly
-      create a seat, <phrase revision="sysv">e</phrase>logind
-      <phrase revision="systemd"> from Systemd
-      </phrase> being a suitable one)
+      (Denne pakken trenger en backend for å kunne opprette et seat 
+      på riktig måte, <phrase revision="sysv">e</phrase>logind
+      <phrase revision="systemd"> fra Systemd
+      </phrase> er en passende en)
     </para>
 
   </sect2>
  
   <sect2 role="installation">
-    <title>Installation of seatd</title>
+    <title>Installasjon av seatd</title>
     <para>
-      Install seatd by running the following
-      commands:
+      Installer seatd ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -71,7 +71,7 @@ meson setup --prefix=/usr             \
 ninja</userinput></screen>
 
     <para>
-      Now, as the <systemitem class="username">root</systemitem> user:
+      Nå, som <systemitem class="username">root</systemitem> bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -79,49 +79,49 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &options-meson;
 
     &meson-buildtype-release;
 
     <para>
-      <parameter>-D server=disabled</parameter>: Disables building the
-      seatd daemon.
+      <parameter>-D server=disabled</parameter>: Deaktiverer bygging av 
+      seatd daemonen.
     </para>
 
     <para>
-      <parameter>-D libseat-seatd=disabled</parameter>: This parameter disables
-      building support for the in-house logind daemon in
-      <filename class="libraryfile">libseat</filename> and instead relies on
-      the system-installed <phrase revision="sysv">e</phrase>logind instead.
+      <parameter>-D libseat-seatd=disabled</parameter>: Denne parameteren 
+      deaktiverer bygging av støtte for den interne logind daemonen i
+      <filename class="libraryfile">libseat</filename> og bruker i stedet den 
+      systeminstallerte <phrase revision="sysv">e</phrase>logind i stedet.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Library</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libseat
         </seg>
         <seg>
-          none
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -129,7 +129,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libseat</filename></term>
         <listitem>
           <para>
-            contains functions to handle seat management
+            inneholder funksjoner for å håndtere seat administrasjon
           </para>
           <indexterm zone="seatd libseat">
             <primary sortas="c-libseat">libseat</primary>
