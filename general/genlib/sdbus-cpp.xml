@@ -19,33 +19,33 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to sdbus-c++</title>
+    <title>Introduksjon til sdbus-c++</title>
 
     <para>
-      The sdbus-c++ package provides a C++ API for
+      Pakken sdbus-c++ tilbyr et C++ API for 
       D-Bus.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sdbus-cpp-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&sdbus-cpp-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">sdbus-c++ Dependencies</bridgehead>
+    <bridgehead renderas="sect3">sdbus-c++ Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> og
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>
-      (for generating documentation) and
+      (for å generere dokumentasjon) og
       <phrase revision="sysv">
       <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>
       </phrase><phrase revision="systemd">
@@ -56,11 +56,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of sdbus-c++</title>
+    <title>Installasjon av sdbus-c++</title>
 
     <para>
-      Install sdbus-c++ by running the following
-      commands:
+      Installer sdbus-c++ ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -74,7 +74,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
@@ -83,42 +83,42 @@ mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
       <command>mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</command>:
-      This command makes the docs numbered and consistent with every other
-      packages in the docs.
+      Denne kommandoen nummererer dokumentene og gjør dem konsistente med alle 
+      andre pakker i dokumentene.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libsdbus-c++
         </seg>
         <seg>
-          /usr/include/sdbus-c++, /usr/lib/cmake/sdbus-c++, and
+          /usr/include/sdbus-c++, /usr/lib/cmake/sdbus-c++, og
           /usr/share/doc/sdbus-c++-&sdbus-cpp-version;
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -126,7 +126,7 @@ mv -v /usr/share/doc/sdbus-c++{,-&sdbus-cpp-version;}</userinput></screen>
         <term><filename class="libraryfile">libsdbus-c++</filename></term>
         <listitem>
           <para>
-            provides API functions for D-Bus in C++
+            tilbyr API funksjoner for D-Bus i C++
           </para>
           <indexterm zone="sdbus-cpp libsdbus-cpp">
             <primary sortas="c-libsdbus-cpp">libsdbus-c++</primary>
