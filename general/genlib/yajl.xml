@@ -20,51 +20,51 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to yajl</title>
+    <title>Introduksjon til yajl</title>
 
     <para>
-      The yajl package provides a JSON library.
+      yajl pakken tilbyr et JSON bibliotek.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&yajl-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&yajl-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-&yajl-version;-CVE-2017-16516.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-&yajl-version;-CVE-2022-24795.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/yajl/-/raw/main/yajl-&yajl-version;-memory_leak.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="https://github.com/lloyd/yajl/commit/6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">yajl Dependencies</bridgehead>
+    <bridgehead renderas="sect3">yajl Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
@@ -72,12 +72,12 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of yajl</title>
+    <title>Installasjon av yajl</title>
 
     <para>
-      Since the last commit to this package is almost a decade old, issues have
-      came up and need to be fixed before building. Apply required patches to
-      fix the important ones:
+      Siden den siste commiten til denne pakken er nesten ti år gammel, har det 
+      dukket opp problemer som må fikses før bygging. Installer nødvendige 
+      oppdateringer for å fikse de viktigste:
     </para>
 
 <screen><userinput>patch -Np1 -i ../yajl-&yajl-version;-CVE-2017-16516.patch &amp;&amp;
@@ -86,14 +86,14 @@ patch -Np1 -i ../yajl-&yajl-version;-memory_leak.patch
 </userinput></screen>
 
     <para>
-      Fix building with CMake-4.0.0:
+      Fiks bygging med CMake-4.0.0:
     </para>
 
 <screen><userinput>patch -Np1 -i ../6fe59ca50dfd65bdb3d1c87a27245b2dd1a072f9.patch</userinput></screen>
 
     <para>
-      Install yajl by running the following
-      commands:
+      Installer yajl ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -108,7 +108,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
@@ -117,28 +117,28 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <command>rm -vf /usr/lib/libyajl_s.a</command>: This command removes a
-      useless static library.
+      <command>rm -vf /usr/lib/libyajl_s.a</command>: Denne kommandoen fjerner 
+      et ubrukelig statisk bibliotek.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          json_reformat and json_verify
+          json_reformat og json_verify
         </seg>
         <seg>
           libyajl
@@ -150,7 +150,7 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -158,7 +158,7 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
         <term><command>json_reformat</command></term>
         <listitem>
           <para>
-            reformats JSON from STDIN
+            omformaterer JSON fra STDIN
           </para>
           <indexterm zone="yajl json_reformat">
             <primary sortas="b-json_reformat">json_reformat</primary>
@@ -170,7 +170,7 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
         <term><command>json_verify</command></term>
         <listitem>
           <para>
-            validates JSON from STDIN
+            validerer JSON fra STDIN
           </para>
           <indexterm zone="yajl json_verify">
             <primary sortas="b-json_verify">json_verify</primary>
@@ -182,7 +182,7 @@ rm -vf /usr/lib/libyajl_s.a</userinput></screen>
         <term><filename class="libraryfile">libyajl</filename></term>
         <listitem>
           <para>
-            provides functions that can help with parsing JSON in C
+            tilbyr funksjoner som kan hjelpe med å analysere JSON i C
           </para>
           <indexterm zone="yajl libyajl">
             <primary sortas="c-libyajl">libyajl</primary>
