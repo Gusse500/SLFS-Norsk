@@ -18,36 +18,36 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to re2</title>
+    <title>Introduksjon til re2</title>
 
     <para>
-      The re2 package provides a regular expression library.
+      re2 pakken tilbyr et bibliotek med regulære uttrykk.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&re2-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&re2-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">re2 Dependencies</bridgehead>
+    <bridgehead renderas="sect3">re2 Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> og
       <ulink url="&blfs-svn;/general/abseil-cpp.html">Abseil-cpp</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of re2</title>
+    <title>Installasjon av re2</title>
 
     <para>
-      Install re2 by running the following
-      commands:
+      Installer re2 ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -61,7 +61,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -69,39 +69,39 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: This parameter builds
-      shared versions of the libraries provided by this package instead of
-      static libraries. 
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: Denne parameteren bygger 
+      delte versjoner av bibliotekene som tilbys av denne pakken i stedet for 
+      statiske biblioteker.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libre2
         </seg>
         <seg>
-          /usr/include/re2 and /usr/lib/cmake/re2
+          /usr/include/re2 og /usr/lib/cmake/re2
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -109,7 +109,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libre2</filename></term>
         <listitem>
           <para>
-            provides regular expression engine functions
+            tilbyr funksjoner for regulære uttrykksmotorer
           </para>
           <indexterm zone="re2 libre2">
             <primary sortas="c-libre2">libre2</primary>
