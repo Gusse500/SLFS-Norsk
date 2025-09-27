@@ -18,59 +18,59 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to cava</title>
+    <title>Introduksjon til cava</title>
 
     <para>
-      The cava package provides an audio visualizer.
+      cava pakken tilbyr en lydvisualiseringsprogramvare.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cava-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&cava-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">cava Dependencies</bridgehead>
+    <bridgehead renderas="sect3">cava Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/fftw.html">fftw</ulink> and
+      <ulink url="&blfs-svn;/general/fftw.html">fftw</ulink> og
       <xref linkend="iniparser"/>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
       &opengl;,
       <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
-      and <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+      og <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&arch-pkgs;/extra/x86_64/jack2/">JACK2</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/portaudio/">PortAudio</ulink>, and
+      <ulink url="&arch-pkgs;/extra/x86_64/portaudio/">PortAudio</ulink>, og
       <ulink url="&arch-pkgs;/extra/x86_64/sndio/">sndio</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of cava</title>
+    <title>Installasjon av cava</title>
 
     <para>
-      Install cava by running the following
-      commands:
+      Installer cava ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -78,28 +78,28 @@ make</userinput></screen>
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           cava
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -107,7 +107,7 @@ make</userinput></screen>
         <term><command>cava</command></term>
         <listitem>
          <para>
-           is an audio visualizer
+           er en lydvisualisator
          </para>
           <indexterm zone="cava cava-bin">
             <primary sortas="b-cava-bin">cava</primary>
