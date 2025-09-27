@@ -21,26 +21,26 @@ so this will do for now -->
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to cldr-emoji-annotation</title>
+    <title>Introduksjon til cldr-emoji-annotation</title>
 
     <para>
-      The cldr-emoji-annotation package provides
-      the emoji-related annotation files from Unicode's CLDR.
+      Pakken cldr-emoji-annotation tilbyr emoji relaterte 
+      annotasjonsfiler fra Unicodes CLDR.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cldr-emoji-annotation-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&cldr-emoji-annotation-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/cldr-emoji-annotation/cldr-emoji-annotation-&cldr-emoji-annotation-version;-final-updates.patch"/>
         </para>
       </listitem>
@@ -49,17 +49,17 @@ so this will do for now -->
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of cldr-emoji-annotation</title>
+    <title>Installasjon av cldr-emoji-annotation</title>
 
     <para>
-      Apply a patch to bring up the source to the latest upstream commit:
+      Installer en oppdatering for å hente kildekoden til den nyeste oppstrøms commiten:
     </para>
 
 <screen><userinput>patch -Np1 -i ../cldr-emoji-annotation-&cldr-emoji-annotation-version;-final-updates.patch</userinput></screen>
 
     <para>
-      Install cldr-emoji-annotation by executing the following
-      commands:
+      Installer cldr-emoji-annotation ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>autoreconf -fiv &amp;&amp;
@@ -67,7 +67,7 @@ so this will do for now -->
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -75,19 +75,19 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/unicode
