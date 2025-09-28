@@ -17,30 +17,30 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to fastfetch</title>
+    <title>Introduksjon til fastfetch</title>
 
     <para>
-      Fastfetch is a maintained, feature-rich and
-      performance oriented system information tool. It is an alternative to
-      <xref linkend="neofetch"/> and written in C.
+      Fastfetch er et vedlikeholdt, funksjonsrikt og ytelsesorientert 
+      systeminformasjonsverktøy. Det er et alternativ til
+      <xref linkend="neofetch"/> og skrevet i C.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fastfetch-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fastfetch-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fastfetch Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fastfetch Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
@@ -55,7 +55,7 @@
       <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
       <ulink url="&blfs-svn;/server/sqlite.html">SQLite</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink> and
+      <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink> og
       <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers
       </ulink>
     </para>
@@ -63,10 +63,10 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of fastfetch</title>
+    <title>Installasjon av fastfetch</title>
 
     <para>
-      Install fastfetch by running the following commands:
+      Installer fastfetch ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -80,7 +80,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -88,46 +88,46 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D CMAKE_BUILD_TYPE=Release</parameter>: This switch enables
-      compiler optimizations in order to speed up the code and reduce its size.
-      It also disables some compile checks which are not necessary on a
-      production system.
+      <parameter>-D CMAKE_BUILD_TYPE=Release</parameter>: Denne bryteren 
+      aktiverer kompilatoroptimaliseringer for å øke hastigheten på koden og 
+      redusere størrelsen. Den deaktiverer også noen kompileringskontroller som 
+      ikke er nødvendige på et produksjonssystem.
     </para>
 
     <para>
-      <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: This switch disables
-      building the historical flashfetch binary. If you need it for any reason,
-      set this switch to <parameter>ON</parameter>.
+      <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: Denne bryteren deaktiverer 
+      bygging av den historiske flashfetch binærfilen. Hvis du trenger den av en 
+      eller annen grunn, setter du denne bryteren til <parameter>ON</parameter>.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           fastfetch
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /usr/share/fastfetch and /usr/share/licenses/fastfetch
+          /usr/share/fastfetch og /usr/share/licenses/fastfetch
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -135,8 +135,8 @@ make</userinput></screen>
         <term><command>fastfetch</command></term>
         <listitem>
           <para>
-            outputs information about the system and displays ASCII art of the
-            system's distro
+            sender ut informasjon om systemet og viser ASCII grafikk for 
+            systemets distribusjon
           </para>
           <indexterm zone="fastfetch fastfetch-bin">
             <primary sortas="b-fastfetch-bin">fastfetch</primary>
