@@ -8,11 +8,11 @@
 <chapter id="general-genutils">
   <?dbhtml filename="genutils.html"?>
 
-  <title>General Utilities</title>
+  <title>Generelle Verktøy</title>
 
   <para>
-    This chapter covers many utilities which you may want or need and may be
-    used by packages that appear later in the book.
+    Dette kapittelet dekker mange verktøy som du kanskje ønsker eller trenger, 
+    og som kan brukes av pakker som vises senere i boken.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cava.xml"/>
