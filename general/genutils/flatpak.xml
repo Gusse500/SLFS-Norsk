@@ -17,28 +17,28 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Flatpak</title>
+    <title>Introduksjon til Flatpak</title>
 
     <para>
-      Flatpak allows you to download apps and run them in a sandbox. It
-      downloads all of the dependencies of a given package in a sandbox and
-      allows you to run the package as if it was not in a sandbox. Some
-      packages only exist as a Flatpak, and some packages have a lot of
-      dependencies that it might be worth it to install the Flatpak version
-      instead.
+      Flatpak lar deg laste ned apper og kjøre dem i en sandkasse. Den 
+      laster ned alle avhengighetene til en gitt pakke i en sandkasse og 
+      lar deg kjøre pakken som om den ikke var i en sandkasse. Noen pakker 
+      finnes bare som en Flatpak, og noen pakker har mange avhengigheter 
+      som gjør at det kan være verdt å installere Flatpak versjonen i 
+      stedet.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&flatpak-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&flatpak-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Flatpak Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Flatpak Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/appstream.html">AppStream</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
@@ -47,12 +47,12 @@
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>,
       <ulink url="&blfs-svn;/general/json-glib.html">JSON-GLib</ulink>,
       &logind;
-      <xref linkend="ostree"/> (with cURL and gpgme),
-      <ulink url="&blfs-svn;/postlfs/p11-kit.html">p11-kit</ulink>, and
+      <xref linkend="ostree"/> (med cURL og gpgme),
+      <ulink url="&blfs-svn;/postlfs/p11-kit.html">p11-kit</ulink>, og
       <ulink url="&blfs-svn;/general/python-modules.html#pyparsing">pyparsing</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/appstream-glib.html">appsteam-glib</ulink>,
       <ulink url="&blfs-svn;/basicnet/avahi.html">Avahi</ulink>,
@@ -62,26 +62,26 @@
       <ulink url="&blfs-svn;/general/libseccomp.html">libseccomp</ulink>,
       <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>,
       <ulink url="&blfs-svn;/x/libXau.html">libXau</ulink>,
-      <ulink url="&blfs-svn;/general/xdg-dbus-proxy.html">xdg-dbus-proxy</ulink>, and
+      <ulink url="&blfs-svn;/general/xdg-dbus-proxy.html">xdg-dbus-proxy</ulink>, og
       <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
-      (with <ulink url="&blfs-svn;/general/libportal.html">libportal</ulink>)
+      (med <ulink url="&blfs-svn;/general/libportal.html">libportal</ulink>)
     </para>
 
-    <bridgehead renderas="sect4">Recommended Runtime</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt Kjøretid</bridgehead>
     <para role="runtime">
       &opengl;
       <footnote><para>
-        While neither Flatpak or apps installed by it link to OpenGL on the
-        system, each app will link against its own runtime/SDK of choice. Most
-        of them use libglvnd. Running a libglvnd linked application on a Mesa
-        OpenGL system is known to fail by failing to create an instance or
-        context. If you haven't already, it's a good idea to switch to libglvnd
-        to ensure compatibility.
+        Selv om verken Flatpak eller apper installert av det kobler til OpenGL 
+        på systemet, vil hver app koble mot sin egen kjøretid/SDK. De fleste av 
+        dem bruker libglvnd. Det er kjent at det å kjøre en libglvnd koblet 
+        applikasjon på et Mesa OpenGL system mislykkes ved at det ikke klarer å 
+        opprette en instans eller kontekst. Hvis du ikke allerede har gjort det, 
+        er det lurt å bytte til libglvnd for å sikre kompatibilitet.
       </para></footnote>
-      and drivers for your GPU(s) for graphics APIs like OpenGL and Vulkan
+      og drivere for GPU-en(e) din(e) for grafikk API-er som OpenGL og Vulkan
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/gnome/dconf.html">DConf</ulink>,
       <ulink url="&blfs-svn;/pst/docbook-4.5-dtd.html">docbook-4.5-dtd</ulink>,
@@ -92,21 +92,21 @@
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,
       <ulink url="https://gitlab.freedesktop.org/pwithnall/malcontent">malcontent</ulink>
-      (for parental features),
+      (for foreldrefunksjoner),
       <xref linkend="socat"/>
-      (for tests),
-      <ulink url="&blfs-svn;/general/valgrind.html">Valgrind</ulink>, and
+      (for tester),
+      <ulink url="&blfs-svn;/general/valgrind.html">Valgrind</ulink>, og
       <ulink url="&blfs-svn;/pst/xmlto.html">xmlto</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Flatpak</title>
+    <title>Installasjon av Flatpak</title>
 
     <para>
-      Install Flatpak by running the following
-      commands:
+      Installer Flatpak ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -123,7 +123,7 @@ meson setup --prefix=/usr                       \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; user:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -131,88 +131,87 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &meson-buildtype-release;
 
     <para revision="sysv">
-      <parameter>-D systemd=disabled</parameter>: This parameter disables
-      Systemd support.
+      <parameter>-D systemd=disabled</parameter>: Denne parameteren deaktiverer 
+      Systemd støtte.
     </para>
 
     <para>
-      <parameter>-D system_bubblewrap=bwrap</parameter>: Ensures the build
-      system doesn't download Bubblewrap.
+      <parameter>-D system_bubblewrap=bwrap</parameter>: Sørger for at 
+      byggesystemet ikke laster ned Bubblewrap.
     </para>
 
     <para>
-      <parameter>-D system_dbus_proxy=xdg-dbus-proxy</parameter>: Ensures the
-      build system doesn't download xdg-dbus-proxy.
+      <parameter>-D system_dbus_proxy=xdg-dbus-proxy</parameter>: Sørger for at 
+      byggesystemet ikke laster ned xdg-dbus-proxy.
     </para>
 
     <para>
-      <parameter>-D tests=false</parameter>: This parameter disables tests.
-      Remove this parameter if you have socat
-      installed.
+      <parameter>-D tests=false</parameter>: Denne parameteren deaktiverer 
+      tester. Fjern denne parameteren hvis du har socat installert.
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring Flatpak</title>
+    <title>Konfigurere Flatpak</title>
 
     <para>
-      Now that Flatpak is installed, you should add a repository/remote to
-      install flatpaks from. Flathub is the most popular choice. You can do
-      that with:
+      Nå som Flatpak er installert, bør du legge til et depot/fjernlager for å 
+      installere flatpaks fra. Flathub er det mest populære valget. Du kan 
+      gjøre det med:
     </para>
 
 <screen role="nodump"><userinput>flatpak remote-add flathub https://dl.flathub.org/repo/flathub.flatpakrepo</userinput></screen>
 
     <para>
-      You can run it as a regular user or as &root;. If you run it as a regular
-      user, polkit will ask for authentication. In such case, ensure polkit
-      works first. If all went well, no error should be outputted. Then you
-      will be able to install flatpaks from Flathub. All installed applications
-      will be in <filename
-      class="directory">/var/lib/flatpak/exports/bin</filename>. Add that
-      directory to your <envar>$PATH</envar> if you wish.
+      Du kan kjøre den som en vanlig bruker eller som &root;. Hvis du kjører 
+      det som en vanlig bruker, vil polkit be om autentisering. I slike 
+      tilfeller, sørg for at polkit fungerer først. Hvis alt gikk bra, skal det 
+      ikke vises noen feilmelding. Da vil du kunne installere flatpaks fra 
+      Flathub. Alle installerte applikasjoner vil være i <filename
+      class="directory">/var/lib/flatpak/exports/bin</filename>. Legg til den 
+      mappen i din <envar>$PATH</envar> hvis du ønsker det.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Shell Script Triggers</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Skall Skriptutløsere</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           flatpak, flatpak-bisect, flatpak-bwrap, flatpak-coredumpctl,
           flatpak-dbus-proxy, flatpak-oci-authenticator, flatpak-portal,
           flatpak-session-helper, flatpak-system-helper, flatpak-validate-icon,
-          and revokefs-fuse
+          og revokefs-fuse
         </seg>
         <seg>
-          desktop-database.trigger, gtk-icon-cache.trigger, and
+          desktop-database.trigger, gtk-icon-cache.trigger, og
           mime-database.trigger
         </seg>
         <seg>
           libflatpak
         </seg>
         <seg>
-          /usr/include/flatpak, /usr/lib/sysusers.d, and
+          /usr/include/flatpak, /usr/lib/sysusers.d, og
           /usr/share/flatpak/triggers
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -220,7 +219,7 @@ ninja</userinput></screen>
         <term><command>desktop-database.trigger</command></term>
         <listitem>
           <para>
-            is a trigger that updates a flatpak's application cache
+            er en utløser som oppdaterer en flatpaks applikasjonsbuffer
           </para>
           <indexterm zone="flatpak desktop-database.trigger">
             <primary sortas="b-desktop-database.trigger">desktop-database.trigger</primary>
@@ -232,7 +231,7 @@ ninja</userinput></screen>
         <term><command>flatpak</command></term>
         <listitem>
           <para>
-            can run containerized and sandboxed applications
+            kan kjøre containeriserte og sandkassebaserte applikasjoner
           </para>
           <indexterm zone="flatpak flatpak-bin">
             <primary sortas="b-flatpak-bin">flatpak</primary>
@@ -244,7 +243,7 @@ ninja</userinput></screen>
         <term><command>flatpak-bisect</command></term>
         <listitem>
           <para>
-            can do a git-style bisect of a flatpak application
+            kan gjøre en git-stil halvering av et flatpak program
           </para>
           <indexterm zone="flatpak flatpak-bisect">
             <primary sortas="b-flatpak-bisect">flatpak-bisect</primary>
@@ -256,8 +255,8 @@ ninja</userinput></screen>
         <term><command>flatpak-bwrap</command></term>
         <listitem>
           <para>
-            is used by <command>flatpak</command> to utilize
-            Bubblewrap features
+            brukes av <command>flatpak</command> for å bruke 
+            Bubblewrap funksjoner
           </para>
           <indexterm zone="flatpak flatpak-bwrap">
             <primary sortas="b-flatpak-bwrap">flatpak-bwrap</primary>
@@ -269,8 +268,8 @@ ninja</userinput></screen>
         <term><command>flatpak-coredumpctl</command></term>
         <listitem>
           <para>
-            can debug an application in gdb that
-            crashed inside <command>flatpak</command>.
+            kan feilsøke et program i gdb som krasjet 
+            i <command>flatpak</command>.
           </para>
           <indexterm zone="flatpak flatpak-coredumpctl">
             <primary sortas="b-flatpak-coredumpctl">flatpak-coredumpctl</primary>
@@ -282,8 +281,8 @@ ninja</userinput></screen>
         <term><command>flatpak-dbus-proxy</command></term>
         <listitem>
           <para>
-            is used by <command>flatpak</command> to utilize
-            xdg-dbus-proxy features
+            brukes av <command>flatpak</command> for å bruke
+            xdg-dbus-proxy funksjoner
           </para>
           <indexterm zone="flatpak flatpak-dbus-proxy">
             <primary sortas="b-flatpak-dbus-proxy">flatpak-dbus-proxy</primary>
@@ -295,7 +294,7 @@ ninja</userinput></screen>
         <term><command>flatpak-oci-authenticator</command></term>
         <listitem>
           <para>
-            is used by <command>flatpak</command> to athenticate with the
+            brukes av <command>flatpak</command> for å autentisere med
             Oracle OCI SDK
           </para>
           <indexterm zone="flatpak flatpak-oci-authenticator">
@@ -308,7 +307,7 @@ ninja</userinput></screen>
         <term><command>flatpak-portal</command></term>
         <listitem>
           <para>
-            is used by <command>flatpak</command> to access the
+            brukes av <command>flatpak</command> for å få tilgang til
             xdg-desktop-portal
           </para>
           <indexterm zone="flatpak flatpak-portal">
@@ -321,8 +320,8 @@ ninja</userinput></screen>
         <term><command>flatpak-session-helper</command></term>
         <listitem>
           <para>
-            is used by <command>flatpak</command> to help with session
-            management
+            brukes av <command>flatpak</command> for å hjelpe med 
+            øktadministrasjon
           </para>
           <indexterm zone="flatpak flatpak-session-helper">
             <primary sortas="b-flatpak-session-helper">flatpak-session-helper</primary>
@@ -334,8 +333,8 @@ ninja</userinput></screen>
         <term><command>flatpak-system-helper</command></term>
         <listitem>
           <para>
-            is used by <command>flatpak</command> to help with the
-            flatpak system.
+            brukes av <command>flatpak</command> for å hjelpe med
+            flatpak systemet.
           </para>
           <indexterm zone="flatpak flatpak-system-helper">
             <primary sortas="b-flatpak-system-helper">flatpak-system-helper</primary>
@@ -347,7 +346,7 @@ ninja</userinput></screen>
         <term><command>flatpak-validate-icon</command></term>
         <listitem>
           <para>
-            is used by <command>flatpak</command> to validate icons
+            brukes av <command>flatpak</command> for å validere ikoner
           </para>
           <indexterm zone="flatpak flatpak-validate-icon">
             <primary sortas="b-flatpak-validate-icon">flatpak-validate-icon</primary>
@@ -359,7 +358,7 @@ ninja</userinput></screen>
         <term><command>gtk-icon-cache.trigger</command></term>
         <listitem>
           <para>
-            is a trigger that updates a flatpak's GTK icon cache
+            er en utløser som oppdaterer en flatpaks GTK ikonbuffer
           </para>
           <indexterm zone="flatpak gtk-icon-cache.trigger">
             <primary sortas="b-gtk-icon-cache.trigger">gtk-icon-cache.trigger</primary>
@@ -371,7 +370,7 @@ ninja</userinput></screen>
         <term><command>mime-database.trigger</command></term>
         <listitem>
           <para>
-            is a trigger that updates a flatpak's MIME database cache
+            er en utløser som oppdaterer en flatpaks MIME databasebuffer
           </para>
           <indexterm zone="flatpak mime-database.trigger">
             <primary sortas="b-mime-database.trigger">mime-database.trigger</primary>
@@ -383,7 +382,7 @@ ninja</userinput></screen>
         <term><command>revokefs-fuse</command></term>
         <listitem>
           <para>
-            makes a basepath visible at a given mountpoint
+            gjør en basesti synlig ved et gitt monteringspunkt
           </para>
           <indexterm zone="flatpak revokefs-fuse">
             <primary sortas="b-revokefs-fuse">revokefs-fuse</primary>
@@ -395,8 +394,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libflatpak</filename></term>
         <listitem>
           <para>
-            contains functions used by the Flatpak
-            utilities
+            inneholder funksjoner som brukes av Flatpak 
+            verktøyene
           </para>
           <indexterm zone="flatpak libflatpak">
             <primary sortas="c-libflatpak">libflatpak</primary>
