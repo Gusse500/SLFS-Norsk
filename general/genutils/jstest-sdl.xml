@@ -18,25 +18,25 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to jstest-sdl</title>
+    <title>Introduksjon til jstest-sdl</title>
 
     <para>
-      The jstest-sdl package provides a program for
-      testing gamepad/joystick inputs, which can help with mapping controllers
-      manually as described in <xref linkend="m64plus-components"/>.
+      Pakken jstest-sdl tilbyr et program for testing av gamepad/joystick 
+      innganger, som kan hjelpe med å tilordne kontrollere manuelt som 
+      beskrevet i <xref linkend="m64plus-components"/>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&jstest-sdl-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&jstest-sdl-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">jstest-sdl Dependencies</bridgehead>
+    <bridgehead renderas="sect3">jstest-sdl Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
     </para>
@@ -44,18 +44,18 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of jstest-sdl</title>
+    <title>Installasjon av jstest-sdl</title>
 
     <para>
-      Install jstest-sdl by running the following
-      commands:
+      Installer jstest-sdl ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>sed -i 's/\-ltinfo//g' Makefile &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -m755 jstest-sdl /usr/bin/</userinput></screen>
@@ -63,39 +63,39 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>sed -i 's/\-ltinfo//g' Makefile</command>: This command avoids
-      linking against an Ncurses library that wasn't
-      built in LFS.
+      <command>sed -i 's/\-ltinfo//g' Makefile</command>: Denne kommandoen 
+      unngår kobling mot et Ncurses bibliotek som ikke var 
+      bygget i LFS.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           jstest-sdl
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -103,7 +103,7 @@ make</userinput></screen>
         <term><command>jstest-sdl</command></term>
         <listitem>
           <para>
-            shows inputs given to a gamepad/joystick
+            viser inndata gitt til en gamepad/joystick
           </para>
           <indexterm zone="jstest-sdl jstest-sdl-bin">
             <primary sortas="b-jstest-sdl-bin">jstest-sdl</primary>
