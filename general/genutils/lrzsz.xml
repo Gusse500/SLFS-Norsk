@@ -20,86 +20,86 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to lrzsz</title>
+    <title>Introduksjon til lrzsz</title>
 
     <para>
-      The lrzsz package is for UNIX communication,
-      providing the XMODEM, YMODEM, and ZMODEM file transfer protocols.
+      lrzsz pakken er for UNIX kommunikasjon, 
+      og tilbyr filoverføringsprotokollene XMODEM, YMODEM og ZMODEM.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&lrzsz-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&lrzsz-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
    
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-AR.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-automake-1.12.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-automake-1.13.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-c23.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-c99.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-configure-clang16.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-fix-integer-overflow.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-gettext-0.20.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-&lrzsz-version;-gettext-0.22.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-autotools.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&lrzsz-gentoo-patch-root;/lrzsz-implicit-decl.patch"/>
         </para>
       </listitem>
@@ -108,11 +108,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of lrzsz</title>
+    <title>Installasjon av lrzsz</title>
 
     <para>
-      Apply several patches to fix various configuration, build, and security
-      issues:
+      Installer flere oppdateringer for å fikse diverse konfigurasjons, bygge 
+      og sikkerhetsproblemer:
     </para>
 
 <screen><userinput>patch -Np1 -i ../lrzsz-autotools.patch &amp;&amp;
@@ -128,7 +128,7 @@ patch -Np1 -i ../lrzsz-&lrzsz-version;-fix-integer-overflow.patch &amp;&amp;
 patch -Np1 -i ../lrzsz-&lrzsz-version;-c23.patch</userinput></screen>
 
     <para>
-      Add and remove files, then regenerate the autoconf files:
+      Legg til og fjern filer, og generer deretter autoconf filene:
     </para>
 
 <screen><userinput>touch config.rpath &amp;&amp;
@@ -137,15 +137,15 @@ rm -vf acconfig.h &amp;&amp;
 autoreconf -fiv -I/usr/share/gettext/m4</userinput></screen>
 
     <para>
-      Install lrzsz by executing the following
-      commands:
+      Installer lrzsz ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr --disable-nls &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install &amp;&amp;
@@ -159,68 +159,68 @@ done</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>touch config.rpath</command>: This command creates an empty file
-      that <command>automake</command> wishes to use, but is missing
-      from the distribution.
+      <command>touch config.rpath</command>: Denne kommandoen oppretter en tom 
+      fil som <command>automake</command> ønsker å bruke, men mangler i 
+      distribusjonen.
     </para>
 
     <para>
-      <command>rm -vf missing</command>: This command deletes the
-      <filename>missing</filename> file as it is too old to be used.
-      <command>automake</command>, when executing
-      <command>autoreconf</command>, will regenerate this file that will be
-      current.
+      <command>rm -vf missing</command>: Denne kommandoen sletter
+      <filename>missing</filename> filen, siden den er for gammel til å brukes.
+      <command>automake</command>, når du utfører
+      <command>autoreconf</command>, vil generere denne filen som vil være 
+      gjeldende.
     </para>
 
     <para>
-      <command>rm -vf acconfig.h</command>: <command>autoheader</command> does
-      not like the <filename>acconfig.h</filename> file existing, so this
-      command deletes it.
+      <command>rm -vf acconfig.h</command>: <command>autoheader</command> liker 
+      ikke <filename>acconfig.h</filename> filen som finnes, 
+      så denne kommandoen sletter den.
     </para>
 
     <para>
-      <parameter>--disable-nls</parameter>: This parameter disables NLS support
-      as it is broken for this package due to missing files.
+      <parameter>--disable-nls</parameter>: Denne parameteren deaktiverer NLS støtte 
+      ettersom den ikke fungerer for denne pakken på grunn av manglende filer.
     </para>
 
     <para>
-      <command>for i in {r,s}{b,x,z} ; do...</command>: This command block
-      creates compatibility symlinks for the original
-      rzsz package, which is required for
+      <command>for i in {r,s}{b,x,z} ; do...</command>: Denne kommandoblokken 
+      oppretter kompatibilitetssymbolske lenker for den originale rzsz pakken, 
+      som er nødvendig for
       <xref linkend="minicom"/>.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          lrb (link to lrz), lrx (link to lrz), lrz, lsb (link to lsz), lsx
-          (link to lsz), lsz, rb (link to lrb), rx (link to lrx), rz (link
-          to lrz), sb (link to lsb), sx (link to lsx), and sz (link to
+          lrb (lenke til lrz), lrx (lenke til lrz), lrz, lsb (lenke til lsz), lsx
+          (lenke til lsz), lsz, rb (lenke til lrb), rx (lenke til lrx), rz (lenke 
+          til lrz), sb (lenke til lsb), sx (lenke til lsx), and sz (lenke til
           lsz)
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -228,7 +228,7 @@ done</userinput></screen>
         <term><command>lrb</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lrz</command>
+            er en symbolsk lenke som peker til <command>lrz</command>
           </para>
           <indexterm zone="lrzsz lrb">
             <primary sortas="b-lrb">lrb</primary>
@@ -240,7 +240,7 @@ done</userinput></screen>
         <term><command>lrx</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lrz</command>
+            er en symbolsk lenke som peker til <command>lrz</command>
           </para>
           <indexterm zone="lrzsz lrx">
             <primary sortas="b-lrx">lrx</primary>
@@ -252,7 +252,7 @@ done</userinput></screen>
         <term><command>lrz</command></term>
         <listitem>
           <para>
-            receives files using the XMODEM/YMODEM/ZMODEM protocols
+            mottar filer ved hjelp av XMODEM/YMODEM/ZMODEM protokoller
           </para>
           <indexterm zone="lrzsz lrz">
             <primary sortas="b-lrz">lrz</primary>
@@ -264,7 +264,7 @@ done</userinput></screen>
         <term><command>lsb</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lsz</command>
+            er en symbolsk lenke som peker til <command>lsz</command>
           </para>
           <indexterm zone="lrzsz lsb">
             <primary sortas="b-lsb">lsb</primary>
@@ -276,7 +276,7 @@ done</userinput></screen>
         <term><command>lsx</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lsz</command>
+            er en symbolsk lenke som peker til <command>lsz</command>
           </para>
           <indexterm zone="lrzsz lsx">
             <primary sortas="b-lsx">lsx</primary>
@@ -288,7 +288,7 @@ done</userinput></screen>
         <term><command>lsz</command></term>
         <listitem>
           <para>
-            sends files using the XMODEM/YMODEM/ZMODEM protocols
+            mottar filer ved hjelp av XMODEM/YMODEM/ZMODEM protokoller
           </para>
           <indexterm zone="lrzsz lsz">
             <primary sortas="b-lsz">lsz</primary>
@@ -300,7 +300,7 @@ done</userinput></screen>
         <term><command>rb</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lrb</command>
+            er en symbolsk lenke som peker til <command>lrb</command>
           </para>
           <indexterm zone="lrzsz rb">
             <primary sortas="b-rb">rb</primary>
@@ -312,7 +312,7 @@ done</userinput></screen>
         <term><command>rx</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lrx</command>
+            er en symbolsk lenke som peker til <command>lrx</command>
           </para>
           <indexterm zone="lrzsz rx">
             <primary sortas="b-rx">rx</primary>
@@ -324,7 +324,7 @@ done</userinput></screen>
         <term><command>rz</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lrz</command>
+            er en symbolsk lenke som peker til <command>lrz</command>
           </para>
           <indexterm zone="lrzsz rz">
             <primary sortas="b-rz">rz</primary>
@@ -336,7 +336,7 @@ done</userinput></screen>
         <term><command>sb</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lsb</command>
+            er en symbolsk lenke som peker til <command>lsb</command>
           </para>
           <indexterm zone="lrzsz sb">
             <primary sortas="b-sb">sb</primary>
@@ -348,7 +348,7 @@ done</userinput></screen>
         <term><command>sx</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lsx</command>
+            er en symbolsk lenke som peker til <command>lsx</command>
           </para>
           <indexterm zone="lrzsz sx">
             <primary sortas="b-sx">sx</primary>
@@ -360,7 +360,7 @@ done</userinput></screen>
         <term><command>sz</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>lsz</command>
+            er en symbolsk lenke som peker til <command>lsz</command>
           </para>
           <indexterm zone="lrzsz sz">
             <primary sortas="b-sz">sz</primary>
