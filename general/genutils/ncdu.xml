@@ -17,16 +17,16 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to ncdu</title>
+    <title>Introduksjon til ncdu</title>
 
     <para>
-      The ncdu package provides a lightweight ncurses-based disk space analyzer.
+      ncdu pakken tilbyr en lett ncurses basert diskplassanalysator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ncdu-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&ncdu-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -34,17 +34,17 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of ncdu</title>
+    <title>Installasjon av ncdu</title>
 
     <para>
-      Install ncdu by executing the following commands:
+      Installer ncdu ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -52,28 +52,28 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           ncdu
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -81,7 +81,7 @@ make</userinput></screen>
         <term><command>ncdu</command></term>
         <listitem>
           <para>
-            is a disk space analyzer
+            er en diskplassanalysator
           </para>
           <indexterm zone="ncdu ncdu-bin">
             <primary sortas="b-ncdu">ncdu</primary>
