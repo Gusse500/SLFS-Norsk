@@ -17,16 +17,16 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to ncompress</title>
+    <title>Introduksjon til ncompress</title>
 
     <para>
-      The ncompress package provides a SVR4-compatible implementation of <command>compress</command>.
+      Pakken ncompress tilbyr en SVR4 kompatibel implementering av <command>compress</command>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ncompress-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&ncompress-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -34,17 +34,17 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of ncompress</title>
+    <title>Installasjon av ncompress</title>
 
     <para>
-      Install ncompress by executing the following
-      commands:
+      Installer ncompress ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>CFLAGS+=" -std=gnu17" make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make PREFIX=/usr install_core</userinput></screen>
@@ -52,28 +52,28 @@
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          compress and uncompress
+          compress og uncompress
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -81,7 +81,7 @@
         <term><command>compress</command></term>
         <listitem>
           <para>
-            compresses files using the LZ coding
+            komprimerer filer ved hjelp av LZ koding
           </para>
           <indexterm zone="ncompress compress">
             <primary sortas="b-compress">compress</primary>
@@ -93,7 +93,7 @@
         <term><command>uncompress</command></term>
         <listitem>
           <para>
-            uncompresses files using the LZ coding
+            pakker ut filer ved hjelp av LZ koding
           </para>
           <indexterm zone="ncompress uncompress">
             <primary sortas="b-uncompress">uncompress</primary>
