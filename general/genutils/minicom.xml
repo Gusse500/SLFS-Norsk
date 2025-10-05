@@ -18,29 +18,29 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to minicom</title>
+    <title>Introduksjon til minicom</title>
 
     <para>
-      The minicom package provides a serial
-      communication program.
+      Minicom pakken tilbyr et seriellt 
+      kommunikasjonsprogram.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&minicom-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&minicom-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">minicom Dependencies</bridgehead>
+    <bridgehead renderas="sect3">minicom Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <xref linkend="lrzsz"/>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="https://github.com/KermitProject/ckermit">C-Kermit</ulink>
     </para>
@@ -48,18 +48,18 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of minicom</title>
+    <title>Installasjon av minicom</title>
 
     <para>
-      Install minicom by running the following
-      commands:
+      Installer minicom ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -67,28 +67,28 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          ascii-xfr, minicom, runscript, and xminicom
+          ascii-xfr, minicom, runscript, og xminicom
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -96,7 +96,7 @@ make</userinput></screen>
         <term><command>ascii-xfr</command></term>
         <listitem>
           <para>
-            transfers files using the ASCII character set
+            overfører filer ved hjelp av ASCII tegnsettet
           </para>
           <indexterm zone="minicom ascii-xfr">
             <primary sortas="b-ascii-xfr">ascii-xfr</primary>
@@ -108,7 +108,7 @@ make</userinput></screen>
         <term><command>minicom</command></term>
         <listitem>
           <para>
-            is the serial communication program
+            er det serielle kommunikasjonsprogrammet
           </para>
           <indexterm zone="minicom minicom-bin">
             <primary sortas="b-minicom-bin">minicom</primary>
@@ -120,7 +120,7 @@ make</userinput></screen>
         <term><command>runscript</command></term>
         <listitem>
           <para>
-            is a script interpreter for <command>minicom</command>
+            er en skripttolk for <command>minicom</command>
           </para>
           <indexterm zone="minicom runscript">
             <primary sortas="b-runscript">runscript</primary>
@@ -132,9 +132,9 @@ make</userinput></screen>
         <term><command>xminicom</command></term>
         <listitem>
           <para>
-            is a script wrapper around <command>minicom</command>
-            which runs <command>minicom</command> with color support
-            if a compatible X11 terminal emulator is present
+            er en skriptinnpakning rundt <command>minicom</command>
+            som kjører <command>minicom</command> med fargestøtte hvis en 
+            kompatibel X11 terminalemulator er tilgjengelig
           </para>
           <indexterm zone="minicom xminicom">
             <primary sortas="b-xminicom">xminicom</primary>
