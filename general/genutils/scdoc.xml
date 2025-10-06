@@ -17,17 +17,17 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to scdoc</title>
+    <title>Introduksjon til scdoc</title>
 
     <para>
-      The scdoc package provides a man page
+      scdoc pakken tilbyr en manualside 
       generator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&scdoc-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&scdoc-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -35,17 +35,17 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of scdoc</title>
+    <title>Installasjon av scdoc</title>
 
     <para>
-      Install scdoc by executing the following
-      commands:
+      Installer scdoc ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make PREFIX=/usr LDFLAGS="$LDFLAGS"</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
@@ -53,39 +53,39 @@
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <envar>LDFLAGS="$LDFLAGS"</envar>: This ensures that if
-      <envar>$LDFLAGS</envar> is set, that the build system respects it.
-      Otherwise, it will unset the variable for the build process.
+      <envar>LDFLAGS="$LDFLAGS"</envar>: Dette sikrer at hvis
+      <envar>$LDFLAGS</envar> er satt, at byggesystemet respekterer det. 
+      Ellers vil det fjerne variabelen for byggeprosessen.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           scdoc
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -93,7 +93,7 @@
         <term><command>scdoc</command></term>
         <listitem>
           <para>
-            generates man pages
+            genererer manualsider
           </para>
           <indexterm zone="scdoc scdoc-bin">
             <primary sortas="b-scdoc-bin">scdoc</primary>
