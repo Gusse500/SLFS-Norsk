@@ -17,16 +17,16 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to rpmextract</title>
+    <title>Introduksjon til rpmextract</title>
 
     <para>
-      The rpmextract package provides tools for
-      extracting <filename class="extension">.rpm</filename> files.
+      rpmextract pakken tilbyr verktøy for 
+      utpakking av <filename class="extension">.rpm</filename> filer.
     </para>
 
-    <bridgehead renderas="sect3">rpmextract Dependencies</bridgehead>
+    <bridgehead renderas="sect3">rpmextract Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/libarchive.html">libarchive</ulink>
     </para>
@@ -34,12 +34,12 @@
   </sect2>
 
   <sect2>
-    <title>Downloading rpmextract</title>
+    <title>Laste ned rpmextract</title>
 
     <para>
-      To download the rpmextract files with <ulink
-      url="&blfs-svn;/basicnet/wget.html">wget</ulink>, run the following
-      instructions:
+      For å laste ned rpmextract filene med <ulink
+      url="&blfs-svn;/basicnet/wget.html">wget</ulink>, kjør følgende 
+      instruksjoner:
     </para>
 
 <screen><userinput>mkdir rmpextract-&rpmextract-version; &amp;&amp;
@@ -52,11 +52,11 @@ done</userinput></screen>
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of rpmextract</title>
+    <title>Installasjon av rpmextract</title>
 
     <para>
-      Install rpmextract by executing the following
-      commands as the &root; user:
+      Installer rpmextract ved å kjøre følgende 
+      kommandoer som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -vm755 rpm2cpio rpmextract.sh /usr/bin &amp;&amp;
@@ -65,30 +65,30 @@ ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           rpm2cpio,
-          rpmextract (link to rpmextract.sh), and
+          rpmextract (lenker til rpmextract.sh), og
           rpmextract.sh
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -96,7 +96,7 @@ ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
         <term><command>rpm2cpio</command></term>
         <listitem>
           <para>
-            converts an RPM file to a CPIO archive
+            konverterer en RPM fil til et CPIO arkiv
           </para>
           <indexterm zone="rpmextract rpm2cpio">
             <primary sortas="b-rpm2cpio">rpm2cpio</primary>
@@ -108,7 +108,7 @@ ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
         <term><command>rpmextract</command></term>
         <listitem>
           <para>
-            symlink pointing to <command>rpmextract.sh</command>
+            symbolsk lenke som peker til <command>rpmextract.sh</command>
           </para>
           <indexterm zone="rpmextract rpmextract-bin">
             <primary sortas="b-rpmextract-bin">rpmextract</primary>
@@ -120,7 +120,7 @@ ln -sfv rpmextract.sh /usr/bin/rpmextract</userinput></screen>
         <term><command>rpmextract.sh</command></term>
         <listitem>
           <para>
-            extracts RPM files
+            pakker ut RPM filer
           </para>
           <indexterm zone="rpmextract rpmextract-sh">
             <primary sortas="b-rpmextract-sh">rpmextract.sh</primary>
