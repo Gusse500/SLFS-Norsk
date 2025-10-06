@@ -18,54 +18,54 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to OSTree</title>
+    <title>Introduksjon til OSTree</title>
 
     <para>
-      The OSTree package is for container deployment and the like. It is
-      required by <xref linkend="flatpak"/>.
+      OSTreepakken er for containerdistribusjon og lignende. 
+      Den er påkrevd av <xref linkend="flatpak"/>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ostree-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&ostree-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">OSTree Dependencies</bridgehead>
+    <bridgehead renderas="sect3">OSTree Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink> and
+      <ulink url="&blfs-svn;/postlfs/fuse.html">Fuse3</ulink> og
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> and
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> og
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>
-      (required for Flatpak),
+      (påkrevd for Flatpak),
       <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
-      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>, and
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>, og
       &logind-nocomma;
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <xref linkend="fuse2"/>,
       <ulink url="https://linuxfromscratch.org/blfs/view/12.3/basicnet/libsoup.html">libsoup</ulink>,
-      and <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>
+      og <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of OSTree</title>
+    <title>Installasjon av OSTree</title>
 
     <para>
-      Install OSTree by running the following
-      commands:
+      Installer OSTree ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr     \
@@ -76,7 +76,7 @@
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -84,30 +84,30 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          ostree, ostree-prepare-root, ostree-remount, and rofiles-fuse
+          ostree, ostree-prepare-root, ostree-remount, og rofiles-fuse
         </seg>
         <seg>
           libostree-1
         </seg>
         <seg>
           /etc/ostree/remotes.d, /usr/include/ostree-1, /usr/lib/ostree,
-          /usr/lib/tmpfiles.d, /usr/libexec/libostee, and
+          /usr/lib/tmpfiles.d, /usr/libexec/libostee, og
           /usr/share/ostree/trusted.gpg.d
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -115,7 +115,7 @@ make</userinput></screen>
         <term><command>ostree</command></term>
         <listitem>
           <para>
-            manages filesystem trees
+            administrerer filsystemtrær
           </para>
           <indexterm zone="ostree ostree-bin">
             <primary sortas="b-ostree-bin">ostree</primary>
@@ -127,8 +127,8 @@ make</userinput></screen>
         <term><command>ostree-prepare-root</command></term>
         <listitem>
           <para>
-            changes the view of a mounted root filesystem to an
-            ostree deployment
+            endrer visningen av et montert rotfilsystem til en 
+            ostree distribusjon
           </para>
           <indexterm zone="ostree ostree-prepare-root">
             <primary sortas="b-ostree-prepare-root">ostree-prepare-root</primary>
@@ -140,7 +140,7 @@ make</userinput></screen>
         <term><command>ostree-remount</command></term>
         <listitem>
           <para>
-            prepares the root for a filesystem
+            forbereder roten for et filsystem
           </para>
           <indexterm zone="ostree ostree-remount">
             <primary sortas="b-ostree-remount">ostree-remount</primary>
@@ -152,8 +152,8 @@ make</userinput></screen>
         <term><command>rofiles-fuse</command></term>
         <listitem>
           <para>
-            uses Fuse to create a view where
-            directories and files are immutable
+            bruker Fuse til å lage en visning der 
+            mapper og filer er uforanderlige
           </para>
           <indexterm zone="ostree rofiles-fuse">
             <primary sortas="b-rofiles-fuse">rofiles-fuse</primary>
@@ -165,7 +165,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libostree-1</filename></term>
         <listitem>
           <para>
-            contains functions for managing filesystem trees
+            inneholder funksjoner for å administrere filsystemtrær
           </para>
           <indexterm zone="ostree libostree-1">
             <primary sortas="c-libostree-1">libostree-1</primary>
