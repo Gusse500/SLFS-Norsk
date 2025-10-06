@@ -18,37 +18,37 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to yt-dlp</title>
+    <title>Introduksjon til yt-dlp</title>
 
     <para>
-      The yt-dlp package provides a program that can
-      download YouTube videos from their servers and convert a given downloaded
-      video into another format.
+      yt-dlp pakken tilbyr et program som kan laste ned YouTube 
+      videoer fra deres servere og konvertere en gitt nedlastet 
+      video til et annet format.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&yt-dlp-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&yt-dlp-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">yt-dlp Dependencies</bridgehead>
+    <bridgehead renderas="sect3">yt-dlp Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/zip.html">Zip</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
-      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>, og
       <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/python-modules.html#requests">requests</ulink>
     </para>
@@ -56,17 +56,17 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of yt-dlp</title>
+    <title>Installasjon av yt-dlp</title>
 
     <para>
-      Install yt-dlp by running the following
-      commands:
+      Installer yt-dlp ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make yt-dlp</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -vDm755 yt-dlp -t /usr/bin/</userinput></screen>
@@ -74,28 +74,28 @@
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           yt-dlp
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -103,7 +103,7 @@
         <term><command>yt-dlp</command></term>
         <listitem>
          <para>
-           downloads and converts YouTube videos
+           laster ned og konverterer YouTube videoer
          </para>
           <indexterm zone="yt-dlp yt-dlp-bin">
             <primary sortas="b-yt-dlp-bin">yt-dlp</primary>
