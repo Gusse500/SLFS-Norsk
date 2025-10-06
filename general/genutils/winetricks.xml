@@ -19,57 +19,57 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Winetricks</title>
+    <title>Introduksjon til Winetricks</title>
 
     <para>
-      Winetricks is a shell script that can fix various issues with <ulink
-      url="&glfs-website;/wine/wine.html">Wine</ulink>. Most often, these
-      issues arise from files being missing that some applications may expect,
-      such as font files. This package can download those files, and extract
-      them if needed.
+      Winetricks er et skallskript som kan fikse diverse problemer med <ulink
+      url="&glfs-website;/wine/wine.html">Wine</ulink>. Oftest oppstår disse 
+      problemene på grunn av manglende filer som noen applikasjoner forventer, 
+      for eksempel skriftfiler. Denne pakken kan laste ned disse filene og 
+      pakke dem ut om nødvendig.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download: <ulink url="&winetricks-download;"/>
+          Nedlasting: <ulink url="&winetricks-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Winetricks Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Winetricks Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> or
-      <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink> and
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> eller
+      <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink> og
       <ulink url="&glfs-website;/wine/wine.html">Wine</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/7zip.html">7zip</ulink>,
       &unzip;,
       <xref linkend="libmspack"/>,
-      <ulink url="&blfs-svn;/general/unrar.html">UnRar</ulink>, and
+      <ulink url="&blfs-svn;/general/unrar.html">UnRar</ulink>, og
       <ulink url="&blfs-svn;/xsoft/xdg-utils.html">xdg-utils</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&arch-pkgs;/extra/x86_64/kdialog">kdialog</ulink> (for KDE)
-      or
+      eller
       <ulink url="&arch-pkgs;/extra/x86_64/zenity">zentiy</ulink> (for GNOME);
-      this package uses either to provide a GUI interface but is optional
+      Denne pakken bruker en av dem for å tilby et grafisk grensesnitt, men er valgfritt
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Winetricks</title>
+    <title>Installasjon av Winetricks</title>
 
     <para>
-      Install Winetricks as the &root; user:
+      Installer Winetricks som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -77,28 +77,28 @@
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           winetricks
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -106,7 +106,7 @@
         <term><command>winetricks</command></term>
         <listitem>
          <para>
-           installs various files some Windows applications expect
+           installerer diverse filer som noen Windows programmer forventer
          </para>
           <indexterm zone="winetricks winetricks-bin">
             <primary sortas="b-winetricks-bin">winetricks</primary>
