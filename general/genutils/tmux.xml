@@ -17,30 +17,30 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to tmux</title>
+    <title>Introduksjon til tmux</title>
 
     <para>
-      The tmux package provides a terminal
-      multiplexer and an alternative to <ulink
+      tmux pakken tilbyr en terminalmultiplekser 
+      og et alternativ til <ulink
       url="&blfs-svn;/general/screen.html">Screen</ulink>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&tmux-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&tmux-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">tmux Dependencies</bridgehead>
+    <bridgehead renderas="sect3">tmux Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/basicnet/libevent.html">libevent</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <xref linkend="libutempter"/>
     </para>
@@ -48,18 +48,18 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of tmux</title>
+    <title>Installasjon av tmux</title>
 
     <para>
-      Install tmux by running the following
-      commands:
+      Installer tmux ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -67,38 +67,38 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <option>--enable-utempter</option>: If you installed <xref
-      linkend="libutempter"/>, use this option to be able to update utmp.
+      <option>--enable-utempter</option>: Hvis du installerte <xref
+      linkend="libutempter"/>, Bruk dette alternativet for å kunne oppdatere utmp.
     </para>
 
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           tmux
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -106,7 +106,7 @@ make</userinput></screen>
         <term><command>tmux</command></term>
         <listitem>
          <para>
-           is a terminal multiplexer
+           er en terminalmultiplekser
          </para>
           <indexterm zone="tmux tmux-bin">
             <primary sortas="b-tmux-bin">tmux</primary>
