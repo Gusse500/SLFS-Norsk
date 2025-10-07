@@ -17,13 +17,13 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to intel-onevpl</title>
+    <title>Introduksjon til intel-onevpl</title>
 
     <para>
-      The intel-onevpl package contains a set of libraries that provide
-      support for video acceleration for encoding and decoding tasks on modern
-      Intel GPUs. This includes every GPU built into the Tiger Lake (11th
-      Generation) CPUs and later, as well as the Arc and Iris Xe GPUs.
+      Intel-onevpl pakken inneholder et sett med biblioteker som gir støtte for 
+      videoakselerasjon for kodings og dekodings oppgaver på moderne Intel 
+      GPU-er. Dette inkluderer alle GPU-er som er innebygd i Tiger Lake (11. 
+      generasjon) CPU-er og senere, samt Arc og Iris Xe GPU-er.
     </para>
 
     &long-build-time;
@@ -31,32 +31,32 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&intel-onevpl-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&intel-onevpl-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">intel-onevpl Dependencies</bridgehead>
+    <bridgehead renderas="sect3">intel-onevpl Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/general/gmmlib.html">gmmlib</ulink>,
       <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
-      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>, and
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>, og
       <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>
     </para>
 
     <para>
-      This package extracts to vpl-gpu-rt-intel-onevpl-&intel-onevpl-version;.
+      Denne pakken pakker ut til vpl-gpu-rt-intel-onevpl-&intel-onevpl-version;.
     </para>
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of intel-onevpl</title>
+    <title>Installasjon av intel-onevpl</title>
         
     <para>
-      Install intel-onevpl by running the following commands:
+      Installer intel-onevpl ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -71,11 +71,11 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      This package does not come with a working test suite.
+      Denne pakken leveres ikke med en fungerende testpakke.
     </para>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -83,16 +83,16 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D BUILD_TESTS=OFF</parameter>: This parameter disables the
-      tests as they are broken and require several external dependencies.
+      <parameter>-D BUILD_TESTS=OFF</parameter>: Denne parameteren deaktiverer 
+      testene ettersom de er ødelagte og krever flere eksterne avhengigheter.
     </para>
 
     <para>
-      <parameter>-D MFX_ENABLE_AENC=ON</parameter>: This parameter enables the
-      AENC extension.
+      <parameter>-D MFX_ENABLE_AENC=ON</parameter>: Denne parameteren aktiverer 
+      AENC utvidelsen.
     </para>
 
     &options-cmake;
@@ -100,17 +100,17 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libmfx-gen
@@ -122,7 +122,7 @@ make</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -130,8 +130,8 @@ make</userinput></screen>
         <term><filename class="libraryfile">libmfx-gen</filename></term>
         <listitem>
           <para>
-            provides support for GPU accelerated video encoding and decoding
-            on Intel GPUs from the Tiger Lake CPU generation and later
+            støtter GPU akselerert videokoding og -dekoding på Intel GPU-er fra 
+            Tiger Lake CPU generasjonen og senere
           </para>
           <indexterm zone="intel-onevpl libmfx-gen">
             <primary sortas="c-libmfx-gen">libmfx-gen</primary>
