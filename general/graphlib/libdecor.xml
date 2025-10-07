@@ -18,51 +18,51 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libdecor</title>
+    <title>Introduksjon til libdecor</title>
 
     <para>
-      The libdecor package provides a library that helps Wayland clients draw
-      client-side window decorations.
+      libdecor pakken inneholder et bibliotek som hjelper Wayland klienter med 
+      å tegne vindusdekorasjoner på klientsiden.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libdecor-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libdecor-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libdecor Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libdecor Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/x/pango.html">Pango</ulink>
-      (with <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>),
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      (med <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>),
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/x/gtk3.html">GTK-3</ulink>,
-      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, and
-      &opengl; (with EGL)
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>, og
+      &opengl; (med EGL)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libdecor</title>
+    <title>Installasjon av libdecor</title>
 
     <para>
-      Install libdecor by running the following
-      commands:
+      Installer libdecor ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -77,7 +77,7 @@ meson setup --prefix=/usr       \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -85,45 +85,45 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D demo=false</parameter>: This parameter disables building
-      the demos. Remove it if you installed the optional dependencies.
+      <parameter>-D demo=false</parameter>: Denne parameteren deaktiverer 
+      bygging av demoer. Fjern den hvis du installerte de valgfrie avhengighetene.
     </para>
 
     <para>
-      <parameter>-D gtk=disabled</parameter>: This parameter disables building
-      the GTK-3 plugin. Remove it if you installed
+      <parameter>-D gtk=disabled</parameter>: Denne parameteren deaktiverer 
+      byggingen av GTK-3 programtillegget. Fjern den hvis du har installert den.
       <ulink url="&blfs-svn;/x/gtk3.html">GTK-3</ulink>.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libdecor
         </seg>
         <seg>
-          /usr/include/libdecor-0 and
+          /usr/include/libdecor-0 og
           /usr/lib/libdecor/plugins-1
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -131,8 +131,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libdecor</filename></term>
         <listitem>
           <para>
-            provides functions to help with client-side decorations for
-            Wayland clients
+            tilbyr funksjoner som hjelper med klientside dekorasjoner for 
+            Wayland klienter
           </para>
           <indexterm zone="libdecor libdecor-lib">
             <primary sortas="c-libdecor-lib">libdecor</primary>
