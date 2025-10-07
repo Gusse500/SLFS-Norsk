@@ -18,34 +18,34 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libliftoff</title>
+    <title>Introduksjon til libliftoff</title>
 
     <para>
-      The libliftoff package provides a library that handles KMS planes.
+      Pakken libliftoff tilbyr et bibliotek som håndterer KMS planer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libliftoff-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libliftoff-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libliftoff Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libliftoff Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>
     </para>
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libliftoff</title>
+    <title>Installasjon av libliftoff</title>
 
     <para>
-      Install libliftoff by running the following
-      commands:
+      Installer libliftoff ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -55,7 +55,7 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -63,28 +63,28 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libliftoff
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -92,7 +92,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libliftoff</filename></term>
         <listitem>
           <para>
-            provides functions that can work with KMS planes
+            tilbyr funksjoner som kan fungere med KMS planer
           </para>
           <indexterm zone="libliftoff libliftoff-lib">
             <primary sortas="c-libliftoff-lib">libliftoff</primary>
