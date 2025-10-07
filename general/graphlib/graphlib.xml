@@ -8,11 +8,11 @@
 <chapter id="general-graphlib">
   <?dbhtml filename="graphlib.html"?>
 
-  <title>Graphical Libraries</title>
+  <title>Grafiske biblioteker</title>
 
   <para>
-    This chapter covers graphical libraries that some packages that appear
-    later in this book may use.
+    Dette kapittelet dekker grafiske biblioteker som noen pakker som vises 
+    senere i denne boken kan bruke.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fcft.xml"/>
