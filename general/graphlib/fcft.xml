@@ -19,51 +19,51 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to fcft</title>
+    <title>Introduksjon til fcft</title>
 
     <para>
-      The fcft package provides a library for
-      loading fonts and rasterizing glyphs.
+      fcft pakken inneholder et bibliotek for lasting av 
+      fonter og rasterisering av glyffer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcft-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcft-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">fcft Dependencies</bridgehead>
+    <bridgehead renderas="sect3">fcft Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
-      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, and
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, og
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink> and
-      <xref linkend="tllist"/> (if not built, it will be downloaded)
+      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink> og
+      <xref linkend="tllist"/> (hvis den ikke er bygget, vil den bli lastet ned)
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="https://github.com/memononen/nanosvg">nanosvg</ulink>,
-      <xref linkend="scdoc"/>, and
+      <xref linkend="scdoc"/>, og
       <ulink url="&arch-pkgs;/extra/x86_64/utf8proc/">utf8proc</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of fcft</title>
+    <title>Installasjon av fcft</title>
 
     <para>
-      Install fcft by running the following
-      commands:
+      Installer fcft ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -73,14 +73,14 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      If you built scdoc, make the documentation
-      directory versioned as the &root; user:
+      Hvis du bygde scdoc, gjør dokumentasjonsmappen 
+      versjonert som &root; bruker:
     </para>
 
 <screen remap="doc"
@@ -89,28 +89,28 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libfcft
         </seg>
         <seg>
-          /usr/share/doc/fcft-3.3.1 and /usr/include/fcft
+          /usr/share/doc/fcft-3.3.1 og /usr/include/fcft
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -118,7 +118,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libfcft</filename></term>
         <listitem>
           <para>
-            contains functions for handling fonts and glyphs
+            inneholder funksjoner for håndtering av fonter og glyffer
           </para>
           <indexterm zone="fcft libfcft">
             <primary sortas="c-libfcft">libfcft</primary>
