@@ -17,16 +17,16 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Intel-MediaSDK</title>
+    <title>Introduksjon til Intel-MediaSDK</title>
 
     <para>
-      The Intel-MediaSDK package contains a set of libraries that provide
-      support for video acceleration for encoding and decoding tasks on legacy
-      Intel GPUs. This includes Intel iGPUs from the 5th Generation Core CPUs
-      (Broadwell) through the 11th Generation Core CPUs (Tiger Lake). This
-      package also provides a dispatcher library that is needed by applications
-      such as ffmpeg to properly enable support for GPU acceleration with Intel
-      GPUs.
+      Intel-MediaSDK pakken inneholder et sett med biblioteker som gir støtte 
+      for videoakselerasjon for kodings og dekodings oppgaver på eldre Intel 
+      GPU-er. Dette inkluderer Intel iGPU-er fra 5. generasjons Core CPU-er 
+      (Broadwell) til 11. generasjons Core CPU-er (Tiger Lake). Denne pakken 
+      inneholder også et koordinator-bibliotek som applikasjoner som ffmpeg 
+      trenger for å aktivere støtte for GPU akselerasjon med Intel GPU-er på 
+      riktig måte.
     </para>
 
     &long-build-time;
@@ -34,48 +34,48 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&intel-mediasdk-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&intel-mediasdk-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Intel-MediaSDK Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Intel-MediaSDK Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/general/gmmlib.html">gmmlib</ulink>,
       <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
-      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>, and
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>, og
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
     </para>
 
     <note><para>
-      This package extracts to MediaSDK-intel-mediasdk-&intel-mediasdk-version;.
+      Denne pakken pakker ut til MediaSDK-intel-mediasdk-&intel-mediasdk-version;.
     </para></note>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Intel-MediaSDK</title>
+    <title>Installasjon av Intel-MediaSDK</title>
 
     <para>
-      First, fix two build failures caused by GCC-15:
+      Først, fiks to byggefeil forårsaket av GCC-15:
     </para>
     
 <screen><userinput remap="pre">sed -i '/&lt;string.h&gt;/a #include &lt;cstdint&gt;' api/mfx_dispatch/linux/mfxparser.cpp &amp;&amp;
 sed -i '/&lt;math.h&gt;/a #include &lt;cstdint&gt;'   samples/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
         
     <para>
-      Install Intel-MediaSDK by running the following
-      commands:
+      Installer Intel-MediaSDK ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -96,11 +96,11 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 make</userinput></screen>
 
     <para>
-      To test the results, issue: <command>ctest</command>.
+      For å teste resultatene, utsted: <command>ctest</command>.
     </para>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -108,45 +108,45 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D BUILD_ALL=ON</parameter>: This parameter builds support for
-      all Intel iGPUs included with the Broadwell series through the Tiger Lake
-      series, as well as support for all codecs.
+      <parameter>-D BUILD_ALL=ON</parameter>: Denne parameteren bygger støtte 
+      for alle Intel iGPU-er som følger med Broadwell serien til og med Tiger 
+      Lake serien, samt støtte for alle kodeker.
     </para>
 
     <para>
-      <parameter>-D BUILD_TOOLS=ON</parameter>: This parameter builds all of
-      the tools needed for utilizing the GPUs that this package supports.
+      <parameter>-D BUILD_TOOLS=ON</parameter>: Denne parameteren bygger alle 
+      verktøyene som trengs for å bruke GPU-ene som denne pakken støtter.
     </para>
     
     <para>
-      <parameter>-D ENABLE_ITT=OFF</parameter>: This parameter disables support
-      for ITT (VTune) instrumentation support. This support requires several
-      packages which are no longer available.
+      <parameter>-D ENABLE_ITT=OFF</parameter>: Denne parameteren deaktiverer 
+      støtte for ITT (VTune) instrumentstøtte. Denne støtten krever flere 
+      pakker som ikke lenger er tilgjengelige.
     </para>
     
     <para>
-      <parameter>-D ENABLE_OPENCL=OFF</parameter>: This parameter disables
-      support for OpenCL acceleration via the Intel Media SDK. This has been
-      disabled because the packages needed have been discontinued for years and
-      are no longer available.
+      <parameter>-D ENABLE_OPENCL=OFF</parameter>: Denne parameteren deaktiverer 
+      støtte for OpenCL akselerasjon via Intel Media SDK. Dette har blitt 
+      deaktivert fordi pakkene som trengs har blitt avviklet i årevis og ikke 
+      lenger er tilgjengelige.
     </para>
     
     <para>
-      <parameter>-D ENABLE_WAYLAND=ON</parameter>: This parameter enables
-      support for GPU acceleration for supported Intel GPUs when using Wayland.
+      <parameter>-D ENABLE_WAYLAND=ON</parameter>: Denne parameteren aktiverer 
+      støtte for GPU akselerasjon for støttede Intel GPU-er når Wayland brukes.
     </para>
     
     <para>
-      <parameter>-D ENABLE_X11_DRI3=ON</parameter>: This parameter enables
-      support for GPU acceleration through DRI3 for supported Intel GPUs.
+      <parameter>-D ENABLE_X11_DRI3=ON</parameter>: Denne parameteren aktiverer 
+      støtte for GPU-akselerasjon gjennom DRI3 for støttede Intel GPU-er.
     </para>
     
     <para>
-      <parameter>-D MFX_APPS_DIR=/usr/lib/mfx</parameter>: This parameter
-      places the samples that were compiled into /usr/lib/mfx.
+      <parameter>-D MFX_APPS_DIR=/usr/lib/mfx</parameter>: Denne parameteren 
+      plasserer eksemplene som ble kompilert i /usr/lib/mfx.
     </para>
 
     &options-cmake;
@@ -154,24 +154,24 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
 
       <seglistitem>
         <seg>
           asg-hevc,
-          hevc_fei_extractor, and
+          hevc_fei_extractor, og
           mfx-tracer-config
         </seg>
         <seg>
           libmfx,
           libmfxhw64,
-          and libmfx-tracer
+          og libmfx-tracer
         </seg>
         <seg>
           /usr/{include,lib,share}/mfx
@@ -180,7 +180,7 @@ make</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -188,8 +188,8 @@ make</userinput></screen>
         <term><command>asg-hevc</command></term>
         <listitem>
           <para>
-            encodes files using the HEVC codec while using this package for
-            GPU acceleration
+            koder filer med HEVC kodeken mens denne pakken brukes for 
+            GPU akselerasjon
           </para>
           <indexterm zone="intel-mediasdk asg-hevc">
             <primary sortas="b-asg-hevc">asg-hevc</primary>
@@ -201,7 +201,7 @@ make</userinput></screen>
         <term><command>hevc_fei_extractor</command></term>
         <listitem>
           <para>
-            dumps fei-specific information from HEVC bit streams
+            dumper fei-spesifikk informasjon fra HEVC bitstrømmer
           </para>
           <indexterm zone="intel-mediasdk hevc_fei_extractor">
             <primary sortas="b-hevc_fei_extractor">hevc_fei_extractor</primary>
@@ -213,7 +213,7 @@ make</userinput></screen>
         <term><command>mfx-tracer-config</command></term>
         <listitem>
           <para>
-            generates configuration for the MFX tracer
+            genererer konfigurasjon for MFX sporingsenheten
           </para>
           <indexterm zone="intel-mediasdk mfx-tracer-config">
             <primary sortas="b-mfx-tracer-config">mfx-tracer-config</primary>
@@ -225,7 +225,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libmfx</filename></term>
         <listitem>
           <para>
-            provides a dispatcher for the Broadwell through Tiger Lake iGPUs
+            tilbyr en koordinator for Broadwell gjennom Tiger Lake iGPU-er
           </para>
           <indexterm zone="intel-mediasdk libmfx">
             <primary sortas="c-libmfx">libmfx</primary>
@@ -237,8 +237,8 @@ make</userinput></screen>
         <term><filename class="libraryfile">libmfxhw64</filename></term>
         <listitem>
           <para>
-            provides a dispatcher for libvpl to use when an unsupported GPU is
-            in use, forwarding the request to the newer runtime
+            gir en koordinator som libvpl kan bruke når en ikke-støttet GPU er i 
+            bruk, og videresender forespørselen til den nyere kjøretidsenheten.
           </para>
           <indexterm zone="intel-mediasdk libmfxhw64">
             <primary sortas="c-libmfxhw64">libmfxhw64</primary>
@@ -250,7 +250,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libmfx-tracer</filename></term>
         <listitem>
           <para>
-            provides functions that trace API calls within libmfx
+            tilbyr funksjoner som sporer API kall i libmfx
           </para>
           <indexterm zone="intel-mediasdk libmfx-tracer">
             <primary sortas="c-libmfx-tracer">libmfx-tracer</primary>
