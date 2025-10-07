@@ -19,24 +19,24 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libspng</title>
+    <title>Introduksjon til libspng</title>
 
     <para>
-      The libspng package provides a C library for
-      handling PNG files.
+      Pakken libspng tilbyr et C bibliotek for 
+      håndtering av PNG filer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libspng-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libspng-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libspng Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libspng Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
@@ -44,11 +44,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libspng</title>
+    <title>Installasjon av libspng</title>
 
     <para>
-      Install libspng by running the following
-      commands:
+      Installer libspng ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -62,15 +62,15 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      Now create a pkg-config file symlink for
-      packages that expect <filename>spng.pc</filename> instead of
-      <filename>libspng.pc</filename> as the &root; user:
+      Opprett nå en symbolsk lenke pkg-config fil for pakker som 
+      forventer <filename>spng.pc</filename> istedenfor
+      <filename>libspng.pc</filename> som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ln -sfv libspng.pc /usr/lib/pkgconfig/spng.pc</userinput></screen>
@@ -78,26 +78,26 @@ ninja</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          libspng and libspng_static (static)
+          libspng og libspng_static (static)
         </seg>
         <seg>
           /usr/lib/cmake/libspng
@@ -106,7 +106,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -114,7 +114,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libspng</filename></term>
         <listitem>
           <para>
-            provides functions that can help with handling PNG files
+            tilbyr funksjoner som kan hjelpe med å håndtere PNG filer
           </para>
           <indexterm zone="libspng libspng-lib">
             <primary sortas="c-libspng-lib">libspng</primary>
