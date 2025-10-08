@@ -19,24 +19,24 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to xdg-desktop-portal-wlr</title>
+    <title>Introduksjon til xdg-desktop-portal-wlr</title>
 
     <para>
-      The xdg-desktop-portal-wlr package provides a portal backend for
-      Wlroots compositors.
+      Pakken xdg-desktop-portal-wlr tilbyr et portalens bakende for 
+      Wlroots kompositorer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xdg-desktop-portal-wlr-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&xdg-desktop-portal-wlr-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">xdg-desktop-portal-wlr Dependencies</bridgehead>
+    <bridgehead renderas="sect3">xdg-desktop-portal-wlr Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &gbm;,
       <ulink url="&blfs-svn;/general/inih.html">inih</ulink>,
@@ -45,29 +45,29 @@
       &opengl;,
       <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
-      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, og
       <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <xref linkend="scdoc"/>
     </para>
 
-    <bridgehead renderas="sect4">Optional (Runtime)</bridgehead>
+    <bridgehead renderas="sect4">Valgfri (Kjøretid)</bridgehead>
     <para role="optional">
-      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> and
+      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> og
       <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/slurp/">slurp</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of xdg-desktop-portal-wlr</title>
+    <title>Installasjon av xdg-desktop-portal-wlr</title>
 
     <para>
-      Install xdg-desktop-portal-wlr by running
-      the following commands:
+      Installer xdg-desktop-portal-wlr ved å kjøre 
+      følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -82,13 +82,13 @@ meson setup --prefix=/usr                 \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      Ensure the portal can be detected as the &root; user:
+      Sørg for at portalen kan oppdages som &root; bruker:
     </para>
 
 <screen
@@ -100,28 +100,28 @@ EOF</userinput></screen>
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           xdg-desktop-portal-wlr
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -129,8 +129,8 @@ EOF</userinput></screen>
         <term><command>xdg-desktop-portal-wlr</command></term>
         <listitem>
           <para>
-            allows you to access portals in a
-            Wlroots session
+            lar deg få tilgang til portaler i en 
+            Wlroots økt
           </para>
           <indexterm zone="xdg-desktop-portal-wlr xdg-desktop-portal-wlr-bin">
             <primary sortas="b-xdg-desktop-portal-wlr-bin">xdg-desktop-portal-wlr</primary>
