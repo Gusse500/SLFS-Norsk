@@ -16,69 +16,69 @@
     </indexterm>
 
     <sect3 role="package">
-      <title>Introduction to nvchecker Module</title>
+      <title>Introduksjon til nvchecker modulen</title>
 
       <para>
-        The nvchecker module provides a solution
-        for checking versions of packages. Arch Linux and other teams rely on
-        this module for checking for updates to provide the latest software to
-        their users.
+        nvchecker modulen tilbyr en løsning for å sjekke versjoner 
+        av pakker. Arch Linux og andre team er avhengige av denne 
+        modulen for å se etter oppdateringer for å tilby den nyeste 
+        programvaren til brukerne sine.
       </para>
 
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&nvchecker-download-http;"/>
+            Nedlasting (HTTP): <ulink url="&nvchecker-download-http;"/>
           </para>
         </listitem>
       </itemizedlist>
 
-      <bridgehead renderas="sect4">Additional Downloads</bridgehead>
+      <bridgehead renderas="sect4">Ytterligere Nedlastinger</bridgehead>
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Recommended patch for <command>updcheck</command> from
+            Anbefalt oppdatering for <command>updcheck</command> fra
             <ulink url='https://github.com/glfs-book/lfs-tools'>lfs-tools</ulink>:
             <ulink url='https://github.com/glfs-book/lfs-tools/raw/refs/heads/trunk/updcheck/nvchecker.diff'/>
           </para>
         </listitem>
       </itemizedlist>
 
-      <bridgehead renderas="sect4">nvchecker Dependencies</bridgehead>
+      <bridgehead renderas="sect4">nvchecker Avhengigheter</bridgehead>
 
-      <bridgehead renderas="sect5">Required</bridgehead>
+      <bridgehead renderas="sect5">Påkrevd</bridgehead>
       <para role='required'>
         <xref linkend="platformdirs"/>,
         <xref linkend="pycurl"/>,
-        <xref linkend="structlog"/>, and
+        <xref linkend="structlog"/>, og
         <xref linkend="tornado"/>
       </para>
 
-      <bridgehead renderas="sect5">Recommended</bridgehead>
+      <bridgehead renderas="sect5">Anbefalt</bridgehead>
       <para role='recommended'>
         <ulink url="&blfs-svn;/general/git.html">Git</ulink>,
         <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink>,
-        <ulink url="&pymod;pygobject3">PyGObject</ulink>, and
+        <ulink url="&pymod;pygobject3">PyGObject</ulink>, og
         <xref linkend="toml"/>
       </para>
 
     </sect3>
 
     <sect3 role="installation">
-      <title>Installation of nvchecker</title>
+      <title>Installasjon av nvchecker</title>
 
       <para>
-        If you downloaded the recommended patch, apply it now:
+        Hvis du lastet ned den anbefalte oppdateringen, installer den nå:
       </para>
 
       <screen><userinput>patch -Np1 -i ../nvchecker.diff</userinput></screen>
 
-      <para>Build the module:</para>
+      <para>Bygg modulen:</para>
 
       &build-wheel;
 
       <para>
-        Now, as the &root; user:
+        Nå, som &root; bruker:
       </para>
 
 <screen role="root"><userinput>&install-wheel; nvchecker</userinput></screen>
@@ -88,26 +88,26 @@
     &pip3-cmd-explain;
 
     <sect3 role="content">
-      <title>Contents</title>
+      <title>Innhold</title>
 
       <segmentedlist>
-        <segtitle>Installed Programs</segtitle>
-        <segtitle>Installed Libraries</segtitle>
-        <segtitle>Installed Directories</segtitle>
+        <segtitle>Installerte Programmer</segtitle>
+        <segtitle>Installerte Biblioteker</segtitle>
+        <segtitle>Installerte Mapper</segtitle>
 
         <seglistitem>
           <seg>
             nvchecker,
             nvchecker-ini2toml,
             nvchecker-notify,
-            nvcmp, and
+            nvcmp, og
             nvtake
           </seg>
-          <seg>None</seg>
+          <seg>Ingen</seg>
           <seg>
             /usr/lib/python&python3-majorver;/site-packages/nvchecker,
             /usr/lib/python&python3-majorver;/site-packages/nvchecker-&nvchecker-version;.dist-info,
-            and /usr/lib/python&python3-majorver;/site-packages/nvchecker-source
+            og /usr/lib/python&python3-majorver;/site-packages/nvchecker-source
           </seg>
         </seglistitem>
       </segmentedlist>
