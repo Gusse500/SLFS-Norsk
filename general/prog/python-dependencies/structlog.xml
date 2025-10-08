@@ -16,40 +16,40 @@
     </indexterm>
 
     <sect3 role="package">
-      <title>Introduction to structlog Module</title>
+      <title>Introduksjon til structlog modulen</title>
 
       <para>
-        The structlog module offers an easy solution
-        to logging.
+        Struclog modulen tilbyr en enkel løsning 
+        for logging.
       </para>
 
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&structlog-download-http;"/>
+            Nedlasting (HTTP): <ulink url="&structlog-download-http;"/>
           </para>
         </listitem>
       </itemizedlist>
 
-      <bridgehead renderas="sect4">structlog Dependencies</bridgehead>
+      <bridgehead renderas="sect4">structlog Avhengigheter</bridgehead>
 
-      <bridgehead renderas="sect5">Required</bridgehead>
+      <bridgehead renderas="sect5">Påkrevd</bridgehead>
       <para role='required'>
         <ulink url='&pydep;hatch-fancy-pypi-readme'>hatch-fancy-pypi-readme</ulink>
-        and <ulink url='&pydep;hatch-vcs'>hatch_vcs</ulink>
+        og <ulink url='&pydep;hatch-vcs'>hatch_vcs</ulink>
       </para>
 
     </sect3>
 
     <sect3 role="installation">
-      <title>Installation of structlog</title>
+      <title>Installasjon av structlog</title>
 
-      <para>Build the module:</para>
+      <para>Bygg modulen:</para>
 
       &build-wheel;
 
       <para>
-        Now, as the &root; user:
+        Nå, som &root; bruker:
       </para>
 
 <screen role="root"><userinput>&install-wheel; structlog</userinput></screen>
@@ -59,18 +59,18 @@
     &pip3-cmd-explain;
 
     <sect3 role="content">
-      <title>Contents</title>
+      <title>Innhold</title>
 
       <segmentedlist>
-        <segtitle>Installed Programs</segtitle>
-        <segtitle>Installed Libraries</segtitle>
-        <segtitle>Installed Directories</segtitle>
+        <segtitle>Installerte Programmer</segtitle>
+        <segtitle>Installerte Biblioteker</segtitle>
+        <segtitle>Installerte Mapper</segtitle>
 
         <seglistitem>
-          <seg>None</seg>
-          <seg>None</seg>
+          <seg>Ingen</seg>
+          <seg>Ingen</seg>
           <seg>
-            /usr/lib/python&python3-majorver;/site-packages/structlog and
+            /usr/lib/python&python3-majorver;/site-packages/structlog og
             /usr/lib/python&python3-majorver;/site-packages/structlog-&structlog-version;.dist-info
           </seg>
         </seglistitem>
