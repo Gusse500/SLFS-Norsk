@@ -16,25 +16,25 @@
     </indexterm>
 
     <sect3 role="package">
-      <title>Introduction to platformdirs Module</title>
+      <title>Introduksjon til platformdirs modulen</title>
 
       <para>
-        The platformdirs module provides standard
-        directory paths on different platforms so that data is saved to the
-        right path.
+        Platformdirs modulen tilbyr standard 
+        mappestier på forskjellige plattformer, 
+        slik at data lagres i riktig sti.
       </para>
 
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&platformdirs-download-http;"/>
+            Nedlasting (HTTP): <ulink url="&platformdirs-download-http;"/>
           </para>
         </listitem>
       </itemizedlist>
 
-      <bridgehead renderas="sect4">platformdirs Dependencies</bridgehead>
+      <bridgehead renderas="sect4">platformdirs Avhengigheter</bridgehead>
 
-      <bridgehead renderas="sect5">Required</bridgehead>
+      <bridgehead renderas="sect5">Påkrevd</bridgehead>
       <para role='required'>
         <ulink url='&pydep;hatch-vcs'>hatch_vcs</ulink>
       </para>
@@ -42,14 +42,14 @@
     </sect3>
 
     <sect3 role="installation">
-      <title>Installation of platformdirs</title>
+      <title>Installasjon av platformdirs</title>
 
-      <para>Build the module:</para>
+      <para>Bygg modulen:</para>
 
       &build-wheel;
 
       <para>
-        Now, as the &root; user:
+        Nå, som &root; bruker:
       </para>
 
 <screen role="root"><userinput>&install-wheel; platformdirs</userinput></screen>
@@ -59,18 +59,18 @@
     &pip3-cmd-explain;
 
     <sect3 role="content">
-      <title>Contents</title>
+      <title>Innhold</title>
 
       <segmentedlist>
-        <segtitle>Installed Programs</segtitle>
-        <segtitle>Installed Libraries</segtitle>
-        <segtitle>Installed Directories</segtitle>
+        <segtitle>Installerte Programmer</segtitle>
+        <segtitle>Installerte Biblioteker</segtitle>
+        <segtitle>Installerte Mapper</segtitle>
 
         <seglistitem>
-          <seg>None</seg>
-          <seg>None</seg>
+          <seg>Ingen</seg>
+          <seg>Ingen</seg>
           <seg>
-            /usr/lib/python&python3-majorver;/site-packages/platformdirs and
+            /usr/lib/python&python3-majorver;/site-packages/platformdirs og
             /usr/lib/python&python3-majorver;/site-packages/platformdirs-&platformdirs-version;.dist-info
           </seg>
         </seglistitem>
