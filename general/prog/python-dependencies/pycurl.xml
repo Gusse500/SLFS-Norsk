@@ -16,25 +16,25 @@
     </indexterm>
 
     <sect3 role="package">
-      <title>Introduction to pycurl Module</title>
+      <title>Introduksjon til pycurl modulen</title>
 
       <para>
-        The pycurl module offers access to
-        cURL in Python
-        scripts.
+        pycurl modulen gir 
+        tilgang til cURL i 
+        Python skript.
       </para>
 
       <itemizedlist spacing="compact">
         <listitem>
           <para>
-            Download (HTTP): <ulink url="&pycurl-download-http;"/>
+            Nedlasting (HTTP): <ulink url="&pycurl-download-http;"/>
           </para>
         </listitem>
       </itemizedlist>
 
-      <bridgehead renderas="sect4">pycurl Dependencies</bridgehead>
+      <bridgehead renderas="sect4">pycurl Avhengigheter</bridgehead>
 
-      <bridgehead renderas="sect5">Required</bridgehead>
+      <bridgehead renderas="sect5">Påkrevd</bridgehead>
       <para role='required'>
         <ulink url='&blfs-svn;/basicnet/curl.html'>cURL</ulink>
       </para>
@@ -42,14 +42,14 @@
     </sect3>
 
     <sect3 role="installation">
-      <title>Installation of pycurl</title>
+      <title>Installasjon av pycurl</title>
 
       <para>Build the module:</para>
 
       &build-wheel;
 
       <para>
-        Now, as the &root; user:
+        Nå, som &root; bruker:
       </para>
 
 <screen role="root"><userinput>&install-wheel; pycurl &amp;&amp;
@@ -60,20 +60,20 @@ mv -v /usr/share/doc/pycurl{,-&pycurl-version;}</userinput></screen>
     &pip3-cmd-explain;
 
     <sect3 role="content">
-      <title>Contents</title>
+      <title>Innhold</title>
 
       <segmentedlist>
-        <segtitle>Installed Programs</segtitle>
-        <segtitle>Installed Libraries</segtitle>
-        <segtitle>Installed Directories</segtitle>
+        <segtitle>Installerte Programmer</segtitle>
+        <segtitle>Installerte Biblioteker</segtitle>
+        <segtitle>Installerte Mapper</segtitle>
 
         <seglistitem>
-          <seg>None</seg>
-          <seg>None</seg>
+          <seg>Ingen</seg>
+          <seg>Ingen</seg>
           <seg>
             /usr/lib/python&python3-majorver;/site-packages/pycurl,
             /usr/lib/python&python3-majorver;/site-packages/pycurl-&pycurl-version;.dist-info,
-            and /usr/share/doc/pycurl-&pycurl-version;
+            og /usr/share/doc/pycurl-&pycurl-version;
           </seg>
         </seglistitem>
       </segmentedlist>
