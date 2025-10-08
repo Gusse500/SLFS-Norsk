@@ -18,24 +18,24 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to xdg-desktop-portal-hyprland</title>
+    <title>Introduksjon til xdg-desktop-portal-hyprland</title>
 
     <para>
-      The xdg-desktop-portal-hyprland package provides a portal backend for
+      Pakken xdg-desktop-portal-hyprland tilbyr portalens bakende for 
       Hyprland.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xdg-desktop-portal-hyprland-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&xdg-desktop-portal-hyprland-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">xdg-desktop-portal-hyprland Dependencies</bridgehead>
+    <bridgehead renderas="sect3">xdg-desktop-portal-hyprland Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <xref linkend="hyprlib"/>,
@@ -45,34 +45,34 @@
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
       <xref linkend="sdbus-cpp"/>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
-      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, og
       <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Required (Runtime)</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd (Kjøretid)</bridgehead>
     <para role="runtime">
       <xref linkend="hyprland"/>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/inih.html">inih</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional (Runtime)</bridgehead>
+    <bridgehead renderas="sect4">Valgfri (Kjøretid)</bridgehead>
     <para role="optional">
-      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> and
+      <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/grim/">grim</ulink> og
       <ulink role="runtime" url="https://archlinux.org/packages/extra/x86_64/slurp/">slurp</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of xdg-desktop-portal-hyprland</title>
+    <title>Installasjon av xdg-desktop-portal-hyprland</title>
 
     <para>
-      Install xdg-desktop-portal-hyprland by running
-      the following commands:
+      Installer xdg-desktop-portal-hyprland ved å kjøre 
+      følgende kommandoer:
     </para>
 
 <screen><userinput>rm -rf subprojects/sdbus-cpp &amp;&amp;
@@ -86,7 +86,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root" revision="sysv"><userinput>ninja install &amp;&amp;
@@ -97,43 +97,43 @@ rm -rvf /usr/lib/systemd</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>rm -rf subprojects/sdbus-cpp</command>: This command removes
-      vendored source code that FTBFS.
+      <command>rm -rf subprojects/sdbus-cpp</command>: Denne kommandoen 
+      fjerner leverandørkildekoden som FTBFS.
     </para>
 
     <para revision="sysv">
-      <command>rm -rvf /usr/lib/systemd</command>: This command removes
-      unnecessary Systemd files.
+      <command>rm -rvf /usr/lib/systemd</command>: Denne kommandoen 
+      fjerner unødvendige Systemd filer.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          hyprland-share-picker and xdg-desktop-portal-hyprland
+          hyprland-share-picker og xdg-desktop-portal-hyprland
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -141,7 +141,7 @@ rm -rvf /usr/lib/systemd</userinput></screen>
         <term><command>hyprland-share-picker</command></term>
         <listitem>
           <para>
-            allows you to pick what screen and region to share
+            lar deg velge hvilken skjerm og region du vil dele
           </para>
           <indexterm zone="xdg-desktop-portal-hyprland hyprland-share-picker">
             <primary sortas="b-hyprland-share-picker">hyprland-share-picker</primary>
@@ -153,8 +153,8 @@ rm -rvf /usr/lib/systemd</userinput></screen>
         <term><command>xdg-desktop-portal-hyprland</command></term>
         <listitem>
           <para>
-            allows you to access portals in a
-            Hyprland session
+            lar deg få tilgang til portaler i en 
+            Hyprland økt
           </para>
           <indexterm zone="xdg-desktop-portal-hyprland xdg-desktop-portal-hyprland-bin">
             <primary sortas="b-xdg-desktop-portal-hyprland-bin">xdg-desktop-portal-hyprland</primary>
