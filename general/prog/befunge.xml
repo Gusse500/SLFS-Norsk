@@ -17,17 +17,17 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to befunge</title>
+    <title>Introduksjon til befunge</title>
 
     <para>
-      The Befunge-93 package contains the reference implementation of the
-      Befunge language.
+      Befunge-93 pakken inneholder referanseimplementeringen 
+      av Befunge språket.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&befunge93-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&befunge93-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -35,19 +35,19 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Befunge-93</title>
+    <title>Installasjon av Befunge-93</title>
 
-    <note><para>This package extracts to befunge-93.</para></note>
+    <note><para>Denne pakken pakker ut til befunge-93.</para></note>
 
     <para>
-      Install Befunge-93 by executing the following
-      commands:
+      Installer Befunge-93 ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -v -Dm755 bin/bef /usr/bin &amp;&amp;
@@ -57,28 +57,28 @@ install -v -Dm755 bin/bef2c /usr/bin</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          bef, befprof, and bef2c
+          bef, befprof, og bef2c
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -86,7 +86,7 @@ install -v -Dm755 bin/bef2c /usr/bin</userinput></screen>
         <term><command>bef</command></term>
         <listitem>
           <para>
-            is the Befunge-93 reference interpreter/debugger
+            er Befunge-93 referansetolkeren/feilsøkingsprogrammet
           </para>
           <indexterm zone="befunge93 bef">
             <primary sortas="b-bef">bef</primary>
@@ -98,7 +98,7 @@ install -v -Dm755 bin/bef2c /usr/bin</userinput></screen>
         <term><command>bef2c</command></term>
         <listitem>
           <para>
-            is the Befunge-93 to ANSI C compiler
+            er Befunge-93 til ANSI C kompilatoren
           </para>
           <indexterm zone="befunge93 bef2c">
             <primary sortas="b-bef2c">bef2c</primary>
@@ -110,7 +110,7 @@ install -v -Dm755 bin/bef2c /usr/bin</userinput></screen>
         <term><command>befprof</command></term>
         <listitem>
           <para>
-            is the Befunge-93 profiler
+            er Befunge-93 profileren
           </para>
           <indexterm zone="befunge93 befprof">
             <primary sortas="b-befprof">befprof</primary>
