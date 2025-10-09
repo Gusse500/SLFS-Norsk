@@ -18,75 +18,75 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to CUDA</title>
+    <title>Introduksjon til CUDA</title>
 
     <para>
-      The CUDA proprietary toolkit provides tools
-      for running code on NVIDIA GPUs. This is otherwise known as hardware
-      acceleration.
+      CUDAs proprietære verktøysett tilbyr verktøy for å 
+      kjøre kode på NVIDIA GPU-er. 
+      Dette er også kjent som maskinvareakselerasjon.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cuda-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&cuda-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
     <important><para>
-      The NVIDIA driver version listed in the runfile name is the minimum
-      NVIDIA driver version required. You must install an older version of CUDA
-      if you cannot install a newer driver version.
+      NVIDIA driverversjonen som er oppført i kjørefilnavnet er minimum 
+      NVIDIA driverversjonen som kreves. Du må installere en eldre versjon av 
+      CUDA hvis du ikke kan installere en nyere driverversjon.
     </para></important>
 
     <note><para>
-      The download size is over 5G, so you should consider if and when you will
-      want to download this runfile. For this reason, it is not recommended to
-      download it when using limited hotspot data. Its size can largely be
-      attributed to containing compilers as well as the
-      NVIDIA driver. The driver only accounts for
-      10% of the runfile's size.
+      Nedlastingsstørrelsen er over 5G, så du bør vurdere om 
+      og når du vil laste ned denne kjørefilen. Av denne grunn 
+      anbefales det ikke å laste den ned når du bruker begrenset 
+      hotspot-data. Størrelsen kan i stor grad tilskrives at den 
+      inneholder kompilatorer samt NVIDIA driveren. Driveren utgjør 
+      bare 10 % av runfilens størrelse.
     </para></note>
 
 <!--
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/cuda/cuda-glibc-2.41-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 -->
 
-    <bridgehead renderas="sect3">CUDA Dependencies</bridgehead>
+    <bridgehead renderas="sect3">CUDA Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&glfs-website;/shareddeps/nvidia.html">NVIDIA</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/postlfs/profile.html">Bash Shell Startup
-      Files</ulink>
+      <ulink url="&blfs-svn;/postlfs/profile.html">Oppstartsfilene til Bash 
+      Skallet</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/gdb.html">GDB</ulink> and
+      <ulink url="&blfs-svn;/general/gdb.html">GDB</ulink> og
       &glu;
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of CUDA</title>
+    <title>Installasjon av CUDA</title>
 
     <para>
-      First create the installation directory and symlink as the &root; user:
+      Først som &root; bruker opprett installasjonsmappen og symbollenken:
     </para>
 
 <screen role="root"><userinput>mkdir -pv /opt/cuda-&cuda-version; &amp;&amp;
@@ -95,14 +95,14 @@ ln -sfv cuda-&cuda-version; /opt/cuda</userinput></screen>
     &as_root;
 
     <para>
-      Start a subshell that will exit on an error:
+      Start et underskall som avsluttes ved en feil:
     </para>
 
 <screen role="nodump"><userinput>bash -e</userinput></screen>
 
     <para>
-      Install CUDA by running the following
-      commands:
+      Installer CUDA ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen role="root"><userinput>sh cuda_&cuda-version;_&cuda-nvidia-version;_linux.run     \
@@ -127,21 +127,21 @@ popd
 rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
 
     <note><para>
-      The above instructions extract the runfile and installs components
-      manually. In the past, this was not needed. However, once
-      <command>cuda_installer</command> failed to load as it relied on an older
-      libxml2 ABI, this process became the preferred solution. It will remain
-      as it allows for more control, despite being a more complicated solution.
+      Instruksjonene ovenfor pakker ut kjørefilen og installerer komponenter 
+      manuelt. Tidligere var ikke dette nødvendig. Men når
+      <command>cuda_installer</command> ikke kunne lastes inn fordi den var avhengig av 
+      en eldre libxml2 ABI, ble denne prosessen den foretrukne løsningen. Den vil 
+      forbli siden den gir mer kontroll, til tross for at den er en mer komplisert løsning.
     </para></note>
 
     <para>
-      Now exit the subshell process:
+      Avslutt nå underskallprosessen:
     </para>
 
 <screen role="nodump"><userinput>exit</userinput></screen>
 
     <para>
-      As the &root; user, allow the use of new compilers:
+      Som &root; bruker, tillate bruk av nye kompilatorer:
     </para>
 
 <screen role="root"><userinput>sed -e "/.*unsupported GNU version.*/d" \
@@ -149,16 +149,16 @@ rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
     -i /opt/cuda-&cuda-version;/targets/x86_64-linux/include/crt/host_config.h</userinput></screen>
 
     <important><para>
-      This technically is not supported and there may be compilation errors in
-      other packages as a result. However, it's a better compromise than
-      installing older compilers just for one package. This package is still
-      being developed but takes a long time to adapt to newer software.
+      Dette støttes teknisk sett ikke, og det kan oppstå kompileringsfeil i 
+      andre pakker som et resultat. Det er imidlertid et bedre kompromiss enn å 
+      installere eldre kompilatorer bare for én pakke. Denne pakken er fortsatt 
+      under utvikling, men det tar lang tid å tilpasse seg nyere programvare.
     </para></important>
 
 <!--
     <para>
-      Finally, patch a header file to fix building against
-      glibc-2.41, again as the &root; user:
+      Til slutt, oppdater en deklarasjonsfil for å fikse bygging mot
+      glibc-2.41, igjen som &root; bruker:
     </para>
 
 <screen role="root"><userinput>patch -Np1 /opt/cuda-&cuda-version;/targets/x86_64-linux/include/crt/math_functions.h \
@@ -168,25 +168,25 @@ rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>--target</parameter>: This parameter specifies the extraction
-      directory.
+      <parameter>--target</parameter>: Denne parameteren angir 
+      utpakningsmappen.
     </para>
 
     <para>
-      <parameter>--noexec</parameter>: This parameter does ensures the toolkit
-      does not get triggered for installation.
+      <parameter>--noexec</parameter>: Denne parameteren sikrer at 
+      verktøysettet ikke utløses for installasjon.
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring CUDA</title>
+    <title>Konfigurere CUDA</title>
 
     <para>
-      Ensure the libraries are cached as the &root; user:
+      Som &root; bruker sørg for at bibliotekene er mellomlagret :
     </para>
 
 <screen role="root"><userinput>cat &gt; /etc/ld.so.conf.d/cuda.conf &lt;&lt; EOF &amp;&amp;
@@ -198,13 +198,13 @@ EOF
 ldconfig</userinput></screen>
 
     <para>
-      Now in order to use the toolkit, it needs to be included in the path.
+      For å kunne bruke verktøysettet må det nå inkluderes i banen.
     </para>
 
     <para>
-      As the &root; user, create the profile (dependent on <ulink
-      url="&blfs-svn;/postlfs/profile.html">The Bash Shell Startup
-      Files</ulink>) for CUDA:
+      Som &root; bruker, opprett profilen (avhengig av <ulink
+      url="&blfs-svn;/postlfs/profile.html">Oppstartsfilene til Bash 
+      Skallet</ulink>) for CUDA:
     </para>
 
 <screen role="root"><userinput>cat &gt; /etc/profile.d/cuda.sh &lt;&lt; "EOF"
@@ -220,12 +220,12 @@ EOF</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <para>
-      For a full package listing, check <ulink
+      For en fullstendig pakkeliste, sjekk <ulink
       url="&arch-pkgs;/extra/x86_64/cuda/">Arch's CUDA package contents</ulink>
-      as the full list is too expansive to list here.
+      ettersom hele listen er for lang til å listes opp her.
     </para>
 
   </sect2>
