@@ -19,62 +19,62 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>About GNAT</title>
+    <title>Om GNAT</title>
 
     <para>
-      Ada is a modern programming language designed for large, long-lived
-      applications&mdash;and embedded systems in particular&mdash;where
-      reliability and efficiency are essential. It has a set of unique technical
-      features that make it highly effective for use in large, complex and
-      safety-critical projects.
+      Ada er et moderne programmeringsspråk designet for store, langlevende 
+      applikasjoner&mdash;og innebygde systemer spesielt&mdash;der pålitelighet 
+      og effektivitet er avgjørende. Den har et sett unike tekniske funksjoner 
+      som gjør den svært effektiv for bruk i store, komplekse og 
+      sikkerhetskritiske prosjekter.
     </para>
 
     <para>
-      The compiler and associated tools on this page are known as the
-      GNAT technology, developed by the Adacore
-      company, using the GCC backend.
+      Kompilatoren og tilhørende verktøy på denne siden er kjent som 
+      GNAT teknologien, utviklet av Adacore selskapet, 
+      ved hjelp av GCC bakstykke.
     </para>
 
     <para>
-      Nowadays, not many packages use this language, but if you come across a
-      package that uses it, this package will enable that support.
+      Nå til dags er det ikke mange pakker som bruker dette språket, men hvis du 
+      kommer over en pakke som bruker det, vil denne pakken aktivere støtte.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&gnat-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&gnat-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <para>
-      If you have not already built or downloaded
-      GNAT tools, this download is required as
-      GNAT is written in Ada.
+      Hvis du ikke allerede har bygget eller lastet ned GNAT verktøy, 
+      er denne nedlastingen nødvendig ettersom 
+      GNAT er skrevet i Ada.
     </para>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Binary Download: <ulink url="&gnat-binary-download-http;"/>
+          Binær nedlasting: <ulink url="&gnat-binary-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">GNAT Dependencies</bridgehead>
+    <bridgehead renderas="sect3">GNAT Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="https://www.linuxfromscratch.org/blfs/view/svn/general/gdb.html">
       GDB</ulink>,
       <ulink url="&blfs-svn;/general/graphviz.html">Graphviz</ulink>
-      (some tests use it if installed; note that
-      if it's installed but not built with
-      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>, these tests
-      will fail), and
+      (Noen tester bruker det hvis det er installert; merk at 
+      hvis det er installert, men ikke bygget med
+      <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>, disse testene 
+      vil mislykkes), og
       <ulink url="https://www.linuxfromscratch.org/blfs/view/svn/general/valgrind.html">
-      Valgrind</ulink> (for tests)
+      Valgrind</ulink> (for tester)
     </para>
 
     &long-build-time;
@@ -82,19 +82,19 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of GNAT Binaries</title>
+    <title>Installasjon av GNAT Binærer</title>
 
     <para>
-      As GNAT is written in Ada, Ada tools need to
-      be on the system in order to build GNAT. If
-      you already built such tools or have the binaries on your system, you can
-      skip to the next section.
+      Siden GNAT er skrevet i Ada, må Ada verktøy være på systemet for 
+      å kunne bygge GNAT. Hvis du allerede har bygget slike verktøy 
+      eller har binærfilene på systemet ditt, kan du hoppe til 
+      neste avsnitt.
     </para>
 
     <para>
-      Install the GNAT binaries by running the
-      following commands as the &root; user while still in the directory the
-      tarball is in:
+      Installer GNAT binærfilene ved å kjøre følgende 
+      kommandoer som &root; brukeren mens den fortsatt er i mappen der 
+      tarballen er:
     </para>
 
 <screen role="root"><userinput>tar -xf gnat-x86_64-linux-&gnat-binary-version;.tar.gz -C /opt &amp;&amp;
@@ -102,19 +102,19 @@ ln  -sv gnat-x86_64-linux-&gnat-binary-version; /opt/gnat      &amp;&amp;
 chown -R root:root /opt/gnat</userinput></screen>
 
     <para>
-      Now adjust the <filename>PATH</filename> variable so
-      the GNAT software can be found
-      and used:
+      Juster nå <filename>PATH</filename> variabelen 
+      slik at GNAT programvaren kan finnes 
+      og brukes:
     </para>
 
 <screen><userinput>PATH_HOLD=$PATH &amp;&amp;
 export PATH=/opt/gnat/bin:$PATH_HOLD</userinput></screen>
 
     <para>
-      Ensure <command>ld</command> and <command>as</command>
-      from the GNAT package aren't
-      used as to prevent issues with aging by issuing the
-      following as the &root; user:
+      Forsikre at <command>ld</command> og <command>as</command>
+      fra GNAT pakken ikke brukes 
+      for å forhindre problemer med aldring ved å 
+      utstede følgende som &root; bruker:
     </para>
 
 <screen><userinput>find /opt/gnat/bin -name ld -exec mv -v {} {}.old \; &amp;&amp;
@@ -123,36 +123,36 @@ find /opt/gnat/bin -name as -exec mv -v {} {}.old \;</userinput></screen>
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of GNAT</title>
+    <title>Installasjon av GNAT</title>
 
     <important>
       <para>
-        Even if you specify only languages other than Ada, C, and C++
-        to the ./configure command below, the installation process
-        will overwrite your existing GCC C and C++ compilers and
-        libraries. Running the full suite of tests is recommended.
+        Selv om du bare spesifiserer andre språk enn Ada, 
+        C og C++ i ./configure-kommandoen nedenfor, vil installasjonsprosessen 
+        overskrive dine eksisterende GCC C og C++ kompilatorer og biblioteker. 
+        Det anbefales å kjøre hele pakken med tester.
       </para>
       <para>
-        Do not continue with the <command>make install</command>
-        command until you are confident the build was successful.
-        You can compare your test results with those found at
+        Ikke fortsett med <command>make install</command>
+        kommandoen til du er sikker på at byggingen var vellykket. Du kan 
+        sammenligne testresultatene dine med de som finnes på
         <ulink url="https://gcc.gnu.org/ml/gcc-testresults/"/>.
-        You may also want to refer to the information found in the
-        GCC section of Chapter 8 in the LFS book
+        Du kan også se informasjonen i GCC 
+        delen av kapittel 8 i LFS boken
 	(<ulink url="&lfs-root;/chapter08/gcc.html"/>).
       </para>
     </important>
 
     <para>
-      The instructions below are intentionally performing a
+      Instruksjonene nedenfor utfører med vilje en
       <quote>bootstrap</quote> process. Bootstrapping is needed for robustness
-      and is highly recommended when upgrading the compilers version.
-      To disable bootstrap anyway, add <parameter>--disable-bootstrap
-      </parameter> to the <command>../configure</command> options below.
+      and is highly recommended når du oppgraderer kompilatorversjonen. For å 
+      deaktivere bootstrap likevel, legg til <parameter>--disable-bootstrap
+      </parameter> til <command>../configure</command> alternativene nedenfor.
     </para>
 
     <para>
-      First, ensure the right library directory is used on x86_64:
+      Først må du sørge for at riktig bibliotekmappe brukes på x86_64:
     </para>
 
 <screen><userinput>case $(uname -m) in
@@ -164,7 +164,7 @@ esac</userinput></screen>
 
 <!--
     <para>
-      Ensure compatibility with glibc-2.42 or later:
+      Sørg for kompatibilitet med glibc-2.42 eller nyere:
     </para>
 
 <screen><userinput remap="pre">sed -i '/struct_termio_sz/d' \
@@ -172,7 +172,7 @@ esac</userinput></screen>
 -->
 
     <para>
-      Create the build directory and check for multilib support:
+      Opprett byggemappen og sjekk for støtte for multilib:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -207,8 +207,8 @@ else
 fi</userinput></screen>
 
     <para>
-      Now install GNAT by running the following
-      commands:
+      Nå installer GNAT ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>../configure                  \
@@ -225,15 +225,15 @@ fi</userinput></screen>
 make</userinput></screen>
 
     <note><para>
-      When you recompile GCC, make sure to include
-      <parameter>ada</parameter> in the
-      <parameter>--enable-languages=</parameter> parameter, or else you will
-      lose Ada support and will need to install the
-      GNAT binaries again.
+      Når du rekompilerer GCC, må du huske å inkludere
+      <parameter>ada</parameter> i
+      <parameter>--enable-languages=</parameter> parameter, ellers vil du miste 
+      Ada støtte og må installere 
+      GNAT binærfilene på nytt.
     </para></note>
 
     <para>
-      If running tests, as in LFS, remove/fix several known test failures:
+      Hvis du kjører tester, som i LFS, fjern/rett flere kjente testfeil:
     </para>
 
 <screen><userinput>sed -e '/cpython/d'               -i ../gcc/testsuite/gcc.dg/plugin/plugin.exp &amp;&amp;
@@ -243,31 +243,31 @@ sed -e 's/{ target nonpic } //' \
     -e '/GOTPCREL/d'              -i ../gcc/testsuite/gcc.target/i386/fentryname3.c</userinput></screen>
 
     <para>
-      If you have installed additional packages such as
-      valgrind and gdb,
-      the GCC part of the
-      test suite will run more tests than in LFS. Some of those will
-      report FAIL and others XPASS (pass when expected to FAIL).
-      As of GCC-&gcc-version;, about 74 FAIL occur in the “guality”
-      suite, as well as miscellaneous failures throughout the rest of
-      the test suite. If all the compilers above are built, there will
-      be a little over 110 unexpected failures out of over 617,000 tests.
-      To run the tests, issue:
+      Hvis du har installert tilleggspakker 
+      som valgrind og gdb, vil GCC delen av 
+      testpakken kjøre flere tester enn i LFS. 
+      Noen av disse vil rapportere FAIL og andre XPASS 
+      (består når det forventes å FAIL). 
+      Fra og med GCC-&gcc-version;, Omtrent 74 FEIL oppstår i «guality» pakken, 
+      samt diverse feil i resten av testpakken. 
+      Hvis alle kompilatorene ovenfor bygges, vil det være litt 
+      over 110 uventede feil av over 617 000 tester. 
+      For å kjøre testene, utfør følgende:
     </para>
 
 <screen><userinput>ulimit -s 32768 &amp;&amp;
 make -k check</userinput></screen>
 
     <para>
-      The tests are very long, and the results may be hard to find in the
-      logs, especially if you use parallel jobs with make. You can get a
-      summary of the tests with:
+      Testene er svært lange, og resultatene kan være vanskelige å finne i 
+      loggene, spesielt hvis du bruker parallelle jobber med make. 
+      Du kan få et sammendrag av testene med:
     </para>
 
     <screen><userinput>../contrib/test_summary</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install                                               &amp;&amp;
@@ -284,32 +284,32 @@ ln -sfv ../../libexec/gcc/$(gcc -dumpmachine)/&gcc-version;/liblto_plugin.so \
   </sect2>
 
   <sect2>
-    <title>Cleaning Up and Testing</title>
+    <title>Opprydding og testing</title>
 
     <para>
-      Now that GNAT has been installed,
-      it is time to clean up and test your installation to make sure
-      everything is working as expected.
+      Nå som GNAT er installert, 
+      er det på tide å rydde opp og teste installasjonen 
+      for å forsikre deg om at alt fungerer som forventet.
     </para>
 
     <para>
-      If you downloaded the GNAT binaries,
-      remove them as the &root; user:
+      Hvis du lastet ned GNAT binærfilene, 
+      fjern dem som &root; bruker:
     </para>
 
     <screen role="root"><userinput>rm -rf /opt/gnat*</userinput></screen>
 
     <para>
-      If you downloaded the GNAT binaries, restore
-      the <filename>PATH</filename> variable to what it was beforehand:
+      Hvis du lastet ned GNAT binærfilene, gjenopprett
+      <filename>PATH</filename> variabelen til hva den var tidligere:
     </para>
 
 <screen><userinput>export PATH=$PATH_HOLD &amp;&amp;
 unset PATH_HOLD</userinput></screen>
 
     <para>
-      Now it's time to test the installation. First confirm that the
-      C and C++ compilers are working correctly:
+      Nå er det på tide å teste installasjonen. Bekreft først at 
+      C og C++ kompilatorene fungerer som de skal:
     </para>
 
 <screen><userinput>echo "int main(){}" &gt; main.c &amp;&amp;
@@ -324,7 +324,7 @@ g++ main.cpp          &amp;&amp;
 rm -v a.out main.{c,cpp}</userinput></screen>
 
     <para>
-      If you have 32-bit multilib support:
+      Hvis du har støtte for 32-bits multilib:
     </para>
 
 <screen><userinput>echo "int main(){}" &gt; main.c &amp;&amp;
@@ -339,7 +339,7 @@ g++ -m32 main.cpp     &amp;&amp;
 rm -v a.out main.{c,cpp}</userinput></screen>
 
     <para>
-      If you have x32-bit multilib support:
+      Hvis du har støtte for x32-bit multilib:
     </para>
 
 <screen><userinput>echo "int main(){}" &gt; main.c &amp;&amp;
@@ -354,7 +354,7 @@ g++ -mx32 main.cpp    &amp;&amp;
 rm -v a.out main.{c,cpp}</userinput></screen>
 
     <para>
-      And finally, test the GNAT compiler:
+      Og til slutt, test GNAT kompilatoren:
     </para>
 
 <screen><userinput>cat &gt; testgnat.adb &lt;&lt; "EOF" &amp;&amp;
@@ -371,107 +371,106 @@ gnatmake testgnat.adb &amp;&amp;
 rm -v testgnat*</userinput></screen>
 
     <para>
-      The commands above should have no errors, otherwise
-      something went wrong with the installation.
+      Kommandoene ovenfor skal ikke ha noen feil, 
+      ellers gikk det noe galt med installasjonen.
     </para>
 
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>mkdir build; cd build</command>: The
-      GCC documentation recommends
-      building the package in a dedicated build directory.
+      <command>mkdir build; cd build</command>: 
+      GCC dokumentasjonen anbefaler at pakken 
+      bygges i en dedikert byggemappe.
     </para>
 
     <para>
-      <command>if [[ $(uname -m) == "x86_64" ]]; then...</command>: These
-      commands check for multilib support.
+      <command>if [[ $(uname -m) == "x86_64" ]]; then...</command>: Disse 
+      kommandoene sjekker om det er støtte for flere biblioteker.
     </para>
 
     <para>
-      <command>$(echo "$MULTILIB{,_FLAGS}")</command>: These commands pass
-      the results from the commands explained above as parameters to
-      <filename>../configure</filename> to allow for automating what needs to
-      be set for multilib support if applicable.
+      <command>$(echo "$MULTILIB{,_FLAGS}")</command>: Disse kommandoene sender 
+      resultatene fra kommandoene som er forklart ovenfor som parametere til
+      <filename>../configure</filename> for å tillate automatisering av det som 
+      må settes for støtte for flere biblioteker hvis aktuelt.
     </para>
 
     <para>
-      <parameter>--with-system-zlib</parameter>: Uses the system
-      zlib instead of the bundled one.
-      zlib is used for compressing
-      and decompressing GCC's intermediate
-      language in LTO (Link Time Optimization) object files.
+      <parameter>--with-system-zlib</parameter>: Bruker systemet 
+      zlib i stedet for det medfølgende språket. 
+      zlib brukes til å komprimere og dekomprimere GCCs 
+      mellomliggende språk i LTO objektfiler (Link Time Optimization).
     </para>
 
     <para>
-      <parameter>--enable-default-pie</parameter>: Makes the
-      <option>-fpie</option> option the default when compiling programs.
-      Together with the <xref linkend="gASLR"/> feature enabled in the kernel,
-      this defeats some kind of attacks based on known memory layouts.
+      <parameter>--enable-default-pie</parameter>: Gjør
+      <option>-fpie</option> standardalternativet når programmer kompileres. 
+      Sammen med <xref linkend="gASLR"/> funksjonen aktivert i kjernen, 
+      dette bekjemper noen typer angrep basert på kjente minneoppsett.
     </para>
 
     <para>
-      <parameter>--enable-default-ssp</parameter>: Makes the
-      <option>-fstack-protector-strong</option> option the default when
-      compiling programs. <xref linkend="gSSP"/> is a technique preventing
-      alteration of the program flow by corrupting the parameter stack.
+      <parameter>--enable-default-ssp</parameter>: Gjør
+      <option>-fstack-protector-strong</option> standardalternativet når 
+      programmer kompileres. <xref linkend="gSSP"/> er en teknikk som forhindrer 
+      endring av programflyten ved å ødelegge parameterstakken.
     </para>
 
     <para>
       <parameter>--enable-languages=ada,c,c++</parameter>:
-      This command builds support for Ada, C, and C++. Refer to <ulink
+      Denne kommandoen bygger støtte for Ada, C og C++. Se <ulink
       url="&blfs-svn;/general/gcc.html"/>
-      to find what other languages are supported. Make sure to add
-      <parameter>ada</parameter> to the option if you recompile 
+      for å finne ut hvilke andre språk som støttes. Sørg for å legge til
+      <parameter>ada</parameter> til alternativet hvis du rekompilerer 
       GCC.
     </para>
 
     <para>
-      <command>ulimit -s 32768</command>: This command prevents several
-      tests from running out of stack space.
+      <command>ulimit -s 32768</command>: Denne kommandoen hindrer at flere 
+      tester går tom for stabelplass.
     </para>
 
     <para>
-      <command>make -k check</command>: This command runs the test suite
-      without stopping if any errors are encountered.
+      <command>make -k check</command>: Denne kommandoen kjører testpakken 
+      uten å stoppe hvis det oppstår feil.
     </para>
 
     <para>
-      <command>../contrib/test_summary</command>: This command will produce
-      a summary of the test suite results. You can append <command>| grep
-      -A7 Summ</command> to the command to produce an even more condensed
-      version of the summary. You may also wish to redirect the output
-      to a file for review and comparison later on.
+      <command>../contrib/test_summary</command>: Denne kommandoen vil produsere 
+      et sammendrag av resultatene fra testpakken. Du kan legge til 
+      <command>| grep -A7 Summ</command> til kommandoen for å produsere en enda 
+      mer kondensert versjon av sammendraget. Du kan også omdirigere resultatet 
+      til en fil for gjennomgang og sammenligning senere.
     </para>
 
     <para>
-      <command>mv -v /usr/lib/*gdb.py ...</command>: The installation
-      stage puts some files used by gdb under the
-      <filename class="directory">/usr/lib</filename> directory. This generates
-      spurious error messages when performing <command>ldconfig</command>. This
-      command moves the files to another location.
+      <command>mv -v /usr/lib/*gdb.py ...</command>: Installasjonsfasen 
+      plasserer noen filer som brukes av gdb under
+      <filename class="directory">/usr/lib</filename> mappen. Dette genererer 
+      falske feilmeldinger når du utfører <command>ldconfig</command>. Denne 
+      kommandoen flytter filene til et annet sted.
     </para>
 
     <para>
       <command>chown -v -R root:root /usr/lib/gcc/*linux-gnu/...</command>:
-      If the package is built by a user other than root, the ownership of the
-      installed <filename class="directory">include</filename> directory (and
-      its content) will be incorrect. This command changes the ownership to the
-      &root; user and group.
+      Hvis pakken er bygget av en annen bruker enn root, vil eierskapet til den 
+      installerte <filename class="directory">include</filename> mappen (og 
+      innholdet) vil være feil. Denne kommandoen endrer eierskapet til
+      &root; bruker og gruppe.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
@@ -483,28 +482,28 @@ rm -v testgnat*</userinput></screen>
           gnatlink,
           gnatls,
           gnatmake,
-          gnatname, and
+          gnatname, og
           gnatprep
         </seg>
         <seg>
-          libgnarl and libgnat in <filename class="directory">
+          libgnarl og libgnat i <filename class="directory">
           /usr/lib/gcc/&lt;arch-triplet&gt;/&gcc-version;/adalib</filename>
         </seg>
         <seg>
           /usr/lib/gcc/&lt;arch-triplet&gt;/&gcc-version;/ada{include,lib}
-          and /usr/lib/gcc/&lt;arch-triplet&gt;/&gcc-version;/plugin/include/ada
+          og /usr/lib/gcc/&lt;arch-triplet&gt;/&gcc-version;/plugin/include/ada
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <para>
-      Only the Ada specific files are listed here. Others can be found at
+      Bare de Ada spesifikke filene er oppført her. Andre finner du på
       <ulink url="&lfs-root;/chapter08/gcc.html#contents-gcc"/>
-      as they were initially installed during the building of LFS.
+      slik de opprinnelig ble installert under byggingen av LFS.
     </para>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -512,8 +511,8 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnat</command></term>
         <listitem>
           <para>
-            is a wrapper that accepts a number of commands and calls
-            the corresponding tool from the list below
+            er en innpakning som aksepterer en rekke kommandoer og kaller det 
+            tilsvarende verktøyet fra listen nedenfor
           </para>
           <indexterm zone="gnat gnat-prog">
             <primary sortas="b-gnat">gnat</primary>
@@ -525,7 +524,7 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatbind</command></term>
         <listitem>
           <para>
-            is used to bind compiled objects
+            brukes til å binde kompilerte objekter
           </para>
           <indexterm zone="gnat gnatbind">
             <primary sortas="b-gnatbind">gnatbind</primary>
@@ -537,8 +536,8 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatchop</command></term>
         <listitem>
           <para>
-            is useful for renaming files to meet the standard
-            Ada default file naming conventions
+            er nyttig for å gi filer nytt navn for å oppfylle standard 
+            Ada standard filnavngivningskonvensjoner
           </para>
           <indexterm zone="gnat gnatchop">
             <primary sortas="b-gnatchop">gnatchop</primary>
@@ -550,8 +549,8 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatclean</command></term>
         <listitem>
           <para>
-            is used to remove files associated with a
-            GNAT project
+            brukes til å fjerne filer tilknyttet et 
+            GNAT prosjekt
           </para>
           <indexterm zone="gnat gnatclean">
             <primary sortas="b-gnatclean">gnatclean</primary>
@@ -563,8 +562,8 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatkr</command></term>
         <listitem>
           <para>
-            is used to determine the crunched name for a given file, when
-            crunched to a specified maximum length
+            brukes til å bestemme det pakkenavnet for en gitt fil, 
+            når den pakkes til en spesifisert maksimal lengde
           </para>
           <indexterm zone="gnat gnatkr">
             <primary sortas="b-gnatkr">gnatkr</primary>
@@ -576,7 +575,7 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatlink</command></term>
         <listitem>
           <para>
-            is used to link programs and build an executable file
+            brukes til å koble sammen programmer og bygge en kjørbar fil
           </para>
           <indexterm zone="gnat gnatlink">
             <primary sortas="b-gnatlink">gnatlink</primary>
@@ -588,7 +587,7 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatls</command></term>
         <listitem>
           <para>
-            is the compiled unit browser
+            er den kompilerte enhetsleseren
           </para>
           <indexterm zone="gnat gnatls">
             <primary sortas="b-gnatls">gnatls</primary>
@@ -600,8 +599,8 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatmake</command></term>
         <listitem>
           <para>
-            is the Ada compiler, which performs
-            compilation, binding and linking
+            er Ada kompilatoren, som utfører kompilering, 
+            binding og lenking
           </para>
           <indexterm zone="gnat gnatmake">
             <primary sortas="b-gnatmake">gnatmake</primary>
@@ -613,8 +612,8 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatname</command></term>
         <listitem>
           <para>
-            will list the files associated with a
-            GNAT project
+            vil liste opp filene som er tilknyttet et 
+            GNAT prosjekt
           </para>
           <indexterm zone="gnat gnatname">
             <primary sortas="b-gnatname">gnatname</primary>
@@ -626,7 +625,7 @@ rm -v testgnat*</userinput></screen>
         <term><command>gnatprep</command></term>
         <listitem>
           <para>
-            is the GNAT external preprocessor
+            er den eksterne forprosessoren for GNAT
           </para>
           <indexterm zone="gnat gnatprep">
             <primary sortas="b-gnatprep">gnatprep</primary>
