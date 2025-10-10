@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
@@ -15,17 +15,17 @@
   <title>Java-&java-version;+&java-build;</title>
 
   <indexterm zone="java">
-    <primary sortas="a-java">JDK Binary</primary>
+    <primary sortas="a-java">JDK Binær</primary>
   </indexterm>
 
 
   <sect2>
-    <title>About Java</title>
+    <title>Om Java</title>
     <para>
-      Java is different from most of the packages in the LFS books. It
-      is a programming language that works with files of bytecode to obtain
-      instructions and executes them in a Java Virtual Machine (JVM). An
-      introductory java program looks like:
+      Java er forskjellig fra de fleste pakkene i LFS bøkene. Det er et 
+      programmeringsspråk som jobber med bytekodefiler for å hente 
+      instruksjoner og utfører dem i en Java Virtual Machine (JVM). 
+      Et introduksjonsprogram i Java ser slik ut:
     </para>
 
 <screen><literal>public class HelloWorld
@@ -37,85 +37,85 @@
 }</literal></screen>
 
     <para>
-      This program is saved as <filename>HelloWorld.java</filename>. The
-      file name, <emphasis>HelloWorld</emphasis>, must match the class name.
-      It is then converted into byte code with
-      <command>javac HelloWorld.java</command>. The output file is
-      <filename>HelloWorld.class</filename>. The program is executed with
-      <command>java HelloWorld</command>. This creates a JVM and runs the
-      code. The 'class' extension must not be specified.
+      Dette programmet er lagret som <filename>HelloWorld.java</filename>. 
+      Filnavnet, <emphasis>HelloWorld</emphasis>, må samsvare med klassenavnet. 
+      Den konverteres deretter til bytekode med
+      <command>javac HelloWorld.java</command>. Utdatafilen er
+      <filename>HelloWorld.class</filename>. Programmet utføres med
+      <command>java HelloWorld</command>. Dette oppretter en JVM og kjører 
+      koden. 'class' utvidelsen må ikke spesifiseres.
     </para>
 
     <para>
-      Several class files can be combined into one file with the
-      <command>jar</command> command. This is similar to the standard
-      <command>tar</command> command. For instance, the command
-      <command>jar cf myjar.jar *.class</command> will combine all class files
-      in a directory into one jar file. These act as library files.
+      Flere klassefiler kan kombineres til en fil med
+      <command>jar</command> kommandoen. Dette ligner på standard 
+      <command>tar</command> kommandoen. For eksempel kommandoen
+      <command>jar cf myjar.jar *.class</command> vil kombinere alle klassefiler 
+      i en mappe til en jarfil. Disse fungerer som bibliotekfiler.
     </para>
 
     <para>
-      The JVM can search for and use classes in jar files automatically.
-      It uses the <envar>CLASSPATH</envar> environment variable to search for
-      jar files. This is a standard list of colon-separated directory names
-      similar to the <envar>PATH</envar> environment variable.
+      JVM-en kan søke etter og bruke klasser i jar filer automatisk. Den 
+      bruker <envar>CLASSPATH</envar> miljøvariabelen for å søke etter 
+      jarfiler. Dette er en standardliste med kolonseparerte mappenavn lik 
+      <envar>PATH</envar> miljøvariabelen.
     </para>
 
   </sect2>
 
-  <sect2 id="java-bin" xreflabel="Java Binary" role="package">
-    <title>Binary JDK Information</title>
+  <sect2 id="java-bin" xreflabel="Java Bin�r" role="package">
+    <title>Binær JDK Informasjon</title>
 
     <para>
-      Creating a JVM from source requires a set of circular dependencies.
-      The first thing that's needed is a set of programs called a Java
-      Development Kit (JDK).  This set of programs includes
+      å lage en JVM fra kildekode krever et sett med sirkulære avhengigheter. 
+      Det første som trengs er et sett med programmer kalt et Java Development 
+      Kit (JDK). Dette settet med programmer inkluderer
       <command>java</command>, <command>javac</command>,
-      <command>jar</command>, and several others. It also includes several
-      base <emphasis>jar</emphasis> files.
+      <command>jar</command>, og flere andre. Den inkluderer også flere 
+      grunnleggende <emphasis>jar</emphasis> filer.
     </para>
 
     <para>
-      To start, we set up a binary installation of the JDK created
-      by the SLFS editors. It is installed in the <filename>/opt</filename>
-      directory to allow for multiple installations, including a source based
-      version.
+      For å starte setter vi opp en binærinstallasjon av JDK-en som ble 
+      opprettet av SLFS redaktørene. Den installeres i <filename>/opt</filename>
+      mappen for å tillate flere installasjoner, inkludert en 
+      kildebasert versjon.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Binary download: <ulink url="&openjdk-download-binary;"/>
+          Binær nedlasting: <ulink url="&openjdk-download-binary;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Java Binary Runtime Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Java binær kjøretidsavhengigheter</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
       <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>,
-      <ulink url="&blfs-svn;/general/giflib.html">giflib</ulink>, and
+      <ulink url="&blfs-svn;/general/giflib.html">giflib</ulink>, og
       <ulink url="&blfs-svn;/x/xorg7-lib.html">Xorg Libraries</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of the Java BinaryJDK</title>
+    <title>Installasjon av Java BinaryJDK</title>
 <!--
     <note>
       <para>
-        The tarball
-        <emphasis>openjdk-&java-version;_linux-x64_bin.tar.gz</emphasis> will
-        untar to the <emphasis>jdk-&java-version;</emphasis> directory.
+        Tarballen
+        <emphasis>openjdk-&java-version;_linux-x64_bin.tar.gz</emphasis> vil
+        pakke ut til <emphasis>jdk-&java-version;</emphasis> mappen.
       </para>
     </note>
 -->
     <para>
-      Begin by extracting the appropriate binary tarball for your
-      architecture and changing to the extracted directory. Install the binary
-      OpenJDK with the following commands as the
-      <systemitem class="username">root</systemitem> user:
+      Begynn med å pakke ut den passende binære tarballen for din arkitektur 
+      og endre til den utpakkede mappen. Installer den binære OpenJDK med 
+      følgende kommandoer som
+      <systemitem class="username">root</systemitem> bruker:
     </para>
 
 <screen role="root"><userinput>install -vdm755 /opt/openjdk-&java-version;-bin &amp;&amp;
@@ -123,16 +123,16 @@ mv -v * /opt/openjdk-&java-version;-bin         &amp;&amp;
 chown -R root:root /opt/openjdk-&java-version;-bin</userinput></screen>
 
     <para>
-      The binary version is now installed. You may create a symlink to that
-      version by issuing, as the <systemitem class="username">root</systemitem>
-      user:
+      Den binære versjonen er nå installert. Du kan opprette en symbollenke til 
+      den versjonen ved å utstede, som 
+      <systemitem class="username">root</systemitem> bruker:
     </para>
 
 <screen role="root"><userinput>ln -sfn openjdk-&java-version;-bin /opt/jdk</userinput></screen>
 
     <para>
-      You may now proceed to <xref linkend="ojdk-conf"/>, where the
-      instructions assume that the above link exists.
+      Du kan nå fortsette til <xref linkend="ojdk-conf"/>, der instruksjonene 
+      forutsetter at lenken ovenfor finnes.
     </para>
 
   </sect2>
