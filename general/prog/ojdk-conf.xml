@@ -1,26 +1,26 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 ]>
 
-<sect1 id="ojdk-conf" xreflabel="Configuring the JAVA environment">
+<sect1 id="ojdk-conf" xreflabel="Konfigurering av JAVA miljøet">
   <?dbhtml filename="ojdk-conf.html"?>
 
 
-  <title>Configuring the JAVA environment</title>
+  <title>Konfigurering av JAVA miljøet</title>
 
   <sect2 id="java-profile">
-    <title>Setting up the environment</title>
+    <title>Sette opp miljøet</title>
 
     <para>
-      After the package installation is complete, the next step is to make sure
-      that the system can properly find the files. If you set up your login
-      scripts as recommended in <ulink
-      url="&blfs-svn;/postlfs/profile.html">The Bash Shell Startup
-      Files</ulink>, update the environment by creating the
-      <filename>openjdk.sh</filename> script, as the &root; user:
+      Etter at pakkeinstallasjonen er fullført, er neste trinn å sørge for at 
+      systemet kan finne filene på riktig måte. Hvis du konfigurerer 
+      innloggingsskriptene dine som anbefalt i <ulink
+      url="&blfs-svn;/postlfs/profile.html">Oppstartsfilene til Bash 
+      Skallet</ulink>, oppdater miljøet ved å opprette
+      <filename>openjdk.sh</filename> skriptet, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>cat &gt; /etc/profile.d/openjdk.sh &lt;&lt; "EOF"
@@ -54,9 +54,9 @@ unset AUTO_CLASSPATH_DIR dir jar
 EOF</userinput></screen>
 
     <para>
-      If <ulink url="&blfs-svn;/postlfs/sudo.html">Sudo</ulink> is
-      installed, the super user should have access to the above variables.
-      Execute the following commands as the &root; user:
+      Hvis <ulink url="&blfs-svn;/postlfs/sudo.html">Sudo</ulink> er
+      installert, skal superbrukeren ha tilgang til variablene ovenfor. 
+      Kjør følgende kommandoer som &root; bruker:
     </para>
 
 <screen role="root"><userinput>cat &gt; /etc/sudoers.d/java &lt;&lt; "EOF"
@@ -65,9 +65,9 @@ Defaults env_keep += CLASSPATH</literal>
 EOF</userinput></screen>
 
     <para>
-      To use <command>mandb</command> to include the OpenJDK man pages
-      in its database, issue, as the <systemitem class="username">root
-      </systemitem> user:
+      For å få <command>mandb</command> til å inkludere OpenJDK manualsidene i 
+      databasen, utfør, som <systemitem class="username">root
+      </systemitem> bruker:
     </para>
 
 <screen role="root"><userinput>cat &gt;&gt; /etc/man_db.conf &lt;&lt; "EOF" &amp;&amp;
@@ -85,42 +85,42 @@ mandb -c /opt/jdk/man</userinput></screen>
 
   </sect2>
 
-  <sect2 id="ojdk-certs" xreflabel="installing the JVM Certificate Authority Certificates">
+  <sect2 id="ojdk-certs" xreflabel="installere JVM sertifiseringsinstansens sertifikater">
 
-    <title>Setting up the Certificate Authority Certificates for Java</title>
+    <title>Konfigurere sertifikatmyndighetens sertifikater for Java</title>
 
     <para>
-      OpenJDK uses its own format for the
-      CA certificates. The Java security modules use
-      <envar>$JAVA_HOME</envar><filename>/lib/security/cacerts</filename> by
-      default. In order to keep all the certificates in one place, we use
-      <filename>/etc/pki/tls/java/cacerts</filename>. The instructions
-      on the <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink> page
-      previously created the file located in <filename
-      class="directory">/etc/pki/tls/java</filename>. Set up a symlink in the
-      default location as the &root; user:
+      OpenJDK bruker sitt eget format for 
+      CA sertifikater. Java sikkerhetsmodulene bruker
+      <envar>$JAVA_HOME</envar><filename>/lib/security/cacerts</filename> som
+      standard. For å ha alle sertifikatene på ett sted, bruker vi
+      <filename>/etc/pki/tls/java/cacerts</filename>. Instruksjonene 
+      på <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink> siden
+      opprettet tidligere filen som ligger i <filename
+      class="directory">/etc/pki/tls/java</filename>. Sett opp en symbollenke 
+      på standardplasseringen som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts</userinput></screen>
 
     <para>
-      Use the following command to check if the <filename>cacerts</filename>
-      file has been successfully installed:
+      Bruk følgende kommando for å sjekke om <filename>cacerts</filename>
+      filen er installert:
     </para>
 
 <screen role="root"><userinput>/opt/jdk/bin/keytool -list -cacerts</userinput></screen>
 
     <para>
-      At the prompt <computeroutput>Enter keystore password:</computeroutput>,
-      enter <userinput>changeit</userinput> (the default) or just press the
-      <quote>Enter</quote> key. If the <filename>cacerts</filename> file was
-      installed correctly, you will see a list of the certificates with
-      related information for each one. If not, you need to reinstall them.
+      Ved ledeteksten <computeroutput>Enter keystore password:</computeroutput>,
+      skriv <userinput>changeit</userinput> (standard) eller bare trykk på
+      <quote>retur</quote> tasten. Hvis <filename>cacerts</filename> filen ble 
+      installert riktig, vil du se en liste over sertifikatene med relatert 
+      informasjon for hvert enkelt. Hvis ikke, må du installere dem på nytt.
     </para>
 
     <para>
-      If you later install a new JVM, you just have to create the symlink in
-      the default location to be able to use the cacerts.
+      Hvis du senere installerer en ny JVM, trenger du bare å opprette 
+      symbollinken på standardplasseringen for å kunne bruke cacertene.
     </para>
 
   </sect2>
