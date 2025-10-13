@@ -8,10 +8,10 @@
 <chapter id="general-prog">
   <?dbhtml filename="prog.html" ?>
 
-  <title>Programming</title>
+  <title>Programmering</title>
 
   <para>
-    This chapter covers some extra programming and developer tools.
+    Dette kapittelet dekker noen ekstra programmerings- og utviklerverktøy.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="befunge.xml"/>
