@@ -18,23 +18,23 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to socat</title>
+    <title>Introduksjon til socat</title>
 
     <para>
-      The socat package provides a multipurpose relay tool.
+      Socat pakken tilbyr et flerbruks reléverktøy.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&socat-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&socat-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">socat Dependencies</bridgehead>
+    <bridgehead renderas="sect3">socat Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="https://packages.debian.org/sid/libwrap0">tcp-wrappers</ulink>
     </para>
@@ -42,11 +42,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of socat</title>
+    <title>Installasjon av socat</title>
 
     <para>
-      Install socat by running the following
-      commands:
+      Installer socat ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr \
@@ -54,7 +54,7 @@
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -62,38 +62,38 @@ make</userinput></screen>
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           filan,
           procan,
-          socat (link to socat1),
+          socat (lenke til socat1),
           socat-broker.sh,
           socat-chain.sh,
-          socat-mux.sh, and
+          socat-mux.sh, og
           socat1
         </seg>
       </seglistitem>
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -101,7 +101,7 @@ make</userinput></screen>
         <term><command>filan</command></term>
         <listitem>
          <para>
-           is a helper utility for file analysis
+           er et hjelpeverktøy for filanalyse
          </para>
           <indexterm zone="socat filan">
             <primary sortas="b-filan">filan</primary>
@@ -113,7 +113,7 @@ make</userinput></screen>
         <term><command>procan</command></term>
         <listitem>
          <para>
-           is a helper utility for process analysis
+           er et hjelpeverktøy for prosessanalyse
          </para>
           <indexterm zone="socat procan">
             <primary sortas="b-procan">procan</primary>
@@ -125,7 +125,7 @@ make</userinput></screen>
         <term><command>socat</command></term>
         <listitem>
          <para>
-           is the multipurpose relay
+           er flerbruksreléet
          </para>
           <indexterm zone="socat socat-bin">
             <primary sortas="b-socat">socat</primary>
@@ -137,7 +137,7 @@ make</userinput></screen>
         <term><command>socat-broker.sh</command></term>
         <listitem>
          <para>
-           is a shell script for performing group communications (aka brokering)
+           er et skallskript for å utføre gruppekommunikasjon (aka brokering)
          </para>
           <indexterm zone="socat socat-broker.sh">
             <primary sortas="b-socat-broker.sh">socat-broker.sh</primary>
@@ -149,7 +149,7 @@ make</userinput></screen>
         <term><command>socat-chain.sh</command></term>
         <listitem>
          <para>
-           is a (beta) shell script for building a chain of socat instances
+           er et (beta) skallskript for å bygge en kjede av socat instanser
          </para>
           <indexterm zone="socat socat-chain.sh">
             <primary sortas="b-socat-chain.sh">socat-chain.sh</primary>
@@ -161,7 +161,7 @@ make</userinput></screen>
         <term><command>socat-mux.sh</command></term>
         <listitem>
          <para>
-           is a shell script for establishing many-to-one, one-to-all communications
+           er et skallskript for å etablere mange-til-en-, én-til-alle kommunikasjon
          </para>
           <indexterm zone="socat socat-mux.sh">
             <primary sortas="b-socat-mux.sh">socat-mux.sh</primary>
