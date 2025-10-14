@@ -18,17 +18,17 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to xtrace</title>
+    <title>Introduksjon til xtrace</title>
 
     <para>
-      The xtrace package provides a utility to track X11 messages being
-      exchanged between a client and an X server.
+      Xtrace pakken tilbyr et verktøy for å spore X11 meldinger som utveksles 
+      mellom en klient og en X server.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xtrace-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&xtrace-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -42,10 +42,10 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of xtrace</title>
+    <title>Installasjon av xtrace</title>
 
     <para>
-      Compile xtrace by running the following commands:
+      Kompiler xtrace ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>autoreconf -fiv &amp;&amp;
@@ -53,8 +53,8 @@
 make</userinput></screen>
 
     <para>
-      In order to avoid conflicts with the xtrace binary installed by Glibc,
-      execute the following commands as the &root; user to install the package:
+      For å unngå konflikter med xtrace binærfilen som er installert av Glibc, 
+      kjør følgende kommandoer som &root; bruker for å installere pakken:
     </para>
 
 <screen role="root"><userinput>DESTDIR=$PWD/DESTDIR make install &amp;&amp;
@@ -65,19 +65,19 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
           xtrace_x11
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/xtrace
@@ -86,7 +86,7 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -94,7 +94,7 @@ cp -vR DESTDIR/usr/* /usr</userinput></screen>
         <term><command>xtrace_x11</command></term>
         <listitem>
          <para>
-           traces X11 messages, most often used for debugging
+           sporer X11 meldinger, oftest brukt til feilsøking
          </para>
           <indexterm zone="xtrace xtrace-prog">
             <primary sortas="b-xtrace_x11">xtrace_x11</primary>
