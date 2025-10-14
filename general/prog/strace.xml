@@ -18,23 +18,23 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to strace</title>
+    <title>Introduksjon til strace</title>
 
     <para>
-      The strace package provides a diagnostic, debugging, and instructional userspace utility.
+      Strace pakken tilbyr et verktøy for diagnostikk, feilsøking og instruksjonsbruk i brukerområdet.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&strace-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&strace-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">strace Dependencies</bridgehead>
+    <bridgehead renderas="sect3">strace Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>
     </para>
@@ -42,11 +42,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of strace</title>
+    <title>Installasjon av strace</title>
 
     <para>
-      Install strace by running the following
-      commands:
+      Installer strace ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure --prefix=/usr \
@@ -54,7 +54,7 @@
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -62,45 +62,45 @@ make</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>--enable-mpers=no</parameter>: By default, strace is built to support both the m32 and mx32 personalities. This parameter disables that behavior.
+      <parameter>--enable-mpers=no</parameter>: Som standard er strace bygget for å støtte både m32 og mx32. Denne parameteren deaktiverer denne oppførselen.
     </para>
 
     <para>
-      <parameter>--with-libunwind</parameter>: This parameter builds strace with libunwind support.
+      <parameter>--with-libunwind</parameter>: Denne parameteren bygger strace med støtte for libunwind.
     </para>
 
     <note><para>
-      Invoke <userinput>./configure --help</userinput> for a full list of options.
+      Kjør <userinput>./configure --help</userinput> for en fullstendig liste over alternativer.
     </para></note>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          strace and strace-log-merge
+          strace og strace-log-merge
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -108,7 +108,7 @@ make</userinput></screen>
         <term><command>strace</command></term>
         <listitem>
          <para>
-           traces system calls and signals, most often used for debugging
+           sporer systemkall og signaler, oftest brukt til feilsøking
          </para>
           <indexterm zone="strace strace-prog">
             <primary sortas="b-strace">strace</primary>
@@ -120,8 +120,8 @@ make</userinput></screen>
         <term><command>strace-log-merge</command></term>
         <listitem>
          <para>
-           merges the output of <command>strace -ff -tt</command>, prepends PID
-           to each lines, then sorts the result using time stamps
+           slår sammen utdataene fra <command>strace -ff -tt</command>, legger til PID" 
+           til hver linje, og sorterer deretter resultatet ved hjelp av tidsstempler
          </para>
           <indexterm zone="strace strace-log-merge">
             <primary sortas="b-strace-log-merge">strace-log-merge</primary>
