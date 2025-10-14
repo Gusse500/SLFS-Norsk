@@ -11,7 +11,7 @@
   <title>Programmering</title>
 
   <para>
-    Dette kapittelet dekker noen ekstra programmerings- og utviklerverktøy.
+    Dette kapittelet dekker noen ekstra verktøy for programmering og utvikling.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="befunge.xml"/>
