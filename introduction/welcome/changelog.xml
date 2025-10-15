@@ -43,6 +43,9 @@
       <para>14. oktober 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - LADSPA-SDK: Lagt til.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Multimediebiblioteker: Flyttet til II. Generelle 
           biblioteker og verktøy.para>
         </listitem>

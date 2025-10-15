@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ladspa-sdk-download-http
+    "http://www.ladspa.org/download/ladspa_sdk_&ladspa-sdk-version;.tgz">
+]>
+
+<sect1 id="ladspa-sdk" xreflabel="LADSPA-SDK-&ladspa-sdk-version;">
+  <?dbhtml filename="ladspa-sdk.html"?>
+
+  <title>LADSPA-SDK-&ladspa-sdk-version;</title>
+
+  <indexterm zone="ladspa-sdk">
+    <primary sortas="a-ladspa-sdk">LADSPA-SDK</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til LADSPA-SDK</title>
+
+    <para>
+      Linux Audio Developer's Simple Plugin API (LADSPA) standarden brukes til 
+      å legge til flere effekter og lydprosessorer i ulike verktøy og 
+      biblioteker. LADSPA SDK inneholder flere programtillegg og grensesnittets 
+      deklarasjonsfil som kan brukes av flere pakker. <ulink
+      url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink> og <ulink
+      url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> er kjente eksempler. For 
+      å ha støtte i disse pakkene, må du først installere denne pakken for å 
+      ikke bare tilby API-et, men også programtilleggene.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&ladspa-sdk-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <note><para>
+      Nettstedet som er vert for nedlastingen har vært kjent for å gå offline. 
+      I et slikt tilfelle, gå til <ulink
+      url="https://web.archive.org/">WayBack Machine</ulink> og lim inn 
+      nedlastingslenken i feltet. Derfra finner du et øyeblikksbilde, og det 
+      skal gi en passende lenke å laste ned fra.
+    </para></note>
+
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Påkrevd oppdatering:
+          <ulink url="&patch-root;/ladspa/ladspa_sdk_&ladspa-sdk-version;-arch-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">LADSPA-SDK Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/libsndfile.html">libsndfile</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av LADSPA-SDK</title>
+
+    <para>
+      Installer en oppdatering som fikser en minnelekkasje, en koblingsfeil 
+      og Makefile flagg:
+    </para>
+
+<screen
+  remap="pre"><userinput>patch -Np1 -i ../ladspa_sdk_&ladspa-sdk-version;-arch-1.patch</userinput></screen>
+
+    <para>
+      Installer LADSPA-SDK by ved å kjøre følgende 
+      kommandoer:
+    </para>
+
+<screen><userinput>make -C src targets</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make -C src install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          analyseplugin,
+          applyplugin, og
+          listplugins
+        </seg>
+        <seg>
+          amp,
+          delay,
+          filter,
+          noise, og
+          sine (i /usr/lib/ladspa)
+        </seg>
+        <seg>
+          /usr/lib/ladspa
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+       <varlistentry id="analyseplugin">
+        <term><command>analyseplugin</command></term>
+        <listitem>
+          <para>
+            analyserer en gitt LADSPA programtillegg
+          </para>
+          <indexterm zone="ladspa-sdk analyseplugin">
+            <primary sortas="b-analyseplugin">analyseplugin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="applyplugin">
+        <term><command>applyplugin</command></term>
+        <listitem>
+          <para>
+            sender over en lydfil med en gitt programtillegg og sender ut 
+            den nye lydfilen
+          </para>
+          <indexterm zone="ladspa-sdk applyplugin">
+            <primary sortas="b-applyplugin">applyplugin</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="listplugins">
+        <term><command>listplugins</command></term>
+        <listitem>
+          <para>
+            gir en liste over tilgjengelige LADSPA programtillegg
+          </para>
+          <indexterm zone="ladspa-sdk listplugins">
+            <primary sortas="b-listplugins">listplugins</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
