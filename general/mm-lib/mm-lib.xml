@@ -8,11 +8,11 @@
 <chapter id="graph-mm-lib">
   <?dbhtml filename="mm-lib.html"?>
 
-  <title>Multimedia Libraries</title>
+  <title>Multimediebiblioteker</title>
 
   <para>
-    This chapter covers multimedia libraries that may get used by other
-    packages in this or the other LFS books.
+    Dette kapittelet dekker multimediebiblioteker som kan brukes av andre 
+    pakker i denne eller de andre LFS bøkene.
   </para>
 
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rubberband.xml"/>

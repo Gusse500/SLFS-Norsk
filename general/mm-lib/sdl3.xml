@@ -17,50 +17,50 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to SDL3</title>
+    <title>Introduksjon til SDL3</title>
 
     <para>
-      The Simple DirectMedia Layer Version 3 (SDL3
-      for short) is a cross-platform library designed to make it easy to write
-      multimedia software, such as games and emulators. It is the new version
-      of SDL and provides more features than SDL2.
+      Simple DirectMedia Layer versjon 3 (forkortet SDL3) er et 
+      bibliotek på tvers av plattformer som er utformet for å gjøre 
+      det enkelt å skrive multimedieprogramvare, som spill og emulatorer. 
+      Det er den nye versjonen av SDL og tilbyr flere funksjoner enn SDL2.
     </para>
 
     <tip><para>
-      After you install this package, you should also install <xref
-      linkend="sdl2"/> for SDL2 support if you need
-      it. The amount of packages that use this package is very low so consider
-      SDL2 support a requirement.
+      Etter at du har installert denne pakken, bør du også installere <xref
+      linkend="sdl2"/> for SDL2støtte hvis du trenger det. 
+      Antall pakker som bruker denne pakken er svært lavt, 
+      så vurder SDL2 støtte som et krav.
     </para></tip>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sdl3-download;"/>
+          Nedlasting (HTTP): <ulink url="&sdl3-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
 <!--
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/SDL3-&sdl3-version;-x-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 -->
 
-    <bridgehead renderas="sect3">SDL3 Dependencies</bridgehead>
+    <bridgehead renderas="sect3">SDL3 Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
       &gbm;,
@@ -73,15 +73,15 @@
       <ulink
         url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      and <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      og <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> (with
+      <ulink url="&arch-pkgs;/extra/x86_64/hidapi/">hidapi</ulink> (med
       <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>),
       <ulink url="&blfs-svn;/general/ibus.html">ibus</ulink>,
-      <ulink url="https://jackaudio.org/">JACK2</ulink>, and
+      <ulink url="https://jackaudio.org/">JACK2</ulink>, og
       <ulink url="https://sndio.org/">sndio</ulink>
     </para>
 
@@ -91,8 +91,8 @@
     <title>Installation of SDL3</title>
 
     <para>
-      Install SDL3 by running the
-      following commands:
+      Installer SDL3 ved å kjøre 
+      følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -108,13 +108,13 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      If you want to build the tests, issue the following commands:
+      Hvis du vil bygge testene, utsted følgende kommandoer:
     </para>
 
 <!-- Use computeroutput, unlikely many users want to do this. -->
@@ -133,25 +133,25 @@ ninja &amp;&amp;
 DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
 
     <para>
-      Now you will be able to run the tests in <filename
-      class="directory">TESTS/usr/libexec/installed-tests/SDL3</filename>. You
-      will have to run the tests individually. Some of them may need to be
-      manually killed and audio will need to be working so that you can hear
-      from the default audio output. Make sure SDL3
-      is installed before running the tests, or use the
-      <envar>LD_PRELOAD</envar> variable to preload <filename
-      class="libraryfile">libSDL3.so</filename> from <filename
-      class="directory">../build</filename> for each test.
+      Nå vil du kunne kjøre testene i <filename
+      class="directory">TESTS/usr/libexec/installed-tests/SDL3</filename>. Du 
+      må kjøre testene individuelt. Noen av dem må kanskje slås 
+      av manuelt, og lyden må fungere slik at du kan høre fra 
+      standard lydutgang. Sørg for at SDL3 er installert før du 
+      kjører testene, eller bruk
+      <envar>LD_PRELOAD</envar> variabel for å forhåndslaste <filename
+      class="libraryfile">libSDL3.so</filename> fra <filename
+      class="directory">../build</filename> for hver test.
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>lib32 Installation of SDL3</title>
+    <title>lib32 Installasjon av SDL3</title>
 
     <para>
-      Install lib32-SDL3 by running the
-      following commands:
+      Installer lib32-SDL3 ved å kjøre 
+      følgende kommandoer:
     </para>
 
 <screen><userinput>cd ../                   &amp;&amp;
@@ -172,7 +172,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>DESTDIR=$PWD/DESTDIR ninja install      &amp;&amp;
@@ -183,38 +183,38 @@ ldconfig</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D SDL_TEST_LIBRARY=OFF</parameter>: This parameter disables
-      building an unnecessary static library meant for the tests. It gets built
-      in the tests compilation.
+      <parameter>-D SDL_TEST_LIBRARY=OFF</parameter>: Denne parameteren 
+      deaktiverer bygging av et unødvendig statisk bibliotek beregnet for 
+      testene. Det bygges i testkompilasjonen.
     </para>
 
     <para>
-      <parameter>-D SDL_STATIC=OFF</parameter>: This parameter disables
-      building static libraries.
+      <parameter>-D SDL_STATIC=OFF</parameter>: Denne parameteren 
+      deaktiverer bygging av statiske biblioteker.
     </para>
 
     <para>
-      <parameter>-D SDL_RPATH=OFF</parameter>: This parameter disables
-      installing with rpath. It can cause security issues otherwise.
+      <parameter>-D SDL_RPATH=OFF</parameter>: Denne parameteren deaktiverer 
+      installasjon med rpath. Ellers kan det forårsake sikkerhetsproblemer.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
-        <seg>None</seg>
+        <seg>Ingen</seg>
         <seg>libSDL3</seg>
-        <seg>/usr/include/SDL3 and
+        <seg>/usr/include/SDL3 og
              /usr/lib/cmake/SDL3</seg>
         <!-- We technically have /usr/share/licenses/sdl3, but I don't think
              we really need to document its presence. -->
@@ -222,7 +222,7 @@ ldconfig</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -230,9 +230,9 @@ ldconfig</userinput></screen>
         <term><filename class="libraryfile">libSDL3</filename></term>
         <listitem>
           <para>
-            contains functions that provide low level access to audio,
-            keyboard, mouse, joystick, 3D hardware via OpenGL, and
-            2D frame buffer across multiple platforms
+            inneholder funksjoner som gir lavnivåtilgang til lyd, 
+            tastatur, mus, joystick, 3D-maskinvare via OpenGL og 
+            2D-rammebuffer på tvers av flere plattformer
           </para>
           <indexterm zone="sdl3 libsdl3">
             <primary sortas="c-libsdl3">libSDL3</primary>

@@ -17,52 +17,52 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to sdl2-compat</title>
+    <title>Introduksjon til sdl2-compat</title>
 
     <para>
-      The Simple DirectMedia Layer Version 2 (SDL2
-      for short) is a cross-platform library designed to make it easy to write
-      multimedia software, such as games and emulators. This package is a
-      compatibility layer and uses <xref linkend="sdl3"/> under the hood. It
-      provides support for packages that use SDL2 and have not switched to
-      SDL3, yet.
+      Simple DirectMedia Layer versjon 2 (forkortet SDL2) er et bibliotek på 
+      tvers av plattformer som er utformet for å gjøre det enkelt å skrive 
+      multimedieprogramvare, for eksempel spill og emulatorer. Denne pakken er 
+      et kompatibilitetslag og bruker <xref linkend="sdl3"/> under panseret. 
+      Den gir støtte for pakker som bruker SDL2 og ikke har byttet til 
+      SDL3 ennå.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sdl2-download;"/>
+          Nedlasting (HTTP): <ulink url="&sdl2-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
 <!--
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch):
+          Påkrevd oppdatering):
            <ulink url="&patch-root;/sdl2-compat-&sdl2-version;-x-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 -->
-    <bridgehead renderas="sect3">sdl2-compat Dependencies</bridgehead>
+    <bridgehead renderas="sect3">sdl2-compat Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> and
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink> og
       <xref linkend="sdl3"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of sdl2-compat</title>
+    <title>Installasjon av sdl2-compat</title>
 
     <para>
-      Install sdl2-compat by running the following
-      commands:
+      Installer sdl2-compat ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -78,14 +78,14 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
 rm -vf /usr/lib/libSDL2_test.a</userinput></screen>
 
     <para>
-      If you want to build the tests, issue the following commands:
+      Hvis du vil bygge testene, utsted følgende kommandoer:
     </para>
 
 <!-- Use computeroutput, unlikely many users want to do this. -->
@@ -104,25 +104,25 @@ ninja &amp;&amp;
 DESTDIR=$PWD/TESTS ninja install</computeroutput></screen>
 
     <para>
-      Now you will be able to run the tests in <filename
+      Nå vil du kunne kjøre testene i <filename
       class="directory">TESTS/usr/libexec/installed-tests/SDL2_compat</filename>.
-      You will have to run the tests individually. Some of them may need to be
-      manually killed and audio will need to be working so that you can hear
-      from the default audio output. Make sure
-      sdl2-compat is installed before running the
-      tests, or use the <envar>LD_PRELOAD</envar> variable to preload <filename
-      class="libraryfile">libSDL2.so</filename> from <filename
-      class="directory">../build</filename> for each test.
+      Du må kjøre testene individuelt. Noen av dem må kanskje avsluttes 
+      manuelt, og lyden må fungere slik at du kan høre fra standard lydutgang. 
+      Sørg for at sdl2-compat er installert før du 
+      kjører testene, eller bruk <envar>LD_PRELOAD</envar> 
+      variable to preload <filename
+      class="libraryfile">libSDL2.so</filename> fra <filename
+      class="directory">../build</filename> for hver test.
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>lib32 Installation of sdl2-compat</title>
+    <title>lib32 Installasjon av sdl2-compat</title>
 
     <para>
-      Install lib32-sdl2-compat by running the
-      following commands:
+      Installer lib32-sdl2-compat ved å kjøre 
+      følgende kommandoer:
     </para>
 
 <screen><userinput>cd ../                   &amp;&amp;
@@ -143,7 +143,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>DESTDIR=$PWD/DESTDIR ninja install      &amp;&amp;
@@ -155,45 +155,45 @@ ldconfig</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D SDL2COMPAT_STATIC=OFF</parameter>: This parameter disables
-      building the static libraries.
+      <parameter>-D SDL2COMPAT_STATIC=OFF</parameter>: Denne parameteren 
+      deaktiverer bygging av statiske biblioteker.
     </para>
 
     <para>
-      <parameter>-D SDL2COMPAT_TESTS=OFF</parameter>: This parameter disables
-      building the tests.
+      <parameter>-D SDL2COMPAT_TESTS=OFF</parameter>: Denne parameteren 
+      deaktiverer bygging av testene.
     </para>
 
     <para>
-      <command>rm -vf /usr/lib/libSDL2_test.a</command>: This command removes a
-      useless static library.
+      <command>rm -vf /usr/lib/libSDL2_test.a</command>: Denne kommandoen 
+      fjerner et ubrukelig statisk bibliotek.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Program</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>sdl2-config</seg>
         <seg>libSDL2</seg>
-        <seg>/usr/include/SDL2 and
+        <seg>/usr/include/SDL2 og
              /usr/lib/cmake/SDL2</seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -201,8 +201,8 @@ ldconfig</userinput></screen>
         <term><command>sdl2-config</command></term>
         <listitem>
           <para>
-            determines the compile and linker flags that should be used to
-            compile and link programs that use
+            bestemmer kompilering og lenker flaggene som skal brukes til å 
+            kompilere og lenke programmer som bruker
             <filename class="libraryfile">libSDL2</filename>
           </para>
           <indexterm zone="sdl2 sdl2-config">
@@ -215,9 +215,9 @@ ldconfig</userinput></screen>
         <term><filename class="libraryfile">libSDL2</filename></term>
         <listitem>
           <para>
-            contains functions that provide low level access to audio,
-            keyboard, mouse, joystick, 3D hardware via OpenGL, and
-            2D frame buffer across multiple platforms
+            inneholder funksjoner som gir lavnivåtilgang til lyd, tastatur, 
+            mus, joystick, 3D-maskinvare via OpenGL og 2D-rammebuffer på 
+            tvers av flere plattformer
           </para>
           <indexterm zone="sdl2 libsdl2">
             <primary sortas="c-libsdl2">libSDL2</primary>

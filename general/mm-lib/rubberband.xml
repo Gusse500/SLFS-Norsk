@@ -17,48 +17,48 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to rubberband</title>
+    <title>Introduksjon til rubberband</title>
 
     <para>
-      The rubberband package contains libraries and
-      utilities that can effectively stretch audio time-wise and modify the
-      pitch of a given audio file. This can be really useful when editing
-      videos through something like <ulink
-      url="&blfs-svn;/kde/kdenlive.html">kdenlive</ulink>, but can also be used
-      in other software such as <ulink
-      url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>. You will have to
-      recompile the software that can use it and may have to add options to
-      those packages to enable rubberband support.
+      Rubberband pakken inneholder biblioteker og verktøy som effektivt 
+      kan strekke lyd tidsmessig og endre tonehøyden til en gitt lydfil. 
+      Dette kan være veldig nyttig når du redigerer videoer gjennom noe 
+      sånt som <ulink
+      url="&blfs-svn;/kde/kdenlive.html">kdenlive</ulink>, men kan også brukes 
+      i annen programvare som f.eks. <ulink
+      url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>. Du må rekompilere 
+      programvaren som kan bruke den, og du må kanskje legge til alternativer i 
+      disse pakkene for å aktivere støtte for rubberband.
     </para>
 
     <tip><para>
-      In the case of kdenlive, it depends on
-      <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effects. As
-      such, you don't need to recompile kdenlive,
-      but you must recompile MLT with
-      rubberband support. Currently,
-      MLT autodetects if
-      rubberband is present, and will enable the
-      support automatically during configuration, so no additional options are
-      necessary.
+      Når det gjelder kdenlive, avhenger det av
+      <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effekter. Som 
+      sådan trenger du ikke å rekompilere kdenlive, 
+      men du må rekompilere MLT med rubberbandstøtte. 
+      For øyeblikket, oppdager MLT automatisk om 
+      rubberband er til stede, og vil aktivere 
+      støtten automatisk under konfigurasjonen, 
+      så ingen ytterligere alternativer er 
+      nødvendige.
     </para></tip>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&rubberband-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&rubberband-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">rubberband Dependencies</bridgehead>
+    <bridgehead renderas="sect3">rubberband Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/multimedia/libsndfile.html">libsndfile</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/general/boost.html">boost</ulink>,
       <ulink url="&blfs-svn;/general/fftw.html">fftw</ulink>,
@@ -66,25 +66,25 @@
       <ulink url="&arch-pkgs;/extra/x86_64/ladspa/">ladspa</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/lv2/">lv2</ulink>,
       <ulink url="&blfs-svn;/multimedia/libsamplerate.html">libsamplerate</ulink>,
-      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, and
+      <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>, og
       <ulink url="&arch-pkgs;/extra/x86_64/vamp-plugin-sdk/">vamp-plugin-sdk</ulink>
     </para>
 
     <note><para>
-      libsamplerate and
-      Speex can be used as resamplers instead
-      of the built-in implementation. Check
-      <quote>Command Explanations</quote> for more information.
+      libsamplerate og 
+      Speex kan brukes som resamplere i stedet 
+      for den innebygde implementeringen. Sjekk
+      <quote>Parameterforklaringer</quote> for mer informasjon.
     </para></note>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of rubberband</title>
+    <title>Installasjon av rubberband</title>
 
     <para>
-      Install rubberband by running the following
-      commands:
+      Installer rubberband ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -94,7 +94,7 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
@@ -103,34 +103,34 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <option>-D resampler=</option>: This option can be used to specify the
-      resampler to use. By default, it will use the built-in implementation.
-      You can specify <option>libsamplerate</option>, <option>speex</option>,
-      or <option>speexdsp</option> to override the default. If you are going
-      to do this, it is recommended to use <option>libsamplerate</option>.
+      <option>-D resampler=</option>: Dette alternativet kan brukes til å 
+      spesifisere resampleren som skal brukes. Som standard vil den bruke den 
+      innebygde implementeringen. Du kan spesifisere <option>libsamplerate</option>, <option>speex</option>,
+      eller <option>speexdsp</option> for å overstyre standardinnstillingen. 
+      Hvis du skal gjøre dette, anbefales det å bruke <option>libsamplerate</option>.
     </para>
 
     <para>
-      <command>rm -vf /usr/lib/librubberband.a</command>: Removes a useless
-      static library.
+      <command>rm -vf /usr/lib/librubberband.a</command>: Fjerner et ubrukelig 
+      statisk bibliotek.
     </para>
 
   </sect2>
   
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          rubberband and rubberband-r3 (duplicate of rubberband)
+          rubberband og rubberband-r3 (duplikat av rubberband)
         </seg>
         <seg>
           librubberband
@@ -142,7 +142,7 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -150,8 +150,8 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
         <term><command>rubberband</command></term>
         <listitem>
           <para>
-            utilizes <filename class="libraryfile">rubberband</filename> to
-            generate new audio files with modified time and pitch
+            bruker <filename class="libraryfile">rubberband</filename> for å 
+            generere nye lydfiler med modifisert tid og tonehøyde
           </para>
           <indexterm zone="rubberband bin-rubberband">
             <primary sortas="b-bin-rubberband">rubberband</primary>
@@ -163,7 +163,7 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
         <term><filename class="libraryfile">librubberband</filename></term>
         <listitem>
           <para>
-            provides functions for pitch-shifting and time-stretching
+            tilbyr funksjoner for tonehøydeforskyvning og tidsstrekking
           </para>
           <indexterm zone="rubberband librubberband">
             <primary sortas="c-librubberband">librubberband</primary>
