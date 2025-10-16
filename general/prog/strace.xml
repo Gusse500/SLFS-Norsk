@@ -21,7 +21,9 @@
     <title>Introduksjon til strace</title>
 
     <para>
-      Strace pakken tilbyr et verktøy for diagnostikk, feilsøking og instruksjonsbruk i brukerområdet.
+      Strace pakken tilbyr et diagnostisk, feilsøking og 
+      instruksjonsverktøy for brukerområdet som sporer alle 
+      systemkall et program foretar under kjøringen.
     </para>
 
     <itemizedlist spacing="compact">
@@ -65,11 +67,15 @@ make</userinput></screen>
     <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>--enable-mpers=no</parameter>: Som standard er strace bygget for å støtte både m32 og mx32. Denne parameteren deaktiverer denne oppførselen.
+      <parameter>--enable-mpers=no</parameter>: Som standard er strace bygget 
+      for å støtte både m32 og mx32. Denne parameteren deaktiverer denne 
+      oppførselen. Fjern denne parameteren hvis du feilsøker programmer som 
+      bruker m32 eller mx32 personalities.
     </para>
 
     <para>
-      <parameter>--with-libunwind</parameter>: Denne parameteren bygger strace med støtte for libunwind.
+      <parameter>--with-libunwind</parameter>: Denne parameteren bygger strace 
+      med støtte for libunwind. Dette er nyttig for å tilbakespore stakkspor.
     </para>
 
     <note><para>
