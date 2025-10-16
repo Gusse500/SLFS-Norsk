@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ns-repo "https://github.com/werman/noise-suppression-for-voice">
+  <!ENTITY ns-root
+    "&ns-repo;/archive/v&noise-suppression-version;">
+  <!ENTITY noise-suppression-download-http
+    "&ns-root;/noise-suppression-for-voice-&noise-suppression-version;.tar.gz">
+]>
+
+<sect1 id="noise-suppression" xreflabel="Noise-Suppression-&noise-suppression-version;">
+  <?dbhtml filename="noise-suppression.html"?>
+
+  <title>Noise-Suppression-&noise-suppression-version;</title>
+
+  <indexterm zone="noise-suppression">
+    <primary sortas="a-noise-suppression">Noise-Suppression</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til Noise-Suppression</title>
+
+    <para>
+      Noise Suppression for Voice, basert på RnNoise, filtrerer ut støy som 
+      vifter og lignende, for lyd med stemmeopptak. Dette er et nyttig verktøy 
+      som brukes til lydredigering. <ulink
+      url="&blfs-svn;/kde/kdenlive.html">Kdenlive</ulink> bruker dette 
+      programtillegget for å filtrere lyd. Installer denne først før du 
+      installerer Kdenlive for å aktivere støtte for lydfiltrering.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&noise-suppression-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Noise-Suppression Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
+      <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>, og
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/webkitgtk.html">WebKitGTK</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av Noise-Suppression</title>
+
+    <para>
+      Installer Noise-Suppression ved å kjøre følgende 
+      kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert LADSPA Programtillegg</segtitle>
+      <segtitle>Installerte LV2 Programtillegg</segtitle>
+      <segtitle>Installert VST Programtillegg</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          librnnoise_ladspa
+        </seg>
+        <seg>
+          librnnoise_mono og librnnoise_stereo
+        </seg>
+        <seg>
+          rnnoise
+        </seg>
+        <seg>
+          /usr/lib/ladspa,
+          /usr/lib/lv2,
+          /usr/lib/lxvst, og
+          /usr/lib/vst3
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+  </sect2>
+
+</sect1>
