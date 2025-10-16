@@ -42,6 +42,10 @@
     <listitem>
       <para>14. oktober 2025</para>
       <itemizedlist>
+        <listitem>
+          <para>[renodr] - tealdeer: 1.7.2 -&gt; 1.8.0. Fikser
+          <ulink url="&slfs-issues;/331">#331</ulink>.</para>
+        </listitem>
           <listitem>
           <para>[fastfetch] - fastfetch: 2.51.1 -&gt; 2.52.0. Fikser
           <ulink url="&slfs-issues;/278">#322</ulink>.</para>
