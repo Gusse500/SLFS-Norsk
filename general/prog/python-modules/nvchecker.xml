@@ -68,10 +68,14 @@
       <title>Installasjon av nvchecker</title>
 
       <para>
+        Den anbefalte oppdateringen gir en lengre forsinkelse for å sjekke mot Repology. 
+        Repology og andre lignende nettsteder prøver å forhindre at roboter skraper data 
+        via en forsinkelse. Denne oppdateringen prøver å overholde Repologys grenser. 
         Hvis du lastet ned den anbefalte oppdateringen, installer den nå:
       </para>
 
-      <screen><userinput>patch -Np1 -i ../nvchecker.diff</userinput></screen>
+      <screen
+        remap="pre"><userinput>patch -Np1 -i ../nvchecker.diff</userinput></screen>
 
       <para>Bygg modulen:</para>
 
