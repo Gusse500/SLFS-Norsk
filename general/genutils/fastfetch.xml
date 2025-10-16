@@ -43,6 +43,7 @@
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
+      <ulink url="&blfs-svn;/x/vulkan-headers.html">Vulkan-Headers</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
@@ -72,9 +73,13 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
-      -D CMAKE_BUILD_TYPE=Release  \
-      -D BUILD_FLASHFETCH=OFF      \
+cmake -D CMAKE_INSTALL_PREFIX=/usr    \
+      -D CMAKE_BUILD_TYPE=Release     \
+      -D BUILD_FLASHFETCH=OFF         \
+      -D PACKAGES_DISABLE_CHOCO=ON    \
+      -D PACKAGES_DISABLE_MACPORTS=ON \
+      -D PACKAGES_DISABLE_SCOOP=ON    \
+      -D PACKAGES_DISABLE_WINGET=ON   \
       ..  &amp;&amp;
 
 make</userinput></screen>
@@ -101,6 +106,14 @@ make</userinput></screen>
       <parameter>-D BUILD_FLASHFETCH=OFF</parameter>: Denne bryteren deaktiverer 
       bygging av den historiske flashfetch binærfilen. Hvis du trenger den av en 
       eller annen grunn, setter du denne bryteren til <parameter>ON</parameter>.
+    </para>
+
+    <para>
+      <parameter>-D PACKAGES_DISABLE_*=ON</parameter>: Denne bryteren 
+      deaktiverer deteksjon for diverse pakkebehandlere. Selv om det finnes 
+      flere tilgjengelige pakkebehandlere, er det bare de som ikke støtter 
+      Linux som har blitt deaktivert. Hvis du vil støtte disse pakkebehandlerne, 
+      setter du bryterne deres til <parameter>OFF</parameter>.
     </para>
 
   </sect2>
