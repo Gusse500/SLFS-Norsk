@@ -18,38 +18,38 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Alacritty</title>
+    <title>Introduksjon til Alacritty</title>
 
     <para>
-      The Alacritty package provides a fast,
-      cross-platform OpenGL terminal emulator.
+      Alacritty pakken tilbyr en rask OpenGL 
+      terminalemulator på tvers av plattformer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&alacritty-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&alacritty-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Alacritty Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Alacritty Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
 
     <para role="required">
       <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">freetype</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      <ulink url="&blfs-svn;/general/rust.html">rustc</ulink>, and
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/general/rust.html">rustc</ulink>, og
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
 
     <para role="optional">
-      <xref linkend="scdoc"/> (to build the man pages)
+      <xref linkend="scdoc"/> (for å bygge manualsidene)
     </para>
 
     &build-use-internet;
@@ -57,22 +57,22 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Alacritty</title>
+    <title>Installasjon av Alacritty</title>
 
     <para>
-      Install Alacritty by running the following
-      commands:
+      Installer Alacritty ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cargo build --release</userinput></screen>
 
     <para>
-      To test the results, issue: <command>cargo test --release</command>.
+      For å teste resultatene, utsted: <command>cargo test --release</command>.
     </para>
 
     <para>
-      If you installed scdoc and wish to build the
-      man pages, execute the following commands:
+      Hvis du installerte scdoc og ønsker å bygge 
+      manualsidene, kjør følgende kommandoer:
     </para>
 <screen><userinput>pushd extra/man &amp;&amp;
 for f in *.scd; do
@@ -81,32 +81,40 @@ done &amp;&amp;
 popd</userinput></screen>
 
     <para>
-      Now, as the <systemitem class="username">root</systemitem> user:
+      Nå, som <systemitem class="username">root</systemitem> bruker:
     </para>
 
 <screen role="root"><userinput>install -vm755 target/release/alacritty /usr/bin/alacritty                      &amp;&amp;
 install -vDm755 extra/logo/alacritty-term.svg /usr/share/pixmaps/Alacritty.svg  &amp;&amp;
 install -vDm644 extra/linux/Alacritty.desktop -t /usr/share/applications/</userinput></screen>
 
+    &desktop-files;
+
     <para>
-      If you wish to install shell completions, execute the relevant commands
-      for your shell(s) as the <systemitem class="username">root</systemitem>
-      user:
+      For å sikre at Alacrittys terminfo er til stede, kjør følgende kommando 
+      som <systemitem class="username">root</systemitem> bruker:
+    </para>
+<screen role="root"><userinput>tic -xe alacritty,alacritty-direct extra/alacritty.info</userinput></screen>
+
+    <para>
+      Hvis du ønsker å installere skallkompletteringer, utfør de relevante 
+      kommandoene for skallet/skallene dine som 
+      <systemitem class="username">root</systemitem> bruker:
     </para>
 <screen role="root"><userinput>install -vDm644 extra/completions/alacritty.bash /usr/share/bash-completion/completions/alacritty
 install -vDm644 extra/completions/_alacritty /usr/share/zsh/site-functions/_alacritty
 install -vDm644 extra/completions/alacritty.fish /usr/share/fish/vendor_completions.d/alacritty.fish</userinput></screen>
 
     <para>
-      If you built the man pages, install them as the
-      <systemitem class="username">root</systemitem> user:
+      Hvis du bygde manualsidene, installer dem som
+      <systemitem class="username">root</systemitem> bruker:
     </para>
 <screen role="root"><userinput>install -vDm644 extra/man/*.1 -t /usr/share/man/man1 &amp;&amp;
 install -vDm644 extra/man/*.5 -t /usr/share/man/man5</userinput></screen>
 
     <para>
-      If you wish to install the documentation, execute the following as the
-      <systemitem class="username">root</systemitem> user:
+      Hvis du ønsker å installere dokumentasjonen, kjør følgende
+      <systemitem class="username">root</systemitem> bruker:
     </para>
 
 <screen remap="doc" role="root"><userinput>install -vDm644 docs/* -t /usr/share/doc/alacritty-&alacritty-version; &amp;&amp;
@@ -115,31 +123,31 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>cargo build --no-default-features --features=x11</command>: This
-      command builds Alacritty without wayland support.
+      <command>cargo build --no-default-features --features=x11</command>: Denne 
+      kommandoen bygger Alacritty uten Wayland støtte.
     </para>
 
     <para>
       <command>cargo build --no-default-features --features=wayland</command>:
-      This command builds Alacritty without X11 support.
+      Denne kommandoen bygger Alacritty uten X11 støtte.
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring Alacritty</title>
+    <title>Konfigurere Alacritty</title>
 
     <sect3 id="alacritty-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
-        <filename>~/.config/alacritty/alacritty.toml</filename>. There is no
-        default version and must be created manually. For configuration
-        options, see <ulink
+        <filename>~/.config/alacritty/alacritty.toml</filename>. Hvis du ønsker 
+        å konfigurere Alacritty, må du opprette denne filen manuelt. Ellers vil 
+        en standard konfigurasjon bli brukt. For konfigurasjonsalternativer, se <ulink
         url="https://alacritty.org/config-alacritty.html">alacritty(5)</ulink>,
-        or if you built the man pages, run <command>man 5 alacritty</command>.
+        eller hvis du bygde manualsidene, kjør <command>man 5 alacritty</command>.
       </para>
 
       <indexterm zone="alacritty alacritty-config">
@@ -151,19 +159,19 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Programm</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
           alacritty
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/doc/alacritty-&alacritty-version;
@@ -172,7 +180,7 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -180,7 +188,7 @@ install -vm644 README.md /usr/share/doc/alacritty-&alacritty-version;</userinput
         <term><command>alacritty</command></term>
         <listitem>
           <para>
-            is a fast, cross-platform OpenGL terminal emulator
+            er en rask OpenGL terminalemulator på tvers av plattformer
           </para>
           <indexterm zone="alacritty alacritty-bin">
             <primary sortas="b-alacritty-bin">alacritty</primary>

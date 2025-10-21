@@ -52,6 +52,17 @@
   delt bibliotek. Denne pakken trenger ikke rpath når den er installert på 
   standard plassering, og rpath kan noen ganger forårsake uønskede effekter 
   eller til og med sikkerhetsproblemer.</para>">
+<!ENTITY desktop-files
+  "<note><para>Denne pakken installerer skrivebordsfiler i <filename
+  class='directory'>/usr/share/applications</filename> hierarkiet. Systemytelse 
+  og minnebruk kan forbedres ved å oppdatere
+  <filename>/usr/share/applications/mimeinfo.cache</filename> hvis du har
+  <ulink url='&blfs-svn;/general/desktop-file-utils.html'>desktop-file-utils</ulink>
+  installert. For å utføre oppdateringen, kjør følgende kommando som
+  <systemitem class='username'>root</systemitem> bruker:
+
+  <screen role='root'><userinput>update-desktop-database -q</userinput></screen>
+  </para></note>">
 <!ENTITY extraction-unzip
   "<note><para>Under utpakkingen kan du få følgende melding(er):</para>
 <screen><computeroutput>unzip: Cannot set mode for '...': Operation notsupported</computeroutput></screen>
