@@ -21,9 +21,9 @@
     <title>Introduksjon til yt-dlp</title>
 
     <para>
-      yt-dlp-pakken tilbyr et funksjonsrikt kommandolinjeprogram for nedlasting 
-      av lyd/video, som støtter tusenvis av nettsteder, inkludert YouTube. Den 
-      kan konvertere nedlastinger til andre formater ved hjelp av FFmpeg..
+      Pakken yt-dlp tilbyr et CLI verktøy for å laste ned lyd og video filer fra 
+      tusenvis av nettsteder, inkludert YouTube. Den kan konvertere nedlastinger 
+      til andre formater ved hjelp av FFmpeg.
     </para>
 
     <itemizedlist spacing="compact">
@@ -103,7 +103,7 @@
         <term><command>yt-dlp</command></term>
         <listitem>
          <para>
-           er den funksjonsrike kommandolinjebaserte nedlasteren for lyd og video
+           laster ned og konverterer lyd og video filer
          </para>
           <indexterm zone="yt-dlp yt-dlp-bin">
             <primary sortas="b-yt-dlp-bin">yt-dlp</primary>
