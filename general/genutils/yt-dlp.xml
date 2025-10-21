@@ -21,9 +21,9 @@
     <title>Introduksjon til yt-dlp</title>
 
     <para>
-      yt-dlp pakken tilbyr et program som kan laste ned YouTube 
-      videoer fra deres servere og konvertere en gitt nedlastet 
-      video til et annet format.
+      yt-dlp-pakken tilbyr et funksjonsrikt kommandolinjeprogram for nedlasting 
+      av lyd/video, som støtter tusenvis av nettsteder, inkludert YouTube. Den 
+      kan konvertere nedlastinger til andre formater ved hjelp av FFmpeg..
     </para>
 
     <itemizedlist spacing="compact">
@@ -50,7 +50,8 @@
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/python-modules.html#requests">requests</ulink>
+      <ulink url="&blfs-svn;/general/python-modules.html#requests">requests</ulink> og
+      <ulink url="&blfs-svn;/general/brotli.html">brotli</ulink>
     </para>
 
   </sect2>
@@ -59,8 +60,7 @@
     <title>Installasjon av yt-dlp</title>
 
     <para>
-      Installer yt-dlp ved å kjøre følgende 
-      kommandoer:
+      Installer yt-dlp ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>make yt-dlp</userinput></screen>
@@ -103,7 +103,7 @@
         <term><command>yt-dlp</command></term>
         <listitem>
          <para>
-           laster ned og konverterer YouTube videoer
+           er den funksjonsrike kommandolinjebaserte nedlasteren for lyd og video
          </para>
           <indexterm zone="yt-dlp yt-dlp-bin">
             <primary sortas="b-yt-dlp-bin">yt-dlp</primary>
