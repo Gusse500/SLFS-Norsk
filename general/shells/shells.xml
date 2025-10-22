@@ -8,11 +8,11 @@
 <chapter id="general-shells">
   <?dbhtml filename="shells.html"?>
 
-  <title>Shells</title>
+  <title>Skall</title>
 
   <para>
-    This chapter covers shells which are not covered by the BLFS book for one
-    reason or another and may be dependencies of packages in this book.
+    Dette kapittelet dekker skall som ikke er dekket av BLFS boken av en eller 
+    annen grunn, og som kan være avhengigheter av pakker i denne boken.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ksh.xml"/>
