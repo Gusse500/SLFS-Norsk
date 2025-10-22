@@ -18,48 +18,48 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Dunst</title>
+    <title>Introduksjon til Dunst</title>
 
     <para>
-      Dunst provides a notification daemon that is
-      light and customizable for the X Window System
-      and Wayland compositors.
+      Dunst tilbyr en varslingsdaemon som er 
+      lett og tilpassbar for X Vindussystemet 
+      og Wayland komposisjonsprogrammer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&dunst-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&dunst-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Dunst Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Dunst Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
       <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       &logind;
-      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink>, and
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink>, og
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink> and
+      <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink> og
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Dunst</title>
+    <title>Installasjon av Dunst</title>
 
     <para>
-      Install Dunst by running the following
-      commands:
+      Installer Dunst ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make PREFIX=/usr                 \
@@ -68,15 +68,15 @@
      X11INC=$XORG_PREFIX/include/X11</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make PREFIX=/usr SYSCONFDIR=/etc install</userinput></screen>
 
     <para>
-      As a sanity test, you can see if the installation works by sending a
-      notification to the desktop (be sure to do this in a working graphical
-      environment; requires <ulink
+      Som en helsetest kan du se om installasjonen fungerer ved å sende en 
+      melding til skrivebordet (sørg for å gjøre dette i et fungerende grafisk 
+      miljø; krever <ulink
       url="&blfs-svn;/x/libnotify.html">libnotify</ulink>):
     </para>
 
@@ -87,15 +87,15 @@ pkill dunst</userinput></screen>
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring Dunst</title>
+    <title>Konfigurere Dunst</title>
 
     <sect3 id="dunst-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
-        <filename>~/.config/dunst/dunstrc</filename>. The default version
-        is in <filename class="directory">/etc/dunst</filename> and will
-        not be read from. If you want to customize your experience, copy the
-        configuration file to
+        <filename>~/.config/dunst/dunstrc</filename>. Standardversjonen
+        er i <filename class="directory">/etc/dunst</filename> og vil ikke 
+        bli lest. Hvis du vil tilpasse opplevelsen din, kopier 
+        konfigurasjonsfilen til
         <filename class="directory">~/.config/dunst</filename>
       </para>
 
@@ -105,62 +105,62 @@ pkill dunst</userinput></screen>
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Create the config file:
+        Opprett konfigurasjonsfilen:
       </para>
 
 <screen><userinput>mkdir -pv ~/.config/dunst &amp;&amp;
 cp /etc/dunst/dunstrc ~/.config/dunst</userinput></screen>
 
       <para>
-        Now inspect the file and make any changes to suit your needs.
+        Nå kan du sjekke filen og gjøre eventuelle endringer som passer dine behov.
       </para>
 
       <para>
-        <command>dunst</command> also needs to be started for it to be able to
-        send any notification. While this can be autostarted by
-        D-Bus, multiple notification daemons may be
-        installed, so D-Bus will be the one to
-        choose what gets autostarted. Thus, there are a couple of options.
+        <command>dunst</command> må også startes for at den skal kunne sende 
+        varsler. Selv om dette kan startes automatisk av D-Bus, 
+        kan flere varslingsdaemoner være installert, 
+        så D-Bus vil være den som velger hva som skal startes automatisk. 
+        Dermed finnes det et par alternativer.
       </para>
 
       <sect4>
-        <title>For X11 - Window Managers</title>
+        <title>For X11 - Vindusbehandler</title>
 
         <para>
-          You can just add the following to <filename>~/.xinitrc</filename>:
+          Du kan bare legge til følgende i <filename>~/.xinitrc</filename>:
         </para>
 
 <screen><userinput><literal>dunst &amp;</literal></userinput></screen>
 
         <para>
-          Make sure the above line comes before the
+          Sørg for at linjen ovenfor kommer før
 <userinput><literal>exec <replaceable>&lt;WM&gt;</replaceable></literal></userinput>
-          line. This will ensure the daemon is started and works throughout the
-          runtime of the X11 instance.
+          linje. Dette vil sikre at daemonen startes og fungerer gjennom hele 
+          kjøretiden til X11 instansen.
         </para>
 
         <para>
-          For display managers, it's a bit more tricky. For those, the
-          <quote>General XDG Autostart Method</quote> should be sufficient.
+          For visningsansvarlige er det litt vanskeligere. For dem,
+          <quote>Generell XDG autostartmetode</quote> burde være tilstrekkelig.
         </para>
 
       </sect4>
 
       <sect4>
-        <title>For Specific Window Managers or Compositors</title>
+        <title>For spesifikke vindusbehandlere eller komposisjonsprogrammer</title>
 
         <para>
-          In some cases, this method is the only method to autostart this
-          program correctly, like when using <xref linkend="wayfire"/>.
-          In essence, if your preferred window manager or compositor has a
-          configuration file and supports autostarting, the general idea is to
-          just have it autostart <command>dunst</command> with no arguments.
-          Every window manager and compositor will handle autostarting
-          differently, but that's the general gist of it. As an example, for
-          <xref linkend="wayfire"/>, it might look something like this:
+          I noen tilfeller er denne metoden den eneste metoden for å automatisk 
+          starte dette programmet riktig, som når du bruker <xref linkend="wayfire"/>.
+          I hovedsak, hvis din foretrukne vindusbehandler eller komposisjonsprogram 
+          har en konfigurasjonsfil og støtter automatisk start, er den generelle 
+          ideen å bare la den starte automatisk <command>dunst</command> uten argumenter.
+          Hver vindusbehandler og kompositor vil håndtere autostart forskjellig, 
+          men det er den generelle essensen av det. Som et eksempel, for
+          <xref linkend="wayfire"/>, kan det se omtrent slik ut:
         </para>
 
 <screen><emphasis role='purple'>[autostart]</emphasis>
@@ -170,13 +170,13 @@ cp /etc/dunst/dunstrc ~/.config/dunst</userinput></screen>
       </sect4>
 
       <sect4>
-        <title>General XDG Autostart Method</title>
+        <title>Generell XDG autostartmetode</title>
 
         <para>
-          If the other cases were not possible, this can be the solution. An
-          XDG Autostart file can be created which some window managers and
-          compositors can read from and autostart in accordance with the XDG
-          standard. Create one as the &root; user:
+          Hvis de andre tilfellene ikke er mulige, kan dette være løsningen. En 
+          XDG Autostart fil kan opprettes som noen vindusbehandlere og 
+          kompositorer kan lese fra og autostarte i samsvar med XDG standarden. 
+          Opprett en som &root; bruker:
         </para>
 
 <screen role="root"><userinput>cat &gt; /etc/xdg/autostart/dunst.desktop &lt;&lt; "EOF"
@@ -190,7 +190,7 @@ Type=Application</literal>
 EOF</userinput></screen>
 
         <para>
-          In some cases, this should do the trick.
+          I noen tilfeller burde dette gjøre susen.
         </para>
 
       </sect4>
@@ -200,19 +200,19 @@ EOF</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          dunst, dunstctl, and dunstify
+          dunst, dunstctl, og dunstify
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /etc/dunst
@@ -221,7 +221,7 @@ EOF</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -229,7 +229,7 @@ EOF</userinput></screen>
         <term><command>dunst</command></term>
         <listitem>
           <para>
-            is the Dunst notification daemon
+            er Dunst varslingsdaemonen
           </para>
           <indexterm zone="dunst dunst-bin">
             <primary sortas="b-dunst-bin">dunst</primary>
@@ -241,7 +241,7 @@ EOF</userinput></screen>
         <term><command>dunstctl</command></term>
         <listitem>
           <para>
-            is a command-line utility for controlling
+            er et kommandolinjeverktøy for å kontrollere 
             Dunst
           </para>
           <indexterm zone="dunst dunstctl">
@@ -254,7 +254,7 @@ EOF</userinput></screen>
         <term><command>dunstify</command></term>
         <listitem>
           <para>
-            can send desktop notifications from the command-line
+            kan sende skrivebordsvarsler fra kommandolinjen
           </para>
           <indexterm zone="dunst dunstify">
             <primary sortas="b-dunstify">dunstify</primary>
