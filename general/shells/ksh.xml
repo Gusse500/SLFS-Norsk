@@ -17,16 +17,16 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to ksh</title>
+    <title>Introduksjon til ksh</title>
 
     <para>
-      The ksh package contains the Korn Shell.
+      Ksh pakken inneholder Korn Shell.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&ksh-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&ksh-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -34,17 +34,17 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of ksh</title>
+    <title>Installasjon av ksh</title>
 
     <para>
-      Install ksh by executing the following
-      commands:
+      Installer ksh ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>bin/package make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>bin/package install /usr</userinput></screen>
@@ -52,13 +52,13 @@
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring ksh</title>
+    <title>Konfigurere ksh</title>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        As the &root; user, update <filename>/etc/shells</filename> to include
-        the Korn shell program names:
+        Som &root; bruker, oppdater <filename>/etc/shells</filename> til å 
+        inkludere navnene på Korn shell programmene:
       </para>
 
 <screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
@@ -70,28 +70,28 @@ EOF</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          ksh and shcomp
+          ksh og shcomp
         </seg>
         <seg>
-          libast, libcmd, libdll, and libshell
+          libast, libcmd, libdll, og libshell
         </seg>
         <seg>
-          /usr/include/ast and /usr/share/fun
+          /usr/include/ast og /usr/share/fun
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -99,7 +99,7 @@ EOF</userinput></screen>
         <term><command>ksh</command></term>
         <listitem>
           <para>
-            is the Korn Shell
+            er Korn Shell
           </para>
           <indexterm zone="ksh ksh-bin">
             <primary sortas="b-ksh-bin">ksh</primary>
@@ -111,7 +111,7 @@ EOF</userinput></screen>
         <term><command>shcomp</command></term>
         <listitem>
           <para>
-            compiles a shell script
+            kompilerer et skallskript
           </para>
           <indexterm zone="ksh shcomp">
             <primary sortas="b-shcomp">shcomp</primary>
@@ -123,7 +123,7 @@ EOF</userinput></screen>
         <term><filename class="libraryfile">libast</filename></term>
         <listitem>
           <para>
-            is the AT&amp;T Software Technology library
+            er AT&amp;T Programvareteknologibibliotek
           </para>
           <indexterm zone="ksh libast">
             <primary sortas="c-libast">libast</primary>
@@ -135,7 +135,7 @@ EOF</userinput></screen>
         <term><filename class="libraryfile">libcmd</filename></term>
         <listitem>
           <para>
-            contains <command>ksh</command> loadable builtins
+            inneholder <command>ksh</command> lastbare innebygde elementer
           </para>
           <indexterm zone="ksh libcmd">
             <primary sortas="c-libcmd">libcmd</primary>
@@ -147,7 +147,7 @@ EOF</userinput></screen>
         <term><filename class="libraryfile">libdll</filename></term>
         <listitem>
           <para>
-            contains wrappers around dlopen() and similar functions
+            inneholder innpakninger rundt dlopen() og lignende funksjoner
           </para>
           <indexterm zone="ksh libdll">
             <primary sortas="c-libdll">libdll</primary>
@@ -159,7 +159,7 @@ EOF</userinput></screen>
         <term><filename class="libraryfile">libshell</filename></term>
         <listitem>
           <para>
-            contains the <command>ksh</command> library interface
+            inneholder <command>ksh</command> bibliotekgrensesnitt
           </para>
           <indexterm zone="ksh libshell">
             <primary sortas="c-libshell">libshell</primary>
