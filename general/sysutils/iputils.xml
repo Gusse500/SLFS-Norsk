@@ -17,24 +17,24 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to iputils</title>
+    <title>Introduksjon til iputils</title>
 
     <para>
-      The iputils contains a collection of
-      networking utilities.
+      iputils inneholder en samling av 
+      nettverksverktøy.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&iputils-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&iputils-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
  
-    <bridgehead renderas="sect3">iputils Dependencies</bridgehead>
+    <bridgehead renderas="sect3">iputils Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/libidn2.html">libidn2</ulink>
     </para>
@@ -42,18 +42,18 @@
   </sect2>
  
   <sect2 role="installation">
-    <title>Installation of iputils</title>
+    <title>Installasjon av iputils</title>
 
     <para>
-      First, create the installation directory as the &root; user:
+      Først opprett installasjonsmappen som &root; bruker:
     </para>
 
 <screen role="root"><userinput>mkdir -pv /opt/iputils-&iputils-version; &amp;&amp;
 ln -svfn iputils-&iputils-version; /opt/iputils</userinput></screen>
 
     <para>
-      Install iputils by running the following
-      commands:
+      Installer iputils ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -67,7 +67,7 @@ meson setup --prefix=/opt/iputils-&iputils-version;        \
 ninja</userinput></screen>
 
     <para>
-      Now, as the <systemitem class="username">root</systemitem> user:
+      Nå, som <systemitem class="username">root</systemitem> bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -75,39 +75,39 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &options-meson;
 
     &meson-buildtype-release;
 
     <para>
-      <parameter>--prefix=/opt/iputils-&iputils-version;</parameter>: Installs
-      the package into a versioned subdirectory of /opt in order to avoid
-      filename collisions with the ping command installed in LFS.
+      <parameter>--prefix=/opt/iputils-&iputils-version;</parameter>: 
+      Installerer pakken i en versjonert undermappe av /opt for å unngå 
+      filnavnkollisjoner med ping kommandoen som er installert i LFS.
     </para>
 
     <para>
-      <parameter>-D INSTALL_SYSTEMD_UNITS=false</parameter>: Disables some dead
-      code which is not used anywhere in the package.
+      <parameter>-D INSTALL_SYSTEMD_UNITS=false</parameter>: Deaktiverer noe 
+      død kode som ikke brukes noe sted i pakken.
     </para>
 
     <para>
-      <option>-D USE_IDN=false</option>: This option disables IDN support. Use
-      it if you have not installed the recommended dependency.
+      <option>-D USE_IDN=false</option>: Dette alternativet deaktiverer IDN 
+      støtte. Bruk det hvis du ikke har installert den anbefalte avhengigheten.
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring iputils</title>
+    <title>Konfigurere iputils</title>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        As the &root; user, create the 
-        <filename>/etc/profile.d/iputils.sh</filename> file to be able to use
-        the newly installed tools:
+        Som &root; bruker, opprett 
+        <filename>/etc/profile.d/iputils.sh</filename> filen for å kunne bruke 
+        de nylig installerte verktøyene:
       </para>
 
 <!-- this should override the inetutils ping installed in LFS because our
@@ -124,15 +124,15 @@ pathprepend /opt/iputils/bin PATH
 EOF</userinput></screen>
 
       <para>
-        Immediately after installation, update the current PATH for your 
-        current shell as a normal user:
+        Umiddelbart etter installasjon, oppdater gjeldende PATH for ditt 
+        nåværende skall som en vanlig bruker:
       </para>
 
 <screen><userinput>source /etc/profile.d/iputils.sh</userinput></screen>
 
       <para>
-        To use <command>mandb</command> to include the iputils man pages
-        in its database, issue, as the &root; user:
+        For å få <command>mandb</command> til å inkludere iputils manualsidene 
+        i databasen, utsted, som &root; bruker:
       </para>
 
 <screen role="root"><userinput>cat &gt;&gt; /etc/man_db.conf &lt;&lt; "EOF" &amp;&amp;
@@ -151,28 +151,28 @@ mandb -c /opt/iputils/share/man</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          arping, clockdiff, ping, and tracepath
+          arping, clockdiff, ping, og tracepath
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /opt/iputils, symbolic link to /opt/iputils-&iputils-version;
+          /opt/iputils, symbolsk lenke til /opt/iputils-&iputils-version;
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -180,7 +180,7 @@ mandb -c /opt/iputils/share/man</userinput></screen>
         <term><command>arping</command></term>
         <listitem>
           <para>
-            sends an ARP request to a neighboring host
+            sender en ARP forespørsel til en nærliggende vert
           </para>
           <indexterm zone="iputils arping">
             <primary sortas="b-arping">arping</primary>
@@ -192,7 +192,7 @@ mandb -c /opt/iputils/share/man</userinput></screen>
         <term><command>clockdiff</command></term>
         <listitem>
           <para>
-            measures clock difference between hosts
+            måler klokkeforskjell mellom verter
           </para>
           <indexterm zone="iputils clockdiff">
             <primary sortas="b-clockdiff">clockdiff</primary>
@@ -204,7 +204,7 @@ mandb -c /opt/iputils/share/man</userinput></screen>
         <term><command>ping</command></term>
         <listitem>
           <para>
-            sends an ICMP ECHO request to a host
+            sender en ICMP ECHO forespørsel til en vert
           </para>
           <indexterm zone="iputils ping">
             <primary sortas="b-ping">ping</primary>
@@ -216,7 +216,7 @@ mandb -c /opt/iputils/share/man</userinput></screen>
         <term><command>tracepath</command></term>
         <listitem>
           <para>
-            traces the path to a network host
+            sporer stien til en nettverksvert
           </para>
           <indexterm zone="iputils tracepath">
             <primary sortas="b-tracepath">tracepath</primary>
