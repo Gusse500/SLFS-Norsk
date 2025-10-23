@@ -8,13 +8,13 @@
 <chapter id="general-sysutils">
   <?dbhtml filename="sysutils.html"?>
 
-  <title>System Utilities</title>
+  <title>Systemverktøy</title>
 
   <para>
-    This chapter contains mainly system-level utilities, what could be
-    considered core to the system. It may also contain some applications used
-    by other applications in the book for installation or configuration
-    purposes.
+    Dette kapittelet inneholder hovedsakelig verktøy på systemnivå, det som kan 
+    betraktes som kjernen i systemet. Det kan også inneholde noen applikasjoner 
+    som brukes av andre applikasjoner i boken til installasjons eller 
+    konfigurasjonsformål.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dunst.xml"/>
