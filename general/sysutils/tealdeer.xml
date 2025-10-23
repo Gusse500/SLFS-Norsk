@@ -18,13 +18,13 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to tealdeer</title>
+    <title>Introduksjon til tealdeer</title>
 
     <para>
-      The tealdeer package provides a fast
-      <command>tldr</command> program which is an alternative to
-      <command>man</command>. It aims to be more concise, approachable, and
-      simple than what is offered by most man pages.
+      Tealdeer pakken gir et raskt
+      <command>tldr</command> program som er et alternativ til
+      <command>man</command>. Den har som mål å være mer konsis, tilgjengelig 
+      og enkel enn det som tilbys av de fleste manualsider.
     </para>
 
     &build-use-internet;
@@ -32,14 +32,14 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&tealdeer-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&tealdeer-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">tealdeer Dependencies</bridgehead>
+    <bridgehead renderas="sect3">tealdeer Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
     </para>
@@ -47,26 +47,26 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of tealdeer</title>
+    <title>Installasjon av tealdeer</title>
     <para>
-      Install tealdeer by running the following
-      commands:
+      Installer tealdeer ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cargo build --release</userinput></screen>
 
     <para>
-      To test the results, issue: <command>cargo test --release</command>.
+      For å teste resultatene, utsted: <command>cargo test --release</command>.
     </para>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>install -vm755 target/release/tldr /usr/bin</userinput></screen>
 
     <para>
-      Now download the page cache (this will need to be done for every user):
+      Last ned nå sidebufferen (dette må gjøres for hver bruker):
     </para>
 
 <screen><userinput>tldr --update</userinput></screen>
@@ -74,28 +74,28 @@
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Program</segtitle>
-      <segtitle>Installed Library</segtitle>
-      <segtitle>Installed Directory</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           tealdeer
         </seg>
         <seg>
-          none
+          Ingen
         </seg>
         <seg>
-          none
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -103,7 +103,7 @@
         <term><command>tldr</command></term>
         <listitem>
           <para>
-            is the tealdeer <command>tldr</command>
+            er tealdeer <command>tldr</command>
           </para>
           <indexterm zone="tealdeer tldr-tealdeer">
             <primary sortas="b-tldr-tealdeer">tldr</primary>
