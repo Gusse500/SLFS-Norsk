@@ -18,17 +18,17 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libtree</title>
+    <title>Introduksjon til libtree</title>
 
     <para>
-      libtree is a utility to view the
-      shared library dependency tree of a binary.
+      libtree er et verktøy for å vise det 
+      delte bibliotekavhengighetstreet til en binærfil.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libtree-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libtree-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -36,17 +36,17 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libtree</title>
+    <title>Installasjon av libtree</title>
 
     <para>
-      Install libtree by running the following
-      commands:
+      Installer libtree ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make PREFIX=/usr</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
@@ -54,28 +54,28 @@
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           libtree
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -83,7 +83,7 @@
         <term><command>libtree</command></term>
         <listitem>
           <para>
-            lists the shared objects a binary depends upon in a tree
+            lister opp de delte objektene en binærfil er avhengig av i et tre
           </para>
           <indexterm zone="libtree libtree-bin">
             <primary sortas="b-libtree-bin">libtree</primary>
