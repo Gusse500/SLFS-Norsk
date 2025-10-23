@@ -17,12 +17,12 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libvpl-tools</title>
+    <title>Introduksjon til libvpl-tools</title>
 
     <para>
-      The libvpl-tools package provides a set of utilities useful for diagnosing
-      problems with the Intel Video Processing API. In addition, it also provides
-      sample utilities that can be used to test the API.
+      Pakken libvpl-tools inneholder et sett med verktøy som er nyttige for å 
+      diagnostisere problemer med Intel videobehandlings API. I tillegg 
+      inneholder den også eksempelverktøy som kan brukes til å teste API-et.
     </para>
 
     &long-build-time;
@@ -30,43 +30,43 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libvpl-tools-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libvpl-tools-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">libvpl-tools Dependencies</bridgehead>
+    <bridgehead renderas="sect3">libvpl-tools Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/general/gmmlib.html">gmmlib</ulink>,
       <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
-      <xref linkend="libvpl"/>, and
+      <xref linkend="libvpl"/>, og
       <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="Optional">
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink> and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink> og
       <ulink url="&blfs-svn;/general/wayland-protocols.html">wayland-protocols</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libvpl-tools</title>
+    <title>Installasjon av libvpl-tools</title>
 
     <para>
-      First, fix a build failure caused by GCC-15:
+      Først, fiks en byggefeil forårsaket av GCC-15:
     </para>
     
 <screen><userinput remap="pre">sed -i '/sample_vpp_frc_adv.h/a #include &lt;cstdint&gt;' tools/legacy/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
 
     <para>
-      Install libvpl-tools by running the following commands:
+      Installer libvpl-tools ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -80,18 +80,18 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr     \
 make</userinput></screen>
 
     <para>
-      To test the results, issue: <command>ctest</command>.
+      For å teste resultatene, utsted: <command>ctest</command>.
     </para>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
 
     <para>
-      Finally, clean up the installed programs by renaming some to more
-      appropriate names as the &root; user:
+      Til slutt, rydd opp i de installerte programmene ved å gi noen nytt navn 
+      til mer passende navn, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>mv -v /usr/bin/metrics_monitor        /usr/bin/vpl-metrics-monitor         &amp;&amp;
@@ -103,19 +103,19 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &options-cmake;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
@@ -126,11 +126,11 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
           vpl-sample-decode,
           vpl-sample-encode,
           vpl-sample-multi-transcode,
-          vpl-sample-vpp, and
+          vpl-sample-vpp, og
           vpl-system-analyzer
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/{lib,share}/libvpl-tools
@@ -139,7 +139,7 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -147,8 +147,8 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>val-surface-sharing</command></term>
         <listitem>
           <para>
-            tests the Intel Video Processing API to ensure that surface sharing
-            functionality is working correctly
+            tester Intel videobehandlings API for å sikre at 
+            overflatedelingsfunksjonaliteten fungerer som den skal
           </para>
           <indexterm zone="libvpl-tools val-surface-sharing">
             <primary sortas="b-val-surface-sharing">val-surface-sharing</primary>
@@ -160,8 +160,8 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-import-export</command></term>
         <listitem>
           <para>
-            tests the Intel Video Processing API to ensure that the encoding
-            and decoding functionality is working correctly
+            tester Intel videobehandlings API for å sikre at kodingen og 
+            dekodingsfunksjonaliteten fungerer som den skal
           </para>
           <indexterm zone="libvpl-tools vpl-import-export">
             <primary sortas="b-vpl-import-export">vpl-import-export</primary>
@@ -173,8 +173,8 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-inspect</command></term>
         <listitem>
           <para>
-            prints information about the implementation of the Intel Video
-            Processing API used on a given system
+            skriver ut informasjon om implementeringen av Intel  
+            videobehandlings API som brukes på et gitt system
           </para>
           <indexterm zone="libvpl-tools vpl-inspect">
             <primary sortas="b-vpl-inspect">vpl-inspect</primary>
@@ -186,7 +186,7 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-metrics-monitor</command></term>
         <listitem>
           <para>
-            monitors GPU usage when running video encoding/decoding operations
+            overvåker GPU bruk når videokodings-/dekodingsoperasjoner kjøres
           </para>
           <indexterm zone="libvpl-tools vpl-metrics-monitor">
             <primary sortas="b-vpl-metrics-monitor">vpl-metrics-monitor</primary>
@@ -198,8 +198,8 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-sample-decode</command></term>
         <listitem>
           <para>
-            performs basic decoding tasks to demonstrate how to use the Intel
-            Video Processing API
+            utfører grunnleggende dekodingsoppgaver for å demonstrere hvordan 
+            man bruker Intels videobehandlings API
           </para>
           <indexterm zone="libvpl-tools vpl-sample-decode">
             <primary sortas="b-vpl-sample-decode">vpl-sample-decode</primary>
@@ -211,8 +211,8 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-sample-encode</command></term>
         <listitem>
           <para>
-            performs basic encoding tasks to demonstrate how to use the Intel
-            Video Processing API
+            utfører grunnleggende kodingsoppgaver for å demonstrere hvordan 
+            man bruker Intels videobehandlings API
           </para>
           <indexterm zone="libvpl-tools vpl-sample-encode">
             <primary sortas="b-vpl-sample-encode">vpl-sample-encode</primary>
@@ -224,8 +224,8 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-sample-multi-transcode</command></term>
         <listitem>
           <para>
-            performs basic transcoding tasks to multiple video files at a time
-            to demonstrate how to use the Intel Video Processing API
+            utfører grunnleggende transkodingsoppgaver til flere videofiler samtidig 
+            for å demonstrere hvordan man bruker Intel videobehandlings API
           </para>
           <indexterm zone="libvpl-tools vpl-sample-multi-transcode">
             <primary sortas="b-vpl-sample-multi-transcode">vpl-sample-multi-transcode</primary>
@@ -237,9 +237,9 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-sample-vpp</command></term>
         <listitem>
           <para>
-            performs basic tasks using the video processing procedures,
-            demonstrating how to configure pipeline operations depending on
-            the difference between input and output formats
+            utfører grunnleggende oppgaver ved hjelp av videobehandlingsprosedyrene, 
+            demonstrerer hvordan man konfigurerer pipeline operasjoner avhengig 
+            av forskjellen mellom inndata og utdata formater
           </para>
           <indexterm zone="libvpl-tools vpl-sample-vpp">
             <primary sortas="b-vpl-sample-vpp">vpl-sample-vpp</primary>
@@ -251,9 +251,9 @@ mv -v /usr/bin/system_analyzer        /usr/bin/vpl-system-analyzer</userinput></
         <term><command>vpl-system-analyzer</command></term>
         <listitem>
           <para>
-            outputs diagnostic information about whether an Intel GPU is
-            supported by the Video Processing API, and which of the two
-            backends will be used at runtime
+            sender ut diagnostisk informasjon om hvorvidt en Intel GPU er 
+            støttet av videobehandlings API, og hvilken av de to bakstykkene 
+            som skal brukes under kjøring
           </para>
           <indexterm zone="libvpl-tools vpl-system-analyzer">
             <primary sortas="b-vpl-system-analyzer">vpl-system-analyzer</primary>
