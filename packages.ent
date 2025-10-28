@@ -130,6 +130,7 @@ version, so keep this at that. -->
 <!ENTITY java-version                        "&java-major-version;.0.17">
 <!ENTITY java-suffix                         "-ga">
 <!ENTITY openjdk-major-version               "&java-major-version;">
+<!ENTITY openjdk-version                     "&openjdk-major-version;.0.17">
 <!ENTITY openjdk-suffix                      "-ga">
 <!ENTITY openjdk-build                       "10">
 <!-- Shells -->
