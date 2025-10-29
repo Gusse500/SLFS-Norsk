@@ -18,13 +18,13 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to OBS Studio</title>
+    <title>Introduksjon til OBS Studio</title>
 
     <para>
-      OBS Studio is a screen recorder that can be
-      piped to various media containers and remote servers. It is geared
-      towards streaming but also has a very much supported general recording
-      usecase.
+      OBS Studio er en skjermopptaker som kan kobles til 
+      forskjellige mediecontainere og eksterne servere. 
+      Den er rettet mot strømming, men har også et generelt 
+      bruksområde for opptak.
     </para>
 
     &long-build-time;
@@ -32,32 +32,32 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&obs-studio-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&obs-studio-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
 <!--
       <listitem>
         <para>
-          Required patch if using Mesa libGL:
+          Påkrevd oppdatering hvis Mesa libGL brukes:
           <ulink url="&patch-root;/obs/obs-studio-&obs-studio-version;-allow_mesa.patch"/>
         </para>
       </listitem>
 -->
       <listitem>
         <para>
-          Recommended download:
+          Anbefalt nedlasting:
           <ulink url="https://cdn-fastly.obsproject.com/downloads/cef_binary_&obs-cef-version;_linux_x86_64.tar.xz"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">OBS Studio Dependencies</bridgehead>
+    <bridgehead renderas="sect3">OBS Studio Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/multimedia/alsa-plugins.html">alsa-plugins</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
@@ -65,7 +65,7 @@
       <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
       <ulink url="&blfs-svn;/general/fontconfig.html">Fontconfig</ulink>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink> (with GObject
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink> (med GObject
       Introspection),
       <ulink url="&blfs-svn;/general/jansson.html">Jansson</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
@@ -77,129 +77,129 @@
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
       <xref linkend="uthash"/>,
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, og
       <ulink url="&blfs-svn;/multimedia/x264.html">x264</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <itemizedlist spacing="compact">
         <listitem>
           <para>
             <xref linkend="asio"/>,
-            <xref linkend="qrcodegencpp"/>, and
+            <xref linkend="qrcodegencpp"/>, og
             <xref linkend="websocketpp"/>
-            (required for WebSocket support)
+            (påkrevd for WebSocket støtte)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/x/at-spi2-core.html">at-spi2-core</ulink>
-            and <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>
-            (required for browser support)
+            og <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>
+            (påkrevd for nettleserstøtte)
           </para>
         </listitem>
         <listitem>
           <para>
-            <xref linkend="cuda"/> and <xref linkend="nv-codec-headers"/>
-            (required for NVIDIA hardware encoding)
+            <xref linkend="cuda"/> og <xref linkend="nv-codec-headers"/>
+            (påkrevd for NVIDIA maskinvarekoding)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/multimedia/fdk-aac.html">fdk-aac</ulink>
-            (required for FDK AAC codec support)
+            (påkrevd for FDK AAC codec støtte)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/multimedia/intel-media-driver.html">intel-media-driver</ulink>,
-            <xref linkend="intel-mediasdk"/> (for GPUs from Broadwell to Tiger Lake),
-            <xref linkend="intel-onevpl"/> (for GPUs from Tiger Lake onward),
+            <xref linkend="intel-mediasdk"/> (for GPUer fra Broadwell til Tiger Lake),
+            <xref linkend="intel-onevpl"/> (for GPUer fra Tiger Lake videre),
             <xref linkend="libvpl"/>,
-            and
+            og
             <ulink url="&blfs-svn;/x/mesa.html">Mesa</ulink>
-            (required for Intel QSV11 hardware encoding)
+            (påkrevd for Intel QSV11 maskinvarekoding)
           </para>
         </listitem>
         <listitem>
           <para>
             <xref linkend="libdatachannel"/>
-            (required for WebRTC support)
+            (påkrevd for WebRTC støtte)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>
-            and
+            og
             <ulink url="&blfs-svn;/x/xdg-desktop-portal.html">xdg-desktop-portal</ulink>
-            (required for Pipewire camera support and screencasting)
+            (påkrevd for Pipewire kamerastøtte og skjermcasting)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>
-            (required for PulseAudio audio sources)
+            (påkrevd for PulseAudio lydkilder)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/multimedia/speex.html">Speex</ulink>
-            (required for SpeexDSP noise suppression)
+            (påkrevd for SpeexDSP støydemping)
           </para>
         </listitem>
         <listitem>
           <para>
-            <ulink url="&blfs-svn;/general/swig.html">SWIG</ulink> and
+            <ulink url="&blfs-svn;/general/swig.html">SWIG</ulink> og
             <ulink url="&blfs-svn;/general/luajit.html">luajit</ulink>
-            (required for scripting support)
+            (påkrevd for skriptstøtte)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/multimedia/v4l-utils.html">v4l-utils</ulink>
-            (required for V4L support)
+            (påkrevd for V4L støtte)
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/multimedia/vlc.html">VLC</ulink>
-            (required for VLC support)
+            (påkrevd for VLC støtte)
           </para>
         </listitem>
         <listitem>
           <para>
             &egl; and
             <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
-            (required for Wayland support)
+            (påkrevd for Wayland støtte)
           </para>
         </listitem>
       </itemizedlist>
     </para>
 
     <note><para>
-      The options to disable the functionality enabled by the dependencies
-      above are in the Command Explanations.
+      Alternativene for å deaktivere funksjonaliteten som er aktivert av 
+      avhengighetene ovenfor, finnes i parameterforklaringer.
     </para></note>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="https://github.com/jackaudio/jack2">Jack2</ulink>,
       <ulink url="https://github.com/aja-video/libajantv2">libajantv2</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/librist/">librist</ulink>,
       <ulink url="https://github.com/xiph/rnnoise">librnnoise</ulink>
-      (if not installed, an internal copy will be used), and
+      (hvis den ikke er installert, vil en intern kopi bli brukt), og
       <ulink url="&arch-pkgs;/extra/x86_64/sndio/">sndio</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of OBS Studio</title>
+    <title>Installasjon av OBS Studio</title>
 
 <!--
     <para>
-      Fix building with GCC-15.x.x:
+      Fiks bygging med GCC-15.x.x:
     </para>
 
 <screen><userinput>sed '/^#include &lt;cmath&gt;/a #include &lt;cstdint&gt;' \
@@ -207,12 +207,12 @@
 -->
 
 
-<!-- This is still borked for Mesa's EGL. But it's a burden to maintain this
-     patch. Upstream won't fix it as the burden falls on CMake. -->
+<!-- Dette er fortsatt vanskelig for Mesas EGL. Men det er en byrde å vedlikeholde 
+denne oppdateringen. Oppstrøms vil ikke fikse det, ettersom byrden faller på CMake. -->
 <!--
     <para>
-      Apply a patch to allow EGL libraries from
-      Mesa if needed:
+      Installer en oppdatering for å tillate EGL 
+      biblioteker fra Mesa om nødvendig:
     </para>
 
 <screen><userinput>if ! pkgconf libglvnd; then
@@ -221,16 +221,16 @@ fi</userinput></screen>
 -->
 
     <para>
-      If you want to enable browser support, ensure you have downloaded the
-      recommended download, then unpack it:
+      Hvis du vil aktivere nettleserstøtte, må du sørge for at du har lastet 
+      ned den anbefalte nedlastingen, og deretter pakke den ut:
     </para>
 
 <screen><userinput>tar -xf ../cef_binary_&obs-cef-version;_linux_x86_64.tar.xz &amp;&amp;
 mv cef_binary_&obs-cef-version;_linux_x86_64 cef-&obs-cef-version;</userinput></screen>
 
     <para>
-      Install OBS Studio by running the following
-      commands:
+      Installer OBS Studio ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -250,7 +250,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr             \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -258,119 +258,119 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D ENABLE_BROWSER=ON</parameter>: This switch enables browser
-      support.
+      <parameter>-D ENABLE_BROWSER=ON</parameter>: Denne bryteren aktiverer 
+      nettleserstøtte.
     </para>
 
     <para>
-      <parameter>-D CEF_ROOT_DIR=../cef-&obs-cef-version;</parameter>: This
-      switch tells the build system where the CEF binaries are located.
+      <parameter>-D CEF_ROOT_DIR=../cef-&obs-cef-version;</parameter>: Denne 
+      bryteren forteller byggesystemet hvor CEF binærfilene befinner seg.
     </para>
 
     <para>
-      <parameter>-D ENABLE_AJA=OFF</parameter>: This switch disables the
-      optional Aja functionality.
+      <parameter>-D ENABLE_AJA=OFF</parameter>: Denne bryteren deaktiverer den 
+      valgfrie Aja funksjonaliteten.
     </para>
 
     <para>
-      <parameter>-D ENABLE_JACK=OFF</parameter>: This switch disables the
-      optional Jack2 functionality.
+      <parameter>-D ENABLE_JACK=OFF</parameter>: Denne bryteren deaktiverer den
+      valgfrie Jack2 funksjonaliteten.
     </para>
 
     <para>
-      <parameter>-D ENABLE_NEW_MPEGTS_OUTPUT=OFF</parameter>: This switch
-      disables the optional MpegTS Output functionality.
+      <parameter>-D ENABLE_NEW_MPEGTS_OUTPUT=OFF</parameter>: Denne bryteren 
+      deaktiverer den valgfrie MpegTS Output funksjonaliteten.
     </para>
 
     <para>
-      <option>-D ENABLE_PIPEWIRE=OFF</option>: Disables Pipewire support if you
-      have not installed it.
+      <option>-D ENABLE_PIPEWIRE=OFF</option>: Deaktiverer Pipewire støtte hvis 
+      du ikke har installert det.
     </para>
 
     <para>
-      <option>-D ENABLE_SPEEXDSP=OFF</option>: Disables Speex support if you
-      have not installed it.
+      <option>-D ENABLE_SPEEXDSP=OFF</option>: Deaktiverer Speex støtte hvis du 
+      ikke har installert det.
     </para>
 
     <para>
-      <option>-D ENABLE_WEBRTC=OFF</option>: Disables WebRTC support if you
-      have not installed the recommended dependencies.
+      <option>-D ENABLE_WEBRTC=OFF</option>: Deaktiverer WebRTC støtte hvis du 
+      ikke har installert de anbefalte avhengighetene.
     </para>
 
     <para>
-      <option>-D ENABLE_WEBSOCKET=OFF</option>: Disables WebSocket support if
-      you have not installed the recommended dependencies.
+      <option>-D ENABLE_WEBSOCKET=OFF</option>: Deaktiverer WebSocket støtte 
+      hvis du ikke har installert de anbefalte avhengighetene.
     </para>
 
     <para>
-      <option>-D ENABLE_V4L2=OFF</option>: Disables V4L2 support if you have
-      not installed the recommended dependencies.
+      <option>-D ENABLE_V4L2=OFF</option>: Deaktiverer V4L2 støtte hvis du ikke 
+      har installert de anbefalte avhengighetene.
     </para>
 
     <para>
-      <option>-D ENABLE_VLC=OFF</option>: Disables VLC support if you have not
-      installed the recommended dependencies.
+      <option>-D ENABLE_VLC=OFF</option>: Deaktiverer VLC støtte hvis du ikke 
+      har installert de anbefalte avhengighetene.
     </para>
 
     <para>
       <option>-D ENABLE_NVENC=OFF -D ENABLE_NVENC_FFMPEG_IDS=OFF</option>:
-      These options disable NVIDIA hardware encoding support if you have not
-      installed the recommended dependencies.
+      Disse alternativene deaktiverer støtte for NVIDIA maskinvarekoding hvis 
+      du ikke har installert de anbefalte avhengighetene.
     </para>
 
     <para>
-      <option>-D ENABLE_QSV11=OFF</option>: Disables Intel QSV11 hardware
-      encoding support if you have not installed the recommended dependencies.
+      <option>-D ENABLE_QSV11=OFF</option>: Deaktiverer Intel QSV11 maskinvare 
+      kodingsstøtte hvis du ikke har installert de anbefalte avhengighetene.
     </para>
 
     <para>
-      <option>-D ENABLE_SCRIPTING=OFF</option>: Disables scripting support if
-      you have not installed the recommended dependencies.
+      <option>-D ENABLE_SCRIPTING=OFF</option>: Deaktiverer skriptstøtte hvis 
+      du ikke har installert de anbefalte avhengighetene.
     </para>
 
     <para>
-      <parameter>-D OBS_COMPILE_DEPRECATION_AS_WARNING=ON</parameter>: This
-      ensures there are no build failures due to deprecated features in the
-      FFmpeg side being used.
+      <parameter>-D OBS_COMPILE_DEPRECATION_AS_WARNING=ON</parameter>: Dette 
+      sikrer at det ikke oppstår byggefeil på grunn av utdaterte funksjoner i 
+      FFmpeg siden som brukes.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          obs and obs-ffmpeg-mux
+          obs og obs-ffmpeg-mux
         </seg>
         <seg>
           libobs-frontend-api,
           libobs-opengl,
           libobs-scripting,
-          libobs, and many plugins in /usr/lib/obs-plugins
+          libobs, og mange programtillegg i /usr/lib/obs-plugins
         </seg>
         <seg>
           /usr/include/obs,
           /usr/lib/cmake/{libobs,obs-frontend-api,obs-websocket-api},
           /usr/lib/obs-plugins,
-          /usr/lib/obs-scripting, and
+          /usr/lib/obs-scripting, og
           /usr/share/obs
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -378,7 +378,7 @@ ninja</userinput></screen>
         <term><command>obs</command></term>
         <listitem>
           <para>
-            is the OBS Studio program
+            er OBS Studio programmet
           </para>
           <indexterm zone="obs-studio obs">
             <primary sortas="b-obs">obs</primary>
@@ -390,8 +390,8 @@ ninja</userinput></screen>
         <term><command>obs-ffmpeg-mux</command></term>
         <listitem>
           <para>
-            is the FFmpeg multiplexer that
-            <command>obs</command> uses
+            er FFmpeg multiplekseren som
+            <command>obs</command> bruker
           </para>
           <indexterm zone="obs-studio obs-ffmpeg-mux">
             <primary sortas="b-obs-ffmpeg-mux">obs-ffmpeg-mux</primary>
@@ -403,8 +403,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs-frontend-api</filename></term>
         <listitem>
           <para>
-            contains API functions for the OBS
-            Studio frontend
+            inneholder API funksjoner for OBS Studio 
+            grensesnittet
           </para>
           <indexterm zone="obs-studio libobs-frontend-api">
             <primary sortas="c-libobs-frontend-api">libobs-frontend-api</primary>
@@ -416,7 +416,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs-opengl</filename></term>
         <listitem>
           <para>
-            provided OpenGL rendering functions for OBS
+            leverte OpenGL gjengivelsesfunksjoner for OBS
             Studio
           </para>
           <indexterm zone="obs-studio libobs-opengl">
@@ -429,8 +429,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs-scripting</filename></term>
         <listitem>
           <para>
-            provides functions for OBS
-            Studio scripts
+            tilbyr funksjoner for OBS
+            Studio skript
           </para>
           <indexterm zone="obs-studio libobs-scripting">
             <primary sortas="c-libobs-scripting">libobs-scripting</primary>
@@ -442,8 +442,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libobs</filename></term>
         <listitem>
           <para>
-            contains all the functions used by OBS
-            Studio and its plugins
+            inneholder alle funksjonene som brukes av OBS 
+            Studio og programtilleggene
           </para>
           <indexterm zone="obs-studio libobs">
             <primary sortas="c-libobs">libobs</primary>
