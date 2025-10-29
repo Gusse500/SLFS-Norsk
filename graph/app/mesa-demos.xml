@@ -18,93 +18,93 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Mesa-Demos</title>
+    <title>Introduksjon til Mesa-Demos</title>
 
     <para>
-      The Mesa-Demos package provides multiple demos
-      to test the installation of multiple graphics APIs and drivers for those
-      APIs, such as OpenGL, EGL, Vulkan, and more.
+      Mesa-Demos pakken tilbyr flere demoer for å teste installasjonen av 
+      flere grafikk API-er og drivere for disse API-ene, som OpenGL, EGL, 
+      Vulkan og mer.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&mesa-demos-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&mesa-demos-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="https://gitlab.archlinux.org/archlinux/packaging/packages/mesa-demos/-/raw/main/mesa-demos-system-data.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">mesa-demos Dependencies</bridgehead>
+    <bridgehead renderas="sect3">mesa-demos Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &opengl;
       <footnote><para>
-        The more support built into the OpenGL provider, like EGL, GLES, and
-        others, the more demos will get built unless specified otherwise in the
-        <command>meson setup</command> options.
+        Jo mer støtte som er innebygd i OpenGL leverandøren, som EGL, GLES og 
+        andre, desto flere demoer vil bli bygget med mindre annet er spesifisert 
+        i <command>meson setup</command> alternativene.
       </para></footnote>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <itemizedlist spacing="compact">
         <listitem>
           <para>
             <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>:
-            Required for the <command>readtex</command> utility.
+            Påkrevd for <command>readtex</command> verktøy.
           </para>
         </listitem>
         <listitem>
           <para>
             &gbm;:
-            Required for EGL with KMS (Kernel Mode Setting).
+            Påkrevd for EGL med KMS (Kernel Mode Setting).
           </para>
         </listitem>
         <listitem>
           <para>
-            <ulink url="&blfs-svn;/x/glslang.html">glslang</ulink> and
+            <ulink url="&blfs-svn;/x/glslang.html">glslang</ulink> og
             <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>:
-            Required for Vulkan demos.
+            Påkrevd for Vulkan demoer.
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>:
-            Required for X11/Wayland demos.
+            Påkrevd for X11/Wayland demoer.
           </para>
         </listitem>
         <listitem>
           <para>
-            <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>:
-            Required for X11 demos.
+            <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>:
+            Påkrevd for X11 demoer.
           </para>
         </listitem>
         <listitem>
           <para>
-            <xref linkend="libdecor"/> (will be downloaded if it is not
-            installed),
-            <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+            <xref linkend="libdecor"/> (vil bli lastet ned hvis den ikke er 
+            installert),
+            <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
             <ulink
             url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>:
-            Required for Wayland demos.
+            Påkrevd for Wayland demoer.
           </para>
         </listitem>
         <listitem>
           <para>
             <ulink url="&blfs-svn;/x/freeglut.html">Freeglut</ulink>
-            (with &glu;): Recommended for X11 demos; will be
-            automatically downloaded if it is not disabled or installed.
+            (med &glu;): Anbefales for X11 demoer; vil bli lastet ned automatisk 
+            hvis den ikke er deaktivert eller installert.
           </para>
         </listitem>
       </itemizedlist>
@@ -113,18 +113,18 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Mesa-Demos</title>
+    <title>Installasjon av Mesa-Demos</title>
 
     <para>
-      First apply a patch so that shaders and other necessary data get copied
-      over during installation:
+      Først må du legge til en oppdatering slik at shaders og andre nødvendige 
+      data kopieres over under installasjonen:
     </para>
 
 <screen><userinput>patch -Np1 -i ../mesa-demos-system-data.patch</userinput></screen>
 
     <para>
-      Install Mesa-Demos by running the following
-      commands:
+      Installer Mesa-Demos ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -134,8 +134,8 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      Now do a destdir installation and rename some binaries that conflict with
-      other packages outside of the LFS books:
+      Gjør nå en destdir installasjon og gi nytt navn til noen binærfiler som 
+      er i konflikt med andre pakker utenfor LFS bøkene:
     </para>
 
 <screen><userinput>DESTDIR=$PWD/DESTDIR ninja install &amp;&amp;
@@ -144,8 +144,8 @@ for bin in {identity,linktest,poly}; do
 done</userinput></screen>
 
     <para>
-      If you only want the utilities, or important demos built by this package,
-      install just them as the &root; user:
+      Hvis du bare vil ha verktøyene eller viktige demoer bygget av denne 
+      pakken, installer bare dem som &root; bruker:
     </para>
 
 <screen role="root"><userinput>mesa_utils=(
@@ -174,14 +174,14 @@ done
 cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
 
     <note><para>
-      You may get multiple errors of a given utility not being able to be
-      installed. This is normal as you likely won't have every utility built.
-      A number of them should still get installed, however.
+      Du kan få flere feilmeldinger om at et gitt verktøy ikke kan installeres. 
+      Dette er normalt, siden du sannsynligvis ikke har alle verktøyene som er 
+      installert. En rekke av dem skal imidlertid fortsatt bli installert.
     </para></note>
 
     <para>
-      If you wish to install every demo (less important binaries built in this
-      package), then run the following command as the &root; user:
+      Hvis du ønsker å installere alle demoene (mindre viktige binærfiler som er 
+      innebygd i denne pakken), kjør følgende kommando som &root; bruker:
     </para>
 
 <screen role="root"><userinput>cp -vR DESTDIR/usr/* /usr</userinput></screen>
@@ -189,19 +189,19 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <note><para>
-      Not every demo will be shown here. Please check all the built binaries in
-      <filename class="directory">$DESTDIR/usr/bin</filename> as it will
-      greatly vary depending on what you have installed, how you built OpenGL,
-      etc.
+      Ikke alle demoer vil bli vist her. Vennligst sjekk alle innebygde 
+      binærfilene i <filename class="directory">$DESTDIR/usr/bin</filename> da 
+      det vil variere mye avhengig av hva du har installert, hvordan du bygde 
+      OpenGL, osv.
     </para></note>
 
     <segmentedlist>
-      <segtitle>Installed Utilities</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
@@ -221,11 +221,11 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
           glxinfo,
           peglgears,
           tri,
-          vkgears, and
+          vkgears, og
           xeglgears
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/mesa-demos
@@ -234,7 +234,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -242,7 +242,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>eglgears_wayland</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through the EGL API on a Wayland client
+            viser roterende tannhjul i 3D gjennom EGL API på en Wayland klient
           </para>
           <indexterm zone="mesa-demos eglgears_wayland">
             <primary sortas="b-eglgears_wayland">eglgears_wayland</primary>
@@ -254,7 +254,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>eglgears_x11</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through the EGL API on a X11 server
+            viser roterende tannhjul i 3D gjennom EGL API på en X11 server
           </para>
           <indexterm zone="mesa-demos eglgears_x11">
             <primary sortas="b-eglgears_x11">eglgears_x11</primary>
@@ -266,8 +266,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>eglinfo</command></term>
         <listitem>
           <para>
-            displays useful information about the drivers in use and installed
-            hardware via the EGL api
+            viser nyttig informasjon om drivere som er i bruk og installert 
+            maskinvare via EGL API
           </para>
           <indexterm zone="mesa-demos eglinfo">
             <primary sortas="b-eglinfo">eglinfo</primary>
@@ -279,8 +279,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>eglkms</command></term>
         <listitem>
           <para>
-            displays an RGB triangle using the EGL API with KMS to be
-            independent from both X11 and Wayland
+            viser en RGB trekant ved hjelp av EGL API med KMS for å være 
+            uavhengig av både X11 og Wayland
           </para>
           <indexterm zone="mesa-demos eglkms">
             <primary sortas="b-eglkms">eglkms</primary>
@@ -292,7 +292,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>egltri_wayland</command></term>
         <listitem>
           <para>
-            displays an RGB triangle using the EGL API on a Wayland client
+            viser en RGB trekant ved hjelp av EGL API på en Wayland klient
           </para>
           <indexterm zone="mesa-demos egltri_wayland">
             <primary sortas="b-egltri_wayland">egltri_wayland</primary>
@@ -304,7 +304,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>egltri_x11</command></term>
         <listitem>
           <para>
-            displays an RGB triangle using the EGL API on an X11 server
+            viser en RGB trekant ved hjelp av EGL API på en X11 server
           </para>
           <indexterm zone="mesa-demos egltri_x11">
             <primary sortas="b-egltri_x11">egltri_x11</primary>
@@ -316,8 +316,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>es1_info</command></term>
         <listitem>
           <para>
-            displays useful information about the drivers in use and installed
-            hardware via the OpenGL ES v1 API
+            viser nyttig informasjon om drivere som er i bruk og installert 
+            maskinvare via OpenGL ES v1 API
           </para>
           <indexterm zone="mesa-demos es1_info">
             <primary sortas="b-es1_info">es1_info</primary>
@@ -329,8 +329,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>es2_info</command></term>
         <listitem>
           <para>
-            displays useful information about the drivers in use and installed
-            hardware via the OpenGL ES v2 API
+            viser nyttig informasjon om drivere som er i bruk og installert 
+            maskinvare via OpenGL ES v2 API
           </para>
           <indexterm zone="mesa-demos es2_info">
             <primary sortas="b-es2_info">es2_info</primary>
@@ -342,8 +342,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>es2gears_wayland</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through the OpenGL ES v2 API on a
-            Wayland client
+            viser roterende tannhjul i 3D gjennom OpenGL ES v2 API på en 
+            Wayland klient
           </para>
           <indexterm zone="mesa-demos es2gears_wayland">
             <primary sortas="b-es2gears_wayland">es2gears_wayland</primary>
@@ -355,7 +355,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>es2gears_x11</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through the Open GLES v2 API on an X11
+            viser roterende tannhjul i 3D gjennom OpenGL ES v2 API på en X11
             server
           </para>
           <indexterm zone="mesa-demos es2gears_x11">
@@ -368,7 +368,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>es2tri</command></term>
         <listitem>
           <para>
-            displays an RGB triangle using the OpenGL ES v2 API
+            viser en RGB trekant ved hjelp av OpenGL ES v2 API
           </para>
           <indexterm zone="mesa-demos es2tri">
             <primary sortas="b-es2tri">es2tri</primary>
@@ -380,8 +380,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>gears</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through normal OpenGL via a
-            GLUT variant or OpenGL ES
+            viser roterende 3D gir gjennom vanlig OpenGL via en GLUT variant 
+            eller OpenGL ES
           </para>
           <indexterm zone="mesa-demos gears">
             <primary sortas="b-gears">gears</primary>
@@ -393,7 +393,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>glxgears</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through the GLX API
+            viser roterende 3D gir gjennom GLX API
           </para>
           <indexterm zone="mesa-demos glxgears">
             <primary sortas="b-glxgears">glxgears</primary>
@@ -405,8 +405,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>glxinfo</command></term>
         <listitem>
           <para>
-            displays useful information about the drivers in use and installed
-            hardware via the GLX API
+            viser nyttig informasjon om drivere som er i bruk og installert 
+            maskinvare via GLX API
           </para>
           <indexterm zone="mesa-demos glxinfo">
             <primary sortas="b-glxinfo">glxinfo</primary>
@@ -418,7 +418,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>peglgears</command></term>
         <listitem>
           <para>
-            a straight port of <command>glxgears</command> for EGL
+            en rett portering av <command>glxgears</command> for EGL
           </para>
           <indexterm zone="mesa-demos peglgears">
             <primary sortas="b-peglgears">peglgears</primary>
@@ -430,8 +430,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>tri</command></term>
         <listitem>
           <para>
-            displays an RGB triangle using normal OpenGL via a
-            GLUT variant or OpenGL ES
+            viser en RGB trekant ved bruk av vanlig OpenGL via en GLUT variant 
+            eller OpenGL ES
           </para>
           <indexterm zone="mesa-demos tri">
             <primary sortas="b-tri">tri</primary>
@@ -443,7 +443,7 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>vkgears</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through the Vulkan API
+            viser roterende tannhjul i 3D gjennom Vulkan API
           </para>
           <indexterm zone="mesa-demos vkgears">
             <primary sortas="b-vkgears">vkgears</primary>
@@ -455,8 +455,8 @@ cp -vR DESTDIR/usr/share/* /usr/share</userinput></screen>
         <term><command>xeglgears</command></term>
         <listitem>
           <para>
-            displays 3D rotating gears through the GLX/EGL/GLES API, though its
-            source code notes it uses full OpenGL presently
+            viser roterende tannhjul i 3D gjennom GLX/EGL/GLES API, selv om 
+            kildekoden bemerker at den for øyeblikket bruker full OpenGL
           </para>
           <indexterm zone="mesa-demos xeglgears">
             <primary sortas="b-xeglgears">xeglgears</primary>
