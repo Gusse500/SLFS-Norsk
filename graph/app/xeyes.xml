@@ -17,57 +17,57 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to xeyes</title>
+    <title>Introduksjon til xeyes</title>
 
     <para>
-      The xeyes package provides an application that
-      displays eyes that follow the XCURSOR in an X
-      Window System environment. Its usecase is limited and even at the time it
-      was made, it was considered gimmicky. It got followed up by better
-      programs that did the premise better. The last usecase it has nowadays
-      is determining which GUI applications use Wayland or fall back to Xorg.
-      This is because xeyes can only follow the
-      cursor if it is found in an Xorg environment. The general Xorg server on
-      Wayland is shared by Xwayland. So when an
-      application is running in it, xeyes will be
-      able to see the cursor when it hovers over said window. For Wayland apps,
-      the cursor cannot be found at all. Thus, you can tell which apps use
-      Wayland or not. If you are just using Xorg, this app practically has no
-      use. If you are using Wayland and want to, for example, see progress on
-      Wayland support for Wine, this application
-      will show if it is using Wayland or Xorg.
+      Xeyes pakken tilbyr et program som viser øyne som følger XCURSOR 
+      i et X Window System miljø. Bruksområdet er begrenset, og selv 
+      da det ble laget, ble det ansett som en gimmick. Det ble fulgt 
+      opp av bedre programmer som gjorde premisset bedre. Det siste 
+      bruksområdet det har i dag er å bestemme hvilke GUI applikasjoner 
+      som bruker Wayland eller faller tilbake til Xorg. Dette er 
+      fordi xeyes bare kan følge markøren hvis den finnes i 
+      et Xorg miljø. Den generelle Xorg serveren på Wayland 
+      deles av Xwayland. Så når et program kjører i det, vil 
+      xeyes kunne se markøren når den holder seg over nevnte 
+      vindu. For Wayland apper, kan ikke markøren finnes i 
+      det hele tatt. Dermed kan du se hvilke apper som bruker 
+      Wayland eller ikke. Hvis du bare bruker Xorg, har denne 
+      appen praktisk talt ingen bruk. Hvis du bruker Wayland 
+      og for eksempel vil se fremdriften på Wayland støtte for 
+      Wine, vil dette programmet vise om det bruker Wayland eller Xorg.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xeyes-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&xeyes-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-  <bridgehead renderas="sect3">xeyes Dependencies</bridgehead>
+  <bridgehead renderas="sect3">xeyes Avhengigheter</bridgehead>
 
-  <bridgehead renderas="sect4">Required</bridgehead>
+  <bridgehead renderas="sect4">Påkrevd</bridgehead>
   <para role="required">
-    <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
   </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of xeyes</title>
+    <title>Installasjon av xeyes</title>
 
     <para>
-      Install xeyes by executing the following
-      commands:
+      Installer xeyes ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure $XORG_CONFIG &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -75,28 +75,28 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           xeyes
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -104,7 +104,7 @@ make</userinput></screen>
         <term><command>xeyes</command></term>
         <listitem>
           <para>
-            shows eyes that follow the XCURSOR via Xorg
+            viser øyne som følger XCURSOR via Xorg
           </para>
           <indexterm zone="xeyes xeyes-bin">
             <primary sortas="b-xeyes-bin">xeyes</primary>
