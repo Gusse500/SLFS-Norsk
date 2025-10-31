@@ -18,10 +18,10 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5</title>
+    <title>Introduksjon til Fcitx5</title>
 
     <para>
-      The Fcitx5 package provides an extensible input method framework.
+      Fcitx5 pakken tilbyr et utvidbart rammeverk for inndatametoder.
     </para>
 
     &build-use-internet;
@@ -29,14 +29,14 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5 Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5 Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">dbus</ulink>,
@@ -44,42 +44,42 @@
       <ulink url="&blfs-svn;/general/fmt.html">fmt</ulink>,
       <ulink url="&blfs-svn;/general/json-c.html">JSON-C</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
-      and <xref linkend="xcb-imdkit"/>
+      og <xref linkend="xcb-imdkit"/>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       <xref linkend="cldr-emoji-annotation"/>,
       <ulink url="&blfs-svn;/general/enchant.html">enchant</ulink>,
       <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
       <ulink url="&blfs-svn;/general/iso-codes.html">ISO Codes</ulink>,
-      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with
-      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>), and
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (med
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>), og
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (to build
-      the documentation)
+      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink> (til å 
+      bygge dokumentasjonen)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5</title>
+    <title>Installasjon av Fcitx5</title>
 
     <para>
-      Install Fcitx5 by running the following
-      commands:
+      Installer Fcitx5 ved å kjøre følgende 
+      kommandoer:
     </para>
 
     <warning><para>
-      DO NOT disable the testing addons with the
+      IKKE deaktiver testtilleggene med
       <option>-D ENABLE_TESTING_ADDONS=OFF</option>
-      option. For some reason some Fcitx input methods depend on those, even
-      when the test code is explicitly disabled.
+      alternativet. Av en eller annen grunn er noen Fcitx inndatametoder 
+      avhengige av disse, selv når testkoden er eksplisitt deaktivert.
     </para></warning>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -94,20 +94,20 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      If you have passed the <option>-D ENABLE_DOC=ON</option> parameter to 
-      CMake, build the documentation by executing the following commands:
+      Hvis du har sendt <option>-D ENABLE_DOC=ON</option> parameteren til CMake, 
+      bygg dokumentasjonen ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>make doc</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
 
     <para>
-      If you have built the documentation, install it as the &root; user:
+      Hvis du har bygget dokumentasjonen, installer den som &root; bruker:
     </para>
 
 <!-- install doesn't support recursive copy and there's no doc install
@@ -116,9 +116,9 @@ target... ugh -->
 cp -rv doc/html/* /usr/share/doc/fcitx5-&fcitx5-version;</userinput></screen>
 
     <para>
-      Under some desktop environments and most window managers, Fcitx will not
-      be started automatically. Execute the following command as each user you
-      want to use Fcitx as to avoid that:
+      I noen skrivebordsmiljøer og de fleste vindusbehandlere vil ikke Fcitx 
+      startes automatisk. Kjør følgende kommando som hver bruker du vil bruke 
+      Fcitx for å unngå det:
     </para>
 
 <!-- Probably not the best practice to put in XDG_CONFIG_HOME,
@@ -130,65 +130,65 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <option>-D ENABLE_DOC=ON</option>: Use this switch if you want to
-      build the documentation (requires doxygen).
+      <option>-D ENABLE_DOC=ON</option>: Bruk denne bryteren hvis du vil bygge 
+      dokumentasjonen (krever doxygen).
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring Fcitx5</title>
+    <title>Konfigurere Fcitx5</title>
     <sect3>
-      <title>Configuration Information</title>
+      <title>Konfigurasjonsinformasjon</title>
       <para>
-        While this package has been installed, you will want an Input Method
-        Engine in tandom with this package, such as <xref
-        linkend="fcitx5-anthy"/>. Furthermore, you will want to ensure you can
-        actually use this package. Read the <ulink
-        url="https://fcitx-im.org/wiki/Fcitx_5">Fcitx5 Wiki</ulink> for more
-        information on how to set it up.
+        Mens denne pakken er installert, vil du ha en inndatamotor i tillegg 
+        til pakken, for eksempel <xref
+        linkend="fcitx5-anthy"/>. Videre bør du sørge for at du faktisk kan 
+        bruke denne pakken. Les <ulink
+        url="https://fcitx-im.org/wiki/Fcitx_5">Fcitx5 Wiki</ulink> for mer 
+        informasjon om hvordan du konfigurerer det.
       </para>
     </sect3>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installed Programtillegg</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           comp-spell-dict, fcitx5, fcitx5-configtool, fcitx5-diagnose, 
-          fcitx5-remote, and fcitx5-wayland-launcher
+          fcitx5-remote, og fcitx5-wayland-launcher
         </seg>
         <seg>
-          libFcitx5Config, libFcitx5Core, and libFcitx5Utils
+          libFcitx5Config, libFcitx5Core, og libFcitx5Utils
         </seg>
         <seg>
           libclassicui, libclipboard, libdbus, libdbusfrontend, libemoji,
           libfcitx4frontend, libibusfrontend, libimselector, libkimpanel,
           libnotificationitem, libnotifications, libquickphrase, libspell,
           libtestfrontend, libtestim, libtestui, libunicode,
-          libvirtualkeyboard, libwayland, libwaylandim, libxcb, and libxim
+          libvirtualkeyboard, libwayland, libwaylandim, libxcb, og libxim
         </seg>
         <seg>
           /usr/include/Fcitx5, /usr/lib/fcitx5, /usr/share/fcitx5,
-          and /usr/share/doc/fcitx5-&fcitx5-version;
+          og /usr/share/doc/fcitx5-&fcitx5-version;
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -196,7 +196,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><command>comp-spell-dict</command></term>
         <listitem>
           <para>
-            compiles a spell dictionary for the spell plugin
+            kompilerer en staveordbok for staveprogramtillegget
           </para>
           <indexterm zone="fcitx5 comp-spell-dict">
             <primary sortas="b-comp-spell-dict">comp-spell-dict</primary>
@@ -208,7 +208,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><command>fcitx5</command></term>
         <listitem>
           <para>
-            is the Fcitx server
+            er Fcitx serveren
           </para>
           <indexterm zone="fcitx5 fcitx5-bin">
             <primary sortas="b-fcitx5-bin">fcitx5</primary>
@@ -222,8 +222,8 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><command>fcitx5-configtool</command></term>
         <listitem>
           <para>
-            is a wrapper which autodetects and runs a suitable Fcitx
-            configuration tool
+            er en innpakning som automatisk oppdager og kjører et 
+            passende Fcitx konfigurasjonsverktøy
           </para>
           <indexterm zone="fcitx5 fcitx5-configtool-bin">
             <primary sortas="b-fcitx5-configtool-bin">fcitx5-configtool</primary>
@@ -235,7 +235,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><command>fcitx5-diagnose</command></term>
         <listitem>
           <para>
-            is a script that fetches diagnostic data for bug reports
+            er et skript som henter diagnostiske data for feilrapporter
           </para>
           <indexterm zone="fcitx5 fcitx5-diagnose">
             <primary sortas="b-fcitx5-diagnose">fcitx5-diagnose</primary>
@@ -247,7 +247,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><command>fcitx5-remote</command></term>
         <listitem>
           <para>
-            is a control tool for the Fcitx server
+            er et kontrollverktøy for Fcitx serveren
           </para>
           <indexterm zone="fcitx5 fcitx5-remote">
             <primary sortas="b-fcitx5-remote">fcitx5-remote</primary>
@@ -259,7 +259,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><command>fcitx5-wayland-launcher</command></term>
         <listitem>
           <para>
-            is a helper tool for launching Fcitx within a Wayland compositor
+            er et hjelpeverktøy for å starte Fcitx i en Wayland kompositor
           </para>
           <indexterm zone="fcitx5 fcitx5-wayland-launcher">
             <primary sortas="b-fcitx5-wayland-launcher">fcitx5-wayland-launcher</primary>
@@ -271,7 +271,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><filename class="libraryfile">libFcitx5Config</filename></term>
         <listitem>
           <para>
-            is a library for parsing Fcitx configuration files
+            er et bibliotek for å analysere Fcitx konfigurasjonsfiler
           </para>
           <indexterm zone="fcitx5 libFcitx5Config">
             <primary sortas="c-libFcitx5Config">libFcitx5Config</primary>
@@ -283,7 +283,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><filename class="libraryfile">libFcitx5Core</filename></term>
         <listitem>
           <para>
-            is the Fcitx core library
+            er Fcitx kjernebiblioteket
           </para>
           <indexterm zone="fcitx5 libFcitx5Core">
             <primary sortas="c-libFcitx5Core">libFcitx5Core</primary>
@@ -295,7 +295,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
         <term><filename class="libraryfile">libFcitx5Utils</filename></term>
         <listitem>
           <para>
-            contains Fcitx utility functions
+            inneholder Fcitx verktøyfunksjoner
           </para>
           <indexterm zone="fcitx5 libFcitx5Utils">
             <primary sortas="c-libFcitx5Utils">libFcitx5Utils</primary>
