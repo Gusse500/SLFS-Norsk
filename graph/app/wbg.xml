@@ -18,48 +18,48 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to wbg</title>
+    <title>Introduksjon til wbg</title>
 
     <para>
-      The wbg package provides a
-      Wayland wallpaper setter.
+      Wbg pakken inneholder en 
+      Wayland bakgrunnsbildesetter.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wbg-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&wbg-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">wbg Dependencies</bridgehead>
+    <bridgehead renderas="sect3">wbg Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
       <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
       <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
-      <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>, and
-      <xref linkend="tllist"/> (if not built, it will be downloaded)
+      <ulink url="&blfs-svn;/general/libjxl.html">libjxl</ulink>, og
+      <xref linkend="tllist"/> (hvis den ikke er bygget, vil den bli lastet ned)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of wbg</title>
+    <title>Installasjon of wbg</title>
 
 <!---
     <para>
-      First apply a fix that avoids an error about possible uninitialized
-      values:
+      Først må du bruke en rettelse som unngår en feil om mulige uinitialiserte 
+      verdier:
     </para>
 
 <screen><userinput>sed 's/float t\[6\]/float t\[6\] = {0}/' \
@@ -67,8 +67,8 @@
 -->
 
     <para>
-      Install wbg by running the following
-      commands:
+      Installer wbg ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -78,7 +78,7 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -86,28 +86,28 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           wbg
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -115,7 +115,7 @@ ninja</userinput></screen>
         <term><command>wbg</command></term>
         <listitem>
           <para>
-            creates a wallpaper from an image on
+            lager et bakgrunnsbilde fra et bilde på 
             Wayland
           </para>
           <indexterm zone="wbg wbg-bin">
