@@ -55,6 +55,10 @@ autoreconf -fi &amp;&amp;
 make</userinput></screen>
 
     <para>
+      For å teste resultatene, utsted: <command>make check</command>
+    </para>
+
+    <para>
       Nå, som &root; bruker:
     </para>
 
