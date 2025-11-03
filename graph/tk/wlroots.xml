@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wlroots-root
+    "https://gitlab.freedesktop.org/wlroots/wlroots/-/archive">
+  <!ENTITY wlroots-download-http
+    "&wlroots-root;/&wlroots-version;/wlroots-&wlroots-version;.tar.bz2">
+]>
+
+<sect1 id="wlroots" xreflabel="wlroots-&wlroots-version;">
+  <?dbhtml filename="wlroots.html"?>
+
+  <title>wlroots-&wlroots-version;</title>
+
+  <indexterm zone="wlroots">
+    <primary sortas="a-wlroots">wlroots</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til wlroots</title>
+
+    <para>
+      wlroots er et Wayland bibliotek for komposisjoner, ryggraden i de fleste 
+      Wayland komposisjoner. Komposisjoner som bruker en annen base kan ha brukt 
+      denne pakken i begynnelsen av komposisjonens historie for å levere 
+      mesteparten av arbeidet.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&wlroots-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">wlroots Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>
+            &gbm;: For GBM tildeling.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>,
+            <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>, og
+            <xref linkend="libliftoff"/>:
+            For DRM bakstykke; kan brukes til å velge en renderer generelt i 
+            stedet for å være implisitt.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>:
+            For libinput bakstykke.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/general/lcms2.html">Little-CMS</ulink>:
+            For fargehåndtering.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            &wayland-gl;: For OpenGL rendereren.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <xref linkend="seatd"/>: For håndtering av økter.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>
+            <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>:
+            For Vulkan rendereren.
+          </para>
+        </listitem>
+        <listitem>
+          <para>
+            <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
+            <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, og
+            <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>:
+            For støtte for Xorg applikasjoner/biblioteker.
+          </para>
+        </listitem>
+      </itemizedlist>
+    </para>
+
+    <important><para>
+      Å hoppe over noen av de anbefalte avhengighetene kan føre til konfigurasjons, 
+      bygge eller kjøretidsfeil i diverse komposisjoner. Et eksempel er GLESv2: Hvis 
+      den ikke blir funnet, vil OpenGL gjengivelse som helhet bli deaktivert. OpenGL 
+      gjengivelse er den primære, og i de fleste tilfeller den eneste tilgjengelige 
+      gjengiveren en gitt komposisjon kan bruke hvis den ikke er avhengig av den 
+      anbefalte DRM bakstykket for å velge en gjengiver for komposisjonen. Vurder de 
+      fleste av avhengighetene som er oppført ovenfor, i tillegg til det som kreves 
+      for Vulkan gjengiveren og Xorg støtte.
+    </para></important>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink> (for eksempler)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av wlroots</title>
+
+    <para>
+      Installer wlroots ved å kjøre følgende 
+      kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr          \
+            --buildtype=release    \
+            --wrap-mode=nofallback \
+            .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    &meson-wrap-nofallback;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          libwlroots-&wlroots-minor;
+        </seg>
+        <seg>
+          /usr/include/wlroots-&wlroots-minor;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libwlroots">
+        <term><filename class="libraryfile">libwlroots-&wlroots-minor;</filename></term>
+        <listitem>
+          <para>
+            tilbyr funksjoner for Wayland kompositorer
+          </para>
+          <indexterm zone="wlroots libwlroots">
+            <primary sortas="b-libwlroots">libwlroots-&wlroots-minor;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

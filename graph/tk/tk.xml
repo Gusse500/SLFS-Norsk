@@ -8,16 +8,17 @@
 <chapter id="graph-tk">
   <?dbhtml filename="tk.html"?>
 
-  <title>Graphical Toolkits</title>
+  <title>Grafiske verktøysett</title>
 
   <para>
-    This chapter covers toolkits that some graphical apps or environments make
-    use of.
+    Dette kapittelet dekker verktøysett som noen grafiske apper eller miljøer 
+    bruker.
   </para>
 
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="printproto.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="libxp.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="motif.xml"/>
+   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="wlroots.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-util-errors.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-util-xrm.xml"/>
    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xcb-imdkit.xml"/>

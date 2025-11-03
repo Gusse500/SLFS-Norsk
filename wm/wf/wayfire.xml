@@ -18,35 +18,33 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Wayfire</title>
+    <title>Introduksjon til Wayfire</title>
 
     <para>
-      Wayfire is a
-      Wayland compositor which takes a lot of
-      effects from the now deprecated Compiz Xorg
-      compositor. It aims to be customizable, yet lightweight. Unlike other
-      compositors, it is also 3D and supports multiple perspectives for seeing
-      windows.
+      Wayfire er en Wayland kompositor som tar mange effekter fra den nå 
+      utdaterte Compiz Xorg kompositoren. Den har som mål å være tilpassbar, men 
+      likevel lettvektig. I motsetning til andre kompositorer er den også 3D og 
+      støtter flere perspektiver for å se vinduer.
     </para>
+
+    &build-use-internet;
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wayfire-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&wayfire-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Wayfire Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Wayfire Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       &gbm;,
       <ulink url="&blfs-svn;/general/glm.html">GLM</ulink>,
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType2</ulink>,
-      <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>,
-      <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
@@ -55,39 +53,34 @@
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       <xref linkend="nlohmann-json"/>,
       &wayland-gl;,
-      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with Cairo),
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (med Cairo),
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
-      <xref linkend="seatd"/>,
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
-      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
+      og <xref linkend="wlroots"/>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <xref linkend="libliftoff"/>,
-      <xref linkend="wf-config"/> (if not installed, it will be downloaded from
-      the internet),
-      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, and
-      <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
+      <xref linkend="wf-config"/> (hvis den ikke er installert, vil den bli 
+      lastet ned fra internett) og
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="https://github.com/doctest/doctest">doctest</ulink> (for
-      tests) and
-      <ulink url="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots</ulink>
-      (the newest version cannot be used)
+      tester)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Wayfire</title>
+    <title>Installasjon av Wayfire</title>
 
     <para>
-      Install Wayfire by running the following
-      commands:
+      Installer Wayfire ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -102,14 +95,21 @@ meson setup --prefix=/usr                  \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      Copy the default configuration file to <filename
-      class="directory">/usr/share/wayfire</filename> as the &root; user:
+      Fjern ubrukelige statiske biblioteker:
+    </para>
+
+<screen role="root"><userinput>rm -vf /usr/lib/lib{wftouch,yyjson}.a \
+       /usr/lib/libwayfire-{move-drag-interface,workspace-wall}.a</userinput></screen>
+
+    <para>
+      Som &root; bruker, kopier standardkonfigurasjonsfilen til <filename
+      class="directory">/usr/share/wayfire</filename> :
     </para>
 
 <screen role="root"><userinput>cp -v ../wayfire.ini /usr/share/wayfire</userinput></screen>
@@ -117,29 +117,29 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D use_system_wfconfig=enabled</parameter>: This parameter
-      ensures the system-installed <xref linkend="wf-config"/>.
+      <parameter>-D use_system_wfconfig=enabled</parameter>: Denne parameteren 
+      sikrer det systeminstallerte <xref linkend="wf-config"/>.
     </para>
 
     <para>
-      <parameter>-D tests=disabled</parameter>: This parameter disables
-      building unit tests.
+      <parameter>-D tests=disabled</parameter>: Denne parameteren deaktiverer 
+      bygging av enhetstester.
     </para>
 
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring Wayfire</title>
+    <title>Konfigurere Wayfire</title>
 
     <sect3 id="wayfire-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
-        <filename>~/.config/wayfire.ini</filename>. The default version
-        is in <filename class="directory">/usr/share/wayfire</filename> and will
-        not be used and must be copied to
+        <filename>~/.config/wayfire.ini</filename>. Standardversjonen er i 
+        <filename class="directory">/usr/share/wayfire</filename> og vil ikke 
+        bli brukt og må kopieres til
         <filename class="directory">~/.config</filename>
       </para>
 
@@ -149,18 +149,18 @@ ninja</userinput></screen>
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Create the config file:
+        Opprett konfigurasjonsfilen:
       </para>
 
 <screen><userinput>cp /usr/share/wayfire/wayfire.ini ~/.config</userinput></screen>
 
       <para>
-        Now inspect the file and make any changes to suit your workflow. If you
-        need to know which plugins are installed, check for the Installed
-        Plugins below.
+        Inspiser nå filen og gjør eventuelle endringer som passer til 
+        arbeidsflyten din. Hvis du trenger å vite hvilke programtillegg som er 
+        installert, se etter de installerte programtilleggene nedenfor.
       </para>
 
     </sect3>
@@ -168,22 +168,21 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Programtillegg</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           wayfire
         </seg>
         <seg>
-          libwayfire-blur-base,
-          libwf-util, and
-          libwftouch (static)
+          libwayfire-blur-base og
+          libwf-utils
         </seg>
         <seg>
           alpha,
@@ -194,7 +193,6 @@ ninja</userinput></screen>
           cube,
           decoration,
           default-config-backend,
-          demo-ipc,
           expo,
           extra-gestures,
           fast-switcher,
@@ -220,6 +218,7 @@ ninja</userinput></screen>
           stipc,
           switcher,
           swipe,
+          vk-color-management,
           vswitch,
           wayfire-shell,
           window-rules,
@@ -228,17 +227,17 @@ ninja</userinput></screen>
           wrot,
           wsets,
           xdg-activation,
-          xkb-bindings, and
+          xkb-bindings, og
           zoom
         </seg>
         <seg>
-          /usr/lib/wayfire and /usr/share/wayfire
+          /usr/lib/wayfire og /usr/share/wayfire
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -246,7 +245,7 @@ ninja</userinput></screen>
         <term><command>wayfire</command></term>
         <listitem>
           <para>
-            is the Wayfire compositor
+            er Wayfire komposisjonsprogrammet
           </para>
           <indexterm zone="wayfire wayfire-bin">
             <primary sortas="b-wayfire-bin">wayfire</primary>
@@ -258,8 +257,8 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libwayfire-blur-base</filename></term>
         <listitem>
           <para>
-            provides basic functions for blur implementations in
-            Wayfire
+            tilbyr grunnleggende funksjoner for implementering av 
+            blur i Wayfire
           </para>
           <indexterm zone="wayfire libwayfire-blur-base">
             <primary sortas="b-libwayfire-blur-base">libwayfire-blur-base</primary>
@@ -271,24 +270,11 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libwf-utils</filename></term>
         <listitem>
           <para>
-            contains several functions used by
-            Wayfire and its libraries
+            inneholder flere funksjoner som brukes av 
+            Wayfire og dets biblioteker
           </para>
           <indexterm zone="wayfire libwf-utils">
             <primary sortas="b-libwf-utils">libwf-utils</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="libwftouch.a">
-        <term><filename class="libraryfile">libwftouch</filename></term>
-        <listitem>
-          <para>
-            is the static library for Wayfire touch
-            functionality
-          </para>
-          <indexterm zone="wayfire libwftouch.a">
-            <primary sortas="b-libwftouch.a">libwftouch</primary>
           </indexterm>
         </listitem>
       </varlistentry>

@@ -72,8 +72,7 @@
   macOS.</para></note>">
 <!ENTITY gnu17
   "<para><envar>C{,XX}FLAGS='std=gnu17'</envar>: Disse variablene sikrer at 
-  denne pakken bygger seg riktig, ettersom C23 nå er standard i 
-  GCC-15.x.x.</para>">
+  denne pakken bygger riktig, ettersom C23 nå er standard i GCC-15.x.x.</para>">
 <!ENTITY long-build-time
   "<note><para>Dette kan ta litt tid å bygge. Gjør gjerne noe annet mens dette 
   bygges.</para></note>">
@@ -81,6 +80,11 @@
   "<para><parameter>--buildtype=release</parameter>: Spesifiser en byggetype som 
   er egnet for stabile utgivelser av pakken, da standardtypen kan produsere 
   uoptimaliserte binærfiler.</para>">
+<!ENTITY meson-wrap-nofallback
+  "<para><parameter>--wrap-mode=nofallback</parameter>: Denne bryteren forhindrer
+   <command>meson</command> fra å bruke delprosjekt reserver for avhengighets 
+   deklarasjoner i byggefilene, noe som hindrer den i å laste ned valgfrie 
+   avhengigheter som ikke er installert på systemet.</para>">
 <!ENTITY static-libraries
   "<para><parameter>--disable-static</parameter>: Denne bryteren forhindrer 
   installasjon av statiske versjoner av bibliotekene.</para>">
