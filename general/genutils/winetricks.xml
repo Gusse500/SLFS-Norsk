@@ -59,7 +59,7 @@
     <para role="optional">
       <ulink url="&arch-pkgs;/extra/x86_64/kdialog">kdialog</ulink> (for KDE)
       eller
-      <ulink url="&arch-pkgs;/extra/x86_64/zenity">zentiy</ulink> (for GNOME);
+      <ulink url="&arch-pkgs;/extra/x86_64/zenity">zenity</ulink> (for GNOME);
       Denne pakken bruker en av dem for å tilby et grafisk grensesnitt, men er valgfritt
     </para>
 
