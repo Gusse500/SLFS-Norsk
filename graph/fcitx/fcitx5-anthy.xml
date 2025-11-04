@@ -18,39 +18,39 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5-Anthy</title>
+    <title>Introduksjon til Fcitx5-Anthy</title>
 
     <para>
-      The Fcitx5-Anthy package provides a wrapper around the Anthy engine for
+      Fcitx5-Anthy pakken gir en innpakning rundt Anthy motoren for 
       Fcitx.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-anthy-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-anthy-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5-Anthy Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5-Anthy Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <xref linkend="anthy"/>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
-      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>, and
+      <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>, og
       <xref linkend="fcitx5"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5-Anthy</title>
+    <title>Installasjon av Fcitx5-Anthy</title>
 
     <para>
-      Install Fcitx5-Anthy by running the following
-      commands:
+      Installer Fcitx5-Anthy ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -65,7 +65,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -73,27 +73,27 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Programtillegg</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libanthy
