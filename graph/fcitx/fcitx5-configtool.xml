@@ -18,35 +18,35 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5-configtool</title>
+    <title>Introduksjon til Fcitx5-configtool</title>
 
     <para>
-      The Fcitx5-configtool package provides a user-friendly configuration
-      interface for Fcitx.
+      Pakken Fcitx5-configtool tilbyr et brukervennlig 
+      konfigurasjonsgrensesnitt for Fcitx.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-configtool-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-configtool-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5-configtool Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5-configtool Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
       <xref linkend="fcitx5"/>,
       <xref linkend="fcitx5-qt"/>,
       <ulink url="&blfs-svn;/general/iso-codes.html">ISO Codes</ulink>,
-      <ulink url="&blfs-svn;/kde/frameworks6.html">KF6</ulink>, and
+      <ulink url="&blfs-svn;/kde/frameworks6.html">KF6</ulink>, og
       <ulink url="&blfs-svn;/x/xkeyboard-config.html">XKeyboardConfig</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/kde/plasma-all.html">KDE Plasma</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>
@@ -55,11 +55,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5-configtool</title>
+    <title>Installasjon av Fcitx5-configtool</title>
 
     <para>
-      Install Fcitx5-configtool by running the following
-      commands:
+      Installer Fcitx5-configtool ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -74,7 +74,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -82,46 +82,46 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D ENABLE_KCM=OFF</parameter>: This switch disables building
-      KDE Plasma integration for Fcitx5-configtool. Remove it if you have
-      installed the optional dependencies.
+      <parameter>-D ENABLE_KCM=OFF</parameter>: Denne bryteren deaktiverer 
+      bygging av KDE Plasma integrasjon for Fcitx5-configtool. Fjern den hvis 
+      du har installert de valgfrie avhengighetene.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Programtillegg</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           fcitx5-config-qt, fcitx5-migrator, fcitx5-plasma-theme-generator,
-          and kbd-layout-viewer5
+          og kbd-layout-viewer5
         </seg>
         <seg>
           libFcitx5Migrator
         </seg>
         <seg>
-          kcm_fcitx5 (KDE configuration module)
+          kcm_fcitx5 (KDE konfigurasjonsmodul)
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -129,7 +129,7 @@ make</userinput></screen>
         <term><command>fcitx5-config-qt</command></term>
         <listitem>
           <para>
-            is the Fcitx configuration tool
+            er Fcitx konfigurasjonsverktøyet
           </para>
           <indexterm zone="fcitx5-configtool fcitx5-config-qt">
             <primary sortas="b-fcitx5-config-qt">fcitx5-config-qt</primary>
@@ -141,7 +141,7 @@ make</userinput></screen>
         <term><command>fcitx5-migrator</command></term>
         <listitem>
           <para>
-            is a tool to migrate user data from Fcitx 4 to Fcitx 5
+            er et verktøy for å migrere brukerdata fra Fcitx 4 til Fcitx 5
           </para>
           <indexterm zone="fcitx5-configtool fcitx5-migrator">
             <primary sortas="b-fcitx5-migrator">fcitx5-migrator</primary>
@@ -153,7 +153,7 @@ make</userinput></screen>
         <term><command>fcitx5-plasma-theme-generator</command></term>
         <listitem>
           <para>
-            generates a Fcitx 5 Classic UI theme based on a Plasma theme
+            genererer et Fcitx 5 Klassisk UI tema basert på et Plasma tema
           </para>
           <indexterm zone="fcitx5-configtool fcitx5-plasma-theme-generator">
             <primary sortas="b-fcitx5-plasma-theme-generator">fcitx5-plasma-theme-generator</primary>
@@ -165,7 +165,7 @@ make</userinput></screen>
         <term><command>kbd-layout-viewer5</command></term>
         <listitem>
           <para>
-            is the Fcitx keyboard layout viewer
+            er Fcitx tastaturoppsettviseren
           </para>
           <indexterm zone="fcitx5-configtool kbd-layout-viewer5">
             <primary sortas="b-kbd-layout-viewer5">kbd-layout-viewer5</primary>
@@ -177,7 +177,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libFcitx5Migrator</filename></term>
         <listitem>
           <para>
-            contains the routines for migrating from Fcitx 4 to Fcitx 5
+            inneholder rutinene for migrering fra Fcitx 4 til Fcitx 5
           </para>
           <indexterm zone="fcitx5-configtool libFcitx5Migrator">
             <primary sortas="c-libFcitx5Migrator">libFcitx5Migrator</primary>
