@@ -18,11 +18,11 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5-chinese-addons</title>
+    <title>Introduksjon til Fcitx5-chinese-addons</title>
 
     <para>
-      The Fcitx5-chinese-addons package provides Chinese-related addons for 
-      Fcitx 5, including IMEs previously bundled with Fcitx 4.
+      Pakken Fcitx5-chinese-addons tilbyr kinesisk relaterte tillegg for 
+      Fcitx 5, inkludert IME-er som tidligere ble inkludert i Fcitx 4.
     </para>
 
     &build-use-internet;
@@ -30,45 +30,45 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-chinese-addons-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-chinese-addons-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5-chinese-addons Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5-chinese-addons Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
       <xref linkend="fcitx5"/>,
-      and <xref linkend="libime"/>
+      og <xref linkend="libime"/>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <xref linkend="fcitx5-lua"/>,
-      <xref linkend="fcitx5-qt"/>. and
+      <xref linkend="fcitx5-qt"/>. og
       <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>,
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
-      <ulink url="https://github.com/BYVoid/OpenCC">OpenCC</ulink>, and
+      <ulink url="https://github.com/BYVoid/OpenCC">OpenCC</ulink>, og
       <ulink url="&blfs-svn;/x/qtwebengine.html">QtWebEngine</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5-chinese-addons</title>
+    <title>Installasjon av Fcitx5-chinese-addons</title>
 
     <para>
-      Install Fcitx5-chinese-addons by running the following
-      commands:
+      Installer Fcitx5-chinese-addons ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -86,7 +86,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -94,50 +94,50 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
     <para>
-      <parameter>-D ENABLE_OPENCC=OFF</parameter>: This switch disables
-      building the chttrans utility, which requires OpenCC and Boost.
-      Remove it if you have installed them.
+      <parameter>-D ENABLE_OPENCC=OFF</parameter>: Denne bryteren deaktiverer 
+      bygging av chttrans verktøyet, som krever OpenCC og Boost. Fjern det hvis 
+      du har installert OpenCC og Boost.
     </para>
 
     <para>
-      <parameter>-D ENABLE_BROWSER=OFF</parameter>: This switch disables
-      building the built-in browser, which requires QtWebEngine.
-      Remove it if you have installed it.
+      <parameter>-D ENABLE_BROWSER=OFF</parameter>: Denne bryteren deaktiverer 
+      bygging av den innebygde nettleseren, som krever QtWebEngine. Fjern den 
+      hvis du har installert QtWebEngine.
     </para>
 
     <para>
-      <parameter>-D ENABLE_CLOUDPINYIN=OFF</parameter>: This switch disables
-      building the cloud pinyin addon, which requires cURL.
-      Remove it if you have installed it.
+      <parameter>-D ENABLE_CLOUDPINYIN=OFF</parameter>: Denne bryteren 
+      deaktiverer bygging av pinyin tillegget i skyen, som krever cURL. Fjern 
+      det hvis du har installert cURL.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Programtillegg</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           scel2org5
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libchttrans, libcloudpinyin, libcustomphraseeditor, libfullwidth
           libpinyin, libpinyindictmanager, libpinyinhelper, libpunctuation
-          and libtable
+          og libtable
         </seg>
         <seg>
           /usr/include/Fcitx5/Module/fcitx-module/cloudpinyin,
@@ -152,7 +152,7 @@ make</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -160,7 +160,7 @@ make</userinput></screen>
         <term><command>scel2org5</command></term>
         <listitem>
           <para>
-            converts a scel file to a libime-compatible file
+            konverterer en scel-fil til en libime-kompatibel fil
           </para>
           <indexterm zone="fcitx5-chinese-addons scel2org5">
             <primary sortas="b-scel2org5">scel2org5</primary>
