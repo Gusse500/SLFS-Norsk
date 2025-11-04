@@ -18,42 +18,42 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5-GTK</title>
+    <title>Introduksjon til Fcitx5-GTK</title>
 
     <para>
-      The Fcitx5-GTK package provides a GTK frontend for Fcitx.
+      Fcitx5-GTK pakken tilbyr et GTK grensesnitt for Fcitx.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-gtk-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-gtk-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5-GTK Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5-GTK Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
       <xref linkend="fcitx5"/>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
       <ulink url="&blfs-svn;/x/gtk3.html">GTK3</ulink>, 
-      <ulink url="&blfs-svn;/x/gtk4.html">GTK4</ulink> (only one of the two is
-      required, but both are recommended), and
+      <ulink url="&blfs-svn;/x/gtk4.html">GTK4</ulink> (bare én av de to er 
+      påkrevd, men begge anbefales), og
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5-GTK</title>
+    <title>Installasjon av Fcitx5-GTK</title>
 
     <para>
-      Install Fcitx5-GTK by running the following
-      commands:
+      Installer Fcitx5-GTK ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -71,7 +71,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -81,8 +81,8 @@ personal testing the module only got picked up after running this despite
 being installed in /usr -->
 
     <para>
-      If you have compiled in GTK3 support, update the GTK3 input method
-      module cache as the &root; user:
+      Hvis du har kompilert med GTK3 støtte, oppdater GTK3 inndatametodens 
+      modulbuffer som &root; bruker:
     </para>
 
 <screen role="root"><userinput>gtk-query-immodules-3.0 --update-cache</userinput></screen>
@@ -90,7 +90,7 @@ being installed in /usr -->
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
@@ -100,20 +100,20 @@ being installed in /usr -->
     <title>Contents</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Programtillegg</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          fcitx5-gtk3-immodule-probing and fcitx5-gtk4-immodule-probing, 
+          fcitx5-gtk3-immodule-probing og fcitx5-gtk4-immodule-probing, 
         </seg>
         <seg>
           libFcitx5GClient
         </seg>
         <seg>
-          im-fcitx5 (GTK3 plugin) and libim-fcitx5 (GTK4 plugin)
+          im-fcitx5 (GTK3 programtillegg) og libim-fcitx5 (GTK4 programtillegg)
         </seg>
         <seg>
           /usr/include/Fcitx5/GClient
@@ -122,7 +122,7 @@ being installed in /usr -->
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -130,7 +130,7 @@ being installed in /usr -->
         <term><command>fcitx5-gtk3-immodule-probing</command></term>
         <listitem>
           <para>
-            is a debugging application for GTK3 input methods
+            er et feilsøkingsprogram for GTK3 inndatametoder
           </para>
           <indexterm zone="fcitx5-gtk fcitx5-gtk3-immodule-probing">
             <primary sortas="b-fcitx5-gtk3-immodule-probing">fcitx5-gtk3-immodule-probing</primary>
@@ -142,7 +142,7 @@ being installed in /usr -->
         <term><command>fcitx5-gtk4-immodule-probing</command></term>
         <listitem>
           <para>
-            is a debugging application for GTK4 input methods
+            er et feilsøkingsprogram for GTK4 inndatametoder
           </para>
           <indexterm zone="fcitx5-gtk fcitx5-gtk4-immodule-probing">
             <primary sortas="b-fcitx5-gtk4-immodule-probing">fcitx5-gtk4-immodule-probing</primary>
@@ -154,7 +154,7 @@ being installed in /usr -->
         <term><filename class="libraryfile">libFcitx5GClient</filename></term>
         <listitem>
           <para>
-            is the Fcitx DBus client library for GLib
+            er Fcitx DBus klientbiblioteket for GLib
           </para>
           <indexterm zone="fcitx5-gtk libFcitx5GClient">
             <primary sortas="c-libFcitx5GClient">libFcitx5GClient</primary>
