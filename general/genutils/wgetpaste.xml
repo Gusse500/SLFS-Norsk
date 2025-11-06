@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY wgetpaste-download-http "https://github.com/zlin/wgetpaste/releases/download/&wgetpaste-version;/wgetpaste-&wgetpaste-version;.tar.xz">
+]>
+
+<sect1 id="wgetpaste" xreflabel="wgetpaste-&wgetpaste-version;">
+  <?dbhtml filename="wgetpaste.html"?>
+
+  <title>wgetpaste-&wgetpaste-version;</title>
+
+  <indexterm zone="wgetpaste">
+    <primary sortas="a-wgetpaste">wgetpaste</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til wgetpaste</title>
+
+    <para>
+      wgetpaste pakken inneholder et skript som laster opp tekstfiler til 
+      pastebin tjenester.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&wgetpaste-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av wgetpaste</title>
+
+    <para>
+      wgetpaste pakken trenger ikke å bli kompilert 
+      og kan installeres direkte ved å kjøre følgende 
+      kommando som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 wgetpaste -t /usr/bin/</userinput></screen>
+
+    <para>
+      Hvis du vil installere skallfullføringsfilen for zsh, 
+      utfør følgende som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>install -vDm644 _wgetpaste -t /usr/share/zsh/site-functions/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          wgetpaste
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="wgetpaste-bin">
+        <term><command>wgetpaste</command></term>
+        <listitem>
+          <para>
+            laster opp tekstfiler til pastebin tjenester
+          </para>
+          <indexterm zone="wgetpaste wgetpaste-bin">
+            <primary sortas="b-wgetpaste-bin">wgetpaste</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+  </sect2>
+</sect1>
