@@ -18,38 +18,38 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5-m17n</title>
+    <title>Introduksjon til Fcitx5-m17n</title>
 
     <para>
-      The Fcitx5-m17n package provides a wrapper around the m17n engine
+      Fcitx5-m17n pakken gir en innpakning rundt m17n motoren 
       for Fcitx.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-m17n-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-m17n-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5-m17n Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5-m17n Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      <xref linkend="fcitx5"/>, and <xref linkend="m17n"/>
+      <xref linkend="fcitx5"/>, og <xref linkend="m17n"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5-m17n</title>
+    <title>Installasjon av Fcitx5-m17n</title>
 
     <para>
-      Install Fcitx5-m17n by running the following
-      commands:
+      Installer Fcitx5-m17n ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -64,7 +64,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -72,27 +72,27 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Programtillegg</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           m17n
