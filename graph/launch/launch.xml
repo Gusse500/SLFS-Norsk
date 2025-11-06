@@ -8,10 +8,10 @@
 <chapter id="graph-launch">
   <?dbhtml filename="launch.html"?>
 
-  <title>Launchers</title>
+  <title>Startere</title>
 
   <para>
-    This chapter covers application launchers.
+    Dette kapittelet dekker programstartere.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="rofi.xml"/>
