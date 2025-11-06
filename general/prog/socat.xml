@@ -54,6 +54,10 @@
 make</userinput></screen>
 
     <para>
+      For å teste resultatene, utsted: <command>make test</command>.
+    </para>
+
+    <para>
       Nå, som &root; bruker:
     </para>
 
