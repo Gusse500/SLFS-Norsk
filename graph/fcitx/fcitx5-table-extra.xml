@@ -18,39 +18,39 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5-table-extra</title>
+    <title>Introduksjon til Fcitx5-table-extra</title>
 
     <para>
-      The Fcitx5-table-extra package provides common Simplified Chinese
-      input methods for Fcitx.
+      Pakken Fcitx5-table-extra tilbyr vanlige forenklet kinesiske 
+      inndatametoder for Fcitx.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-table-extra-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-table-extra-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5-table-extra Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5-table-extra Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
-      <xref linkend="fcitx5"/>, and <xref linkend="libime"/>
+      <xref linkend="fcitx5"/>, og <xref linkend="libime"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5-table-extra</title>
+    <title>Installasjon av Fcitx5-table-extra</title>
 
     <para>
-      Install Fcitx5-table-extra by running the following
-      commands:
+      Installer Fcitx5-table-extra ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -64,7 +64,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -72,26 +72,26 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/fcitx5/table
