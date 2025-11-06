@@ -18,40 +18,40 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Fcitx5-Qt</title>
+    <title>Introduksjon til Fcitx5-Qt</title>
 
     <para>
-      The Fcitx5-Qt package provides a Qt frontend for Fcitx.
+      Pakken Fcitx5-Qt tilbyr et Qt grensesnitt for Fcitx.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&fcitx5-qt-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&fcitx5-qt-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Fcitx5-Qt Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Fcitx5-Qt Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
       <xref linkend="fcitx5"/>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      and <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
+      og <ulink url="&blfs-svn;/x/qt6.html">Qt6</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Fcitx5-Qt</title>
+    <title>Installasjon av Fcitx5-Qt</title>
 
     <para>
-      Install Fcitx5-Qt by running the following
-      commands:
+      Installer Fcitx5-Qt ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -68,7 +68,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -76,40 +76,40 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Plugins</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Programtillegg</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          fcitx5-qt6-gui-wrapper and fcitx5-qt6-immodule-probing
+          fcitx5-qt6-gui-wrapper og fcitx5-qt6-immodule-probing
         </seg>
         <seg>
-          libFcitx5Qt6DBusAddons and libFcitx5Qt6WidgetsAddons
+          libFcitx5Qt6DBusAddons og libFcitx5Qt6WidgetsAddons
         </seg>
         <seg>
-          libfcitx5platforminputcontextplugin (Qt plugin) and 
-          libfcitx-quickphrase-editor5 (Fcitx plugin) 
+          libfcitx5platforminputcontextplugin (Qt programtillegg) og 
+          libfcitx-quickphrase-editor5 (Fcitx programtillegg) 
         </seg>
         <seg>
-          /usr/include/Fcitx5Qt6 and /usr/lib/fcitx5/qt6
+          /usr/include/Fcitx5Qt6 og /usr/lib/fcitx5/qt6
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -117,7 +117,7 @@ make</userinput></screen>
         <term><command>fcitx5-qt6-gui-wrapper</command></term>
         <listitem>
           <para>
-            is a launcher for the Fcitx GUI plugin
+            er en starter for Fcitx GUI programtillegget
           </para>
           <indexterm zone="fcitx5-qt fcitx5-qt6-gui-wrapper">
             <primary sortas="b-fcitx5-qt6-gui-wrapper">fcitx5-qt6-gui-wrapper</primary>
@@ -129,7 +129,7 @@ make</userinput></screen>
         <term><command>fcitx5-qt6-immodule-probing</command></term>
         <listitem>
           <para>
-            is a debugging application for Qt6 input methods
+            er et feilsøkingsprogram for Qt6 inndatametoder
           </para>
           <indexterm zone="fcitx5-qt fcitx5-qt6-immodule-probing">
             <primary sortas="b-fcitx5-qt6-immodule-probing">fcitx5-qt6-immodule-probing</primary>
@@ -141,7 +141,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libFcitx5Qt6DBusAddons</filename></term>
         <listitem>
           <para>
-            contains the Qt DBus-related methods of Fcitx
+            inneholder Qt DBus-relaterte metoder fra Fcitx
           </para>
           <indexterm zone="fcitx5-qt libFcitx5Qt6DBusAddons">
             <primary sortas="c-libFcitx5Qt6DBusAddons">libFcitx5Qt6DBusAddons</primary>
@@ -153,7 +153,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libFcitx5Qt6WidgetsAddons</filename></term>
         <listitem>
           <para>
-            contains the Qt widgets used by Fcitx
+            inneholder Qt applikasjon som brukes av Fcitx
           </para>
           <indexterm zone="fcitx5-qt libFcitx5Qt6WidgetsAddons">
             <primary sortas="c-libFcitx5Qt6WidgetsAddons">libFcitx5Qt6WidgetsAddons</primary>
