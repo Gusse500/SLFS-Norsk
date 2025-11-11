@@ -18,54 +18,54 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to foot</title>
+    <title>Introduksjon til foot</title>
 
     <para>
-      The foot package provides a
-      Wayland terminal emulator.
+      Foot pakken tilbyr en 
+      Wayland terminalemulator.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&foot-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&foot-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">foot Dependencies</bridgehead>
+    <bridgehead renderas="sect3">foot Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/fontconfig.html">fontconfig</ulink>,
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <xref linkend="fcft"/> (if not built, it will be downloaded),
-      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink>, and
-      <xref linkend="tllist"/> (if not built, it will be downloaded)
+      <xref linkend="fcft"/> (hvis den ikke er bygget, vil den bli lastet ned),
+      <ulink url="&blfs-svn;/general/harfbuzz.html">HarfBuzz</ulink>, og
+      <xref linkend="tllist"/> (hvis den ikke er bygget, vil den bli lastet ned)
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <xref linkend="libutempter"/>,
-      <xref linkend="scdoc"/>, and
+      <xref linkend="scdoc"/>, og
       <ulink url="&arch-pkgs;/extra/x86_64/utf8proc/">utf8proc</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of foot</title>
+    <title>Installasjon av foot</title>
 
     <para>
-      Install foot by running the following
-      commands:
+      Installer foot ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -75,14 +75,14 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      If you built scdoc, make the documentation
-      directory versioned as the &root; user:
+      Hvis du bygde scdoc, gjør dokumentasjonsmappen 
+      versjonert som &root; bruker:
     </para>
 
 <screen remap="doc"
@@ -91,14 +91,14 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring foot</title>
+    <title>Konfigurere foot</title>
 
     <sect3 id="foot-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
-        <filename>~/.config/foot/foot.ini</filename>. The default version
-        is in <filename class="directory">/etc/xdg/foot</filename> and will
-        not be used and must be copied to
+        <filename>~/.config/foot/foot.ini</filename>. Standardversjonen 
+        er i <filename class="directory">/etc/xdg/foot</filename> og vil 
+        ikke bli brukt og må kopieres til
         <filename class="directory">~/.config/foot</filename>.
       </para>
 
@@ -108,17 +108,17 @@ ninja</userinput></screen>
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Create the config file:
+        Opprett konfigurasjonsfilen:
       </para>
 
 <screen><userinput>mkdir -pv ~/.config/foot &amp;&amp;
 cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
 
       <para>
-        Now inspect the file and make any changes you see fit.
+        Nå kan du sjekke filen og gjøre eventuelle endringer du synes er passende.
       </para>
 
     </sect3>
@@ -126,30 +126,30 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          foot and footclient
+          foot og footclient
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /etc/xdg/foot,
-          /usr/share/doc/foot-&foot-version;, and
+          /usr/share/doc/foot-&foot-version;, og
           /usr/share/foot
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -157,7 +157,7 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
         <term><command>foot</command></term>
         <listitem>
           <para>
-            is a Wayland terminal emulator
+            er en Wayland terminalemulator
           </para>
           <indexterm zone="foot foot-bin">
             <primary sortas="b-foot-bin">foot</primary>
@@ -169,7 +169,7 @@ cp /etc/xdg/foot/foot.ini ~/.config/foot</userinput></screen>
         <term><command>footclient</command></term>
         <listitem>
           <para>
-            starts <command>foot</command> instances in a
+            starter <command>foot</command> økter i en 
             foot server
           </para>
           <indexterm zone="foot footclient">
