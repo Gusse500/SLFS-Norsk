@@ -8,10 +8,10 @@
 <chapter id="graph-term">
   <?dbhtml filename="term.html"?>
 
-  <title>Terminal Emulators</title>
+  <title>Terminalemulatorer</title>
 
   <para>
-    This chapter covers terminal emulators.
+    Dette kapittelet dekker terminalemulatorer.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="alacritty.xml"/>
