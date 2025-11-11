@@ -17,43 +17,43 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to libXp</title>
+    <title>Introduksjon til libXp</title>
 
     <para>
-      The libXp package contains a library implementing the X Print Protocol.
+      libXp pakken inneholder et bibliotek som implementerer X Print protokollen.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&libxp-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&libxp-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-  <bridgehead renderas="sect3">libXp Dependencies</bridgehead>
+  <bridgehead renderas="sect3">libXp Avhengigheter</bridgehead>
 
-  <bridgehead renderas="sect4">Required</bridgehead>
+  <bridgehead renderas="sect4">Påkrevd</bridgehead>
   <para role="required">
-    <xref linkend="printproto"/> and
-    <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    <xref linkend="printproto"/> og
+    <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
   </para>
    
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of libXp</title>
+    <title>Installasjon av libXp</title>
 
     <para>
-      Install libXp by executing the following
-      commands:
+      Installer libXp ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libXp-&libxp-version; &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -61,28 +61,28 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libXp
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -90,7 +90,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libXp</filename></term>
         <listitem>
           <para>
-            is the X Print library
+            er X Print biblioteket
           </para>
           <indexterm zone="libxp libXp">
             <primary sortas="c-libXp">libXp</primary>
