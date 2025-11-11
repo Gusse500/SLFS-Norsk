@@ -7,24 +7,24 @@
   <!ENTITY hyprlib-download-http "https://github.com/hyprwm/">
 ]>
 
-<sect1 id="hyprlib" xreflabel="Hypr Libraries">
+<sect1 id="hyprlib" xreflabel="Hypr Biblioteker">
   <?dbhtml filename="hyprlib.html"?>
 
-  <title>Hypr Libraries</title>
+  <title>Hypr Biblioteker</title>
 
   <indexterm zone="hyprlib">
-    <primary sortas="a-hyprlib">Hypr Libraries</primary>
+    <primary sortas="a-hyprlib">Hypr Biblioteker</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Hypr Libraries</title>
+    <title>Introduksjon til Hypr Biblioteker</title>
 
     <para>
-      The Hypr libraries provide needed utilities for the entire Hypr ecosystem.
-      While two of the packages installed in this page are not strictly
-      required (hyprland-qt-support and
-      hyprland-qtutils), they are needed for some
-      dialog boxes and this book assumes that you have built them.
+      Hypr bibliotekene tilbyr nødvendige verktøy for hele Hypr økosystemet. 
+      Selv om tre av pakkene som er installert på denne siden ikke er strengt 
+      nødvendige (hyprtoolkit, hyprland-qt-support og hyprland-guiutils), er de 
+      nødvendige for noen dialogbokser, og denne boken forutsetter at du har 
+      bygget dem.
     </para>
 
     &abi-break;
@@ -34,18 +34,19 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&hyprlib-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&hyprlib-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Hypr Libraries Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Hypr Biblioteker Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>,
       <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
       &gbm;,
+      <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/x/x7driver.html#libinput">libinput</ulink>,
@@ -60,24 +61,24 @@
       <ulink url="&blfs-svn;/x/qt6.html">Qt-6</ulink>,
       <xref linkend="seatd"/>,
       <xref linkend="tomlplusplus"/>,
-      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, and
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <ulink url="&blfs-svn;/postlfs/profile.html">Bash Shell Startup
-      Files</ulink> and
+      <ulink url="&blfs-svn;/postlfs/profile.html">Oppstartsfilene til Bash 
+      Skallet</ulink> og
       <ulink url="&blfs-svn;/general/hwdata.html">hwdata</ulink>
     </para>
 
   </sect2>
 
   <sect2>
-    <title>Downloading Hypr Libraries</title>
+    <title>Laste ned Hypr Biblioteker</title>
 
     <para>
-      First create a list of files to be downloaded:
+      Lag først en liste over filer som skal lastes ned:
     </para>
 
 <screen><userinput>cat &gt; hypr-list &lt;&lt; "EOF"
@@ -88,14 +89,15 @@ hyprcursor/archive/v&hyprcursor-version;/hyprcursor-v&hyprcursor-version;.tar.gz
 hyprwayland-scanner/archive/v&hyprwayland-scanner-version;/hyprwayland-scanner-v&hyprwayland-scanner-version;.tar.gz
 aquamarine/archive/v&aquamarine-version;/aquamarine-v&aquamarine-version;.tar.gz
 hyprgraphics/archive/v&hyprgraphics-version;/hyprgraphics-v&hyprgraphics-version;.tar.gz
+hyprtoolkit/archive/v&hyprtoolkit-version;/hyprtoolkit-v&hyprtoolkit-version;.tar.gz
 hyprland-qt-support/archive/v&hyprland-qt-support-version;/hyprland-qt-support-v&hyprland-qt-support-version;.tar.gz
-hyprland-qtutils/archive/v&hyprland-qtutils-version;/hyprland-qtutils-v&hyprland-qtutils-version;.tar.gz</literal>
+hyprland-guiutils/archive/v&hyprland-guiutils-version;/hyprland-guiutils-v&hyprland-guiutils-version;.tar.gz</literal>
 EOF</userinput></screen>
 
     <para>
-      To download the needed files using
+      For å laste ned de nødvendige filene ved hjelp av
       <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
-      use the following commands: 
+      bruk følgende kommandoer: 
     </para>
 
 <screen><userinput>mkdir hyprlib &amp;&amp;
@@ -106,11 +108,11 @@ grep -v '^#' ../hypr-list | wget -i- -c \
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Hypr Libraries</title>
+    <title>Installasjon av Hypr Biblioteker</title>
 
     <para>
-      Create <filename>/etc/profile.d/hypr.sh</filename> to ensure QML files
-      can be loaded and imported as the &root; user:
+      Opprett <filename>/etc/profile.d/hypr.sh</filename> for å sikre at QML 
+      filer kan lastes inn og importeres som &root; bruker:
     </para>
 
 <screen role="root"><userinput>cat &gt; /etc/profile.d/hypr.sh &lt;&lt; "EOF"
@@ -130,13 +132,13 @@ EOF</literal></userinput></screen>
     &as_root;
 
     <para>
-      Next, start a subshell that will exit on error:
+      Deretter starter du et underskall som avsluttes ved feil:
     </para>
 
 <screen><userinput>bash -e</userinput></screen>
 
     <para>
-      Install all the packages by running the following commands:
+      Installer alle pakkene ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>for package in $(grep -v '^#' ../hypr-list)
@@ -172,30 +174,16 @@ echo "Building $packagedir"
               -G Ninja ..
     ;;-->
 
-    hyprland-qt-support-[0-9]* )
+    * )
       mkdir build
       cd    build
         cmake -D CMAKE_INSTALL_PREFIX=/usr       \
               -D CMAKE_BUILD_TYPE=Release        \
               -D CMAKE_SKIP_INSTALL_RPATH=ON     \
               -D INSTALL_QML_PREFIX=/lib/qt6/qml \
-              ..
-        make
-
-        as_root make install
-      popd     # $packagedir
-      rm -rf $packagedir
-      as_root /sbin/ldconfig
-      continue # for loop
-    ;;
-
-    * )
-      mkdir build
-      cd    build
-        cmake -D CMAKE_INSTALL_PREFIX=/usr   \
-              -D CMAKE_BUILD_TYPE=Release    \
-              -D CMAKE_SKIP_INSTALL_RPATH=ON \
-              -G Ninja ..
+              -D DISABLE_TESTS=ON                \
+              -D BUILD_TESTING=OFF               \
+              -W no-dev -G Ninja ..
     ;;
   esac
 
@@ -207,7 +195,7 @@ echo "Building $packagedir"
 done</userinput></screen>
 
     <para>
-      Finally, exit the shell that was started earlier:
+      Til slutt, avslutt skallet som ble startet tidligere:
     </para>
 
 <screen><userinput>exit</userinput></screen>
@@ -215,26 +203,26 @@ done</userinput></screen>
   </sect2>
   
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           hyprcursor-util,
           hyprland-dialog,
           hyprland-donate-screen,
-          hyprland-update-screen, and
+          hyprland-update-screen, og
           hyprwayland-scanner
         </seg>
         <seg>
@@ -245,20 +233,21 @@ done</userinput></screen>
           libhyprland-quick-style-impl,
           libhyprland-quick-styleplugin,
           libhyprland-quick-style,
-          libhyprlang, and
+          libhyprlang,
+          libhyprtoolkit, og
           libhyprutils
         </seg>
         <seg>
-          /usr/include/{aquamarine,hyprcursor,hyprgraphics,hyprutils},
+          /usr/include/{aquamarine,hypr{cursor,graphics,toolkit,utils}},
           /usr/lib/cmake/hyprwayland-scanner,
-          /usr/lib/qt6/qml/org/hyprland/style, and
+          /usr/lib/qt6/qml/org/hyprland/style, og
           /usr/share/hyprland-protocols
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -266,7 +255,7 @@ done</userinput></screen>
         <term><command>hyprcursor-util</command></term>
         <listitem>
           <para>
-            compiles, packs, and unpacks hyprcursor and xcursor themes
+            kompilerer, pakker og pakker ut hyprcursor og xcursor temaer
           </para>
           <indexterm zone="hyprlib hyprcursor-util">
             <primary sortas="b-hyprcursor-util">hyprcursor-util</primary>
@@ -278,7 +267,7 @@ done</userinput></screen>
         <term><command>hyprland-dialog</command></term>
         <listitem>
           <para>
-            shows certain dialog using Qt-6
+            viser visse dialoger ved bruk av Qt-6
           </para>
           <indexterm zone="hyprlib hyprland-dialog">
             <primary sortas="b-hyprland-dialog">hyprland-dialog</primary>
@@ -290,7 +279,7 @@ done</userinput></screen>
         <term><command>hyprland-donate-screen</command></term>
         <listitem>
           <para>
-            shows a pop up box telling users to donate using
+            viser en popup-boks som ber brukerne om å donere ved hjelp av 
             Qt-6
           </para>
           <indexterm zone="hyprlib hyprland-donate-screen">
@@ -303,7 +292,7 @@ done</userinput></screen>
         <term><command>hyprland-update-screen</command></term>
         <listitem>
           <para>
-            shows a pop up box telling users to update using
+            viser en popup-boks som ber brukerne om å oppdatere ved hjelp av 
             Qt-6
           </para>
           <indexterm zone="hyprlib hyprland-update-screen">
@@ -316,8 +305,8 @@ done</userinput></screen>
         <term><command>hyprwayland-scanner</command></term>
         <listitem>
           <para>
-            generates C++ code from Wayland protocol
-            XML files
+            genererer C++-kode fra Wayland protokollens 
+            XML filer
           </para>
           <indexterm zone="hyprlib hyprwayland-scanner">
             <primary sortas="b-hyprwayland-scanner">hyprwayland-scanner</primary>
@@ -329,7 +318,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libaquamarine</filename></term>
         <listitem>
           <para>
-            provides rendering backend API functions
+            tilbyr API funksjoner for rendering av bakstykket
           </para>
           <indexterm zone="hyprlib libaquamarine">
             <primary sortas="c-libaquamarine">libaquamarine</primary>
@@ -341,7 +330,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprcursor</filename></term>
         <listitem>
           <para>
-            provides API functions for the hyprcursor format
+            tilbyr API funksjoner for hyprcursor formatet
           </para>
           <indexterm zone="hyprlib libhyprcursor">
             <primary sortas="c-libhyprcursor">libhyprcursor</primary>
@@ -353,7 +342,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprgraphics</filename></term>
         <listitem>
           <para>
-            provides graphics utility functions for the Hypr ecosystem
+            tilbyr grafikkverktøyfunksjoner for Hypr økosystemet
           </para>
           <indexterm zone="hyprlib libhyprgraphics">
             <primary sortas="c-libhyprgraphics">libhyprgraphics</primary>
@@ -365,7 +354,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-style-implplugin</filename></term>
         <listitem>
           <para>
-            is the Hyprland Quick Style IMPL plugin
+            er Hyprland Quick Style IMPL programtillegget
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style-implplugin">
             <primary sortas="c-libhyprland-quick-style-implplugin">libhyprland-quick-style-implplugin</primary>
@@ -377,7 +366,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-style-impl</filename></term>
         <listitem>
           <para>
-            is the Hyprland Quick Style IMPL library
+            er Hyprland Quick Style IMPL biblioteket
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style-impl">
             <primary sortas="c-libhyprland-quick-style-impl">libhyprland-quick-style-impl</primary>
@@ -389,7 +378,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-styleplugin</filename></term>
         <listitem>
           <para>
-            is the Hyprland Quick Style plugin
+            er Hyprland Quick Style programtillegget
           </para>
           <indexterm zone="hyprlib libhyprland-quick-styleplugin">
             <primary sortas="c-libhyprland-quick-styleplugin">libhyprland-quick-styleplugin</primary>
@@ -401,7 +390,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprland-quick-style</filename></term>
         <listitem>
           <para>
-            is the Hyprland Quick Style library
+            er Hyprland Quick Style biblioteket
           </para>
           <indexterm zone="hyprlib libhyprland-quick-style">
             <primary sortas="c-libhyprland-quick-style">libhyprland-quick-style</primary>
@@ -413,11 +402,23 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprlang</filename></term>
         <listitem>
           <para>
-            provides functions to parse and use the Hypr configurartion
-            language
+            tilbyr funksjoner for å analysere og bruke Hypr 
+            konfigurasjonsspråket
           </para>
           <indexterm zone="hyprlib libhyprlang">
             <primary sortas="c-libhyprlang">libhyprlang</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhyprtoolkit">
+        <term><filename class="libraryfile">libhyprtoolkit</filename></term>
+        <listitem>
+          <para>
+            tilbyr GUI verktøysettfunksjoner for bruk med noen Hypr pakker
+          </para>
+          <indexterm zone="hyprlib libhyprtoolkit">
+            <primary sortas="c-libhyprtoolkit">libhyprtoolkit</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -426,7 +427,7 @@ done</userinput></screen>
         <term><filename class="libraryfile">libhyprutils</filename></term>
         <listitem>
           <para>
-            provides utility functions for the Hypr ecoysystem
+            tilbyr nyttefunksjoner for Hypr økosystemet
           </para>
           <indexterm zone="hyprlib libhyprutils">
             <primary sortas="c-libhyprutils">libhyprutils</primary>
