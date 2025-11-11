@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY scenefx-root
+    "https://github.com/wlrfx/scenefx/archive">
+  <!ENTITY scenefx-download-http
+    "&scenefx-root;/&scenefx-version;/scenefx-&scenefx-version;.tar.gz">
+]>
+
+<sect1 id="scenefx" xreflabel="SceneFX-&scenefx-version;">
+  <?dbhtml filename="scenefx.html"?>
+
+  <title>SceneFX-&scenefx-version;</title>
+
+  <indexterm zone="scenefx">
+    <primary sortas="a-scenefx">SceneFX</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til SceneFX</title>
+
+    <para>
+      SceneFX gir Wlroots baserte Wayland komposisjoner fantastiske 
+      overflategjengivelsesfunksjoner i stedet for Wlroots scene API.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&scenefx-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">scenefx Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
+      &gbm;,
+      <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
+      &wayland-gl;,
+      <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
+      <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
+      og <xref linkend="wlroots"/>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av scenefx</title>
+
+    <para>
+      Installer scenefx ved å kjøre følgende 
+      kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          libscenefx-&scenefx-minor;
+        </seg>
+        <seg>
+          /usr/include/scenefx-&scenefx-minor;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libscenefx">
+        <term><filename class="libraryfile">libscenefx-&scenefx-minor;</filename></term>
+        <listitem>
+          <para>
+            tilbyr fantastiske overflategjengivelsesfunksjoner for Wlroots 
+            baserte Wayland komposisjoner
+          </para>
+          <indexterm zone="scenefx libscenefx">
+            <primary sortas="b-libscenefx">libscenefx-&scenefx-minor;</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
