@@ -18,42 +18,42 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to Wofi</title>
+    <title>Introduksjon til Wofi</title>
 
     <para>
-      Wofi provides an application launcher
-      for Wayland compositors. It has most of the
-      same functionality <xref linkend="rofi"/>.
+      Wofi tilbyr en applikasjonsstarter for Wayland komposisjoner. 
+      Den har mesteparten av den samme 
+      funksjonaliteten som <xref linkend="rofi"/>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wofi-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&wofi-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Wofi Dependencies</bridgehead>
+    <bridgehead renderas="sect3">Wofi Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
       <ulink url="&blfs-svn;/x/gtk3.html">GTK-3</ulink>,
-      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (with
-      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>), and
+      <ulink url="&blfs-svn;/x/pango.html">Pango</ulink> (med
+      <ulink url="&blfs-svn;/x/cairo.html">Cairo</ulink>), og
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of Wofi</title>
+    <title>Installasjon av Wofi</title>
 
     <para>
-      Install Wofi by running the following
-      commands:
+      Installer Wofi ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -63,7 +63,7 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -71,19 +71,19 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
           wofi
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/include/wofi-1
@@ -92,7 +92,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -100,7 +100,7 @@ ninja</userinput></screen>
         <term><command>wofi</command></term>
         <listitem>
           <para>
-            is a Wayland application launcher
+            er en Wayland applikasjonsstarter
           </para>
           <indexterm zone="wofi wofi-bin">
             <primary sortas="b-wofi-bin">wofi</primary>
