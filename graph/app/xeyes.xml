@@ -20,22 +20,26 @@
     <title>Introduksjon til xeyes</title>
 
     <para>
-      Xeyes pakken tilbyr et program som viser øyne som følger XCURSOR 
-      i et X Window System miljø. Bruksområdet er begrenset, og selv 
-      da det ble laget, ble det ansett som en gimmick. Det ble fulgt 
-      opp av bedre programmer som gjorde premisset bedre. Det siste 
-      bruksområdet det har i dag er å bestemme hvilke GUI applikasjoner 
-      som bruker Wayland eller faller tilbake til Xorg. Dette er 
-      fordi xeyes bare kan følge markøren hvis den finnes i 
-      et Xorg miljø. Den generelle Xorg serveren på Wayland 
-      deles av Xwayland. Så når et program kjører i det, vil 
-      xeyes kunne se markøren når den holder seg over nevnte 
-      vindu. For Wayland apper, kan ikke markøren finnes i 
-      det hele tatt. Dermed kan du se hvilke apper som bruker 
-      Wayland eller ikke. Hvis du bare bruker Xorg, har denne 
-      appen praktisk talt ingen bruk. Hvis du bruker Wayland 
-      og for eksempel vil se fremdriften på Wayland støtte for 
-      Wine, vil dette programmet vise om det bruker Wayland eller Xorg.
+      Xeyes pakken tilbyr et program som viser et par øyne som følger XCURSOR i 
+      et X Window System miljø.
+    </para>
+    <para>
+      Bruksområdet er ganske begrenset. Selv på sin tid ble det ansett som en 
+      gimmick. Det ble fulgt opp av bedre programmer som håndterte premisset 
+      bedre. Det gjenværende bruksområdet det oppfyller i dag er å bestemme 
+      hvilke GUI applikasjoner som bruker Wayland eller faller tilbake på Xorg.
+    </para>
+    <para>
+      Xeyes applikasjonen kan bare følge markøren hvis den finnes i et 
+      Xorg miljø. Den generelle Xorg serveren på Wayland deles av 
+      Xwayland. Når et program kjører i den, kan xeyes se markøren når 
+      den holder seg over Xorg applikasjonen. For Wayland applikasjoner 
+      og i det generelle miljøet kan ikke markøren finnes i det hele 
+      tatt. Dette gjør det enkelt å finne ut hvilke apper som bruker 
+      Xorg. Hvis du bare bruker Xorg, har denne pakken blitt erstattet 
+      av andre. Hvis du bruker Wayland og vil se fremdriften på Wayland 
+      støtte for ulike pakker, vil dette programmet vise om de bruker 
+      Wayland eller Xorg.
     </para>
 
     <itemizedlist spacing="compact">
