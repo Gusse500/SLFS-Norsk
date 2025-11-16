@@ -4,6 +4,11 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
+  <!-- This technically should be in the Python Modules section. However, it
+       has been here instead, and moving it would lead users to believe it has
+       been axed or will lead to users thinking yt-dlp simply isn't in the
+       book. Thus, it's staying here. -->
+
   <!ENTITY yt-dlp-download-http
     "https://github.com/yt-dlp/yt-dlp/archive/&yt-dlp-version;/yt-dlp-&yt-dlp-version;.tar.gz">
 ]>
@@ -21,9 +26,9 @@
     <title>Introduksjon til yt-dlp</title>
 
     <para>
-      Pakken yt-dlp tilbyr et CLI verktøy for å laste ned lyd og video filer fra 
-      tusenvis av nettsteder, inkludert YouTube. Den kan konvertere nedlastinger 
-      til andre formater ved hjelp av FFmpeg.
+      Pakken yt-dlp tilbyr et Python3 CLI verktøy for å laste ned lyd og 
+      videofiler fra tusenvis av nettsteder, inkludert YouTube. Den kan 
+      konvertere nedlastinger til andre formater ved hjelp av FFmpeg.
     </para>
 
     <itemizedlist spacing="compact">
@@ -38,7 +43,7 @@
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/general/zip.html">Zip</ulink>
+      <ulink url="&pydep;hatchling">Hatchling</ulink>
     </para>
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
@@ -50,8 +55,11 @@
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/python-modules.html#requests">requests</ulink> og
-      <ulink url="&blfs-svn;/general/brotli.html">brotli</ulink>
+      <ulink url="&blfs-svn;/general/brotli.html">brotli</ulink> (med Python3
+      bindinger),
+      <ulink url="&pydep;certifi">certifi</ulink>,
+      <ulink url="&pymod;requests">Requests</ulink>, og
+      <ulink url="&pydep;urllib3">Urllib3</ulink>
     </para>
 
   </sect2>
@@ -63,13 +71,13 @@
       Installer yt-dlp ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>make yt-dlp</userinput></screen>
+    &build-wheel;
 
     <para>
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>install -vDm755 yt-dlp -t /usr/bin/</userinput></screen>
+    <screen role="root"><userinput>&install-wheel; yt_dlp</userinput></screen>
 
   </sect2>
 
@@ -89,7 +97,8 @@
           Ingen
         </seg>
         <seg>
-          Ingen
+          /usr/lib/python&python3-majorver;/site-packages/yt_dlp og
+          /usr/lib/python&python3-majorver;/site-packages/yt_dlp-&yt-dlp-version;.dist-info
         </seg>
       </seglistitem>
     </segmentedlist>
