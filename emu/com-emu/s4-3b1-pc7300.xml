@@ -33,7 +33,7 @@
         </para>
       </listitem>
     </itemizedlist>
-   
+
     <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -69,7 +69,7 @@
       &unzip;
       (for å pakke ut distribusjonene)
     </para>
- 
+
   </sect2>
 
 <!-- REMOVED IN LINUX-6.16

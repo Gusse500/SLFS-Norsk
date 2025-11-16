@@ -81,7 +81,7 @@ EOF</userinput></screen>
     <para>
       For å laste ned de nødvendige filene ved hjelp av
       <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>,
-      bruk følgende kommandoer: 
+      bruk følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir m64plus &amp;&amp;

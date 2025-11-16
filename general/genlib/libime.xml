@@ -92,7 +92,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Hvis du har sendt <option>-D ENABLE_DOC=ON</option> parameteren til CMake, 
+      Hvis du har sendt <option>-D ENABLE_DOC=ON</option> parameteren til CMake,
       bygg dokumentasjonen ved å kjøre følgende kommandoer:
     </para>
 

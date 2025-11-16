@@ -5,22 +5,22 @@
   %general-entities;
 ]>
 
-<sect1 id="credits" xreflabel="Credits">
+<sect1 id="credits" xreflabel="Kredit">
   <?dbhtml filename="credits.html"?>
 
-  <title>Credits</title>
+  <title>Kredit</title>
 
   <sect2>
-    <title>SLFS Current Editors</title>
+    <title>SLFS Nåværende Redaktører</title>
     <itemizedlist>
       <listitem><para>Douglas Reno           </para></listitem>
       <listitem><para>Seal Sealy             </para></listitem>
       <listitem><para>Zeckma                 </para></listitem>
     </itemizedlist>
   </sect2>
- 
+
   <sect2>
-    <title>SLFS Contributors</title>
+    <title>SLFS Bidragsytere</title>
     <itemizedlist>
       <listitem><para>MymeType               </para></listitem>
       <listitem><para>Toxikuu                </para></listitem>

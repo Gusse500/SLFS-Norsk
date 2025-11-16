@@ -69,10 +69,10 @@
     <para>
       Først, fiks to byggefeil forårsaket av GCC-15:
     </para>
-    
+
 <screen><userinput remap="pre">sed -i '/&lt;string.h&gt;/a #include &lt;cstdint&gt;' api/mfx_dispatch/linux/mfxparser.cpp &amp;&amp;
 sed -i '/&lt;math.h&gt;/a #include &lt;cstdint&gt;'   samples/sample_vpp/src/sample_vpp_frc_adv.cpp</userinput></screen>
-        
+
     <para>
       Installer Intel-MediaSDK ved å kjøre følgende 
       kommandoer:
@@ -120,7 +120,7 @@ make</userinput></screen>
       <parameter>-D BUILD_TOOLS=ON</parameter>: Denne parameteren bygger alle 
       verktøyene som trengs for å bruke GPU-ene som denne pakken støtter.
     </para>
-    
+
     <para>
       <parameter>-D ENABLE_ITT=OFF</parameter>: Denne parameteren deaktiverer 
       støtte for ITT (VTune) instrumentstøtte. Denne støtten krever flere 
@@ -133,17 +133,17 @@ make</userinput></screen>
       deaktivert fordi pakkene som trengs har blitt avviklet i årevis og ikke 
       lenger er tilgjengelige.
     </para>
-    
+
     <para>
       <parameter>-D ENABLE_WAYLAND=ON</parameter>: Denne parameteren aktiverer 
       støtte for GPU akselerasjon for støttede Intel GPU-er når Wayland brukes.
     </para>
-    
+
     <para>
       <parameter>-D ENABLE_X11_DRI3=ON</parameter>: Denne parameteren aktiverer 
       støtte for GPU-akselerasjon gjennom DRI3 for støttede Intel GPU-er.
     </para>
-    
+
     <para>
       <parameter>-D MFX_APPS_DIR=/usr/lib/mfx</parameter>: Denne parameteren 
       plasserer eksemplene som ble kompilert i /usr/lib/mfx.
@@ -232,7 +232,7 @@ make</userinput></screen>
           </indexterm>
         </listitem>
       </varlistentry>
-      
+
       <varlistentry id="libmfxhw64">
         <term><filename class="libraryfile">libmfxhw64</filename></term>
         <listitem>
@@ -245,7 +245,7 @@ make</userinput></screen>
           </indexterm>
         </listitem>
       </varlistentry>
-      
+
       <varlistentry id="libmfx-tracer">
         <term><filename class="libraryfile">libmfx-tracer</filename></term>
         <listitem>

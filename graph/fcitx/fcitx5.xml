@@ -167,7 +167,7 @@ cp /usr/share/applications/org.fcitx.Fcitx5.desktop \
 
       <seglistitem>
         <seg>
-          comp-spell-dict, fcitx5, fcitx5-configtool, fcitx5-diagnose, 
+          comp-spell-dict, fcitx5, fcitx5-configtool, fcitx5-diagnose,
           fcitx5-remote, og fcitx5-wayland-launcher
         </seg>
         <seg>

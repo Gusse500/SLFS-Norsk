@@ -402,7 +402,8 @@ rm -v testgnat*</userinput></screen>
       <parameter>--with-system-zlib</parameter>: Bruker systemet 
       zlib i stedet for det medfølgende språket. 
       zlib brukes til å komprimere og dekomprimere GCCs 
-      mellomliggende språk i LTO objektfiler (Link Time Optimization).
+      mellomliggende språk i LTO objektfiler (Link Time 
+      Optimization).
     </para>
 
     <para>

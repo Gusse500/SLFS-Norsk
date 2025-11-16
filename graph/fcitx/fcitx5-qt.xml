@@ -100,7 +100,7 @@ make</userinput></screen>
         </seg>
         <seg>
           libfcitx5platforminputcontextplugin (Qt programtillegg) og 
-          libfcitx-quickphrase-editor5 (Fcitx programtillegg) 
+          libfcitx-quickphrase-editor5 (Fcitx programtillegg)
         </seg>
         <seg>
           /usr/include/Fcitx5Qt6 og /usr/lib/fcitx5/qt6

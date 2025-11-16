@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>15. november 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - *: Fjern etterfølgende mellomrom.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>12. november 2025</para>
       <itemizedlist>
         <listitem>

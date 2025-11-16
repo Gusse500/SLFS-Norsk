@@ -155,7 +155,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             er et suid root program for å montere og avmontere 
-            Fuse2 filsystemer 
+            Fuse2 filsystemer
           </para>
           <indexterm zone="fuse2 fusermount">
             <primary sortas="b-fusermount">fusermount</primary>
@@ -168,7 +168,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             er kommandoen <command>mount</command> kaller for å montere et 
-            Fuse2 filsystem 
+            Fuse2 filsystem
           </para>
           <indexterm zone="fuse2 mount.fuse">
             <primary sortas="b-mount.fuse">mount.fuse</primary>

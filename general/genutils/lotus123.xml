@@ -136,7 +136,7 @@ make</userinput></screen>
 <screen role="root"><userinput>make prefix=/usr install</userinput></screen>
 
   </sect2>
-  
+
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
 

@@ -17,17 +17,17 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to C-INTERCAL</title>
+    <title>Introduksjon til C-INTERCAL</title>
 
     <para>
-      The C-INTERCAL package contains a compiler for the Compiler Language With
-      No Pronounceable Acronym (INTERCAL).
+      C-INTERCAL pakken inneholder en kompilator for Compiler Language With No 
+      Pronounceable Acronym (INTERCAL).
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cintercal-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&cintercal-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -35,11 +35,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of C-INTERCAL</title>
+    <title>Installasjon av C-INTERCAL</title>
 
     <para>
-      Install C-INTERCAL by executing the following
-      commands:
+      Installer C-INTERCAL ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>autoreconf -fiv &amp;&amp;
@@ -47,7 +47,7 @@
 make</userinput></screen>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -55,29 +55,29 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          convickt and ick 
+          convickt og ick
         </seg>
         <seg>
-          libick, libickec, libickmt, and libyuk (all static)
+          libick, libickec, libickmt, og libyuk (alle statiske)
         </seg>
         <seg>
-          /usr/include/ick-&intercal-version; and
+          /usr/include/ick-&intercal-version; og
           /usr/share/ick-&intercal-version;
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -85,7 +85,7 @@ make</userinput></screen>
         <term><command>convickt</command></term>
         <listitem>
           <para>
-            converts INTERCAL files between formats
+            konverterer INTERCAL filer mellom formater
           </para>
           <indexterm zone="cintercal convickt">
             <primary sortas="b-convickt">convickt</primary>
@@ -97,7 +97,7 @@ make</userinput></screen>
         <term><command>ick</command></term>
         <listitem>
           <para>
-            is the INTERCAL compiler
+            er INTERCAL kompilatoren
           </para>
           <indexterm zone="cintercal ick">
             <primary sortas="b-ick">ick</primary>
@@ -109,7 +109,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libick</filename></term>
         <listitem>
           <para>
-            contains the runtime functions for the INTERCAL compiler
+            inneholder kjøretidsfunksjonene for INTERCAL kompilatoren
           </para>
           <indexterm zone="cintercal libick">
             <primary sortas="c-libick">libick</primary>
@@ -121,7 +121,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libickec</filename></term>
         <listitem>
           <para>
-            contains the runtime functions for INTERCAL programs
+            inneholder kjøretidsfunksjonene for INTERCAL programmer
           </para>
           <indexterm zone="cintercal libickec">
             <primary sortas="c-libickec">libickec</primary>
@@ -133,7 +133,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libickmt</filename></term>
         <listitem>
           <para>
-            is the multithreaded version of libick
+            er den flertrådete versjonen av libick
           </para>
           <indexterm zone="cintercal libickmt">
             <primary sortas="c-libickmt">libickmt</primary>
@@ -145,7 +145,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libyuk</filename></term>
         <listitem>
           <para>
-            contains support functions for yuk, the INTERCAL debugger
+            inneholder støttefunksjoner for yuk, INTERCAL feilsøkingsprogrammet
           </para>
           <indexterm zone="cintercal libyuk">
             <primary sortas="c-libyuk">libyuk</primary>

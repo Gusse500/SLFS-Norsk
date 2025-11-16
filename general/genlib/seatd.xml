@@ -38,7 +38,7 @@
         </para>
       </listitem>
     </itemizedlist>
- 
+
     <bridgehead renderas="sect3">seatd Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
@@ -51,7 +51,7 @@
     </para>
 
   </sect2>
- 
+
   <sect2 role="installation">
     <title>Installasjon av seatd</title>
     <para>

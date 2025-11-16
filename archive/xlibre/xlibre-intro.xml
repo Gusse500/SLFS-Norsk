@@ -8,34 +8,34 @@
 <sect1 id="xlibre-intro" xreflabel="Introduction to X11Libre">
   <?dbhtml filename="xlibre-intro.html"?>
 
-  <title>Introduction to X11Libre</title>
+  <title>Introduksjon til X11Libre</title>
 
   <sect2>
-    <title>What is X11Libre?</title>
+    <title>Hva er X11Libre?</title>
     <para>
-      X11Libre is a collection of packages forked from Xorg. However, most of
-      the forks are not any more updated than the official Xorg packages. The
-      main one that gets active development is the
-      xserver. There are no promises of a stable ABI
-      and does not have a stable release. The project has had several changes
-      that are controversial. As such, it is largely up to the user if they
-      want to use the software from the project. It has broken some things but
-      can lead to a smoother experience.
+      X11Libre er en samling pakker avledet fra Xorg. Imidlertid er de 
+      fleste av de avledete pakker ikke mer oppdatert enn de offisielle 
+      Xorg pakkene. Den viktigste som får aktiv utvikling er xserver. Det 
+      er ingen løfter om et stabilt ABI og har ingen stabil utgivelse. 
+      Prosjektet har hatt flere endringer som er kontroversielle. Som sådan 
+      er det i stor grad opp til brukeren om de ønsker å bruke programvaren 
+      fra prosjektet. Den har ødelagt noen ting, men kan føre til en 
+      jevnere opplevelse.
     </para>
   </sect2>
-  
+
   <sect2>
-    <title>What This Section Will and Will Not Cover</title>
+    <title>Hva denne delen vil og ikke vil dekke</title>
     <para>
-      This section will only cover the installation and configuration of the
-      xserver. It will also cover on how to proceed.
-      It will not cover its history, why the fork took place, or the nature of
-      the person who forked Xorg. This book only aims to guide users for
-      installing what they need and what pieces are needed to be put in place.
-      Lastly, please do not ask for this project to be put in BLFS/GLFS. The
-      future for this project is very unclear and may die out before SLFS-12.4
-      releases in September. Consider this a reference implementation rather
-      than the future.
+      Denne delen vil kun dekke installasjon og konfigurasjon av xserver. 
+      Den vil også dekke hvordan du går frem. Den vil ikke dekke historien, 
+      hvorfor avledingen fant sted, eller typen person som avledet Xorg. 
+      Denne boken har kun som mål å veilede brukere i å installere det de 
+      trenger og hvilke deler som må settes på plass. Til slutt, 
+      vennligst ikke be om at dette prosjektet skal legges i BLFS/GLFS. 
+      Fremtiden for dette prosjektet er svært uklar og kan dø ut før 
+      SLFS-12.4 lanseres i september. Betrakt dette som en 
+      referanseimplementering snarere enn fremtiden.
     </para>
   </sect2>
 
