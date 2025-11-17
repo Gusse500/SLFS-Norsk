@@ -17,46 +17,46 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to xcb-imdkit</title>
+    <title>Introduksjon til xcb-imdkit</title>
 
     <para>
-      The xcb-imdkit package provides an
-      implementation of the X Input Method protocol using XCB.
+      Pakken xcb-imdkit tilbyr en implementering av X Input Method 
+      protokollen ved bruk av XCB.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xcb-imdkit-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&xcb-imdkit-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">xcb-imdkit Dependencies</bridgehead>
+    <bridgehead renderas="sect3">xcb-imdkit Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/cmake.html">cmake</ulink>,
       <ulink url="&blfs-svn;/kde/extra-cmake-modules.html">extra-cmake-modules</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>,
-      <ulink url="&blfs-svn;/x/xcb-util.html">xcb-util</ulink>, and
-      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>
+      <ulink url="&blfs-svn;/x/xcb-util.html">xcb-util</ulink>, og
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Verktøy</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <xref linkend="uthash"/> (if not installed, an internal version will be
-      used instead)
+      <xref linkend="uthash"/> (hvis den ikke er installert, vil en intern 
+      versjon bli brukt i stedet)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of xcb-imdkit</title>
+    <title>Installasjon av xcb-imdkit</title>
 
     <para>
-      Install xcb-imdkit by running the following
-      commands:
+      Installer xcb-imdkit ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp; cd build &amp;&amp;
@@ -67,7 +67,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -75,35 +75,35 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libxcb-imdkit
         </seg>
         <seg>
-          /usr/include/xcb-imdkit and /usr/lib/cmake/XCBImdkit
+          /usr/include/xcb-imdkit og /usr/lib/cmake/XCBImdkit
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -111,7 +111,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libxcb-imdkit</filename></term>
         <listitem>
           <para>
-            contains an implementation of IMDkit compatible with XCB
+            inneholder en implementering av IMDkit kompatibel med XCB
           </para>
           <indexterm zone="xcb-imdkit libxcb-imdkit">
             <primary sortas="c-libxcb-imdkit">libxcb-imdkit</primary>
