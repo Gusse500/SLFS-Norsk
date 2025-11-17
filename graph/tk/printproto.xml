@@ -16,43 +16,43 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to printproto</title>
+    <title>Introduksjon til printproto</title>
 
     <para>
-      The printproto package provides the protocol
-      headers for the <xref linkend="libxp"/> package.
+      printproto pakken inneholder protokolldeklarasjonene 
+      for <xref linkend="libxp"/> pakken.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&printproto-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&printproto-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-  <bridgehead renderas="sect3">printproto Dependencies</bridgehead>
+  <bridgehead renderas="sect3">printproto Avhengigheter</bridgehead>
 
-  <bridgehead renderas="sect4">Required</bridgehead>
+  <bridgehead renderas="sect4">Påkrevd</bridgehead>
   <para role="required">
-    <ulink url="&blfs-svn;/x/xorg7.html#xorg-env">Xorg build environment</ulink>
-    (should be set for the following instructions to work)
+    <ulink url="&blfs-svn;/x/xorg7.html#xorg-env">Xorg byggemiljø</ulink>
+    (bør være satt for at følgende instruksjoner skal fungere)
   </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of printproto</title>
+    <title>Installasjon av printproto</title>
 
     <para>
-      Install printproto by running the following
-      commands:
+      Installer printproto ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure $XORG_CONFIG</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -60,22 +60,22 @@
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
