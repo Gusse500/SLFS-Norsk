@@ -18,44 +18,44 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to xcb-util-errors</title>
+    <title>Introduksjon til xcb-util-errors</title>
 
     <para>
-      The xcb-util-errors package provides XCB utility
-      functions that provide human readable X11 errors.
+      Pakken xcb-util-errors inneholder XCB verktøyfunksjoner 
+      som gir menneskelig lesbare X11 feil.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&xcb-util-errors-download;"/>
+          Nedlasting (HTTP): <ulink url="&xcb-util-errors-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">xcb-util-errors Dependencies</bridgehead>
+    <bridgehead renderas="sect3">xcb-util-errors Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink> and
+      <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink> og
       <ulink url="&blfs-svn;/x/xcb-proto.html">xcb-util</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of xcb-util-errors</title>
+    <title>Installasjon av xcb-util-errors</title>
 
     <para>
-      Install xcb-util-errors by running the following
-      commands:
+      Installer xcb-util-errors ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure $XORG_CONFIG &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -63,28 +63,28 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libxcb-errors
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -92,7 +92,7 @@ make</userinput></screen>
         <term><filename class="libraryfile">libxcb-errors</filename></term>
         <listitem>
           <para>
-            gives human-readable errors and codes
+            gir menneskelig lesbare feil og koder
           </para>
           <indexterm zone="xcb-util-errors libxcb-errors">
             <primary sortas="c-libxcb-errors">libxcb-errors</primary>
