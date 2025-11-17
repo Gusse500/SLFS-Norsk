@@ -5,10 +5,10 @@
  %general-entities;
 ]>
 
-<part id="graph" xreflabel="Graphical Components">
+<part id="graph" xreflabel="Grafiske komponenter">
   <?dbhtml filename="graph.html" dir="graph"?>
 
-  <title>Graphical Components</title>
+  <title>Grafiske komponenter</title>
 
   <!--
     <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="xlibre/xlibre.xml"/>
