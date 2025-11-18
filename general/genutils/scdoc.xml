@@ -20,8 +20,7 @@
     <title>Introduksjon til scdoc</title>
 
     <para>
-      scdoc pakken tilbyr en manualside 
-      generator.
+      scdoc pakken tilbyr en manualside generator.
     </para>
 
     <itemizedlist spacing="compact">
@@ -38,8 +37,7 @@
     <title>Installasjon av scdoc</title>
 
     <para>
-      Installer scdoc ved å kjøre følgende 
-      kommandoer:
+      Installer scdoc ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>make PREFIX=/usr LDFLAGS="$LDFLAGS"</userinput></screen>
@@ -56,9 +54,8 @@
     <title>Parameterforklaringer</title>
 
     <para>
-      <envar>LDFLAGS="$LDFLAGS"</envar>: Dette sikrer at hvis
-      <envar>$LDFLAGS</envar> er satt, at byggesystemet respekterer det. 
-      Ellers vil det fjerne variabelen for byggeprosessen.
+      <envar>LDFLAGS="$LDFLAGS"</envar>: Dette sikrer at byggesystemet 
+      respekterer <envar>$LDFLAGS</envar> hvis det er satt.
     </para>
 
   </sect2>
