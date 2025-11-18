@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY samurai-download-http "https://github.com/michaelforney/samurai/archive/&samurai-version;/samurai-&samurai-version;.tar.gz">
+]>
+
+<sect1 id="samurai" xreflabel="samurai-&samurai-minor;">
+  <?dbhtml filename="samurai.html"?>
+
+  <title>samurai-&samurai-minor;</title>
+
+  <indexterm zone="samurai">
+    <primary sortas="a-samurai">samurai</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til samurai</title>
+
+    <para>
+      Samurai pakken tilbyr en erstatning for Ninja pakken. Den tar sikte på 
+      full kompatibilitet.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&samurai-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av samurai</title>
+
+    <para>
+      Installer samurai ved å kjøre følgende kommandoer:
+    </para>
+
+    <screen><userinput>make CC=cc CFLAGS+=" -std=c99"</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Konfigurere samurai</title>
+
+    <sect3><title>Konfigurasjonsinformasjon</title>
+
+      <para>
+        Hvis du vil at <command>samu</command> skal brukes når som helst
+        <command>ninja</command> kjøres, flytt den originale Ninja kopien ut av 
+        veien og lag en symbolkobling som &root; bruker:
+      </para>
+
+<screen role="root"><userinput>mv /usr/bin/ninja{,.old} &amp;&amp;
+ln -svf samu /usr/bin/ninja</userinput></screen>
+
+      <para>
+        <command>samu</command> vil ikke kjøre på alle logiske CPU-er eller 
+        tråder som standard, i likhet med <command>make</command>. 
+        Forutsetningen for å få det til å gjøre er den samme prosessen: utsted
+        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal>, hvor
+        <literal><replaceable>&lt;x&gt;</replaceable></literal> er antallet 
+        logiske CPU-er du ønsker å bruke, når <command>samu</command> (eller
+        <command>ninja</command> hvis du lagde den symbolske lenken) kjøres. Du 
+        kan unngå å måtte spesifisere det hver gang ved å sette
+        <envar>SAMUFLAGS</envar> og inkludere
+        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal> til det, 
+        som dette:
+      </para>
+
+<screen><computeroutput>export SAMUFLAGS=-j$(nproc)</computeroutput></screen>
+
+      <para>
+        Et triks du kan gjøre er å gjøre at <envar>SAMUFLAGS</envar>
+        inneholder <envar>$MAKEFLAGS</envar> hvis <envar>MAKEFLAGS</envar> bare 
+        inneholder <literal>-j</literal> alternativet, som dette:
+      </para>
+
+      <screen><userinput>export SAMUFLAGS=$MAKEFLAGS</userinput></screen>
+
+      <para>
+        Legg det til i et Bash profilskript som
+        <filename>~/.bash_profile</filename> for å unngå å måtte sette den opp 
+        etter hver innlogging.
+      </para>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          samu
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="samu">
+        <term><command>samu</command></term>
+        <listitem>
+          <para>
+            er en erstatning for <command>ninja</command>
+          </para>
+          <indexterm zone="samurai samu">
+            <primary sortas="b-samu">samu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
