@@ -43,13 +43,18 @@
       <para>15. november 2025</para>
       <itemizedlist>
         <listitem>
-          <para>[tox] - *: Fjern etterfølgende mellomrom.</para>
+          <para>[tox] - imv: Lagt til.</para>
         </listitem>
+        <listitem>
+          <para>[tox] - tealdeer: 1.8.0 -&gt; 1.8.1. Fixes
+          <ulink url="&slfs-issues;/382">#382</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - scdoc: 1.11.3 -&gt; 1.11.4. Fikser
           <ulink url="&slfs-issues;/380">#380</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[tox] - imv: Lagt til.</para>
+          <para>[tox] - *: Fjern etterfølgende mellomrom.</para>
         </listitem>
       </itemizedlist>
     </listitem>
