@@ -18,42 +18,42 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to heirloom-doctools</title>
+    <title>Introduksjon til heirloom-doctools</title>
 
     <para>
-      The heirloom-doctools package provides
-      troff, nroff, and
-      other related tools. Those tools are enhanced versions of the tools
-      released as a part of OpenSolaris, which are themselves variants of
-      ditroff, which are themselves descendants of the original UNIX troff.
+      heirloom-doctools pakken tilbyr
+      troff, nroff, og
+      andre relaterte verktøy. Disse verktøyene er forbedrede versjoner av 
+      verktøyene utgitt som en del av OpenSolaris, som i seg selv er varianter 
+      av ditroff, som i seg selv er etterkommere av den originale UNIX troff.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&heirloom-doctools-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&heirloom-doctools-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">heirloom-doctools Dependencies</bridgehead>
+    <bridgehead renderas="sect3">heirloom-doctools Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distribution),
-      <xref linkend="heirloom-ng"/>, and
+      (for å pakke ut distribusjonen),
+      <xref linkend="heirloom-ng"/>, og
       <xref linkend="heirloom-devtools"/>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of heirloom-doctools</title>
+    <title>Installasjon av heirloom-doctools</title>
 
     <para>
-      Install heirloom-doctools by running the following
-      command:
+      Installer heirloom-doctools ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure &amp;&amp;
@@ -63,7 +63,7 @@ make PREFIX=/usr            \
      MANDIR=/usr/share/man/5man</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make PREFIX=/usr MANDIR=/usr/share/man/5man \
@@ -72,31 +72,31 @@ install</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           addbib, checkeq, checknr, col, dhtml, dpost, eqn, grap, hunt,
           indxbib, inv, lookbib, mkey, neqn, nroff, otf_info, pic, picpack, pm,
           ptx, refer, roffbib, runinv, soelim, sortbib, ta, tbl, troff,
-          vfontedpr, and vgrind
+          vfontedpr, og vgrind
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /usr/pub, /usr/ucblib/doctools, and /usr/ucblib/reftools
+          /usr/pub, /usr/ucblib/doctools, og /usr/ucblib/reftools
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -104,7 +104,7 @@ install</userinput></screen>
         <term><command>addbib</command></term>
         <listitem>
           <para>
-            creates or extends a bibliographic database
+            oppretter eller utvider en bibliografisk database
           </para>
           <indexterm zone="heirloom-doctools addbib">
             <primary sortas="b-addbib">addbib</primary>
@@ -116,7 +116,7 @@ install</userinput></screen>
         <term><command>checkeq</command></term>
         <listitem>
           <para>
-            reports missing or unbalanced delimiters and .EQ/.EN pairs
+            rapporterer manglende eller ubalanserte skilletegn og .EQ/.EN par
           </para>
           <indexterm zone="heirloom-doctools checkeq">
             <primary sortas="b-checkeq">checkeq</primary>
@@ -128,7 +128,7 @@ install</userinput></screen>
         <term><command>checknr</command></term>
         <listitem>
           <para>
-            checks nroff/troff files
+            sjekker nroff/troff filer
           </para>
           <indexterm zone="heirloom-doctools checknr">
             <primary sortas="b-checknr">checknr</primary>
@@ -140,7 +140,7 @@ install</userinput></screen>
         <term><command>col</command></term>
         <listitem>
           <para>
-            filters reverse line feeds
+            filtrerer omvendt linjemating
           </para>
           <indexterm zone="heirloom-doctools col">
             <primary sortas="b-col">col</primary>
@@ -152,7 +152,7 @@ install</userinput></screen>
         <term><command>dhtml</command></term>
         <listitem>
           <para>
-            is the HTML postprocessor for <command>troff</command>
+            er HTML etterbehandlingsprogrammet for <command>troff</command>
           </para>
           <indexterm zone="heirloom-doctools dhtml">
             <primary sortas="b-dhtml">dhtml</primary>
@@ -164,7 +164,7 @@ install</userinput></screen>
         <term><command>dpost</command></term>
         <listitem>
           <para>
-            is the PostScript preprocessor for <command>troff</command>
+            er PostScript forbehandleren for <command>troff</command>
           </para>
           <indexterm zone="heirloom-doctools dpost">
             <primary sortas="b-dpost">dpost</primary>
@@ -176,8 +176,8 @@ install</userinput></screen>
         <term><command>eqn</command></term>
         <listitem>
           <para>
-            is the <command>troff</command> preprocessor for typesetting
-            mathematics on a photo‐typesetter
+            er <command>troff</command> forbehandler for formatering av
+            matematikksymboler på en fotosetter
           </para>
           <indexterm zone="heirloom-doctools eqn">
             <primary sortas="b-eqn">eqn</primary>
@@ -189,7 +189,7 @@ install</userinput></screen>
         <term><command>grap</command></term>
         <listitem>
           <para>
-            is the <command>pic</command> preprocessor for drawing graphs
+            er <command>pic</command> forbehandler for tegning av grafer
           </para>
           <indexterm zone="heirloom-doctools grap">
             <primary sortas="b-grap">grap</primary>
@@ -201,8 +201,8 @@ install</userinput></screen>
         <term><command>hunt</command></term>
         <listitem>
           <para>
-            searches an index made by <command>indxbib</command> and delivers
-            the items
+            søker i en indeks laget av <command>indxbib</command> og leverer 
+            enhetene
           </para>
           <indexterm zone="heirloom-doctools hunt">
             <primary sortas="b-hunt">hunt</primary>
@@ -214,7 +214,7 @@ install</userinput></screen>
         <term><command>indxbib</command></term>
         <listitem>
           <para>
-            builds an inverted index for a bibliography
+            bygger en invertert indeks for en bibliografi
           </para>
           <indexterm zone="heirloom-doctools indxbib">
             <primary sortas="b-indxbib">indxbib</primary>
@@ -226,7 +226,7 @@ install</userinput></screen>
         <term><command>inv</command></term>
         <listitem>
           <para>
-            makes an index from a set of keys
+            lager en indeks fra et sett med nøkler
           </para>
           <indexterm zone="heirloom-doctools inv">
             <primary sortas="b-inv">inv</primary>
@@ -238,8 +238,8 @@ install</userinput></screen>
         <term><command>lookbib</command></term>
         <listitem>
           <para>
-            uses an inverted index made by <command>indxbib</command> to find
-            sets of bibliographic references
+            bruker en invertert indeks laget av <command>indxbib</command> for 
+            å finne et sett med bibliografiske referanser
           </para>
           <indexterm zone="heirloom-doctools lookbib">
             <primary sortas="b-lookbib">lookbib</primary>
@@ -251,7 +251,7 @@ install</userinput></screen>
         <term><command>mkey</command></term>
         <listitem>
           <para>
-            isolates keys from input files
+            isolerer nøkler fra inndatafiler
           </para>
           <indexterm zone="heirloom-doctools mkey">
             <primary sortas="b-mkey">mkey</primary>
@@ -263,8 +263,8 @@ install</userinput></screen>
         <term><command>neqn</command></term>
         <listitem>
           <para>
-            is the <command>troff</command> preprocessor for typesetting
-            mathematics on a terminal
+            er <command>troff</command> forbehandler for formatering av
+            matematikksymboler på en terminal
           </para>
           <indexterm zone="heirloom-doctools neqn">
             <primary sortas="b-neqn">neqn</primary>
@@ -276,7 +276,7 @@ install</userinput></screen>
         <term><command>nroff</command></term>
         <listitem>
           <para>
-            formats documents for display or printing
+            formaterer dokumenter for visning eller utskrift
           </para>
           <indexterm zone="heirloom-doctools nroff">
             <primary sortas="b-nroff">nroff</primary>
@@ -288,7 +288,7 @@ install</userinput></screen>
         <term><command>otf_info</command></term>
         <listitem>
           <para>
-            dumps contents of OpenType font files
+            dumper innholdet i OpenType skriftfiler
           </para>
           <indexterm zone="heirloom-doctools otf_info">
             <primary sortas="b-otf_info">otf_info</primary>
@@ -300,7 +300,7 @@ install</userinput></screen>
         <term><command>pic</command></term>
         <listitem>
           <para>
-            is the <command>troff</command> preprocessor for drawing pictures
+            er <command>troff</command> forprosessor for tegning av bilder
           </para>
           <indexterm zone="heirloom-doctools pic">
             <primary sortas="b-pic">pic</primary>
@@ -312,7 +312,7 @@ install</userinput></screen>
         <term><command>picpack</command></term>
         <listitem>
           <para>
-            is the PostScript picture packing preprocessor
+            er PostScript forbehandlingsprogrammet for bildepakking
           </para>
           <indexterm zone="heirloom-doctools picpack">
             <primary sortas="b-picpack">picpack</primary>
@@ -324,8 +324,8 @@ install</userinput></screen>
         <term><command>pm</command></term>
         <listitem>
           <para>
-            is the page justifier for the mpm <command>troff</command> macro
-            package
+            er sidejusteringen for mpm <command>troff</command> 
+            makropakke
           </para>
           <indexterm zone="heirloom-doctools pm">
             <primary sortas="b-pm">pm</primary>
@@ -337,7 +337,7 @@ install</userinput></screen>
         <term><command>ptx</command></term>
         <listitem>
           <para>
-            generates a permuted index
+            genererer en permutert indeks
           </para>
           <indexterm zone="heirloom-doctools ptx">
             <primary sortas="b-ptx">ptx</primary>
@@ -349,7 +349,7 @@ install</userinput></screen>
         <term><command>refer</command></term>
         <listitem>
           <para>
-            finds and inserts literature references in documents
+            finner og setter inn litteraturreferanser i dokumenter
           </para>
           <indexterm zone="heirloom-doctools refer">
             <primary sortas="b-refer">refer</primary>
@@ -361,7 +361,7 @@ install</userinput></screen>
         <term><command>roffbib</command></term>
         <listitem>
           <para>
-            prints out all records in a bibliographic database
+            skriver ut alle poster i en bibliografisk database
           </para>
           <indexterm zone="heirloom-doctools roffbib">
             <primary sortas="b-roffbib">roffbib</primary>
@@ -373,7 +373,7 @@ install</userinput></screen>
         <term><command>runinv</command></term>
         <listitem>
           <para>
-            is a demonstration script for <command>inv</command>
+            er et demonstrasjonsskript for <command>inv</command>
           </para>
           <indexterm zone="heirloom-doctools runinv">
             <primary sortas="b-runinv">runinv</primary>
@@ -385,7 +385,7 @@ install</userinput></screen>
         <term><command>soelim</command></term>
         <listitem>
           <para>
-            eliminates .SO's from <command>nroff</command> input
+            eliminerer .SO-er fra <command>nroff</command> inndata
           </para>
           <indexterm zone="heirloom-doctools soelim">
             <primary sortas="b-soelim">soelim</primary>
@@ -397,7 +397,7 @@ install</userinput></screen>
         <term><command>sortbib</command></term>
         <listitem>
           <para>
-            sorts a bibliographic database
+            sorterer en bibliografisk database
           </para>
           <indexterm zone="heirloom-doctools sortbib">
             <primary sortas="b-sortbib">sortbib</primary>
@@ -409,7 +409,7 @@ install</userinput></screen>
         <term><command>ta</command></term>
         <listitem>
           <para>
-            drives an HP2621 terminal to see stuff quickly
+            driver en HP2621 terminal for å se ting raskt
           </para>
           <indexterm zone="heirloom-doctools ta">
             <primary sortas="b-ta">ta</primary>
@@ -421,7 +421,7 @@ install</userinput></screen>
         <term><command>tbl</command></term>
         <listitem>
           <para>
-            formats tables for <command>nroff</command> or
+            formaterer tabeller for <command>nroff</command> eller
             <command>troff</command>
           </para>
           <indexterm zone="heirloom-doctools tbl">
@@ -434,7 +434,7 @@ install</userinput></screen>
         <term><command>troff</command></term>
         <listitem>
           <para>
-            typesets or formats documents
+            setter opp eller formaterer dokumenter
           </para>
           <indexterm zone="heirloom-doctools troff">
             <primary sortas="b-troff">troff</primary>
@@ -446,7 +446,7 @@ install</userinput></screen>
         <term><command>vfontedpr</command></term>
         <listitem>
           <para>
-            is the preprocessor for <command>vgrind</command>
+            er forprosessoren for <command>vgrind</command>
           </para>
           <indexterm zone="heirloom-doctools vfontedpr">
             <primary sortas="b-vfontedpr">vfontedpr</primary>
@@ -458,7 +458,7 @@ install</userinput></screen>
         <term><command>vgrind</command></term>
         <listitem>
           <para>
-            prints nice listings of programs
+            skriver ut fine programlister
           </para>
           <indexterm zone="heirloom-doctools vgrind">
             <primary sortas="b-vgrind">vgrind</primary>
