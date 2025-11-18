@@ -48,8 +48,7 @@
     <title>Installasjon av glaze</title>
 
     <para>
-      Installer glaze ved å kjøre følgende 
-      kommandoer:
+      Installer glaze ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
