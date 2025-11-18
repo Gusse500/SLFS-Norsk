@@ -5,44 +5,44 @@
   %general-entities;
 ]>
 
-<sect1 id="important" xreflabel="Important Information">
+<sect1 id="important" xreflabel="Viktig informasjon">
   <?dbhtml filename="important.html"?>
 
-  <title>Important Information</title>
+  <title>Viktig informasjon</title>
 
   <para>
-    BLFS has more information regarding compilation, /usr vs /usr/local,
-    boot scripts, etc. at
+    BLFS har mer informasjon om kompilering, /usr vs. /usr/local, 
+    oppstartsskript osv. på
     <ulink url="&blfs-svn;/introduction/important.html"/>.
-    Unlike this book, this would be a chapter in BLFS.
-    A lot of that information has been omitted as this book is more linear
-    and doesn't follow how BLFS follows. However, we will cover some bases
-    here.
+    I motsetning til denne boken, ville dette vært et kapittel i BLFS. Mye av 
+    denne informasjonen er utelatt, ettersom denne boken er mer lineær og ikke 
+    følger hvordan BLFS følger. Vi vil imidlertid dekke noen grunnleggende 
+    elementer her.
   </para>
 
   <sect2>
-    <title>Stability</title>
+    <title>Stabilitet</title>
 
     &important-stability;
 
   </sect2>
 
   <sect2>
-    <title>Init System</title>
+    <title>Init Systemet</title>
 
     <para revision="sysv">
-      This version of this book is meant for SysV LFS systems. The Systemd
-      version of the book is not viewable online by &copyholder; due to Github
-      Pages restraints. Thus you will need to download or render the book
-      yourself. Follow the <ulink url="&slfs-repo;">SLFS rendering
-      instructions</ulink> in order to render the book yourself. You will need
-      <ulink url="&blfs-svn;/general/git.html">Git</ulink> to clone the
-      repository. You can download the book <ulink
-      url="&slfs-repo;/releases">here</ulink>.
+      Denne versjonen av boken er ment for SysV LFS systemer. Systemd versjonen 
+      av boken kan ikke vises på nett av &copyholder; på grunn av begrensninger 
+      på Github Pages. Derfor må du laste ned eller gjengi boken selv. Følg 
+      instruksjonene <ulink url="&slfs-repo;">SLFS rendering
+      instructions</ulink> for å kunne gjengi boken selv. Du trenger
+      <ulink url="&blfs-svn;/general/git.html">Git</ulink> å klone depotet. Du 
+      kan laste ned boken <ulink
+      url="&slfs-repo;/releases">her</ulink>.
     </para>
 
     <para revision="systemd">
-      This version of this book is meant for Systemd LFS systems.
+      Denne versjonen av boken er ment for Systemd LFS systemer.
     </para>
 
   </sect2>
@@ -51,50 +51,50 @@
     <title>OpenGL</title>
 
     <para>
-      There are two main OpenGL vendors on linux: Mesa and libglvnd. BLFS
-      installs Mesa as the vendor. GLFS installs libglvnd as the vendor. This
-      book mainly sees OpenGL in general and most packages work just fine.
-      However, some are known to require fixes, either simple or too elaborate.
-      They require extra resources to test, which the team behind this book
-      does not have. So Mesa's OpenGL implementations are not supported. As a
-      starting point, you can see <ulink
-      url="&slfs-repo;/releases/tag/12.4">SLFS 12.4</ulink> and see how to go
-      about fixing what is broken. See <ulink
-      url="&glfs-website;/shareddeps/aboutgl.html">GLFS: About OpenGL</ulink>
-      for more information about why support for Mesa's OpenGL implementations
-      have been dropped from both this book and GLFS.
+      Det finnes to hovedleverandører av OpenGL på Linux: Mesa og libglvnd. BLFS 
+      installerer Mesa som leverandør. GLFS installerer libglvnd som leverandør. 
+      Denne boken ser hovedsakelig på OpenGL generelt, og de fleste pakkene 
+      fungerer helt fint. Noen er imidlertid kjent for å kreve rettelser, enten 
+      enkle eller for omfattende. De krever ekstra ressurser for å teste, noe 
+      teamet bak denne boken ikke har. Så Mesas OpenGL implementeringer støttes 
+      ikke. Som et utgangspunkt kan du se <ulink
+      url="&slfs-repo;/releases/tag/12.4">SLFS 12.4</ulink> og se hvordan du går 
+      frem for å fikse det som er ødelagt. Se <ulink
+      url="&glfs-website;/shareddeps/aboutgl.html">GLFS: Om OpenGL</ulink>
+      for mer informasjon om hvorfor støtte for Mesas OpenGL implementeringer 
+      har blitt fjernet fra både denne boken og GLFS.
     </para>
 
   </sect2>
 
   <sect2>
-    <title>Building software</title>
+    <title>Bygge programvare</title>
 
     <para>
-      Building software on SLFS is identical to how it's done in the
-      LFS books. It goes without saying firstmost that you should have
-      <envar>MAKEFLAGS</envar> set to save yourself a lot of time. This is
-      useful for the <command>make</command> utility to use the amount of
-      threads that you both want and have.
+      Å bygge programvare på SLFS er identisk med hvordan det gjøres i LFS 
+      bøkene. Det sier seg selv at du først og fremst bør ha
+      <envar>MAKEFLAGS</envar> satt for å spare deg mye tid. Dette er nyttig 
+      for <command>make</command> verktøyet for å bruke mengden tråder du både 
+      ønsker og har.
     </para>
 
 <screen><userinput>export MAKEFLAGS='-jx'</userinput></screen>
 
     <para>
-      Replace <option>x</option> with the amount of threads you have.
-      You can check the amount of threads you have with:
+      Erstatt <option>x</option> med antall tråder du har. Du kan sjekke antall 
+      tråder du har med:
     </para>
 
 <screen><userinput>grep processor /proc/cpuinfo</userinput></screen>
 
     <important>
       <para>
-        Make sure that you have enough RAM for your system!
-        A general method is having 2.5G per thread that is thrown at
-        <command>make</command>. For instance, if you want to use 6 threads,
-        multiply 6 by 2.5 (which is 15), then make sure you have 15G of RAM.
-        If you don't have that RAM, try and limit the threads you throw at
-        <command>make</command>.
+        Sørg for at du har nok RAM til systemet ditt! En generell metode er å 
+        ha 2,5 G per tråd som brukes av
+        <command>make</command>. Hvis du for eksempel vil bruke 6 tråder, 
+        multipliser 6 med 2,5 (som er 15), og sørg for at du har 15 GB RAM. Hvis 
+        du ikke har så mye RAM, kan du prøve å begrense antall tråder som du
+        bruker for <command>make</command>.
       </para>
     </important>
 
