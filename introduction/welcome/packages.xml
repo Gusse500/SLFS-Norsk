@@ -5,32 +5,32 @@
   %general-entities;
 ]>
 
-<sect1 id="packages" xreflabel="Getting the Source Packages">
+<sect1 id="packages" xreflabel="Hente kildepakkene">
   <?dbhtml filename="packages.html"?>
 
 
-  <title>Getting the Source Packages</title>
+  <title>Hente kildepakkene</title>
 
-  <para>Within the SLFS instructions, each package has two references for
-  finding the source files for the package&mdash;an HTTP link and an FTP link
-  (some packages may only list one of these links). Every effort has been made
-  to ensure that these links are accurate. However, the World Wide Web is in
-  continuous flux. Packages are sometimes moved or updated and the exact URL
-  specified is not always available.</para>
+  <para>Innenfor SLFS instruksjonene har hver pakke to referanser for å finne 
+  kildefilene til pakken&mdash;en HTTP lenke og en FTP lenke (noen pakker viser 
+  kanskje bare én av disse lenkene). Vi har gjort vårt ytterste for å sikre at 
+  disse lenkene er nøyaktige. Imidlertid er World Wide Web i kontinuerlig 
+  endring. Pakker flyttes eller oppdateres noen ganger, og den nøyaktige URL 
+  adressen som er spesifisert er ikke alltid tilgjengelig.</para>
 
-  <para>We do not have a solution at the moment if a package download is
-  unavailable besides going to the developer(s) and/or their website.</para>
+  <para>Vi har ingen løsning for øyeblikket hvis en pakkenedlasting ikke er 
+  tilgjengelig, bortsett fra å gå til utvikleren(e) sitt nettsted.</para>
 
   <sect2>
-    <title>Obtaining the Source Packages in Bulk</title>
+    <title>Hente kildepakkene i bulk</title>
 
     <para>
-      Obtaining all the source packages all at once is not recommended as
-      you will probably pull in packages you won't want. However, it is
-      certainly a convenient option if you have the disk space to spare. First
-      navigate to the directory you want the downloaded source code and patches
-      to be, then download <ulink url="../wget-list">wget-list</ulink>. After
-      that, download the packages and patches by doing the following:
+      Det anbefales ikke å skaffe alle kildekodepakkene samtidig, da du 
+      sannsynligvis vil hente inn pakker du ikke vil ha. Det er imidlertid 
+      absolutt et praktisk alternativ hvis du har diskplass til overs. Først 
+      naviger til mappen du vil at den nedlastede kildekoden og oppdateringene 
+      skal være i, og last deretter ned <ulink url="../wget-list">wget-list</ulink>. 
+      Etter det, last ned pakkene og oppdateringene ved å gjøre følgende:
     </para>
 
 <screen><userinput>wget -N --input-file=wget-list --continue</userinput></screen>
