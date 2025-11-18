@@ -8,14 +8,14 @@
 <chapter id="welcome">
   <?dbhtml filename="welcome.html"?>
 
-  <title>Welcome to SLFS</title>
+  <title>Velkommen til SLFS</title>
 
   <para>
-    This book is designed like BLFS. Packages are organized in their respective
-    category. Most users will not need every package. If you are interested in
-    a certain package, just go to it, install the dependencies, and follow the
-    instructions! The following just cover important bases if you are ever
-    lost or confused.
+    Denne boken er utformet som BLFS. Pakkene er organisert i sine respektive 
+    kategorier. De fleste brukere vil ikke trenge alle pakker. Hvis du er 
+    interessert i en bestemt pakke, bare gå til den, installer avhengighetene og 
+    følg instruksjonene! Følgende dekker bare viktig grunnleggende hvis du noen 
+    gang er forvirret.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="conventions.xml"/>
