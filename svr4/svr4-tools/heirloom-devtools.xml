@@ -18,50 +18,50 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to heirloom-devtools</title>
+    <title>Introduksjon til heirloom-devtools</title>
 
     <para>
-      The heirloom-devtools package provides
+      heirloom-devtools pakken tilbyr
       yacc, lex,
-      m4, make, and
-      SCCS. Those tools are portable derivatives of
-      the tools released as a part of OpenSolaris, which were derived from the
-      original UNIX versions.
+      m4, make, og
+      SCCS. Disse verktøyene er flyttbare derivater av verktøyene som ble utgitt 
+      som en del av OpenSolaris, og som ble avledet fra de originale UNIX 
+      versjonene.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&heirloom-devtools-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&heirloom-devtools-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-final-updates.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/heirloom-devtools/heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">heirloom-devtools Dependencies</bridgehead>
+    <bridgehead renderas="sect3">heirloom-devtools Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <xref linkend="heirloom-ng"/> and
+      <xref linkend="heirloom-ng"/> og
       <ulink url="&blfs-svn;/basicnet/libtirpc.html">libtirpc</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Recommended</bridgehead>
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <xref linkend="heirloom-sh"/>
     </para>
@@ -69,31 +69,31 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of heirloom-devtools</title>
+    <title>Installasjon av heirloom-devtools</title>
 
     <para>
-      Apply a patch to bring up the source to the last upstream commit:
+      Installer en oppdatering for å hente kildekoden til den siste oppstrøms commiten:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-final-updates.patch</userinput></screen>
 
     <para>
-      Now, apply a patch to fix the compilation of the make utility:
+      Nå, bruk en oppdatering for å fikse kompileringen av make verktøyet:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch</userinput></screen>
 
     <para>
-      Execute the following command to tell this package to use
+      Kjør følgende kommando for å be denne pakken om å bruke 
       libtirpc:
     </para>
 
 <screen><userinput>sed -i 's=-O=-O -I/usr/include/tirpc=g' mk.config</userinput></screen>
 
     <para>
-      If you have heirloom-sh installed, execute the
-      following commands to tell heirloom-devtools
-      where to find it:
+      Hvis du har heirloom-sh installert, 
+      kjør følgende kommandoer for å fortelle heirloom-devtools 
+      hvor den skal finne den:
     </para>
 
 <screen><userinput>sed -i 's-/sbin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
@@ -101,7 +101,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
 sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
 
     <para>
-      Otherwise, execute the following command:
+      Ellers, kjør følgende kommando:
     </para>
 
     <!-- computeroutput here as it may be possible jhalfs if down the road
@@ -111,21 +111,21 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
 <screen><computeroutput>sed -i 's-/sbin/sh-/bin/sh-g' mk.config</computeroutput></screen>
 
     <important><para>
-      Ensure you are building this package as the regular user and
-      <emphasis>NOT</emphasis> as the &root; user, or else the
-      <command>make</command> process will fail as it will be unable to create
-      a temporary file/directory.
+      Sørg for at du bygger denne pakken som en vanlig bruker, og
+      <emphasis>IKKE</emphasis> som &root; brukeren, ellers vil
+      <command>make</command> prosessen mislykkes da den ikke vil kunne 
+      opprette en midlertidig fil/mappe.
     </para></important>
 
     <para>
-      Install heirloom-devtools by running the following
-      command:
+      Installer heirloom-devtools ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>CC="cc -std=gnu17" make -j1</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -133,40 +133,40 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
   </sect2>
 
   <sect2 role="commands">
-    <title>Command Explanations</title>
+    <title>Parameterforklaringer</title>
 
     <para>
-      <command>make -j1</command>: This command builds the package using only
-      one thread to ensure there is no race condition.
+      <command>make -j1</command>: Denne kommandoen bygger pakken med kun én 
+      tråd for å sikre at det ikke finnes noen kappløpstilstand.
     </para>
 
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           admin, cdc (link to rmdel), comb, delta, get, help, lex, m4, make,
           prs, prt, rmdel, sact (link to unget), sccs, sccsdiff, svr4.make
-          (link to make), unget, val, vc, what, and yacc
+          (link to make), unget, val, vc, what, og yacc
         </seg>
         <seg>
-          libl and liby (both static)
+          libl og liby (begge statiske)
         </seg>
         <seg>
-          /usr/ccs/lib/help, /usr/ccs/lib/lex, and /usr/ccs/share/lib/make
+          /usr/ccs/lib/help, /usr/ccs/lib/lex, og /usr/ccs/share/lib/make
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -174,7 +174,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>admin</command></term>
         <listitem>
           <para>
-            creates and administers SCCS files
+            oppretter og administrerer SCCS filer
           </para>
           <indexterm zone="heirloom-devtools admin">
             <primary sortas="b-admin">admin</primary>
@@ -186,7 +186,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>cdc</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>rmdel</command>
+            er en symbolsk lenke som peker til <command>rmdel</command>
           </para>
           <indexterm zone="heirloom-devtools cdc">
             <primary sortas="b-cdc">cdc</primary>
@@ -198,7 +198,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>comb</command></term>
         <listitem>
           <para>
-            combines SCCS deltas
+            kombinerer SCCS deltaer
           </para>
           <indexterm zone="heirloom-devtools comb">
             <primary sortas="b-comb">comb</primary>
@@ -210,7 +210,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>delta</command></term>
         <listitem>
           <para>
-            makes a delta to an SCCS file
+            lager en delta til en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools delta">
             <primary sortas="b-delta">delta</primary>
@@ -222,7 +222,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>get</command></term>
         <listitem>
           <para>
-            retrieves a version of an SCCS file
+            henter en versjon av en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools get">
             <primary sortas="b-get">get</primary>
@@ -234,8 +234,8 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>help</command></term>
         <listitem>
           <para>
-            retrieves information about error messages and warnings from
-            SCCS commands
+            henter informasjon om feilmeldinger og advarsler fra 
+            SCCS kommandoer
           </para>
           <indexterm zone="heirloom-devtools help">
             <primary sortas="b-help">help</primary>
@@ -247,7 +247,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>lex</command></term>
         <listitem>
           <para>
-            is a generator of lexical analysis programs
+            er en generator av leksikalske analyseprogrammer
           </para>
           <indexterm zone="heirloom-devtools lex">
             <primary sortas="b-lex">lex</primary>
@@ -259,7 +259,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>m4</command></term>
         <listitem>
           <para>
-            is the macro processor
+            er makroprosessoren
           </para>
           <indexterm zone="heirloom-devtools m4">
             <primary sortas="b-m4">m4</primary>
@@ -271,7 +271,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>make</command></term>
         <listitem>
           <para>
-            maintains, updates, and regenerates groups of programs
+            vedlikeholder, oppdaterer og regenererer grupper av program
           </para>
           <indexterm zone="heirloom-devtools make">
             <primary sortas="b-make">make</primary>
@@ -283,7 +283,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>prs</command></term>
         <listitem>
           <para>
-            displays selected portions of an SCCS history
+            viser utvalgte deler av en SCCS historikk
           </para>
           <indexterm zone="heirloom-devtools prs">
             <primary sortas="b-prs">prs</primary>
@@ -295,7 +295,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>prt</command></term>
         <listitem>
           <para>
-            prints parts or all of an SCCS file
+            skriver ut deler av eller hele en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools prt">
             <primary sortas="b-prt">prt</primary>
@@ -307,7 +307,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>rmdel</command></term>
         <listitem>
           <para>
-            removes a delta from an SCCS file
+            fjerner en delta fra en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools rmdel">
             <primary sortas="b-rmdel">rmdel</primary>
@@ -319,7 +319,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>sact</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>unget</command>
+            er en symbolsk lenke som peker til <command>unget</command>
           </para>
           <indexterm zone="heirloom-devtools sact">
             <primary sortas="b-sact">sact</primary>
@@ -331,7 +331,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>sccs</command></term>
         <listitem>
           <para>
-            is the human-oriented frontend to the SCCS system
+            er det menneskeorienterte grensesnittet til SCCS systemet
           </para>
           <indexterm zone="heirloom-devtools sccs">
             <primary sortas="b-sccs">sccs</primary>
@@ -343,7 +343,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>sccsdiff</command></term>
         <listitem>
           <para>
-            compares two versions of an SCCS file
+            sammenligner to versjoner av en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools sccsdiff">
             <primary sortas="b-sccsdiff">sccsdiff</primary>
@@ -355,7 +355,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>svr4.make</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>make</command>
+            er en symbolsk lenke som peker til <command>make</command>
           </para>
           <indexterm zone="heirloom-devtools svr4.make">
             <primary sortas="b-svr4.make">svr4.make</primary>
@@ -367,7 +367,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>unget</command></term>
         <listitem>
           <para>
-            undos a previous get of an SCCS file
+            angrer en tidligere get av en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools unget">
             <primary sortas="b-unget">unget</primary>
@@ -379,7 +379,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>val</command></term>
         <listitem>
           <para>
-            validates an SCCS file
+            validerer en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools val">
             <primary sortas="b-val">val</primary>
@@ -391,8 +391,8 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>vc</command></term>
         <listitem>
           <para>
-            reads a line of text and processes it as if it were a version
-            control statement.
+            leser en tekstlinje og behandler den som om det var en 
+            versjonskontrollsetning.
           </para>
           <indexterm zone="heirloom-devtools vc">
             <primary sortas="b-vc">vc</primary>
@@ -404,7 +404,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>what</command></term>
         <listitem>
           <para>
-            extracts SCCS version information from a file
+            trekker ut SCCS versjonsinformasjon fra en fil
           </para>
           <indexterm zone="heirloom-devtools what">
             <primary sortas="b-what">what</primary>
@@ -416,7 +416,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>yacc</command></term>
         <listitem>
           <para>
-            is a yet-another compiler compiler
+            er yet-another compiler compiler
           </para>
           <indexterm zone="heirloom-devtools yacc">
             <primary sortas="b-yacc">yacc</primary>
@@ -428,7 +428,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><filename class="libraryfile">libl</filename></term>
         <listitem>
           <para>
-            is the supporting library for <command>lex</command>
+            er støttebiblioteket for <command>lex</command>
           </para>
           <indexterm zone="heirloom-devtools libl">
             <primary sortas="c-libl">libl</primary>
@@ -440,7 +440,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><filename class="libraryfile">liby</filename></term>
         <listitem>
           <para>
-            is the supporting library for <command>yacc</command>
+            er støttebiblioteket for <command>yacc</command>
           </para>
           <indexterm zone="heirloom-devtools liby">
             <primary sortas="c-liby">liby</primary>
