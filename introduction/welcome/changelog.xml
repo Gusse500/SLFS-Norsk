@@ -43,6 +43,10 @@
       <para>15. november 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fastfetch: 2.53.0 -&gt; 2.55.1. Fikser
+          <ulink url="&slfs-issues;/378">#378</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - imv: Lagt til.</para>
         </listitem>
         <listitem>
