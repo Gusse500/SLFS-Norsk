@@ -18,70 +18,70 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to heirloom-ex-vi</title>
+    <title>Introduksjon til heirloom-ex-vi</title>
 
     <para>
-      The heirloom-ex-vi package, also known as
-      <quote>The Traditional Vi</quote>, is a portable version of 2.11BSD/SVR4
-      vi.
+      Heirloom-ex-vi pakken, også kjent som
+      <quote>Den tradisjonelle Vi</quote>, er en flyttbar versjon av 
+      2.11BSD/SVR4 vi.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&heirloom-ex-vi-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&heirloom-ex-vi-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
     &extraction-unzip;
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/heirloom-ex-vi/heirloom-ex-vi-&heirloom-ex-vi-minor-version;-paths.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">heirloom-ex-vi Dependencies</bridgehead>
+    <bridgehead renderas="sect3">heirloom-ex-vi Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distribution)
+      (for å pakke ut distribusjonen)
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/x/installing.html">The X Window System</ulink>
-      (to use wvi)
+      <ulink url="&blfs-svn;/x/installing.html">X Vindussystemet</ulink>
+      (for å bruke wvi)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of heirloom-ex-vi</title>
+    <title>Installasjon av heirloom-ex-vi</title>
 
     <para>
-      Apply a patch to make the installation paths conform with the others in
-      this category:
+      Installer en oppdatering for å få installasjonsstiene til å samsvare med 
+      de andre i denne kategorien:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-ex-vi-&heirloom-ex-vi-minor-version;-paths.patch</userinput></screen>
 
     <para>
-      Install heirloom-ex-vi by running the following
-      command:
+      Installer heirloom-ex-vi ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>./configure &amp;&amp;
 CC="cc -std=gnu17" make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -89,10 +89,10 @@ CC="cc -std=gnu17" make</userinput></screen>
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring heirloom-ex-vi</title>
+    <title>Konfigurere heirloom-ex-vi</title>
 
     <sect3 id="heirloom-ex-vi-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
         <filename>~/.exrc</filename>
       </para>
@@ -103,14 +103,14 @@ CC="cc -std=gnu17" make</userinput></screen>
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        The above file can be used to configure the editor. The defaults are
-        fine, but the configuration file gets ignored if anyone except the user
-        executing vi has the ability to write to it. Make sure the file's octal
-        permission value is <computeroutput>644</computeroutput> or similar in
-        case you want to use it.
+        Filen ovenfor kan brukes til å konfigurere redigereren. Standardverdiene 
+        er greie, men konfigurasjonsfilen ignoreres hvis noen andre enn brukeren 
+        som kjører vi har muligheten til å skrive til den. Sørg for at filens 
+        oktale tillatelsesverdi er <computeroutput>644</computeroutput> eller 
+        lignende i tilfelle du vil bruke den.
       </para>
 
     </sect3>
@@ -118,20 +118,20 @@ CC="cc -std=gnu17" make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          edit (link to ex), ex, expreserve, exrecover, vedit (link to ex),
-          vi (link to ex), view (link to ex), and wvi
+          edit (lenke til ex), ex, expreserve, exrecover, vedit (lenke til ex),
+          vi (lenke til ex), view (lenke til ex), og wvi
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /var/preserve
@@ -140,7 +140,7 @@ CC="cc -std=gnu17" make</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -148,7 +148,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>edit</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ex</command>
+            er en symbolsk lenke som peker til <command>ex</command>
           </para>
           <indexterm zone="heirloom-ex-vi edit">
             <primary sortas="b-edit">edit</primary>
@@ -160,7 +160,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>ex</command></term>
         <listitem>
           <para>
-            is the text editor
+            er tekstredigereren
           </para>
           <indexterm zone="heirloom-ex-vi ex">
             <primary sortas="b-ex">ex</primary>
@@ -172,7 +172,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>expreserve</command></term>
         <listitem>
           <para>
-            preserves files into <filename>/var/preserve</filename>
+            bevarer filer i <filename>/var/preserve</filename>
           </para>
           <indexterm zone="heirloom-ex-vi expreserve">
             <primary sortas="b-expreserve">expreserve</primary>
@@ -184,7 +184,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>exrecover</command></term>
         <listitem>
           <para>
-            recovers files from <filename>/var/preserve</filename>
+            gjenoppretter filer fra <filename>/var/preserve</filename>
           </para>
           <indexterm zone="heirloom-ex-vi exrecover">
             <primary sortas="b-exrecover">exrecover</primary>
@@ -196,7 +196,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>vedit</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ex</command>
+            er en symbolsk lenke som peker til <command>ex</command>
           </para>
           <indexterm zone="heirloom-ex-vi vedit">
             <primary sortas="b-vedit">vedit</primary>
@@ -208,7 +208,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>vi</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ex</command>
+            er en symbolsk lenke som peker til <command>ex</command>
           </para>
           <indexterm zone="heirloom-ex-vi vi">
             <primary sortas="b-vi">vi</primary>
@@ -220,7 +220,7 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>view</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ex</command>
+            er en symbolsk lenke som peker til <command>ex</command>
           </para>
           <indexterm zone="heirloom-ex-vi view">
             <primary sortas="b-view">view</primary>
@@ -232,8 +232,8 @@ CC="cc -std=gnu17" make</userinput></screen>
         <term><command>wvi</command></term>
         <listitem>
           <para>
-            is a script that opens <command>vi</command> in a
-            separate xterm
+            er et skript som åpner <command>vi</command> i en 
+            separat xterm
           </para>
           <indexterm zone="heirloom-ex-vi wvi">
             <primary sortas="b-wvi">wvi</primary>
