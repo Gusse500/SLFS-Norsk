@@ -46,7 +46,7 @@
       &opengl;,
       <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
-      og <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+      og &sdl2;
     </para>
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>

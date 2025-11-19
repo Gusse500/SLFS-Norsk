@@ -40,6 +40,15 @@
     -->
 
     <listitem>
+      <para>18. november 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - sdl2-compat; SDL3: Fjernet, nå i GLFS+BLFS.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>17. november 2025</para>
       <itemizedlist>
         <listitem>

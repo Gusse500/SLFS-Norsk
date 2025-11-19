@@ -37,7 +37,7 @@
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>
+      &sdl2;
     </para>
 
   </sect2>
@@ -71,8 +71,7 @@ make</userinput></screen>
 
     <para>
       <parameter>--disable-sdltest --disable-examples</parameter>: Disse 
-      parameterne deaktiverer kobling mot et bibliotek som ble slettet i <ulink
-      url="&blfs-svn;/multimedia/sdl2.html">SDL2</ulink>.
+      parameterne deaktiverer kobling mot et bibliotek som ble slettet i &sdl2;.
     </para>
 
   </sect2>
