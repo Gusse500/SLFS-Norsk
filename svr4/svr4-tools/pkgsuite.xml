@@ -18,69 +18,69 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to pkgsuite</title>
+    <title>Introduksjon til pkgsuite</title>
 
     <para>
-      The pkgsuite package is a patched-up version
-      of the Heirloom Packaging tools, which is itself a patched-up portable
-      version of the UNIX SVR4 packaging utilities.
+      pkgsuite pakken er en oppdatert versjon av Heirloom pakkeverktøyene, 
+      som i seg selv er en oppdatert, bærbar versjon av 
+      UNIX SVR4 pakkeverktøyene.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&pkgsuite-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&pkgsuite-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/pkgsuite/pkgsuite-&pkgsuite-minor-version;-paths.patch"/>
         </para>
       </listitem>
 <!--
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/pkgsuite/pkgsuite-&pkgsuite-minor-version;-termios.patch"/>
         </para>
       </listitem>
 -->
     </itemizedlist>
 
-    <bridgehead renderas="sect3">pkgsuite Dependencies</bridgehead>
+    <bridgehead renderas="sect3">pkgsuite Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (to unpack the distribution),
+      (for å pakke ut distribusjonen),
       <ulink url="&blfs-svn;/general/which.html">Which</ulink>
-      <footnote><para>GNU Which is the one that needs to be
-      installed, <emphasis>NOT</emphasis> the shell script, or else it will
-      silently fail and will give the wrong paths to executables.
-      </para></footnote>, and
-      <xref linkend="heirloom-ng"/> (at runtime)
+      <footnote><para>GNU Which er den som må 
+      installeres, <emphasis>IKKE</emphasis> skallskriptet, ellers vil det 
+      feile i stillhet og gi feil stier til kjørbare filer.
+      </para></footnote>, og
+      <xref linkend="heirloom-ng"/> (ved kjøretid)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of pkgsuite</title>
+    <title>Installasjon av pkgsuite</title>
 
     <para>
-      Apply a patch to make the installation paths conform with the others in
-      this category:
+      Installer en oppdatering for å få installasjonsstiene til å samsvare med 
+      de andre i denne kategorien:
     </para>
 
 <screen><userinput>patch -Np1 -i ../pkgsuite-&pkgsuite-minor-version;-paths.patch</userinput></screen>
 
     <para>
-      Install pkgsuite by running the following
-      command:
+      Installer pkgsuite ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>cd src &amp;&amp;
@@ -88,7 +88,7 @@
 make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -96,49 +96,49 @@ make</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
           ckdate, ckgid, ckint, ckitem, ckkeywd, ckpath, ckrange, ckstr,
-          cktime, ckuid, ckyorn, cmdexec, dispgid (link to ckgid), dispuid
-          (link to ckuid), errange (link to ckrange), errdate (link to
-          ckdate), errgid (link to ckgid), errint (link to ckint), errkeywd
-          (link to ckkeywd), errpath (link to ckpath), errstr (link to ckstr),
-          errtime (link to cktime), erruid (link to ckuid), erryorn (link to
-          ckyorn), getdate (link to ckdate), getgid (link to ckgid), getint
-          (link to ckint), getkeywd (link to ckkeywd), getpath (link to
-          ckpath), getrange (link to ckrange), getstr (link to ckstr), gettime
-          (link to cktime), getuid (link to ckuid), getyorn (link to ckyorn),
-          helpdate (link to ckdate), helpgid (link to ckgid), helpint (link
-          to ckint), helpkeywd (link to ckkeywd), helppath (link to ckpath),
-          helprange (link to ckrange), helpstr (link to ckstr), helptime
-          (link to cktime), helpuid (link to ckuid), helpyorn (link to
+          cktime, ckuid, ckyorn, cmdexec, dispgid (lenke til ckgid), dispuid
+          (lenke til ckuid), errange (lenke til ckrange), errdate (lenke til
+          ckdate), errgid (lenke til ckgid), errint (lenke til ckint), errkeywd
+          (lenke til ckkeywd), errpath (lenke til ckpath), errstr (lenke til ckstr),
+          errtime (lenke til cktime), erruid (lenke til ckuid), erryorn (lenke til
+          ckyorn), getdate (lenke til ckdate), getgid (lenke til ckgid), getint
+          (lenke til ckint), getkeywd (lenke til ckkeywd), getpath (lenke til
+          ckpath), getrange (lenke til ckrange), getstr (lenke til ckstr), gettime
+          (lenke til cktime), getuid (lenke til ckuid), getyorn (lenke til ckyorn),
+          helpdate (lenke til ckdate), helpgid (lenke til ckgid), helpint (lenke 
+          til ckint), helpkeywd (lenke til ckkeywd), helppath (lenke til ckpath),
+          helprange (lenke til ckrange), helpstr (lenke til ckstr), helptime
+          (lenke til cktime), helpuid (lenke til ckuid), helpyorn (lenke til
           ckyorn), i.CompCpio, i.awk, i.build, i.sed, installf, pkgadd,
-          pkgask (link to pkgadd), pkgchk, pkginfo, pkginstall, pkgmk,
+          pkgask (lenke til pkgadd), pkgchk, pkginfo, pkginstall, pkgmk,
           pkgname, pkgparam, pkgproto, pkgremove, pkgrm, pkgtrans, puttext,
-          r.awk, r.build, r.sed, removef (link to installf), valdate (link to
-          ckdate), valgid (link to ckgid), valint (link to ckint), valkeywd
-          (link to ckkeywd), valpath (link to ckpath), valrange (link to
-          ckrange), valstr (link to ckstr), valtime (link to cktime), valuid
-          (link to ckuid), and valyorn (link to ckyorn)
+          r.awk, r.build, r.sed, removef (lenke til installf), valdate (lenke til
+          ckdate), valgid (lenke til ckgid), valint (lenke til ckint), valkeywd
+          (lenke til ckkeywd), valpath (lenke til ckpath), valrange (lenke til
+          ckrange), valstr (lenke til ckstr), valtime (lenke til cktime), valuid
+          (lenke til ckuid), og valyorn (lenke til ckyorn)
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          /usr/sadm, and /var/sadm
+          /usr/sadm, og /var/sadm
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -146,7 +146,7 @@ make</userinput></screen>
         <term><command>ckdate</command></term>
         <listitem>
           <para>
-            prompts for and validates a date
+            ber om og validerer en dato
           </para>
           <indexterm zone="pkgsuite ckdate">
             <primary sortas="b-ckdate">ckdate</primary>
@@ -158,7 +158,7 @@ make</userinput></screen>
         <term><command>ckgid</command></term>
         <listitem>
           <para>
-            prompts for and validates a group ID
+            ber om og validerer en gruppe-ID
           </para>
           <indexterm zone="pkgsuite ckgid">
             <primary sortas="b-ckgid">ckgid</primary>
@@ -170,7 +170,7 @@ make</userinput></screen>
         <term><command>ckint</command></term>
         <listitem>
           <para>
-            prompts for and verify and validates an integer value
+            ber om og verifiserer og validerer en heltallsverdi
           </para>
           <indexterm zone="pkgsuite ckint">
             <primary sortas="b-ckint">ckint</primary>
@@ -182,7 +182,7 @@ make</userinput></screen>
         <term><command>ckitem</command></term>
         <listitem>
           <para>
-            prompts for and return a menu item
+            ber om og returnerer et menyelement
           </para>
           <indexterm zone="pkgsuite ckitem">
             <primary sortas="b-ckitem">ckitem</primary>
@@ -194,7 +194,7 @@ make</userinput></screen>
         <term><command>ckkeywd</command></term>
         <listitem>
           <para>
-            prompts for and validates a keyword
+            ber om og validerer et nøkkelord
           </para>
           <indexterm zone="pkgsuite ckkeywd">
             <primary sortas="b-ckkeywd">ckkeywd</primary>
@@ -206,7 +206,7 @@ make</userinput></screen>
         <term><command>ckpath</command></term>
         <listitem>
           <para>
-            prompts for and validates a pathname
+            ber om og validerer et stinavn
           </para>
           <indexterm zone="pkgsuite ckpath">
             <primary sortas="b-ckpath">ckpath</primary>
@@ -218,7 +218,7 @@ make</userinput></screen>
         <term><command>ckrange</command></term>
         <listitem>
           <para>
-            prompts for and validates an integer in a specific range
+            ber om og validerer et heltall i et bestemt område
           </para>
           <indexterm zone="pkgsuite ckrange">
             <primary sortas="b-ckrange">ckrange</primary>
@@ -230,7 +230,7 @@ make</userinput></screen>
         <term><command>ckstr</command></term>
         <listitem>
           <para>
-            displays a prompt, validates and returns a string answer
+            viser en ledetekst, validerer og returnerer et strengsvar
           </para>
           <indexterm zone="pkgsuite ckstr">
             <primary sortas="b-ckstr">ckstr</primary>
@@ -242,7 +242,7 @@ make</userinput></screen>
         <term><command>cktime</command></term>
         <listitem>
           <para>
-            displays a prompt, verify and returns a time of day
+            viser en ledetekst, bekrefter og returnerer et klokkeslett
           </para>
           <indexterm zone="pkgsuite cktime">
             <primary sortas="b-cktime">cktime</primary>
@@ -254,7 +254,7 @@ make</userinput></screen>
         <term><command>ckuid</command></term>
         <listitem>
           <para>
-            prompts for and validates a user ID
+            ber om og validerer en bruker-ID
           </para>
           <indexterm zone="pkgsuite ckuid">
             <primary sortas="b-ckuid">ckuid</primary>
@@ -266,7 +266,7 @@ make</userinput></screen>
         <term><command>ckyorn</command></term>
         <listitem>
           <para>
-            prompts for and validates yes/no
+            ber om og validerer yes/no
           </para>
           <indexterm zone="pkgsuite ckyorn">
             <primary sortas="b-ckyorn">ckyorn</primary>
@@ -278,8 +278,8 @@ make</userinput></screen>
         <term><command>cmdexec</command></term>
         <listitem>
           <para>
-            is a helper command for executing programs during package
-            installations
+            er en hjelpekommando for å kjøre programmer under 
+            pakkeinstallasjoner
           </para>
           <indexterm zone="pkgsuite cmdexec">
             <primary sortas="b-cmdexec">cmdexec</primary>
@@ -291,7 +291,7 @@ make</userinput></screen>
         <term><command>dispgid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckgid</command>
+            er en symbolsk lenke som peker til <command>ckgid</command>
           </para>
           <indexterm zone="pkgsuite dispgid">
             <primary sortas="b-dispgid">dispgid</primary>
@@ -303,7 +303,7 @@ make</userinput></screen>
         <term><command>dispuid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckuid</command>
+            er en symbolsk lenke som peker til <command>ckuid</command>
           </para>
           <indexterm zone="pkgsuite dispuid">
             <primary sortas="b-dispuid">dispuid</primary>
@@ -315,7 +315,7 @@ make</userinput></screen>
         <term><command>errange</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckrange</command>
+            er en symbolsk lenke som peker til <command>ckrange</command>
           </para>
           <indexterm zone="pkgsuite errange">
             <primary sortas="b-errange">errange</primary>
@@ -327,7 +327,7 @@ make</userinput></screen>
         <term><command>errdate</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckdate</command>
+            er en symbolsk lenke som peker til <command>ckdate</command>
           </para>
           <indexterm zone="pkgsuite errdate">
             <primary sortas="b-errdate">errdate</primary>
@@ -339,7 +339,7 @@ make</userinput></screen>
         <term><command>errgid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckgid</command>
+            er en symbolsk lenke som peker til <command>ckgid</command>
           </para>
           <indexterm zone="pkgsuite errgid">
             <primary sortas="b-errgid">errgid</primary>
@@ -351,7 +351,7 @@ make</userinput></screen>
         <term><command>errint</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckint</command>
+            er en symbolsk lenke som peker til <command>ckint</command>
           </para>
           <indexterm zone="pkgsuite errint">
             <primary sortas="b-errint">errint</primary>
@@ -363,7 +363,7 @@ make</userinput></screen>
         <term><command>errkeywd</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckkeywd</command>
+            er en symbolsk lenke som peker til <command>ckkeywd</command>
           </para>
           <indexterm zone="pkgsuite errkeywd">
             <primary sortas="b-errkeywd">errkeywd</primary>
@@ -375,7 +375,7 @@ make</userinput></screen>
         <term><command>errpath</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckpath</command>
+            er en symbolsk lenke som peker til <command>ckpath</command>
           </para>
           <indexterm zone="pkgsuite errpath">
             <primary sortas="b-errpath">errpath</primary>
@@ -387,7 +387,7 @@ make</userinput></screen>
         <term><command>errstr</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckstr</command>
+            er en symbolsk lenke som peker til <command>ckstr</command>
           </para>
           <indexterm zone="pkgsuite errstr">
             <primary sortas="b-errstr">errstr</primary>
@@ -399,7 +399,7 @@ make</userinput></screen>
         <term><command>errtime</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>cktime</command>
+            er en symbolsk lenke som peker til <command>cktime</command>
           </para>
           <indexterm zone="pkgsuite errtime">
             <primary sortas="b-errtime">errtime</primary>
@@ -411,7 +411,7 @@ make</userinput></screen>
         <term><command>erruid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckuid</command>
+            er en symbolsk lenke som peker til <command>ckuid</command>
           </para>
           <indexterm zone="pkgsuite erruid">
             <primary sortas="b-erruid">erruid</primary>
@@ -423,7 +423,7 @@ make</userinput></screen>
         <term><command>erryorn</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckyorn</command>
+            er en symbolsk lenke som peker til <command>ckyorn</command>
           </para>
           <indexterm zone="pkgsuite erryorn">
             <primary sortas="b-erryorn">erryorn</primary>
@@ -435,7 +435,7 @@ make</userinput></screen>
         <term><command>getdate</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckdate</command>
+            er en symbolsk lenke som peker til <command>ckdate</command>
           </para>
           <indexterm zone="pkgsuite getdate">
             <primary sortas="b-getdate">getdate</primary>
@@ -447,7 +447,7 @@ make</userinput></screen>
         <term><command>getgid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckgid</command>
+            er en symbolsk lenke som peker til <command>ckgid</command>
           </para>
           <indexterm zone="pkgsuite getgid">
             <primary sortas="b-getgid">getgid</primary>
@@ -459,7 +459,7 @@ make</userinput></screen>
         <term><command>getint</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckint</command>
+            er en symbolsk lenke som peker til <command>ckint</command>
           </para>
           <indexterm zone="pkgsuite getint">
             <primary sortas="b-getint">getint</primary>
@@ -471,7 +471,7 @@ make</userinput></screen>
         <term><command>getkeywd</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckkeywd</command>
+            er en symbolsk lenke som peker til <command>ckkeywd</command>
           </para>
           <indexterm zone="pkgsuite getkeywd">
             <primary sortas="b-getkeywd">getkeywd</primary>
@@ -483,7 +483,7 @@ make</userinput></screen>
         <term><command>getpath</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckpath</command>
+            er en symbolsk lenke som peker til <command>ckpath</command>
           </para>
           <indexterm zone="pkgsuite getpath">
             <primary sortas="b-getpath">getpath</primary>
@@ -495,7 +495,7 @@ make</userinput></screen>
         <term><command>getrange</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckrange</command>
+            er en symbolsk lenke som peker til <command>ckrange</command>
           </para>
           <indexterm zone="pkgsuite getrange">
             <primary sortas="b-getrange">getrange</primary>
@@ -507,7 +507,7 @@ make</userinput></screen>
         <term><command>getstr</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckstr</command>
+            er en symbolsk lenke som peker til <command>ckstr</command>
           </para>
           <indexterm zone="pkgsuite getstr">
             <primary sortas="b-getstr">getstr</primary>
@@ -519,7 +519,7 @@ make</userinput></screen>
         <term><command>gettime</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>cktime</command>
+            er en symbolsk lenke som peker til <command>cktime</command>
           </para>
           <indexterm zone="pkgsuite gettime">
             <primary sortas="b-gettime">gettime</primary>
@@ -531,7 +531,7 @@ make</userinput></screen>
         <term><command>getuid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckuid</command>
+            er en symbolsk lenke som peker til <command>ckuid</command>
           </para>
           <indexterm zone="pkgsuite getuid">
             <primary sortas="b-getuid">getuid</primary>
@@ -543,7 +543,7 @@ make</userinput></screen>
         <term><command>getyorn</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckyorn</command>
+            er en symbolsk lenke som peker til <command>ckyorn</command>
           </para>
           <indexterm zone="pkgsuite getyorn">
             <primary sortas="b-getyorn">getyorn</primary>
@@ -555,7 +555,7 @@ make</userinput></screen>
         <term><command>helpdate</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckdate</command>
+            er en symbolsk lenke som peker til <command>ckdate</command>
           </para>
           <indexterm zone="pkgsuite helpdate">
             <primary sortas="b-helpdate">helpdate</primary>
@@ -567,7 +567,7 @@ make</userinput></screen>
         <term><command>helpgid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckgid</command>
+            er en symbolsk lenke som peker til <command>ckgid</command>
           </para>
           <indexterm zone="pkgsuite helpgid">
             <primary sortas="b-helpgid">helpgid</primary>
@@ -579,7 +579,7 @@ make</userinput></screen>
         <term><command>helpint</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckint</command>
+            er en symbolsk lenke som peker til <command>ckint</command>
           </para>
           <indexterm zone="pkgsuite helpint">
             <primary sortas="b-helpint">helpint</primary>
@@ -591,7 +591,7 @@ make</userinput></screen>
         <term><command>helpkeywd</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckkeywd</command>
+            er en symbolsk lenke som peker til <command>ckkeywd</command>
           </para>
           <indexterm zone="pkgsuite helpkeywd">
             <primary sortas="b-helpkeywd">helpkeywd</primary>
@@ -603,7 +603,7 @@ make</userinput></screen>
         <term><command>helppath</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckpath</command>
+            er en symbolsk lenke som peker til <command>ckpath</command>
           </para>
           <indexterm zone="pkgsuite helppath">
             <primary sortas="b-helppath">helppath</primary>
@@ -615,7 +615,7 @@ make</userinput></screen>
         <term><command>helprange</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckrange</command>
+            er en symbolsk lenke som peker til <command>ckrange</command>
           </para>
           <indexterm zone="pkgsuite helprange">
             <primary sortas="b-helprange">helprange</primary>
@@ -627,7 +627,7 @@ make</userinput></screen>
         <term><command>helpstr</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckstr</command>
+            er en symbolsk lenke som peker til <command>ckstr</command>
           </para>
           <indexterm zone="pkgsuite helpstr">
             <primary sortas="b-helpstr">helpstr</primary>
@@ -639,7 +639,7 @@ make</userinput></screen>
         <term><command>helptime</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>cktime</command>
+            er en symbolsk lenke som peker til <command>cktime</command>
           </para>
           <indexterm zone="pkgsuite helptime">
             <primary sortas="b-helptime">helptime</primary>
@@ -651,7 +651,7 @@ make</userinput></screen>
         <term><command>helpuid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckuid</command>
+            er en symbolsk lenke som peker til <command>ckuid</command>
           </para>
           <indexterm zone="pkgsuite helpuid">
             <primary sortas="b-helpuid">helpuid</primary>
@@ -663,7 +663,7 @@ make</userinput></screen>
         <term><command>helpyorn</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckyorn</command>
+            er en symbolsk lenke som peker til <command>ckyorn</command>
           </para>
           <indexterm zone="pkgsuite helpyorn">
             <primary sortas="b-helpyorn">helpyorn</primary>
@@ -675,7 +675,7 @@ make</userinput></screen>
         <term><command>i.CompCpio</command></term>
         <listitem>
           <para>
-            is a helper script for installing old-style WOS packages
+            er et hjelpeskript for å installere gamlestil WOS pakker
           </para>
           <indexterm zone="pkgsuite i.CompCpio">
             <primary sortas="b-i.CompCpio">i.CompCpio</primary>
@@ -687,8 +687,8 @@ make</userinput></screen>
         <term><command>i.awk</command></term>
         <listitem>
           <para>
-            is a helper script for invoking <command>awk</command> during
-            package installations
+            er et hjelpeskript for å kalle på <command>awk</command> under 
+            pakkeinstallasjoner
           </para>
           <indexterm zone="pkgsuite i.awk">
             <primary sortas="b-i.awk">i.awk</primary>
@@ -700,8 +700,8 @@ make</userinput></screen>
         <term><command>i.build</command></term>
         <listitem>
           <para>
-            is a helper script for the build class action script which gets
-            invoked during package installations
+            er et hjelpeskript for bygge klassehandlingsskriptet som blir 
+            påkalt under pakkeinstallasjoner
           </para>
           <indexterm zone="pkgsuite i.build">
             <primary sortas="b-i.build">i.build</primary>
@@ -713,8 +713,8 @@ make</userinput></screen>
         <term><command>i.sed</command></term>
         <listitem>
           <para>
-            is a helper script for invoking <command>sed</command> during
-            package installations
+            er et hjelpeskript for å kalle på <command>sed</command> under 
+            pakkeinstallasjoner
           </para>
           <indexterm zone="pkgsuite i.sed">
             <primary sortas="b-i.sed">i.sed</primary>
@@ -726,7 +726,7 @@ make</userinput></screen>
         <term><command>installf</command></term>
         <listitem>
           <para>
-            adds a file to the software installation database
+            legger til en fil i programvareinstallasjonsdatabasen
           </para>
           <indexterm zone="pkgsuite installf">
             <primary sortas="b-installf">installf</primary>
@@ -738,7 +738,7 @@ make</userinput></screen>
         <term><command>pkgadd</command></term>
         <listitem>
           <para>
-            transfers software packages to the system
+            overfører programvarepakker til systemet
           </para>
           <indexterm zone="pkgsuite pkgadd">
             <primary sortas="b-pkgadd">pkgadd</primary>
@@ -750,7 +750,7 @@ make</userinput></screen>
         <term><command>pkgask</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>pkgadd</command>
+            er en symbolsk lenke som peker til <command>pkgadd</command>
           </para>
           <indexterm zone="pkgsuite pkgask">
             <primary sortas="b-pkgask">pkgask</primary>
@@ -762,7 +762,7 @@ make</userinput></screen>
         <term><command>pkgchk</command></term>
         <listitem>
           <para>
-            checks package installation accuracy
+            sjekker nøyaktigheten av pakkeinstallasjonen
           </para>
           <indexterm zone="pkgsuite pkgchk">
             <primary sortas="b-pkgchk">pkgchk</primary>
@@ -774,7 +774,7 @@ make</userinput></screen>
         <term><command>pkginfo</command></term>
         <listitem>
           <para>
-            displays software package information
+            viser informasjon om programvarepakken
           </para>
           <indexterm zone="pkgsuite pkginfo">
             <primary sortas="b-pkginfo">pkginfo</primary>
@@ -786,7 +786,7 @@ make</userinput></screen>
         <term><command>pkginstall</command></term>
         <listitem>
           <para>
-            is a more advanced version of <command>pkgadd</command>
+            er en mer avansert versjon av <command>pkgadd</command>
           </para>
           <indexterm zone="pkgsuite pkginstall">
             <primary sortas="b-pkginstall">pkginstall</primary>
@@ -798,7 +798,7 @@ make</userinput></screen>
         <term><command>pkgmk</command></term>
         <listitem>
           <para>
-            produces an installable package
+            produserer en installerbar pakke
           </para>
           <indexterm zone="pkgsuite pkgmk">
             <primary sortas="b-pkgmk">pkgmk</primary>
@@ -810,7 +810,7 @@ make</userinput></screen>
         <term><command>pkgname</command></term>
         <listitem>
           <para>
-            compares package names
+            sammenligner pakkenavn
           </para>
           <indexterm zone="pkgsuite pkgname">
             <primary sortas="b-pkgname">pkgname</primary>
@@ -822,7 +822,7 @@ make</userinput></screen>
         <term><command>pkgparam</command></term>
         <listitem>
           <para>
-            displays package parameter values
+            viser pakkeparameterverdier
           </para>
           <indexterm zone="pkgsuite pkgparam">
             <primary sortas="b-pkgparam">pkgparam</primary>
@@ -834,7 +834,7 @@ make</userinput></screen>
         <term><command>pkgproto</command></term>
         <listitem>
           <para>
-            generates prototype file entries for input to
+            genererer prototype filoppføringer for inndata til
             <command>pkgmk</command>
           </para>
           <indexterm zone="pkgsuite pkgproto">
@@ -847,7 +847,7 @@ make</userinput></screen>
         <term><command>pkgremove</command></term>
         <listitem>
           <para>
-            is a more advanced version of <command>pkgrm</command>
+            er en mer avansert versjon av <command>pkgrm</command>
           </para>
           <indexterm zone="pkgsuite pkgremove">
             <primary sortas="b-pkgremove">pkgremove</primary>
@@ -859,7 +859,7 @@ make</userinput></screen>
         <term><command>pkgrm</command></term>
         <listitem>
           <para>
-            removes a package from the system
+            fjerner en pakke fra systemet
           </para>
           <indexterm zone="pkgsuite pkgrm">
             <primary sortas="b-pkgrm">pkgrm</primary>
@@ -871,7 +871,7 @@ make</userinput></screen>
         <term><command>pkgtrans</command></term>
         <listitem>
           <para>
-            translates package format
+            oversetter pakkeformat
           </para>
           <indexterm zone="pkgsuite pkgtrans">
             <primary sortas="b-pkgtrans">pkgtrans</primary>
@@ -883,7 +883,7 @@ make</userinput></screen>
         <term><command>puttext</command></term>
         <listitem>
           <para>
-            prints text to the screen
+            skriver ut tekst på skjermen
           </para>
           <indexterm zone="pkgsuite puttext">
             <primary sortas="b-puttext">puttext</primary>
@@ -895,8 +895,8 @@ make</userinput></screen>
         <term><command>r.awk</command></term>
         <listitem>
           <para>
-            is a helper script for invoking <command>awk</command> during
-            package removals
+            er et hjelpeskript for å kalle på <command>awk</command> under 
+            pakkefjerning
           </para>
           <indexterm zone="pkgsuite r.awk">
             <primary sortas="b-r.awk">r.awk</primary>
@@ -908,8 +908,8 @@ make</userinput></screen>
         <term><command>r.build</command></term>
         <listitem>
           <para>
-            is a helper script for the build class action script which gets
-            invoked during package removals
+            er et hjelpeskript for bygge gruppehandlingsskriptet som blir 
+            påkalt under pakkefjerning
           </para>
           <indexterm zone="pkgsuite r.build">
             <primary sortas="b-r.build">r.build</primary>
@@ -921,8 +921,8 @@ make</userinput></screen>
         <term><command>r.sed</command></term>
         <listitem>
           <para>
-            is a helper script for invoking <command>sed</command> during
-            package removals
+            er et hjelpeskript for å kalle på <command>sed</command> under 
+            pakkefjerning
           </para>
           <indexterm zone="pkgsuite r.sed">
             <primary sortas="b-r.sed">r.sed</primary>
@@ -934,7 +934,7 @@ make</userinput></screen>
         <term><command>removef</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>installf</command>
+            er en symbolsk lenke som peker til <command>installf</command>
           </para>
           <indexterm zone="pkgsuite removef">
             <primary sortas="b-removef">removef</primary>
@@ -946,7 +946,7 @@ make</userinput></screen>
         <term><command>valdate</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckdate</command>
+            er en symbolsk lenke som peker til <command>ckdate</command>
           </para>
           <indexterm zone="pkgsuite valdate">
             <primary sortas="b-valdate">valdate</primary>
@@ -958,7 +958,7 @@ make</userinput></screen>
         <term><command>valgid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckgid</command>
+            er en symbolsk lenke som peker til <command>ckgid</command>
           </para>
           <indexterm zone="pkgsuite valgid">
             <primary sortas="b-valgid">valgid</primary>
@@ -970,7 +970,7 @@ make</userinput></screen>
         <term><command>valint</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckint</command>
+            er en symbolsk lenke som peker til <command>ckint</command>
           </para>
           <indexterm zone="pkgsuite valint">
             <primary sortas="b-valint">valint</primary>
@@ -982,7 +982,7 @@ make</userinput></screen>
         <term><command>valkeywd</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckkeywd</command>
+            er en symbolsk lenke som peker til <command>ckkeywd</command>
           </para>
           <indexterm zone="pkgsuite valkeywd">
             <primary sortas="b-valkeywd">valkeywd</primary>
@@ -994,7 +994,7 @@ make</userinput></screen>
         <term><command>valpath</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckpath</command>
+            er en symbolsk lenke som peker til <command>ckpath</command>
           </para>
           <indexterm zone="pkgsuite valpath">
             <primary sortas="b-valpath">valpath</primary>
@@ -1006,7 +1006,7 @@ make</userinput></screen>
         <term><command>valrange</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckrange</command>
+            er en symbolsk lenke som peker til <command>ckrange</command>
           </para>
           <indexterm zone="pkgsuite valrange">
             <primary sortas="b-valrange">valrange</primary>
@@ -1018,7 +1018,7 @@ make</userinput></screen>
         <term><command>valstr</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckstr</command>
+            er en symbolsk lenke som peker til <command>ckstr</command>
           </para>
           <indexterm zone="pkgsuite valstr">
             <primary sortas="b-valstr">valstr</primary>
@@ -1030,7 +1030,7 @@ make</userinput></screen>
         <term><command>valtime</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>cktime</command>
+            er en symbolsk lenke som peker til <command>cktime</command>
           </para>
           <indexterm zone="pkgsuite valtime">
             <primary sortas="b-valtime">valtime</primary>
@@ -1042,7 +1042,7 @@ make</userinput></screen>
         <term><command>valuid</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckuid</command>
+            er en symbolsk lenke som peker til <command>ckuid</command>
           </para>
           <indexterm zone="pkgsuite valuid">
             <primary sortas="b-valuid">valuid</primary>
@@ -1054,7 +1054,7 @@ make</userinput></screen>
         <term><command>valyorn</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>ckyorn</command>
+            er en symbolsk lenke som peker til <command>ckyorn</command>
           </para>
           <indexterm zone="pkgsuite valyorn">
             <primary sortas="b-valyorn">valyorn</primary>
