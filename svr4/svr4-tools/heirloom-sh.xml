@@ -18,40 +18,40 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to heirloom-sh</title>
+    <title>Introduksjon til heirloom-sh</title>
 
     <para>
-      The heirloom-sh package is a portable variant
-      of the traditional Unix Bourne Shell.
+      Pakken heirloom-sh er en portabel variant av det tradisjonelle 
+      Unix Bourne Shell.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&heirloom-sh-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&heirloom-sh-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/heirloom-sh/heirloom-sh-&heirloom-sh-version;-final-updates.patch"/>
         </para>
       </listitem>
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/heirloom-sh/heirloom-sh-&heirloom-sh-version;-glibc234-3.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">heirloom-sh Dependencies</bridgehead>
+    <bridgehead renderas="sect3">heirloom-sh Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <xref linkend="heirloom-ng"/>
     </para>
@@ -59,29 +59,29 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of heirloom-sh</title>
+    <title>Installasjon av heirloom-sh</title>
 
     <para>
-      Apply a patch to bring up the source to the last upstream commit:
+      Installer en oppdatering for å hente kildekoden til den siste oppstrøms commiten:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-final-updates.patch</userinput></screen>
 
     <para>
-      Now, apply a patch to fix the build with glibc 2.34 or newer:
+      Nå, installer en oppdatering for å fikse byggingen med glibc 2.34 eller nyere:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-glibc234-3.patch</userinput></screen>
 
     <para>
-      Install heirloom-sh by running the following
-      command:
+      Installer heirloom-sh ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
@@ -89,13 +89,13 @@
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring heirloom-sh</title>
+    <title>Konfigurere heirloom-sh</title>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        As the &root; user, update <filename>/etc/shells</filename> to include
-        the Bourne shell program names:
+        Som &root; bruker, oppdater <filename>/etc/shells</filename> til å 
+        inkludere navnene på Bourne skallprogrammet:
       </para>
 
 <screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
@@ -108,28 +108,28 @@ EOF</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          jsh (link to sh), and sh
+          jsh (lenke til sh), og sh
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -137,7 +137,7 @@ EOF</userinput></screen>
         <term><command>jsh</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>sh</command>
+            er en symbolsk lenke som peker til <command>sh</command>
           </para>
           <indexterm zone="heirloom-sh jsh">
             <primary sortas="b-jsh">jsh</primary>
@@ -149,7 +149,7 @@ EOF</userinput></screen>
         <term><command>sh</command></term>
         <listitem>
           <para>
-            is the Bourne shell
+            er Bourne skallet
           </para>
           <indexterm zone="heirloom-sh sh">
             <primary sortas="b-sh">sh</primary>
