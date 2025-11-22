@@ -5,116 +5,116 @@
   %general-entities;
 ]>
 
-<sect1 id="svr4-tools-intro" xreflabel="Introduction to SVR4-style Tools">
+<sect1 id="svr4-tools-intro" xreflabel="Introduksjon til SVR4 stilaktige verktøy">
   <?dbhtml filename="svr4-tools-intro.html"?>
 
 
-  <title>Introduction to SVR4-style Tools</title>
+  <title>Introduksjon til SVR4 stilaktige verktøy</title>
 
   <sect2>
-    <title>What is SVR4?</title>
+    <title>Hva er SVR4?</title>
 
     <para>
-      SVR4, or System V Release 4, is a version of System V, ie. Unix. The tools
-      in this chapter aim to help working with such an environment on an LFS
-      system. There are a few caveats as a result of dealing with an old
-      operating system.
+      SVR4, eller System V Release 4, er en versjon av System V, dvs. Unix. 
+      Verktøyene i dette kapittelet har som mål å hjelpe til med å jobbe med et 
+      slikt miljø på et LFS system. Det er noen forbehold som følge av å 
+      håndtere et gammelt operativsystem.
     </para>
 
   </sect2>
 
   <sect2>
-    <title>Paths</title>
+    <title>Stier</title>
 
     <para>
-      The packages in this chapter are installed to various non-standard
-      locations inside <filename class="directory">/usr</filename>. The purpose
-      behind this is to be more accurate to where UNIXen from where these tools
-      were ported put said files, and an explanation of where said paths came
-      from is provided below.
+      Pakkene i dette kapittelet er installert på forskjellige 
+      ikke-standardiserte steder i <filename class="directory">/usr</filename>. 
+      Hensikten bak dette er å være mer nøyaktig på hvor UNIXEN, som disse 
+      verktøyene ble portert fra, plasserte filene, og en forklaring på hvor 
+      disse stiene kom fra er gitt nedenfor.
     </para>
 
     <itemizedlist>
       <listitem>
         <para>
-          <filename class="directory">/bin</filename> and
-          <filename class="directory">/sbin</filename>: the traditional,
-          pre-dating formal standardization, general toolsets; from a
-          post-formal-standardization viewpoint, commands that conform to the
-          System V Interface Definition and the X/Open Portability Guide
-          version 3 (or, in Linux's case, standard Linux tools)
+          <filename class="directory">/bin</filename> og
+          <filename class="directory">/sbin</filename>: de tradisjonelle, 
+          generelle verktøysettene før formell standardisering; fra et synspunkt 
+          etter formelt standardisering, kommandoer som samsvarer med System V 
+          Interface Definition og X/Open Portability Guide versjon 3 (eller, i 
+          Linux' tilfelle, standard Linux verktøy)
         </para>
       </listitem>
       <listitem>
         <para>
           <filename class="directory">/usr/ucb</filename>: UCB (i.e. BSD)
-          compatibility directory with BSD-compatible tools
+          kompatibilitetsmappe med BSD kompatible verktøy
         </para>
       </listitem>
       <listitem>
         <para>
-          <filename class="directory">/5bin</filename> and
-          <filename class="directory">/usr/5bin</filename>: SVID3-adhering
-          tools, aka tools compatible with AT&amp;T Unix System 5 Release
-          4.0 or Solaris 2
+          <filename class="directory">/5bin</filename> og
+          <filename class="directory">/usr/5bin</filename>: SVID3 kompatibelte 
+          verktøy, også kjent som verktøy som er kompatible med AT&amp;T Unix 
+          System 5 utgivelse 4.0 eller Solaris 2
         </para>
       </listitem>
       <listitem>
         <para>
-          <filename class="directory">/usr/5bin/s42</filename>: SVID4-adhering
-          tools, aka tools compatible with Unix System 5 Release 4.2MP
+          <filename class="directory">/usr/5bin/s42</filename>: SVID4 kompatibelte 
+          verktøy, også kjent som verktøy kompatible med Unix System 5 Release 4.2MP
         </para>
       </listitem>
       <listitem>
         <para>
           <filename class="directory">/usr/5bin/posix</filename>:
-          POSIX.2 and SUSv2-adhering tools
+          POSIX.2- og SUSv2 kompatibelt verktøy
         </para>
       </listitem>
       <listitem>
         <para>
           <filename class="directory">/usr/5bin/posix2001</filename>:
-          tools adhering to POSIX.1-2001 with SUSv3 extensions
+          verktøy som følger POSIX.1-2001 med SUSv3 utvidelser
         </para>
       </listitem>
       <listitem>
         <para>
-          <filename class="directory">/usr/ccs/bin</filename>: various
-          developer tools
+          <filename class="directory">/usr/ccs/bin</filename>: diverse 
+          utviklerverktøy
         </para>
       </listitem>
       <listitem>
         <para>
-          <filename class="directory">/usr/sadm/bin</filename>: pkgadd internal
-          tooling
+          <filename class="directory">/usr/sadm/bin</filename>: pkgadd internt 
+          verktøy
         </para>
       </listitem>
     </itemizedlist>
 
     <para>
-      The rest of the non-standard folders' meanings can be easily deduced from
-      basic Linux knowledge and the above.
+      Betydningen av resten av de ikke-standardiserte mappene kan enkelt 
+      utledes fra grunnleggende Linux kunnskap og det ovennevnte.
     </para>
 
     <para>
-      If you want to know more about old UNIXen' path conventions, and are
-      willing to fall down a rabbit hole of 80s-90s UNIX variants, DEC
-      equipment and various other old UNIX conventions, old hardware and
-      everyday jobs of UNIX sysops of the 90s, a much more comprehensive guide
-      can be found
-      <ulink url="https://unix.stackexchange.com/a/448799/5132">here</ulink>.
+      Hvis du vil vite mer om gamle UNIX konvensjoner, og er villig til å kaste 
+      deg ned i et kaninhull med UNIX varianter fra 80 og 90 tallet, DEC utstyr 
+      og diverse andre gamle UNIX konvensjoner, gammel maskinvare og 
+      hverdagsoppgaver for UNIX systemadministratorer fra 90 tallet, kan du 
+      finne en mye mer omfattende guide.
+      <ulink url="https://unix.stackexchange.com/a/448799/5132">her</ulink>.
     </para>
 
   </sect2>
 
   <sect2>
-    <title>A note on Linux, UNIX SVR4 and BSD</title>
+    <title>En merknad om Linux, UNIX SVR4 og BSD</title>
 
     <para>
-      It is also of note that Linux tools are much closer in UI and parameters
-      to their BSD counterparts than their SVR4 ones. If you want to use tools
-      from this category on a daily basis and you're not familiar with UNIX
-      SVR4, you might first need to learn how SVR4 tools work.
+      Det er også verdt å merke seg at Linux verktøy er mye mer likt sine BSD 
+      motparter enn sine SVR4 verktøy i brukergrensesnitt og parametere. Hvis 
+      du vil bruke verktøy fra denne kategorien daglig og ikke er kjent med 
+      UNIX SVR4, må du kanskje først lære hvordan SVR4 verktøy fungerer.
     </para>
 
   </sect2>
