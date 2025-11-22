@@ -11,9 +11,9 @@
   <title>Common Desktop Environment</title>
 
   <para>
-    This chapter is dedicated towards CDE, also known as the Common Desktop
-    Environment. CDE is a Motif-based desktop environment taking its roots
-    in commercial UNIX.
+    Dette kapittelet er dedikert til CDE, også kjent som Common Desktop 
+    Environment. CDE er et Moti basert skrivebordsmiljø som har sine røtter i 
+    kommersiell UNIX.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="cde-de.xml"/>
