@@ -7,23 +7,23 @@
   <!ENTITY schilytools-download-http "https://codeberg.org/schilytools/schilytools/releases/download/&schilytools-version;/schily-&schilytools-version;.tar.bz2">
 ]>
 
-<sect1 id="star" xreflabel="star from schilytools-&schilytools-version;">
+<sect1 id="star" xreflabel="star fra schilytools-&schilytools-version;">
   <?dbhtml filename="star.html"?>
 
 
-  <title>star from schilytools-&schilytools-version;</title>
+  <title>star fra schilytools-&schilytools-version;</title>
 
   <indexterm zone="star">
     <primary sortas="a-star">star</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to star from schilytools</title>
+    <title>Introduksjon til star fra schilytools</title>
 
     <para>
-      Due to various upstream-acknowledged issues in heirloom-ng tar, it is
-      preferred to use a different SVR4-compatible tar implementation. This
-      package is exactly that.
+      På grunn av diverse oppstrøms anerkjente problemer i arvepakker, er det 
+      foretrukket å bruke en annen SVR4 kompatibel tar implementering. 
+      Denne pakken er nettopp det.
     </para>
 
     &long-build-time;
@@ -31,7 +31,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&schilytools-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&schilytools-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -39,11 +39,11 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of star from schilytools</title>
+    <title>Installasjon av star fra schilytools</title>
 
     <para>
-      First build <command>smake</command> to allow overriding variables in
-      build files:
+      Første bygg <command>smake</command> for å tillate overstyring av 
+      variabler i byggefiler:
     </para>
 
 <screen><userinput>pushd psmake &amp;&amp;
@@ -51,15 +51,15 @@
 popd</userinput></screen>
 
     <para>
-      Compile star by running the following
-      commands, and ensure an older GNU standard is used:
+      Kompiler star ved å kjøre følgende kommandoer, og sørg for at en eldre 
+      GNU standard brukes:
     </para>
 
 <screen><userinput>psmake/smake -e CC="cc -std=gnu17"</userinput></screen>
 
     <para>
-      Now, as the &root; user, install star and the
-      supplementary tools:
+      Nå, som &root; bruker, installer star og 
+      tilleggsverktøyene:
     </para>
 
 <screen role="root"><userinput>install -v -m755 -d /usr/5bin &amp;&amp;
@@ -74,28 +74,28 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          star, star_sym, and tartest
+          star, star_sym, og tartest
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -103,7 +103,7 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
         <term><command>star</command></term>
         <listitem>
           <para>
-            is the tape archiver
+            er båndarkiveren
           </para>
           <indexterm zone="star star-bin">
             <primary sortas="b-star-bin">star</primary>
@@ -115,7 +115,7 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
         <term><command>star_sym</command></term>
         <listitem>
           <para>
-            converts an inode database into a human-readable format
+            konverterer en inode database til et menneskelig lesbart format
           </para>
           <indexterm zone="star star_sym">
             <primary sortas="b-star_sym">star_sym</primary>
@@ -127,7 +127,7 @@ install -v -m644 tartest/tartest.1 /usr/share/man/5man/man1</userinput></screen>
         <term><command>tartest</command></term>
         <listitem>
           <para>
-            tests a tar archive for POSIX.1-1990 compliance
+            tester et tar arkiv for POSIX.1-1990 samsvar
           </para>
           <indexterm zone="star tartest">
             <primary sortas="b-tartest">tartest</primary>
