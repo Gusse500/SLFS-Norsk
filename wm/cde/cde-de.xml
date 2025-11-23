@@ -17,47 +17,47 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to CDE</title>
+    <title>Introduksjon til CDE</title>
 
     <para>
-      The CDE package contains the Common Desktop Environment, a Motif-based
-      desktop environment commonly associated with commercial UNIX
-      workstations.
+      CDE pakken inneholder Common Desktop Environment, et Motif basert 
+      skrivebordsmiljø som vanligvis er assosiert med kommersielle UNIX 
+      arbeidsstasjoner.
 
       <warning><para>
-      CDE has had quite a few known security vulnerabilities in it, and it is
-      likely that several more unknown ones still exist. You
-      <emphasis>REALLY</emphasis> do not want to expose a CDE system to the
-      public Internet. In fact, there are five known security vulnerabilities in
-      this release of CDE which still have no fixes.</para>
+      CDE har hatt ganske mange kjente sikkerhetssårbarheter, og det er 
+      sannsynlig at det fortsatt finnes flere ukjente. Du vil
+      <emphasis>VIRKELIG</emphasis> ikke ønske å eksponere et CDE system for 
+      det offentlige internett. Faktisk er det fem kjente sikkerhetsproblemer i 
+      denne utgivelsen av CDE som fortsatt ikke har noen rettelser.</para>
 
-      <para>Also, you should think strongly about enabling the
-      <command>dtspcd</command> and <command>rpc.ttdbserver</command> daemons.
-      Unless you know what they do, you almost certainly don't need them, and
-      they will increase your machine's attack surface.</para></warning>
+      <para>Du bør også tenke nøye over å aktivere
+      <command>dtspcd</command> og <command>rpc.ttdbserver</command> daemoner.
+      Med mindre du vet hva de gjør, trenger du dem nesten helt sikkert ikke, 
+      og de vil øke maskinens angrepsflate.</para></warning>
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&cde-de-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&cde-de-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Required patch:
+          Påkrevd oppdatering:
           <ulink url="&patch-root;/cde-de/cde-&cde-de-version;-upstream-fixes.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
-  <bridgehead renderas="sect3">CDE Dependencies</bridgehead>
+  <bridgehead renderas="sect3">CDE Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/freetype2.html">FreeType</ulink>,
       <xref linkend="ksh"/>,
@@ -73,24 +73,24 @@
       <ulink url="&blfs-svn;/basicnet/rpcbind.html">rpcbind</ulink>,
       <ulink url="&blfs-svn;/basicnet/rpcsvc-proto.html">rpcsvc-proto</ulink>,
       <ulink url="&blfs-svn;/x/xbitmaps.html">xbitmaps</ulink>,
-      <ulink url="&blfs-svn;/x/x7app.html">Xorg Applications</ulink>,
-      <ulink url="&blfs-svn;/x/x7legacy.html">Xorg Legacy</ulink>, and
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/x/x7app.html">Xorg Applikasjoner</ulink>,
+      <ulink url="&blfs-svn;/x/x7legacy.html">Xorg Legacy</ulink>, og
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of CDE</title>
+    <title>Installasjon av CDE</title>
 
     <para>
-      First, apply a patch with multiple upstream fixes and patches:
+      Først, installer en oppdatering med flere oppstrømsrettelser og oppdateringer:
     </para>
 
 <screen><userinput>patch -Np2 -i ../cde-&cde-de-version;-upstream-fixes.patch</userinput></screen>
 
     <para>
-      Fix <envar>nullptr</envar> being used in a wrong way:
+      Fiks <envar>nullptr</envar> som blir brukt på feil måte:
     </para>
 
 <screen><userinput>sed -e 's/\, \*nullptr//g'     \
@@ -98,7 +98,7 @@
     -i programs/dtksh/ksh93/src/cmd/ksh93/sh/xec.c</userinput></screen>
 
     <para>
-      Install CDE by executing the following commands:
+      Installer CDE ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>./autogen.sh &amp;&amp;
@@ -108,14 +108,14 @@ CFLAGS+=" -std=gnu17"         \
             --disable-static &amp;&amp;
 make</userinput></screen>
 
-    <note><para>This package may print escape sequences during the build
-    process which will make the terminal stop echoing back characters. In
-    order to work around this, you need to blindly type in
-    <command>reset</command>. After the screen is cleared your terminal will
-    work just fine again.</para></note>
+    <note><para>Denne pakken kan skrive ut escape sekvenser under byggeprosessen, 
+    noe som vil føre til at terminalen slutter å sende tilbake tegn. For å omgå 
+    dette må du blindt skrive inn
+    <command>reset</command>. Etter at skjermen er tømt, vil terminalen din 
+    fungere helt fint igjen.</para></note>
 
     <para>
-      Now as the &root; user:
+      Nå som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install &amp;&amp;
@@ -124,19 +124,19 @@ install -v -m644 contrib/desktopentry/cde.desktop /usr/share/xsessions</userinpu
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring CDE</title>
+    <title>Konfigurere CDE</title>
 
     <sect3  id="cde-init">
-      <title>Boot Script</title>
+      <title>Oppstartsskript</title>
 
       <para>
-        To automatically start <command>dtlogin</command> (CDE's display
-        manager) when the PC is rebooted, install the <phrase revision="sysv">
-        xdm bootscript from
-        <ulink url="&blfs-svn;/introduction/bootscripts.html">blfs-bootscripts</ulink>
-        with some modifications</phrase><phrase revision="systemd">dtlogin
-        systemd unit provided by this package</phrase>
-        by executing the following commands as the &root; user:
+        For å starte <command>dtlogin</command> automatisk (CDEs 
+        skjermbehandling) når PC-en startes på nytt, installer 
+        <phrase revision="sysv"> xdm oppstartsskriptet fra
+        <ulink url="&blfs-svn;/introduction/bootscripts.html">BLFS Oppstartsskript</ulink>
+        med noen modifikasjoner</phrase><phrase revision="systemd">dtlogin
+        systemd enhet levert av denne pakken</phrase>
+        ved å kjøre følgende kommandoer som &root; bruker:
       </para>
 
       <indexterm zone="cde-de cde-init">
@@ -161,9 +161,9 @@ systemctl enable dtlogin.service
 </userinput></screen>
 
       <para revision="sysv">
-        In order to permanently set the default runlevel to 5, starting the
-        <command>dtlogin</command> greeter screen automatically, you can modify
-        <filename>/etc/inittab</filename>. As the &root; user:
+        For å sette standard kjørenivå permanent til 5, for å starte
+        <command>dtlogin</command> velkomstskjermen automatisk, kan du endre
+        <filename>/etc/inittab</filename>. Som &root; bruker:
       </para>
 
 <screen role="root" revision="sysv"><userinput>sed /initdefault/s/3/5/ -i /etc/inittab</userinput></screen>
@@ -173,12 +173,12 @@ systemctl enable dtlogin.service
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
@@ -190,30 +190,30 @@ systemctl enable dtlogin.service
           dthelp_htag1, dthelp_htag2, dthelpgen, dthelpgen.dtsh, dthelpprint,
           dthelpprint.sh, dthelptag, dthelpview, dticon, dtimsstart, dtinfo,
           dtksh, dtlogin, dtlp, dtlpsetup, dtmail, dtmailpr, dtopen,
-          dtopen_image (link to dtopen), dtopen_pdf (link to dtopen),
-          dtopen_ps (link to dtopen), dtopen_video (link to dtopen), dtpad,
+          dtopen_image (lenke til dtopen), dtopen_pdf (lenke til dtopen),
+          dtopen_ps (lenke til dtopen), dtopen_video (lenke til dtopen), dtpad,
           dtpdm, dtpdmd, dtprintegrate, dtprintinfo, dtscreen, dtsearchpath,
           dtsession, dtsession_res, dtspcd, dtsrclean, dtsrcreate, dtsrdbrec,
           dtsrdelete, dtsrhan, dtsrindex, dtsrkdump, dtsrload, dtstyle, dtterm,
           dttypes, dtwm, huffcode, rpc.cmsd, rpc.ttdbserver, tt_type_comp,
           ttauth, ttcp, ttdbck, ttmv, ttrm, ttrmdir, ttsession, ttsnoop, tttar,
-          and tttrace
+          og tttrace
         </seg>
         <seg>
           libcsa, libDtHelp, libDtMmdb, libDtMrm, libDtPrint,
           libDtSearch, libDtSvc, libDtTerm, libDtWidget,
-          libDtXinerama, and libtt
+          libDtXinerama, og libtt
         </seg>
         <seg>
           /usr/dt, /usr/include/csa, /usr/include/Dt,
           /usr/include/Tt, /usr/lib/cde, /usr/lib/dtksh, /usr/libexec/cde,
-          /usr/share/cde, and /var/spool/calendar
+          /usr/share/cde, og /var/spool/calendar
         </seg>
       </seglistitem>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -221,7 +221,7 @@ systemctl enable dtlogin.service
         <term><command>Xsession</command></term>
         <listitem>
           <para>
-            is the startscript for CDE
+            er startskriptet for CDE
           </para>
           <indexterm zone="cde-de Xsession">
             <primary sortas="b-Xsession">Xsession</primary>
@@ -233,7 +233,7 @@ systemctl enable dtlogin.service
         <term><command>dsdm</command></term>
         <listitem>
           <para>
-            is the Drop Site Database Manager
+            er databaseadministratoren for Drop Site databasen
           </para>
           <indexterm zone="cde-de dsdm">
             <primary sortas="b-dsdm">dsdm</primary>
@@ -245,7 +245,7 @@ systemctl enable dtlogin.service
         <term><command>dtaction</command></term>
         <listitem>
           <para>
-            invokes a XCDE action
+            aktiverer en XCDE handling
           </para>
           <indexterm zone="cde-de dtaction">
             <primary sortas="b-dtaction">dtaction</primary>
@@ -257,8 +257,8 @@ systemctl enable dtlogin.service
         <term><command>dtappgather</command></term>
         <listitem>
           <para>
-            gathers application files for presentation by the Application
-            Manager
+            samler applikasjonsfiler for presentasjon av 
+            applikasjonsadministratoren
           </para>
           <indexterm zone="cde-de dtappgather">
             <primary sortas="b-dtappgather">dtappgather</primary>
@@ -270,7 +270,7 @@ systemctl enable dtlogin.service
         <term><command>dtappintegrate</command></term>
         <listitem>
           <para>
-            integrates applications into XCDE
+            integrerer applikasjoner i XCDE
           </para>
           <indexterm zone="cde-de dtappintegrate">
             <primary sortas="b-dtappintegrate">dtappintegrate</primary>
@@ -282,7 +282,7 @@ systemctl enable dtlogin.service
         <term><command>dtbuilder</command></term>
         <listitem>
           <para>
-            is the CDE Application Builder
+            er CDE applikasjonsbyggeren
           </para>
           <indexterm zone="cde-de dtbuilder">
             <primary sortas="b-dtbuilder">dtbuilder</primary>
@@ -294,7 +294,7 @@ systemctl enable dtlogin.service
         <term><command>dtcalc</command></term>
         <listitem>
           <para>
-            is the CDE Calculator
+            er CDE kalkulatoren
           </para>
           <indexterm zone="cde-de dtcalc">
             <primary sortas="b-dtcalc">dtcalc</primary>
@@ -306,7 +306,7 @@ systemctl enable dtlogin.service
         <term><command>dtchooser</command></term>
         <listitem>
           <para>
-            is the CDE <command>dtlogin</command> screen chooser utility
+            er CDE <command>dtlogin</command> skjermvelgerverktøy
           </para>
           <indexterm zone="cde-de dtchooser">
             <primary sortas="b-dtchooser">dtchooser</primary>
@@ -318,7 +318,7 @@ systemctl enable dtlogin.service
         <term><command>dtcm</command></term>
         <listitem>
           <para>
-            is the CDE Calendar Manager
+            er CDE kalenderbehandleren
           </para>
           <indexterm zone="cde-de dtcm">
             <primary sortas="b-dtcm">dtcm</primary>
@@ -330,7 +330,7 @@ systemctl enable dtlogin.service
         <term><command>dtcm_delete</command></term>
         <listitem>
           <para>
-            deletes appointments from the calendar database
+            sletter avtaler fra kalenderdatabasen
           </para>
           <indexterm zone="cde-de dtcm_delete">
             <primary sortas="b-dtcm_delete">dtcm_delete</primary>
@@ -342,7 +342,7 @@ systemctl enable dtlogin.service
         <term><command>dtcm_editor</command></term>
         <listitem>
           <para>
-            is the CDE standalone appointment editor
+            er CDEs frittstående avtaleredigeringsprogram
           </para>
           <indexterm zone="cde-de dtcm_editor">
             <primary sortas="b-dtcm_editor">dtcm_editor</primary>
@@ -354,7 +354,7 @@ systemctl enable dtlogin.service
         <term><command>dtcm_insert</command></term>
         <listitem>
           <para>
-            inserts appointments into the calendar database
+            setter inn avtaler i kalenderdatabasen
           </para>
           <indexterm zone="cde-de dtcm_insert">
             <primary sortas="b-dtcm_insert">dtcm_insert</primary>
@@ -366,7 +366,7 @@ systemctl enable dtlogin.service
         <term><command>dtcm_lookup</command></term>
         <listitem>
           <para>
-            looks up appointments from the calendar database
+            slår opp avtaler fra kalenderdatabasen
           </para>
           <indexterm zone="cde-de dtcm_lookup">
             <primary sortas="b-dtcm_lookup">dtcm_lookup</primary>
@@ -378,8 +378,8 @@ systemctl enable dtlogin.service
         <term><command>dtcodegen</command></term>
         <listitem>
           <para>
-            generates code from a XCDE application building services project
-            or module file
+            genererer kode fra et XCDE prosjekt for 
+            applikasjonsbyggingstjenester eller en modulfil
           </para>
           <indexterm zone="cde-de dtcodegen">
             <primary sortas="b-dtcodegen">dtcodegen</primary>
@@ -391,7 +391,7 @@ systemctl enable dtlogin.service
         <term><command>dtcreate</command></term>
         <listitem>
           <para>
-            is the CDE Action and Datatype creation client
+            er CDE klienten for oppretting av handlinger og datatyper
           </para>
           <indexterm zone="cde-de dtcreate">
             <primary sortas="b-dtcreate">dtcreate</primary>
@@ -403,7 +403,7 @@ systemctl enable dtlogin.service
         <term><command>dtdbcache</command></term>
         <listitem>
           <para>
-            manages the caches for CDE action and datatypes definitions
+            administrerer mellomlagringsplassene for CDE handlinger og datatypedefinisjoner
           </para>
           <indexterm zone="cde-de dtdbcache">
             <primary sortas="b-dtdbcache">dtdbcache</primary>
@@ -415,7 +415,7 @@ systemctl enable dtlogin.service
         <term><command>dtdocbook2infolib</command></term>
         <listitem>
           <para>
-            is a tool used to create and modify hypertext information libraries
+            er et verktøy som brukes til å opprette og endre hypertekstinformasjonsbiblioteker
           </para>
           <indexterm zone="cde-de dtdocbook2infolib">
             <primary sortas="b-dtdocbook2infolib">dtdocbook2infolib</primary>
@@ -427,7 +427,7 @@ systemctl enable dtlogin.service
         <term><command>dtdocbook2man</command></term>
         <listitem>
           <para>
-            converts a DtDocbook file into manpage format
+            konverterer en DtDocbook fil til manualside format
           </para>
           <indexterm zone="cde-de dtdocbook2man">
             <primary sortas="b-dtdocbook2man">dtdocbook2man</primary>
@@ -439,7 +439,7 @@ systemctl enable dtlogin.service
         <term><command>dtdocbook2sdl</command></term>
         <listitem>
           <para>
-            converts a DtDocbook file into SDL format
+            konverterer en DtDocbook fil til SDL format
           </para>
           <indexterm zone="cde-de dtdocbook2sdl">
             <primary sortas="b-dtdocbook2sdl">dtdocbook2sdl</primary>
@@ -451,7 +451,7 @@ systemctl enable dtlogin.service
         <term><command>dtdspmsg</command></term>
         <listitem>
           <para>
-            displays a selected message from a message catalog
+            viser en valgt melding fra en meldingskatalog
           </para>
           <indexterm zone="cde-de dtdspmsg">
             <primary sortas="b-dtdspmsg">dtdspmsg</primary>
@@ -463,7 +463,7 @@ systemctl enable dtlogin.service
         <term><command>dterror.ds</command></term>
         <listitem>
           <para>
-            is a helper script for error notices and dialogs
+            er et hjelpeskript for feilmeldinger og dialogbokser
           </para>
           <indexterm zone="cde-de dterror.ds">
             <primary sortas="b-dterror.ds">dterror.ds</primary>
@@ -475,7 +475,7 @@ systemctl enable dtlogin.service
         <term><command>dtexec</command></term>
         <listitem>
           <para>
-            executes a command-based action
+            utfører en kommandobasert handling
           </para>
           <indexterm zone="cde-de dtexec">
             <primary sortas="b-dtexec">dtexec</primary>
@@ -487,7 +487,7 @@ systemctl enable dtlogin.service
         <term><command>dtfile</command></term>
         <listitem>
           <para>
-            is the CDE File Manager
+            er CDE filbehandleren
           </para>
           <indexterm zone="cde-de dtfile">
             <primary sortas="b-dtfile">dtfile</primary>
@@ -499,7 +499,7 @@ systemctl enable dtlogin.service
         <term><command>dtfile_copy</command></term>
         <listitem>
           <para>
-            is the CDE File Manager copy utility
+            er kopieringsverktøyet CDE filbehandler
           </para>
           <indexterm zone="cde-de dtfile_copy">
             <primary sortas="b-dtfile_copy">dtfile_copy</primary>
@@ -511,7 +511,7 @@ systemctl enable dtlogin.service
         <term><command>dtfile_error</command></term>
         <listitem>
           <para>
-            is the CDE File Manager error dialog script
+            er feildialogskriptet for CDE filbehandleren
           </para>
           <indexterm zone="cde-de dtfile_error">
             <primary sortas="b-dtfile_error">dtfile_error</primary>
@@ -523,7 +523,7 @@ systemctl enable dtlogin.service
         <term><command>dtfplist</command></term>
         <listitem>
           <para>
-            prints the hierarchy of the front panel components
+            skriver ut hierarkiet til frontpanelkomponentene
           </para>
           <indexterm zone="cde-de dtfplist">
             <primary sortas="b-dtfplist">dtfplist</primary>
@@ -535,7 +535,7 @@ systemctl enable dtlogin.service
         <term><command>dtgreet</command></term>
         <listitem>
           <para>
-            is the CDE <command>dtlogin</command> login screen display utility
+            er CDE <command>dtlogin</command> verktøy for visning av påloggingsskjermen
           </para>
           <indexterm zone="cde-de dtgreet">
             <primary sortas="b-dtgreet">dtgreet</primary>
@@ -547,7 +547,7 @@ systemctl enable dtlogin.service
         <term><command>dthello</command></term>
         <listitem>
           <para>
-            is the CDE <command>dtlogin</command> transitional greeting utility
+            er CDE <command>dtlogin</command> verktøy for overgangshilsen
           </para>
           <indexterm zone="cde-de dthello">
             <primary sortas="b-dthello">dthello</primary>
@@ -559,7 +559,7 @@ systemctl enable dtlogin.service
         <term><command>dthelp_ctag1</command></term>
         <listitem>
           <para>
-            contains the first pass for formal SGML parsing of HelpTag source
+            inneholder den første gjennomgangen for SGML parsing av HelpTag kildekoden
           </para>
           <indexterm zone="cde-de dthelp_ctag1">
             <primary sortas="b-dthelp_ctag1">dthelp_ctag1</primary>
@@ -571,7 +571,7 @@ systemctl enable dtlogin.service
         <term><command>dthelp_htag1</command></term>
         <listitem>
           <para>
-            contains the first pass for shorthand parsing of HelpTag source
+            inneholder den første gjennomgangen for shorthand parsing av HelpTag kildekoden
           </para>
           <indexterm zone="cde-de dthelp_htag1">
             <primary sortas="b-dthelp_htag1">dthelp_htag1</primary>
@@ -583,7 +583,7 @@ systemctl enable dtlogin.service
         <term><command>dthelp_htag2</command></term>
         <listitem>
           <para>
-            contains the second pass for parsing of HelpTag source
+            inneholder den første gjennomgangen for parsing av HelpTag kildekoden
           </para>
           <indexterm zone="cde-de dthelp_htag2">
             <primary sortas="b-dthelp_htag2">dthelp_htag2</primary>
@@ -595,7 +595,7 @@ systemctl enable dtlogin.service
         <term><command>dthelpgen</command></term>
         <listitem>
           <para>
-            generates a top‐level help browser volume
+            genererer et hjelpenettleservolum på toppnivå
           </para>
           <indexterm zone="cde-de dthelpgen">
             <primary sortas="b-dthelpgen">dthelpgen</primary>
@@ -607,8 +607,8 @@ systemctl enable dtlogin.service
         <term><command>dthelpgen.dtsh</command></term>
         <listitem>
           <para>
-            is a helper script for <command>dthelpgen</command> that displays
-            a "working" dialog
+            er et hjelpeskript for <command>dthelpgen</command> som viser en 
+            "fungerende" dialogboks
           </para>
           <indexterm zone="cde-de dthelpgen.dtsh">
             <primary sortas="b-dthelpgen.dtsh">dthelpgen.dtsh</primary>
@@ -620,7 +620,7 @@ systemctl enable dtlogin.service
         <term><command>dthelpprint</command></term>
         <listitem>
           <para>
-            is a print utility for DtHelpDialog and DtHelpQuickDialog widgets
+            er et utskriftsverktøy for DtHelpDialog og DtHelpQuickDialog widgeter
           </para>
           <indexterm zone="cde-de dthelpprint">
             <primary sortas="b-dthelpprint">dthelpprint</primary>
@@ -632,8 +632,8 @@ systemctl enable dtlogin.service
         <term><command>dthelpprint.sh</command></term>
         <listitem>
           <para>
-            is a helper script for <command>dthelpprint</command> that actually
-            prints the file
+            er et hjelpeskript for <command>dthelpprint</command> som faktisk 
+            skriver ut filen
           </para>
           <indexterm zone="cde-de dthelpprint.sh">
             <primary sortas="b-dthelpprint.sh">dthelpprint.sh</primary>
@@ -645,7 +645,7 @@ systemctl enable dtlogin.service
         <term><command>dthelptag</command></term>
         <listitem>
           <para>
-            compiles CDE Help source documents into runtime Help volumes
+            kompilerer CDE hjelpekildedokumenter til kjøretidshjelpevolumer
           </para>
           <indexterm zone="cde-de dthelptag">
             <primary sortas="b-dthelptag">dthelptag</primary>
@@ -657,7 +657,7 @@ systemctl enable dtlogin.service
         <term><command>dthelpview</command></term>
         <listitem>
           <para>
-            views a CDE help volume
+            viser et CDE hjelpevolum
           </para>
           <indexterm zone="cde-de dthelpview">
             <primary sortas="b-dthelpview">dthelpview</primary>
@@ -669,7 +669,7 @@ systemctl enable dtlogin.service
         <term><command>dticon</command></term>
         <listitem>
           <para>
-            is the CDE Icon Editor
+            er CDE ikonredigereren
           </para>
           <indexterm zone="cde-de dticon">
             <primary sortas="b-dticon">dticon</primary>
@@ -681,7 +681,7 @@ systemctl enable dtlogin.service
         <term><command>dtimsstart</command></term>
         <listitem>
           <para>
-            launches an input method server
+            starter en inndatametodeserver
           </para>
           <indexterm zone="cde-de dtimsstart">
             <primary sortas="b-dtimsstart">dtimsstart</primary>
@@ -693,7 +693,7 @@ systemctl enable dtlogin.service
         <term><command>dtinfo</command></term>
         <listitem>
           <para>
-            is the CDE Information Manager
+            er CDE informasjonsbehandler
           </para>
           <indexterm zone="cde-de dtinfo">
             <primary sortas="b-dtinfo">dtinfo</primary>
@@ -705,7 +705,7 @@ systemctl enable dtlogin.service
         <term><command>dtinfo_start</command></term>
         <listitem>
           <para>
-            is a helper script for <command>dtinfo</command>
+            er et hjelpeskript for <command>dtinfo</command>
           </para>
           <indexterm zone="cde-de dtinfo_start">
             <primary sortas="b-dtinfo_start">dtinfo_start</primary>
@@ -717,8 +717,8 @@ systemctl enable dtlogin.service
         <term><command>dtksh</command></term>
         <listitem>
           <para>
-            is a shell interpreter with support for many X, Xt, Xm and XCDE
-            functions
+            er en skalltolk med støtte for mange X, Xt, Xm og XCDE 
+            funksjoner
           </para>
           <indexterm zone="cde-de dtksh">
             <primary sortas="b-dtksh">dtksh</primary>
@@ -730,7 +730,7 @@ systemctl enable dtlogin.service
         <term><command>dtlogin</command></term>
         <listitem>
           <para>
-            is the CDE login service
+            er CDE innloggingstjeneste
           </para>
           <indexterm zone="cde-de dtlogin">
             <primary sortas="b-dtlogin">dtlogin</primary>
@@ -742,7 +742,7 @@ systemctl enable dtlogin.service
         <term><command>dtlp</command></term>
         <listitem>
           <para>
-            gathers <command>lp</command> arguments and prints a file
+            samler <command>lp</command> argumenter og skriver ut en fil
           </para>
           <indexterm zone="cde-de dtlp">
             <primary sortas="b-dtlp">dtlp</primary>
@@ -754,7 +754,7 @@ systemctl enable dtlogin.service
         <term><command>dtlpsetup</command></term>
         <listitem>
           <para>
-            is a wrapper around <command>dtlp</command>
+            er en innpakning rundt <command>dtlp</command>
           </para>
           <indexterm zone="cde-de dtlpsetup">
             <primary sortas="b-dtlpsetup">dtlpsetup</primary>
@@ -766,7 +766,7 @@ systemctl enable dtlogin.service
         <term><command>dtmail</command></term>
         <listitem>
           <para>
-            is the CDE mailer
+            er CDE postbehandler
           </para>
           <indexterm zone="cde-de dtmail">
             <primary sortas="b-dtmail">dtmail</primary>
@@ -778,7 +778,7 @@ systemctl enable dtlogin.service
         <term><command>dtmailpr</command></term>
         <listitem>
           <para>
-            is the email message print filter
+            er utskriftsfilteret for e-postmeldinger
           </para>
           <indexterm zone="cde-de dtmailpr">
             <primary sortas="b-dtmailpr">dtmailpr</primary>
@@ -790,7 +790,7 @@ systemctl enable dtlogin.service
         <term><command>dtopen</command></term>
         <listitem>
           <para>
-            provides a multimedia viewing interface
+            tilbyr et multimedievisningsgrensesnitt
           </para>
           <indexterm zone="cde-de dtopen">
             <primary sortas="b-dtopen">dtopen</primary>
@@ -802,7 +802,7 @@ systemctl enable dtlogin.service
         <term><command>dtopen_image</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>dtopen</command>
+            er en symbolsk lenke som peker til <command>dtopen</command>
           </para>
           <indexterm zone="cde-de dtopen_image">
             <primary sortas="b-dtopen_image">dtopen_image</primary>
@@ -814,7 +814,7 @@ systemctl enable dtlogin.service
         <term><command>dtopen_pdf</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>dtopen</command>
+            er en symbolsk lenke som peker til <command>dtopen</command>
           </para>
           <indexterm zone="cde-de dtopen_pdf">
             <primary sortas="b-dtopen_pdf">dtopen_pdf</primary>
@@ -826,7 +826,7 @@ systemctl enable dtlogin.service
         <term><command>dtopen_ps</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>dtopen</command>
+            er en symbolsk lenke som peker til <command>dtopen</command>
           </para>
           <indexterm zone="cde-de dtopen_ps">
             <primary sortas="b-dtopen_ps">dtopen_ps</primary>
@@ -838,7 +838,7 @@ systemctl enable dtlogin.service
         <term><command>dtopen_video</command></term>
         <listitem>
           <para>
-            is a symlink pointing to <command>dtopen</command>
+            er en symbolsk lenke som peker til <command>dtopen</command>
           </para>
           <indexterm zone="cde-de dtopen_video">
             <primary sortas="b-dtopen_video">dtopen_video</primary>
@@ -850,7 +850,7 @@ systemctl enable dtlogin.service
         <term><command>dtpad</command></term>
         <listitem>
           <para>
-            is the CDE Text Editor
+            er CDE tekstredigereren
           </para>
           <indexterm zone="cde-de dtpad">
             <primary sortas="b-dtpad">dtpad</primary>
@@ -862,7 +862,7 @@ systemctl enable dtlogin.service
         <term><command>dtpdm</command></term>
         <listitem>
           <para>
-            is the Print Dialog Manager, which provides printer-specific GUIs
+            er Print Dialogbehandler, som tilbyr skriverspesifikke grafiske brukergrensesnitt
           </para>
           <indexterm zone="cde-de dtpdm">
             <primary sortas="b-dtpdm">dtpdm</primary>
@@ -874,7 +874,7 @@ systemctl enable dtlogin.service
         <term><command>dtpdmd</command></term>
         <listitem>
           <para>
-            is the Print Dialog Manager daemon
+            er Print Dialogbehandler daemon
           </para>
           <indexterm zone="cde-de dtpdmd">
             <primary sortas="b-dtpdmd">dtpdmd</primary>
@@ -886,7 +886,7 @@ systemctl enable dtlogin.service
         <term><command>dtprintegrate</command></term>
         <listitem>
           <para>
-            sets up the configuration files for the printer components
+            setter opp konfigurasjonsfilene for skriverkomponentene
           </para>
           <indexterm zone="cde-de dtprintegrate">
             <primary sortas="b-dtprintegrate">dtprintegrate</primary>
@@ -898,7 +898,7 @@ systemctl enable dtlogin.service
         <term><command>dtprintinfo</command></term>
         <listitem>
           <para>
-            is the CDE Print Viewer
+            er CDE utskriftsviseren
           </para>
           <indexterm zone="cde-de dtprintinfo">
             <primary sortas="b-dtprintinfo">dtprintinfo</primary>
@@ -910,7 +910,7 @@ systemctl enable dtlogin.service
         <term><command>dtscreen</command></term>
         <listitem>
           <para>
-            contains the CDE animated screensavers
+            inneholder de animerte skjermsparerne for CDE
           </para>
           <indexterm zone="cde-de dtscreen">
             <primary sortas="b-dtscreen">dtscreen</primary>
@@ -922,7 +922,7 @@ systemctl enable dtlogin.service
         <term><command>dtsearchpath</command></term>
         <listitem>
           <para>
-            sets desktop search paths
+            angir søkebaner på skrivebordet
           </para>
           <indexterm zone="cde-de dtsearchpath">
             <primary sortas="b-dtsearchpath">dtsearchpath</primary>
@@ -934,7 +934,7 @@ systemctl enable dtlogin.service
         <term><command>dtsession</command></term>
         <listitem>
           <para>
-            is the CDE Session Manager
+            er CDE øktbehandleren
           </para>
           <indexterm zone="cde-de dtsession">
             <primary sortas="b-dtsession">dtsession</primary>
@@ -946,7 +946,7 @@ systemctl enable dtlogin.service
         <term><command>dtsession_res</command></term>
         <listitem>
           <para>
-            is the CDE <command>dtsession</command> resource load utility
+            er CDE <command>dtsession</command> ressurslastingsverktøy
           </para>
           <indexterm zone="cde-de dtsession_res">
             <primary sortas="b-dtsession_res">dtsession_res</primary>
@@ -958,7 +958,7 @@ systemctl enable dtlogin.service
         <term><command>dtspcd</command></term>
         <listitem>
           <para>
-            is the CDE Subprocess Control Service
+            er CDE underprosesskontrolltjenesten
           </para>
           <indexterm zone="cde-de dtspcd">
             <primary sortas="b-dtspcd">dtspcd</primary>
@@ -970,7 +970,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrclean</command></term>
         <listitem>
           <para>
-            compresses d99 files
+            komprimerer d99 filer
           </para>
           <indexterm zone="cde-de dtsrclean">
             <primary sortas="b-dtsrclean">dtsrclean</primary>
@@ -982,7 +982,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrcreate</command></term>
         <listitem>
           <para>
-            creates and initializes a DtSearch database
+            oppretter og initialiserer en DtSearch database
           </para>
           <indexterm zone="cde-de dtsrcreate">
             <primary sortas="b-dtsrcreate">dtsrcreate</primary>
@@ -994,7 +994,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrdbrec</command></term>
         <listitem>
           <para>
-            produces a DtSearch database configuration and status report
+            produserer en DtSearch database konfigurasjon og statusrapport
           </para>
           <indexterm zone="cde-de dtsrdbrec">
             <primary sortas="b-dtsrdbrec">dtsrdbrec</primary>
@@ -1006,7 +1006,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrdelete</command></term>
         <listitem>
           <para>
-            deletes items from a DtSearch database
+            sletter elementer fra en DtSearch database
           </para>
           <indexterm zone="cde-de dtsrdelete">
             <primary sortas="b-dtsrdelete">dtsrdelete</primary>
@@ -1018,7 +1018,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrhan</command></term>
         <listitem>
           <para>
-            creates a DtSearch fzk file
+            oppretter en DtSearch fzk fil
           </para>
           <indexterm zone="cde-de dtsrhan">
             <primary sortas="b-dtsrhan">dtsrhan</primary>
@@ -1030,7 +1030,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrindex</command></term>
         <listitem>
           <para>
-            loads an inverted index for document objects
+            laster inn en invertert indeks for dokumentobjekter
           </para>
           <indexterm zone="cde-de dtsrindex">
             <primary sortas="b-dtsrindex">dtsrindex</primary>
@@ -1042,7 +1042,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrkdump</command></term>
         <listitem>
           <para>
-            produces reports about DtSearch database keys
+            produserer rapporter om DtSearch databasenøkler
           </para>
           <indexterm zone="cde-de dtsrkdump">
             <primary sortas="b-dtsrkdump">dtsrkdump</primary>
@@ -1054,7 +1054,7 @@ systemctl enable dtlogin.service
         <term><command>dtsrload</command></term>
         <listitem>
           <para>
-            loads document objects into a database
+            laster dokumentobjekter inn i en database
           </para>
           <indexterm zone="cde-de dtsrload">
             <primary sortas="b-dtsrload">dtsrload</primary>
@@ -1066,7 +1066,7 @@ systemctl enable dtlogin.service
         <term><command>dtstyle</command></term>
         <listitem>
           <para>
-            is the CDE Style Manager
+            er CDE stilbehandleren
           </para>
           <indexterm zone="cde-de dtstyle">
             <primary sortas="b-dtstyle">dtstyle</primary>
@@ -1078,7 +1078,7 @@ systemctl enable dtlogin.service
         <term><command>dtterm</command></term>
         <listitem>
           <para>
-            is the CDE terminal emulator
+            er CDE terminalemulatoren
           </para>
           <indexterm zone="cde-de dtterm">
             <primary sortas="b-dtterm">dtterm</primary>
@@ -1090,7 +1090,7 @@ systemctl enable dtlogin.service
         <term><command>dttypes</command></term>
         <listitem>
           <para>
-            generates a list of action and datatypes definitions
+            genererer en liste over handlings og datatype definisjoner
           </para>
           <indexterm zone="cde-de dttypes">
             <primary sortas="b-dttypes">dttypes</primary>
@@ -1102,7 +1102,7 @@ systemctl enable dtlogin.service
         <term><command>dtwm</command></term>
         <listitem>
           <para>
-            is the CDE Window Manager
+            er CDE vindusbehandleren
           </para>
           <indexterm zone="cde-de dtwm">
             <primary sortas="b-dtwm">dtwm</primary>
@@ -1114,7 +1114,7 @@ systemctl enable dtlogin.service
         <term><command>huffcode</command></term>
         <listitem>
           <para>
-            creates optimized DtSearch compression/decompression tables
+            lager optimaliserte DtSearch komprimerings/dekompresjons tabeller
           </para>
           <indexterm zone="cde-de huffcode">
             <primary sortas="b-huffcode">huffcode</primary>
@@ -1126,7 +1126,7 @@ systemctl enable dtlogin.service
         <term><command>rpc.cmsd</command></term>
         <listitem>
           <para>
-            is the calendar manager service daemon
+            er kalenderbehandlingstjenestens daemon
           </para>
           <indexterm zone="cde-de rpc.cmsd">
             <primary sortas="b-rpc.cmsd">rpc.cmsd</primary>
@@ -1138,7 +1138,7 @@ systemctl enable dtlogin.service
         <term><command>rpc.ttdbserver</command></term>
         <listitem>
           <para>
-            is the ToolTalk database server
+            er ToolTalk databaseserveren
           </para>
           <indexterm zone="cde-de rpc.ttdbserver">
             <primary sortas="b-rpc.ttdbserver">rpc.ttdbserver</primary>
@@ -1150,7 +1150,7 @@ systemctl enable dtlogin.service
         <term><command>tt_type_comp</command></term>
         <listitem>
           <para>
-            compiles ToolTalk otypes and ptypes
+            kompilerer ToolTalk otyper og ptyper
           </para>
           <indexterm zone="cde-de tt_type_comp">
             <primary sortas="b-tt_type_comp">tt_type_comp</primary>
@@ -1162,7 +1162,7 @@ systemctl enable dtlogin.service
         <term><command>ttauth</command></term>
         <listitem>
           <para>
-            is the ToolTalk authority file utility
+            er ToolTalk autorisasjonsfilverktøyet
           </para>
           <indexterm zone="cde-de ttauth">
             <primary sortas="b-ttauth">ttauth</primary>
@@ -1174,7 +1174,7 @@ systemctl enable dtlogin.service
         <term><command>ttcp</command></term>
         <listitem>
           <para>
-            copies files and informs the ToolTalk service
+            kopierer filer og informerer ToolTalk tjenesten
           </para>
           <indexterm zone="cde-de ttcp">
             <primary sortas="b-ttcp">ttcp</primary>
@@ -1186,7 +1186,7 @@ systemctl enable dtlogin.service
         <term><command>ttdbck</command></term>
         <listitem>
           <para>
-            displays, checks, or repairs ToolTalk databases
+            viser, kontrollerer eller reparerer ToolTalk databaser
           </para>
           <indexterm zone="cde-de ttdbck">
             <primary sortas="b-ttdbck">ttdbck</primary>
@@ -1198,7 +1198,7 @@ systemctl enable dtlogin.service
         <term><command>ttmv</command></term>
         <listitem>
           <para>
-            moves or renames files and informs the ToolTalk service
+            flytter eller gir filer nytt navn og informerer ToolTalk tjenesten
           </para>
           <indexterm zone="cde-de ttmv">
             <primary sortas="b-ttmv">ttmv</primary>
@@ -1210,7 +1210,7 @@ systemctl enable dtlogin.service
         <term><command>ttrm</command></term>
         <listitem>
           <para>
-            removes files or directories and informs the ToolTalk service
+            fjerner filer eller mapper og informerer ToolTalk tjenesten
           </para>
           <indexterm zone="cde-de ttrm">
             <primary sortas="b-ttrm">ttrm</primary>
@@ -1222,7 +1222,7 @@ systemctl enable dtlogin.service
         <term><command>ttrmdir</command></term>
         <listitem>
           <para>
-            removes empty directories and informs the ToolTalk service
+            fjerner tomme mapper og informerer ToolTalk tjenesten
           </para>
           <indexterm zone="cde-de ttrmdir">
             <primary sortas="b-ttrmdir">ttrmdir</primary>
@@ -1234,7 +1234,7 @@ systemctl enable dtlogin.service
         <term><command>ttsession</command></term>
         <listitem>
           <para>
-            is the ToolTalk message server
+            er ToolTalk meldingsserveren
           </para>
           <indexterm zone="cde-de ttsession">
             <primary sortas="b-ttsession">ttsession</primary>
@@ -1246,7 +1246,7 @@ systemctl enable dtlogin.service
         <term><command>ttsnoop</command></term>
         <listitem>
           <para>
-            sends and receives ToolTalk messages interactively
+            sender og mottar ToolTalk meldinger interaktivt
           </para>
           <indexterm zone="cde-de ttsnoop">
             <primary sortas="b-ttsnoop">ttsnoop</primary>
@@ -1258,7 +1258,7 @@ systemctl enable dtlogin.service
         <term><command>tttar</command></term>
         <listitem>
           <para>
-            processes files and ToolTalk objects in an archive
+            behandler filer og ToolTalk objekter i et arkiv
           </para>
           <indexterm zone="cde-de tttar">
             <primary sortas="b-tttar">tttar</primary>
@@ -1270,7 +1270,7 @@ systemctl enable dtlogin.service
         <term><command>tttrace</command></term>
         <listitem>
           <para>
-            traces ToolTalk calls and messages
+            sporer ToolTalk anrop og meldinger
           </para>
           <indexterm zone="cde-de tttrace">
             <primary sortas="b-tttrace">tttrace</primary>
@@ -1282,7 +1282,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libcsa</filename></term>
         <listitem>
           <para>
-            is a helper library for <command>dtcm</command>
+            er et hjelpebibliotek for <command>dtcm</command>
           </para>
           <indexterm zone="cde-de libcsa">
             <primary sortas="c-libcsa">libcsa</primary>
@@ -1294,7 +1294,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtHelp</filename></term>
         <listitem>
           <para>
-            contains the CDE online help functions
+            inneholder CDE hjelpefunksjonene på nett
           </para>
           <indexterm zone="cde-de libDtHelp">
             <primary sortas="c-libDtHelp">libDtHelp</primary>
@@ -1306,7 +1306,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtMmdb</filename></term>
         <listitem>
           <para>
-            contains the CDE multimedia database functions
+            inneholder CDE multimediadatabasefunksjonene
           </para>
           <indexterm zone="cde-de libDtMmdb">
             <primary sortas="c-libDtMmdb">libDtMmdb</primary>
@@ -1318,7 +1318,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtMrm</filename></term>
         <listitem>
           <para>
-            contains the UIL Resource Manager functions
+            inneholder UIL Ressursadministrator funksjonene
           </para>
           <indexterm zone="cde-de libDtMrm">
             <primary sortas="c-libDtMrm">libDtMrm</primary>
@@ -1330,7 +1330,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtPrint</filename></term>
         <listitem>
           <para>
-            contains print-specific GUIs
+            inneholder utskriftsspesifikke grafiske brukergrensesnitt
           </para>
           <indexterm zone="cde-de libDtPrint">
             <primary sortas="c-libDtPrint">libDtPrint</primary>
@@ -1342,7 +1342,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtSearch</filename></term>
         <listitem>
           <para>
-            contains the CDE search functions
+            inneholder CDE søkefunksjonene
           </para>
           <indexterm zone="cde-de libDtSearch">
             <primary sortas="c-libDtSearch">libDtSearch</primary>
@@ -1354,7 +1354,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtSvc</filename></term>
         <listitem>
           <para>
-            contains the CDE service functions for desktop management
+            inneholder CDE tjenestefunksjonene for skrivebordsadministrasjon
           </para>
           <indexterm zone="cde-de libDtSvc">
             <primary sortas="c-libDtSvc">libDtSvc</primary>
@@ -1366,7 +1366,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtTerm</filename></term>
         <listitem>
           <para>
-            is a helper library for <command>dtterm</command>
+            er et hjelpebibliotek for <command>dtterm</command>
           </para>
           <indexterm zone="cde-de libDtTerm">
             <primary sortas="c-libDtTerm">libDtTerm</primary>
@@ -1378,7 +1378,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtWidget</filename></term>
         <listitem>
           <para>
-            contains the CDE widgets
+            inneholder CDE widgetene
           </para>
           <indexterm zone="cde-de libDtWidget">
             <primary sortas="c-libDtWidget">libDtWidget</primary>
@@ -1390,7 +1390,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libDtXinerama</filename></term>
         <listitem>
           <para>
-            is a Xinerama wrapper for CDE
+            er en Xinerama innpakning for CDE
           </para>
           <indexterm zone="cde-de libDtXinerama">
             <primary sortas="c-libDtXinerama">libDtXinerama</primary>
@@ -1402,7 +1402,7 @@ systemctl enable dtlogin.service
         <term><filename class="libraryfile">libtt</filename></term>
         <listitem>
           <para>
-            contains the ToolTalk routines
+            inneholder ToolTalk rutinene
           </para>
           <indexterm zone="cde-de libtt">
             <primary sortas="c-libtt">libtt</primary>
