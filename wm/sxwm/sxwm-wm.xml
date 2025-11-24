@@ -18,44 +18,44 @@
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduction to sxwm</title>
+    <title>Introduksjon til sxwm</title>
 
     <para>
-      The sxwm package provides a simple X11 window
-      manager, taking roots from DWM,
-      tinywm, and other window managers.
+      Sxwm-pakken tilbyr en enkel X11 vindusbehandler, 
+      som er basert på DWM, 
+      tinywm og andre vindusbehandlere.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&sxwm-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&sxwm-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">sxwm Dependencies</bridgehead>
+    <bridgehead renderas="sect3">sxwm Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink> and
-      <ulink url="&blfs-svn;/x/xorg-server.html">Xorg-Server</ulink> (runtime)
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink> og
+      <ulink url="&blfs-svn;/x/xorg-server.html">Xorg-Server</ulink> (kjøretid)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of sxwm</title>
+    <title>Installasjon av sxwm</title>
 
     <para>
-      Install sxwm by running the following
-      commands:
+      Installer sxwm ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>make</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make PREFIX=/usr install</userinput></screen>
@@ -63,15 +63,15 @@
   </sect2>
 
   <sect2 role="configuration">
-    <title>Configuring sxwm</title>
+    <title>Konfigurere sxwm</title>
 
     <sect3 id="sxwm-config">
-      <title>Config Files</title>
+      <title>Konfigurasjonsfiler</title>
       <para>
-        <filename>~/.config/sxwmrc</filename>. The default version
-        is in <filename class="directory">/usr/share</filename> and will
-        not be used. It can be copied to
-        <filename class="directory">~/.config/sxwmrc</filename> manually.
+        <filename>~/.config/sxwmrc</filename>. Standardversjonen 
+        er i <filename class="directory">/usr/share</filename> og vil 
+        ikke bli brukt. Den kan kopieres til
+        <filename class="directory">~/.config/sxwmrc</filename> manuelt.
       </para>
 
       <indexterm zone="sxwm-wm sxwm-config">
@@ -80,26 +80,26 @@
 
     </sect3>
 
-    <sect3><title>Configuration Information</title>
+    <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Create the configuration file:
+        Opprett konfigurasjonsfilen:
       </para>
 
 <screen><userinput>mkdir -pv ~/.config &amp;&amp;
 cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
 
       <para>
-        Edit the configuration file as necessary to fit your workflow.
-        You can read how to configure sxwm by running
+        Rediger konfigurasjonsfilen etter behov for å tilpasse den til 
+        arbeidsflyten din. Du kan lese hvordan du konfigurerer sxwm ved å kjøre
         <command>man sxwm</command>.
       </para>
 
       <para>
-        If sxwm is the only Window Manager you want
-        to use, you can start it with an <filename>.xinitrc</filename> file in
-        your home folder. Be sure to backup your current
-        <filename>.xinitrc</filename> before proceeding.
+        Hvis sxwm er den eneste vindusbehandleren du vil bruke, 
+        kan du starte den med en <filename>.xinitrc</filename> fil i
+        hjemmemappen din. Sørg for å sikkerhetskopiere den nåværende
+        <filename>.xinitrc</filename> før du fortsetter.
       </para>
 
 <screen><userinput>echo "exec sxwm" &gt;&gt; ~/.xinitrc</userinput></screen>
@@ -109,19 +109,19 @@ cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
           sxwm
         </seg>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           /usr/share/xsessions
@@ -130,7 +130,7 @@ cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -138,7 +138,7 @@ cp -v /usr/share/sxwmrc ~/.config/sxwmrc</userinput></screen>
         <term><command>sxwm</command></term>
         <listitem>
           <para>
-            is the sxwm Window Manager
+            er sxwm vindusbehandleren
           </para>
           <indexterm zone="sxwm-wm sxwm-bin">
             <primary sortas="b-sxwm-bin">sxwm</primary>
