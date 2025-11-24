@@ -21,41 +21,41 @@
     <title>Introduction to wf-config</title>
 
     <para>
-      The wf-config package provides a library that manages configuration files
-      for <xref linkend="wayfire"/>.
+      Pakken wf-config tilbyr et bibliotek som administrerer 
+      konfigurasjonsfiler for <xref linkend="wayfire"/>.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Download (HTTP): <ulink url="&wf-config-download-http;"/>
+          Nedlasting (HTTP): <ulink url="&wf-config-download-http;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">wf-config Dependencies</bridgehead>
+    <bridgehead renderas="sect3">wf-config Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Required</bridgehead>
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/glm.html">GLM</ulink>,
-      <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>, and
+      <ulink url="&blfs-svn;/x/x7driver.html#libevdev">libevdev</ulink>, og
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>
     </para>
 
-    <bridgehead renderas="sect4">Optional</bridgehead>
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="https://github.com/doctest/doctest">doctest</ulink> (for
-      tests)
+      tester)
     </para>
 
   </sect2>
 
   <sect2 role="installation">
-    <title>Installation of wf-config</title>
+    <title>Installasjon av wf-config</title>
 
     <para>
-      Install wf-config by running the following
-      commands:
+      Installer wf-config ved å kjøre følgende 
+      kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -69,7 +69,7 @@ meson setup --prefix=/usr       \
 ninja</userinput></screen>
 
     <para>
-      Now, as the &root; user:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
@@ -77,16 +77,16 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="content">
-    <title>Contents</title>
+    <title>Innhold</title>
 
     <segmentedlist>
-      <segtitle>Installed Programs</segtitle>
-      <segtitle>Installed Libraries</segtitle>
-      <segtitle>Installed Directories</segtitle>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
-          None
+          Ingen
         </seg>
         <seg>
           libwf-config
@@ -98,7 +98,7 @@ ninja</userinput></screen>
     </segmentedlist>
 
     <variablelist>
-      <bridgehead renderas="sect3">Short Descriptions</bridgehead>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
@@ -106,7 +106,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libwf-config</filename></term>
         <listitem>
           <para>
-            provides functions that manage configuration files
+            tilbyr funksjoner som administrerer konfigurasjonsfiler
           </para>
           <indexterm zone="wf-config libwf-config">
             <primary sortas="c-libwf-config">wf-config</primary>
