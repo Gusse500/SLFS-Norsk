@@ -11,7 +11,7 @@
   <title>sxwm</title>
 
   <para>
-    This chapter is dedicated to installing sxwm.
+    Dette kapittelet er dedikert til installasjon av sxwm.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="sxwm-wm.xml"/>
