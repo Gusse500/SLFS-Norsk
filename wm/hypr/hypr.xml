@@ -11,8 +11,8 @@
   <title>Hypr</title>
 
   <para>
-    This chapter is dedicated to installing packages from the Hypr/Hyprland
-    ecosystem, including Hyprland itself.
+    Dette kapittelet er dedikert til å installere pakker fra Hypr/Hyprland 
+    økosystemet, inkludert Hyprland selv.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="hyprlib.xml"/>
