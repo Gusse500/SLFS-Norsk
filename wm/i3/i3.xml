@@ -11,7 +11,7 @@
   <title>i3</title>
 
   <para>
-    This chapter is dedicated to installing i3 and its dependencies.
+    Dette kapittelet er dedikert til installasjon av i3 og dets avhengigheter.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="i3-wm.xml"/>
