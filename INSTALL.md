@@ -1,6 +1,6 @@
 # Ok, så du har lastet ned XML kildekoden. Hva nå?
 
-Du ønsker sannsynligvis å konvertere disse XML filene til enklere å lese HTML.
+Du ønsker sannsynligvis å konvertere disse XML filene til HTML som er enklere å lese.
 
 For å installere programmene du trenger for å generere HTML, må du ha eller 
 installere følgende pakker:
