@@ -49,7 +49,7 @@
       <ulink url="&blfs-svn;/x/libdrm.html">libdrm</ulink>,
       <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
       <ulink url="&blfs-svn;/x/libxcb.html">libxcb</ulink>, og
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
     </para>
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>

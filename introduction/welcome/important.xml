@@ -31,14 +31,14 @@
     <title>Init Systemet</title>
 
     <para revision="sysv">
-      Denne versjonen av boken er ment for SysV LFS systemer. Systemd versjonen 
+      Denne versjonen av boken er ment for SysV LFS systemer. <!--Systemd versjonen 
       av boken kan ikke vises på nett av &copyholder; på grunn av begrensninger 
       på Github Pages. Derfor må du laste ned eller gjengi boken selv. Følg 
       instruksjonene <ulink url="&slfs-repo;">SLFS rendering
       instructions</ulink> for å kunne gjengi boken selv. Du trenger
       <ulink url="&blfs-svn;/general/git.html">Git</ulink> å klone depotet. Du 
       kan laste ned boken <ulink
-      url="&slfs-repo;/releases">her</ulink>.
+      url="&slfs-repo;/releases">her</ulink>.-->
     </para>
 
     <para revision="systemd">
@@ -60,7 +60,7 @@
       ikke. Som et utgangspunkt kan du se <ulink
       url="&slfs-repo;/releases/tag/12.4">SLFS 12.4</ulink> og se hvordan du går 
       frem for å fikse det som er ødelagt. Se <ulink
-      url="&glfs-website;/shareddeps/aboutgl.html">GLFS: Om OpenGL</ulink>
+      url="&glfs-website;/shareddeps/view/svn/aboutgl.html">GLFS: Om OpenGL</ulink>
       for mer informasjon om hvorfor støtte for Mesas OpenGL implementeringer 
       har blitt fjernet fra både denne boken og GLFS.
     </para>

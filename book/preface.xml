@@ -5,7 +5,7 @@
   %general-entities;
 ]>
 
-<preface id="preface" xreflabel="Preface">
+<preface id="preface" xreflabel="Forord">
   <?dbhtml filename="preface.html" dir="preface"?>
 
   <title>Forord</title>

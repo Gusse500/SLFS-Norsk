@@ -21,7 +21,7 @@
     <title>Introduksjon til glaze</title>
 
     <para>
-      glaze pakken tilbyr en header-basert JSON og et 
+      glaze pakken tilbyr en header basert JSON og et 
       grensesnittbibliotek i minnet for C++.
     </para>
 

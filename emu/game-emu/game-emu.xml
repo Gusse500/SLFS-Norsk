@@ -8,10 +8,10 @@
 <chapter id="game-emu">
   <?dbhtml filename="game-emu.html"?>
 
-  <title>Video Game Emulators</title>
+  <title>Videospillemulatorer</title>
 
   <para>
-    This chapter is dedicated to installing video game emulators.
+    Dette kapittelet er dedikert til å installere videospillemulatorer.
   </para>
 
   <!-- NDS -->

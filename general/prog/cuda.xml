@@ -44,9 +44,9 @@
       Nedlastingsstørrelsen er over 5G, så du bør vurdere om 
       og når du vil laste ned denne kjørefilen. Av denne grunn 
       anbefales det ikke å laste den ned når du bruker begrenset 
-      hotspot-data. Størrelsen kan i stor grad tilskrives at den 
+      hotspot data. Størrelsen kan i stor grad tilskrives at den 
       inneholder kompilatorer samt NVIDIA driveren. Driveren utgjør 
-      bare 10 % av runfilens størrelse.
+      bare 10 % av kjørefilens størrelse.
     </para></note>
 
 <!--
@@ -141,7 +141,7 @@ rm -rf cuda_&cuda-version;_&cuda-nvidia-version;_linux</userinput></screen>
 <screen role="nodump"><userinput>exit</userinput></screen>
 
     <para>
-      Som &root; bruker, tillate bruk av nye kompilatorer:
+      Som &root; bruker, tillat bruk av den nye kompilatorer:
     </para>
 
 <screen role="root"><userinput>sed -e "/.*unsupported GNU version.*/d" \

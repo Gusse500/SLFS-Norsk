@@ -53,7 +53,7 @@
       <ulink url="&blfs-svn;/general/freetype.html">FreeType</ulink>,
       <ulink url="&blfs-svn;/general/fribidi.html">FriBidi</ulink>,
       <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>, og
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
     </para>
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>

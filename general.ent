@@ -101,7 +101,8 @@
 <!ENTITY man                  "https://man.archlinux.org/man/">
 
 
-<!ENTITY slfs-repo            "https://github.com/glfs-book/slfs">
+<!ENTITY slfs-repo            "https://github.com/Gusse500/SLFS-Norsk">
+<!ENTITY slfs-repo-rendet     "https://lfs.freding.no/slfs/index.html">
 <!ENTITY slfs-issues          "&slfs-repo;/issues">
 <!ENTITY slfs-pull            "&slfs-repo;/pull">
 
@@ -122,8 +123,8 @@
   Denne boken, som er tilgjengelig på nett, er i konstant strøm av oppdateringer, og oppdateres 
   omtrent like ofte som BLFS Git/SVN-versjonen. Selv om det ikke finnes en synlig nettversjon 
   av den stabile utgivelsen, kan du enten gjengi den selv ved å følge
-  <ulink url='&slfs-repo;'/>, eller du kan laste ned en <ulink
-  url='&slfs-repo;/releases'>release</ulink>.
+  <ulink url='&slfs-repo;'/>, eller du lese på nettet <ulink
+  url='&slfs-repo-rendet;'>slfs-norsk</ulink>.
 </para>">
 ]]>
 <![ %release; [
