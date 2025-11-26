@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY sdl-download-http "https://github.com/libsdl-org/sdl12-compat/archive/release-&sdl-version;/sdl12-compat-release-&sdl-version;.tar.gz">
+]>
+
+<sect1 id="sdl" xreflabel="sdl12-compat-&sdl-version;">
+  <?dbhtml filename="sdl.html"?>
+
+  <title>sdl12-compat-&sdl-version;</title>
+
+  <indexterm zone="sdl">
+    <primary sortas="a-SDL">SDL</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til sdl12-compat</title>
+
+    <para>
+      Denne pakken tilbyr et SDL-1.2 kompatibilitetslag som bruker SDL-2 som et 
+      bakstykke til pakker som trenger det.
+    </para>
+
+    <bridgehead renderas="sect3">Pakkeinformasjon</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&sdl-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">SDL Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <ulink url="&glfs-website;/shareddeps/glu.html">GLU</ulink>, og
+      &sdl2;
+    </para>
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av sdl12-compat</title>
+
+    <para>
+      Installer <application>sdl12-compat</application> ved å kjøre 
+      følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=RELEASE  \
+      -D SDL12TESTS=OFF            \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+rm -vf /usr/lib/libSDLmain.a</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+    <para><parameter>-D SDL12TESTS=OFF</parameter>: Denne parameteren 
+    deaktiverer bygging av flere tester.</para>
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>sdl-config</seg>
+        <seg>libSDL</seg>
+        <seg>/usr/include/SDL</seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="sdl-config">
+        <term><command>sdl-config</command></term>
+        <listitem>
+          <para>
+            bestemmer kompilerings og lenker flaggene som skal brukes til å 
+            kompilere og lenke programmer som bruker
+            <filename class="libraryfile">libSDL</filename>
+          </para>
+          <indexterm zone="sdl sdl-config">
+            <primary sortas="b-sdl-config">sdl-config</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libsdl">
+        <term><filename class="libraryfile">libSDL</filename></term>
+        <listitem>
+          <para>
+            inneholder funksjoner som gir kompatibilitet for SDL 1.2
+          </para>
+          <indexterm zone="sdl libsdl">
+            <primary sortas="c-libsdl">libSDL</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
