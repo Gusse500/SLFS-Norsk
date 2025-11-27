@@ -43,6 +43,10 @@
       <para>26. november 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - FluidSynth: Lagt til. Fikser
+          <ulink url="&slfs-issues;/390">#390</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - sdl12-compat: Lagt til, trengs av idle.</para>
         </listitem>
       </itemizedlist>

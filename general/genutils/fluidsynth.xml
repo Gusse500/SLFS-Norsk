@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY fluidsynth-archive
+    "https://github.com/FluidSynth/fluidsynth/archive">
+  <!ENTITY fluidsynth-download-http
+    "&fluidsynth-archive;/v&fluidsynth-version;/fluidsynth-&fluidsynth-version;.tar.gz">
+  <!ENTITY fs-gcem-sub
+    "https://github.com/kthohr/gcem/archive/&fs-gcem;/gcem-&fs-gcem;.tar.gz">
+  <!ENTITY fs-sf2-dl
+    "https://deb.debian.org/debian/pool/main/f/fluid-soundfont/fluid-soundfont_&fs-sf2;.orig.tar.gz">
+]>
+
+<sect1 id="fluidsynth" xreflabel="FluidSynth-&fluidsynth-version;">
+  <?dbhtml filename="fluidsynth.html"?>
+
+  <title>FluidSynth-&fluidsynth-version;</title>
+
+  <indexterm zone="fluidsynth">
+    <primary sortas="a-fluidsynth">FluidSynth</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til FluidSynth</title>
+
+    <para>
+      FluidSynth tilbyr en SoundFont 2 og 3 programvaresynthesizer. Den kan ta 
+      imot MIDI inngang og spille av MIDI filer. Flere pakker bruker denne 
+      pakken for både MIDI inngang og avspillingsmuligheter.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&fluidsynth-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Påkrevd undermodul:
+          <ulink url="&fs-gcem-sub;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+    <para>Du trenger minst én SoundFont/bank ved kjøring, som FluidSynth 
+    bruker. Hvilken du vil ha er opp til personlig preferanse og dine behov. 
+    Følgende nedlasting inneholder to generiske banker du kan 
+    bruke.</para>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Anbefalt SoundFont:
+          <ulink url="&fs-sf2-dl;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">FluidSynth Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+      og en av
+      <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
+      <ulink url="&blfs-svn;/multimedia/pipewire.html">Pipewire</ulink>, og/eller
+      <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
+      <xref linkend="ladspa-sdk"/>,
+      <ulink url="&blfs-svn;/multimedia/libsndfile.html">libsndfile</ulink>, og
+      &sdl3;
+    </para>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/jack2/">Jack2</ulink>, og
+      <ulink url="&arch-pkgs;/extra/x86_64/portaudio/">PortAudio</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av FluidSynth</title>
+
+    <para>
+      Etter at du har pakket ut FluidSynth tarballen og åpnet mappen, 
+      pakker du ut den nødvendige GCEM undermodulen:
+    </para>
+
+<screen remap="pre"><userinput>tar -xf ../gcem-&fs-gcem;.tar.gz &amp;&amp;
+mv -T gcem-&fs-gcem; gcem</userinput></screen>
+
+    <para>
+      Installer FluidSynth ved å kjøre følgende 
+      kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr             \
+      -D CMAKE_BUILD_TYPE=Release              \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON           \
+      -D FLUID_DAEMON_ENV_FILE=/etc/fluidsynth \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install </userinput><phrase revision="systemd"><userinput>                                  </userinput></phrase><userinput>&amp;&amp;
+cp -v fluidsynth.conf </userinput><phrase revision="systemd"><userinput>    </userinput></phrase><userinput>/etc/fluidsynth</userinput><phrase revision="systemd"><userinput>       &amp;&amp;
+cp -v fluidsynth.service  /usr/lib/systemd/user &amp;&amp;
+cp -v fluidsynth.tmpfiles /usr/lib/tmpfiles.d/fluidsynth.conf</userinput></phrase></screen>
+
+    <para>
+      For at FluidSynth skal kunne levere instrumentaler under MIDI avspilling, 
+      trenger den en SoundFont, eller en bank eller samling av banker, for å 
+      levere instrumentene.
+    </para>
+
+    <para>
+      Installer den anbefalte SoundFonts som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>tar -xf ../../fluid-soundfont_&fs-sf2;.orig.tar.gz &amp;&amp;
+install -vdm755 /usr/share/soundfonts         &amp;&amp;
+install -vm644  fluid-soundfont-&fs-sf2;/*.sf2 /usr/share/soundfonts</userinput></screen>
+
+    <para>
+      Som standard vil FluidSynth lese fra
+      <filename>/usr/share/soundfonts/default.sf2</filename> med mindre annet er 
+      spesifisert Det er opp til deg å bestemme hvilken SoundFont du vil angi 
+      som standard. Oppretting av symlinken må gjøres som &root;, som dette:
+    </para>
+
+<screen role="root" remap="nodump"><userinput>ln -svf <replaceable>&lt;SOUNDFONT&gt;</replaceable> /usr/share/soundfonts/default.sf2</userinput></screen>
+
+    <important><para>
+      Hvis du distribuerer, må du lese lisensene til lydfontene du installerer 
+      for å sikre at de kan distribueres.
+    </para></important>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Konfigurere FluidSynth</title>
+
+    <sect3 id="fluidsynth-config">
+      <title>Konfigurasjonsfiler</title>
+      <para>
+        <filename>~/.config/fluidsynth</filename> og
+        <filename>/etc/fluidsynth</filename>
+      </para>
+
+      <indexterm zone="fluidsynth fluidsynth-config">
+        <primary sortas="e-AA.config-fluidsynth">~/.config/fluidsynth</primary>
+      </indexterm>
+
+      <indexterm zone="fluidsynth fluidsynth-config">
+        <primary
+        sortas="e-etc-fluidsynth">/etc/fluidsynth</primary>
+      </indexterm>
+    </sect3>
+
+    <sect3 revision="systemd">
+      <title>Konfigurasjonsinformasjon</title>
+
+      <para>
+        Standardkonfigurasjonsfilen for hele systemet er
+        <filename>/etc/fluidsynth</filename> og bør redigeres som &root; for å 
+        dekke dine behov. Imidlertid kan en konfigurasjonsfil per bruker også 
+        opprettes med følgende kommando:
+      </para>
+
+<screen><userinput>mkdir -pv ~/.config &amp;&amp;
+cp -v /etc/fluidsynth ~/.config/fluidsynth</userinput></screen>
+
+      <para>
+        Det viktigste du bør redigere er soundfont banen hvis du ikke har 
+        opprettet standard SoundFont symbolkobling og oppstartsflaggene. For 
+        eksempel vil den som standard prøve å bruke ALSA, og avhengig av 
+        konfigurasjonen vil dette sannsynligvis mislykkes. Du kan i stedet bruke 
+        PulseAudio eller Pipewire. Du kan også endre andre ting.
+      </para>
+
+      <note><para>
+        Disse filene påvirker bare FluidSynth når det starter opp automatisk som 
+        en Systemd tjeneste. Hvis du kjører FluidSynth manuelt, må du spesifisere 
+        alle alternativene, da det ikke vil referere til noen av konfigurasjonsfilene.
+      </para></note>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="using">
+    <title>Bruke FluidSynth</title>
+
+    <para>
+      For noen applikasjoner som bruker FluidSynth, forventer de at det skal 
+      kjøre før applikasjonen startes. Hvis FluidSynth startes etter dette, kan 
+      det hende at applikasjonen ikke kan nå FluidSynth.
+    </para>
+
+    <para>
+      RoseGarden oppfører seg på denne måten, både fra kildekoden og som en Flatpak, 
+      men når FluidSynth er startet på forhånd, kan RoseGarden bruke FluidSynth.
+    </para>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    &cmake-skip-install-rpath;
+
+    <para><parameter>-D FLUID_DAEMON_ENV_FILE=/etc/fluidsynth</parameter>: Denne 
+    parameteren gjør konfigurasjonsfilen hardkodet til å være i en enkel sti.</para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          fluidsynth
+        </seg>
+        <seg>
+          libfluidsynth
+        </seg>
+        <seg>
+          /usr/include/fluidsynth,
+          /usr/lib/cmake/fluidsynth, og
+          /usr/share/soundfonts
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="fluidsynth-bin">
+        <term><command>fluidsynth</command></term>
+        <listitem>
+          <para>
+            er en SoundFont MIDI synthesizer
+          </para>
+          <indexterm zone="fluidsynth fluidsynth-bin">
+            <primary sortas="b-fluidsynth-bin">fluidsynth</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libfluidsynth">
+        <term><filename class="libraryfile">libfluidsynth</filename></term>
+        <listitem>
+          <para>
+            lar pakker syntetisere MIDI
+          </para>
+          <indexterm zone="fluidsynth libfluidsynth">
+            <primary sortas="c-libfluidsynth">libfluidsynth</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
