@@ -49,8 +49,9 @@
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>,
-      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>, og
-      <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink>
+      <ulink url="&blfs-svn;/multimedia/ffmpeg.html">FFmpeg</ulink>,
+      <ulink url="&blfs-svn;/postlfs/make-ca.html">make-ca</ulink>, og
+      <ulink url="&blfs-svn;/general/nodejs.html">Node.js</ulink>
     </para>
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
@@ -78,6 +79,31 @@
     </para>
 
     <screen role="root"><userinput>&install-wheel; yt_dlp</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Konfigurere yt-dlp</title>
+
+    <para>
+      YouTube har gjort det slik at JavaScript utfordringer må utføres for å 
+      hente fra nettstedet deres. Hvis du laster ned YouTube videoer med denne 
+      pakken, last ned en JavaScript kjøretid/motor som <ulink
+      url="&blfs-svn;/general/nodejs.html">Node.js</ulink>. Følgende 
+      instruksjoner forutsetter at du har det installert. Deretter oppretter du 
+      en systemkonfigurasjonsfil som ber yt-dlp om å bruke Node.js for JS 
+      utfordringer og automatisk laste ned de nødvendige utfordringsskriptene, 
+      som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>cat &gt; /etc/yt-dlp.conf &lt;&lt; EOF
+<literal>--js-runtimes node --remote-components ejs:github</literal>
+EOF</userinput></screen>
+
+    <para>
+      Nå vil yt-dlp bruke Node.js til å løse JS utfordringer ved nedlasting av 
+      YouTube videoer, og automatisk laste ned skript av yt-dlp for å gjøre det.
+    </para>
 
   </sect2>
 
