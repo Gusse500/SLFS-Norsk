@@ -40,6 +40,61 @@
     -->
 
     <listitem>
+      <para>29. november 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - aquamarine: 0.9.5 -&gt; 0.10.0. Fikser
+          <ulink url="&slfs-issues;/400">#400</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.3.0 -&gt; 0.4.0. Fikser
+          <ulink url="&slfs-issues;/402">#402</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.3.0 -&gt; 0.4.0. Fikser
+          <ulink url="&slfs-issues;/403">#403</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.10.2 -&gt; 0.10.4. Fikser
+          <ulink url="&slfs-issues;/404">#404</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - fish: Lagt til.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - wlr-randr: Lagt til. Fikser
+          <ulink url="&slfs-issues;/377">#377</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - glaze: 6.0.3 -&gt; 6.1.0. Fikser
+          <ulink url="&slfs-issues;/401">#401</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - tmux: 3.5a -&gt; 3.6. Fikser
+          <ulink url="&slfs-issues;/407">#407</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>28. november 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - fcitx5-anthy: 5.1.7 -&gt; 5.1.8. Fikser
+          <ulink url="&slfs-issues;/364">#364</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcitx5-table-extra: 5.1.8 -&gt; 5.1.9. Fikser
+          <ulink url="&slfs-issues;/365">#365</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2025.10.22 -> 2025.11.12. Fikser
+          <ulink url="&slfs-issues;/381">#381</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>26. november 2025</para>
       <itemizedlist>
         <listitem>
