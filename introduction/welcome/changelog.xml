@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>29. november 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - tmux: 3.5a -&gt; 3.6. Fikser
+          <ulink url="&slfs-issues;/407">#407</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>28. november 2025</para>
       <itemizedlist>
         <listitem>
