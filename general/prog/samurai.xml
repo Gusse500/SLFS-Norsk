@@ -58,7 +58,7 @@
 
       <para>
         Hvis du vil at <command>samu</command> skal brukes når som helst
-        <command>ninja</command> kjøres, flytt den originale Ninja kopien ut av 
+        <command>ninja</command> kjøres, flytt den originale Ninja ut av 
         veien og lag en symbolkobling som &root; bruker:
       </para>
 
@@ -68,15 +68,14 @@ ln -svf samu /usr/bin/ninja</userinput></screen>
       <para>
         <command>samu</command> vil ikke kjøre på alle logiske CPU-er eller 
         tråder som standard, i likhet med <command>make</command>. 
-        Forutsetningen for å få det til å gjøre er den samme prosessen: utsted
+        Prosessen for å få det til å gjøre er den samme: utsted
         <literal>-j<replaceable>&lt;x&gt;</replaceable></literal>, hvor
         <literal><replaceable>&lt;x&gt;</replaceable></literal> er antallet 
         logiske CPU-er du ønsker å bruke, når <command>samu</command> (eller
         <command>ninja</command> hvis du lagde den symbolske lenken) kjøres. Du 
-        kan unngå å måtte spesifisere det hver gang ved å sette
+        kan unngå å måtte spesifisere det hver gang ved å inkludere
         <envar>SAMUFLAGS</envar> og inkludere
-        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal> til det, 
-        som dette:
+        <literal>-j<replaceable>&lt;x&gt;</replaceable></literal> til det, som dette:
       </para>
 
 <screen><computeroutput>export SAMUFLAGS=-j$(nproc)</computeroutput></screen>
@@ -90,9 +89,9 @@ ln -svf samu /usr/bin/ninja</userinput></screen>
       <screen><userinput>export SAMUFLAGS=$MAKEFLAGS</userinput></screen>
 
       <para>
-        Legg det til i et Bash profilskript som
-        <filename>~/.bash_profile</filename> for å unngå å måtte sette den opp 
-        etter hver innlogging.
+        Hvis du vil unngå å manuelt sette <envar>SAMUFLAGS</envar> hver gang du 
+        logger inn, legg det til i et Bash profilskript som
+        <filename>~/.bash_profile</filename>.
       </para>
 
     </sect3>
