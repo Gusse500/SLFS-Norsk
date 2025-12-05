@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY faad2-archive
+    "https://github.com/knik0/faad2/archive">
+  <!ENTITY faad2-download-http
+    "&faad2-archive;/&faad2-version;/faad2-&faad2-version;.tar.gz">
+]>
+
+<sect1 id="faad2" xreflabel="FAAD2-&faad2-version;">
+  <?dbhtml filename="faad2.html"?>
+
+  <title>FAAD2-&faad2-version;</title>
+
+  <indexterm zone="faad2">
+    <primary sortas="a-faad2">FAAD2</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til FAAD2</title>
+
+    <para>
+      FAAD2 tilbyr en gratis AAC dekoder.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&faad2-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">FAAD2 Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av FAAD2</title>
+
+    <para>
+      Installer FAAD2 ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+    <screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    &cmake-skip-install-rpath;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          faad
+        </seg>
+        <seg>
+          libfaad_drm og
+          libfaad
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="faad">
+        <term><command>faad</command></term>
+        <listitem>
+          <para>
+            dekoder AAC filer
+          </para>
+          <indexterm zone="faad2 faad">
+            <primary sortas="b-faad">faad</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libfaad_drm">
+        <term><filename class="libraryfile">libfaad_drm</filename></term>
+        <listitem>
+          <para>
+            inneholder funksjoner for dekoding av AAC filer som er begrenset av 
+            DRM
+          </para>
+          <indexterm zone="faad2 libfaad_drm">
+            <primary sortas="c-libfaad_drm">libfaad_drm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libfaad">
+        <term><filename class="libraryfile">libfaad</filename></term>
+        <listitem>
+          <para>
+            tilbyr funksjoner for dekoding av AAC filer
+          </para>
+          <indexterm zone="faad2 libfaad">
+            <primary sortas="c-libfaad">libfaad</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
