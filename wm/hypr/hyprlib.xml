@@ -222,7 +222,9 @@ done</userinput></screen>
           hyprcursor-util,
           hyprland-dialog,
           hyprland-donate-screen,
-          hyprland-update-screen, og
+          hyprland-update-screen,
+          hyprland-welcome,
+          hyprland-run, og
           hyprwayland-scanner
         </seg>
         <seg>
@@ -297,6 +299,33 @@ done</userinput></screen>
           </para>
           <indexterm zone="hyprlib hyprland-update-screen">
             <primary sortas="b-hyprland-update-screen">hyprland-update-screen</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprland-welcome">
+        <term><command>hyprland-welcome</command></term>
+        <listitem>
+          <para>
+            viser en popup-boks som veileder brukeren gjennom oppsettet av 
+            Hyprland ved hjelp av Qt-6
+          </para>
+          <indexterm zone="hyprlib hyprland-welcome">
+            <primary sortas="b-hyprland-welcome">hyprland-welcome</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hyprland-run">
+        <term><command>hyprland-run</command></term>
+        <listitem>
+          <para>
+            viser en popup-boks som kan kjøre et gitt program i 
+            <envar>PATH</envar> ved bruk av Qt-6 (ikke en god erstatning for 
+            <xref linkend="rofi"/> eller andre startere)
+          </para>
+          <indexterm zone="hyprlib hyprland-run">
+            <primary sortas="b-hyprland-run">hyprland-run</primary>
           </indexterm>
         </listitem>
       </varlistentry>
