@@ -27,6 +27,15 @@
       bruksområde for opptak.
     </para>
 
+    <important><para>
+      Denne pakken er ødelagt med versjoner av Qt-6.10 og nyere. Bruk 6.9.x for 
+      å fikse byggingen. Videre vil oppdaterte versjoner av OBS få feil når de 
+      lanseres. SLFS redigererne ser fortsatt på disse problemene og etter 
+      mulige rettelser. Hvis du vet hvordan du fikser denne pakken, vennligst 
+      send et svar på SLFS problemet. <ulink url="&slfs-issues;/324">#324 
+      (OBS-Studio: &obs-studio-version; -&gt; 32.0.3)</ulink>.
+    </para></important>
+
     &long-build-time;
 
     <itemizedlist spacing="compact">
