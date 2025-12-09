@@ -99,6 +99,8 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
 
+    &meson-buildtype-release;
+
     <para>
       <command>mv -v /usr/share/doc/i3{,-&i3-version;}</command>: Denne kommandoen 
       gjør at dokumentmappen versjoneres slik at den er konsistent med andre pakker.

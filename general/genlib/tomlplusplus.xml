@@ -65,6 +65,9 @@ ninja</userinput></screen>
 
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
+
+    &meson-buildtype-release;
+
     <para><option>-D generate_cmake_config=false</option>: Dette alternativet 
     deaktiverer avhengighet av CMake, men genererer derfor ikke CMake 
     find_package filer som noen byggesystemer krever.</para>

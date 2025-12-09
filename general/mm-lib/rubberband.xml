@@ -105,6 +105,8 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
 
+    &meson-buildtype-release;
+
     <para>
       <option>-D resampler=</option>: Dette alternativet kan brukes til å 
       spesifisere resampleren som skal brukes. Som standard vil den bruke den 
