@@ -21,9 +21,8 @@
     <title>Introduksjon til inxi</title>
 
     <para>
-      Inxi pakken tilbyr et kommandolinjeprogram 
-      som henter informasjon om systemet du ber om 
-      via et Perl skript.
+      Inxi pakken tilbyr et kommandolinjeprogram som henter informasjon om 
+      systemet du ber om via et Perl skript.
     </para>
 
     <itemizedlist spacing="compact">
@@ -72,13 +71,13 @@
       Som &root; bruker, installer pakken:
     </para>
 
-<screen role="root"><userinput>install -vm755 inxi /usr/bin</userinput></screen>
+<screen role="root"><userinput>install -vDm755 inxi -t /usr/bin/</userinput></screen>
 
     <para>
       Installer dokumentasjonen som &root; bruker:
     </para>
 
-<screen role="root"><userinput>install -vm644 inxi.1 /usr/share/man/man1</userinput></screen>
+<screen role="root"><userinput>install -vDm644 inxi.1 -t /usr/share/man/man1/</userinput></screen>
 
   </sect2>
 

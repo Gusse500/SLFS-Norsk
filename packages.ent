@@ -58,9 +58,9 @@
 <!ENTITY fluidsynth-version                  "2.5.1">
 <!ENTITY fs-gcem                             "012ae73c6d0a2cb09ffe86475f5c6fba3926e200">
 <!ENTITY fs-sf2                              "3.1">
-<!ENTITY imv-version                         "5.0.0">
+<!ENTITY imv-version                         "5.0.1">
 <!ENTITY inxi-rev                            "1">
-<!ENTITY inxi-version                        "3.3.39-&inxi-rev;">
+<!ENTITY inxi-version                        "3.3.40-&inxi-rev;">
 <!ENTITY jstest-sdl-minor-version            "710687">
 <!ENTITY jstest-sdl-version                  "710687344a8bd35553f0edf40469531c07b6ef31">
 <!ENTITY lotus123-version                    "1.0.0rc4">
@@ -119,7 +119,7 @@ version, so keep this at that. -->
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "25.5.0">
-<!ENTITY platformdirs-version                "4.5.0">
+<!ENTITY platformdirs-version                "4.5.1">
 <!ENTITY pycurl-version                      "7.45.7">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.2">

@@ -40,6 +40,24 @@
     -->
 
     <listitem>
+      <para>8. desember 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - platformdirs: 4.5.0 -&gt; 4.5.1. Fikser
+          <ulink url="&slfs-issues;/423">#423</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - imv: 5.0.0 -&gt; 5.0.1. Fikser
+          <ulink url="&slfs-issues;/420">#420</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - inxi: 3.3.39-1 -&gt; 3.3.40-1. Fikser
+          <ulink url="&slfs-issues;/422">#422</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>6. desember 2025</para>
       <itemizedlist>
         <listitem>
