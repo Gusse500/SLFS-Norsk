@@ -33,14 +33,9 @@
 
     <tip><para>
       Når det gjelder kdenlive, avhenger det av
-      <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effekter. Som 
-      sådan trenger du ikke å rekompilere kdenlive, 
-      men du må rekompilere MLT med rubberbandstøtte. 
-      For øyeblikket, oppdager MLT automatisk om 
-      rubberband er til stede, og vil aktivere 
-      støtten automatisk under konfigurasjonen, 
-      så ingen ytterligere alternativer er 
-      nødvendige.
+      <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effekter. Som, 
+      du trenger ikke å rekompilere kdenlive, men du må rekompilere MLT uten 
+      <parameter>-D MOD_RUBBERBAND=OFF</parameter> parameteren.
     </para></tip>
 
     <itemizedlist spacing="compact">
