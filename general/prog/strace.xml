@@ -38,7 +38,10 @@
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>
+      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink> (for å 
+      spore stakkspor) og
+      <ulink url="&blfs-svn;/general/valgrind.html">valgrind</ulink> (hvis du 
+      kjører testpakken)
     </para>
 
   </sect2>
@@ -54,6 +57,10 @@
 <screen><userinput>./configure --prefix=/usr \
     --enable-mpers=no &amp;&amp;
 make</userinput></screen>
+
+    <para>
+      For å teste resultatene, utsted: <command>make check</command>
+    </para>
 
     <para>
       Nå, som &root; bruker:
