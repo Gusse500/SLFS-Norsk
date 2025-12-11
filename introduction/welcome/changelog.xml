@@ -43,6 +43,9 @@
       <para>10. desember 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - gnome.ent: Synkroniser med BLFS.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - strace: 6.17 -&gt; 6.18. Fikser
           <ulink url="&slfs-issues;/432">#432</ulink>.</para>
         </listitem>
