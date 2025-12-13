@@ -69,7 +69,8 @@
       </phrase>
       &gbm;,
       <xref linkend="glaze"/>,
-      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>,
+      <ulink url="&blfs-svn;/general/glib2.html">GLib2</ulink>
+      (med GObjectIntrospection),
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
       <xref linkend="hyprlib"/>,
       <ulink url="&blfs-svn;/general/libdisplay-info.html">libdisplay-info</ulink>,
@@ -88,14 +89,18 @@
       <xref linkend="tomlplusplus"/>,
       <ulink url="&blfs-svn;/x/vulkan-loader.html">Vulkan-Loader</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
-      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Verktøy</ulink>,
-      <xref linkend="xcb-util-errors"/>, og
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
+      <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>, og
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink><footnote><para>
+        Xorg biblioteker er nødvendige fordi Hyprland krever Xcursor støtte, 
+        levert av libXcursor i Xorg biblioteker. Selv om du deaktiverer Xwayland 
+        støtte, vil du fortsatt trenge Xorg biblioteker.
+      </para></footnote>
     </para>
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
+      <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Verktøy</ulink>,
+      <xref linkend="xcb-util-errors"/>, og
       <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
     </para>
 
