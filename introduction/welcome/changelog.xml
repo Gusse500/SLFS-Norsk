@@ -40,6 +40,46 @@
     -->
 
     <listitem>
+      <para>15. desember 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - yt-dlp: 2025.11.12 -&gt; 2025.12.08. Fikser
+          <ulink url="&slfs-issues;/431">#431</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xdg-desktop-portal-wlr: 0.8.0 -&gt; 0.8.1. Fikser
+          <ulink url="&slfs-issues;/430">#430</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.10.4 -&gt; 0.11.0. Fikser
+          <ulink url="&slfs-issues;/421">#421</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libjuice: 1.6.2 -&gt; 1.7.0. Fikser
+          <ulink url="&slfs-issues;/406">#406</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libdatachannel: 0.23.2 -&gt; 0.24.0. Fikser
+          <ulink url="&slfs-issues;/405">#405</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - FAAD2: Fjernet. Fikser
+          <ulink url="&slfs-issues;/433">#433</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>14. desember 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - fastfetch: 2.55.1 -&gt; 2.56.0. Fikser
+          <ulink url="&slfs-issues;/427">#427</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>10. desember 2025</para>
       <itemizedlist>
         <listitem>
