@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>15. desember 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - FAAD2: Fjernet. Fikser
+          <ulink url="&slfs-issues;/433">#433</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>14. desember 2025</para>
       <itemizedlist>
         <listitem>
