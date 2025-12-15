@@ -93,7 +93,6 @@ cd    build &amp;&amp;
 cmake -D CMAKE_INSTALL_PREFIX=/usr        \
       -D CMAKE_BUILD_TYPE=Release         \
       -D CMAKE_SKIP_INSTALL_RPATH=ON      \
-      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
       -D USE_GNUTLS=0                     \
       -D USE_NICE=0                       \
       -D USE_SYSTEM_JUICE=1               \
@@ -116,11 +115,6 @@ ninja</userinput></screen>
     <title>Parameterforklaringer</title>
 
     &cmake-skip-install-rpath;
-
-    <para>
-      <parameter>-D CMAKE_POLICY_VERSION_MINIMUM=3.5</parameter>: Dette tillater 
-      bygging med nyere CMake versjoner.
-    </para>
 
     <para>
       <parameter>-D USE_GNUTLS=0</parameter>: Dette deaktiverer bygging mot den 
