@@ -38,7 +38,7 @@
 
       <para>Bygg modulen:</para>
 
-      &build-wheel;
+      &build-wheel-pep517;
 
       <para>
         Nå, som &root; bruker:
