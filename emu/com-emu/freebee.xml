@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY freebee-download-http "https://github.com/philpem/freebee/archive/&freebee-version;.zip">
+ <!ENTITY freebee-download-http "https://github.com/philpem/freebee/archive/&freebee-version;/freebee-&freebee-version;.tar.gz">
 ]>
 
 <sect1 id="freebee" xreflabel="FreeBee-&freebee-minor-version;">
@@ -38,7 +38,7 @@
       <listitem>
         <para>
           Nødvendig undermodul:
-          <ulink url="https://github.com/kstenerud/Musashi/archive/&musashi-submodule-version;.zip"/>
+          <ulink url="https://github.com/kstenerud/Musashi/archive/&musashi-submodule-version;/Musashi-&musashi-submodule-version;.tar.gz"/>
         </para>
       </listitem>
       <listitem>
@@ -60,7 +60,7 @@
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       &unzip;
-      (for å pakke ut distribusjonene) og
+      (for å pakke ut nødvendige ROMer) og
       &sdl2;
     </para>
 
@@ -70,12 +70,12 @@
     <title>Installasjon av FreeBee</title>
 
     <para>
-      Pakk ut musashi undermodulen på riktig sted:
+      Pakk ut Musashi undermodulen på riktig sted:
     </para>
 
-<screen><userinput>unzip ../&musashi-submodule-version;.zip -d src/ &amp;&amp;
-rmdir src/musashi &amp;&amp;
-mv src/Musashi-&musashi-submodule-version; src/musashi</userinput></screen>
+<screen><userinput>tar -xf ../Musashi-&musashi-submodule-version;.tar.gz &amp;&amp;
+mv -T Musashi-&musashi-submodule-version; \
+      src/musashi</userinput></screen>
 
     &extraction-unzip;
 

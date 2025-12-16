@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY p20-emu-download-http "https://github.com/Spritetm/plexus_20_emu/archive/&p20-emu-version;.zip">
+  <!ENTITY p20-emu-download-http "https://github.com/Spritetm/plexus_20_emu/archive/&p20-emu-version;/plexus_20_emu-&p20-emu-version;.tar.gz">
 ]>
 
 <sect1 id="p20-emu" xreflabel="p20-emu-&p20-emu-minor-version;">
@@ -21,8 +21,7 @@
     <title>Introduksjon til p20-emu</title>
 
     <para>
-      p20-emu pakken er en Plexus P/20
-      emulator.
+      p20-emu pakken er en Plexus P/20 emulator.
     </para>
 
     <itemizedlist spacing="compact">
@@ -63,18 +62,10 @@
 
     <bridgehead renderas="sect3">p20-emu Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Påkrevd</bridgehead>
-    <para role="required">
-      &unzip;
-      (for å pakke ut distribusjonene)
-    </para>
-
   </sect2>
 
   <sect2 role="installation">
     <title>Installasjon av p20-emu</title>
-
-    &extraction-unzip;
 
     <para>
       Bruk en oppdatering for å bygge uten feilsøkingsinformasjon, noe som gir 

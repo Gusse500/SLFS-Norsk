@@ -4,12 +4,11 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY pkgsuite-download-http "https://github.com/mamccollum/pkgsuite/archive/&pkgsuite-version;.zip">
+  <!ENTITY pkgsuite-download-http "https://github.com/mamccollum/pkgsuite/archive/&pkgsuite-version;/pkgsuite-&pkgsuite-version;.tar.gz">
 ]>
 
 <sect1 id="pkgsuite" xreflabel="pkgsuite-&pkgsuite-minor-version;">
   <?dbhtml filename="pkgsuite.html"?>
-
 
   <title>pkgsuite-&pkgsuite-minor-version;</title>
 
@@ -56,13 +55,11 @@
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      &unzip;
-      (for å pakke ut distribusjonen),
       <ulink url="&blfs-svn;/general/which.html">Which</ulink>
       <footnote><para>GNU Which er den som må 
       installeres, <emphasis>IKKE</emphasis> skallskriptet, ellers vil det 
       feile i stillhet og gi feil stier til kjørbare filer.
-      </para></footnote>, og
+      </para></footnote> og
       <xref linkend="heirloom-ng"/> (ved kjøretid)
     </para>
 
