@@ -4,12 +4,11 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY heirloom-doctools-download-http "https://github.com/n-t-roff/heirloom-doctools/archive/&heirloom-doctools-version;.zip">
+  <!ENTITY heirloom-doctools-download-http "https://github.com/n-t-roff/heirloom-doctools/archive/&heirloom-doctools-version;/heirloom-doctools-&heirloom-doctools-version;.tar.gz">
 ]>
 
 <sect1 id="heirloom-doctools" xreflabel="heirloom-doctools-&heirloom-doctools-minor-version;">
   <?dbhtml filename="heirloom-doctools.html"?>
-
 
   <title>heirloom-doctools-&heirloom-doctools-minor-version;</title>
 
@@ -40,9 +39,7 @@
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
-      &unzip;
-      (for å pakke ut distribusjonen),
-      <xref linkend="heirloom-ng"/>, og
+      <xref linkend="heirloom-ng"/> og
       <xref linkend="heirloom-devtools"/>
     </para>
 

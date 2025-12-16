@@ -43,6 +43,26 @@
       <para>15. desember 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - tornado: 6.5.2 -&gt; 6.5.3 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/440">#440</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - m17n: 1.8.5 -&gt; 1.8.6. Fikser
+          <ulink url="&slfs-issues;/438">#438</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 6.1.0 -&gt; 6.2.0. Fikser
+          <ulink url="&slfs-issues;/437">#437</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - socat: 1.8.0.3 -&gt; 1.8.1.0. Fikser
+          <ulink url="&slfs-issues;/439">#439</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Mbed-TLS: 3.6.4 -&gt; 3.6.5 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/428">#428</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - yt-dlp: 2025.11.12 -&gt; 2025.12.08. Fikser
           <ulink url="&slfs-issues;/431">#431</ulink>.</para>
         </listitem>
