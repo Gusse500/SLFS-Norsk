@@ -43,8 +43,6 @@
 <!ENTITY copyholder      "The GLFS Development Team">
 <!ENTITY lfs-domainname  "linuxfromscratch.org">
 <!ENTITY glfs-domainname "glfs-book.github.io">
-<!ENTITY norsklfs-domainname  "lfs.freding.no">
-<!ENTITY norskglfs-domainname "lfs.freding.no">
 
 <!ENTITY maintainer-fullname  "The GLFS Team">
 <!ENTITY maintainer-firstname "GLFS">
@@ -224,3 +222,6 @@ export -f as_root</userinput></screen>
 
 <!ENTITY % xinclude-entities SYSTEM "xent.ent">
 %xinclude-entities;
+
+<!ENTITY norsklfs-domainname  "lfs.freding.no">
+<!ENTITY norskglfs-domainname "lfs.freding.no">
