@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY mksh-download-http "https://mbsd.evolvis.org/MirOS/dist/mir/mksh/mksh-&mksh-version;.tgz">
+]>
+
+<sect1 id="mksh" xreflabel="mksh-&mksh-version;">
+  <?dbhtml filename="mksh.html"?>
+
+  <title>mksh-&mksh-version;</title>
+
+  <indexterm zone="mksh">
+    <primary sortas="a-mksh">mksh</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til mksh</title>
+
+    <para>
+      mksh pakken inneholder MirBSD Korn Shell, som er et lite, raskt og 
+      pålitelig skall som passer for både skripting og interaktiv bruk.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting (HTTP): <ulink url="&mksh-download-http;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">mksh Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/postlfs/ed.html">Ed</ulink> (for 3 tester)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av mksh</title>
+
+    <para>
+      Installer mksh ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>sh Build.sh -r</userinput></screen>
+
+    <para>
+        For å teste resultatene, utsted <command>./mksh test.sh</command>.
+    </para>
+
+    <para>
+      Nå som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 mksh   -t /usr/bin/ &amp;&amp;
+install -vDm644 mksh.1 -t /usr/share/man/man1/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Konfigurere mksh</title>
+
+    <sect3><title>Konfigurasjonsinformasjon</title>
+
+      <para>
+        Som &root; bruker, oppdater <filename>/etc/shells</filename> for å 
+        inkludere mksh skallet:
+      </para>
+
+<screen role="root"><userinput>cat &gt;&gt; /etc/shells &lt;&lt; "EOF"
+<literal>/usr/bin/mksh</literal>
+EOF</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          mksh
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="mksh-bin">
+        <term><command>mksh</command></term>
+        <listitem>
+          <para>
+            er MirBSD Korn Shell
+          </para>
+          <indexterm zone="mksh mksh">
+            <primary sortas="b-mksh">mksh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
