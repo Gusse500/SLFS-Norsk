@@ -29,7 +29,7 @@ git checkout stable
 
 Gjengi deretter boken med `make STAB=release [andre alternativer]`.
 
-Det finnes også [releases](https://github.com/glfs-book/slfs/releases) available
+Det finnes også [releases](https://github.com/glfs-book/slfs/releases) 
 tilgjengelig for nedlasting. Disse inneholder både SysV og Systemd utgavene av 
 boken som chunked HTML. Disse er på Engelsk.
 
