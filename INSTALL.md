@@ -9,4 +9,4 @@ XML filene til lesbar HTML. For å gjøre det trenger du følgende pakker:
 - tidy
 
 Installasjonsinstruksjoner for alle disse pakkene er tilgjengelige på
-[BLFS bok](https://lfs.freding.no/blfs/view/svn/).
+[BLFS bok](https://lfs.freding.no/blfs/read.html).
