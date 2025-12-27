@@ -43,6 +43,10 @@
       <para>25. desember 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Flyttet grafiske biblioteker til grafiske komponenter 
+          fra Generelle biblioteker og verktøy.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - SIMDe: Lagt til.</para>
         </listitem>
         <listitem>
