@@ -50,7 +50,7 @@
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="Optional">
-      <ulink url="&blfs-svn;/x/gtkmm4.html">Gtkmm4<ulink>,
+      <ulink url="&blfs-svn;/x/gtkmm4.html">Gtkmm4</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
       <ulink url="&blfs-svn;/general/wayland-protocols.html">wayland-protocols</ulink>
     </para>
