@@ -43,6 +43,10 @@
       <para>4. januar 2025</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - W3m: Lagt til. Fikser
+          <ulink url="&slfs-issues;/434">#434</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Hypr Biblioteker: La til hyprwire.</para>
         </listitem>
         <listitem>
