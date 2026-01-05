@@ -40,6 +40,55 @@
     -->
 
     <listitem>
+      <para>4. januar 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - W3m: Lagt til. Fikser
+          <ulink url="&slfs-issues;/434">#434</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hypr Biblioteker: La til hyprwire.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fcft: 3.3.2 -&gt; 3.3.3. Fikser
+          <ulink url="&slfs-issues;/473">#473</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprgraphics: 0.4.0 -&gt; 0.5.0. Fikser
+          <ulink url="&slfs-issues;/475">#475</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - MangoWC: 0.10.8 -&gt; 0.10.10. Fikser
+          <ulink url="&slfs-issues;/476">#476</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - glaze: 6.4.0 -&gt; 6.5.1. Fikser
+          <ulink url="&slfs-issues;/477">#477</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.52.2 -&gt; 0.53.0. Fikser
+          <ulink url="&slfs-issues;/478">#478</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprland-guiutils: 0.2.0 -&gt; 0.2.1. Fikser
+          <ulink url="&slfs-issues;/479">#479</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprtoolkit: 0.4.1 -&gt; 0.5.1. Fikser
+          <ulink url="&slfs-issues;/480">#480</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OpenTTD: 15.0-beta3 -&gt; 15.0. Fikser
+          <ulink url="&slfs-issues;/482">#482</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Dolphin: 2509 -&gt; 2512. Fikser
+          <ulink url="&slfs-issues;/484">#484</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>31. desember 2025</para>
       <itemizedlist>
         <listitem>
