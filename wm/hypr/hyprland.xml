@@ -212,8 +212,9 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <seg>
           hyprctl,
           hyprland (lenke til Hyprland),
-          Hyprland, og
-          hyprpm
+          Hyprland,
+          hyprpm, og
+          start-hyprland
         </seg>
         <seg>
           Ingen
@@ -259,7 +260,8 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>Hyprland</command></term>
         <listitem>
           <para>
-            er Hyprland kompositøren
+            er Hyprland kompositoren; å kjøre direkte vil gi en advarsel, så 
+            kjør <command>start-hyprland</command> i stedet
           </para>
           <indexterm zone="hyprland Hyprland">
             <primary sortas="b-Hyprland">Hyprland</primary>
@@ -275,6 +277,19 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
           </para>
           <indexterm zone="hyprland hyprpm">
             <primary sortas="b-hyprpm">hyprpm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="start-hyprland">
+        <term><command>start-hyprland</command></term>
+        <listitem>
+          <para>
+            er den anbefalte måten å starte Hyprland på, som starter en 
+            vaktbikkje prosess
+          </para>
+          <indexterm zone="hyprland start-hyprland">
+            <primary sortas="b-start-hyprland">start-hyprland</primary>
           </indexterm>
         </listitem>
       </varlistentry>
