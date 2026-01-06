@@ -89,6 +89,10 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
+      For å teste resultatene, utsted: <command>ninja test</command>
+    </para>
+
+    <para>
       Nå, som &root; bruker:
     </para>
 
