@@ -38,13 +38,17 @@
       <ulink url="&blfs-svn;/general/gc.html">GC</ulink>
     </para>
 
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/imlib2.html">imlib2</ulink> og
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
+    </para>
+
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <ulink url="&blfs-svn;/x/gdk-pixbuf.html">gdk-pixbuf</ulink>,
-      <ulink url="&blfs-svn;/general/gpm.html">GPM</ulink>,
-      <ulink url="&blfs-svn;/x/imlib2.html">imlib2</ulink>,
-      <xref linkend="m17n"/>, og
-      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+      <ulink url="&blfs-svn;/general/gpm.html">GPM</ulink>, og
+      <xref linkend="m17n"/>
     </para>
 
   </sect2>
@@ -55,7 +59,10 @@
     <para>Installer <application>w3m</application> ved å kjøre følgende 
       kommandoer:</para>
 
-<screen><userinput>./configure --prefix=/usr --sysconfdir=/etc &amp;&amp;
+<screen><userinput>./configure --prefix=/usr          \
+            --sysconfdir=/etc      \
+            --enable-image=fb,x11  \
+            --with-imagelib=imlib2 &amp;&amp;
 make</userinput></screen>
 
     <para>Nå, som &root; bruker:</para>
@@ -68,8 +75,15 @@ install -vDm644  doc/{HISTORY,READ*,keymap.*,menu.*,*.html} \
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
 
-    <para><parameter>--sysconfdir=/etc</parameter>: Dette alternativet legger 
+    <para><parameter>--sysconfdir=/etc</parameter>: Denne parameteren legger 
     konfigurasjonsfilene i /etc.</para>
+
+    <para><parameter>--enable-image=fb,x11</parameter>: Denne parameteren 
+    aktiverer bildestøtte for framebufferen og X11.</para>
+
+    <para><parameter>--with-imagelib=imlib2</parameter>: Denne parameteren 
+    bygger mot Imlib2 bildebiblioteket for bildestøtte.</para>
+
   </sect2>
 
   <sect2 role="content">
