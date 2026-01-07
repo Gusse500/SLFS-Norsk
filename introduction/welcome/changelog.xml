@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>6. januar 2025</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - CDE: 2.5.2 -&gt; 2.5.3 (Sikkerhetsoppdatering). Fikser
+          <ulink url="&slfs-issues;/415">#415</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>5. januar 2025</para>
       <itemizedlist>
         <listitem>
@@ -163,7 +173,7 @@
           <ulink url="&slfs-issues;/459">#459</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - i3: 4.24 -&gt; 4.25 (security). Fikser
+          <para>[zeckma] - i3: 4.24 -&gt; 4.25 (sikkerhet). Fikser
           <ulink url="&slfs-issues;/460">#460</ulink>.</para>
         </listitem>
         <listitem>

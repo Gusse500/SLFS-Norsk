@@ -45,6 +45,7 @@
       </listitem>
     </itemizedlist>
 
+<!-- Not needed for now, but keeping for the future...
     <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -54,6 +55,7 @@
         </para>
       </listitem>
     </itemizedlist>
+-->
 
   <bridgehead renderas="sect3">CDE Avhengigheter</bridgehead>
 
@@ -83,36 +85,43 @@
   <sect2 role="installation">
     <title>Installasjon av CDE</title>
 
+<!-- Not needed now, but commenting for a future patch.
     <para>
       Først, installer en oppdatering med flere oppstrømsrettelser og oppdateringer:
     </para>
 
 <screen><userinput>patch -Np2 -i ../cde-&cde-de-version;-upstream-fixes.patch</userinput></screen>
+-->
 
     <para>
-      Fiks <envar>nullptr</envar> som blir brukt på feil måte:
+      Fiks <envar>nullptr</envar> som blir brukt feilaktig:
     </para>
 
 <screen><userinput>sed -e 's/\, \*nullptr//g'     \
     -e 's/\&amp;nullptr/nullptr/g' \
     -i programs/dtksh/ksh93/src/cmd/ksh93/sh/xec.c</userinput></screen>
 
+<!-- We're passing -Wno-incompatible-pointer-types here because of problems on
+     non-AMD64 architectures, including aarch64. We don't officially support
+     that of course, but I did this update on a 32-bit system that I'm using
+     for other critical updates. The problem is an interaction with libXt.-->
+
     <para>
       Installer CDE ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>./autogen.sh &amp;&amp;
-CFLAGS+=" -std=gnu17"         \
-./configure --prefix=/usr     \
-            --sysconfdir=/etc \
-            --disable-static &amp;&amp;
+<screen><userinput>./autogen.sh                       &amp;&amp;
+CFLAGS+=" -std=gnu17 -Wno-incompatible-pointer-types" \
+./configure --prefix=/usr                             \
+            --sysconfdir=/etc                         \
+            --disable-static                          &amp;&amp;
 make</userinput></screen>
 
     <note><para>Denne pakken kan skrive ut escape sekvenser under byggeprosessen, 
     noe som vil føre til at terminalen slutter å sende tilbake tegn. For å omgå 
     dette må du blindt skrive inn
     <command>reset</command>. Etter at skjermen er tømt, vil terminalen din 
-    fungere helt fint igjen.</para></note>
+    fungere riktig igjen.</para></note>
 
     <para>
       Nå som &root; bruker:
@@ -143,19 +152,19 @@ install -v -m644 contrib/desktopentry/cde.desktop /usr/share/xsessions</userinpu
         <primary sortas="f-cde-de">CDE</primary>
       </indexterm>
 
-      <screen role="root" revision="sysv"><userinput>install -d -m 755 /etc/rc.d/rc{0,1,2,3,4,5,6,S}.d &amp;&amp;
-install -d -m 755 /etc/rc.d/init.d &amp;&amp;
-install -d -m 755 /etc/sysconfig &amp;&amp;
-install -m 754 blfs/init.d/xdm        /etc/rc.d/init.d/ &amp;&amp;
-install -m 644 blfs/sysconfig/xdm /etc/sysconfig/xdm &amp;&amp;
-echo "DISPLAY_MANAGER=/usr/dt/bin/dtlogin" >> /etc/sysconfig/xdm &amp;&amp;
+<screen role="root" revision="sysv"><userinput>install -d -m 755 /etc/rc.d/rc{0,1,2,3,4,5,6,S}.d                           &amp;&amp;
+install -d -m 755 /etc/rc.d/init.d                                          &amp;&amp;
+install -d -m 755 /etc/sysconfig                                            &amp;&amp;
+install -m 754 blfs/init.d/xdm        /etc/rc.d/init.d/                     &amp;&amp;
+install -m 644 blfs/sysconfig/xdm /etc/sysconfig/xdm                        &amp;&amp;
+echo "DISPLAY_MANAGER=/usr/dt/bin/dtlogin" >> /etc/sysconfig/xdm            &amp;&amp;
 sed -i "s/DM_OPTIONS=.*/DM_OPTIONS=\"-quiet -daemon\"/g" /etc/sysconfig/xdm &amp;&amp;
 if ! grep -q '^dm:5' /etc/inittab; then \
 	echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
-fi</userinput></screen><screen role="root" revision="systemd">
-<userinput>install -d -m 755 /etc/default &amp;&amp;
-install -d -m 755 /usr/lib/tmpfiles.d &amp;&amp;
-install -d -m 755 /usr/lib/systemd/system &amp;&amp;
+fi</userinput></screen>
+<screen role="root" revision="systemd"><userinput>install -d -m 755 /etc/default                                             &amp;&amp;
+install -d -m 755 /usr/lib/tmpfiles.d                                      &amp;&amp;
+install -d -m 755 /usr/lib/systemd/system                                  &amp;&amp;
 install -m 644 contrib/rc/systemd/dtlogin.service /usr/lib/systemd/system/ &amp;&amp;
 systemctl enable dtlogin.service
 </userinput></screen>
@@ -205,7 +214,7 @@ systemctl enable dtlogin.service
           libDtXinerama, og libtt
         </seg>
         <seg>
-          /usr/dt, /usr/include/csa, /usr/include/Dt,
+          /etc/cde, /usr/dt, /usr/include/csa, /usr/include/Dt,
           /usr/include/Tt, /usr/lib/cde, /usr/lib/dtksh, /usr/libexec/cde,
           /usr/share/cde, og /var/spool/calendar
         </seg>
@@ -886,7 +895,7 @@ systemctl enable dtlogin.service
         <term><command>dtprintegrate</command></term>
         <listitem>
           <para>
-            setter opp konfigurasjonsfilene for skriverkomponentene
+            oppretter konfigurasjonsfilene for skriverkomponentene
           </para>
           <indexterm zone="cde-de dtprintegrate">
             <primary sortas="b-dtprintegrate">dtprintegrate</primary>
