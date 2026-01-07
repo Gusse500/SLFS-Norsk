@@ -43,6 +43,10 @@
       <para>7. januar 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - websocketpp: Fikset kompatibilitet med Boost 1.90.0. 
+          Dette er nødvendig når det snart kommer inn i BLFS.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - Wayfire: 0.10.0 -&gt; 0.10.1. Fikser
           <ulink url="&slfs-issues;/429">#429</ulink>.</para>
         </listitem>
