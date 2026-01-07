@@ -40,7 +40,17 @@
     -->
 
     <listitem>
-      <para>6. januar 2025</para>
+      <para>7. januar 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - yyjson: Lagt til. Del av
+          <ulink url="&slfs-issues;/429">#429</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>6. januar 2026</para>
       <itemizedlist>
         <listitem>
           <para>[renodr] - CDE: 2.5.2 -&gt; 2.5.3 (Sikkerhetsoppdatering). Fikser
@@ -50,7 +60,7 @@
     </listitem>
 
     <listitem>
-      <para>5. januar 2025</para>
+      <para>5. januar 2026</para>
       <itemizedlist>
         <listitem>
           <para>[zeckma] - hyprlang: 0.6.7 -&gt; 0.6.8. Fikser
@@ -68,7 +78,7 @@
     </listitem>
 
     <listitem>
-      <para>4. januar 2025</para>
+      <para>4. januar 2026</para>
       <itemizedlist>
         <listitem>
           <para>[zeckma] - W3m: Lagt til. Fikser
