@@ -37,6 +37,7 @@
 <!ENTITY websocketpp-version                 "0.8.2">
 <!ENTITY wlr-randr-version                   "0.5.0">
 <!ENTITY yajl-version                        "2.1.0">
+<!ENTITY yyjson-version                      "0.12.0">
 <!-- General Utilities -->
 <!ENTITY cava-version                        "0.10.6">
 <!ENTITY htop-version                        "3.4.1">
@@ -186,7 +187,7 @@ version, so keep this at that. -->
 
 <!-- WM -->
 <!-- CDE -->
-<!ENTITY cde-de-version                      "2.5.2">
+<!ENTITY cde-de-version                      "2.5.3">
 <!-- Hypr -->
 <!ENTITY hyprland-protocols-version          "0.7.0">
 <!ENTITY hyprutils-version                   "0.11.0">
@@ -210,7 +211,8 @@ version, so keep this at that. -->
 <!-- Wayfire -->
 <!ENTITY wf-version                          "0.10.0">
 <!ENTITY wf-config-version                   "&wf-version;">
-<!ENTITY wayfire-version                     "&wf-version;">
+<!--<!ENTITY wayfire-version                     "&wf-version;">-->
+<!ENTITY wayfire-version                     "0.10.1">
 <!ENTITY wayfire-plugins-extra-version       "&wf-version;">
 
 <!-- EMULATORS -->

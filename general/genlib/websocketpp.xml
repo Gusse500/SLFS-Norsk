@@ -61,13 +61,16 @@
   <sect2 role="installation">
     <title>Installasjon av websocketpp</title>
 
+<!-- Note that the word 'system' only shows up for Boost's system library in
+     CMakeLists.txt, which was removed a while ago and breaks detection. -->
+
     <para>
-      Først må du bruke rettelser for å tillate 
-      bygging med boost-1.87 og nyere:
+      Først, bruk flere rettelser for å tillate bygging med boost-1.87 og nyere:
     </para>
 
-<screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87-compat.patch
-sed 's|"${WEBSOCKETPP_BOOST_LIBS}"|${WEBSOCKETPP_BOOST_LIBS}|' -i CMakeLists.txt</userinput></screen>
+<screen><userinput>patch -Np1 -i ../websocketpp-&websocketpp-version;-boost-1.87-compat.patch                       &amp;&amp;
+sed 's|"${WEBSOCKETPP_BOOST_LIBS}"|${WEBSOCKETPP_BOOST_LIBS}|' -i CMakeLists.txt &amp;&amp;
+sed 's/system//' -i CMakeLists.txt</userinput></screen>
 
     <para>
       Installer websocketpp ved å kjøre følgende 
@@ -105,7 +108,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
 
     <para>
       <parameter>-D ENABLE_CPP11=ON</parameter>: Dette bygger støtte for 
-      c++11 ISO standarden.
+      ISO C++11 standarden.
     </para>
 
     <para>

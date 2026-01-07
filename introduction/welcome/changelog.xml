@@ -40,7 +40,35 @@
     -->
 
     <listitem>
-      <para>5. januar 2025</para>
+      <para>7. januar 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - websocketpp: Fikset kompatibilitet med Boost 1.90.0. 
+          Dette er nødvendig når det snart kommer inn i BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - Wayfire: 0.10.0 -&gt; 0.10.1. Fikser
+          <ulink url="&slfs-issues;/429">#429</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - yyjson: Lagt til. Del av
+          <ulink url="&slfs-issues;/429">#429</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>6. januar 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - CDE: 2.5.2 -&gt; 2.5.3 (Sikkerhetsoppdatering). Fikser
+          <ulink url="&slfs-issues;/415">#415</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>5. januar 2026</para>
       <itemizedlist>
         <listitem>
           <para>[zeckma] - hyprlang: 0.6.7 -&gt; 0.6.8. Fikser
@@ -58,7 +86,7 @@
     </listitem>
 
     <listitem>
-      <para>4. januar 2025</para>
+      <para>4. januar 2026</para>
       <itemizedlist>
         <listitem>
           <para>[zeckma] - W3m: Lagt til. Fikser
@@ -163,7 +191,7 @@
           <ulink url="&slfs-issues;/459">#459</ulink>.</para>
         </listitem>
         <listitem>
-          <para>[zeckma] - i3: 4.24 -&gt; 4.25 (security). Fikser
+          <para>[zeckma] - i3: 4.24 -&gt; 4.25 (sikkerhet). Fikser
           <ulink url="&slfs-issues;/460">#460</ulink>.</para>
         </listitem>
         <listitem>
