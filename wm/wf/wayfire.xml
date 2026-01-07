@@ -57,7 +57,8 @@
       <ulink url="&blfs-svn;/general/pixman.html">Pixman</ulink>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      og <xref linkend="wlroots"/>
+      <xref linkend="wlroots"/>, og
+      <xref linkend="yyjson"/>
     </para>
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
@@ -69,8 +70,11 @@
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">doxygen</ulink>,
+      <ulink url="&blfs-svn;/x/libnotify.html">libnotify</ulink>,
       <ulink url="https://github.com/doctest/doctest">doctest</ulink> (for
-      tester)
+      tester), og
+      <ulink url="https://github.com/juniorrantila/libinotify">libinotify</ulink>
     </para>
 
   </sect2>
@@ -101,10 +105,10 @@ ninja</userinput></screen>
 <screen role="root"><userinput>ninja install</userinput></screen>
 
     <para>
-      Fjern ubrukelige statiske biblioteker:
+      Fjern ubrukelige statiske biblioteker som &root; bruker:
     </para>
 
-<screen role="root"><userinput>rm -vf /usr/lib/lib{wftouch,yyjson}.a \
+<screen role="root"><userinput>rm -vf /usr/lib/libwftouch.a \
        /usr/lib/libwayfire-{move-drag-interface,workspace-wall}.a</userinput></screen>
 
     <para>
@@ -123,7 +127,8 @@ ninja</userinput></screen>
 
     <para>
       <parameter>-D use_system_wfconfig=enabled</parameter>: Denne parameteren 
-      sikrer det systeminstallerte <xref linkend="wf-config"/>.
+      sikrer det systeminstallerte <xref linkend="wf-config"/> brukes under 
+      kompilering.
     </para>
 
     <para>
@@ -154,15 +159,15 @@ ninja</userinput></screen>
     <sect3><title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Opprett konfigurasjonsfilen:
+        Kopier standard konfigurasjonsfil:
       </para>
 
 <screen><userinput>cp /usr/share/wayfire/wayfire.ini ~/.config</userinput></screen>
 
       <para>
-        Inspiser nå filen og gjør eventuelle endringer som passer til 
+        Nå kan du inspisere filen og gjøre eventuelle endringer som passer til 
         arbeidsflyten din. Hvis du trenger å vite hvilke programtillegg som er 
-        installert, se etter de installerte programtilleggene nedenfor.
+        installert, kan du se på listen over installerte programtillegg nedenfor.
       </para>
 
     </sect3>
@@ -233,7 +238,9 @@ ninja</userinput></screen>
           zoom
         </seg>
         <seg>
-          /usr/lib/wayfire og /usr/share/wayfire
+          /usr/include/wayfire,
+          /usr/lib/wayfire,
+          og /usr/share/wayfire
         </seg>
       </seglistitem>
     </segmentedlist>
