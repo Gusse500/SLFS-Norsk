@@ -135,7 +135,7 @@ make</userinput></screen>
           Ingen
         </seg>
         <seg>
-          libchttrans, libcloudpinyin, libcustomphraseeditor, libfullwidth
+          libchttrans, libcloudpinyin, libcustomphraseeditor, libfullwidth,
           libpinyin, libpinyindictmanager, libpinyinhelper, libpunctuation
           og libtable
         </seg>

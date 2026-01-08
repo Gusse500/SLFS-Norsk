@@ -49,6 +49,14 @@
   <sect2 role="installation">
     <title>Installasjon av Fcitx5-Qt</title>
 
+    <warning>
+      <para>
+        Hvis du installerer Qt6 på nytt i BLFS, enten som en oppdatering eller en ny 
+        installasjon for en sikkerhetsoppdatering, må du installere denne pakken på nytt.
+        <!-- This is because it installs a plugin in /opt/qt6. -->
+      </para>
+    </warning>
+
     <para>
       Installer Fcitx5-Qt ved å kjøre følgende 
       kommandoer:
