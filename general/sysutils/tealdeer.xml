@@ -62,7 +62,7 @@
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>install -vDm755 target/release/tldr -t /usr/bin</userinput></screen>
+<screen role="root"><userinput>install -vDm755 target/release/tldr -t /usr/bin/</userinput></screen>
 
     <para>
       Last ned nå sidebufferen (dette må gjøres for hver bruker):

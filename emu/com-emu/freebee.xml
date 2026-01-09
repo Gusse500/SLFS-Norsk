@@ -77,8 +77,6 @@
 mv -T Musashi-&musashi-submodule-version; \
       src/musashi</userinput></screen>
 
-    &extraction-unzip;
-
     <para>
       Du kan eventuelt bruke en oppdatering for å søke etter ROM-ene i hele 
       systemet og ikke gjeldende mappe:
@@ -99,27 +97,24 @@ make -C tools</userinput></screen>
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>install -v -Dm755 freebee /usr/bin &amp;&amp;
-install -v -Dm755 tools/makehdimg /usr/bin &amp;&amp;
-install -v -m644 freebee.1 /usr/share/man/man1 &amp;&amp;
-install -v -m644 tools/makehdimg.1 /usr/share/man/man1</userinput></screen>
+<screen role="root"><userinput>install -vDm755 freebee   tools/makehdimg   -t /usr/bin/ &amp;&amp;
+install -vDm644 freebee.1 tools/makehdimg.1 -t /usr/share/man/man1/</userinput></screen>
 
     <para>
       Installer eventuelt dokumentasjonen som &root; bruker:
     </para>
 
-<screen role="root" remap="doc"><userinput>install -v -m755 -d /usr/share/doc/freebee-&freebee-minor-version; &amp;&amp;
-install -v -m644 README.md /usr/share/doc/freebee-&freebee-minor-version; &amp;&amp;
-install -v -m644 README.serial.md /usr/share/doc/freebee-&freebee-minor-version; &amp;&amp;
-install -v -m644 sample.freebee.toml /usr/share/doc/freebee-&freebee-minor-version; &amp;&amp;
-install -v -m644 doc/3B1\ Memory\ Map.ods /usr/share/doc/freebee-&freebee-minor-version;</userinput></screen>
+<screen role="root" remap="doc"><userinput>install -vDm644 README{,.serial}.md \
+                sample.freebee.toml \
+                doc/3B1\ Memory\ Maps.ods \
+        -t /usr/share/doc/freebee-&freebee-minor-version;/</userinput></screen>
 
     <para>
       Hvis du har installert den systemomfattende ROM-oppdateringen, 
       installerer du disse ROM-ene som &root; bruker:
     </para>
 
-<screen role="root"><userinput>install -v -m755 -d /usr/share/freebee/roms &amp;&amp;
+<screen role="root"><userinput>install -vdm755 /usr/share/freebee/roms &amp;&amp;
 unzip ../3b1_roms.zip -d /usr/share/freebee/roms &amp;&amp;
 rm -vf /usr/share/freebee/roms/*.hex &amp;&amp;
 rm -vf /usr/share/freebee/roms/README &amp;&amp;
