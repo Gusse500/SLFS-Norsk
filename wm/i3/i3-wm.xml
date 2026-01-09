@@ -131,8 +131,8 @@ mv -v /usr/share/doc/i3{,-&i3-version;}</userinput></screen>
 
       <para>
         Hvis du ikke allerede har laget konfigurasjonsfilen, kan den opprettes 
-        når du starter i3 for første gang, når du blir spurt om du vil generere 
-        en standard konfigurasjonsfil. Kontroller nå filen og gjør eventuelle 
+        når du starter i3 for første gang, blir du spurt om du vil generere en 
+        standard konfigurasjonsfil. Kontroller nå filen og gjør eventuelle 
         endringer hvis du ønsker det. Du må kanskje gjøre det hvis du ikke har 
         installert noen av de valgfrie avhengighetene.
       </para>
