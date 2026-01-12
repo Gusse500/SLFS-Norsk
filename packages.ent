@@ -40,6 +40,7 @@
 <!ENTITY yyjson-version                      "0.12.0">
 <!-- General Utilities -->
 <!ENTITY cava-version                        "0.10.6">
+<!ENTITY cmark-version                       "0.31.1">
 <!ENTITY htop-version                        "3.4.1">
 <!ENTITY btop-version                        "1.4.6">
 <!ENTITY cldr-emoji-annotation-version       "38">
@@ -134,7 +135,7 @@ version, so keep this at that. -->
 <!ENTITY ladspa-sdk-version                  "1.17">
 <!ENTITY noise-suppression-version           "1.10">
 <!ENTITY rubberband-version                  "4.0.0">
-<!ENTITY sdl-version                         "1.2.70">
+<!ENTITY sdl-version                         "1.2.72">
 
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
@@ -169,7 +170,7 @@ version, so keep this at that. -->
 <!ENTITY grim-version                        "1.5.0">
 <!ENTITY libvpl-tools-version                "1.5.0">
 <!ENTITY mesa-demos-version                  "9.0.0">
-<!ENTITY obs-studio-version                  "31.1.2">
+<!ENTITY obs-studio-version                  "32.0.4">
 <!ENTITY obs-cef-version                     "6533">
 <!ENTITY slurp-version                       "1.5.0">
 <!ENTITY wbg-version                         "1.3.0">
@@ -274,7 +275,7 @@ version, so keep this at that. -->
 <!-- Let's keep this updated for security reasons.
      - Zeckma -->
 <!ENTITY jdk-modern                          "21.0.9+10">
-<!ENTITY prism-launcher-version              "9.4">
+<!ENTITY prism-launcher-version              "10.0.2">
 <!-- TTD -->
 <!ENTITY openttd-version                     "15.0">
 
