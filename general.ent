@@ -64,7 +64,7 @@
 
 <!ENTITY hints-root           "https://www.&lfs-domainname;/hints">
 <!ENTITY patch-downloads      "https://www.lfs.freding.no/patches/downloads">
-<!ENTITY patch-root           "&slfs-website;/patches">
+<!ENTITY dl-root              "&slfs-website;/download">
 <!ENTITY misc-dl-root         "https://github.com/glfs-book/glfs-misc-downloads/releases/download">
 <!ENTITY errata               "https://www.&norsklfs-domainname;/blfs/errata/&blfs-version;/">
 <!ENTITY blfs-ticket-root     "https://wiki.&lfs-domainname;/blfs/ticket/">
