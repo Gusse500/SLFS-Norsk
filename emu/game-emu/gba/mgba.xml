@@ -5,7 +5,7 @@
   %general-entities;
 
   <!ENTITY mgba-download-http
-    "https://github.com/mgba-emu/mgba/archive/&mgba-version;.tar.gz">
+    "https://github.com/mgba-emu/mgba/archive/&mgba-version;/mgba-&mgba-version;.tar.gz">
 ]>
 
 <sect1 id="mgba" xreflabel="mGBA-&mgba-minor-version;">
@@ -73,8 +73,8 @@ cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr        \
       -D CMAKE_BUILD_TYPE=Release         \
-      -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
       -D CMAKE_SKIP_INSTALL_RPATH=ON      \
+      -D SKIP_GIT=ON                      \
       -G Ninja .. &amp;&amp;
 
 ninja</userinput></screen>
@@ -88,12 +88,32 @@ mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
 
   </sect2>
 
+  <sect2 role="using">
+    <title>Bruke mGBA</title>
+
+    <para>
+      Denne versjonen av mGBA har et problem med OpenGL og Qt GUI. På Wayland 
+      vil mGBA klage over at den ikke kan opprette en passende skjermenhet. 
+      Dette er fordi den ikke klarer å opprette en OpenGL skjerm. Når du kjører 
+      Qt GUI, må du kjøre den med <command>QT_QPA_PLATFORM=xcb
+      mgba-qt</command>, for å tvinge frem XCB vinduer for Qt. Dette vil få 
+      OpenGL til å fungere som forventet. Denne særegenheten deles med andre 
+      emulatorer som Dolphin, og hver applikasjon løser problemet på sin egen 
+      måte. Dolphin tvinger frem XCB i selve applikasjonen.
+    </para>
+
+  </sect2>
+
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
 
-    &cmake-policy-version;
-
     &cmake-skip-install-rpath;
+
+    <para>
+      <parameter>-D SKIP_GIT=ON</parameter>: Dette hopper over avhengigheten av 
+      Git og forhindrer en konfigurasjonsfeil ettersom den utpakkede mappen 
+      ikke er et Git depot.
+    </para>
 
     <para>
       <command>mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</command>: 
