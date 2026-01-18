@@ -43,6 +43,9 @@
       <para>17. januar 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - GNAT/GCC-Ada: Arkivert.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - fastfetch: 2.57.0 -&gt; 2.57.1. Fikser
           <ulink url="&slfs-issues;/501">#501</ulink>.</para>
         </listitem>
