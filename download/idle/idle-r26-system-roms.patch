@@ -1,0 +1,43 @@
+diff -Naur idle-lisa-emu-code-r26/mmu/mmu.c idle-lisa-emu-code-r26-patched/mmu/mmu.c
+--- idle-lisa-emu-code-r26/mmu/mmu.c	2024-12-15 22:01:12.417848760 +0300
++++ idle-lisa-emu-code-r26-patched/mmu/mmu.c	2024-12-15 21:54:26.356837377 +0300
+@@ -1227,14 +1227,14 @@
+         romBase=(uint8*)malloc(512*32);
+         videoRomBase=(uint8*)malloc(256);
+         
+-        if (read_alt_rom("bios/fake_booth.bin")!=NULL) {
++        if (read_alt_rom("/usr/share/idle/bios/fake_booth.bin")!=NULL) {
+         
+             //rom=fopen("bios/booth.hi","rb");
+             if (model==1) {
+-                rom=fopen("bios/L175REVC.bin","rb");
++                rom=fopen("/usr/share/idle/bios/L175REVC.bin","rb");
+                 if (rom==NULL) return "fatal error needs file bios/L175REVC.bin";
+             } else {
+-                rom=fopen("bios/341-0175-h","rb");
++                rom=fopen("/usr/share/idle/bios/341-0175-h","rb");
+                 if (rom==NULL) return "fatal error needs file bios/341-0175-h";
+             }
+             
+@@ -1243,10 +1243,10 @@
+             
+             //rom=fopen("bios/booth.lo","rb");
+             if (model==1) {
+-                rom=fopen("bios/L176REVC.bin","rb");
++                rom=fopen("/usr/share/idle/bios/L176REVC.bin","rb");
+                 if (rom==NULL) return "fatal error needs file bios/L176REVC.bin";
+             } else {
+-                rom=fopen("bios/341-0176-h","rb");
++                rom=fopen("/usr/share/idle/bios/341-0176-h","rb");
+                 if (rom==NULL) return "fatal error needs file bios/341-0176-h";
+             }
+             
+@@ -1277,7 +1277,7 @@
+ 
+             }        
+         }
+-        rom=fopen("bios/vidstate.rom","rb");
++        rom=fopen("/usr/share/idle/bios/vidstate.rom","rb");
+         if (rom==NULL) return "fatal error needs file bios/vidstate.rom";
+         ret=fread(&videoRomBase[0],256,1,rom);
+         fclose(rom);

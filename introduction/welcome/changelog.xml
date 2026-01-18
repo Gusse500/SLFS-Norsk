@@ -40,6 +40,34 @@
     -->
 
     <listitem>
+      <para>17. januar 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - mGBA: eeb52e -&gt; 97c4de.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - GNAT/GCC-Ada: Arkivert.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fastfetch: 2.57.0 -&gt; 2.57.1. Fikser
+          <ulink url="&slfs-issues;/501">#501</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Fcitx5-Qt: 5.1.11 -&gt; 5.1.12. Fikser
+          <ulink url="&slfs-issues;/502">#502</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - re2: 2025-08-12 -&gt; 2025-11-05. Fikser
+          <ulink url="&slfs-issues;/504">#504</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - qrcodegen-cmake: 1.8.0-cmake3 -&gt; 1.8.0-cmake4.
+          Fikser <ulink url="&slfs-issues;/505">#505</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>13. januar 2026</para>
       <itemizedlist>
         <listitem>

@@ -139,9 +139,12 @@ $(BASEDIR)/index.html: $(RENDERTMP)/$(SLFSHTML) version wget-list
 	
 	$(Q)cd $(BASEDIR)/; sed -e "s@../images@images@g"           \
                            -i *.html
-	
-	$(Q)mkdir -p $(BASEDIR)/patches
-	$(Q)cp -r patches/* $(BASEDIR)/patches
+
+	$(Q)mkdir -p $(BASEDIR)/download
+	$(Q)rm -rf $(BASEDIR)/download/*
+	$(Q)cp -R download/* $(BASEDIR)/download
+	$(Q)rm -rf $(BASEDIR)/patches
+	$(Q)ln -sf download $(BASEDIR)/patches
 	
 	@echo "Kjører Tidy og obfuscate.sh på delt XHTML..."
 	$(Q)for filename in `find $(BASEDIR) -name "*.html"`; do       \

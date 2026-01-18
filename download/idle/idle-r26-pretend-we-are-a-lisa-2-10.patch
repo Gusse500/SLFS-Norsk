@@ -1,0 +1,26 @@
+diff -Naur idle-lisa-emu-code-r26/disk/disk_ctrl.c idle-lisa-emu-code-r26-patched/disk/disk_ctrl.c
+--- idle-lisa-emu-code-r26/disk/disk_ctrl.c	2018-02-01 17:28:51.000000000 +0300
++++ idle-lisa-emu-code-r26-patched/disk/disk_ctrl.c	2024-12-15 22:02:53.996851607 +0300
+@@ -66,7 +66,7 @@
+ 
+ static int disk_present=0;
+ 
+-static int s_revision=0xA8;
++static int s_revision=0x88;
+ 
+ static int drive;
+ static int side;
+@@ -780,7 +780,12 @@
+      for (i=0;i<0x400;i++)     
+          floppy_shared_tab[i]=0x00; 
+ 
+-    s_revision=revision;
++	if (revision == 0xA8) {
++		s_revision=0x88;
++	} else {
++		s_revision=revision;
++	}
++
+     IDLE_TRACE("io model is:%x",revision);
+ 
+     floppy_shared_tab[0x18]=s_revision; // rom version
