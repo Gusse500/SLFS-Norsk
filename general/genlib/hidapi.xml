@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY hidapi-download
+    "http://github.com/libusb/hidapi/archive/hidapi-&hidapi-version;.tar.gz">
+]>
+
+<sect1 id="hidapi" xreflabel="HIDAPI-&hidapi-version;">
+  <?dbhtml filename="hidapi.html"?>
+
+  <title>HIDAPI-&hidapi-version;</title>
+
+  <indexterm zone="hidapi">
+    <primary sortas="a-hidapi">HIDAPI</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til HIDAPI</title>
+
+    <para>
+      HIDAPI pakken tilbyr et bibliotek for arbeid med HID-er (Human Interface 
+      Devices) og kan bruke libusb for å bedre tjene dette målet.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&hidapi-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <note><para>
+      <filename>hidapi-&hidapi-version;.tar.gz</filename> pakker ut til
+      <filename class="directory">hidapi-hidapi-&hidapi-version;</filename>.
+    </para></note>
+
+    <bridgehead renderas="sect3">HIDAPI Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+    <!-- Technically CMake is not quite required yet, but the autotools
+         installation method is deprecated and will be removed in a future
+         release. This future proofs the installation method. -->
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="kernel">
+    <title>Kjernekonfigurasjon</title>
+
+    <para id="hidapi-kernel">
+      For å tillate HIDAPI tilgang til HID-er, aktiver følgende alternativer 
+      og kompiler kjernen på nytt om nødvendig:
+    </para>
+
+    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
+      href="hidapi-kernel.xml"/>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av HIDAPI</title>
+
+    <para>
+      Installer HIDAPI ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D CMAKE_SKIP_INSTALL_RPATH=ON \
+      -W no-dev -G Ninja .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    &cmake-skip-install-rpath;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          libhidapi-hidraw og
+          libhidapi-libusb
+        </seg>
+        <seg>
+          /usr/include/hidapi og
+          /usr/lib/cmake/hidapi
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libhidapi-hidraw">
+        <term><filename class="libraryfile">libhidapi-hidraw</filename></term>
+        <listitem>
+          <para>
+            får tilgang til rå HID-er
+          </para>
+          <indexterm zone="hidapi libhidapi-hidraw">
+            <primary sortas="c-libhidapi-hidraw">libhidapi-hidraw</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhidapi-libusb">
+        <term><filename class="libraryfile">libhidapi-libusb</filename></term>
+        <listitem>
+          <para>
+            får tilgang til HID-er via libusb
+          </para>
+          <indexterm zone="hidapi libhidapi-libusb">
+            <primary sortas="c-libhidapi-libusb">libhidapi-libusb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
