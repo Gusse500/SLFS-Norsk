@@ -5,6 +5,7 @@
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
 <!ENTITY glaze-version                       "6.5.1">
+<!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libime-version                      "1.1.13">
@@ -15,9 +16,11 @@
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "fec583d54493f879d2ae44a743423bf8a04371ab">
 <!ENTITY libmspack-version                   "1.11">
+<!ENTITY libsodium-version                   "1.0.21">
 <!ENTITY libutempter-version                 "1.2.3">
 <!ENTITY libutempter-tag                     "&libutempter-version;-alt1">
 <!ENTITY libzip-version                      "1.11.4">
+<!ENTITY libzmq-version                      "4.3.5">
 <!ENTITY m17n-version                        "1.8.6">
 <!ENTITY m17n-db-version                     "1.8.10">
 <!ENTITY mbedtls-version                     "3.6.5">
@@ -68,6 +71,12 @@ version, so keep this at that. -->
 <!ENTITY lotus123-binutils-version           "2.38">
 <!ENTITY lrzsz-version                       "0.12.20">
 <!ENTITY minicom-version                     "2.10">
+<!ENTITY monero-version                      "0.18.4.5">
+<!ENTITY monero-gtest                        "b514bdc898e2951020cbdca1304b75f5950d1f59">
+<!ENTITY monero-miniupnp                     "544e6fcc73c5ad9af48a8985c94f0f1d742ef2e0">
+<!ENTITY monero-randomx                      "102f8acf90a7649ada410de5499a7ec62e49e1da">
+<!ENTITY monero-rapidjson                    "129d19ba7f496df5e33658527a7158c79b99c21c">
+<!ENTITY monero-supercop                     "633500ad8c8759995049ccd022107d1fa8a1bbc9">
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY gkermit-tarball-version             "gku201">
 <!ENTITY ostree-version                      "2025.7">
@@ -242,7 +251,6 @@ version, so keep this at that. -->
 <!ENTITY dolphin-sanitize-external           "aab6948fa863bc1cbe5d0850bc46b9ef02ed4c1a">
 <!ENTITY dolphin-cpp-ipc-external            "ce0773b3e6d5abaa8d104100c5704321113853ca">
 <!ENTITY dolphin-cpp-optparse-external       "2265d647232249a53a03b411099863ceca35f0d3">
-<!ENTITY dolphin-hidapi-external             "d6b2a974608dec3b76fb1e36c189f22b9cf3650c">
 <!ENTITY dolphin-imgui-external              "45acd5e0e82f4c954432533ae9985ff0e1aad6d5">
 <!ENTITY dolphin-implot-external             "3da8bd34299965d3b0ab124df743fe3e076fa222">
 <!ENTITY dolphin-mgba-external               "0b40863f64d0940f333fa1c638e75f86f8a26a33">
@@ -259,6 +267,7 @@ version, so keep this at that. -->
 <!ENTITY dolphin-fmt-external                "e69e5f977d458f2650bb346dadf2ad30c5320281">
 <!ENTITY dolphin-libspng-external            "fb768002d4288590083a476af628e51c3f1d47cd">
 <!ENTITY dolphin-libusb-external             "15a7ebb4d426c5ce196684347d2b7cafad862626">
+<!ENTITY dolphin-hidapi-external             "d6b2a974608dec3b76fb1e36c189f22b9cf3650c">
 <!-- N64 -->
 <!ENTITY mupen64plus-version                 "2.6.0">
 <!ENTITY mupen64plus-core-version            "&mupen64plus-version;">

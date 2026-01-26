@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY imv-download-http
+  <!ENTITY imv-download
     "https://git.sr.ht/~exec64/imv/archive/v&imv-version;.tar.gz">
 ]>
 
@@ -27,12 +27,12 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Nedlasting (HTTP): <ulink url="&imv-download-http;"/>
+          Nedlasting: <ulink url="&imv-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Additional Downloads</bridgehead>
+    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
         <para>

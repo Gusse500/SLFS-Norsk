@@ -4,59 +4,59 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY libxp-download "https://x.org/archive/individual/lib/libXp-&libxp-version;.tar.xz">
+  <!ENTITY libsodium-download
+    "http://github.com/jedisct1/libsodium/releases/download/&libsodium-version;-RELEASE/libsodium-&libsodium-version;.tar.gz">
 ]>
 
-<sect1 id="libxp" xreflabel="libXp-&libxp-version;">
-  <?dbhtml filename="libxp.html"?>
+<sect1 id="libsodium" xreflabel="libsodium-&libsodium-version;">
+  <?dbhtml filename="libsodium.html"?>
 
-  <title>libXp-&libxp-version;</title>
+  <title>libsodium-&libsodium-version;</title>
 
-  <indexterm zone="libxp">
-    <primary sortas="a-libxp">libXp</primary>
+  <indexterm zone="libsodium">
+    <primary sortas="a-libsodium">libsodium</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduksjon til libXp</title>
+    <title>Introduksjon til libsodium</title>
 
     <para>
-      libXp pakken inneholder et bibliotek som implementerer X Print protokollen.
+      libsodium pakken tilbyr et kryptografibibliotek og er API kompatibel med 
+      NaCl, forgjengeren.
     </para>
 
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Nedlasting: <ulink url="&libxp-download;"/>
+          Nedlasting: <ulink url="&libsodium-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-  <bridgehead renderas="sect3">libXp Avhengigheter</bridgehead>
-
-  <bridgehead renderas="sect4">Påkrevd</bridgehead>
-  <para role="required">
-    <xref linkend="printproto"/> og
-    <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>
-  </para>
-
   </sect2>
 
   <sect2 role="installation">
-    <title>Installasjon av libXp</title>
+    <title>Installasjon av libsodium</title>
 
     <para>
-      Installer libXp ved å kjøre følgende 
-      kommandoer:
+      Installer libsodium ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>./configure $XORG_CONFIG --docdir=$XORG_PREFIX/share/doc/libXp-&libxp-version; &amp;&amp;
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
 make</userinput></screen>
 
     <para>
-      Nå som &root; bruker:
+      Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    &static-libraries;
 
   </sect2>
 
@@ -66,17 +66,17 @@ make</userinput></screen>
     <segmentedlist>
       <segtitle>Installerte Programmer</segtitle>
       <segtitle>Installert Bibliotek</segtitle>
-      <segtitle>Installerte Mapper</segtitle>
+      <segtitle>Installert Mappe</segtitle>
 
       <seglistitem>
         <seg>
           Ingen
         </seg>
         <seg>
-          libXp
+          libsodium
         </seg>
         <seg>
-          Ingen
+          /usr/include/sodium
         </seg>
       </seglistitem>
     </segmentedlist>
@@ -86,14 +86,14 @@ make</userinput></screen>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-      <varlistentry id="libXp">
-        <term><filename class="libraryfile">libXp</filename></term>
+      <varlistentry id="libsodium-lib">
+        <term><filename class="libraryfile">libsodium</filename></term>
         <listitem>
           <para>
-            er X Print biblioteket
+            inneholder kryptografiske funksjoner
           </para>
-          <indexterm zone="libxp libXp">
-            <primary sortas="c-libXp">libXp</primary>
+          <indexterm zone="libsodium libsodium-lib">
+            <primary sortas="c-libsodium-lib">libsodium</primary>
           </indexterm>
         </listitem>
       </varlistentry>
