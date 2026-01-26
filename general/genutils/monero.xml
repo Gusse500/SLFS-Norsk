@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY monero-dl-root
+    "https://github.com">
+]>
+
+<sect1 id="monero" xreflabel="Monero-&monero-version;">
+  <?dbhtml filename="monero.html"?>
+
+  <title>Monero-&monero-version;</title>
+
+  <indexterm zone="monero">
+    <primary sortas="a-monero">Monero</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til Monero</title>
+
+    <para>
+      Monero pakken tilbyr en daemon og et lommebokverktøy for tilgang til 
+      kryptovalutaen Monero, eller XMR. Lommebokverktøyet som tilbys av denne 
+      pakken er kun kommandolinjebasert.
+    </para>
+
+    <note><para>
+      Det finnes et GUI lommebokverktøy laget av Monero prosjektet, men det har 
+      bare støtte for Qt-5, ikke lenger i BLFS, og Qt-5 i eldre versjoner av 
+      BLFS bygger ikke lenger ordentlig. Derfor må du kanskje bruke et 
+      tredjeparts GUI lommebokverktøy, som ikke anbefales, finne en måte å bygge 
+      Qt-5 på, eller holde deg til kommandolinjeverktøyet for lommeboken.
+    </para></note>
+
+    &long-build-time;
+
+    <bridgehead renderas="sect3">Monero Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/boost.html">Boost</ulink>,
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>,
+      <xref linkend="libsodium"/>,
+      <ulink url="&blfs-svn;/server/unbound.html">Unbound</ulink>, og
+      <xref linkend="libzmq"/>
+    </para>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <xref linkend="hidapi"/>,
+      <ulink url="&blfs-svn;/general/libunwind.html">libunwind</ulink>,
+      <ulink url="&blfs-svn;/general/libusb.html">libusb</ulink>, og
+      <ulink url="&blfs-svn;/general/protobuf.html">Protobuf</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/doxygen.html">Doxygen</ulink>,
+      <ulink url="&blfs-svn;/general/graphviz.html">Graphviz</ulink>,
+      <ulink url="https://github.com/google/googletest">gtest</ulink>, og
+      <ulink url="https://github.com/miniupnp/miniupnp">miniupnp</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2>
+    <title>Laste ned Monero</title>
+
+    <para>
+      Lag en liste over nødvendige tarballer som skal lastes ned:
+    </para>
+
+<screen><userinput>cat &gt; monero-list &lt;&lt; "EOF"
+<literal>monero-project/monero/archive/v&monero-version;/monero-&monero-version;.tar.gz
+google/googletest/archive/&monero-gtest;.tar.gz
+miniupnp/miniupnp/archive/&monero-miniupnp;.tar.gz
+tevador/RandomX/archive/&monero-randomx;.tar.gz
+Tencent/rapidjson/archive/&monero-rapidjson;.tar.gz
+monero-project/supercop/archive/&monero-supercop;.tar.gz</literal>
+EOF</userinput></screen>
+
+    <para>
+      Last nå ned pakken, undermodulene og nødvendige oppdateringer hvis 
+      aktuelt, ved hjelp av <ulink
+      url="&blfs-svn;/basicnet/wget.html">Wget</ulink>:
+    </para>
+
+<screen><userinput>mkdir monero &amp;&amp;
+cd    monero &amp;&amp;
+grep -v '^#' ../monero-list | wget -i- -c \
+    -B &monero-dl-root;</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av Monero</title>
+
+    <para>
+      Det bør være en dedikert bruker og gruppe som tar kontroll over
+      <command>monerod</command> daemonen etter at den er startet. Kjør 
+      følgende kommandoer som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>groupadd -fg 66 monero &amp;&amp;
+useradd -c "Monero Full Node" -d /var/lib/monero -u 66 \
+        -g monero -s /bin/false monero</userinput></screen>
+
+    <para>
+      Pakk ut alle tar-filer:
+    </para>
+
+<screen><userinput>for i in *.tar.?z*; do
+  echo "Extracting $i..."
+  tar -xf $i
+done</userinput></screen>
+
+    <para>
+      Nå som alt er pakket ut, må de nødvendige utpakkede undermodulene 
+      flyttes inn i <filename
+      class="directory">monero-&monero-version;</filename>. Gjør det ved å 
+      kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mv -T googletest-* monero-&monero-version;/external/gtest     &amp;&amp;
+mv -T miniupnp-*   monero-&monero-version;/external/miniupnp  &amp;&amp;
+mv -T RandomX-*    monero-&monero-version;/external/randomx   &amp;&amp;
+mv -T rapidjson-*  monero-&monero-version;/external/rapidjson &amp;&amp;
+mv -T supercop-*   monero-&monero-version;/external/supercop</userinput></screen>
+
+    <para>
+      Gå nå inn i <filename
+      class="directory">monero-&monero-version;</filename> mappen:
+    </para>
+
+<screen><userinput>cd monero-&monero-version;</userinput></screen>
+
+    <para>
+      Sørg for at Protobuf har riktig C++ standardsett:
+    </para>
+
+<screen><userinput>sed 's|std=c++11|std=c++17|g' \
+  -i contrib/depends/protobuf.mk</userinput></screen>
+
+    <para>
+      Installer Monero ved å kjøre følgende 
+      kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D BUILD_GUI_DEPS=ON         \
+      -G Ninja -W no-dev .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 bin/* -t /usr/bin/</userinput></screen>
+
+    <para revision="systemd">
+      Installer nå Systemd spesifikke filer som &root; bruker:
+    </para>
+
+<screen revision="systemd" role="root"><userinput>install -vDm644 ../utils/conf/monerod.conf       -t /etc/ &amp;&amp;
+install -vDm644 ../utils/systemd/monerod.service -t /usr/lib/systemd/system/ &amp;&amp;
+
+install -vDm644 /dev/stdin /usr/lib/tmpfiles.d/monero.conf &lt;&lt; "EOF"
+<literal>d /var/lib/monero 0770 monero monero - -</literal>
+EOF</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="config">
+    <title>Konfigurasjonsinformasjon</title>
+
+    <sect3 id="monero-config">
+      <title>Konfigurasjonsfiler</title>
+
+      <para>
+        <filename>/etc/monero.conf</filename>
+      </para>
+
+      <indexterm zone="monero monero-config">
+        <primary sortas="e-etc-monero.conf">/etc/monero.conf</primary>
+      </indexterm>
+
+    </sect3>
+
+    <sect3 revision="systemd" id="monero-init">
+      <title><phrase revision="sysv">Boot Script</phrase>
+             <phrase revision="systemd">Systemd Unit</phrase></title>
+
+      <para>
+        Hvis du vil ha <command>monerod</command> daemonen til å 
+        starte automatisk når systemet startes opp, kjør følgende 
+        kommando som &root; bruker:
+      </para>
+
+      <indexterm zone="monero monero-init">
+        <primary sortas="f-monero">monero</primary>
+      </indexterm>
+
+<screen role="root"><userinput>systemctl enable monerod</userinput></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    <para>
+      <parameter>-D BUILD_GUI_DEPS=ON</parameter>: Denne parameteren sørger for 
+      at avhengighetene for GUI lommeboken bygges, i tilfelle GUI 
+      lommebokverktøyet får støtte for Qt-6, GTK eller noe annet.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          monero-blockchain-ancestry,
+          monero-blockchain-depth,
+          monero-blockchain-export,
+          monero-blockchain-import,
+          monero-blockchain-mark-spent-outputs,
+          monero-blockchain-prune,
+          monero-blockchain-prune-known-spent-data,
+          monero-blockchain-stats,
+          monero-blockchain-usage,
+          monerod,
+          monero-gen-ssl-cert,
+          monero-gen-trusted-multisig,
+          monero-wallet-cli, og
+          monero-wallet-rpc
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="monerod">
+        <term><command>monerod</command></term>
+        <listitem>
+          <para>
+            er Monero daemonen
+          </para>
+          <indexterm zone="monero monerod">
+            <primary sortas="b-monerod">monerod</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="monero-wallet-cli">
+        <term><command>monero-wallet-cli</command></term>
+        <listitem>
+          <para>
+            lar deg opprette og jobbe med en Monero lommebok
+          </para>
+          <indexterm zone="monero monero-wallet-cli">
+            <primary sortas="b-monero-wallet-cli">monero-wallet-cli</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="monero-wallet-rpc">
+        <term><command>monero-wallet-rpc</command></term>
+        <listitem>
+          <para>
+            er RPC versjonen av CLI lommeboken
+          </para>
+          <indexterm zone="monero monero-wallet-rpc">
+            <primary sortas="b-monero-wallet-rpc">monero-wallet-rpc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

@@ -43,6 +43,10 @@
       <para>25. januar 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Monero: Lagt til. Fikser
+          <ulink url="&slfs-issues;/507">#507</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - HIDAPI: Lagt til.</para>
         </listitem>
         <listitem>
