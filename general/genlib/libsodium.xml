@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY libsodium-download
+    "http://github.com/jedisct1/libsodium/releases/download/&libsodium-version;-RELEASE/libsodium-&libsodium-version;.tar.gz">
+]>
+
+<sect1 id="libsodium" xreflabel="libsodium-&libsodium-version;">
+  <?dbhtml filename="libsodium.html"?>
+
+  <title>libsodium-&libsodium-version;</title>
+
+  <indexterm zone="libsodium">
+    <primary sortas="a-libsodium">libsodium</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til libsodium</title>
+
+    <para>
+      libsodium pakken tilbyr et kryptografibibliotek og er API kompatibel med 
+      NaCl, forgjengeren.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&libsodium-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av libsodium</title>
+
+    <para>
+      Installer libsodium ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    &static-libraries;
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          libsodium
+        </seg>
+        <seg>
+          /usr/include/sodium
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libsodium-lib">
+        <term><filename class="libraryfile">libsodium</filename></term>
+        <listitem>
+          <para>
+            inneholder kryptografiske funksjoner
+          </para>
+          <indexterm zone="libsodium libsodium-lib">
+            <primary sortas="c-libsodium-lib">libsodium</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
