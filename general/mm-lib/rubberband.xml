@@ -4,7 +4,7 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY rubberband-download-http "https://github.com/breakfastquay/rubberband/archive/v&rubberband-version;/rubberband-&rubberband-version;.tar.gz">
+  <!ENTITY rubberband-download "https://github.com/breakfastquay/rubberband/archive/v&rubberband-version;/rubberband-&rubberband-version;.tar.gz">
 ]>
 
 <sect1 id="rubberband" xreflabel="rubberband-&rubberband-version;">
@@ -33,7 +33,7 @@
 
     <tip><para>
       Når det gjelder kdenlive, avhenger det av
-      <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effekter. Som, 
+      <ulink url="&blfs-svn;/multimedia/mlt.html">MLT</ulink> for effekter. Men, 
       du trenger ikke å rekompilere kdenlive, men du må rekompilere MLT uten 
       <parameter>-D MOD_RUBBERBAND=OFF</parameter> parameteren.
     </para></tip>
@@ -41,7 +41,7 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Nedlasting (HTTP): <ulink url="&rubberband-download-http;"/>
+          Nedlasting: <ulink url="&rubberband-download;"/>
         </para>
       </listitem>
     </itemizedlist>
