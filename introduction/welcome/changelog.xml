@@ -43,6 +43,9 @@
       <para>25. januar 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - libzmq: Lagt til.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libsodium: Lagt til.</para>
         </listitem>
       </itemizedlist>
