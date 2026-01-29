@@ -101,7 +101,7 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installasjon av Java BinaryJDK</title>
+    <title>Installasjon av Java Binary JDK</title>
 <!--
     <note>
       <para>
@@ -112,9 +112,8 @@
     </note>
 -->
     <para>
-      Begynn med å pakke ut den passende binære tarballen for din arkitektur 
-      og endre til den utpakkede mappen. Installer den binære OpenJDK med 
-      følgende kommandoer som
+      Begynn med å pakke ut tarballen og endre til den utpakkede mappen. 
+      Installer den binære OpenJDK med følgende kommandoer som
       <systemitem class="username">root</systemitem> bruker:
     </para>
 
