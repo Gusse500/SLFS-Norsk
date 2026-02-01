@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY tinyxxd-download
+    "https://github.com/xyproto/tinyxxd/releases/download/v&tinyxxd-version;/tinyxxd-&tinyxxd-version;.tar.gz">
+]>
+
+<sect1 id="tinyxxd" xreflabel="tinyxxd-&tinyxxd-version;">
+  <?dbhtml filename="tinyxxd.html"?>
+
+  <title>tinyxxd-&tinyxxd-version;</title>
+
+  <indexterm zone="tinyxxd">
+    <primary sortas="a-tinyxxd">tinyxxd</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til tinyxxd</title>
+
+    <para>
+      tinyxxd pakken tilbyr en alternativ løsning for Vims hexdump verktøy, 
+      xxd. Denne frittstående implementeringen er mer moderne og effektiv enn 
+      Vim sin.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&tinyxxd-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av tinyxxd</title>
+
+    <para>
+      Installer tinyxxd ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>make</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 tinyxxd -t /usr/bin/              &amp;&amp;
+ln -sfv tinyxxd /usr/bin/xxd                      &amp;&amp;
+install -vDm755 tinyxxd.1 -t /usr/share/man/man1/ &amp;&amp;
+ln -sfv tinyxxd.1 /usr/share/man/man1/xxd.1</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          tinyxxd og
+          xxd (link to tinyxxd)
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="tinyxxd-bin">
+        <term><command>tinyxxd</command></term>
+        <listitem>
+          <para>
+            erstatning av Vims hexdump verktøy, xxd
+          </para>
+          <indexterm zone="tinyxxd tinyxxd">
+            <primary sortas="b-tinyxxd">tinyxxd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
