@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY cglm-download
+    "https://github.com/recp/cglm/archive/v&cglm-version;/cglm-&cglm-version;.tar.gz">
+]>
+
+<sect1 id="cglm" xreflabel="CGLM-&cglm-version;">
+  <?dbhtml filename="cglm.html"?>
+
+  <title>CGLM-&cglm-version;</title>
+
+  <indexterm zone="cglm">
+    <primary sortas="a-cglm">CGLM</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til CGLM</title>
+
+    <para>
+      CGLM pakken tilbyr et matematikkbibliotek for C. Det er i bunn og grunn 
+      GLM, men for programmeringsspråket C.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&cglm-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av CGLM</title>
+    <para>
+      Installer CGLM ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          libcglm
+        </seg>
+        <seg>
+          /usr/include/cglm
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libcglm">
+        <term><filename class="libraryfile">libcglm</filename></term>
+        <listitem>
+          <para>
+            inneholder matematiske funksjoner for C
+          </para>
+          <indexterm zone="cglm libcglm">
+            <primary sortas="c-libcglm">libcglm</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
