@@ -40,6 +40,34 @@
     -->
 
     <listitem>
+      <para>3. februar 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Winetricks: 20250102 -&gt; 20260125.
+          Fikser <ulink url="&slfs-issues;/524">#524</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - MangoWC: 0.11.0 -&gt; 0.12.0. 
+          <ulink url="&slfs-issues;/525">#525</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>2. februar 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - yt-dlp: 2025.12.08 -&gt; 2026.01.31.
+          Fikser <ulink url="&slfs-issues;/521">#521</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - cava: 0.10.6 -&gt; 0.10.7. Fikser
+          <ulink url="&slfs-issues;/523">#523</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>1. februar 2026</para>
       <itemizedlist>
         <listitem>

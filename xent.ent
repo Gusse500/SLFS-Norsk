@@ -89,8 +89,7 @@
   "<para><parameter>--disable-static</parameter>: Denne bryteren forhindrer 
   installasjon av statiske versjoner av bibliotekene.</para>">
 <!ENTITY pip3-cmd-explain
-  "<sect3 role='commands'>
-    <title>Parameterforklaringer</title>
+   "<title>Parameterforklaringer</title>
 
     <para>
       <parameter>-w dist</parameter>: Bygger det passende <quote>wheel</quote> 
@@ -146,6 +145,4 @@
       <option>--no-deps</option>: Ikke installer pakkeavhengigheter. Dette 
       alternativet kan være nødvendig med <option>--upgrade</option> eller
       <option>--force-reinstall</option> alternativene.
-    </para>
-
-  </sect3>">
+    </para>">
