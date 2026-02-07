@@ -140,7 +140,7 @@ version, so keep this at that. -->
 <!ENTITY openjdk-suffix                      "-ga">
 <!ENTITY openjdk-build                       "8">
 <!-- Shells -->
-<!ENTITY fish-version                        "4.3.3">
+<!ENTITY fish-version                        "4.4.0">
 <!ENTITY ksh-version                         "1.0.10">
 <!ENTITY mksh-version                        "R59c">
 <!-- MM-LIB -->
@@ -216,7 +216,7 @@ version, so keep this at that. -->
 <!ENTITY hyprland-version                    "0.53.3">
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
-<!ENTITY i3-version                          "4.25">
+<!ENTITY i3-version                          "4.25.1">
 <!-- MangoWC -->
 <!ENTITY mangowc-version                     "0.12.0">
 <!-- SXWM -->
