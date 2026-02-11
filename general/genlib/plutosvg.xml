@@ -102,6 +102,32 @@ ninja -C svg-build</userinput></screen>
 
 <screen role="root"><userinput>ninja -C svg-build install</userinput></screen>
 
+    <para>
+      Som et etterinstallasjonstrinn må du fikse bibliotek sonames som skal være 
+      symbolske lenker. sonames er de faktiske bibliotekene som må flyttes for å 
+      indikere at de er det, <command>ldconfig</command> må kjøres 
+      etterpå for å gjenopprette dem som symbolske lenker. Gjør det nå som
+      &root; bruker:
+    </para>
+
+<screen role="root"><userinput>rm -vf /usr/lib/libplutovg.so.&plutovg-version;  &amp;&amp;
+rm -vf /usr/lib/libplutosvg.so.&plutosvg-version; &amp;&amp;
+mv -vf /usr/lib/libplutovg.so.&plutovg-major;{,.&plutovg-minor;}  &amp;&amp;
+mv -vf /usr/lib/libplutosvg.so.&plutosvg-major;{,.&plutosvg-minor;} &amp;&amp;
+ldconfig</userinput></screen>
+
+    <note><para>
+      Hvis du installerer eller oppgraderer PlutoVG og PlutoSVG på nytt, må kommandosettet 
+      ovenfor kjøres, siden installasjonen vil overskrive symbolske lenker.
+    </para></note>
+
+    <important><para>
+      Hvis du kjører kommandosettet ovenfor mer enn én gang uten en ny 
+      reinstallasjon eller oppgradering mellom, vil de faktiske bibliotekene bli 
+      slettet og symbolske lenker vil bli satt inn i deres sted. Du må da 
+      installere PlutoVG og PlutoSVG på nytt, og deretter kjøre kommandoene på nytt.
+    </para></important>
+
   </sect2>
 
   <sect2 role="content">
