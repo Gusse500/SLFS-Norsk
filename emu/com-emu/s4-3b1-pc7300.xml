@@ -31,6 +31,11 @@
           Nedlasting: <ulink url="&s4-3b1-pc7300-download;"/>
         </para>
       </listitem>
+      <listitem>
+        <para>
+          Støttet kjerneversjon: &s4-kernel;
+        </para>
+      </listitem>
     </itemizedlist>
 
     <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
@@ -38,79 +43,24 @@
       <listitem>
         <para>
           Påkrevd oppdatering:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Påkrevd oppdatering:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Påkrevd oppdatering:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch"/>
-        </para>
-      </listitem>
-      <listitem>
-        <para>
-          Påkrevd oppdatering:
-          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch"/>
+          <ulink url="&dl-root;/s4-3b1-pc7300/s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
 
   </sect2>
 
-<!-- REMOVED IN LINUX-6.16
-
-  <sect2 role="kernel" id="s4-3b1-pc7300-kernel">
-    <title>Kernel Configuration</title>
-
-    <para>
-      Denne pakken erstatter SYSV kjernemodulen med en bedre og forbedret 
-      versjon. Deaktiver den i kjernen hvis den er til stede, og kompiler 
-      kjernen på nytt om nødvendig.:
-    </para>
-
-    <xi:include xmlns:xi="http://www.w3.org/2001/XInclude"
-      href="s4-3b1-pc7300-kernel.xml"/>
-
-    <indexterm zone="s4-3b1-pc7300 s4-3b1-pc7300-kernel">
-      <primary sortas="d-s4-3b1-pc7300">s4-3b1-pc7300</primary>
-    </indexterm>
-  </sect2>
--->
-
   <sect2 role="installation">
     <title>Installasjon av s4-3b1-pc7300</title>
 
     <para>
-      Installer en oppdatering for å bygge sysv kjernemodulen ubetinget:
+      Installer en oppdatering for å få biblioteket til å bli bygget som delt i 
+	  stedet for statisk, bygg kjernemodulen ubetinget, og få modulen til å 
+	  bruke oppdaterte grensesnitt og forventede operasjoner diktert av kjernen, 
+	  GCC og glibc:
     </para>
 
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build-module-unconditionally.patch</userinput></screen>
-
-    <para>
-      Installer en oppdatering for å fikse byggingen av kjernemodulen:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-fix-kernel-module.patch</userinput></screen>
-
-    <para>
-      Installer en ny oppdatering for å gjøre kjernemodulen kompatibel med Linux
-      6.16:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-final-updates-from-kernel.patch</userinput></screen>
-
-    <para>
-      Bruk en patch for å bygge støttebiblioteket som et delt bibliotek i 
-      stedet for et statisk bibliotek:
-    </para>
-
-<screen><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-shared-lib.patch</userinput></screen>
+<screen role="pre"><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-1.patch</userinput></screen>
 
     <para>
       Kompiler kjernemodulen:
