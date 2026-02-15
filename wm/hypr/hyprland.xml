@@ -143,6 +143,18 @@ ninja</userinput></screen>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
 
+    <para>
+      Hyprland har gjort det slik at det vil dukke opp en advarsel etter 5–10 
+      sekunder hvis du ikke startet Hyprland med <command>start-hyprland</command>. 
+      Denne pakken installerer en symbollenke, <command>hyprland</command>, som 
+      peker på <command>Hyprland</command>, som er selve hovedprogrammet. Å 
+      starte med <command>start-hyprland</command> kan være litt ork, så hvis du 
+      ønsker det, lenk på nytt <command>hyprland</command> til å peke på
+      <command>start-hyprland</command> som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ln -sfv start-hyprland $LFS/usr/bin/hyprland</userinput></screen>
+
   </sect2>
 
 <!--
@@ -211,7 +223,7 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
       <seglistitem>
         <seg>
           hyprctl,
-          hyprland (lenke til Hyprland),
+          hyprland (lenke til Hyprland), eller start-hyprland),
           Hyprland,
           hyprpm, og
           start-hyprland
@@ -248,7 +260,9 @@ cp /usr/share/hypr/hyprland.conf ~/.config/hypr</userinput></screen>
         <term><command>hyprland</command></term>
         <listitem>
           <para>
-            er en symbolsk lenke som peker til <command>Hyprland</command>
+            er en symbolsk lenke som peker til <command>Hyprland</command>, 
+            eller <command>start-hyprland</command> hvis du fulgte kommandoen 
+            for relinking av symbollinker etter installasjon
           </para>
           <indexterm zone="hyprland hyprland-link">
             <primary sortas="b-hyprland-link">hyprland</primary>
