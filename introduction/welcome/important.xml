@@ -30,9 +30,11 @@
       fungerer helt fint. Noen er imidlertid kjent for å kreve rettelser, enten 
       enkle eller for omfattende. De krever ekstra ressurser for å teste, noe 
       teamet bak denne boken ikke har. Så Mesas OpenGL implementeringer støttes 
-      ikke. Som et utgangspunkt kan du se <ulink
-      url="&slfs-repo;/releases/tag/12.4">SLFS 12.4</ulink> og se hvordan du går 
-      frem for å fikse det som er ødelagt. Se <ulink
+      ikke. Som et utgangspunkt kan du se <phrase rev="sysv"><ulink
+      url="&lfs-website;/slfs/view/12.4/">SLFS 12.4</ulink></phrase>
+      <phrase rev="systemd"><ulink
+      url="&lfs-website;/slfs/view/12.4-systemd/">SLFS 12.4</ulink></phrase>
+      og se hvordan du kan gå frem for å fikse det som er ødelagt. Se <ulink
       url="&glfs-website;/shareddeps/view/svn/aboutgl.html">GLFS: Om OpenGL</ulink>
       for mer informasjon om hvorfor støtte for Mesas OpenGL implementeringer 
       har blitt fjernet fra både denne boken og GLFS.

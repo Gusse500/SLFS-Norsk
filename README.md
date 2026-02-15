@@ -17,17 +17,10 @@ SLFS kan skryte av flere biblioteker og verktøy som ikke er dekket i de andre
 
 ## Hvor kan du lese den
 
-Go to https://lfs.freding.no/slfs/ og begynne å bla gjennom boken!
+Go to https://lfs.freding.no/slfs/view/systemd/index.html or
+https://lfs.freding.no/slfs/ and start going through the book!
 
-Nettboken er under rullende utgivelse, men det finnes en stabil versjon i SLFS
-kildekoden via stable grenen. Du kan bytte til den ved å kjøre følgende 
-kommando:
-
-```Bash
-git checkout stable
-```
-
-Gjengi deretter boken med `make STAB=release [andre alternativer]`.
+Du finner flere nettkopier på https://linuxfromscratch.org/slfs/view/.
 
 Det finnes også [releases](https://github.com/glfs-book/slfs/releases) 
 tilgjengelig for nedlasting.
