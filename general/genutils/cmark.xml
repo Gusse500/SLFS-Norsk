@@ -66,10 +66,10 @@ ninja</userinput></screen>
       Som &root; bruker, flytt Python versjonen av <command>cmark</command>
       ut av veien hvis den er installert:
     </para>
-
 <screen role="root"><userinput>if find /usr/bin/cmark &amp;&gt; /dev/null; then
-  grep -qF python3 /usr/bin/cmark &amp;&amp;
-  mv   -v          /usr/bin/cmark{,-py3}
+  if grep -qF python3 /usr/bin/cmark; then
+    mv   -v           /usr/bin/cmark{,-py3}
+  fi
 fi</userinput></screen>
 
     <para>
