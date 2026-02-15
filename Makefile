@@ -34,11 +34,11 @@ ifeq ($(AUTO_CLEAN), 0)
 endif
 
 ifndef REV
-  REV = sysv
+  REV = systemd
 endif
-ifneq ($(REV), sysv)
-  ifneq ($(REV), systemd)
-    $(feil REV må være 'sysv' (standard) eller 'systemd')
+ifneq ($(REV), systemd)
+  ifneq ($(REV), sysv)
+    $(feil REV må være 'systemd' (standard) eller 'sysv' (ikke lenger vedlikeholdt))
   endif
 endif
 
@@ -53,18 +53,18 @@ ifneq ($(STAB), development)
   endif
 endif
 
-ifeq ($(REV), sysv)
+ifeq ($(REV), systemd)
   BASEDIR         ?= $(HTML_ROOT)/slfs
   DUMPDIR         ?= $(DUMP_ROOT)/slfs-commands
   SLFSHTML        ?= slfs-html.xml
   SLFSHTML2       ?= slfs-html2.xml
   SLFSFULL        ?= slfs-full.xml
 else
-  BASEDIR         ?= $(HTML_ROOT)/slfs-systemd
-  DUMPDIR         ?= $(DUMP_ROOT)/slfs-sysd-commands
-  SLFSHTML        ?= slfs-systemd-html.xml
-  SLFSHTML2       ?= slfs-systemd-html2.xml
-  SLFSFULL        ?= slfs-systemd-full.xml
+  BASEDIR         ?= $(HTML_ROOT)/slfs-sysv
+  DUMPDIR         ?= $(DUMP_ROOT)/slfs-sysv-commands
+  SLFSHTML        ?= slfs-sysv-html.xml
+  SLFSHTML2       ?= slfs-sysv-html2.xml
+  SLFSFULL        ?= slfs-sysv-full.xml
 endif
 
 slfs: html wget-list
@@ -77,15 +77,15 @@ help:
 	@echo ""
 	@echo "  REV=<rev>            Bygg variant av boken"
 	@echo "                       Gyldige verdier for REV er:"
-	@echo "                       * sysv    - Bygg boken for SysV"
 	@echo "                       * systemd - Bygg boken for systemd"
-	@echo "                       Standard er 'sysv'"
+	@echo "                       * sysv    - Bygg boken for SysV"
+	@echo "                       Standard er 'systemd'"
 	@echo ""
 	@echo "  BASEDIR=<dir>        Plasser utdataene i mappen <dir>."
 	@echo "                       Standard er"
-	@echo "                       '$(HTML_ROOT)/slfs' hvis REV=sysv (eller ikke-satt)"
+	@echo "                       '$(HTML_ROOT)/slfs' hvis REV=systemd (eller ikke-satt)"
 	@echo "                       eller til"
-	@echo "                       '$(HTML_ROOT)/slfs-systemd' hvis REV=systemd"
+	@echo "                       '$(HTML_ROOT)/slfs-sysv' if REV=sysv"
 	@echo ""
 	@echo "  V=<val>              Hvis <val> er en ikke-tom verdi, alle"
 	@echo "                       trinnene for å produsere resultatet vises."
@@ -94,8 +94,9 @@ help:
 	@echo "  THEME_PATH=<path>    Angir stien til temaer (CSS filer)."
 	@echo "                       stylesheets/lfs-xsl' er standard."
 	@echo ""
-	@echo "  THEME=<theme>        Setter temaet for boken, dvs. light/dark."
-	@echo "                       'dark' er standard."
+	@echo "  THEME=<theme>        Setter temaet for boken, dvs.
+	@echo "                       light/dark/dynamic."
+	@echo "                       dynamic temaet er standard."
 	@echo ""
 	@echo "Targets:"
 	@echo "  help                 Vis denne hjelpeteksten."

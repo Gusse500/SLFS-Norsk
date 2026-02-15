@@ -30,8 +30,7 @@ git checkout stable
 Gjengi deretter boken med `make STAB=release [andre alternativer]`.
 
 Det finnes også [releases](https://github.com/glfs-book/slfs/releases) 
-tilgjengelig for nedlasting. Disse inneholder både SysV og Systemd utgavene av 
-boken som chunked HTML. Disse er på Engelsk.
+tilgjengelig for nedlasting.
 
 ## Installasjon
 
@@ -40,16 +39,12 @@ programvare som håndterer disse konverteringene. Vennligst les
 [INSTALL.md](./INSTALL.md) for å finne ut hvilke programmer du må installere og 
 hvor du kan få instruksjoner for å installere programvaren.
 
-Du kan deretter bygge HTML koden med en enkel `make` kommando. Du kan endre
-revisjonen ved å sende `REV=<rev>` til `make` kommandoen. `<rev>` kan være:
-- `sysv` (default)
-- `systemd`
-
-Eksempel: `make REV=systemd`
+Du kan deretter bygge HTML-koden med en enkel `make` kommando.
 
 Du kan bytte tema ved å sende `THEME=<theme>` til `make` kommandoen.
 `<theme>` kan være lik:
-- `dark` (standard)
+- `dynamic` (standard)
+- `dark`
 - `light`
 - hvilket som helst tema i `THEME_PATH`
 
@@ -61,10 +56,7 @@ https://github.com/glfs-book/lfs-themes.
 
 Eksempel: `make THEME_PATH=../lfs-themes/themes THEME=whitepink`
 
-Standardmålet (sysv) bygger HTML koden i `~/public_html/slfs`,
-mens for systemd ville det være i `~/public_html/slfs-systemd`.
-Som standard vil hver pakke og seksjon være sin egen side, og deretter kobles 
-alt sammen for en smidig opplevelse.
+Standardmålet gjengir HTML koden i `~/public_html/slfs`.
 
 Det finnes også flere variabler som kan angis, som kan brukes til å spesifisere 
 hvor den gjengitte utdataen skal være, hvor midlertidige filer befinner seg, 

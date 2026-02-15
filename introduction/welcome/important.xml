@@ -21,33 +21,6 @@
   </para>
 
   <sect2>
-    <title>Stabilitet</title>
-
-    &important-stability;
-
-  </sect2>
-
-  <sect2>
-    <title>Init Systemet</title>
-
-    <para revision="sysv">
-      Denne versjonen av boken er ment for SysV LFS systemer. <!--Systemd versjonen 
-      av boken kan ikke vises på nett av &copyholder; på grunn av begrensninger 
-      på Github Pages. Derfor må du laste ned eller gjengi boken selv. Følg 
-      instruksjonene <ulink url="&slfs-repo;">SLFS rendering
-      instructions</ulink> for å kunne gjengi boken selv. Du trenger
-      <ulink url="&blfs-svn;/general/git.html">Git</ulink> å klone depotet. Du 
-      kan laste ned boken <ulink
-      url="&slfs-repo;/releases">her</ulink>.-->
-    </para>
-
-    <para revision="systemd">
-      Denne versjonen av boken er ment for Systemd LFS systemer.
-    </para>
-
-  </sect2>
-
-  <sect2>
     <title>OpenGL</title>
 
     <para>
