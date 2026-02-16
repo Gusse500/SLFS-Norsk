@@ -94,7 +94,7 @@ help:
 	@echo "  THEME_PATH=<path>    Angir stien til temaer (CSS filer)."
 	@echo "                       stylesheets/lfs-xsl' er standard."
 	@echo ""
-	@echo "  THEME=<theme>        Setter temaet for boken, dvs.
+	@echo "  THEME=<theme>        Setter temaet for boken, dvs."
 	@echo "                       light/dark/dynamic."
 	@echo "                       dynamic temaet er standard."
 	@echo ""
