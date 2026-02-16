@@ -54,8 +54,7 @@
       kommandoer:
     </para>
 
-<screen><userinput>./configure --prefix=/usr \
-    --enable-mpers=no &amp;&amp;
+<screen><userinput>./configure --prefix=/usr --enable-mpers=no &amp;&amp;
 make</userinput></screen>
 
     <para>
@@ -77,7 +76,7 @@ make</userinput></screen>
       <parameter>--enable-mpers=no</parameter>: Som standard er strace bygget 
       for å støtte både m32 og mx32. Denne parameteren deaktiverer denne 
       oppførselen. Fjern denne parameteren hvis du feilsøker programmer som 
-      bruker m32 eller mx32 personalities.
+      bruker enten m32 eller mx32 personalities.
     </para>
 
     <para>
@@ -133,8 +132,9 @@ make</userinput></screen>
         <term><command>strace-log-merge</command></term>
         <listitem>
          <para>
-           slår sammen utdataene fra <command>strace -ff -tt</command>, legger til PID" 
-           til hver linje, og sorterer deretter resultatet ved hjelp av tidsstempler
+           slår sammen utdataene fra <command>strace -ff -tt</command>, legger 
+           til PID-en til en prosess på hver linje, og sorterer deretter 
+           resultatet ved hjelp av tidsstempler
          </para>
           <indexterm zone="strace strace-log-merge">
             <primary sortas="b-strace-log-merge">strace-log-merge</primary>
