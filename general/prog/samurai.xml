@@ -61,7 +61,10 @@
         <command>ninja</command> kjøres, lag en symbolkobling som &root; bruker:
       </para>
 
-<screen role="root"><userinput>ln -svf samu /usr/bin/ninja</userinput></screen>
+<screen role="root"><userinput>if [ "$(file /usr/bin/ninja | grep ELF)" ]; then
+  mv -v /usr/bin/ninja{,.old}
+fi &amp;&amp;
+ln -svf samu /usr/bin/ninja</userinput></screen>
 
       <para>
         <command>samu</command> vil ikke kjøre på alle logiske CPU-er eller 
