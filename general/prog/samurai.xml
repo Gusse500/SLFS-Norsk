@@ -58,11 +58,12 @@
 
       <para>
         Hvis du vil at <command>samu</command> skal brukes når som helst
-        <command>ninja</command> kjøres, flytt den originale Ninja ut av 
-        veien og lag en symbolkobling som &root; bruker:
+        <command>ninja</command> kjøres, lag en symbolkobling som &root; bruker:
       </para>
 
-<screen role="root"><userinput>mv /usr/bin/ninja{,.old} &amp;&amp;
+<screen role="root"><userinput>if [ "$(file /usr/bin/ninja | grep ELF)" ]; then
+  mv -v /usr/bin/ninja{,.old}
+fi &amp;&amp;
 ln -svf samu /usr/bin/ninja</userinput></screen>
 
       <para>
