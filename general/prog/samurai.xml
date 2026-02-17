@@ -58,12 +58,10 @@
 
       <para>
         Hvis du vil at <command>samu</command> skal brukes når som helst
-        <command>ninja</command> kjøres, flytt den originale Ninja ut av 
-        veien og lag en symbolkobling som &root; bruker:
+        <command>ninja</command> kjøres, lag en symbolkobling som &root; bruker:
       </para>
 
-<screen role="root"><userinput>mv /usr/bin/ninja{,.old} &amp;&amp;
-ln -svf samu /usr/bin/ninja</userinput></screen>
+<screen role="root"><userinput>ln -svf samu /usr/bin/ninja</userinput></screen>
 
       <para>
         <command>samu</command> vil ikke kjøre på alle logiske CPU-er eller 
