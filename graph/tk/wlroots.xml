@@ -96,8 +96,9 @@
         </listitem>
         <listitem>
           <para>
-            <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Utilities</ulink>,
-            <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>, og
+            <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Verktøy</ulink>,
+            <xref linkend="xcb-util-errors"/>,
+            <ulink url="&blfs-svn;/x/x7lib.html">Xorg Biblioteker</ulink>, og
             <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>:
             For støtte for Xorg applikasjoner/biblioteker.
           </para>
