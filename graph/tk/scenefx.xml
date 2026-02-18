@@ -35,7 +35,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">scenefx Avhengigheter</bridgehead>
+    <bridgehead renderas="sect3">SceneFX Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
@@ -52,17 +52,19 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installasjon av scenefx</title>
+    <title>Installasjon av SceneFX</title>
 
     <para>
-      Installer scenefx ved å kjøre følgende 
-      kommandoer:
+      Installer SceneFX ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            -D examples=false   \
+            .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
@@ -77,6 +79,13 @@ ninja</userinput></screen>
     <title>Parameterforklaringer</title>
 
     &meson-buildtype-release;
+
+    <para><parameter>-D examples=false</parameter>: Denne parameteren 
+	deaktiverer bygging av eksemplene. På grunn av mulig feilaktige 
+	avhengighetsinstruksjoner, fører dette til at byggingen mislykkes hvis du 
+	bruker <xref linkend="samurai"/> inntil det tredje forsøket på å kjøre. 
+	Eksemplene fører til at protokollgenereringen avsluttes for tidlig, noe som 
+	er nødvendig for hovedbiblioteket og eksemplene. Ninja behandler saken.</para>
 
   </sect2>
 
