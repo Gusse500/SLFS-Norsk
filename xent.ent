@@ -73,6 +73,9 @@
 <!ENTITY gnu17
   "<para><envar>C{,XX}FLAGS='std=gnu17'</envar>: Disse variablene sikrer at 
   denne pakken bygger riktig, ettersom C23 nå er standard i GCC-15.x.x.</para>">
+<!ENTITY glibc243-const
+  "<para>Sørg for at noen variabler har en samsvarende type som kreves av 
+  glibc-2.43 funksjonsprototypene:</para>">
 <!ENTITY long-build-time
   "<note><para>Dette kan ta litt tid å bygge. Gjør gjerne noe annet mens dette 
   bygges.</para></note>">
