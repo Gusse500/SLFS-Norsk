@@ -36,14 +36,13 @@
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
       <ulink url="&blfs-svn;/general/libxkbcommon.html">libxkbcommon</ulink>,
-      <xref linkend="scdoc"/>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>, og
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>
     </para>
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="required">
-      <xref linkend="optional"/>
+      <xref linkend="scdoc"/>
     </para>
 
   </sect2>
