@@ -24,6 +24,25 @@
       full kompatibilitet.
     </para>
 
+    <note><para>Denne pakken fungerer for de fleste pakker som en Ninja 
+    erstatning. Den er kjent for å fungere helt fint for 32-bit og 64-bit og med 
+    prosjekter med Rust også. Imidlertid kan den bli påvirket av noen 
+    byggesystemer med potensielt tvetydig avhengighetsinformasjon, noe som fører 
+    til at viktige mål blir hoppet over som Ninja tar for seg. Hvis du oppdager 
+    at et prosjekt prøver å inkludere en header som dette: <literal>#include
+    "xdg-shell.h"</literal>, men kan ikke, er det sannsynligvis generert av et 
+    mål som ble hoppet over. Du kan prøve å bruke Ninja for å se om det løser 
+    problemet.</para>
+    <para>Kjente pakker med det problemet:</para>
+    <itemizedlist>
+      <listitem><para><ulink url="&blfs-svn;/gnome/gnome-keyring.html">gnome-keyring</ulink>
+        (kan ikke inkludere <literal>"gkm-marshal.h"</literal>)</para></listitem>
+      <listitem><para><xref linkend="scenefx"/>
+        (eksempler er deaktivert, så dette problemet kan ikke observeres, 
+        men hvis det er aktivert, kan det ikke inkludere
+        <literal>"xdg-shell-protocol.h"</literal>)</para></listitem>
+    </itemizedlist></note>
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>
