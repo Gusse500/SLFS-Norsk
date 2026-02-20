@@ -49,6 +49,7 @@
     <para>
       Denne boken er dedikert til å supplere et LFS, MLFS, BLFS og/eller GLFS 
       system x86_64 ved å tilby pakker som ikke finnes i de andre LFS bøkene.
+      &github-pages;
     </para>
   </abstract>
 
