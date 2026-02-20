@@ -110,18 +110,18 @@
       Installer CDE ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>./autogen.sh                       &amp;&amp;
+<screen><userinput>./autogen.sh                                          &amp;&amp;
 CFLAGS+=" -std=gnu17 -Wno-incompatible-pointer-types" \
 ./configure --prefix=/usr                             \
             --sysconfdir=/etc                         \
             --disable-static                          &amp;&amp;
 make</userinput></screen>
 
-    <note><para>Denne pakken kan skrive ut escape sekvenser under byggeprosessen, 
-    noe som vil føre til at terminalen slutter å sende tilbake tegn. For å omgå 
-    dette må du blindt skrive inn
-    <command>reset</command>. Etter at skjermen er tømt, vil terminalen din 
-    fungere riktig igjen.</para></note>
+    <note><para>Denne pakken vil skrive ut escape sekvenser under byggeprosessen, 
+    noe som vil føre til at terminalen slutter å sende tegn tilbake. For å omgå 
+    dette problemet må du blindt skrive inn
+    <command>reset</command> etter kompileringen. Terminalen din vil fungere 
+    ordentlig igjen når skjermen er tømt.</para></note>
 
     <para>
       Nå som &root; bruker:
@@ -136,7 +136,8 @@ install -vDm644 contrib/desktopentry/cde.desktop -t /usr/share/xsessions/</useri
     <title>Konfigurere CDE</title>
 
     <sect3  id="cde-init">
-      <title>Oppstartsskript</title>
+      <title revision="sysv">Oppstartsskript</title>
+      <title revision="systemd">Systemd Enhet</title>
 
       <para>
         For å starte <command>dtlogin</command> automatisk (CDEs 
@@ -160,8 +161,9 @@ install -vDm644 /dev/stdin /etc/sysconfig/xdm &amp;&amp;
 
 if ! grep -q '^dm:5' /etc/inittab; then \
   echo dm:5:respawn:/etc/rc.d/init.d/xdm >> /etc/inittab; \
-fi</userinput></screen><screen role="root" revision="systemd">
-<userinput>install -vdm755 /etc/default /usr/lib/tmpfiles.d &amp;&amp;
+fi</userinput></screen>
+
+<screen role="root" revision="systemd"><userinput>install -vdm755 /etc/default /usr/lib/tmpfiles.d &amp;&amp;
 install -vDm644 contrib/rc/systemd/dtlogin.service -t /usr/lib/systemd/system/ &amp;&amp;
 systemctl enable dtlogin.service</userinput></screen>
 
