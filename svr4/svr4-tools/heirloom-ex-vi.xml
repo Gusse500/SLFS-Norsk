@@ -21,9 +21,8 @@
     <title>Introduksjon til heirloom-ex-vi</title>
 
     <para>
-      Heirloom-ex-vi pakken, også kjent som
-      <quote>Den tradisjonelle Vi</quote>, er en flyttbar versjon av 
-      2.11BSD/SVR4 vi.
+      Pakken heirloom-ex-vi, også kjent som <quote>The Traditional Vi</quote>,
+      er en flyttbar versjon av 2.11BSD/SVR4 vi.
     </para>
 
     <itemizedlist spacing="compact">

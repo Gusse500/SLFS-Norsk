@@ -68,14 +68,13 @@
 <screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-final-updates.patch</userinput></screen>
 
     <para>
-      Nå, installer en oppdatering for å fikse byggingen med glibc 2.34 eller nyere:
+      Nå, installer en oppdatering for å fikse bygging med glibc 2.34 eller senere:
     </para>
 
 <screen><userinput>patch -Np1 -i ../heirloom-sh-&heirloom-sh-version;-glibc234-3.patch</userinput></screen>
 
     <para>
-      Installer heirloom-sh ved å kjøre følgende 
-      kommandoer:
+      Installer heirloom-sh ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>make</userinput></screen>

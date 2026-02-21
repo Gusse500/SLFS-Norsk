@@ -20,11 +20,10 @@
     <title>Introduksjon til heirloom-doctools</title>
 
     <para>
-      heirloom-doctools pakken tilbyr
-      troff, nroff, og
-      andre relaterte verktøy. Disse verktøyene er forbedrede versjoner av 
-      verktøyene utgitt som en del av OpenSolaris, som i seg selv er varianter 
-      av ditroff, som i seg selv er etterkommere av den originale UNIX troff.
+      Pakken heirloom-doctools inneholder troff, nroff og andre relaterte 
+      verktøy. Disse verktøyene er forbedrede versjoner av verktøyene som ble 
+      utgitt som en del av OpenSolaris, som i seg selv er varianter av ditroff, 
+      som i seg selv er etterkommere av den originale UNIX troff.
     </para>
 
     <itemizedlist spacing="compact">
@@ -53,7 +52,7 @@
       kommandoer:
     </para>
 
-<screen><userinput>./configure &amp;&amp;
+<screen><userinput>./configure                 &amp;&amp;
 make PREFIX=/usr            \
      CC="cc -std=gnu17"     \
      YACC=/usr/ccs/bin/yacc \
@@ -63,8 +62,7 @@ make PREFIX=/usr            \
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>make PREFIX=/usr MANDIR=/usr/share/man/5man \
-install</userinput></screen>
+<screen role="root"><userinput>make PREFIX=/usr MANDIR=/usr/share/man/5man install</userinput></screen>
 
   </sect2>
 
@@ -406,7 +404,7 @@ install</userinput></screen>
         <term><command>ta</command></term>
         <listitem>
           <para>
-            driver en HP2621 terminal for å se ting raskt
+            driver en HP2621 terminal for å se informasjon raskt
           </para>
           <indexterm zone="heirloom-doctools ta">
             <primary sortas="b-ta">ta</primary>
