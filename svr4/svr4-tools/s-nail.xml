@@ -35,7 +35,7 @@
     <bridgehead renderas="sect3">s-nail Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd ved kjøretid</bridgehead>
-    <para role="required" role="runtime">
+    <para role="runtime">
       <ulink url="&blfs-svn;/server/mail.html">En MTA</ulink>
     </para>
 
