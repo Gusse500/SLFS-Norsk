@@ -23,7 +23,7 @@
     <para>
       På grunn av diverse oppstrøms anerkjente problemer i arvepakker, er det 
       foretrukket å bruke en annen SVR4 kompatibel tar implementering. 
-      Denne pakken er nettopp det.
+      Denne pakken tilbyr en alternativ implementering.
     </para>
 
     &long-build-time;
@@ -52,14 +52,13 @@ popd</userinput></screen>
 
     <para>
       Kompiler star ved å kjøre følgende kommandoer, og sørg for at en eldre 
-      GNU standard brukes:
+      GNU C standard brukes:
     </para>
 
 <screen><userinput>psmake/smake -e CC="cc -std=gnu17"</userinput></screen>
 
     <para>
-      Nå, som &root; bruker, installer star og 
-      tilleggsverktøyene:
+      Nå, som &root; bruker, installer star og tilleggsverktøyene:
     </para>
 
 <screen role="root"><userinput>install -vDm755 star/OBJ/*/star         \
