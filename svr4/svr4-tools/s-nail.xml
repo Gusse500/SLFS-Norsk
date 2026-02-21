@@ -21,8 +21,7 @@
     <title>Introduksjon til s-nail</title>
 
     <para>
-      Pakken s-nail er en brukeragent for e-post 
-      avledet fra Berkeley Mail 8.1.
+      Pakken s-nail er en brukeragent for e-post avledet fra Berkeley Mail 8.1.
     </para>
 
     <itemizedlist spacing="compact">
@@ -35,8 +34,8 @@
 
     <bridgehead renderas="sect3">s-nail Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Påkrevd kjøretid</bridgehead>
-    <para role="required">
+    <bridgehead renderas="sect4">Påkrevd ved kjøretid</bridgehead>
+    <para role="required" role="runtime">
       <ulink url="&blfs-svn;/server/mail.html">En MTA</ulink>
     </para>
 
@@ -55,13 +54,14 @@
       Først konfigurerer du denne pakken ved å kjøre følgende kommando:
     </para>
 
-<screen><userinput>VAL_BINDIR=/usr/5bin VAL_LIBEXECDIR=/usr/5lib      \
-VAL_MANDIR=/usr/share/man/5man VAL_SYSCONFDIR=/etc \
+<screen><userinput>VAL_BINDIR=/usr/5bin           \
+VAL_LIBEXECDIR=/usr/5lib       \
+VAL_MANDIR=/usr/share/man/5man \
+VAL_SYSCONFDIR=/etc            \
 make config</userinput></screen>
 
     <para>
-      Installer s-nail ved å kjøre følgende 
-      kommandoer:
+      Installer s-nail ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>make</userinput></screen>
@@ -76,9 +76,9 @@ make config</userinput></screen>
       Lag eventuelt noen symbolske kompatibilitetslenker som &root; bruker:
     </para>
 
-<screen role="root"><userinput>install -vdm755 /usr/ucb &amp;&amp;
+<screen role="root"><userinput>install -vdm755 /usr/ucb                 &amp;&amp;
 ln -svf /usr/5bin/s-nail /usr/5bin/mailx &amp;&amp;
-ln -svf /usr/5bin/s-nail /usr/ucb/Mail &amp;&amp;
+ln -svf /usr/5bin/s-nail /usr/ucb/Mail   &amp;&amp;
 ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
 
   </sect2>
@@ -88,7 +88,7 @@ ln -svf /usr/5bin/s-nail /usr/ucb/mail</userinput></screen>
 
     <para>
       <envar>VAL_MTA=/usr/bin/sendmail</envar>: Denne variabelen angir banen 
-      til en MTA.
+      til en MTA. Standardinnstillingen på et BLFS system er /usr/sbin/sendmail.
     </para>
 
     <para>
