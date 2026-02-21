@@ -21,12 +21,10 @@
     <title>Introduksjon til heirloom-devtools</title>
 
     <para>
-      heirloom-devtools pakken tilbyr
-      yacc, lex,
-      m4, make, og
-      SCCS. Disse verktøyene er flyttbare derivater av verktøyene som ble utgitt 
-      som en del av OpenSolaris, og som ble avledet fra de originale UNIX 
-      versjonene.
+      Pakken heirloom-devtools inneholder SVR4 versjonene av verktøyene yacc, 
+      lex, m4, make og SCCS. Disse verktøyene er flyttbare derivater av 
+      verktøyene som ble utgitt som en del av OpenSolaris, og som ble avledet 
+      fra de originale UNIX versjonene.
     </para>
 
     <itemizedlist spacing="compact">
@@ -84,16 +82,14 @@
 <screen><userinput>patch -Np1 -i ../heirloom-devtools-&heirloom-devtools-version;-fix-make-build.patch</userinput></screen>
 
     <para>
-      Kjør følgende kommando for å be denne pakken om å bruke 
-      libtirpc:
+      Juster deretter byggekonfigurasjonen for å bruke libtirpc:
     </para>
 
 <screen><userinput>sed -i 's=-O=-O -I/usr/include/tirpc=g' mk.config</userinput></screen>
 
     <para>
-      Hvis du har heirloom-sh installert, 
-      kjør følgende kommandoer for å fortelle heirloom-devtools 
-      hvor den skal finne den:
+      Hvis du har heirloom-sh installert, kjør følgende kommandoer for å 
+      fortelle heirloom-devtools hvor den skal finne den:
     </para>
 
 <screen><userinput>sed -i 's-/sbin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
@@ -101,25 +97,25 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' mk.config &amp;&amp;
 sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
 
     <para>
-      Ellers, kjør følgende kommando:
+      Ellers, kjør følgende kommando for å bruke den vanlige 'sh'-en:
     </para>
 
-    <!-- computeroutput here as it may be possible jhalfs if down the road
-    used for this book will run this command block blindly. The above
-    command block should really be followed instead as it should install the
-    recommended dep. -->
+    <!-- computeroutput here as it may be possible for jhalfs (if it gains
+    support for SLFS eventually), to read this command block blindly. The
+    above command block should be followed instead as it will install the
+    recommended dependencies. -->
+
 <screen><computeroutput>sed -i 's-/sbin/sh-/bin/sh-g' mk.config</computeroutput></screen>
 
     <important><para>
-      Sørg for at du bygger denne pakken som en vanlig bruker, og
+      Sørg for at du bygger denne pakken som en uprivilegerte bruker, og
       <emphasis>IKKE</emphasis> som &root; brukeren, ellers vil
       <command>make</command> prosessen mislykkes da den ikke vil kunne 
       opprette en midlertidig fil/mappe.
     </para></important>
 
     <para>
-      Installer heirloom-devtools ved å kjøre følgende 
-      kommandoer:
+      Installer heirloom-devtools ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>CC="cc -std=gnu17" make -j1</userinput></screen>
@@ -295,7 +291,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>prt</command></term>
         <listitem>
           <para>
-            skriver ut deler av eller hele en SCCS fil
+            skriver ut innholdet av en SCCS fil
           </para>
           <indexterm zone="heirloom-devtools prt">
             <primary sortas="b-prt">prt</primary>
@@ -416,7 +412,7 @@ sed -i 's-/bin/sh-/usr/5bin/sh-g' sccs/src/sccsdiff.sh</userinput></screen>
         <term><command>yacc</command></term>
         <listitem>
           <para>
-            er yet-another compiler compiler
+            genererer en parser
           </para>
           <indexterm zone="heirloom-devtools yacc">
             <primary sortas="b-yacc">yacc</primary>
