@@ -11,9 +11,9 @@
   <title>SVR4 stilaktig verktøy</title>
 
   <para>
-    Dette kapittelet er dedikert til diverse verktøy som er SVR4 stilaktig, 
-    enten gamle versjoner fra Heirloom prosjektet som er oppdatert for å 
-    fungere igjen, eller moderne forgreninger av dem.
+    Dette kapittelet er dedikert til diverse verktøy i SVR4 stil, enten gamle 
+    versjoner fra Heirloom prosjektet oppdatert for å fungere på moderne 
+    systemer, eller moderne forgreninger av verktøyene når det er nødvendig.
   </para>
 
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="svr4-tools-intro.xml"/>
