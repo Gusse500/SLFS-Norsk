@@ -5,11 +5,11 @@
   %general-entities;
 ]>
 
-<sect1 id="svr4-tools-intro" xreflabel="Introduksjon til SVR4 stilaktige verktøy">
+<sect1 id="svr4-tools-intro" xreflabel="Introduksjon til SVR4-stil verktøyet">
   <?dbhtml filename="svr4-tools-intro.html"?>
 
 
-  <title>Introduksjon til SVR4 stilaktige verktøy</title>
+  <title>Introduksjon til SVR4-stil verktøy</title>
 
   <sect2>
     <title>Hva er SVR4?</title>
@@ -17,8 +17,8 @@
     <para>
       SVR4, eller System V Release 4, er en versjon av System V, dvs. Unix. 
       Verktøyene i dette kapittelet har som mål å hjelpe til med å jobbe med et 
-      slikt miljø på et LFS system. Det er noen forbehold som følge av å 
-      håndtere et gammelt operativsystem.
+      slikt miljø på et LFS system. Det er noen forbehold å være oppmerksom på 
+      som følge av å håndtere et gammelt operativsystem.
     </para>
 
   </sect2>
@@ -31,7 +31,8 @@
       ikke-standardiserte steder i <filename class="directory">/usr</filename>. 
       Hensikten bak dette er å være mer nøyaktig på hvor UNIXEN, som disse 
       verktøyene ble portert fra, plasserte filene, og en forklaring på hvor 
-      disse stiene kom fra er gitt nedenfor.
+      disse stiene kom fra er gitt nedenfor. Dette hindrer også verktøyene i å 
+      overskrive kopier av verktøyene som er installert i LFS.
     </para>
 
     <itemizedlist>
