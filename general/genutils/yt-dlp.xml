@@ -31,6 +31,12 @@
       konvertere nedlastinger til andre formater ved hjelp av FFmpeg.
     </para>
 
+    <note><para>
+      Hvis du laster ned videoer fra YouTube, må du være oppmerksom på at 
+      plattformen ofte gjør endringer som ødelegger yt-dlp. I dette tilfellet 
+      finnes det vanligvis en nyere versjon, som du bør oppgradere til.
+    </para></note>
+
     <itemizedlist spacing="compact">
       <listitem>
         <para>
