@@ -120,10 +120,10 @@ cp /etc/dunst/dunstrc ~/.config/dunst</userinput></screen>
 
       <para>
         <command>dunst</command> må også startes for at den skal kunne sende 
-        varsler. Selv om dette kan startes automatisk av D-Bus, 
-        kan flere varslingsdaemoner være installert, 
-        så D-Bus vil være den som velger hva som skal startes automatisk. 
-        Dermed finnes det et par alternativer.
+        varsler. Selv om dette kan startes automatisk av D-Bus, kan flere 
+        varslingsdaemoner installeres, så D-Bus vil være den som velger hva som 
+        skal startes automatisk. Dermed finnes det et par 
+        alternativer.
       </para>
 
       <sect4>
