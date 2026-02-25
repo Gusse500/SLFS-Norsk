@@ -64,7 +64,7 @@
       Pakk først ut oppdateringstarballen:
     </para>
 
-<screen><userinput>tar xvf ../motif-&motif-version;-patches-5.tar.xz</userinput></screen>
+<screen><userinput>tar -xvf ../motif-&motif-version;-patches-5.tar.xz</userinput></screen>
 
     <para>
       Nå, bruk de forskjellige oppdateringene fra tarballen:
