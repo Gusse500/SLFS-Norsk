@@ -27,7 +27,9 @@
     </para>
 
     <note><para>Denne pakken krever enten et 32-bits system eller et 64-bits 
-    system med støtte for 32-bits applikasjoner.</para></note>
+    system med støtte for 32-biters applikasjoner via prosjekter som Multilib 
+    LFS. Basis MLFS burde være godt nok, og du burde ikke trenge noe annet for 
+    32-bit.</para></note>
 
     <itemizedlist spacing="compact">
       <listitem>
