@@ -7,24 +7,24 @@
   <!ENTITY hyprlib-download "https://github.com/hyprwm/">
 ]>
 
-<sect1 id="hyprlib" xreflabel="Hypr Biblioteker">
+<sect1 id="hyprlib" xreflabel="Hyprland Biblioteker">
   <?dbhtml filename="hyprlib.html"?>
 
-  <title>Hypr Biblioteker</title>
+  <title>Hyprland Biblioteker</title>
 
   <indexterm zone="hyprlib">
-    <primary sortas="a-hyprlib">Hypr Biblioteker</primary>
+    <primary sortas="a-hyprlib">Hyprland Biblioteker</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduksjon til Hypr Biblioteker</title>
+    <title>Introduksjon til Hyprland Biblioteker</title>
 
     <para>
-      Hypr bibliotekene tilbyr nødvendige verktøy for hele Hypr økosystemet. 
-      Selv om tre av pakkene som er installert på denne siden ikke er strengt 
-      nødvendige (hyprtoolkit, hyprland-qt-support og hyprland-guiutils), er de 
-      nødvendige for noen dialogbokser, og denne boken forutsetter at du har 
-      bygget dem.
+      Hyprland bibliotekene tilbyr nødvendige verktøy for hele Hyprland 
+      økosystemet. Selv om tre av pakkene som er installert på denne siden ikke 
+      er strengt nødvendige (hyprtoolkit, hyprland-qt-support og 
+      hyprland-guiutils), er de nødvendige for noen dialogbokser, og denne boken 
+      forutsetter at du har bygget dem.
     </para>
 
     &abi-break;
@@ -39,7 +39,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Hypr Biblioteker Avhengigheter</bridgehead>
+    <bridgehead renderas="sect3">Hyprland Biblioteker Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
@@ -75,7 +75,7 @@
   </sect2>
 
   <sect2>
-    <title>Laste ned Hypr Biblioteker</title>
+    <title>Laste ned Hyprland Biblioteker</title>
 
     <para>
       Lag først en liste over filer som skal lastes ned:
@@ -109,7 +109,7 @@ grep -v '^#' ../hypr-list | wget -i- -c \
   </sect2>
 
   <sect2 role="installation">
-    <title>Installasjon av Hypr Biblioteker</title>
+    <title>Installasjon av Hyprland Biblioteker</title>
 
     <para>
       Opprett <filename>/etc/profile.d/hypr.sh</filename> for å sikre at QML 
