@@ -184,10 +184,10 @@ done</userinput></screen>
     <para>
       Det vil være mange binærfiler med feilsøkingsinformasjon som tar opp over 
       halvparten av den installerte størrelsen. Hvis du ikke bryr deg om 
-      feilsøking, kan du fjerne informasjonen:
+      feilsøking, kan du fjerne informasjonen som &root; bruker:
     </para>
 
-<screen><userinput>find /opt/jdk-&openjdk-version;&openjdk-suffix; -name *.debuginfo -delete</userinput></screen>
+<screen role="root"><userinput>find /opt/jdk-&openjdk-version;&openjdk-suffix; -name *.debuginfo -delete</userinput></screen>
 
     <para>
       Gjenopprett <envar>MAKEFLAGS</envar> variabelen:
