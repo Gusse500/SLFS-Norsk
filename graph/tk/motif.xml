@@ -172,6 +172,8 @@ TryExec=/usr/bin/mwm
 Type=Application</literal>
 EOF</userinput></screen>
 
+    <note>&install-stdin;</note>
+
     <para>
       Til slutt, fjern miljøvariablene som tidligere ble angitt:
     </para>
