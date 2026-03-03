@@ -144,6 +144,14 @@ sed -i "s/glaze\ [0-9][0-9.]*/glaze\ $(./glz-version)/" \
   hyprpm/CMakeLists.txt &amp;&amp;
 rm -vf glz-version{,.cpp}</userinput></screen>
 
+    <important><para>
+      Hvis glaze er installert og du ikke har kjørt kommandoene ovenfor, vil 
+      Hyprland, hvis den installerte versjonen ikke oppfyller den spesifikke 
+      versjonen i <filename>hyprpm/CMakeLists.txt</filename>, overskrive glaze 
+      installasjonen fullstendig med ofte eldre filer. Kjør kommandoene ovenfor 
+      for å forhindre denne situasjonen.
+    </para></important>
+
     <para>
       Installer Hyprland ved å kjøre følgende kommandoer:
     </para>
