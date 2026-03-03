@@ -68,7 +68,6 @@
       <ulink url="&blfs-svn;/general/elogind.html">elogind</ulink>,
       </phrase>
       &gbm;,
-      <xref linkend="glaze"/>,
       <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>
       (med GObjectIntrospection),
       <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink>,
@@ -100,6 +99,7 @@
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
+      <xref linkend="glaze"/> (vil bli lastet ned hvis den ikke er installert),
       <ulink url="&blfs-svn;/x/xcb-utilities.html">XCB Verktøy</ulink>,
       <xref linkend="xcb-util-errors"/>, og
       <ulink url="&blfs-svn;/x/xwayland.html">Xwayland</ulink>
@@ -122,6 +122,35 @@
 
 <screen><userinput>tar -xf ../udis86-&hypr-udis86-version;.tar.gz &amp;&amp;
 mv -T udis86-&hypr-udis86-version; subprojects/udis86</userinput></screen>
+
+    <para>
+      Sørg for at den installerte versjonen av glaze kan brukes:
+    </para>
+
+<screen><userinput>cat &gt; glz-version.cpp &lt;&lt; "EOF"
+<literal>#include &lt;glaze/glaze.hpp&gt;
+#include &lt;glaze/version.hpp&gt;
+#include &lt;stdio.h&gt;
+int main() {
+  printf("%i.%i.%i\n", glz::version.major,
+                       glz::version.minor,
+                       glz::version.patch);
+  return 0;
+}</literal>
+EOF
+
+g++ -std=c++23 -o glz-version glz-version.cpp &amp;&amp;
+sed -i "s/glaze\ [0-9][0-9.]*/glaze\ $(./glz-version)/" \
+  hyprpm/CMakeLists.txt &amp;&amp;
+rm -vf glz-version{,.cpp}</userinput></screen>
+
+    <important><para>
+      Hvis glaze er installert og du ikke har kjørt kommandoene ovenfor, vil 
+      Hyprland, hvis den installerte versjonen ikke oppfyller den spesifikke 
+      versjonen i <filename>hyprpm/CMakeLists.txt</filename>, overskrive glaze 
+      installasjonen fullstendig med ofte eldre filer. Kjør kommandoene ovenfor 
+      for å forhindre denne situasjonen.
+    </para></important>
 
     <para>
       Installer Hyprland ved å kjøre følgende kommandoer:
