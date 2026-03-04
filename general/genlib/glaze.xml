@@ -8,24 +8,31 @@
     "https://github.com/stephenberry/glaze/archive/v&glaze-version;/glaze-&glaze-version;.tar.gz">
 ]>
 
-<sect1 id="glaze" xreflabel="glaze-&glaze-version;">
+<sect1 id="glaze" xreflabel="Glaze-&glaze-version;">
   <?dbhtml filename="glaze.html"?>
 
-  <title>glaze-&glaze-version;</title>
+  <title>Glaze-&glaze-version;</title>
 
   <indexterm zone="glaze">
-    <primary sortas="a-glaze">glaze</primary>
+    <primary sortas="a-glaze">Glaze</primary>
   </indexterm>
 
   <sect2 role="package">
     <title>Introduksjon til glaze</title>
 
     <para>
-      glaze pakken tilbyr en header basert JSON og et 
+      Glaze pakken tilbyr en header basert JSON og et 
       grensesnittbibliotek i minnet for C++.
     </para>
 
-    &abi-break;
+    <!--
+      Until we get more packages using more functions in Glaze, let's have this
+      commented out, since Hyprland doesn't use very many, at least until it
+      uses one that had an ABI breakage... in which case, we should probably
+      stay on an older version.
+
+      &abi-break;
+    -->
 
     <itemizedlist spacing="compact">
       <listitem>
@@ -35,7 +42,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">glaze Avhengigheter</bridgehead>
+    <bridgehead renderas="sect3">Glaze Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
@@ -45,10 +52,10 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installasjon av glaze</title>
+    <title>Installasjon av Glaze</title>
 
     <para>
-      Forbered installasjonen av glaze ved å kjøre følgende kommandoer:
+      Forbered installasjonen av Glaze ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -72,12 +79,6 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
 
-    <!-- Currently (v6.0.0 - 2025-10-20) unused by the build system when glaze_*
-    are passed -->
-    <!-- <para> -->
-    <!--   <parameter>-D BUILD_TESTING=OFF</parameter>: This parameter disables -->
-    <!--   building tests. -->
-    <!-- </para> -->
     <para>
       <parameter>-D glaze_BUILD_EXAMPLES=OFF</parameter>: Denne parameteren 
       deaktiverer byggeeksempler.
