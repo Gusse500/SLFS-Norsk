@@ -40,6 +40,40 @@
     -->
 
     <listitem>
+      <para>28. februar 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.53.3 -&gt; 0.54.0. Fikser
+          <ulink url="&slfs-issues;/562">#562</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OpenTTD: 15.1 -&gt; 15.2. Fikser
+          <ulink url="&slfs-issues;/559">#559</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - sdl12-compat: 1.2.72 -&gt; 1.2.74. Fikser
+          <ulink url="&slfs-issues;/558">#558</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - MangoWC: 0.12.2 -&gt; 0.12.4. Fikser
+          <ulink url="&slfs-issues;/555">#555</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - PrismLauncher: 10.0.2 -&gt; 10.0.5. Fikser
+          <ulink url="&slfs-issues;/554">#554</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - platformdirs: 4.9.1 -&gt; 4.9.2. Fikser
+          <ulink url="&slfs-issues;/553">#553</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fish: 4.4.0 -&gt; 4.5.0. Fikser
+          <ulink url="&slfs-issues;/552">#552</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+		
+    <listitem>
       <para>23. februar 2026</para>
       <itemizedlist>
         <listitem>
