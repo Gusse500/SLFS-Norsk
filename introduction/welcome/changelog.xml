@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>4. mars 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - BLFS OpenJDK Version: 21.0.9+10 -&gt; 21.0.10+6.
+          (Sikkerhetsoppdatering).</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>3. mars 2026</para>
       <itemizedlist>
         <listitem>
