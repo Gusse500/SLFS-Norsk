@@ -40,6 +40,23 @@
     -->
 
     <listitem>
+      <para>3. mars 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Mango: 0.12.4 -&gt; 0.12.5. Fikser
+          <ulink url="&slfs-issues;/564">#564</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Glaze: 7.0.2 -&gt; 7.1.0. Fikser
+          <ulink url="&slfs-issues;/568">#568</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Mango: MangoWC -&gt; Mango.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>28. februar 2026</para>
       <itemizedlist>
         <listitem>
