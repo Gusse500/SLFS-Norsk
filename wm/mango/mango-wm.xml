@@ -4,26 +4,26 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY mangowc-root
-    "https://github.com/DreamMaoMao/mangowc/archive">
-  <!ENTITY mangowc-download
-    "&mangowc-root;/&mangowc-version;/mangowc-&mangowc-version;.tar.gz">
+  <!ENTITY mango-root
+    "https://github.com/mangowm/mango/archive">
+  <!ENTITY mango-download
+    "&mango-root;/&mango-version;/mango-&mango-version;.tar.gz">
 ]>
 
-<sect1 id="mangowc-wm" xreflabel="MangoWC-&mangowc-version;">
-  <?dbhtml filename="mangowc-wm.html"?>
+<sect1 id="mango-wm" xreflabel="Mango-&mango-version;">
+  <?dbhtml filename="mango-wm.html"?>
 
-  <title>MangoWC-&mangowc-version;</title>
+  <title>Mango-&mango-version;</title>
 
-  <indexterm zone="mangowc-wm">
-    <primary sortas="a-mangowc-wm">MangoWC</primary>
+  <indexterm zone="mango-wm">
+    <primary sortas="a-mango-wm">Mango</primary>
   </indexterm>
 
   <sect2 role="package">
-    <title>Introduksjon til MangoWC</title>
+    <title>Introduksjon til Mango</title>
 
     <para>
-      MangoWC er en Wlroots basert Wayland kompoisjonsverktøy som er avhengig 
+      Mango er en Wlroots basert Wayland kompoisjonsverktøy som er avhengig 
       av SceneFX for animasjoner og effekter. Den er liten og basert på DWL. 
       Konfigurasjonen håndteres via en konfigurasjonsfil i stedet for kildekode.
     </para>
@@ -31,12 +31,12 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Nedlasting: <ulink url="&mangowc-download;"/>
+          Nedlasting: <ulink url="&mango-download;"/>
         </para>
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">mangowc Avhengigheter</bridgehead>
+    <bridgehead renderas="sect3">Mango Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
@@ -60,10 +60,10 @@
   </sect2>
 
   <sect2 role="installation">
-    <title>Installasjon av MangoWC</title>
+    <title>Installasjon av Mango</title>
 
     <para>
-      Installer MangoWC ved å kjøre følgende kommandoer:
+      Installer Mango ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>mkdir build &amp;&amp;
@@ -88,9 +88,9 @@ ninja</userinput></screen>
   </sect2>
 
   <sect2 role="configuration">
-    <title>Konfigurere MangoWC</title>
+    <title>Konfigurere Mango</title>
 
-    <sect3 id="mangowc-wm-config">
+    <sect3 id="mango-wm-config">
       <title>Konfigurasjonsfiler</title>
       <para>
         <filename>~/.config/mango/config.conf</filename>. Standardversjonen 
@@ -99,7 +99,7 @@ ninja</userinput></screen>
         <filename class="directory">~/.config/mango</filename> manuelt.
       </para>
 
-      <indexterm zone="mangowc-wm mangowc-wm-config">
+      <indexterm zone="mango-wm mango-wm-config">
         <primary sortas="e-AA.config">~/.config/mango/config.conf</primary>
       </indexterm>
 
@@ -116,9 +116,9 @@ cp -v /etc/mango/config.conf ~/.config/mango</userinput></screen>
 
       <para>
         Rediger konfigurasjonsfilen etter behov for å tilpasse den til 
-        arbeidsflyten din. Du kan lese hvordan du konfigurerer MangoWC ved å 
-        lese <ulink url="https://github.com/DreamMaoMao/mangowc/wiki">MangoWC
-        Wiki</ulink>.
+        arbeidsflyten din. Du kan lese hvordan du konfigurerer Mango ved å 
+        lese <ulink url="https://mangowm.github.io/docs/">Mango
+        Docs</ulink>.
       </para>
 
     </sect3>
@@ -151,14 +151,14 @@ cp -v /etc/mango/config.conf ~/.config/mango</userinput></screen>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-      <varlistentry id="mango">
+      <varlistentry id="mango-bin">
         <term><command>mango</command></term>
         <listitem>
           <para>
             er en SceneFX Wlroots basert Wayland kompositor
           </para>
-          <indexterm zone="mangowc-wm mango">
-            <primary sortas="a-mango">mango</primary>
+          <indexterm zone="mango-wm mango-bin">
+            <primary sortas="a-mango-bin">mango</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -169,8 +169,8 @@ cp -v /etc/mango/config.conf ~/.config/mango</userinput></screen>
           <para>
             sender og henter meldinger til og fra <command>mango</command>
           </para>
-          <indexterm zone="mangowc-wm mmsg">
-            <primary sortas="a-mango">mmsg</primary>
+          <indexterm zone="mango-wm mmsg">
+            <primary sortas="a-mmsg">mmsg</primary>
           </indexterm>
         </listitem>
       </varlistentry>
