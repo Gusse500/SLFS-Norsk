@@ -43,6 +43,9 @@
       <para>4. mars 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - SLFS-13.0 utgitt.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - BLFS OpenJDK Version: 21.0.9+10 -&gt; 21.0.10+6.
           (Sikkerhetsoppdatering).</para>
         </listitem>
