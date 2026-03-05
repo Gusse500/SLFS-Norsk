@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
   <!ENTITY % general-entities SYSTEM "../../general.ent">
@@ -22,24 +22,24 @@
     <title>Introduksjon til OpenJDK</title>
 
     <para>
-      OpenJDK er en åpen kildekode implementering 
+      OpenJDK er en Ã¥pen kildekode implementering 
       av Oracles Java Standard Edition-plattform. 
-      OpenJDK er nyttig for å utvikle Java programmer, 
-      og tilbyr et komplett kjøretidsmiljø for å kjøre 
+      OpenJDK er nyttig for Ã¥ utvikle Java programmer, 
+      og tilbyr et komplett kjÃ¸retidsmiljÃ¸ for Ã¥ kjÃ¸re 
       Java programmer.
     </para>
 
     <para>
       OpenJDK er GPL kode, med et spesielt unntak for ikke-frie prosjekter 
-      som bruker disse klassene i sine proprietære produkter. På samme måte 
-      som LGPL, som tillater ikke-frie programmer å lenke til biblioteker 
+      som bruker disse klassene i sine proprietÃ¦re produkter. PÃ¥ samme mÃ¥te 
+      som LGPL, som tillater ikke-frie programmer Ã¥ lenke til biblioteker 
       levert av fri programvare,
       <ulink url="https://openjdk.org/legal/gplv2+ce.html">GNU
       General Public License, version 2, with the Classpath Exception</ulink>
-      tillater tredjepartsprogrammer å bruke klasser levert av fri programvare 
-      uten krav om at tredjepartsprogramvaren også er fri. Som med LGPL, må 
-      eventuelle modifikasjoner som gjøres i friprogramvaredelene av et 
-      tredjepartsprogram også gjøres fritt tilgjengelige.
+      tillater tredjepartsprogrammer Ã¥ bruke klasser levert av fri programvare 
+      uten krav om at tredjepartsprogramvaren ogsÃ¥ er fri. Som med LGPL, mÃ¥ 
+      eventuelle modifikasjoner som gjÃ¸res i friprogramvaredelene av et 
+      tredjepartsprogram ogsÃ¥ gjÃ¸res fritt tilgjengelige.
     </para>
 
     &long-build-time;
@@ -58,7 +58,7 @@
     </itemizedlist>
 
 <!--
-    <bridgehead renderas="sect4">Påkrevd oppdatering</bridgehead>
+    <bridgehead renderas="sect4">PÃ¥krevd oppdatering</bridgehead>
 
     <itemizedlist spacing='compact'>
       <listitem>
@@ -70,9 +70,9 @@
 -->
     <bridgehead renderas="sect3">OpenJDK Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Påkrevde Avhengigheter</bridgehead>
+    <bridgehead renderas="sect4">PÃ¥krevde Avhengigheter</bridgehead>
     <para role="required">
-      En eksisterende binærfil (<xref linkend="java"/> eller en tidligere bygget 
+      En eksisterende binÃ¦rfil (<xref linkend="java"/> eller en tidligere bygget 
       versjon av denne pakken. Instruksjonene nedenfor forutsetter at du 
       bruker <xref linkend="ojdk-conf"/>),
       <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
@@ -101,13 +101,13 @@
 
 <!--
     <para>
-      Legg til en oppdatering for å tillate bygging med make-4.3:
+      Legg til en oppdatering for Ã¥ tillate bygging med make-4.3:
     </para>
 
 <screen><userinput>patch -p1 -i ../openjdk-&openjdk-version;-make_4.3_fix-1.patch</userinput></screen>
 
     <para>
-      Rett et problem som oppsto på grunn av en fjernet deklarasjon i glibc-2.32:
+      Rett et problem som oppsto pÃ¥ grunn av en fjernet deklarasjon i glibc-2.32:
     </para>
 
 <screen><userinput>sed -i /sysctl/d \
@@ -115,13 +115,13 @@
 -->
     <note>
       <para>
-        Før du fortsetter, bør du sørge for at miljøet ditt
-        <envar>PATH</envar> Variabelen inneholder plasseringen til Java 
+        FÃ¸r du fortsetter, bÃ¸r du sÃ¸rge for at miljÃ¸et ditt
+        <envar>PATH</envar> variabelen inneholder plasseringen til Java 
         kompilatoren som brukes til oppstart av OpenJDK. Dette er det eneste 
-        kravet for miljøet. Moderne Java installasjoner trenger 
+        kravet for miljÃ¸et. Moderne Java installasjoner trenger 
         ikke <envar>JAVA_HOME</envar> og
         <envar>CLASSPATH</envar> brukes ikke her. Videre anbefaler OpenJDK 
-        utviklere å avinstallere <envar>JAVA_HOME</envar>.
+        utviklere Ã¥ avinstallere <envar>JAVA_HOME</envar>.
       </para>
 
       <para>
@@ -133,7 +133,7 @@
     </note>
 
     <para>
-      Konfigurer og bygg pakken med følgende kommandoer:
+      Konfigurer og bygg pakken med fÃ¸lgende kommandoer:
     </para>
 
 <screen><userinput>export MAKEFLAGS_HOLD=$MAKEFLAGS           &amp;&amp;
@@ -157,7 +157,7 @@ bash configure --enable-unlimited-crypto    \
 make images</userinput></screen>
 
     <para>
-      Installer pakken med følgende kommandoer som
+      Installer pakken med fÃ¸lgende kommandoer som
       &root; bruker:
     </para>
 
@@ -171,7 +171,7 @@ done</userinput></screen>
 
     <note>
       <para>
-        Hvis du bare ønsker å installere Java Runtime Environment, kan du 
+        Hvis du bare Ã¸nsker Ã¥ installere Java Runtime Environment, kan du 
         erstatte <filename>build/*/images/jre</filename> i den ovennevnte
         <command>cp</command> kommandoen.
       </para>
@@ -182,9 +182,9 @@ done</userinput></screen>
      for our distribution tarballs when we generate new ones. For me, without
      it, 319M balloons to 734M. -->
     <para>
-      Det vil være mange binærfiler med feilsøkingsinformasjon som tar opp over 
-      halvparten av den installerte størrelsen. Hvis du ikke bryr deg om 
-      feilsøking, kan du fjerne informasjonen som &root; bruker:
+      Det vil vÃ¦re mange binÃ¦rfiler med feilsÃ¸kingsinformasjon som tar opp over 
+      halvparten av den installerte stÃ¸rrelsen. Hvis du ikke bryr deg om 
+      feilsÃ¸king, kan du fjerne informasjonen som &root; bruker:
     </para>
 
 <screen role="root"><userinput>find /opt/jdk-&openjdk-version;&openjdk-suffix; -name *.debuginfo -delete</userinput></screen>
@@ -197,19 +197,19 @@ done</userinput></screen>
 unset  MAKEFLAGS_HOLD</userinput></screen>
 
     <para>
-      Det er nå installert to OpenJDK SDK-er
-      i <filename class="directory">/opt</filename>. Du bør bestemme deg for 
+      Det er nÃ¥ installert to OpenJDK SDK-er
+      i <filename class="directory">/opt</filename>. Du bÃ¸r bestemme deg for 
       hvilken du vil bruke som standard. Normalt ville du valgt den nettopp 
-      installerte OpenJDK. I så fall gjør du følgende 
+      installerte OpenJDK. I sÃ¥ fall gjÃ¸r du fÃ¸lgende 
       som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ln -v -nsf jdk-&openjdk-version;&openjdk-suffix; /opt/jdk</userinput></screen>
 
     <para>
-      Om ønskelig kan du opprette .desktop filer for å legge til oppføringer i 
+      Om Ã¸nskelig kan du opprette .desktop filer for Ã¥ legge til oppfÃ¸ringer i 
       menyen for <command>java</command>
-      og <command>jconsole</command>. De nødvendige ikonene er allerede 
+      og <command>jconsole</command>. De nÃ¸dvendige ikonene er allerede 
       installert. som <systemitem class="username">root</systemitem> bruker:
     </para>
 
@@ -244,9 +244,9 @@ EOF</userinput></screen>
     <title>Parameterforklaringer</title>
 
     <para>
-      <command>bash configure...</command>: det øverste nivået
+      <command>bash configure...</command>: det Ã¸verste nivÃ¥et
       <filename>configure</filename> er en innpakning rundt Autotools. 
-      Den er ikke kjørbar og må kjøres gjennom <command>bash</command>.
+      Den er ikke kjÃ¸rbar og mÃ¥ kjÃ¸res gjennom <command>bash</command>.
     </para>
 <!-- Not needed in openjdk-15
     <para>
@@ -255,11 +255,11 @@ EOF</userinput></screen>
     </para>
 -->
     <para>
-      <parameter>--enable-unlimited-crypto</parameter>: På grunn av 
-      begrensninger i bruken av kryptografi i noen land, er det mulig å 
-      begrense størrelsen på krypteringsnøkler og bruken av enkelte algoritmer i 
-      en retningslinjefil. Denne bryteren tillater å sende en retningslinjefil 
-      uten begrensninger. Det er brukerens ansvar å sikre korrekt overholdelse 
+      <parameter>--enable-unlimited-crypto</parameter>: PÃ¥ grunn av 
+      begrensninger i bruken av kryptografi i noen land, er det mulig Ã¥ 
+      begrense stÃ¸rrelsen pÃ¥ krypteringsnÃ¸kler og bruken av enkelte algoritmer i 
+      en retningslinjefil. Denne bryteren tillater Ã¥ sende en retningslinjefil 
+      uten begrensninger. Det er brukerens ansvar Ã¥ sikre korrekt overholdelse 
       av loven.
     </para>
 
@@ -271,25 +271,25 @@ EOF</userinput></screen>
     <para>
       <parameter>--with-jobs=<replaceable>&lt;X&gt;</replaceable></parameter>:
       <parameter>-j</parameter> sendt til make fungerer ikke med make som 
-      påkalt her. Som standard vil byggesystemet bruke antallet 
+      pÃ¥kalt her. Som standard vil byggesystemet bruke antallet 
       CPUer - 1.
     </para>
 
     <para>
       <parameter>--with-stdc++lib=dynamic</parameter>: Denne bryteren tvinger 
-      byggesystemet å lenke til <filename>libstdc++.so</filename> (dynamisk)
+      byggesystemet Ã¥ lenke til <filename>libstdc++.so</filename> (dynamisk)
       istedenfor <filename>libstdc++.a</filename> (statisk).
     </para>
 
     <para>
       <parameter>--with-{giflib,lcms,libjpeg,libpng,zlib}=system</parameter>:
-      Disse bryterne tvinger byggesystemet til å bruke systembibliotekene i 
-      stedet for de medfølgende versjonene.
+      Disse bryterne tvinger byggesystemet til Ã¥ bruke systembibliotekene i 
+      stedet for de medfÃ¸lgende versjonene.
     </para>
 
     <para>
-      <parameter>--with-version-build</parameter>: For øyeblikket inkluderer 
-      ikke byggesystemet byggenummeret i versjonsstrengen. Det må spesifiseres 
+      <parameter>--with-version-build</parameter>: For Ã¸yeblikket inkluderer 
+      ikke byggesystemet byggenummeret i versjonsstrengen. Det mÃ¥ spesifiseres 
       her.
     </para>
 
@@ -306,21 +306,21 @@ EOF</userinput></screen>
     <para>
       <parameter>--with-cacerts-file=/etc/pki/tls/java/cacerts</parameter>:
       Angir hvor man finner en <filename>cacerts</filename> fil,
-      <filename>/etc/pki/tls/java/</filename> på et BLFS system. Ellers 
+      <filename>/etc/pki/tls/java/</filename> pÃ¥ et BLFS system. Ellers 
       opprettes en tom en. Du kan bruke
-      <command>/usr/sbin/make-ca --force</command> kommandoen for å generere 
-      den, når du har installert Java binærfilene.
+      <command>/usr/sbin/make-ca --force</command> kommandoen for Ã¥ generere 
+      den, nÃ¥r du har installert Java binÃ¦rfilene.
     </para>
 
     <para>
       <option>--with-boot-jdk</option>: Denne bryteren angir plasseringen til 
-      den midlertidige JDK-en. Den er vanligvis ikke nødvendig
+      den midlertidige JDK-en. Den er vanligvis ikke nÃ¸dvendig
       hvis <command>java</command> finnes i <envar>PATH</envar>.
     </para>
 <!-- Seems to have disappeared
     <para>
       <command>find ... -iname '*.diz' -delete</command>: Denne kommandoen 
-      fjerner overflødige filer.
+      fjerner overflÃ¸dige filer.
     </para>
 -->
   </sect2>
@@ -334,16 +334,16 @@ EOF</userinput></screen>
       <title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Normalt sett er JAVA miljøet konfigurert etter installasjon av 
-        binærversjonen, og kan også brukes med den nettopp bygde pakken. 
-        Gjennomgå <xref linkend="ojdk-conf"/> i tilfelle du vil endre 
+        Normalt sett er JAVA miljÃ¸et konfigurert etter installasjon av 
+        binÃ¦rversjonen, og kan ogsÃ¥ brukes med den nettopp bygde pakken. 
+        GjennomgÃ¥ <xref linkend="ojdk-conf"/> i tilfelle du vil endre 
         noe.
       </para>
 
       <para>
-        For å teste om manualsidene er riktig installert, utsted
+        For Ã¥ teste om manualsidene er riktig installert, utsted
         <command>source /etc/profile</command> og <command>man java</command>
-        for å vise den respektive manualsiden.
+        for Ã¥ vise den respektive manualsiden.
       </para>
 
     </sect3>
@@ -354,26 +354,26 @@ EOF</userinput></screen>
       </title>
 
       <para>
-        Hvis du har kjørt instruksjonene på <ulink
+        Hvis du har kjÃ¸rt instruksjonene pÃ¥ <ulink
         url="&blfs-svn;/postlfs/make.html">make-ca</ulink> siden,
-        trenger du bare å opprette en symbollink på standardplasseringen for
+        trenger du bare Ã¥ opprette en symbollink pÃ¥ standardplasseringen for
         <filename>cacerts</filename> filen. Som &root; bruker:
       </para>
 
 <screen role="root"><userinput>ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts</userinput></screen>
 
       <para>
-        For å sjekke installasjonen, utsted:
+        For Ã¥ sjekke installasjonen, utsted:
       </para>
 
 <screen role="root"><userinput>/opt/jdk/bin/keytool -list -cacerts</userinput></screen>
 
     <para>
-      Ved spørsmålet <computeroutput>Enter keystore password:</computeroutput>,
-      skriv <userinput>changeit</userinput> (standard) eller bare trykk på
+      Ved spÃ¸rsmÃ¥let <computeroutput>Enter keystore password:</computeroutput>,
+      skriv <userinput>changeit</userinput> (standard) eller bare trykk pÃ¥
       <quote>Retur</quote> tasten. Hvis <filename>cacerts</filename> filen ble 
       installert riktig, vil du se en liste over sertifikatene med relatert 
-      informasjon for hvert enkelt. Hvis ikke, må du installere dem på nytt.
+      informasjon for hvert enkelt. Hvis ikke, mÃ¥ du installere dem pÃ¥ nytt.
     </para>
 
     </sect3>
@@ -446,8 +446,8 @@ EOF</userinput></screen>
         <term><command>java</command></term>
         <listitem>
           <para>
-            starter et Java program ved å starte et 
-            Java kjøretidsmiljø, laste inn en spesifisert 
+            starter et Java program ved Ã¥ starte et 
+            Java kjÃ¸retidsmiljÃ¸ laste inn en spesifisert 
             klasse og kalle dens hovedmetode.
           </para>
           <indexterm zone="openjdk java-prog">
@@ -461,7 +461,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             leser klasse  og grensesnitt definisjoner, skrevet i 
-            programmeringsspråket Java, og kompilerer dem til bytekode 
+            programmeringssprÃ¥ket Java, og kompilerer dem til bytekode 
             klassefiler
           </para>
           <indexterm zone="openjdk javac">
@@ -476,7 +476,7 @@ EOF</userinput></screen>
           <para>
             analyserer deklarasjonene og dokumentasjonskommentarene i et sett 
             med Java kildefiler og produserer et tilsvarende sett med HTML 
-            sider som beskriver klassene, grensesnittene, konstruktørene, 
+            sider som beskriver klassene, grensesnittene, konstruktÃ¸rene, 
             metodene og feltene
           </para>
           <indexterm zone="openjdk javadoc">
@@ -501,8 +501,8 @@ EOF</userinput></screen>
         <term><command>jcmd</command></term>
         <listitem>
           <para>
-            er et verktøy for å sende diagnostiske kommandoforespørsler til en 
-            kjørende Java Virtual Machine
+            er et verktÃ¸y for Ã¥ sende diagnostiske kommandoforespÃ¸rsler til en 
+            kjÃ¸rende Java Virtual Machine
           </para>
           <indexterm zone="openjdk jcmd">
             <primary sortas="b-jcmd">jcmd</primary>
@@ -514,7 +514,7 @@ EOF</userinput></screen>
         <term><command>jconsole</command></term>
         <listitem>
           <para>
-            er et grafisk konsollverktøy for å overvåke og administrere både 
+            er et grafisk konsollverktÃ¸y for Ã¥ overvÃ¥ke og administrere bÃ¥de 
             lokale og eksterne Java applikasjoner og virtuelle maskiner
           </para>
           <indexterm zone="openjdk jconsole">
@@ -527,7 +527,7 @@ EOF</userinput></screen>
         <term><command>jdb</command></term>
         <listitem>
           <para>
-            er en enkel kommandolinjefeilsøkingsfunksjon for Java klasser
+            er en enkel kommandolinjefeilsÃ¸kingsfunksjon for Java klasser
           </para>
           <indexterm zone="openjdk jdb">
             <primary sortas="b-jdb">jdb</primary>
@@ -551,7 +551,7 @@ EOF</userinput></screen>
         <term><command>jdeps</command></term>
         <listitem>
           <para>
-            viser pakkenivå eller klassenivå avhengigheter for Java klassefiler
+            viser pakkenivÃ¥ eller klassenivÃ¥ avhengigheter for Java klassefiler
           </para>
           <indexterm zone="openjdk jdeps">
             <primary sortas="b-jdeps">jdeps</primary>
@@ -563,7 +563,7 @@ EOF</userinput></screen>
         <term><command>jfr</command></term>
         <listitem>
           <para>
-            er et verktøy for å jobbe med <quote>Flight Recorder</quote> filer
+            er et verktÃ¸y for Ã¥ jobbe med <quote>Flight Recorder</quote> filer
           </para>
           <indexterm zone="openjdk jfr">
             <primary sortas="b-jfr">jfr</primary>
@@ -575,7 +575,7 @@ EOF</userinput></screen>
         <term><command>jhsdb</command></term>
         <listitem>
           <para>
-            er et verktøy for å analysere innholdet i en kjernedump fra en 
+            er et verktÃ¸y for Ã¥ analysere innholdet i en kjernedump fra en 
             krasjet Java Virtual Machine (JVM)
           </para>
           <indexterm zone="openjdk jhsdb">
@@ -588,7 +588,7 @@ EOF</userinput></screen>
         <term><command>jimage</command></term>
         <listitem>
           <para>
-            brukes til å liste opp, trekke ut, verifisere eller hente 
+            brukes til Ã¥ liste opp, trekke ut, verifisere eller hente 
             informasjon om moduler i <emphasis>jimage</emphasis> formatet
           </para>
           <indexterm zone="openjdk jimage">
@@ -602,7 +602,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             skriver ut Java konfigurasjonsinformasjon for en gitt Java prosess, 
-            kjernefil eller en ekstern feilsøkingsserver
+            kjernefil eller en ekstern feilsÃ¸kingsserver
           </para>
           <indexterm zone="openjdk jinfo">
             <primary sortas="b-jinfo">jinfo</primary>
@@ -614,9 +614,9 @@ EOF</userinput></screen>
         <term><command>jjs</command></term>
         <listitem>
           <para>
-            er et kommandolinjeverktøy som brukes til å starte Nashorn motoren. 
-            Det kan brukes til å tolke en eller flere skriptfiler, eller til å 
-            kjøre et interaktivt skall.
+            er et kommandolinjeverktÃ¸y som brukes til Ã¥ starte Nashorn motoren. 
+            Det kan brukes til Ã¥ tolke en eller flere skriptfiler, eller til Ã¥ 
+            kjÃ¸re et interaktivt skall.
           </para>
           <indexterm zone="openjdk jjs">
             <primary sortas="b-jjs">jjs</primary>
@@ -628,8 +628,8 @@ EOF</userinput></screen>
         <term><command>jlink</command></term>
         <listitem>
           <para>
-            brukes til å sette sammen og optimalisere et sett med moduler og 
-            deres avhengigheter til et tilpasset kjøretidsbilde
+            brukes til Ã¥ sette sammen og optimalisere et sett med moduler og 
+            deres avhengigheter til et tilpasset kjÃ¸retidsbilde
           </para>
           <indexterm zone="openjdk jlink">
             <primary sortas="b-jlink">jlink</primary>
@@ -642,7 +642,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             skriver ut delte objektminnekart eller heap minnedetaljer for en 
-            gitt prosess, kjernefil eller en ekstern feilsøkingsserver
+            gitt prosess, kjernefil eller en ekstern feilsÃ¸kingsserver
           </para>
           <indexterm zone="openjdk jmap">
             <primary sortas="b-jmap">jmap</primary>
@@ -678,7 +678,7 @@ EOF</userinput></screen>
         <term><command>jps</command></term>
         <listitem>
           <para>
-            viser de instrumenterte JVM-ene på målsystemet
+            viser de instrumenterte JVM-ene pÃ¥ mÃ¥lsystemet
           </para>
           <indexterm zone="openjdk jps">
             <primary sortas="b-jps">jps</primary>
@@ -702,7 +702,7 @@ EOF</userinput></screen>
         <term><command>jshell</command></term>
         <listitem>
           <para>
-            er et interaktivt verktøy for å lære Java programmeringsspråket og 
+            er et interaktivt verktÃ¸y for Ã¥ lÃ¦re Java programmeringssprÃ¥ket og 
             prototyping av Java kode
           </para>
           <indexterm zone="openjdk jshell">
@@ -715,8 +715,8 @@ EOF</userinput></screen>
         <term><command>jstack</command></term>
         <listitem>
           <para>
-            skriver ut Java stakkspor for Java tråder for en gitt Java prosess, 
-            kjernefil eller en ekstern feilsøkingsserver
+            skriver ut Java stakkspor for Java trÃ¥der for en gitt Java prosess, 
+            kjernefil eller en ekstern feilsÃ¸kingsserver
           </para>
           <indexterm zone="openjdk jstack">
             <primary sortas="b-jstack">jstack</primary>
@@ -740,7 +740,7 @@ EOF</userinput></screen>
         <term><command>jstatd</command></term>
         <listitem>
           <para>
-            er et RMI serverprogram som overvåker opprettelsen og avslutningen 
+            er et RMI serverprogram som overvÃ¥ker opprettelsen og avslutningen 
             av instrumenterte JVM-er
           </para>
           <indexterm zone="openjdk jstatd">
@@ -754,7 +754,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             tilbyr en minimal HTTP server, designet for bruk til prototyping, 
-            testing og feilsøking
+            testing og feilsÃ¸king
           </para>
           <indexterm zone="openjdk jwebserver">
             <primary sortas="b-jwebserver">jwebserver</primary>
@@ -766,7 +766,7 @@ EOF</userinput></screen>
         <term><command>keytool</command></term>
         <listitem>
           <para>
-            er et verktøy for administrasjon av nøkler og sertifikater
+            er et verktÃ¸y for administrasjon av nÃ¸kler og sertifikater
           </para>
           <indexterm zone="openjdk keytool">
             <primary sortas="b-keytool">keytool</primary>
@@ -792,7 +792,7 @@ EOF</userinput></screen>
         <listitem>
           <para>
             genererer stub og skeleton klassefiler for eksterne objekter 
-            fra navnene på kompilerte Java klasser som inneholder eksterne 
+            fra navnene pÃ¥ kompilerte Java klasser som inneholder eksterne 
             objektimplementeringer.
           </para>
           <indexterm zone="openjdk rmic">
@@ -819,8 +819,8 @@ EOF</userinput></screen>
         <term><command>rmiregistry</command></term>
         <listitem>
           <para>
-            oppretter og starter et eksternt objektregister på den angitte 
-            porten på gjeldende vert
+            oppretter og starter et eksternt objektregister pÃ¥ den angitte 
+            porten pÃ¥ gjeldende vert
           </para>
           <indexterm zone="openjdk rmiregistry">
             <primary sortas="b-rmiregistry">rmiregistry</primary>
@@ -832,7 +832,7 @@ EOF</userinput></screen>
         <term><command>serialver</command></term>
         <listitem>
           <para>
-            returnerer serialVersionUID for én eller flere klasser i et format 
+            returnerer serialVersionUID for en eller flere klasser i et format 
             som er egnet for kopiering til en klasse i utvikling.
           </para>
           <indexterm zone="openjdk serialver">
