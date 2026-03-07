@@ -226,13 +226,6 @@ fi</userinput></screen>
 <screen
   remap="pre"><userinput>patch -Np1 -i ../obs-studio-&obs-studio-version;-qt6.10-1.patch</userinput></screen>
 
-    <important><para>
-      Hvis du bruker Qt-6.10.x, sørg for at den ble bygget med oppstrøms 
-      oppdateringen. Hvis ikke, vil alle pakker, inkludert denne, krasje når du 
-      bruker qtdeclarative. Dette burde bli fikset i Qt-6.11, som er i beta for 
-      øyeblikket.
-    </para></important>
-
     <para>
       Hvis FFmpeg er 8.0 eller nyere, la koden bygge mot den.:
     </para>
