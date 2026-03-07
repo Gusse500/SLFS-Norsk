@@ -35,6 +35,10 @@
       </listitem>
     </itemizedlist>
 
+    &dl-rename;
+<screen
+  role="nodump"><userinput>mv -v v&awww-version;.tar.gz awww-v&awww-version;.tar.gz</userinput></screen>
+
     <bridgehead renderas="sect3">awww Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
@@ -55,6 +59,12 @@
 
   <sect2 role="installation">
     <title>Installasjon av awww</title>
+
+    <note><para>
+      Denne pakken utvides til mappen <filename
+      class="directory">awww</filename>.
+    </para></note>
+
     <para>
       Installer awww ved å kjøre følgende 
       kommandoer:

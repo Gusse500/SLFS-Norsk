@@ -37,8 +37,8 @@
     <itemizedlist spacing="compact">
       <listitem>
         <para>
-          Påkrevd oppdateringssett:
-          <ulink url="https://dev.gentoo.org/~ulm/distfiles/motif-&motif-version;-patches-5.tar.xz"/>
+          Påkrevd oppdatering:
+          <ulink url="&dl-root;/motif/motif-&motif-version;-third_party_fixes-1.patch"/>
         </para>
       </listitem>
     </itemizedlist>
@@ -61,38 +61,19 @@
     <title>Installasjon av Motif</title>
 
     <para>
-      Pakk først ut oppdateringstarballen:
+      Installer en oppdatering for å fikse diverse problemer med kjøretid og byggetid:
     </para>
 
-<screen><userinput>tar -xvf ../motif-&motif-version;-patches-5.tar.xz</userinput></screen>
+<screen><userinput>patch -Np1 -i ../motif-&motif-version;-third_party_fixes-1.patch</userinput></screen>
 
     <para>
-      Nå, bruk de forskjellige oppdateringene fra tarballen:
-    </para>
-
-<screen><userinput>patch -Np1 -i patch/01_all_solaris.patch        &amp;&amp;
-patch -Np1 -i patch/02_all_sanitise-paths.patch &amp;&amp;
-patch -Np1 -i patch/03_all_solaris-11.patch     &amp;&amp;
-patch -Np1 -i patch/04_all_parallel-make.patch  &amp;&amp;
-patch -Np1 -i patch/05_all_install-dirs.patch   &amp;&amp;
-patch -Np1 -i patch/06_all_cflags.patch         &amp;&amp;
-patch -Np1 -i patch/07_all_no-demos.patch       &amp;&amp;
-patch -Np1 -i patch/08_all_xmbind-xorg.patch    &amp;&amp;
-patch -Np1 -i patch/09_all_slibtool.patch       &amp;&amp;
-patch -Np1 -i patch/10_all_string_h.patch       &amp;&amp;
-patch -Np1 -i patch/11_all_acinclude.patch      &amp;&amp;
-patch -Np1 -i patch/12_all_noreturn.patch       &amp;&amp;
-patch -Np1 -i patch/13_all_xpm-comments.patch   &amp;&amp;
-patch -Np1 -i patch/14_all_xpm-width-0.patch</userinput></screen>
-
-    <para>
-      Fjern deretter automatisk genererte filer for å sikre en vellykket bygging:
+      Fjern automatisk genererte filer for å sikre en vellykket bygging:
     </para>
 
 <screen><userinput>rm -rvf tools/wml/{wmllex,wmluiltok}.c</userinput></screen>
 
     <para>
-      Nå, regenerer konfigurasjonsskriptene:
+      Regenerer konfigurasjonsskriptene:
     </para>
 
 <screen><userinput>touch AUTHORS NEWS &amp;&amp;
@@ -108,7 +89,7 @@ export LEX=flex      &amp;&amp;
 export YACC=byacc</userinput></screen>
 
     <para>
-      Installer nå Motif ved å kjøre følgende kommandoer:
+      Installer Motif ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>sed -i '1 i\%option main' tools/wml/wmluiltok.l &amp;&amp;
