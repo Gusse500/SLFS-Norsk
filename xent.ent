@@ -13,6 +13,9 @@
      være den som er definert først. Så dette ender opp med å se ut som en 
      if-else setning uten else. -->
 
+<!ENTITY dl-rename
+  "<para>Gi nytt navn til filnedlastingen(e) før utpakking:</para>">
+
 <!ENTITY source-profile
   "<para>Nå henter du hovedprofilen:</para>
    <screen><userinput>source /etc/profile</userinput></screen>">
