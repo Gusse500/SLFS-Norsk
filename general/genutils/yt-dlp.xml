@@ -75,29 +75,6 @@
     <title>Installasjon av yt-dlp</title>
 
     <para>
-      Hvis du vil laste ned YouTube videoer, må du bruke en oppdatering for å 
-      legge til <ulink url="&blfs-svn;/general/nodejs.html">Node.js</ulink> som 
-      standard JavaScript motor
-      <footnote><para>
-        En JavaScript motor brukes til å løse JavaScript utfordringer, 
-        som er nødvendige for å laste ned fra YouTube.
-        <ulink url="&blfs-svn;/general/nodejs.html">Node.js</ulink>
-        er en passende en som allerede er pakket i BLFS.
-      </para></footnote>:
-    </para>
-
-<screen><userinput>patch -Np0 &lt;&lt; EOF
---- yt_dlp/options.py
-+++ yt_dlp/options.py
-@@ -467 +467 @@
--        default=['deno'],
-+        default=['deno', 'node'],
-@@ -473 +473 @@
--            'Only "deno" is enabled by default. The highest priority runtime that is both enabled and '
-+            'Only "deno" and "node" are enabled by default. The highest priority runtime that is both enabled and '
-EOF</userinput></screen>
-
-    <para>
       Installer yt-dlp ved å kjøre følgende kommandoer:
     </para>
 
@@ -108,6 +85,29 @@ EOF</userinput></screen>
     </para>
 
     <screen role="root"><userinput>&install-wheel; yt_dlp</userinput></screen>
+
+    <para>
+      YouTube har gjort det slik at JavaScript utfordringer må utføres for å 
+      hente fra nettstedet deres. Hvis du laster ned YouTube videoer med denne 
+      pakken, last ned en JavaScript kjøretids/motor som <ulink
+      url="&blfs-svn;/general/nodejs.html">Node.js</ulink>. Følgende 
+      instruksjoner forutsetter at du har det installert. Deretter oppretter du 
+      en systemkonfigurasjonsfil som ber yt-dlp om å bruke Node.js for JS 
+      utfordringer og automatisk laste ned utfordringsskriptene som kreves, 
+      som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>cat &gt; /etc/yt-dlp.conf &lt;&lt; EOF
+<literal>--js-runtimes node --remote-components ejs:github</literal>
+EOF</userinput></screen>
+    <para>
+      Nå vil yt-dlp bruke Node.js til å løse JS utfordringer ved nedlasting av 
+      YouTube videoer, og automatisk laste ned skript med yt-dlp for å gjøre det.
+    </para>
+
+    <!-- We use this because even if we tell yt-dlp node is a default option,
+         remote-components ejs:github still needs to be passed. So kill two
+         birds with one stone and not subject the user to see a patch. -->
 
   </sect2>
 
