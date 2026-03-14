@@ -21,7 +21,7 @@
     <title>Introduksjon til mGBA</title>
 
     <para>
-      mGBA pakken inneholder en GBA emulator. 
+      mGBA pakken inneholder en GameBoy Advanced (GBA) emulator. 
       Den kan også brukes med andre emulatorer.
     </para>
 
