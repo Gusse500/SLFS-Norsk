@@ -40,6 +40,22 @@
     -->
 
     <listitem>
+      <para>13. mars 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - PCSX2: Lagt til. Fikser
+          <ulink url="&slfs-issues;/517">#517</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - libbacktrace: Lagt til.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Shaderc: Lagt til.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>11. mars 2026</para>
       <itemizedlist>
         <listitem>

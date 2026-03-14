@@ -8,6 +8,8 @@
 <!ENTITY glaze-version                       "7.2.0">
 <!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
+<!ENTITY libbacktrace-minor                  "b9e400">
+<!ENTITY libbacktrace-version                "b9e40069c0b47a722286b94eb5231f7f05c08713">
 <!ENTITY libev-version                       "4.33">
 <!ENTITY libime-version                      "1.1.13">
 <!ENTITY libime-kenlm                        "bcd4af619a2fa45f5876d8855f7876cc09f663af">
@@ -129,6 +131,7 @@ version, so keep this at that. -->
 <!-- END PYTHON -->
 <!ENTITY samurai-minor                       "737f70">
 <!ENTITY samurai-version                     "737f702fed670acb25e5e70b4b802690df7a4a8b">
+<!ENTITY shaderc-version                     "2026.1">
 <!ENTITY strace-version                      "6.19">
 <!ENTITY socat-version                       "1.8.1.1">
 <!ENTITY unlambda-version                    "2.0.0">
@@ -246,13 +249,9 @@ version, so keep this at that. -->
 <!ENTITY p20-emu-minor-version               "d75a83">
 <!ENTITY p20-emu-version                     "d75a83ca9b107e1ae1a54598e4045c2843bd823e">
 <!-- Game-Emu -->
-<!-- NDS -->
 <!ENTITY melonds-version                     "1.1">
-<!-- GBA -->
 <!ENTITY mgba-minor-version                  "afa6fb">
 <!ENTITY mgba-version                        "afa6fbd72a90e8c5fabd1842d28784a1ce8ae704">
-<!-- GCN/Wii -->
-<!-- REQUIRED -->
 <!ENTITY dolphin-version                     "2512">
 <!ENTITY dolphin-sfml-external               "0fa201c969e48ecc253581c5841ce73f44d42f49">
 <!ENTITY dolphin-vk-mem-alloc-external       "3bab6924988e5f19bf36586a496156cf72f70d9f">
@@ -271,13 +270,11 @@ version, so keep this at that. -->
 <!ENTITY dolphin-watcher-external            "b03bdcfc11549df595b77239cefe2643943a3e2f">
 <!ENTITY dolphin-xxhash-external             "e626a72bc2321cd320e953a0ccf1584cad60f363">
 <!ENTITY dolphin-zlib-ng-external            "ce01b1e41da298334f8214389cc9369540a7560f">
-<!-- RECOMMENDED -->
 <!ENTITY dolphin-enet-external               "2662c0de09e36f2a2030ccc2c528a3e4c9e8138a">
 <!ENTITY dolphin-fmt-external                "e69e5f977d458f2650bb346dadf2ad30c5320281">
 <!ENTITY dolphin-libspng-external            "fb768002d4288590083a476af628e51c3f1d47cd">
 <!ENTITY dolphin-libusb-external             "15a7ebb4d426c5ce196684347d2b7cafad862626">
 <!ENTITY dolphin-hidapi-external             "d6b2a974608dec3b76fb1e36c189f22b9cf3650c">
-<!-- N64 -->
 <!ENTITY mupen64plus-version                 "2.6.0">
 <!ENTITY mupen64plus-core-version            "&mupen64plus-version;">
 <!ENTITY mupen64plus-input-sdl-version       "&mupen64plus-version;">
@@ -286,6 +283,7 @@ version, so keep this at that. -->
 <!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
 <!ENTITY gliden64-version                    "c8ef81c7d9aede9f67f6ed3d3426c90541f9f13e">
+<!ENTITY pcsx2-version                       "2.6.3">
 
 <!-- GAMING -->
 <!-- Minecraft -->

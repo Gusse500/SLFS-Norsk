@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
    "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
-  <!ENTITY % general-entities SYSTEM "../../../general.ent">
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
   <!ENTITY mupen64plus-download "https://github.com/mupen64plus/">
@@ -22,9 +22,9 @@
     <para>
       Denne siden vil installere flere Mupen64Plus komponenter og 
       programtillegg, samt et kommandolinjegrensesnitt som en absolutt 
-      nødvendighet. Hvis du ikke ønsker å installere et grafisk 
-      grensesnitt, vil denne siden gi deg alle delene av Mupen64Plus 
-      du trenger.
+      nødvendighet for å tilby Nintendo 64 (N64) emulering. Hvis du ikke ønsker 
+      å installere et grafisk grensesnitt, vil denne siden gi deg alle delene 
+      av Mupen64Plus du trenger.
     </para>
 
     &long-build-time;

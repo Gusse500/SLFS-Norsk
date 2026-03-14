@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY shaderc-download
+    "https://github.com/google/shaderc/archive/v&shaderc-version;/shaderc-&shaderc-version;.tar.gz">
+]>
+
+<sect1 id="shaderc" xreflabel="Shaderc-&shaderc-version;">
+  <?dbhtml filename="shaderc.html"?>
+
+  <title>Shaderc-&shaderc-version;</title>
+
+  <indexterm zone="shaderc">
+    <primary sortas="a-shaderc">Shaderc</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til Shaderc</title>
+
+    <para>
+      Shaderc tilbyr en programvarepakke som hjelper utviklere med å 
+      transformere og kompilere GLSL/HLSL/SPIR-V shadere.
+    </para>
+
+    <para>
+      BLFS tilbyr <command>glslc</command> fra denne pakken, men ikke hele 
+      pakken som noen andre pakker kan forvente.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&shaderc-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Shaderc Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/x/cmake.html">CMake</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&blfs-svn;/x/glslang.html">Glslang</ulink> og
+      <ulink url="&blfs-svn;/general/spirv-tools.html">SPIRV-Tools</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av Shaderc</title>
+
+    <para>
+      Tillat bygging med systeminstallerte Glslang og SPIRV-Tools 
+      hvis de finnes:
+    </para>
+
+<screen><userinput>sed '/build-version/d'   -i glslc/CMakeLists.txt            &amp;&amp;
+sed '/third_party/d'     -i CMakeLists.txt                  &amp;&amp;
+sed 's|SPIRV|glslang/&amp;|' -i libshaderc_util/src/compiler.cc &amp;&amp;
+echo '"&shaderc-version;"' > glslc/src/build-version.inc</userinput></screen>
+
+    <para>
+      Installer nå Shaderc ved å kjøre følgende 
+      kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr \
+      -D CMAKE_BUILD_TYPE=Release  \
+      -D SHADERC_SKIP_TESTS=ON     \
+      -G Ninja ..
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+    <screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          glslc
+        </seg>
+        <seg>
+          libshaderc (statisk),
+          libshaderc_shared, og
+          libshaderc_combined (statisk)
+        </seg>
+        <seg>
+          /usr/include/shaderc
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="glslc">
+        <term><command>glslc</command></term>
+        <listitem>
+          <para>
+            kompilerer GLSL/HLSL shader filer til SPIR-V filer
+          </para>
+          <indexterm zone="shaderc glslc">
+            <primary sortas="b-glslc">glslc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libshaderc">
+        <term><filename class="libraryfile">libshaderc</filename></term>
+        <listitem>
+          <para>
+            inneholder funksjoner for å kompilere GLSL/HLSL shader strenger til SPIR-V
+          </para>
+          <indexterm zone="shaderc libshaderc">
+            <primary sortas="c-libshaderc">libshaderc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
