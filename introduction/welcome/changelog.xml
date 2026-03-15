@@ -46,6 +46,9 @@
           <para>[zeckma] - Capstone: Lagt til.</para>
         </listitem>
         <listitem>
+          <para>[zeckma] - GLFW: Lagt til.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - XMLStarlet: Lagt til. Fikser
           <ulink url="&slfs-issues;/556">#556</ulink>.</para>
         </listitem>

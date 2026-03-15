@@ -163,6 +163,7 @@ version, so keep this at that. -->
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
 <!ENTITY fcft-version                        "3.3.3">
+<!ENTITY glfw-version                        "3.4">
 <!ENTITY intel-mediasdk-version              "23.2.2">
 <!ENTITY libdecor-version                    "0.2.5">
 <!ENTITY libliftoff-version                  "0.5.0">
