@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY binutils-root "https://sourceware.org/pub/binutils/releases">
+  <!ENTITY mipsel-binutils-download
+    "&binutils-root;/binutils-with-gold-&mipsel-binutils-version;.tar.xz">
+  <!ENTITY mipsel-gcc-download
+    "&gnu-http;/gcc/gcc-&mipsel-gcc-version;/gcc-&mipsel-gcc-version;.tar.xz">
+]>
+
+<sect1 id="mipsel" xreflabel="MIPSel Binutils-&mipsel-binutils-version; &amp; GCC-&mipsel-gcc-version;">
+  <?dbhtml filename="mipsel.html"?>
+
+  <title>MIPSel Binutils-&mipsel-binutils-version; &amp; GCC-&mipsel-gcc-version;</title>
+
+  <indexterm zone="mipsel">
+    <primary sortas="a-mipsel">MIPSel</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til MIPSel</title>
+
+    <para>
+      MIPSel er little-endian (32-bit) varianten av MIPS, brukt av tidlige 
+      systemer, vanligvis i innebygde systemer. Spillkonsoller på den tiden 
+      brukte ofte PowerPC, MIPS 64 eller MIPS 32 arkitekturer. Verktøykjeden 
+      som vil bli bygget med følgende instruksjoner vil sikte mot å målrette 
+      sistnevnte.
+    </para>
+
+    <para>
+      Instruksjonene vil bygge en enkel krysskompilator for MIPSel ved hjelp av 
+      Binutils og GCC. Begge vil bli installert på denne siden. Målet er
+      <literal>mipsel-linux-gnu</literal>, som er kortere enn mange andre 
+      tripletter.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Binutils Nedlasting: <ulink url="&mipsel-binutils-download;"/>
+        </para>
+      </listitem>
+      <listitem>
+        <para>
+          GCC Nedlasting: <ulink url="&mipsel-gcc-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av MIPSel-Binutils</title>
+
+    <para>
+      Installer MIPSel-Binutils ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build-mipsel-binutils &amp;&amp;
+cd    build-mipsel-binutils &amp;&amp;
+
+../configure --prefix=/usr                              \
+             --target=mipsel-linux-gnu                  \
+             --infodir=/usr/share/info/mipsel-linux-gnu \
+             --disable-nls                              \
+             --disable-werror                           \
+             --with-gold=no &amp;&amp;
+
+make</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make   DESTDIR=$PWD/DESTDIR install          &amp;&amp;
+rm -v  DESTDIR/usr/lib/bfd-plugins/libdep.so &amp;&amp;
+cp -Rv DESTDIR/usr/* /usr                    &amp;&amp;
+rm -rf DESTDIR</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Binutils Parameterforklaringer</title>
+
+    <para>
+      <parameter>--disable-nls</parameter>: Dette alternativet deaktiverer NLS 
+      støtte, og deaktiverer dermed utdatadiagnostikk på andre språk enn 
+      amerikansk engelsk. Utelat <parameter>--disable-nls</parameter> og
+      bruk <option>--enable-nls</option> for å aktivere NLS støtte.
+    </para>
+
+    <para>
+      <parameter>--disable-werror</parameter>: Dette alternativet gjør det slik 
+      at advarsler ikke blir ansett som feil.
+    </para>
+
+    <para>
+      <parameter>--with-gold=no</parameter>: Dette alternativet deaktiverer 
+      bygging av gold, som nå av mange anses som ubrukbare programmer. Tarballen 
+      som brukes til installasjonen inneholder gold på grunn av 
+      versjonsproblemer, så dette alternativet bidrar til å motvirke dette.
+    </para>
+
+    <para>
+      <parameter>--target=*</parameter>: Dette alternativet bygger filer for 
+      arkitekturen som sendes til det.
+    </para>
+
+    <para>
+      <command>rm -v DESTDIR/usr/lib/bfd-plugins/libdep.so</command>:
+      Denne kommandoen fjerner et bibliotek som er i konflikt med det 
+      opprinnelige biblioteket levert av den opprinnelige kompileringen av
+      <ulink url="&lfs-root;/chapter08/binutils.html">Binutils</ulink>.
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av MIPSel-GCC</title>
+
+    <para>
+      Installer MIPSel-GCC ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build-mipsel-gcc &amp;&amp;
+cd    build-mipsel-gcc &amp;&amp;
+
+../configure --prefix=/usr             \
+             --target=mipsel-linux-gnu \
+             --disable-shared          \
+             --disable-multilib        \
+             --disable-threads         \
+             --enable-languages=c,c++ &amp;&amp;
+
+make inhibit_libc=true all-gcc</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make install-gcc &amp;&amp;
+ln -sfv mipsel-linux-gnu-gcc /usr/bin/mipsel-linux-gnu-cc</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>GCC Parameterforklaringer</title>
+
+    <para>
+      <parameter>--disable-shared</parameter>: Dette alternativet deaktiverer 
+      bygging av delte biblioteker.
+    </para>
+
+    <para>
+      <parameter>--disable-multilib</parameter>: Dette alternativet sikrer at 
+      filer opprettes spesielt for MIPSel.
+    </para>
+
+    <para>
+      <parameter>--disable-threads</parameter>: Dette alternativet deaktiverer 
+      trådstøtte på grunn av byggefeil i GCC.
+    </para>
+
+    <para>
+      <parameter>--enable-languages=c,c++</parameter>:
+      Denne kommandoen bygger støtte for C og C++. Se <ulink
+      url="&blfs-svn;/general/gcc.html"/>
+      for å finne ut hvilke andre språk som støttes.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+    <para>
+      Det finnes ingen binærfiler spesifikke for MIPSel bortsett fra formatet 
+      verktøykjeden er rettet mot, og dermed har hver binærfil prefikset 
+      arkitekturtripletten, for eksempel <command>mipsel-linux-gnu-gcc</command>.
+      For dyptgående beskrivelser, les både <ulink
+      url="&lfs-root;/chapter08/binutils.html#contents-binutils"/> og <ulink
+      url="&lfs-root;/chapter08/gcc.html#contents-gcc"/>.
+    </para>
+
+  </sect2>
+
+</sect1>
