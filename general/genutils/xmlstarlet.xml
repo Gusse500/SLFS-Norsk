@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY xmlstarlet-download "https://sourceforge.net/projects/xmlstar/files/xmlstarlet/&xmlstarlet-version;/xmlstarlet-&xmlstarlet-version;.tar.gz">
+]>
+
+<sect1 id="xmlstarlet" xreflabel="xmlstarlet-&xmlstarlet-version;">
+  <?dbhtml filename="xmlstarlet.html"?>
+
+  <title>XMLStarlet-&xmlstarlet-version;</title>
+
+  <indexterm zone="xmlstarlet">
+    <primary sortas="a-xmlstarlet">XMLStarlet</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til XMLStarlet</title>
+
+    <para>
+      XMLStarlet er et CLI verktøy for å transformere, spørre, validere og 
+      redigere XML dokumenter.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&xmlstarlet-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">XMLStarlet Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink> og
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av XMLStarlet</title>
+
+    <para>
+      fiks bygging av XMLStarlet mot versjoner av libxml2 nyere enn 2.14.0:
+    </para>
+
+    <screen><userinput>sed -i 's/ATTRIBUTE_UNUSED/__attribute__((unused))/g' src/xml_pyx.c</userinput></screen>
+
+    <para>
+      Installer XMLStarlet ved å kjøre følgende kommandoer:
+    </para>
+
+    <screen><userinput>./configure --prefix=/usr \
+            --with-lib{xml,xslt}-prefix=/usr \
+            --docdir=/usr/share/doc/xmlstarlet-&xmlstarlet-version; &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+    <screen role="root"><userinput>make install &amp;&amp;
+ln -sfv xml /usr/bin/xmlstarlet &amp;&amp;
+install -vm644 doc/xmlstarlet-ug.pdf -t /usr/share/doc/xmlstarlet-&xmlstarlet-version;</userinput></screen>
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    <para>
+      <parameter>--with-lib{xml,xslt}-prefix=/usr</parameter>: Denne parameteren 
+      forteller XMLStarlet hvor libxml2 og libxslt er installert. Dette er 
+      nødvendig, da XMLStarlet ellers ikke finner deklarasjonene deres.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          xml og
+          xmlstarlet (lenker til xml)
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          /usr/share/doc/xmlstarlet-&xmlstarlet-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="xml">
+        <term><command>xml</command></term>
+        <listitem>
+          <para>
+            transformerer, spør, validerer og redigerer XML dokumenter
+          </para>
+          <indexterm zone="xmlstarlet xml">
+            <primary sortas="b-xml">xml</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

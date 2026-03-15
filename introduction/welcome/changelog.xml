@@ -43,6 +43,10 @@
       <para>14. mars 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - XMLStarlet: Lagt til. Fikser
+          <ulink url="&slfs-issues;/556">#556</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - MIPSel: Lagt til.</para>
         </listitem>
       </itemizedlist>
