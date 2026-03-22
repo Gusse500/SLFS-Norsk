@@ -23,18 +23,6 @@
       CDE pakken inneholder Common Desktop Environment, et Motif basert 
       skrivebordsmiljø som vanligvis er assosiert med kommersielle UNIX 
       arbeidsstasjoner.
-
-      <warning><para>
-      CDE har hatt ganske mange kjente sikkerhetssårbarheter, og det er 
-      sannsynlig at det fortsatt finnes flere ukjente. Du vil
-      <emphasis>VIRKELIG</emphasis> ikke ønske å eksponere et CDE system for 
-      det offentlige internett. Faktisk er det fem kjente sikkerhetsproblemer i 
-      denne utgivelsen av CDE som fortsatt ikke har noen rettelser.</para>
-
-      <para>Du bør også tenke nøye over å aktivere
-      <command>dtspcd</command> og <command>rpc.ttdbserver</command> daemoner.
-      Med mindre du vet hva de gjør, trenger du dem nesten helt sikkert ikke, 
-      og de vil øke maskinens angrepsflate.</para></warning>
     </para>
 
     <itemizedlist spacing="compact">
@@ -122,6 +110,11 @@ make</userinput></screen>
     dette problemet må du blindt skrive inn
     <command>reset</command> etter kompileringen. Terminalen din vil fungere 
     ordentlig igjen når skjermen er tømt.</para></note>
+
+    <note><para>Instruksjonene ovenfor bygger ikke
+    <command>dtspcd</command> or <command>rpc.ttdbserver</command> daemonene.
+    Med mindre du vet hva de gjør, trenger du dem sannsynligvis ikke. De kan 
+    skape sikkerhetsproblemer.</para></note>
 
     <para>
       Nå som &root; bruker:
