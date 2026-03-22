@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY nginx-download "https://github.com/nginx/nginx/releases/download/release-&nginx-version;/nginx-&nginx-version;.tar.gz">
+]>
+
+<sect1 id="nginx" xreflabel="NGINX-&nginx-version;">
+  <?dbhtml filename="nginx.html"?>
+
+  <title>NGINX-&nginx-version;</title>
+
+  <indexterm zone="nginx">
+    <primary sortas="a-nginx">NGINX</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til NGINX</title>
+
+    <para>
+      NGINX HTTP webserveren er et av de mest populære alternativene til Apache, 
+      samtidig som den har som mål å være høy ytelse, svært konfigurerbar og 
+      fleksibel med mye støtte.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&nginx-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">NGINX Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&arch-pkgs;/extra/x86_64/gd/">gd</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/geoip/">geoip</ulink>,
+      <ulink url="&blfs-svn;/general/libxml2.html">libxml2</ulink>,
+      <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>,
+      <ulink url="&arch-pkgs;/extra/any/mailcap/">mailcap</ulink>, og
+      <ulink url="&blfs-svn;/basicnet/rsync.html">rsync</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av NGINX</title>
+
+    <para>
+      <command>nginx</command> daemonen drives av &root; bruker, men 
+      delprosesser kjøres som en vanlig bruker og gruppe, som må opprettes. 
+      Opprett følgende gruppe og bruker ved å bruke følgende kommandoer som
+      &root; bruker:
+    </para>
+  
+<screen role="root"><userinput>groupadd -g 25 nginx &amp;&amp;
+useradd -c "NGINX Web Server" -g nginx \
+        -s /bin/false -u 25 nginx</userinput></screen>
+
+    <para>
+      Installer NGINX ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>./configure --prefix=/etc/nginx                                     \
+            --conf-path=/etc/nginx/nginx.conf                       \
+            --sbin-path=/usr/sbin/nginx                             \
+            --modules-path=/usr/lib/nginx/modules                   \
+            --pid-path=/run/nginx.pid                               \
+            --lock-path=/run/lock/nginx.lock                        \
+            --http-log-path=/var/log/nginx/access.log               \
+            --error-log-path=stderr                                 \
+            --http-client-body-temp-path=/var/lib/nginx/client-body \
+            --http-proxy-temp-path=/var/lib/nginx/proxy             \
+            --http-fastcgi-temp-path=/var/lib/nginx/fastcgi         \
+            --http-scgi-temp-path=/var/lib/nginx/scgi               \
+            --http-uwsgi-temp-path=/var/lib/nginx/uwsgi             \
+            --user=nginx                                            \
+            --group=nginx                                           \
+            --with-compat                                           \
+            --with-threads                                          \
+            --with-pcre-jit                                         \
+            --with-file-aio                                         \
+            --with-http_addition_module                             \
+            --with-http_auth_request_module                         \
+            --with-http_dav_module                                  \
+            --with-http_degradation_module                          \
+            --with-http_flv_module                                  \
+            --with-http_gunzip_module                               \
+            --with-http_gzip_static_module                          \
+            --with-http_mp4_module                                  \
+            --with-http_perl_module=dynamic                         \
+            --with-http_random_index_module                         \
+            --with-http_secure_link_module                          \
+            --with-http_slice_module                                \
+            --with-http_ssl_module                                  \
+            --with-http_stub_status_module                          \
+            --with-http_sub_module                                  \
+            --with-http_v2_module                                   \
+            --with-http_v3_module                                   \
+            --with-stream=dynamic                                   \
+            --with-stream_ssl_module                                \
+            --with-stream_ssl_preread_module &amp;&amp;
+
+make</userinput></screen>
+
+    <note><para>
+      Hvis kildekoden ble klonet og ikke hentet via tarballen, vil configure 
+      skriptet være på <filename>auto/configure</filename>.
+    </para></note>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+mkdir -pv /var/lib/nginx &amp;&amp;
+install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    <para>
+      <parameter>--prefix=/etc/nginx</parameter>: I motsetning til andre pakkebygg 
+      som setter prefikset til <filename class="directory">/usr</filename>, dette 
+      prefikset er satt annerledes, slik at alle konfigurasjonsfilene plasseres 
+      og sjekkes i en fornuftig katalogstruktur/plassering.
+    </para>
+
+    <para>
+      <parameter>--conf-path=/etc/nginx/nginx.conf</parameter> Denne parameteren 
+      sørger for at hovedkonfigurasjonsfilen for NGINX daemonen er i <filename
+      class="directory">/etc/nginx</filename>.
+    </para>
+
+    <para>
+      <parameter>--sbin-path=/usr/sbin/nginx</parameter>: Denne parameteren 
+      sikrer at <command>nginx</command> ikke blir installert i <filename
+      class="directory">/etc</filename>.
+    </para>
+
+    <para>
+      <parameter>--http-*-path=*</parameter>: Disse parameterne sikrer at de 
+      midlertidige NGINX tilstandsmappene og loggføringen er på riktige steder.
+    </para>
+
+    <para>
+      <parameter>--{user,group}=nginx</parameter>: Disse parameterne overfører 
+      delprosessansvar til <literal>nginx</literal> bruker og
+      gruppe. Hvis disse ikke er spesifisert, vil de respektive verdiene være
+      <literal>nobody</literal> og <literal>nogroup</literal>.
+    </para>
+
+    <para>
+      <parameter>--with-*_module{,=dynamic}</parameter>: Disse parameterne 
+      bygger moduler som ikke er aktivert som standard, men som kan være veldig 
+      nyttige. De som kan bygges dynamisk, kan det. De fleste kan ikke det.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Konfigurere NGINX</title>
+
+    <sect3 id="nginx-config">
+      <title>Konfigurasjonsfiler</title>
+      <para>
+        <filename>/etc/nginx/nginx.conf</filename>
+      </para>
+
+      <indexterm zone="nginx nginx-config">
+        <primary
+        sortas="e-etc-nginx-nginx">/etc/nginx/nginx.conf</primary>
+      </indexterm>
+    </sect3>
+
+    <sect3><title>Konfigurasjonsinformasjon</title>
+
+      <para>
+        Det meste av konfigurasjonen gjøres i
+        <filename>/etc/nginx/nginx.conf</filename>. Stier til innhold som skal 
+        serveres er ikke hardkodet, og du kan spesifisere hvor viktig HTML er. 
+        Du bør lese NGINX <ulink
+        url="https://nginx.org/en/docs/beginners_guide.html">beginner's
+        guide</ulink> for å lære hvordan du konfigurerer NGINX daemonen.
+      </para>
+
+      <para>
+        Hvis du ønsker Apache stil håndtering av HTML stier per bruker, kan du 
+        gjøre noe slikt i <filename>/etc/nginx/nginx.conf</filename>:
+      </para>
+
+<screen><literal>server {
+  location ~ ^/~(.+?)(/.*)?$ {
+    alias     /home/$1/public_html$2;
+    index     index.html index.htm;
+    autoindex on;
+  }
+}</literal></screen>
+
+    </sect3>
+
+    <sect3 id="nginx-init">
+      <title revision="sysv">Oppstartsskript</title>
+      <title revision="systemd">Systemd Enhet</title>
+
+      <para revision="systemd">
+        For å starte <command>nginx</command> daemonen automatisk når systemet 
+        startes på nytt, installer en Systemd enhet og aktiver den som &root;
+        bruker:
+      </para>
+
+      <indexterm revision="systemd" zone="nginx nginx-init">
+        <primary sortas="f-nginx">NGINX</primary>
+      </indexterm>
+
+<screen revision="systemd"
+  role="root"><userinput>cat &gt; /usr/lib/systemd/system/nginx.service &lt;&lt; "EOF" &amp;&amp;
+<literal>[Unit]
+Description=NGINX Web Server
+After=network-online.target remote-fs.target nss-lookup.target
+
+[Service]
+Type=forking
+PIDFile=/run/nginx.pid
+ExecStart=/usr/sbin/nginx
+ExecStop=/usr/sbin/nginx -s stop
+ExecReload=/usr/sbin/nginx -s reload
+PrivateTmp=true
+SyslogLevel=err
+
+[Install]
+WantedBy=multi-user.target</literal>
+EOF
+
+systemctl enable nginx</userinput></screen>
+
+      <para revision="sysv">Det finnes ikke et bootscript for NGINX på SysVinit 
+      ennå.</para>
+
+    </sect3>
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          nginx
+        </seg>
+        <seg>
+          Flere moduler i /usr/lib/nginx/modules
+        </seg>
+        <seg>
+          /etc/nginx og /usr/lib/nginx/modules
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="nginx-bin">
+        <term><command>nginx</command></term>
+        <listitem>
+         <para>
+           er NGINX webserver daemonen
+         </para>
+          <indexterm zone="nginx nginx-bin">
+            <primary sortas="b-nginx-bin">nginx</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

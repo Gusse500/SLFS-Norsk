@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>21. mars 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - NGINX: Lagt til. Fikser
+          <ulink url="&slfs-issues;/441">#441</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>16. mars 2026</para>
       <itemizedlist>
         <listitem>
