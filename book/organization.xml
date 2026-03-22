@@ -30,7 +30,14 @@
     også verktøykjeder for de som kan trenge dem.
   </para>
 
-  <bridgehead renderas="sect2">Part III - Grafiske komponenter</bridgehead>
+  <bridgehead renderas="sect2">Part III - Servere</bridgehead>
+
+  <para>
+    Denne delen dekker pakker for oppsett av en server, som kan inkludere 
+    webhotell (store servere), programvare for e-postserver, databaser og annet.
+  </para>
+
+  <bridgehead renderas="sect2">Part IV - Grafiske komponenter</bridgehead>
 
   <para>
     Denne delen dekker grafiske komponenter som kan være nyttige og hjelpe med 
