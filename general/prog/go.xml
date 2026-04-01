@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY go-arc
+    "https://github.com/golang/go/archive">
+  <!ENTITY go-download
+    "&go-arc;/go&go-version;/go-go&go-version;.tar.gz">
+  <!ENTITY go1.4-download
+    "&go-arc;/&go1.4-version;/go-&go1.4-version;.tar.gz">
+  <!ENTITY go1.17-download
+    "&go-arc;/&go1.17-version;/go-&go1.17-version;.tar.gz">
+  <!ENTITY go1.20-download
+    "&go-arc;/&go1.20-version;/go-&go1.20-version;.tar.gz">
+  <!ENTITY go1.22-download
+    "&go-arc;/&go1.22-version;/go-&go1.22-version;.tar.gz">
+  <!ENTITY go1.24-download
+    "&go-arc;/&go1.24-version;/go-&go1.24-version;.tar.gz">
+]>
+
+<sect1 id="go" xreflabel="Go-&go-version;">
+  <?dbhtml filename="go.html"?>
+
+  <title>Go-&go-version;</title>
+
+  <indexterm zone="go">
+    <primary sortas="a-go">Go</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til Go</title>
+
+    <para>
+      Go pakken inneholder en kompilator for Go språket, et objektorientert 
+      programmeringsspråk som støttes av Google.
+    </para>
+
+    <para>
+      Modern Go er skrevet i Go språket, og krever derfor en Go kompilator for 
+      å kompilere den moderne Go kompilatoren. Hvis Go ikke allerede er 
+      installert, vil instruksjonene be deg om å kompilere flere eldre versjoner 
+      av Go, startende med en som ble skrevet i C, og deretter kompilere nyere 
+      versjoner derfra.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&go-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Bootstrapping Go</title>
+
+    <para>
+      Hvis du ikke har installert Go ennå, må du bootstrappe den. GCC-Go er 
+      uegnet da det har flere problemer som hindrer det i å bygge Go ordentlig. 
+      Denne prosessen vil bygge en eldre C-versjon, etterfulgt av nyere 
+      versjoner som er skrevet fullstendig i Go.
+    </para>
+
+    <note><para>
+      Ikke utfør prosessen i den utpakkede hovedmappen.
+    </para></note>
+
+    <para>
+      Først opprett en liste over tidligere Go versjoner som må lastes ned og 
+      bygges:
+    </para>
+
+<screen remap="pre"><userinput>cat &gt; go-bootstrap-&go-version; &lt;&lt; "EOF"
+<literal>&go1.4-version;/go-&go1.4-version;.tar.gz
+&go1.17-version;/go-&go1.17-version;.tar.gz
+&go1.20-version;/go-&go1.20-version;.tar.gz
+&go1.22-version;/go-&go1.22-version;.tar.gz
+&go1.24-version;/go-&go1.24-version;.tar.gz</literal>
+EOF</userinput></screen>
+
+    <para>
+      Bruk <ulink url="&blfs-svn;/basicnet/wget.html">Wget</ulink>, for å laste 
+      ned alle Go versjonene som skal brukes til å starte opp den moderne Go:
+    </para>
+
+<screen remap="pre"><userinput>grep -v '^#' go-bootstrap-&go-version; | wget -i- -c \
+  -B &go-arc;/</userinput></screen>
+
+    <para>
+      Start et underskall som avsluttes ved feil:
+    </para>
+
+    <screen remap="pre"><userinput>bash -e</userinput></screen>
+
+    <para>
+      Nå bootstrap alle Go versjonene:
+    </para>
+
+<screen remap="pre"><userinput>for go in $(grep -v '^#' go-bootstrap-&go-version;)
+do
+  go=$(basename "$go")
+  godir=${go%.tar.?z*}
+  echo "Bootstrapping $godir"
+
+  rm -rf $godir
+  tar -xf $go
+  pushd $godir
+
+  if [ -e src/cmd/dist/a.h ]; then
+    sed -i '/typedef int bool/d' src/cmd/dist/a.h
+  fi
+
+  cd src
+  CFLAGS+=" -std=gnu17" sh make.bash -v
+  popd
+  export GOROOT_BOOTSTRAP=$PWD/$godir
+done; exit</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av Go</title>
+
+    <para>
+      Som &root; bruker, opprett mappen der alle Go komponentene skal 
+      installeres:
+    </para>
+
+<screen role="root"><userinput>mkdir -pv /opt/go-&go-version;</userinput></screen>
+
+    <para>
+      For å bygge moderne Go, sørg for at du allerede har Go installert eller 
+      boostrappet Go.
+    </para>
+
+    <para>
+      Hvis du bootstrappet Go, pakker du ut hovednedlastingen fra Go og endrer 
+      den til den utpakkede mappen, og angir deretter en variabel som forteller 
+      byggesystemet hvor det skal finne den bootstrappede byggingen:
+    </para>
+
+<screen remap="pre"><userinput>export GOROOT_BOOTSTRAP=$PWD/../go-&go-last-bs;</userinput></screen>
+
+    <para>
+      Installer Go ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>cd src &amp;&amp;
+CGO_ENABLED=1 GOROOT_FINAL=/opt/go-&go-version; sh make.bash -v</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ln -sfvn go-&go-version; /opt/go &amp;&amp;
+for i in ../{bin,pkg,src,lib,misc,api,test}; do
+  cp -va $i /opt/go-&go-version;
+done &amp;&amp;
+ln -svf  /opt/go/bin/go    /usr/bin &amp;&amp;
+ln -svf  /opt/go/bin/gofmt /usr/bin &amp;&amp;
+install  -vDm644 ../go.env \
+         -t /opt/go-&go-version;/ &amp;&amp;
+
+rm -rf /opt/go-&go-version;/pkg/bootstrap    &amp;&amp;
+rm -rf /opt/go-&go-version;/pkg/obj/go-build &amp;&amp;
+cp -va ../doc /usr/share/doc/go-&go-version;</userinput></screen>
+
+    <para>
+      Fjern tidligere angitte variabler:
+    </para>
+
+<screen><userinput>unset GOROOT_BOOTSTRAP</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          go og gofmt
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          /opt/go{,-&go-version;}
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="go-prog">
+        <term><command>go</command></term>
+        <listitem>
+          <para>
+            er den moderne Go kompilatoren
+          </para>
+          <indexterm zone="go go-prog">
+            <primary sortas="b-go-prog">go-prog</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="gofmt">
+        <term><command>gofmt</command></term>
+        <listitem>
+          <para>
+            formaterer Go kode
+          </para>
+          <indexterm zone="go gofmt">
+            <primary sortas="b-gofmt">gofmt</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
