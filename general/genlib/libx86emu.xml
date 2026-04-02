@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY lx86e-root
+    "http://github.com/wfeldt/libx86emu/archive">
+  <!ENTITY libx86emu-download
+    "&lx86e-root;/&libx86emu-version;/libx86emu-&libx86emu-version;.tar.gz">
+]>
+
+<sect1 id="libx86emu" xreflabel="libx86emu-&libx86emu-version;">
+  <?dbhtml filename="libx86emu.html"?>
+
+  <title>libx86emu-&libx86emu-version;</title>
+
+  <indexterm zone="libx86emu">
+    <primary sortas="a-libx86emu">libx86emu</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til libx86emu</title>
+
+    <para>
+      Pakken libx86emu inneholder et bibliotek for emulering av x86 kall, som 
+      ofte brukes til å jobbe med fastvare og håndtere VBE kall.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&libx86emu-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av libx86emu</title>
+
+    <para>
+      Installer libx86emu ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>make VERSION=&libx86emu-version; \
+     MAJOR_VERSION=&libx86emu-major; \
+     shared</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make VERSION=&libx86emu-version; \
+     MAJOR_VERSION=&libx86emu-major; \
+     LIBDIR=/usr/lib \
+     install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          libx86emu
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libx86emu-lib">
+        <term><filename class="libraryfile">libx86emu</filename></term>
+        <listitem>
+          <para>
+            inneholder funksjoner for x86 emulering
+          </para>
+          <indexterm zone="libx86emu libx86emu-lib">
+            <primary sortas="c-libx86emu-lib">libx86emu</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
