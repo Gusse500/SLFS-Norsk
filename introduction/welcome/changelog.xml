@@ -43,6 +43,10 @@
       <para>1. april 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - hwinfo: Lagt til. Fikser
+          <ulink url="&slfs-issues;/610">#610</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - libx86emu: Lagt til.</para>
         </listitem>
         <listitem>

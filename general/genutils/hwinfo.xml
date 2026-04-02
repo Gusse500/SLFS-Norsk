@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY hwinfo-download "https://github.com/openSUSE/hwinfo/archive/&hwinfo-version;/hwinfo-&hwinfo-version;.tar.gz">
+]>
+
+<sect1 id="hwinfo" xreflabel="hwinfo-&hwinfo-version;">
+  <?dbhtml filename="hwinfo.html"?>
+
+  <title>hwinfo-&hwinfo-version;</title>
+
+  <indexterm zone="hwinfo">
+    <primary sortas="a-hwinfo">hwinfo</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til hwinfo</title>
+
+    <para>
+      Hwinfo pakken tilbyr et verktøy og et bibliotek for å sjekke systemets 
+      maskinvareinformasjon, støttet av OpenSUSE.
+    </para>
+
+    &long-build-time;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&hwinfo-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">hwinfo Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <xref linkend="libx86emu"/>
+    </para>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <ulink url="&perlmod;xml-writer">XML::Writer</ulink> (for å tillate bruk 
+      av <command>convert_hd</command> Perl skript)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av hwinfo</title>
+
+    <para>
+      Installer hwinfo ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>make -j1 LIBDIR=/usr/lib HWINFO_VERSION=&hwinfo-version;</userinput></screen>
+
+    <note><para>
+      <command>./check_hd --check --sort --cfile</command> kommandodelen under 
+      byggeprosessen kan virke som om den henger seg. Denne prosessen tar bare 
+      en stund siden den er enkelttrådet.
+    </para></note>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make LIBDIR=/usr/lib HWINFO_VERSION=&hwinfo-version; install &amp;&amp;
+for man in {1,8}; do
+  install -vDm644 doc/*."$man" -t /usr/share/man/man"$man"/
+done</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          check_hd,
+          convert_hd,
+          getsysinfo,
+          hwinfo, og
+          mk_isdnhwdb
+        </seg>
+        <seg>
+          libhd
+        </seg>
+        <seg>
+          /usr/share/hwinfo og
+          /var/lib/hardware/udi
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <note><para>
+      Alle programmene er installert i <filename
+      class="directory">/usr/sbin</filename>.
+    </para></note>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="check_hd">
+        <term><command>check_hd</command></term>
+        <listitem>
+          <para>
+            sjekker etter maskinvaredata og sender ut til en PCI IDS fil
+          </para>
+          <indexterm zone="hwinfo check_hd">
+            <primary sortas="b-check_hd">check_hd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="convert_hd">
+        <term><command>convert_hd</command></term>
+        <listitem>
+          <para>
+            konverterer maskinvaredata fra det interne formatet til andre formater
+          </para>
+          <indexterm zone="hwinfo convert_hd">
+            <primary sortas="b-convert_hd">convert_hd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="getsysinfo">
+        <term><command>getsysinfo</command></term>
+        <listitem>
+          <para>
+            samler inn systemdata for feilsøkingsformål
+          </para>
+          <indexterm zone="hwinfo getsysinfo">
+            <primary sortas="b-getsysinfo">getsysinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="hwinfo-bin">
+        <term><command>hwinfo</command></term>
+        <listitem>
+          <para>
+            gir ut dyptgående maskinvaredata
+          </para>
+          <indexterm zone="hwinfo hwinfo">
+            <primary sortas="b-hwinfo">hwinfo</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mk_isdnhwdb">
+        <term><command>mk_isdnhwdb</command></term>
+        <listitem>
+          <para>
+            er en intern komponent som lager en intern maskinvaredatabase
+          </para>
+          <indexterm zone="hwinfo mk_isdnhwdb">
+            <primary sortas="b-mk_isdnhwdb">mk_isdnhwdb</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libhd">
+        <term><filename class="libraryfile">libhd</filename></term>
+        <listitem>
+          <para>
+            tilbyr funksjoner for skanning av maskinvareinformasjon
+          </para>
+          <indexterm zone="hwinfo libhd">
+            <primary sortas="c-libhd">libhd</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
