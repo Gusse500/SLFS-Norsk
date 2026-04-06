@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>4. april 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - sdl12-compat: 1.2.74 -&gt; 1.2.76. Fikser
+          <ulink url="&slfs-issues;/623">#623</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>3. april 2026</para>
       <itemizedlist>
         <listitem>
