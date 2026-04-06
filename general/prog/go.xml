@@ -39,10 +39,12 @@
 
     <para>
       Modern Go er skrevet i Go språket, og krever derfor en Go kompilator for 
-      å kompilere den moderne Go kompilatoren. Hvis Go ikke allerede er 
-      installert, vil instruksjonene be deg om å kompilere flere eldre versjoner 
-      av Go, startende med en som ble skrevet i C, og deretter kompilere nyere 
-      versjoner derfra.
+      å kompiler den nye kompilatoren. Hvis Go ikke allerede er installert, vil 
+      instruksjonene nedenfor la deg kompilere flere eldre versjoner av Go, og 
+      starte med en som ble skrevet i C, og instruksjonene kompilerer nyere 
+      versjoner fra det punktet.
+      <!-- make sure to check this process at every Go minor in case a newer
+      version is required to bootstrap it -renodr -->
     </para>
 
     &long-build-time;
@@ -54,6 +56,13 @@
         </para>
       </listitem>
     </itemizedlist>
+
+    <bridgehead renderas="sect3">Go Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd (for å laste ned eldre versjoner av Go)</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/basicnet/wget.html">wget</ulink>
+    </para>
 
   </sect2>
 
@@ -67,9 +76,12 @@
       versjoner som er skrevet fullstendig i Go.
     </para>
 
-    <note><para>
-      Ikke utfør prosessen i den utpakkede hovedmappen.
-    </para></note>
+    <note>
+      <para>
+        Ikke utfør prosessen i den utpakkede hovedmappen. Dette vil resultere i 
+        en rekke filkonflikter senere i prosessen.
+      </para>
+    </note>
 
     <para>
       Først opprett en liste over tidligere Go versjoner som må lastes ned og 
