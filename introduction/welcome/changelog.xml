@@ -40,8 +40,35 @@
     -->
 
     <listitem>
+      <para>5. april 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - PCSX-Redux: Lagt til.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>4. april 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - awww: 0.11.2 -&gt; 0.12.0. Fikser
+          <ulink url="&slfs-issues;/624">#624</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - sdl12-compat: 1.2.74 -&gt; 1.2.76. Fikser
+          <ulink url="&slfs-issues;/623">#623</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>3. april 2026</para>
       <itemizedlist>
+        <listitem>
+          <para>[tox] - fish: 4.5.0 -&gt; 4.6.0. Fikser
+          <ulink url="&slfs-issues;/622">#622</ulink>.</para>
+        </listitem>
         <listitem>
           <para>[tox] - tinyxxd: 1.3.14 -&gt; 1.3.15. Fikser
           <ulink url="&slfs-issues;/618">#618</ulink>.</para>

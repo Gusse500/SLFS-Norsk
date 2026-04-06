@@ -21,7 +21,8 @@
 
     <para>
       Denne pakken tilbyr et SDL-1.2 kompatibilitetslag som bruker SDL-2 som et 
-      bakstykke til pakker som trenger det.
+      bakstykke. Det finnes ikke mange pakker som bruker SDL-1.2 lenger, men det 
+      finnes fortsatt noen få, og noen av dem er med i denne boken.
     </para>
 
     <bridgehead renderas="sect3">Pakkeinformasjon</bridgehead>
@@ -71,8 +72,12 @@ rm -vf /usr/lib/libSDLmain.a</userinput></screen>
 
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
-    <para><parameter>-D SDL12TESTS=OFF</parameter>: Denne parameteren 
-    deaktiverer bygging av flere tester.</para>
+
+    <para>
+      <parameter>-D SDL12TESTS=OFF</parameter>: Denne parameteren deaktiverer 
+      bygging av flere tester.
+    </para>
+
   </sect2>
 
   <sect2 role="content">
