@@ -176,7 +176,7 @@ $(RENDERTMP)/$(SLFSFULL): general.ent packages.ent $(ALLXML) $(ALLXSL) version
 	
 profile-html: $(RENDERTMP)/$(SLFSHTML)
 $(RENDERTMP)/$(SLFSHTML): $(RENDERTMP)/$(SLFSFULL) version
-	@echo "Generating profiled XML for XHTML..."
+	@echo "Genererer profilert XML for XHTML..."
 	$(Q)xsltproc --nonet                              \
                 --stringparam profile.condition html \
                 --output $(RENDERTMP)/$(SLFSHTML)    \
