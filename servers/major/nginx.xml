@@ -4,7 +4,8 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
-  <!ENTITY nginx-download "https://github.com/nginx/nginx/releases/download/release-&nginx-version;/nginx-&nginx-version;.tar.gz">
+  <!--<!ENTITY nginx-download "https://github.com/nginx/nginx/releases/download/release-&nginx-version;/nginx-&nginx-version;.tar.gz">-->
+  <!ENTITY nginx-download "https://nginx.org/download/nginx-&nginx-version;.tar.gz">
 ]>
 
 <sect1 id="nginx" xreflabel="NGINX-&nginx-version;">
@@ -184,8 +185,8 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
       <para>
         Det meste av konfigurasjonen gjøres i
         <filename>/etc/nginx/nginx.conf</filename>. Stier til innhold som skal 
-        serveres er ikke hardkodet, og du kan spesifisere hvor viktig HTML er. 
-        Du bør lese NGINX <ulink
+        serveres er ikke hardkodet, og du kan spesifisere hvor viktig HTML filer 
+        er. Du bør lese NGINX <ulink
         url="https://nginx.org/en/docs/beginners_guide.html">beginner's
         guide</ulink> for å lære hvordan du konfigurerer NGINX daemonen.
       </para>
@@ -224,6 +225,7 @@ install -vDm644 man/nginx.8 -t /usr/share/man/man8/</userinput></screen>
 <literal>[Unit]
 Description=NGINX Web Server
 After=network-online.target remote-fs.target nss-lookup.target
+Conflicts=httpd.service
 
 [Service]
 Type=forking
