@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>8. april 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - Mbed-TLS-3.6.5 -&gt; 3.6.6 (Sikkerhetsoppdatering). 
+          Fikser <ulink url="&slfs-issues;/621">#621</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>7. april 2026</para>
       <itemizedlist>
         <listitem>
