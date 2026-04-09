@@ -23,8 +23,8 @@
       Flatpak lar deg laste ned apper og kjøre dem i en sandkasse. Den 
       laster ned alle avhengighetene til en gitt pakke i en sandkasse og 
       lar deg kjøre pakken som om den ikke var i en sandkasse. Noen pakker 
-      finnes bare som en Flatpak, og noen pakker har mange avhengigheter 
-      som gjør at det kan være verdt å installere Flatpak versjonen i 
+      finnes bare som en Flatpak, og noen pakker har så mange avhengigheter 
+      som gjør at det kan være bedre å installere Flatpak versjonen i 
       stedet.
     </para>
 
@@ -102,8 +102,9 @@
     <title>Installasjon av Flatpak</title>
 
     <para>
-      Hvis du skal kjøre tester, må du forhindre at testgenerering kopierer 
-      lokale filer som LFS ikke installerer, ettersom alle legges i én arkivfil:
+      Hvis du skal kjøre testene, må du forhindre at testgenereringen kopierer 
+      lokale filer som LFS ikke installerer. På LFS-systemer legges alle 
+      lokalene i én arkivfil.
     </para>
 
 <screen><userinput>sed -i '92,97d' tests/make-test-runtime.sh</userinput></screen>
@@ -121,14 +122,15 @@ meson setup --prefix=/usr                       \
             -D systemd=disabled                 \</userinput><userinput>
             -D system_bubblewrap=bwrap          \
             -D system_dbus_proxy=xdg-dbus-proxy \
+            -D gtkdoc=disabled                  \
             -D tests=false                      \
             .. &amp;&amp;
 
 ninja</userinput></screen>
 
     <para>
-      Hvis du fjernet <parameter>-D tests=false</parameter>, å kjøre testene, 
-      utsted <command>ninja test</command>.
+      Hvis du fjernet <parameter>-D tests=false</parameter>, og vil kjøre 
+      testene, utsted <command>ninja test</command>.
     </para>
 
     <para>
@@ -160,6 +162,12 @@ ninja</userinput></screen>
     </para>
 
     <para>
+      <parameter>-D gtkdoc=disabled</parameter>: Denne parameteren deaktiverer 
+      bygging av GTK-Doc API dokumentasjonen. Dette er for øyeblikket ødelagt 
+      med gtk-doc-1.36.0, og som et resultat gjør dette at byggingen mislykkes.
+    </para>
+
+    <para>
       <parameter>-D tests=false</parameter>: Denne parameteren deaktiverer 
       tester. Fjern denne parameteren hvis du har socat installert.
     </para>
@@ -179,12 +187,12 @@ ninja</userinput></screen>
 
     <para>
       Du kan kjøre den som en vanlig bruker eller som &root;. Hvis du kjører 
-      det som en vanlig bruker, vil polkit be om autentisering. I slike 
-      tilfeller, sørg for at polkit fungerer først. Hvis alt gikk bra, skal det 
+      det som en vanlig bruker, vil polkit be om autentisering. I dette 
+      tilfellet, forsikre at polkit fungerer først. Hvis alt gikk bra, skal det 
       ikke vises noen feilmelding. Da vil du kunne installere flatpaks fra 
       Flathub. Alle installerte applikasjoner vil være i <filename
-      class="directory">/var/lib/flatpak/exports/bin</filename>. Legg til den 
-      mappen i din <envar>$PATH</envar> hvis du ønsker det.
+      class="directory">/var/lib/flatpak/exports/bin</filename>. Du kan legge 
+      til den mappen i din <envar>$PATH</envar> hvis du ønsker det.
     </para>
 
   </sect2>
@@ -342,8 +350,8 @@ ninja</userinput></screen>
         <term><command>flatpak-system-helper</command></term>
         <listitem>
           <para>
-            brukes av <command>flatpak</command> for å hjelpe med
-            flatpak systemet.
+            brukes av <command>flatpak</command> for å hjelpe med samhandling 
+            med det underliggende vertssystemet.
           </para>
           <indexterm zone="flatpak flatpak-system-helper">
             <primary sortas="b-flatpak-system-helper">flatpak-system-helper</primary>
