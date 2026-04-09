@@ -151,8 +151,9 @@ install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userin
 <screen role="root" remap="nodump"><userinput>ln -svf <replaceable>&lt;SOUNDFONT&gt;</replaceable> /usr/share/soundfonts/default.sf2</userinput></screen>
 
     <important><para>
-      Hvis du distribuerer, må du lese lisensene til lydfontene du installerer 
-      for å sikre at de kan distribueres.
+      Hvis du distribuerer denne pakken som en del av en distribusjon, må du 
+      lese lisensene til lydfontene du installerer for å sikre at de kan 
+      distribueres lovlig. Hvis du er i tvil, kan du kontakte advokaten din.
     </para></important>
 
   </sect2>
@@ -191,11 +192,12 @@ install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userin
 cp -v /etc/fluidsynth ~/.config/fluidsynth</userinput></screen>
 
       <para>
-        Det viktigste du bør redigere er soundfont banen hvis du ikke har 
-        opprettet standard SoundFont symbolkobling og oppstartsflaggene. For 
-        eksempel vil den som standard prøve å bruke ALSA, og avhengig av 
-        konfigurasjonen vil dette sannsynligvis mislykkes. Du kan i stedet bruke 
-        PulseAudio eller Pipewire. Du kan også endre andre ting.
+        De viktigste konfigurasjonsverdiene du vil redigere er soundfont banen 
+        (hvis du ikke har opprettet standard SoundFont symbolkobling) og 
+        oppstartsflaggene. For eksempel vil FluidSynth bruke ALSA som standard, 
+        og avhengig av systemets konfigurasjon kan dette mislykkes. Du kan i 
+        stedet bruke PulseAudio eller Pipewire. Det finnes flere andre 
+        alternativer du kan angi i denne konfigurasjonsfilen også.
       </para>
 
       <note><para>
@@ -212,14 +214,14 @@ cp -v /etc/fluidsynth ~/.config/fluidsynth</userinput></screen>
     <title>Bruke FluidSynth</title>
 
     <para>
-      For noen applikasjoner som bruker FluidSynth, forventer de at det skal 
-      kjøre før applikasjonen startes. Hvis FluidSynth startes etter dette, kan 
-      det hende at applikasjonen ikke kan nå FluidSynth.
+      Noen applikasjoner som bruker FluidSynth forventer at det kjører før 
+      applikasjonen startes. Hvis FluidSynth ikke startes før applikasjonen, kan 
+      det hende at applikasjonen ikke kan koble seg til FluidSynth.
     </para>
 
     <para>
       RoseGarden oppfører seg på denne måten, både fra kildekoden og som en Flatpak, 
-      men når FluidSynth er startet på forhånd, kan RoseGarden bruke FluidSynth.
+      men så lenge FluidSynth startes først, kan RoseGarden bruke FluidSynth.
     </para>
 
   </sect2>
@@ -230,7 +232,8 @@ cp -v /etc/fluidsynth ~/.config/fluidsynth</userinput></screen>
     &cmake-skip-install-rpath;
 
     <para><parameter>-D FLUID_DAEMON_ENV_FILE=/etc/fluidsynth</parameter>: Denne 
-    parameteren gjør konfigurasjonsfilen hardkodet til å være i en enkel sti.</para>
+    parameteren hardkoder plasseringen av konfigurasjonsfilen slik at den er i 
+    en enklere og mer konsistent bane.</para>
 
   </sect2>
 
