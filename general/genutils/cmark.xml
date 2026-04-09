@@ -22,9 +22,9 @@
 
     <para>
       Cmark pakken inneholder et CommonMark analyserings og renderingsverktøy og 
-      et bibliotek i C. BLFS tilbyr Python versjonen, men
-      <command>cmark</command> skriptet fra det vil bli trygt flyttet ut av 
-      veien i denne installasjonen.
+      et biblioteket i C. BLFS tilbyr Python versjonen, som
+      <command>cmark</command> skriptet som leveres av den vil bli flyttet trygt 
+      ut av veien i denne installasjonen for å forhindre konflikter.
     </para>
 
     <itemizedlist spacing="compact">
