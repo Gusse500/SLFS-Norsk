@@ -6,7 +6,7 @@
 <!ENTITY cglm-version                        "0.9.6">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "7.2.3">
+<!ENTITY glaze-version                       "7.3.2">
 <!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY libbacktrace-minor                  "b9e400">
@@ -16,7 +16,7 @@
 <!ENTITY libime-kenlm                        "4cb443e60b7bf2c0ddf3c745378f76cb59e254e5">
 <!ENTITY libjuice-version                    "1.7.0">
 <!ENTITY libsrtp-version                     "2.8.0">
-<!ENTITY libdatachannel-version              "0.24.1">
+<!ENTITY libdatachannel-version              "0.24.2">
 <!ENTITY libdatachannel-plog                 "94899e0b926ac1b0f4750bfbd495167b4a6ae9ef">
 <!ENTITY libdatachannel-usrsctp              "fec583d54493f879d2ae44a743423bf8a04371ab">
 <!ENTITY libmspack-version                   "1.11">
@@ -29,7 +29,7 @@
 <!ENTITY libzmq-version                      "4.3.5">
 <!ENTITY m17n-version                        "1.8.6">
 <!ENTITY m17n-db-version                     "1.8.10">
-<!ENTITY mbedtls-version                     "3.6.5">
+<!ENTITY mbedtls-version                     "3.6.6">
 <!ENTITY msgraph-version                     "0.3.4">
 <!ENTITY zlib-version                        "1.3.2">
 <!ENTITY nlohmann-json-version               "3.12.0">
@@ -63,7 +63,7 @@
 <!ENTITY btop-version                        "1.4.6">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
-<!ENTITY flatpak-version                     "1.16.3">
+<!ENTITY flatpak-version                     "1.16.5">
 <!ENTITY fluidsynth-version                  "2.5.3">
 <!ENTITY fs-gcem                             "012ae73c6d0a2cb09ffe86475f5c6fba3926e200">
 <!ENTITY fs-sf2                              "3.1">
@@ -119,7 +119,7 @@ version, so keep this at that. -->
 <!ENTITY befunge-minor-version               "2_25">
 <!ENTITY befunge-version                     "2.25">
 <!ENTITY byacc-version                       "20260126">
-<!ENTITY go-version                          "1.26.1">
+<!ENTITY go-version                          "1.26.2">
 <!ENTITY go1_4-version                       "ceb95ea6aef52c1fb472d3539c6ef68670778b5b">
 <!ENTITY go1_17-version                      "15da892a4950a4caac987ee72c632436329f62d5">
 <!ENTITY go1_20-version                      "90a870f1dc49bfcc6ffe95f80fbaf21875198e7a">
@@ -138,7 +138,7 @@ version, so keep this at that. -->
 <!ENTITY python3-site                        "/usr/lib/python&python3-majorver;/site-packages">
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "25.5.0">
-<!ENTITY platformdirs-version                "4.9.4">
+<!ENTITY platformdirs-version                "4.9.6">
 <!ENTITY pycurl-version                      "7.45.7">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.5">
@@ -174,7 +174,7 @@ version, so keep this at that. -->
 
 <!-- SERVERS -->
 <!-- Major Servers -->
-<!ENTITY nginx-version                       "1.29.7">
+<!ENTITY nginx-version                       "1.29.8">
 
 <!-- GRAPH -->
 <!-- Graphical Libraries -->
@@ -274,7 +274,7 @@ version, so keep this at that. -->
 <!ENTITY melonds-version                     "1.1">
 <!ENTITY mgba-minor-version                  "afa6fb">
 <!ENTITY mgba-version                        "afa6fbd72a90e8c5fabd1842d28784a1ce8ae704">
-<!ENTITY dolphin-version                     "2512">
+<!ENTITY dolphin-version                     "2603a">
 <!ENTITY dolphin-sfml-external               "0fa201c969e48ecc253581c5841ce73f44d42f49">
 <!ENTITY dolphin-vk-mem-alloc-external       "3bab6924988e5f19bf36586a496156cf72f70d9f">
 <!ENTITY dolphin-cubeb-external              "54217bca3f3e0cd53c073690a23dd25d83557909">
@@ -293,7 +293,7 @@ version, so keep this at that. -->
 <!ENTITY dolphin-xxhash-external             "e626a72bc2321cd320e953a0ccf1584cad60f363">
 <!ENTITY dolphin-zlib-ng-external            "ce01b1e41da298334f8214389cc9369540a7560f">
 <!ENTITY dolphin-enet-external               "2662c0de09e36f2a2030ccc2c528a3e4c9e8138a">
-<!ENTITY dolphin-fmt-external                "e69e5f977d458f2650bb346dadf2ad30c5320281">
+<!ENTITY dolphin-fmt-external                "e424e3f2e607da02742f73db84873b8084fc714c">
 <!ENTITY dolphin-libspng-external            "fb768002d4288590083a476af628e51c3f1d47cd">
 <!ENTITY dolphin-libusb-external             "15a7ebb4d426c5ce196684347d2b7cafad862626">
 <!ENTITY dolphin-hidapi-external             "d6b2a974608dec3b76fb1e36c189f22b9cf3650c">
@@ -345,7 +345,7 @@ version, so keep this at that. -->
 <!ENTITY jdk-modern                          "21.0.10+6">
 <!ENTITY prism-launcher-version              "10.0.5">
 <!-- TTD -->
-<!ENTITY openttd-version                     "15.2">
+<!ENTITY openttd-version                     "15.3">
 
 <!-- SVR4 -->
 <!-- SVR4-style Tools -->

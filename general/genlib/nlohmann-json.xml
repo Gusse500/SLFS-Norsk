@@ -56,7 +56,6 @@ cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
-      -D BUILD_TESTING=OFF         \
       -D JSON_BuildTests=OFF       \
       -G Ninja .. &amp;&amp;
 
@@ -74,8 +73,8 @@ ninja</userinput></screen>
     <title>Parameterforklaringer</title>
 
     <para>
-      <parameter>-D BUILD_TESTING=OFF -D JSON_BuildTests=OFF</parameter>:
-      Disse parameterene deaktiverer bygging av tester.
+      <parameter>-D JSON_BuildTests=OFF</parameter>:
+      Denne parameterene deaktiverer bygging av tester.
     </para>
 
   </sect2>
