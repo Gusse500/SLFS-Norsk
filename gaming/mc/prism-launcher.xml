@@ -123,10 +123,10 @@ ninja</userinput></screen>
       OpenJDK versjon 20 eller nyere og gjorde det til standard. Etter at du har 
       opprettet en instans, må du redigere den instansen, gå til 
       <quote>Settings</quote> seksjonen, og kryss deretter av
-      <quote>Skip Java Compatibility Checks</quote> for å unngå at Minecraft 
-      nekter å starte. Dette må gjøres for hver instans. Hvis du installerte 
-      <xref linkend="openjdk"/> og gjort den til standard JDK, trenger ikke 
-      dette å gjøres i det hele tatt.
+      <quote>Skip Java Compatibility Checks</quote> for å tillate Minecraft å 
+      starte. Dette må gjøres for hver instans. Hvis du installerte
+      <xref linkend="openjdk"/> og gjort den til standard JDK, trenger du ikke å 
+      gjøre dette i det hele tatt.
     </para>
 
     <para>
@@ -138,10 +138,10 @@ ninja</userinput></screen>
       er å lage <xref linkend="openjdk"/> standard JDK, 
       men installer også <ulink
       url="&blfs-svn;/general/openjdk.html">OpenJDK-20+</ulink> slik at JDK 
-      versjonen kan overskrives per MC instans. Nyere JDK krever også en nyere 
-      JDK å starte fra, så den som er gitt i denne boken vil ikke fungere for 
-      nyere JDK-er. Uansett må du kopiere de samme trinnene i avsnittet ovenfor, 
-      samt endre <quote>Java
+      versjonen kan overskrives per MC instans. Nyere JDK-er krever også en 
+      nyere JDK enn 17 for å starte fra, så den som er gitt i denne boken vil 
+      ikke fungere for nyere JDK-er. Uansett må du kopiere de samme trinnene i 
+      avsnittet ovenfor, samt endre <quote>Java
       Installasjon</quote> til å peke til ønsket JDK. Når du installerer den 
       nyere JDK-en, anbefales det å hoppe over å lage symbolsk lenke på den 
       siden, slik at den ikke blir standard. Hvis du gjorde den til standard på 
