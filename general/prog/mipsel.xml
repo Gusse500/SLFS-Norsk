@@ -25,17 +25,17 @@
 
     <para>
       MIPSel er little-endian (32-bit) varianten av MIPS, brukt av tidlige 
-      systemer, vanligvis i innebygde systemer. Spillkonsoller på den tiden 
+      systemer, hovedsakelig i innebygde miljøer. Spillkonsoller på den tiden 
       brukte ofte PowerPC, MIPS 64 eller MIPS 32 arkitekturer. Verktøykjeden 
       som vil bli bygget med følgende instruksjoner vil sikte mot å målrette 
       sistnevnte.
     </para>
 
     <para>
-      Instruksjonene vil bygge en enkel krysskompilator for MIPSel ved hjelp av 
-      Binutils og GCC. Begge vil bli installert på denne siden. Målet er
-      <literal>mipsel-linux-gnu</literal>, som er kortere enn mange andre 
-      tripletter.
+      Instruksjonene under vil bygge en enkel krysskompilator for MIPSel ved 
+      hjelp av Binutils og GCC. Begge vil bli installert på denne siden. Målet 
+      er <literal>mipsel-linux-gnu</literal>, som er kortere enn de fleste andre 
+      måltripletter.
     </para>
 
     &long-build-time;
@@ -164,7 +164,8 @@ ln -sfv mipsel-linux-gnu-gcc /usr/bin/mipsel-linux-gnu-cc</userinput></screen>
 
     <para>
       <parameter>--disable-threads</parameter>: Dette alternativet deaktiverer 
-      trådstøtte på grunn av byggefeil i GCC.
+      trådstøtte på grunn av byggefeil i GCC. Trådstøttte er også unødvendig 
+      for denne kompilatoren.
     </para>
 
     <para>
