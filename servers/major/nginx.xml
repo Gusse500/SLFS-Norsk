@@ -21,9 +21,10 @@
     <title>Introduksjon til NGINX</title>
 
     <para>
-      NGINX HTTP webserveren er et av de mest populære alternativene til Apache, 
-      samtidig som den har som mål å være høy ytelse, svært konfigurerbar og 
-      fleksibel med mye støtte.
+      NGINX HTTP webserveren er et av de mest populære alternativene til 
+      Apache har som mål å være svært konfigurerbar, fleksibel og effektiv. 
+      Den har også mye støtte, støttet av F5 i tillegg til god 
+      dokumentasjon.
     </para>
 
     <itemizedlist spacing="compact">
