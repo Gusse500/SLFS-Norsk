@@ -115,7 +115,7 @@ grep -v '^#' ../pcsx-redux-&pcsx-redux-minor;-list | wget -i- -c \
     -B &pcsx-redux-dl-root;</userinput></screen>
 
     <para>
-      Bekreft at alle filer er lastet ned:
+      Neste, bekreft at alle filer er lastet ned:
     </para>
 
 <screen><userinput>for file in $(grep -v '^#' ../pcsx-redux-&pcsx-redux-minor;-list); do
@@ -206,7 +206,7 @@ mv -T zep-*                                             \
       pcsx-redux-*/third_party/zep</userinput></screen>
 
     <para>
-      Gå nå inn i <filename
+      Bytt nå til <filename
       class="directory">pcsx-redux-&pcsx-redux-minor;...</filename> mappen:
     </para>
 
