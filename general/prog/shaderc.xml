@@ -26,8 +26,8 @@
     </para>
 
     <para>
-      BLFS tilbyr <command>glslc</command> fra denne pakken, men ikke hele 
-      pakken som noen andre pakker kan forvente.
+      BLFS tilbyr <command>glslc</command> fra denne pakken, men ikke alle 
+      biblioteker som noen andre pakker (som PCSX2) kan forvente.
     </para>
 
     <itemizedlist spacing="compact">
