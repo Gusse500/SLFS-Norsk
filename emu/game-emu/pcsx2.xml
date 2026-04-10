@@ -91,7 +91,8 @@
     <title>Installasjon av PCSX2</title>
 
     <para>
-      Juster hvor dataene installeres:
+      Først, juster plasseringen der CMake installerer datafiler for denne 
+      pakken til å være mer konsistent:
     </para>
 
 <screen remap="pre"><userinput>sed '/CMAKE_INSTALL_FULL_DATADIR/s@/PCSX2\b@/'"pcsx2@" \
@@ -118,30 +119,30 @@ ninja</userinput></screen>
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
-ln -svf pcsx2-qt /usr/bin/pcsx2 &amp;&amp;
+    <screen role="root"><userinput>ninja install                   &amp;&amp;
+ln -sfv pcsx2-qt /usr/bin/pcsx2 &amp;&amp;
 ln -sfv /usr/share/pcsx2/resources/icons/AppIconLarge.png \
         /usr/share/pixmaps/pcsx2.png</userinput></screen>
 
     <para>
-      Sørg for at PCSX2 har nettfunksjoner, som &root; bruker:
+      Deretter sørg for at PCSX2 har nettverksfunksjonalitet som &root; bruker:
     </para>
 
 <screen role="root"><userinput>setcap cap_net_admin,cap_net_raw=eip /usr/bin/pcsx2-qt</userinput></screen>
 
     <para>
       Hvis du lastet ned den anbefalte spilloppdateringssamlingen, installer 
-      den på riktig sted som &root; bruker:
+      den på det forventete stedet som &root; bruker:
     </para>
 
 <screen role="root"><userinput>cp -v ../../patches.zip /usr/share/pcsx2/resources</userinput></screen>
 
     <para>
-      Opprett en skrivebordsfil slik at den kan startes med startere, 
-      som &root; bruker:
+      Til slutt, opprett en skrivebordsfil slik at PCSX2 kan startes med en 
+      starter som &root; bruker:
     </para>
 
-<screen role="root"><userinput>mkdir -pv /usr/share/applications &amp;&amp;
+    <screen role="root"><userinput>mkdir -pv /usr/share/applications               &amp;&amp;
 cat &gt; /usr/share/applications/pcsx2.desktop &lt;&lt; EOF
 <literal>[Desktop Entry]
 Name=PCSX2

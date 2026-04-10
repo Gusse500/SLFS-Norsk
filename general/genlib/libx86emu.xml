@@ -40,11 +40,19 @@
   <sect2 role="installation">
     <title>Installasjon av libx86emu</title>
 
+    <note>
+      <para>
+        Byggeprosessen for denne pakken kan gi meldinger om at «cut» og «cat» 
+        ikke finner VERSION. Dette er normalt og oppstår fordi denne pakken ikke 
+        bygges fra et git repository.
+      </para>
+    </note>
+
     <para>
       Installer libx86emu ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>make VERSION=&libx86emu-version; \
+<screen><userinput>make VERSION=&libx86emu-version;     \
      MAJOR_VERSION=&libx86emu-major; \
      shared</userinput></screen>
 
@@ -52,7 +60,7 @@
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>make VERSION=&libx86emu-version; \
+<screen role="root"><userinput>make VERSION=&libx86emu-version;     \
      MAJOR_VERSION=&libx86emu-major; \
      LIBDIR=/usr/lib \
      install</userinput></screen>

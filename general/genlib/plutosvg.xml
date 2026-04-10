@@ -27,7 +27,7 @@
     <para>
       Denne siden installerer både PlutoVG og PlutoSVG pakkene. PlutoVG tilbyr 
 	  et 2D vektorgrafikkbibliotek, mens PlutoSVG bruker PlutoVG til å tilby et 
-	  SVG renderingsbibliotek. PlutoVG vil bli installert først, deretter 
+	  SVG renderingsbibliotek. PlutoVG vil bli installert først, og deretter 
 	  PlutoSVG.
     </para>
 
@@ -105,27 +105,29 @@ ninja -C svg-build</userinput></screen>
     <para>
       Som et etterinstallasjonstrinn må du fikse bibliotek sonames som skal være 
       symbolske lenker. sonames er de faktiske bibliotekene som må flyttes for å 
-      indikere at de er det, <command>ldconfig</command> må kjøres 
-      etterpå for å gjenopprette dem som symbolske lenker. Gjør det nå som
-      &root; bruker:
+      indikere at de er biblioteker, og deretter må
+      <command>ldconfig</command> kjøres for å gjenopprette dem som symbolske 
+      lenker. Gjør det nå som &root; bruker:
     </para>
 
-<screen role="root"><userinput>rm -vf /usr/lib/libplutovg.so.&plutovg-version;  &amp;&amp;
-rm -vf /usr/lib/libplutosvg.so.&plutosvg-version; &amp;&amp;
+<screen role="root"><userinput>rm -vf /usr/lib/libplutovg.so.&plutovg-version;     &amp;&amp;
+rm -vf /usr/lib/libplutosvg.so.&plutosvg-version;    &amp;&amp;
 mv -vf /usr/lib/libplutovg.so.&plutovg-major;{,.&plutovg-minor;}  &amp;&amp;
 mv -vf /usr/lib/libplutosvg.so.&plutosvg-major;{,.&plutosvg-minor;} &amp;&amp;
 ldconfig</userinput></screen>
 
     <note><para>
-      Hvis du installerer eller oppgraderer PlutoVG og PlutoSVG på nytt, må kommandosettet 
-      ovenfor kjøres, siden installasjonen vil overskrive symbolske lenker.
+      Hvis du installerer eller oppgraderer PlutoVG og PlutoSVG på nytt, må 
+      kommandosettet ovenfor kjøres, siden installasjonen vil overskrive 
+      symbolske lenker.
     </para></note>
 
     <important><para>
       Hvis du kjører kommandosettet ovenfor mer enn én gang uten en ny 
       reinstallasjon eller oppgradering mellom, vil de faktiske bibliotekene bli 
       slettet og symbolske lenker vil bli satt inn i deres sted. Du må da 
-      installere PlutoVG og PlutoSVG på nytt, og deretter kjøre kommandoene på nytt.
+      installere PlutoVG og PlutoSVG på nytt, og deretter kjøre kommandoene på 
+      nytt for å fikse dette problemet.
     </para></important>
 
   </sect2>
