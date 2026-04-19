@@ -21,7 +21,8 @@
     <title>Introduksjon til asio</title>
 
     <para>
-      asio pakken tilbyr et C++ bibliotek for asynkron I/O nettverk.
+      Asio pakken tilbyr et C++ bibliotek kun for deklarasjoner for asynkron 
+      I/O nettverk, som valgfritt kan bruke Boost navnerommet.
     </para>
 
     <itemizedlist spacing="compact">
@@ -34,8 +35,8 @@
 
     <bridgehead renderas="sect3">asio Avhengigheter</bridgehead>
 
-    <bridgehead renderas="sect4">Påkrevd</bridgehead>
-    <para role="required">
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
       <ulink url="&blfs-svn;/general/boost.html">boost</ulink>
     </para>
 
@@ -45,14 +46,11 @@
     <title>Installasjon av asio</title>
 
     <para>
-      Installer asio ved å kjøre følgende 
-      kommandoer:
+      Installer asio ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>cd asio                   &amp;&amp;
-autoreconf -fi            &amp;&amp;
-./configure --prefix=/usr &amp;&amp;
-make</userinput></screen>
+<screen><userinput>autoreconf -fi &amp;&amp;
+./configure --prefix=/usr</userinput></screen>
 
     <para>
       For å teste resultatene, utsted: <command>make check</command>
@@ -62,7 +60,8 @@ make</userinput></screen>
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>make install</userinput></screen>
+<screen role="root"><userinput>make -C include install &amp;&amp;
+install -vDm644 asio.pc -t /usr/share/pkgconfig/</userinput></screen>
 
   </sect2>
 

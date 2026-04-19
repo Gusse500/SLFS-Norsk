@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>18. april 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - asio: 1-36-0 -&gt; 1-38-0 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/652">#652</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>16. april 2026</para>
       <itemizedlist>
         <listitem>
