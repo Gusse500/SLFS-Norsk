@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY evdevhook2-download "https://github.com/v1993/evdevhook2/archive/v&evdevhook2-version;/evdevhook2-&evdevhook2-version;.tar.gz">
+]>
+
+<sect1 id="evdevhook2" xreflabel="evdevhook2-&evdevhook2-version;">
+  <?dbhtml filename="evdevhook2.html"?>
+
+  <title>evdevhook2-&evdevhook2-version;</title>
+
+  <indexterm zone="evdevhook2">
+    <primary sortas="a-evdevhook2">evdevhook2</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til evdevhook2</title>
+
+    <para>
+      Pakken evdevhook2 inneholder en evdev basert Cemuhook UDP server. Mange 
+      spillkonsollemulatorer bruker valgfritt en Cemuhook UDP server for å hente 
+      bevegelsesdata fra spillkontrollere som har gyro sensorer. For noen 
+      kontrollere er dette nødvendig, da SDL eller Steam inndata kan kartlegge 
+      Y, Z eller X aksene feil, eller rett og slett ikke i det hele tatt.
+    </para>
+
+    <para>
+      UDP hovedserveren til Cemuhook er blitt avviklet siden Cemu nå har sine 
+      egne metoder for å håndtere inndata riktig. Mange emulatorer ønsker 
+      fortsatt serveren, til tross for denne avviklingen, så dette er en moderne 
+      løsning på problemet.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&evdevhook2-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">evdevhook2 Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/glib2.html">GLib</ulink>,
+      <ulink url="&blfs-svn;/x/x7driver.html#xorg-evdev-driver">libevdev</ulink>,
+      <ulink url="&blfs-svn;/gnome/libgee.html">libgee</ulink>, og
+      <ulink url="&blfs-svn;/general/vala.html">Vala</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/general/upower.html">UPower</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av evdevhook2</title>
+
+    <para>
+      Installer evdevhook2 ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+meson setup --prefix=/usr       \
+            --buildtype=release \
+            .. &amp;&amp;
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install &amp;&amp;
+mv -v /usr/share/doc/evdevhook2{,-&evdevhook2-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    &meson-buildtype-release;
+
+    <para>
+      <command>mv -v /usr/share/doc/evdevhook2{,-&evdevhook2-version;}</command>:
+      Denne kommandoen gjør at dokumentasjonsmappen versjoneres slik at den er 
+      konsistent med de andre dokumentasjonsmappene.
+    </para>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Konfigurere evdevhook2</title>
+
+    <para>
+      Nå som evdevhook2 er installert, bør en normal kjøring av den installerte 
+      serveren vanligvis være tilstrekkelig. Du kan konfigurere serveren. I så 
+      fall, installer den som en ikke-privilegert bruker:
+    </para>
+
+<screen><userinput>mkdir -pv ~/.config/evdevhook2 &amp;&amp;
+cp -v /usr/share/doc/evdevhook2-&evdevhook2-version;/ExampleConfig.ini \
+      ~/.config/evdevhook2/config.ini</userinput></screen>
+
+    <para>
+      Rediger den slik du synes passer. Serveren vil imidlertid ikke plukke den 
+      opp med mindre du oppgir banen til den som et argument. Det betyr at det 
+      ikke spiller så stor rolle hvor konfigurasjonsfilen er installert, så 
+      lenge den kan leses fra.
+    </para>
+
+  </sect2>
+
+  <sect2 id="evdevhook2-init" revision="systemd">
+    <title>Systemd Enhet</title>
+
+    <para>
+      For å starte evdevhook2 serveren hver gang systemet startes opp, installer 
+      og aktiver følgende Systemd enhet som &root; bruker:
+    </para>
+
+<screen><userinput>cat &gt; /usr/lib/systemd/system/evdevhook2.service &lt;&lt; "EOF" &amp;&amp;
+<literal>[Unit]
+Description=evdevhook2 Cemuhook UDP server
+
+[Service]
+Type=exec
+ExecStart=/usr/bin/evdevhook2
+
+[Install]
+WantedBy=multi-user.target</literal>
+EOF
+
+systemctl enable evdevhook2</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          evdevhook2
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="evdevhook2-bin">
+        <term><command>evdevhook2</command></term>
+        <listitem>
+          <para>
+            er en evdev basert Cemuhook UDP server
+          </para>
+          <indexterm zone="evdevhook2 evdevhook2-bin">
+            <primary sortas="b-evdevhook2-bin">evdevhook2</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
