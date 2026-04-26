@@ -69,16 +69,9 @@
 
     <bridgehead renderas="sect4">Anbefalt Kjøretid</bridgehead>
     <para role="runtime">
-      &opengl;
-      <footnote><para>
-        Selv om verken Flatpak eller apper installert av det kobler til OpenGL 
-        på systemet, vil hver app koble mot sin egen kjøretid/SDK. De fleste av 
-        dem bruker libglvnd. Det er kjent at det å kjøre en libglvnd koblet 
-        applikasjon på et Mesa OpenGL system mislykkes ved at det ikke klarer å 
-        opprette en instans eller kontekst. Hvis du ikke allerede har gjort det, 
-        er det lurt å bytte til libglvnd for å sikre kompatibilitet.
-      </para></footnote>
-      og drivere for GPU-en(e) din(e) for grafikk API-er som OpenGL og Vulkan
+      Drivere for GPU-en(e) din(e) for grafikk API-er som OpenGL og Vulkan
+      (&nvidia; eller
+      <ulink url="&glfs-website;/shareddeps/mesa.html">Mesa</ulink>)
     </para>
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
