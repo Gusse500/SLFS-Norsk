@@ -44,6 +44,10 @@
     <sect3 role="installation">
       <title>Installasjon av pycurl</title>
 
+      <para>Oppdater banen til den installerte dokumentasjonen:</para>
+
+<screen><userinput>sed -i 's/datadir = os.path.join("share", "doc", PACKAGE/&amp;+"-"+VERSION/' setup.py</userinput></screen>
+
       <para>Build the module:</para>
 
       &build-wheel;
@@ -52,8 +56,7 @@
         Nå, som &root; bruker:
       </para>
 
-<screen role="root"><userinput>&install-wheel; pycurl &amp;&amp;
-mv -v /usr/share/doc/pycurl{,-&pycurl-version;}</userinput></screen>
+<screen role="root"><userinput>&install-wheel; pycurl</userinput></screen>
 
     </sect3>
 
