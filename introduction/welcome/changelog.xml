@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>5. mai 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - OBS-Studio: 32.1.1 -&gt; 32.1.2. Fikser
+          <ulink url="&slfs-issues;/661">#661</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>2. mai 2026</para>
       <itemizedlist>
         <listitem>
