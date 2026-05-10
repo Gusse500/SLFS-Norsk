@@ -24,7 +24,7 @@
       Fcitx5 pakken tilbyr et utvidbart rammeverk for inndatametoder.
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
     <itemizedlist spacing="compact">
       <listitem>
