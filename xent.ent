@@ -29,14 +29,14 @@
   prosessorer. Se <xref linkend='parallel-builds'/> for mer 
   informasjon.</para></note>">
 
-<!ENTITY build-use-internet
-  "<note><para>En internettforbindelse er nødvendig for å bygge denne pakken. 
+<!ENTITY build-use-network
+  "<note><para>En nettverksforbindelse er nødvendig for å bygge denne pakken. 
   Systemsertifikatlageret må kanskje konfigureres med 
   <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> før du bygger 
   denne pakken.</para></note>">
 
-<!ENTITY test-use-internet
-  "<note><para>En internettforbindelse er nødvendig for noen tester av denne 
+<!ENTITY test-use-network
+  "<note><para>En nettverksforbindelse er nødvendig for noen tester av denne 
   pakken. Systemsertifikatlageret må kanskje konfigureres med 
   <ulink url='&blfs-svn;/postlfs/make-ca.html'>make-ca</ulink> før du tester 
   denne pakken.</para></note>">

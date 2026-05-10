@@ -52,7 +52,7 @@
       <xref linkend="scdoc"/> (for å bygge manualsidene)
     </para>
 
-    &build-use-internet;
+    &build-use-network;
 
   </sect2>
 
