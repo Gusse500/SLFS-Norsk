@@ -60,7 +60,15 @@
 	  GCC og glibc:
     </para>
 
-<screen role="pre"><userinput>patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-&s4-kernel;-1.patch</userinput></screen>
+<screen><userinput remap="pre">patch -Np1 -i ../s4-3b1-pc7300-&s4-3b1-pc7300-minor-version;-build_fixes-&s4-kernel;-1.patch</userinput></screen>
+
+    <para>
+      Under visse forhold, kan ikke <envar>PWD</envar> evalueres, noe som fører 
+      til at kjernemodulen ikke kan installeres. Endre den til å bruke
+      <envar>CURDIR</envar> istedet:
+    </para>
+
+<screen><userinput remap="pre">sed -i 's/PWD/CURDIR/g' sysv/Makefile.daveb</userinput></screen>
 
     <para>
       Kompiler kjernemodulen:
