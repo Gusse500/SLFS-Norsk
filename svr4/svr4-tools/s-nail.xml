@@ -32,6 +32,16 @@
       </listitem>
     </itemizedlist>
 
+    <bridgehead renderas="sect3">Ytterligere nedlastinger</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Påkrevd oppdatering:
+          <ulink url="&dl-root;/s-nail/s-nail-&s-nail-version;-openssl4_fixes-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
     <bridgehead renderas="sect3">s-nail Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd ved kjøretid</bridgehead>
@@ -51,7 +61,13 @@
     <title>Installasjon av s-nail</title>
 
     <para>
-      Først konfigurerer du denne pakken ved å kjøre følgende kommando:
+      Først, fiks kompilering av denne pakken mot OpenSSL-4:
+    </para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../s-nail-&s-nail-version;-openssl4_fixes-1.patch</userinput></screen>
+
+    <para>
+      Deretter konfigurerer du denne pakken ved å kjøre følgende kommando:
     </para>
 
 <screen><userinput>VAL_BINDIR=/usr/5bin           \

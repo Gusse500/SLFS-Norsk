@@ -43,6 +43,9 @@
       <para>15. mai 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - s-nail: Fiks kompilering mot OpenSSL-4.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - socat: Fiks kompilering mot OpenSSL-4.</para>
         </listitem>
         <listitem>
