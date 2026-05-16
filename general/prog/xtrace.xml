@@ -45,22 +45,28 @@
     <title>Installasjon av xtrace</title>
 
     <para>
-      Kompiler xtrace ved å kjøre følgende kommandoer:
+      Installer xtrace ved å kjøre følgende kommandoer:
     </para>
 
 <screen><userinput>autoreconf -fiv &amp;&amp;
-./configure --prefix=/usr &amp;&amp;
+./configure --prefix=/usr --program-suffix=_x11 &amp;&amp;
 make</userinput></screen>
 
     <para>
-      For å unngå konflikter med xtrace binærfilen som er installert av Glibc, 
-      kjør følgende kommandoer som &root; bruker for å installere pakken:
+      Nå som &root; bruker:
     </para>
 
-<screen role="root"><userinput>DESTDIR=$PWD/DESTDIR make install &amp;&amp;
-mv -v DESTDIR/usr/bin/xtrace{,_x11} &amp;&amp;
-mv -v DESTDIR/usr/share/man/man1/xtrace{,_x11}.1 &amp;&amp;
-cp -vR DESTDIR/usr/* /usr</userinput></screen>
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    <para>
+      <parameter>--program-suffix=_x11</parameter>: Unngå konflikter med
+      <command>xtrace</command> binær levert av Glibc.
+    </para>
 
   </sect2>
 

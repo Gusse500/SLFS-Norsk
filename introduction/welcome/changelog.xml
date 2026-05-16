@@ -40,6 +40,36 @@
     -->
 
     <listitem>
+      <para>15. mai 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - s-nail: Fiks kompilering mot OpenSSL-4.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - socat: Fiks kompilering mot OpenSSL-4.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - Go: 1.26.2 -&gt; 1.26.3 (Sikkerhetsoppdatering). 
+          Fikser <ulink url="&slfs-issues;/694">#694</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>13. mai 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - fish: 4.7.0 -&gt; 4.7.1. Fikser
+          <ulink url="&slfs-issues;/698">#698</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - xtrace: ced509 -&gt; 526c77. Fikser
+          <ulink url="&slfs-issues;/685">#685</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>10. mai 2026</para>
       <itemizedlist>
         <listitem>
