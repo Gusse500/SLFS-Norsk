@@ -43,6 +43,10 @@
       <para>15. mai 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - fastfetch: 2.62.1 -&gt; 2.63.1. Fikser
+          <ulink url="&slfs-issues;/703">#703</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - s-nail: Fiks kompilering mot OpenSSL-4.</para>
         </listitem>
         <listitem>
