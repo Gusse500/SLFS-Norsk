@@ -82,6 +82,13 @@
 -->
 
     <para>
+      Først må du sørge for at dokumentasjonsmappen er versjonert:
+    </para>
+
+    <screen><userinput>sed -i "s/install_dir: join_paths(get_option('datadir'), 'doc', 'foot'/&amp; + '-' + meson.project_version()/" meson.build</userinput></screen>
+
+
+    <para>
       Installer foot ved å kjøre følgende kommandoer:
     </para>
 
@@ -92,18 +99,14 @@ meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
+      For å teste resultatene, utsted: <command>ninja test</command>
+    </para>
+
+    <para>
       Nå, som &root; bruker:
     </para>
 
 <screen role="root"><userinput>ninja install</userinput></screen>
-
-    <para>
-      Hvis du bygde scdoc, gjør dokumentasjonsmappen 
-      versjonert som &root; bruker:
-    </para>
-
-<screen remap="doc"
-  role="root"><userinput>mv -v /usr/share/doc/foot{,-&foot-version;}</userinput></screen>
 
   </sect2>
 
