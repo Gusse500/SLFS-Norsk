@@ -40,6 +40,19 @@
     -->
 
     <listitem>
+      <para>20. mai 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[renodr] - FreeBee: Fikset installasjon av dokumentasjonen.</para>
+        </listitem>
+        <listitem>
+          <para>[renodr] - FreeBee: La til en merknad om at ROM-enes ZIP-fil 
+          ikke kan lastes ned via wget og lignende kommandolinjeverktøy.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>17. mai 2026</para>
       <itemizedlist>
         <listitem>
