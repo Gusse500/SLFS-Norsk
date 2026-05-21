@@ -43,6 +43,10 @@
       <para>20. mai 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[renodr] - MIPSel-GCC: 15.2.0 -&gt; 16.1.0. Fikser
+          <ulink url="&slfs-issues;/713">#713</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[renodr] - FreeBee: Fikset installasjon av dokumentasjonen.</para>
         </listitem>
         <listitem>
