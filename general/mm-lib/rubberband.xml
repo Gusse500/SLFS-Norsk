@@ -85,7 +85,10 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-meson setup --prefix=/usr --buildtype=release .. &amp;&amp;
+meson setup --prefix=/usr             \
+            --buildtype=release       \
+            -D default_library=shared \
+            .. &amp;&amp;
 ninja</userinput></screen>
 
     <para>
@@ -96,8 +99,7 @@ ninja</userinput></screen>
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>ninja install &amp;&amp;
-rm -vf /usr/lib/librubberband.a</userinput></screen>
+    <screen role="root"><userinput>ninja install</userinput></screen>
 
   </sect2>
 
@@ -107,16 +109,17 @@ rm -vf /usr/lib/librubberband.a</userinput></screen>
     &meson-buildtype-release;
 
     <para>
-      <option>-D resampler=</option>: Dette alternativet kan brukes til å 
+      <parameter>-D default_library=shared=</parameter>: Denne parameteren 
+      forteller byggesystemet at det kun skal installere delte biblioteker. 
+      Som standard vil begge typene bli installert.
+    </para>
+
+    <para>
+      <option>-D resampler=...</option>: Dette alternativet kan brukes til å 
       spesifisere resampleren som skal brukes. Som standard vil den bruke den 
       innebygde implementeringen. Du kan spesifisere <option>libsamplerate</option>, <option>speex</option>,
       eller <option>speexdsp</option> for å overstyre standardinnstillingen. 
       Hvis du skal gjøre dette, anbefales det å bruke <option>libsamplerate</option>.
-    </para>
-
-    <para>
-      <command>rm -vf /usr/lib/librubberband.a</command>: Fjerner et ubrukelig 
-      statisk bibliotek.
     </para>
 
   </sect2>
