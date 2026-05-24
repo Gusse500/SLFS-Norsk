@@ -25,10 +25,9 @@
     <title>Introduksjon til PlutoSVG</title>
 
     <para>
-      Denne siden installerer både PlutoVG og PlutoSVG pakkene. PlutoVG tilbyr 
-	  et 2D vektorgrafikkbibliotek, mens PlutoSVG bruker PlutoVG til å tilby et 
-	  SVG renderingsbibliotek. PlutoVG vil bli installert først, og deretter 
-	  PlutoSVG.
+      Denne siden installerer henholdsvis PlutoVG og PlutoSVG pakkene. PlutoVG 
+      tilbyr et 2D vektorgrafikkbibliotek, mens PlutoSVG bruker PlutoVG til å 
+      tilby et SVG renderingsbibliotek.
     </para>
 
     <itemizedlist spacing="compact">
@@ -70,9 +69,10 @@
 <screen><userinput>mkdir build &amp;&amp;
 cd    build &amp;&amp;
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
-      -D CMAKE_BUILD_TYPE=Release  \
-      -D BUILD_SHARED_LIBS=ON      \
+cmake -D CMAKE_INSTALL_PREFIX=/usr  \
+      -D CMAKE_BUILD_TYPE=Release   \
+      -D BUILD_SHARED_LIBS=ON       \
+      -D PLUTOVG_BUILD_EXAMPLES=OFF \
       -W no-dev -G Ninja .. &amp;&amp;
 ninja</userinput></screen>
 
@@ -88,11 +88,12 @@ ninja</userinput></screen>
 
 <screen><userinput>tar -xf ../../plutosvg-&plutosvg-version;.tar.gz &amp;&amp;
 
-cmake -D CMAKE_INSTALL_PREFIX=/usr \
-      -D CMAKE_BUILD_TYPE=Release  \
-      -D BUILD_SHARED_LIBS=ON      \
-      -W no-dev -G Ninja           \
-      -B svg-build                 \
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D BUILD_SHARED_LIBS=ON        \
+      -D PLUTOSVG_BUILD_EXAMPLES=OFF \
+      -W no-dev -G Ninja             \
+      -B svg-build                   \
       plutosvg-&plutosvg-version; &amp;&amp;
 ninja -C svg-build</userinput></screen>
 
@@ -103,32 +104,24 @@ ninja -C svg-build</userinput></screen>
 <screen role="root"><userinput>ninja -C svg-build install</userinput></screen>
 
     <para>
-      Som et etterinstallasjonstrinn må du fikse bibliotek sonames som skal være 
-      symbolske lenker. sonames er de faktiske bibliotekene som må flyttes for å 
-      indikere at de er biblioteker, og deretter må
-      <command>ldconfig</command> kjøres for å gjenopprette dem som symbolske 
-      lenker. Gjør det nå som &root; bruker:
+      Som et etterinstallasjonstrinn er det nødvendig å fikse bibliotek sonames 
+      som skal være symbolske lenker. sonames er de faktiske bibliotekene som må 
+      flyttes for å indikere at de er biblioteker, og deretter
+      <command>ldconfig</command> må kjøres etterpå for å gjenopprette dem som 
+      symbolske lenker. <command>ldconfig</command> kommandoen nedenfor vil 
+      sende ut advarsler om ignorerte symbolske lenker, som trygt kan ignoreres. 
+      Gjør det nå som &root; bruker:
     </para>
 
-<screen role="root"><userinput>rm -vf /usr/lib/libplutovg.so.&plutovg-version;     &amp;&amp;
-rm -vf /usr/lib/libplutosvg.so.&plutosvg-version;    &amp;&amp;
-mv -vf /usr/lib/libplutovg.so.&plutovg-major;{,.&plutovg-minor;}  &amp;&amp;
-mv -vf /usr/lib/libplutosvg.so.&plutosvg-major;{,.&plutosvg-minor;} &amp;&amp;
-ldconfig</userinput></screen>
+<screen role="root"><userinput>[ -L /usr/lib/libplutovg.so.&plutovg-major; ]  || mv -vf /usr/lib/libplutovg.so.&plutovg-major;{,.&plutovg-minor;}
+[ -L /usr/lib/libplutosvg.so.&plutosvg-major; ] || mv -vf /usr/lib/libplutosvg.so.&plutosvg-major;{,.&plutosvg-minor;}
+ldconfig -vl /usr/lib/libpluto{,s}vg.so*</userinput></screen>
 
     <note><para>
       Hvis du installerer eller oppgraderer PlutoVG og PlutoSVG på nytt, må 
       kommandosettet ovenfor kjøres, siden installasjonen vil overskrive 
       symbolske lenker.
     </para></note>
-
-    <important><para>
-      Hvis du kjører kommandosettet ovenfor mer enn én gang uten en ny 
-      reinstallasjon eller oppgradering mellom, vil de faktiske bibliotekene bli 
-      slettet og symbolske lenker vil bli satt inn i deres sted. Du må da 
-      installere PlutoVG og PlutoSVG på nytt, og deretter kjøre kommandoene på 
-      nytt for å fikse dette problemet.
-    </para></important>
 
   </sect2>
 
