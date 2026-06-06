@@ -56,13 +56,19 @@
       <ulink url="&blfs-svn;/general/imagemagick.html">ImageMagick</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/chafa/">Chafa</ulink>,
       <ulink url="&blfs-svn;/general/dbus.html">D-Bus</ulink>,
+      <ulink url="&blfs-svn;/general/lua.html">Lua</ulink>,
+      <ulink url="&blfs-svn;/multimedia/libva.html">libva</ulink>,
+      <ulink url="&blfs-svn;/x/libdrm.html">Libdrm</ulink>,
+      <ulink url="&blfs-svn;/gnome/dconf.html">DConf</ulink>,
       &opengl;,
       <ulink url="&glfs-website;/shareddeps/opencl-sdk.html">OpenCL-SDK</ulink>,
       <ulink url="&blfs-svn;/xfce/xfconf.html">Xfconf</ulink>,
       <ulink url="&blfs-svn;/multimedia/pulseaudio.html">PulseAudio</ulink>,
       <ulink url="&arch-pkgs;/extra/x86_64/ddcutil/">ddcutil</ulink>,
-      <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers</ulink>, og
-      <ulink url="&arch-pkgs;/extra/x86_64/efl/">EFL</ulink>
+      <ulink url="&arch-pkgs;/extra/x86_64/directx-headers/">DirectX-Headers</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/efl/">EFL</ulink>,
+      <ulink url="&arch-pkgs;/extra/x86_64/libvdpau/">libvdpau</ulink>, og
+      <ulink url="https://github.com/quickjs-ng/quickjs">QuickJS</ulink>
     </para>
 
   </sect2>
@@ -126,6 +132,12 @@ make</userinput></screen>
       flere tilgjengelige pakkebehandlere, er det bare de som ikke støtter 
       Linux som har blitt deaktivert. Hvis du vil støtte disse pakkebehandlerne, 
       setter du bryterne deres til <parameter>OFF</parameter>.
+    </para>
+
+    <para>
+      <parameter>-D ENABLE_{LUA,QUICKJS}=OFF</parameter>: Bruk denne bryteren 
+      hvis du har et av disse skriptspråkene installert og ønsker å deaktivere 
+      bruken av dem for formatstrenger.
     </para>
 
   </sect2>
