@@ -43,6 +43,10 @@
       <para>4. juni 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - Hyprland: 0.55.0 -&gt; 0.55.2. Fikser
+          <ulink url="&slfs-issues;/704">#704</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - aquamarine: 0.11.0 -&gt; 0.12.0. Fikser
           <ulink url="&slfs-issues;/735">#735</ulink>.</para>
         </listitem>
