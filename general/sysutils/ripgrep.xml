@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY ripgrep-download-root "https://github.com/burntsushi/ripgrep">
+  <!ENTITY ripgrep-download "&ripgrep-download-root;/archive/&ripgrep-version;/ripgrep-&ripgrep-version;.tar.gz">
+]>
+
+<sect1 id="ripgrep" xreflabel="ripgrep-&ripgrep-version;">
+  <?dbhtml filename="ripgrep.html"?>
+
+  <title>ripgrep-&ripgrep-version;</title>
+
+  <indexterm zone="ripgrep">
+    <primary sortas="a-ripgrep">ripgrep</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til ripgrep</title>
+
+    <para>
+      Ripgrep pakken tilbyr en rekursiv <command>grep</command>
+      alternativ skrevet i Rust.
+    </para>
+
+    &build-use-network;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&ripgrep-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">ripgrep Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av ripgrep</title>
+    <para>
+      Installer ripgrep ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>cargo build --profile=release-lto --features=pcre2</userinput></screen>
+
+    <para>
+      For å kjøre testpakken, utsted:
+      <command>cargo test --features=pcre2</command>.
+    </para>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release-lto/rg -t /usr/bin/</userinput></screen>
+
+    <para>
+      Hvis du vil installere manualsiden, kjør følgende kommando som
+      &root; bruker:
+    </para>
+
+<screen remap="doc" role="root"><userinput>target/release-lto/rg --generate man | install -vDm644 /dev/stdin /usr/share/man/man1/rg.1</userinput></screen>
+
+    <para>
+      Hvis du ønsker å installere skallkompletteringer, utfør de relevante 
+      kommandoene for skallet/skallene dine som 
+      <systemitem class="username">root</systemitem> bruker:
+    </para>
+<screen role="root"><userinput>target/release-lto/rg --generate complete-bash | install -vDm644 /dev/stdin /usr/share/bash-completion/completions/rg
+target/release-lto/rg --generate complete-fish | install -vDm644 /dev/stdin /usr/share/fish/vendor_completions.d/rg.fish
+target/release-lto/rg --generate complete-zsh | install -vDm644 /dev/stdin /usr/share/zsh/site-functions/_rg</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    <para>
+      <parameter>--profile=release-lto</parameter>: Oppstrøms spesifiserte 
+      byggeoptimaliseringer som normalt kan være tilstede i utgivelsesprofilen 
+      i en tilpasset release-lto profil.
+
+      <footnote><para>
+        Disse optimaliseringene er definert i <filename>Cargo.toml</filename>. 
+        For en forklaring av hva hver av dem gjør, se
+        <ulink url="https://doc.rust-lang.org/cargo/reference/profiles.html">The Cargo Book's profiles chapter</ulink>.
+
+        Den tilpassede profilen brukes fordi utvikleren ofte gjenoppbygger 
+        ripgrep med optimaliseringer for grunnleggende utgivelser for 
+        utviklingsformål, og LTO bremser byggingen betydelig.
+
+        Oppstøms kan ha valgt å definere en release-lto profil etter
+        <ulink url="https://doc.rust-lang.org/cargo/reference/profiles.html#custom-profiles">dette eksemplet</ulink>.
+
+        For mer informasjon om denne profilen, se
+        <ulink url="https://github.com/BurntSushi/ripgrep/commit/4c953731c4ea06ecce1a6f1e0229f1dc18a967ff">denne commit</ulink>
+        og de refererte problemene.
+      </para></footnote>
+
+      Det er også verdt å merke seg at oppstrøms bygger sine utgivelsesressurser 
+      med release-lto profilen.
+    </para>
+
+    <para>
+      <parameter>--features=pcre2</parameter>: Denne parameteren kobler seg mot 
+      et PCRE2 bibliotek installert i LFS for å gi støtte for funksjoner som 
+      finnes i PCRE2 regex motoren, inkludert tilbakereferanser og gjennomsyn. 
+      Denne funksjonaliteten eksponeres gjennom <parameter>--pcre2</parameter> 
+      og <parameter>--engine</parameter> <command>rg</command> flaggene.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          ripgrep
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="ripgrep-bin">
+        <term><command>ripgrep</command></term>
+        <listitem>
+          <para>
+            er en rekursiv <command>grep</command> alternativ skrevet i Rust
+          </para>
+          <indexterm zone="ripgrep ripgrep-bin">
+            <primary sortas="b-ripgrep-bin">ripgrep</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

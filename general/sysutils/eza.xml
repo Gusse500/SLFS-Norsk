@@ -45,7 +45,7 @@
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
-      <ulink url="&blfs-svn;/basinet/curl.html">cURL</ulink> (for å laste ned
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> (for å laste ned
       manualsider)
     </para>
 
@@ -78,7 +78,7 @@
         er fordi de nåværende alternativene enten krever mange pakker, eller en 
         pakke som er stor og kan kreve flere avhengigheter.
       </para></footnote>
-      ned ved bruk av <ulink url="&blfs-svn;/basinet/curl.html">cURL</ulink> 
+      ned ved bruk av <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> 
       som &root; bruker:
     </para>
 
