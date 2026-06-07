@@ -17,8 +17,8 @@ SLFS kan skryte av flere biblioteker og verktøy som ikke er dekket i de andre
 
 ## Hvor kan du lese den
 
-Go to https://lfs.freding.no/slfs/view/systemd/index.html or
-https://lfs.freding.no/slfs/ and start going through the book!
+Gå til https://lfs.freding.no/slfs/view/systemd/index.html eller
+https://lfs.freding.no/slfs/ og begynne å bla gjennom boken!
 
 Du finner flere nettkopier på https://linuxfromscratch.org/slfs/view/.
 
