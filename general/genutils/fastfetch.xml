@@ -87,6 +87,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr    \
       -D CMAKE_BUILD_TYPE=Release     \
       -D BUILD_FLASHFETCH=OFF         \
       -D ENABLE_SYSTEM_YYJSON=ON      \
+      -D PACKAGES_REMOVE_DISABLED=ON  \
       -D PACKAGES_DISABLE_CHOCO=ON    \
       -D PACKAGES_DISABLE_MACPORTS=ON \
       -D PACKAGES_DISABLE_SCOOP=ON    \
@@ -124,6 +125,12 @@ make</userinput></screen>
       forteller byggesystemet at det skal lenke mot systeminstallasjonen av 
       yyjson i stedet for pakkekopien. Hvis du ønsker å bruke pakkekopien av 
       yyjson, setter du denne bryteren til <parameter>OFF</parameter>.
+    </para>
+
+    <para>
+      <parameter>-D PACKAGES_REMOVE_DISABLED=ON</parameter>: Denne bryteren 
+      fjerner deteksjonskode for deaktiverte pakkebehandlere, og reduserer 
+      dermed binærstørrelsen marginalt.
     </para>
 
     <para>
