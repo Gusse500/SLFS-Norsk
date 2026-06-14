@@ -35,7 +35,7 @@
       <phrase revision="systemd"><ulink
       url="&lfs-website;/slfs/view/12.4-systemd/">SLFS 12.4</ulink></phrase>
       og se hvordan du kan gå frem for å fikse det som er ødelagt. Se <ulink
-      url="&glfs-website;/shareddeps/view/svn/aboutgl.html">GLFS: Om OpenGL</ulink>
+      url="&glfs-website;/core/view/svn/aboutgl.html">GLFS: Om OpenGL</ulink>
       for mer informasjon om hvorfor støtte for Mesas OpenGL implementeringer 
       har blitt fjernet fra både denne boken og GLFS.
     </para>
