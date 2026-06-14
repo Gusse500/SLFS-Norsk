@@ -71,7 +71,7 @@
     <para role="runtime">
       Drivere for GPU-en(e) din(e) for grafikk API-er som OpenGL og Vulkan
       (&nvidia; eller
-      <ulink url="&glfs-website;/shareddeps/mesa.html">Mesa</ulink>)
+      <ulink url="&glfs-website;/core/mesa.html">Mesa</ulink>)
     </para>
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
