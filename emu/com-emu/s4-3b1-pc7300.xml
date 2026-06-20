@@ -20,9 +20,9 @@
     <title>Introduksjon til s4-3b1-pc7300</title>
 
     <para>
-      s4-3b1-pc7300 Pakken inneholder en kjernemodul og diverse verktøy for å 
-      støtte lesing og skriving til og fra
-      CTIX og AT&amp;T 3B1 UNIX Systemprogramvare harddisker.
+      Pakken s4-3b1-pc7300 inneholder en kjernemodul og diverse verktøy for å 
+      støtte lesing og skriving til og fra CTIX og AT&amp;T 3B1 UNIX System 
+      Programvareharddisker.
     </para>
 
     <itemizedlist spacing="compact">

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY rtmpdump-download
+    "https://rtmpdump.mplayerhq.hu/download/rtmpdump-&rtmpdump-version;.tgz">
+]>
+
+<sect1 id="rtmpdump" xreflabel="RTMPDump-&rtmpdump-version;-&rtmpdump-current;">
+  <?dbhtml filename="rtmpdump.html"?>
+
+  <title>RTMPDump-&rtmpdump-version;-&rtmpdump-current;</title>
+
+  <indexterm zone="rtmpdump">
+    <primary sortas="a-rtmpdump">RTMPDump</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til RTMPDump</title>
+
+    <para>
+      RTMPDump pakken tilbyr et verktøysett for håndtering av RTMP strømmer. 
+      Pakker som FFmpeg kan bruke denne pakken til å kommunisere med servere, 
+      som YouTube, som strømmer via RTMP. Slike pakker kan deretter strømme 
+      video eller lyd til disse serverne.
+    </para>
+
+    <note><para>
+      Den virkelige versjonen av pakken er &rtmpdump-version;, ettersom nyere 
+      versjoner ikke har tarballer lastet opp for dem. En oppdatering er gitt 
+      for å oppdatere pakken til den nyeste oppstrømsversjonen, &rtmpdump-current;.
+    </para></note>
+
+    <note><para>
+      Når du bygger FFmpeg med denne pakken, bruk
+      <parameter>--enable-librtmp</parameter> parameteren.
+    </para></note>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&rtmpdump-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Ytterligere nedlastinger</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Påkrevd oppdatering:
+          <ulink url="&dl-root;/rtmpdump/rtmpdump-&rtmpdump-version;-&rtmpdump-current;.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av RTMPDump</title>
+
+    <para>
+      Oppdater pakken til versjon &rtmpdump-current; ved å bruke den 
+      nedlastede oppdateringen:
+    </para>
+
+<screen><userinput remap="pre">patch -Np1 -i ../rtmpdump-&rtmpdump-version;-&rtmpdump-current;.patch</userinput></screen>
+
+    <para>
+      Installer RTMPDump ved å kjøre følgende kommandoer:
+    </para>
+
+    <screen><userinput>make prefix=/usr</userinput></screen>
+
+    <para>
+      Nå som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make prefix=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          rtmpdump,
+          rtmpgw,
+          rtmpsrv, og
+          rtmpsuck
+        </seg>
+        <seg>
+          librtmp
+        </seg>
+        <seg>
+          /usr/include/librtmp
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="rtmpdump-bin">
+        <term><command>rtmpdump</command></term>
+        <listitem>
+          <para>
+            dumper media som strømmes over RTMP
+          </para>
+          <indexterm zone="rtmpdump rtmpdump-bin">
+            <primary sortas="b-rtmpdump-bin">rtmpdump</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rtmpgw">
+        <term><command>rtmpgw</command></term>
+        <listitem>
+          <para>
+            strømmer media fra HTTP-kryptert RTMP
+          </para>
+          <indexterm zone="rtmpdump rtmpgw">
+            <primary sortas="b-rtmpgw">rtmpgw</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rtmpsrv">
+        <term><command>rtmpsrv</command></term>
+        <listitem>
+          <para>
+            logger tilkoblings- og avspillingsparametere fra en klient og kobler 
+            til den, og kaller deretter <command>rtmpdump</command>
+          </para>
+          <indexterm zone="rtmpdump rtmpsrv">
+            <primary sortas="b-rtmpsrv">rtmpsrv</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="rtmpsuck">
+        <term><command>rtmpsuck</command></term>
+        <listitem>
+          <para>
+            setter opp en proxy RTMP server ved å avskjære forbindelsen fra en 
+            klient, og kobler deretter til den faktiske serveren
+          </para>
+          <indexterm zone="rtmpdump rtmpsuck">
+            <primary sortas="b-rtmpsuck">rtmpsuck</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="librtmp">
+        <term><filename class="libraryfile">librtmp</filename></term>
+        <listitem>
+          <para>
+            inneholder API funksjoner for håndtering av RTMP strømmer
+          </para>
+          <indexterm zone="rtmpdump librtmp">
+            <primary sortas="c-librtmp">librtmp</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
