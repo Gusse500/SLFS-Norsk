@@ -23,7 +23,7 @@
     <title>Introduksjon til Mango</title>
 
     <para>
-      Mango er en Wlroots basert Wayland kompoisjonsverktøy som er avhengig 
+      Mango er en wlroots basert Wayland kompoisjonsverktøy som er avhengig 
       av SceneFX for animasjoner og effekter. Den er liten og basert på DWL. 
       Konfigurasjonen håndteres via en konfigurasjonsfil i stedet for kildekode.
     </para>
@@ -47,7 +47,7 @@
       <xref linkend="scenefx"/>,
       <ulink url="&blfs-svn;/general/wayland.html">Wayland</ulink>,
       <ulink url="&blfs-svn;/general/wayland-protocols.html">Wayland-Protocols</ulink>,
-      og <xref linkend="wlroots"/>
+      and <ulink url="&blfs-svn;/x/wlroots.html">wlroots</ulink>
     </para>
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>

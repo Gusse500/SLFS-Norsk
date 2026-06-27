@@ -154,13 +154,13 @@ cp /etc/dunst/dunstrc ~/.config/dunst</userinput></screen>
 
         <para>
           I noen tilfeller er denne metoden den eneste metoden for å automatisk 
-          starte dette programmet riktig, som når du bruker <xref linkend="wayfire"/>.
-          I hovedsak, hvis din foretrukne vindusbehandler eller komposisjonsprogram 
-          har en konfigurasjonsfil og støtter automatisk start, er den generelle 
-          ideen å bare la den starte automatisk <command>dunst</command> uten argumenter.
+          starte dette programmet riktig, som når du bruker Wayfire. I hovedsak, 
+          hvis din foretrukne vindusbehandler eller komposisjonsprogram har en 
+          konfigurasjonsfil og støtter automatisk start, er den generelle ideen 
+          å bare la <command>dunst</command> starte automatisk uten argumenter. 
           Hver vindusbehandler og kompositor vil håndtere autostart forskjellig, 
-          men det er den generelle essensen av det. Som et eksempel, for
-          <xref linkend="wayfire"/>, kan det se omtrent slik ut:
+          men det er hovedpoenget. Som et eksempel, for Wayfire, kan det se 
+          omtrent slik ut:
         </para>
 
 <screen><emphasis role='purple'>[autostart]</emphasis>

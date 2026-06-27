@@ -40,6 +40,30 @@
     -->
 
     <listitem>
+      <para>June 26th, 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libliftoff: Flyttet til BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - nlohmann-json: Flyttet til BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - seatd: Flyttet til BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Wayfire and extra plugins: Flyttet til BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - wlroots: Flyttet til BLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xcb-util-errors: Flyttet til BLFS og GLFS.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - xdg-desktop-portal-wlr: Flyttet til BLFS.</para>
+
+    <listitem>
       <para>23. juni 2026</para>
       <itemizedlist>
         <listitem>
