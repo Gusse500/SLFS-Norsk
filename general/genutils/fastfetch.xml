@@ -42,7 +42,8 @@
 
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
-      <xref linkend="yyjson"/> (ellers vil en pakkekopi brukes)
+      <ulink url="&blfs-svn;/general/yyjson.html">yyjson</ulink> 
+      (ellers vil en pakkekopi brukes)
     </para>
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY mtools-download "&gnu-http;/mtools/mtools-&mtools-version;.tar.gz">
+]>
+
+<sect1 id="mtools" xreflabel="Mtools-&mtools-version;">
+  <?dbhtml filename="mtools.html"?>
+
+  <title>Mtools-&mtools-version;</title>
+
+  <indexterm zone="mtools">
+    <primary sortas="a-mtools">Mtools</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til Mtools</title>
+
+    <para>
+      Mtools pakken inneholder et sett med verktøy for å få tilgang til MD-DOS 
+      diskinnhold uten å montere disken.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&mtools-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Mtools Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/x/x7lib.html">Xorg Libraries</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av Mtools</title>
+
+    <para>
+      Installer Mtools ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>./configure --prefix=/usr --disable-floppyd &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    <para>
+      <parameter>--disable-floppyd</parameter>: Deaktiverer bygging av diskett 
+      daemonen, som krever Xorg bibliotekene. Hvis du installerte disse 
+      bibliotekene, kan du fjerne denne parameteren.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          lz,
+          mattrib,
+          mbadblocks,
+          mcat,
+          mcd,
+          mcheck,
+          mcomp,
+          mcopy,
+          mdel,
+          mdeltree,
+          mdir,
+          mdoctorfat,
+          mdu,
+          mformat,
+          minfo,
+          mkmanifest,
+          mlabel,
+          mmd,
+          mmount,
+          mmove,
+          mpartition,
+          mrd,
+          mren,
+          mshortname,
+          mshowfat,
+          mtools,
+          mtoolstest,
+          mtype,
+          mxtar,
+          mzip,
+          tgz, and
+          uz
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <para>
+      De fleste verktøyene er varianter av det som tilbys av coreutils 
+      og andre pakker, designet for MS-DOS disktilgang, og vil ikke bli 
+      forklart her.
+    </para>
+
+  </sect2>
+
+</sect1>

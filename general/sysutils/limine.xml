@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY limine-root
+    "https://github.com/Limine-Bootloader/Limine/releases/download">
+  <!ENTITY limine-download
+    "&limine-root;/v&limine-version;/limine-&limine-version;.tar.gz">
+]>
+
+<sect1 id="limine" xreflabel="Limine-&limine-version;">
+  <?dbhtml filename="limine.html"?>
+
+  <title>Limine-&limine-version;</title>
+
+  <indexterm zone="limine">
+    <primary sortas="a-limine">Limine</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til Limine</title>
+
+    <para>
+      Limine pakken tilbyr en moderne oppstartslaster, et alternativ til GRUB.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&limine-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Limine Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Anbefalt</bridgehead>
+    <para role="recommended">
+      <xref linkend="mtools"/> og
+      <ulink url="&blfs-svn;/general/nasm.html">NASM</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/postlfs/dosfstools.html">dosfstools</ulink> og
+      <ulink url="&blfs-svn;/postlfs/efibootmgr.html">efibootmgr</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av Limine</title>
+
+    <para>
+      Installer Limine ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>CC_FOR_TARGET=cc                  \
+LD_FOR_TARGET=ld                  \
+OBJCOPY_FOR_TARGET=objcopy        \
+OBJDUMP_FOR_TARGET=objdump        \
+READELF_FOR_TARGET=readelf        \
+./configure --prefix=/usr         \
+            --enable-bios         \
+            --enable-bios-cd      \
+            --enable-uefi-cd      \
+            --enable-bios-pxe     \
+            --enable-uefi-ia32    \
+            --enable-uefi-x86-64 &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+mv -v /usr/share/doc/limine{,-&limine-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="configuration">
+    <title>Konfigurere Limine</title>
+
+    <para>
+      Limine er installert, men i likhet med GRUB betyr ikke det at den er 
+      ferdig installert ennå. Under byggeprosessen har forskjellige avbildninger 
+      blitt bygget. Avhengig av oppstartsfirmwaren kan kanskje kopieres fra ett 
+      sted til et annet, eller du må bruke <command>limine</command> for å 
+      hjelpe med installasjonen av oppstartslasteren.
+    </para>
+
+    <para>
+      Før fullstendig installasjon utføres, er det viktig å ta tak i en 
+      begrensning, men også en fordel med Limine. Fokuset til Limine er å være 
+      liten og ikke ha like mange funksjoner som GRUB. Dette betyr at den bare 
+      støtter FAT typer filsystemer. EXT4 støttes ikke. Det finnes noen 
+      alternativer for et allerede laget LFS system der <filename
+      class="directory">/boot</filename> er formatert som EXT4 hvis det er en 
+      separat partisjon, eller hvis det ikke er en separat partisjon.
+    </para>
+
+    <para>
+      For UEFI systemer kan dette omgås litt enklere, ettersom man kan legge 
+      alle nødvendige ressurser, inkludert kjernen, inn i ESP-en. For BIOS 
+      finnes det ikke noe annet alternativ enn å opprette <filename
+      class="directory">/boot</filename> partisjonen hvis den ikke allerede er 
+      opprettet, og formater den som VFAT/FAT-32. Dette vil kreve <ulink
+      url="&blfs-svn;/postlfs/dosfstools.html">dosfstools</ulink> hvis du har 
+      startet opp i LFS målet. Sikkerhetskopier alle ressursene du trenger for 
+      oppstart og vær forsiktig hvis du trenger å opprette partisjonen.
+    </para>
+
+    <note><para>
+      Hvis du ønsker å legge inn ressurser i ESP for UEFI, må du sørge for at 
+      den er stor nok. En endring av størrelsen kan være nødvendig. Sørg for at 
+      den monteres ved oppstart ved å legge inn en oppføring i <filename>/etc/fstab</filename>.
+    </para></note>
+
+    <sect3>
+      <title>For UEFI</title>
+
+      <para>
+        For UEFI, de byggete <filename class="extension">EFI</filename> filene
+        kan kopieres til standardplasseringen. Installer
+        <filename class="extension">EFI</filename> filene som &root; bruker
+        (erstatt <literal><replaceable>&lt;ESP&gt;</replaceable></literal>
+        med ESP lokalasjonen, slik som <filename
+        class="directory">/boot/efi</filename>):
+      </para>
+
+<screen role="root"><userinput>mkdir -pv <replaceable>&lt;ESP&gt;</replaceable>/EFI/BOOT &amp;&amp;
+cp -v /usr/share/limine/*.EFI \
+      <replaceable>&lt;ESP&gt;</replaceable>/EFI/BOOT</userinput></screen>
+
+      <para>
+        Hvis du ønsker en ikke-standardisert plassering for <filename
+        class="extension">EFI</filename> eller UEFI fastvaren søker ikke etter 
+        standardplasseringen, trenger du <ulink
+        url="&blfs-svn;/postlfs/efibootmgr.html">efibootmgr</ulink> hvis du 
+        startet opp i LFS målet, og å følge løst <ulink
+        url="&lfs-root;/chapter10/grub.html">LFS GRUB Setup</ulink>,
+        <quote>Booting With UEFI</quote> seksjonen.
+      </para>
+    </sect3>
+
+    <sect3>
+      <title>For BIOS</title>
+
+      <para>
+        For BIOS, må du bruke <command>limine</command> verktøyet.
+        Kjør følgende som &root; bruker (erstatt <filename
+        class="directory">/dev/sda</filename> med disken du vil installere 
+        oppstartslasteren for):
+      </para>
+
+<screen role="root"><userinput>mkdir -pv /boot/limine &amp;&amp;
+cp /usr/share/limine/limine-bios.sys /boot/limine &amp;&amp;
+limine bios-install /dev/sda</userinput></screen>
+    </sect3>
+
+    <sect3>
+      <title>Opprette konfigurasjonsfilen</title>
+
+      <para>
+        Nå må konfigurasjonsfilen lages. <literal>boot()</literal>
+        peker til roten av partisjonen som er vert for konfigurasjonsfilen. 
+        Dette kan være <filename class="directory">/boot</filename>, eller det 
+        kan være ESP. Dermed vil plasseringen av konfigurasjonsfilen variere. Du 
+        må flytte oppstartsressursene til plasseringen <literal>boot()</literal>
+        poeng også, ta med undermappene. Eksempler på plasseringer er som 
+        følger: <filename>/boot/limine.conf</filename>,
+        <filename>/boot/limine/limine.conf</filename>,
+        <filename>/boot/efi/limine.conf</filename>, og
+        <filename>/boot/efi/EFI/BOOT/limine.conf</filename>.
+        Opprett nå konfigurasjonsfilen som &root; bruker:
+      </para>
+
+<screen role="root"><userinput>mkdir -pv <replaceable>&lt;CONF_LOCATION&gt;</replaceable> &amp;&amp;
+cat &gt; <replaceable>&lt;CONF_LOCATION&gt;</replaceable>/limine.conf &lt;&lt; "EOF"
+<literal>timeout: 5
+
+/GNU/Linux
+  protocol: linux
+  path: boot():/vmlinuz-<replaceable>&lt;linux-version&gt;</replaceable>
+  cmdline: root=/dev/sda2 ro</literal>
+EOF</userinput></screen>
+
+      <para>
+        Erstatt <filename class="directory">/dev/sda2</filename> med 
+        rotpartisjonen. Som med GRUB, <literal>PARTUUID</literal> kan brukes i 
+        stedet, og <literal>UUID</literal> under visse betingelser.
+      </para>
+
+      <para>
+        For å få en bedre forståelse av oppsettet, se de to utdragene nedenfor.
+      </para>
+
+      <para>
+        For UEFI:
+      </para>
+
+<screen><emphasis role='blue'>/boot</emphasis>
+└── <emphasis role='blue'>efi</emphasis>
+    ├── <emphasis role='blue'>EFI</emphasis>
+    │   └── <emphasis role='blue'>BOOT</emphasis>
+    │       ├── <emphasis role='green'>BOOTIA32.EFI</emphasis>
+    │       ├── <emphasis role='green'>BOOTX64.EFI</emphasis>
+    │       └── limine.conf
+    ├── config-7.0.8
+    ├── System.map-7.0.8
+    └── <emphasis role='green'>vmlinuz-7.0.8</emphasis></screen>
+
+      <para>
+        For BIOS:
+      </para>
+
+<screen><emphasis role='blue'>/boot</emphasis>
+├── <emphasis role='blue'>limine</emphasis>
+│   ├── limine.conf
+│   └── limine-bios.sys
+├── config-7.0.8
+├── System.map-7.0.8
+└── <emphasis role='green'>vmlinuz-7.0.8</emphasis></screen>
+
+    </sect3>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          limine
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          /usr/share/doc/limine-&limine-version; og
+          /usr/share/limine
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="limine-bin">
+        <term><command>limine</command></term>
+        <listitem>
+          <para>
+            er Limine verktøyet for å installere en oppstartslaster
+          </para>
+          <indexterm zone="limine limine">
+            <primary sortas="b-limine">limine</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
