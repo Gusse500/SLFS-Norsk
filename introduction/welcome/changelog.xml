@@ -79,6 +79,16 @@
         </listitem>
         <listitem>
           <para>[zeckma] - xdg-desktop-portal-wlr: Flyttet til BLFS.</para>
+    
+    <listitem>
+      <para>24. juni 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - fastfetch: 2.64.2 -&gt; 2.65.1. Fikser
+          <ulink url="&slfs-issues;/759">#759</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
 
     <listitem>
       <para>23. juni 2026</para>
