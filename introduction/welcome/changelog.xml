@@ -84,6 +84,10 @@
       <para>24. juni 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - strace: 7.0 -&gt; 7.1. Fikser
+          <ulink url="&slfs-issues;/768">#768</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - fastfetch: 2.64.2 -&gt; 2.65.1. Fikser
           <ulink url="&slfs-issues;/759">#759</ulink>.</para>
         </listitem>
