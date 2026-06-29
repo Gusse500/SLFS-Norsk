@@ -40,7 +40,16 @@
     -->
 
     <listitem>
-      <para>June 26th, 2026</para>
+      <para>27. juni 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Mtools: Lagt til.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>26. juni 2026</para>
       <itemizedlist>
         <listitem>
           <para>[tox] - uthash: 2.3.0 -&gt; 2.4.0. Fikser
