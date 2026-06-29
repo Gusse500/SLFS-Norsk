@@ -84,6 +84,10 @@
       <para>24. juni 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - typst: 0.14.2 -&gt; 0.15.0. Fikser
+          <ulink url="&slfs-issues;/769">#769</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - pugixml: 1.15 -&gt; 1.16. Fikser
           <ulink url="&slfs-issues;/767">#767</ulink>.</para>
         </listitem>
