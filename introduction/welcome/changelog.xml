@@ -83,7 +83,13 @@
         </listitem>
         <listitem>
           <para>[zeckma] - xdg-desktop-portal-wlr: Flyttet til BLFS.</para>
-    
+        </listitem>
+        <listitem>
+          <para>[zeckma] - yyjson: Flyttet til BLFS.</para>                                                
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
     <listitem>
       <para>24. juni 2026</para>
       <itemizedlist>
