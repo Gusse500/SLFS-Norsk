@@ -46,7 +46,6 @@
       <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink> og
       <ulink url="&blfs-svn;/postlfs/gpgme.html">gpgme</ulink>
       (påkrevd for Flatpak),
-      <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
       <ulink url="&blfs-svn;/general/libxslt.html">libxslt</ulink>, og
       &logind-nocomma;
     </para>
@@ -54,6 +53,7 @@
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
       <xref linkend="fuse2"/>,
+      <ulink url="&blfs-svn;/general/gtk-doc.html">GTK-Doc</ulink>,
       <ulink url="https://linuxfromscratch.org/blfs/view/12.3/basicnet/libsoup.html">libsoup</ulink>,
       og <ulink url="&blfs-svn;/basicnet/libsoup3.html">libsoup3</ulink>
     </para>
