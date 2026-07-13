@@ -43,6 +43,10 @@
       <para>9. juli 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - m17n-db: 1.8.12 -&gt; 1.8.13. Fikser
+          <ulink url="&slfs-issues;/799">#799</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - scdoc: 1.11.4 -&gt; 1.11.5. Fikser
           <ulink url="&slfs-issues;/804">#804</ulink>.</para>
         </listitem>
