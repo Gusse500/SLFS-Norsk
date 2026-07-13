@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>9. juli 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - eza: 0.23.4 -&gt; 0.23.5. Fikser
+          <ulink url="&slfs-issues;/792">#792</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>28. juni 2026</para>
       <itemizedlist>
         <listitem>
