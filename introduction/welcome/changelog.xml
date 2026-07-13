@@ -43,6 +43,10 @@
       <para>9. juli 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - QuaZip: 1.7.1 -&gt; 1.7.2. Fikser
+          <ulink url="&slfs-issues;/803">#803</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - tmux: 3.7 -&gt; 3.7b. Fikser
           <ulink url="&slfs-issues;/807">#807</ulink>.</para>
         </listitem>

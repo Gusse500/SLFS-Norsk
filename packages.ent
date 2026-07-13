@@ -44,7 +44,7 @@
 <!ENTITY qrcodegencpp-version                "1.8.0">
 <!ENTITY qrcodegencpp-cmake-version          "1.8.0-cmake5">
 <!ENTITY quazip-major                        "1">
-<!ENTITY quazip-version                      "&quazip-major;.7.1">
+<!ENTITY quazip-version                      "&quazip-major;.7.2">
 <!ENTITY re2-version                         "2025-11-05">
 <!ENTITY sdbus-cpp-version                   "2.3.1">
 <!ENTITY sdl2_net-version                    "2.4.0">
