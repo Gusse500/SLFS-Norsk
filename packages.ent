@@ -70,7 +70,7 @@
 <!ENTITY hwinfo-version                      "25.4">
 <!ENTITY imv-version                         "5.0.1">
 <!ENTITY inxi-rev                            "1">
-<!ENTITY inxi-version                        "3.3.40-&inxi-rev;">
+<!ENTITY inxi-version                        "3.3.41-&inxi-rev;">
 <!ENTITY jstest-sdl-minor-version            "710687">
 <!ENTITY jstest-sdl-version                  "710687344a8bd35553f0edf40469531c07b6ef31">
 <!ENTITY lotus123-version                    "1.0.0rc4">
