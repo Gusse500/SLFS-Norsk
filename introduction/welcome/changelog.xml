@@ -43,6 +43,10 @@
       <para>9. juli 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - Mbed-TLS: 3.6.6 -&gt; 3.6.7. Fikser
+          <ulink url="&slfs-issues;/800">#800</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - libvpl: 2.16.0 -&gt; 2.17.0. Fikser
           <ulink url="&slfs-issues;/798">#798</ulink>.</para>
         </listitem>
