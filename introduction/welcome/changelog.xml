@@ -43,6 +43,10 @@
       <para>9. juli 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - tmux: 3.7 -&gt; 3.7b. Fikser
+          <ulink url="&slfs-issues;/807">#807</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - m17n-db: 1.8.12 -&gt; 1.8.13. Fikser
           <ulink url="&slfs-issues;/799">#799</ulink>.</para>
         </listitem>
