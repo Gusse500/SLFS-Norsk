@@ -113,6 +113,7 @@ version, so keep this at that. -->
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.13.2">
 <!ENTITY eza-version                         "0.23.5">
+<!ENTITY fd-version                          "10.4.2">
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY libtree-version                     "3.1.1">
 <!ENTITY limine-version                      "12.4.1">
