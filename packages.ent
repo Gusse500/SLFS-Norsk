@@ -10,6 +10,7 @@
 <!ENTITY glaze-version                       "7.8.4">
 <!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
+<!ENTITY jemalloc-version                    "5.3.1">
 <!ENTITY libbacktrace-minor                  "b9e400">
 <!ENTITY libbacktrace-version                "b9e40069c0b47a722286b94eb5231f7f05c08713">
 <!ENTITY libev-version                       "4.33">

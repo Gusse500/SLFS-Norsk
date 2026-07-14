@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>13. juli 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - jemalloc: Lagt til. Del av 
+          <ulink url="&slfs-issues;/714">#714</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>12. juli 2026</para>
       <itemizedlist>
         <listitem>

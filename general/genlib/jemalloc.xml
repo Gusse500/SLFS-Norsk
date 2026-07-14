@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY jemalloc-download
+  "https://github.com/jemalloc/jemalloc/releases/download/&jemalloc-version;/jemalloc-&jemalloc-version;.tar.bz2">
+]>
+
+<sect1 id="jemalloc" xreflabel="jemalloc-&jemalloc-version;">
+  <?dbhtml filename="jemalloc.html"?>
+
+  <title>jemalloc-&jemalloc-version;</title>
+
+  <indexterm zone="jemalloc">
+    <primary sortas="a-jemalloc">jemalloc</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til jemalloc</title>
+
+    <para>
+      Jemalloc pakken tilbyr en generell, skalerbar, samtidig minneallokator. I 
+      tillegg til drop-in erstatninger for minneallokeringsfunksjoner definert 
+      i standard C biblioteket (f.eks. malloc), tilbyr jemalloc flere 
+      ikke-standard funksjoner.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&jemalloc-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">Ytterligere nedlastinger</bridgehead>
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Påkrevd oppdatering:
+          <ulink url="&dl-root;/jemalloc/jemalloc-&jemalloc-version;-gcc-16-1.patch"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av jemalloc</title>
+
+    <para>
+      Bruk en oppdatering for å fikse byggingen av jemalloc med GCC 16:
+    </para>
+
+<screen><userinput>patch -Np1 -i ../jemalloc-&jemalloc-version;-gcc-16-1.patch</userinput></screen>
+
+    <para>
+      Installer jemalloc ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>autoreconf -fiv &amp;&amp;
+./configure --prefix=/usr --disable-static &amp;&amp;
+make</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make install &amp;&amp;
+mv -vf /usr/share/doc/jemalloc{,-&jemalloc-version;}</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          jemalloc-config,
+          jemalloc.sh, og
+          jeprof
+        </seg>
+        <seg>
+          libjemalloc
+        </seg>
+        <seg>
+          /usr/include/jemalloc og
+          /usr/share/doc/jemalloc-&jemalloc-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="jemalloc-config">
+        <term><command>jemalloc-config</command></term>
+        <listitem>
+          <para>
+            skriver ut informasjon om siste kompilering, for eksempel 
+            biblioteker som er koblet mot og prefiks
+          </para>
+          <indexterm zone="jemalloc jemalloc-config">
+            <primary sortas="b-jemalloc-config">jemalloc-config</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="jemalloc.sh">
+        <term><command>jemalloc.sh</command></term>
+        <listitem>
+          <para>
+            forhåndslaster libjemalloc før det kjøres et annet program
+          </para>
+          <indexterm zone="jemalloc jemalloc.sh">
+            <primary sortas="b-jemalloc.sh">jemalloc.sh</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="jeprof">
+        <term><command>jeprof</command></term>
+        <listitem>
+          <para>
+            verktøy for å analysere jemallocs heap profildumper
+          </para>
+          <indexterm zone="jemalloc jeprof">
+            <primary sortas="b-jeprof">jeprof</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="libjemalloc">
+        <term><filename class="libraryfile">libjemalloc</filename></term>
+        <listitem>
+          <para>
+            tilbyr minneallokeringsfunksjoner
+          </para>
+          <indexterm zone="jemalloc libjemalloc">
+            <primary sortas="c-libjemalloc">libjemalloc</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
