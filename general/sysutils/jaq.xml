@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY jaq-upstream   "https://github.com/01mf02/jaq">
+  <!ENTITY jaq-dl-extra   "&jaq-upstream;/releases/download/v&jaq-version;">
+  <!ENTITY jaq-download   "&jaq-upstream;/archive/v&jaq-version;/jaq-&jaq-version;.tar.gz">
+]>
+
+<sect1 id="jaq" xreflabel="jaq-&jaq-version;">
+  <?dbhtml filename="jaq.html"?>
+
+  <title>jaq-&jaq-version;</title>
+
+  <indexterm zone="jaq">
+    <primary sortas="a-jaq">jaq</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til jaq</title>
+
+    <para>
+      jaq er en korrekt, rask og enkel klon av JSON behandlingsverktøyet
+      <command>jq</command>. Sammenlignet med originalen er denne 
+      implementeringen drop-in kompatibel, raskere i de fleste tilfeller og 
+      støtter flere dataformater.
+    </para>
+
+    &build-use-network;
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&jaq-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">jaq Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/rust.html">Rustc</ulink>
+    </para>
+
+    <bridgehead renderas="sect4">Valgfri</bridgehead>
+    <para role="optional">
+      <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>
+      (for å laste ned dokumentasjon)
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av jaq</title>
+
+    <para>
+      Hvis du ønsker å installere dokumentasjonen, last den ned
+      <footnote><para>
+        Dokumentasjonen for denne pakken er skrevet i
+        <ulink url="https://djot.net/">djot</ulink> markupspråk. Blant LFS 
+        pakkene finnes det ingen passende verktøy for å konvertere djot til 
+        verken troff formatet som brukes av manualsider eller XHTML.
+
+        I skrivende stund bruker oppstrøms
+        <ulink url="https://github.com/hellux/jotdown">jotdown</ulink>
+        for denne oppgaven. Tidligere var den mye tyngre
+        <ulink url="https://pandoc.org/">pandoc</ulink> brukt.
+      </para></footnote>
+      ved hjelp av <ulink url="&blfs-svn;/basicnet/curl.html">cURL</ulink>:
+    </para>
+
+<screen remap="doc"><userinput>curl -fsSL -OO &jaq-dl-extra;/{jaq.1,MANUAL.xhtml}</userinput></screen>
+
+    <para>
+      Installer jaq ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>cargo build --release</userinput></screen>
+
+    <para>
+      For å teste resultatene, utsted: <command>cargo test --release</command>.
+    </para>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>install -vDm755 target/release/jaq     -t /usr/bin/                 &amp;&amp;
+ln -sfv jaq                               /usr/bin/jq</userinput></screen>
+
+    <para>
+      Hvis du lastet ned dokumentasjonen, installer den som &root; bruker:
+    </para>
+
+<screen remap="doc" role="root"><userinput>install -vDm644 README.md MANUAL.xhtml -t /usr/share/doc/jaq-&jaq-version;/ &amp;&amp;
+install -vDm644 jaq.1                  -t /usr/share/man/man1/      &amp;&amp;
+ln -sfv jaq.1                             /usr/share/man/man1/jq.1</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installert Program</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          jaq og
+          jq (lenke til jaq)
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          /usr/share/doc/jaq-&jaq-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="jaq-bin">
+        <term><command>jaq</command></term>
+        <listitem>
+          <para>
+            behandler JSON (og andre) ved hjelp av jq språket
+          </para>
+          <indexterm zone="jaq jaq">
+            <primary sortas="b-jaq">jaq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="jq">
+        <term><command>jq</command></term>
+        <listitem>
+          <para>
+              kompatibilitetssymbolkobling til <command>jaq</command>
+          </para>
+          <indexterm zone="jaq jq">
+            <primary sortas="b-jq">jq</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>

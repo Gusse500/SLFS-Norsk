@@ -43,6 +43,10 @@
       <para>13. juli 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - jaq: Lagt til. Fikser
+          <ulink url="&slfs-issues;/651">#651</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - fd: Lagt til. Fikser
           <ulink url="&slfs-issues;/714">#714</ulink>.</para>
         </listitem>
