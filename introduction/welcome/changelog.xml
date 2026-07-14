@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>14. juli 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Flatpak: 1.16.6 -&gt; 1.18.0. Fikser
+          <ulink url="&slfs-issues;/761">#761</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>13. juli 2026</para>
       <itemizedlist>
         <listitem>
