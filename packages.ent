@@ -1,7 +1,7 @@
 <!-- GENERAL -->
 <!-- General Libraries -->
 <!ENTITY anthy-version                       "1:0.4-3">
-<!ENTITY asio-version                        "1-38-0">
+<!ENTITY asio-version                        "1-38-1">
 <!ENTITY capstone-version                    "5.0.9">
 <!ENTITY cglm-version                        "0.9.6">
 <!ENTITY cjson-version                       "1.7.19">
@@ -108,7 +108,7 @@ version, so keep this at that. -->
 <!ENTITY w3m-version                         "0.5.6">
 <!ENTITY wgetpaste-version                   "2.34">
 <!ENTITY winetricks-version                  "20260125">
-<!ENTITY yt-dlp-version                      "2026.06.09">
+<!ENTITY yt-dlp-version                      "2026.07.04">
 <!ENTITY xmlstarlet-version                  "1.6.1">
 <!-- System Utilities -->
 <!ENTITY dunst-version                       "1.13.2">
@@ -147,7 +147,7 @@ version, so keep this at that. -->
 <!-- Python Dependencies -->
 <!ENTITY structlog-version                   "26.1.0">
 <!ENTITY platformdirs-version                "4.10.0">
-<!ENTITY pycurl-version                      "7.46.0">
+<!ENTITY pycurl-version                      "7.47.0">
 <!ENTITY toml-version                        "0.10.2">
 <!ENTITY tornado-version                     "6.5.7">
 <!-- Python Modules -->
@@ -211,7 +211,7 @@ version, so keep this at that. -->
 <!-- App -->
 <!ENTITY awww-version                        "0.12.1">
 <!ENTITY grim-version                        "1.5.0">
-<!ENTITY libvpl-tools-version                "1.5.0">
+<!ENTITY libvpl-tools-version                "1.6.0">
 <!ENTITY mesa-demos-version                  "9.0.0">
 <!ENTITY obs-studio-version                  "32.1.2">
 <!ENTITY obs-cef-version                     "6533">
