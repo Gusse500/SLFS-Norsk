@@ -100,7 +100,7 @@
       lokalene i én arkivfil.
     </para>
 
-<screen><userinput>sed -i '92,97d' tests/make-test-runtime.sh</userinput></screen>
+<screen><userinput>sed -i '92,99d' tests/make-test-runtime.sh</userinput></screen>
 
     <para>
       Installer Flatpak ved å kjøre følgende 
@@ -195,27 +195,19 @@ ninja</userinput></screen>
 
     <segmentedlist>
       <segtitle>Installerte Programmer</segtitle>
-      <segtitle>Installerte Skall Skriptutløsere</segtitle>
       <segtitle>Installert Bibliotek</segtitle>
       <segtitle>Installerte Mapper</segtitle>
 
       <seglistitem>
         <seg>
-          flatpak, flatpak-bisect, flatpak-bwrap, flatpak-coredumpctl,
-          flatpak-dbus-proxy, flatpak-oci-authenticator, flatpak-portal,
-          flatpak-session-helper, flatpak-system-helper, flatpak-validate-icon,
-          og revokefs-fuse
-        </seg>
-        <seg>
-          desktop-database.trigger, gtk-icon-cache.trigger, og
-          mime-database.trigger
+          flatpak, flatpak-bisect, og flatpak-coredumpctl
         </seg>
         <seg>
           libflatpak
         </seg>
         <seg>
-          /usr/include/flatpak, /usr/lib/sysusers.d, og
-          /usr/share/flatpak/triggers
+          /usr/include/flatpak og
+          /usr/share/flatpak
         </seg>
       </seglistitem>
     </segmentedlist>
@@ -225,177 +217,14 @@ ninja</userinput></screen>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
 
-      <varlistentry id="desktop-database.trigger">
-        <term><command>desktop-database.trigger</command></term>
-        <listitem>
-          <para>
-            er en utløser som oppdaterer en flatpaks applikasjonsbuffer
-          </para>
-          <indexterm zone="flatpak desktop-database.trigger">
-            <primary sortas="b-desktop-database.trigger">desktop-database.trigger</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
       <varlistentry id="flatpak-bin">
         <term><command>flatpak</command></term>
         <listitem>
           <para>
-            kan kjøre containeriserte og sandkassebaserte applikasjoner
+            kan installere og kjøre sandkasseapplikasjoner via flere repositorier
           </para>
           <indexterm zone="flatpak flatpak-bin">
             <primary sortas="b-flatpak-bin">flatpak</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-bisect">
-        <term><command>flatpak-bisect</command></term>
-        <listitem>
-          <para>
-            kan gjøre en git-stil halvering av et flatpak program
-          </para>
-          <indexterm zone="flatpak flatpak-bisect">
-            <primary sortas="b-flatpak-bisect">flatpak-bisect</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-bwrap">
-        <term><command>flatpak-bwrap</command></term>
-        <listitem>
-          <para>
-            brukes av <command>flatpak</command> for å bruke 
-            Bubblewrap funksjoner
-          </para>
-          <indexterm zone="flatpak flatpak-bwrap">
-            <primary sortas="b-flatpak-bwrap">flatpak-bwrap</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-coredumpctl">
-        <term><command>flatpak-coredumpctl</command></term>
-        <listitem>
-          <para>
-            kan feilsøke et program i gdb som krasjet 
-            i <command>flatpak</command>.
-          </para>
-          <indexterm zone="flatpak flatpak-coredumpctl">
-            <primary sortas="b-flatpak-coredumpctl">flatpak-coredumpctl</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-dbus-proxy">
-        <term><command>flatpak-dbus-proxy</command></term>
-        <listitem>
-          <para>
-            brukes av <command>flatpak</command> for å bruke
-            xdg-dbus-proxy funksjoner
-          </para>
-          <indexterm zone="flatpak flatpak-dbus-proxy">
-            <primary sortas="b-flatpak-dbus-proxy">flatpak-dbus-proxy</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-oci-authenticator">
-        <term><command>flatpak-oci-authenticator</command></term>
-        <listitem>
-          <para>
-            brukes av <command>flatpak</command> for å autentisere med
-            Oracle OCI SDK
-          </para>
-          <indexterm zone="flatpak flatpak-oci-authenticator">
-            <primary sortas="b-flatpak-oci-authenticator">flatpak-oci-authenticator</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-portal">
-        <term><command>flatpak-portal</command></term>
-        <listitem>
-          <para>
-            brukes av <command>flatpak</command> for å få tilgang til
-            xdg-desktop-portal
-          </para>
-          <indexterm zone="flatpak flatpak-portal">
-            <primary sortas="b-flatpak-portal">flatpak-portal</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-session-helper">
-        <term><command>flatpak-session-helper</command></term>
-        <listitem>
-          <para>
-            brukes av <command>flatpak</command> for å hjelpe med 
-            øktadministrasjon
-          </para>
-          <indexterm zone="flatpak flatpak-session-helper">
-            <primary sortas="b-flatpak-session-helper">flatpak-session-helper</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-system-helper">
-        <term><command>flatpak-system-helper</command></term>
-        <listitem>
-          <para>
-            brukes av <command>flatpak</command> for å hjelpe med samhandling 
-            med det underliggende vertssystemet.
-          </para>
-          <indexterm zone="flatpak flatpak-system-helper">
-            <primary sortas="b-flatpak-system-helper">flatpak-system-helper</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="flatpak-validate-icon">
-        <term><command>flatpak-validate-icon</command></term>
-        <listitem>
-          <para>
-            brukes av <command>flatpak</command> for å validere ikoner
-          </para>
-          <indexterm zone="flatpak flatpak-validate-icon">
-            <primary sortas="b-flatpak-validate-icon">flatpak-validate-icon</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="gtk-icon-cache.trigger">
-        <term><command>gtk-icon-cache.trigger</command></term>
-        <listitem>
-          <para>
-            er en utløser som oppdaterer en flatpaks GTK ikonbuffer
-          </para>
-          <indexterm zone="flatpak gtk-icon-cache.trigger">
-            <primary sortas="b-gtk-icon-cache.trigger">gtk-icon-cache.trigger</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="mime-database.trigger">
-        <term><command>mime-database.trigger</command></term>
-        <listitem>
-          <para>
-            er en utløser som oppdaterer en flatpaks MIME databasebuffer
-          </para>
-          <indexterm zone="flatpak mime-database.trigger">
-            <primary sortas="b-mime-database.trigger">mime-database.trigger</primary>
-          </indexterm>
-        </listitem>
-      </varlistentry>
-
-      <varlistentry id="revokefs-fuse">
-        <term><command>revokefs-fuse</command></term>
-        <listitem>
-          <para>
-            gjør en basesti synlig ved et gitt monteringspunkt
-          </para>
-          <indexterm zone="flatpak revokefs-fuse">
-            <primary sortas="b-revokefs-fuse">revokefs-fuse</primary>
           </indexterm>
         </listitem>
       </varlistentry>
@@ -404,8 +233,7 @@ ninja</userinput></screen>
         <term><filename class="libraryfile">libflatpak</filename></term>
         <listitem>
           <para>
-            inneholder funksjoner som brukes av Flatpak 
-            verktøyene
+            inneholder funksjoner som brukes av Flatpak og andre prosjekter
           </para>
           <indexterm zone="flatpak libflatpak">
             <primary sortas="c-libflatpak">libflatpak</primary>

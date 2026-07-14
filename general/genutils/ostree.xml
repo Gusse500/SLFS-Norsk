@@ -100,7 +100,7 @@ make</userinput></screen>
         </seg>
         <seg>
           /etc/ostree/remotes.d, /usr/include/ostree-1, /usr/lib/ostree,
-          /usr/lib/tmpfiles.d, /usr/libexec/libostee, og
+          /usr/lib/tmpfiles.d, /usr/libexec/libostree, og
           /usr/share/ostree/trusted.gpg.d
         </seg>
       </seglistitem>

@@ -57,26 +57,26 @@
       Installer Limine ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>CC_FOR_TARGET=cc                  \
-LD_FOR_TARGET=ld                  \
-OBJCOPY_FOR_TARGET=objcopy        \
-OBJDUMP_FOR_TARGET=objdump        \
-READELF_FOR_TARGET=readelf        \
-./configure --prefix=/usr         \
-            --enable-bios         \
-            --enable-bios-cd      \
-            --enable-uefi-cd      \
-            --enable-bios-pxe     \
-            --enable-uefi-ia32    \
-            --enable-uefi-x86-64 &amp;&amp;
+<screen><userinput>CC_FOR_TARGET=cc                 \
+LD_FOR_TARGET=ld                 \
+OBJCOPY_FOR_TARGET=objcopy       \
+OBJDUMP_FOR_TARGET=objdump       \
+READELF_FOR_TARGET=readelf       \
+./configure --prefix=/usr        \
+            --enable-bios        \
+            --enable-bios-cd     \
+            --enable-uefi-cd     \
+            --enable-bios-pxe    \
+            --enable-uefi-ia32   \
+            --enable-uefi-x86-64 \
+            --docdir=/usr/share/doc/limine-&limine-version; &amp;&amp;
 make</userinput></screen>
 
     <para>
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>make install &amp;&amp;
-mv -v /usr/share/doc/limine{,-&limine-version;}</userinput></screen>
+<screen role="root"><userinput>make install</userinput></screen>
 
   </sect2>
 
