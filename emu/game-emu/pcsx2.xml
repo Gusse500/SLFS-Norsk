@@ -34,17 +34,7 @@
       </listitem>
     </itemizedlist>
 
-    <bridgehead renderas="sect3">Ytterligere Nedlastinger</bridgehead>
-    <itemizedlist spacing="compact">
-      <listitem>
-        <para>
-          Anbefalt samling av spilloppdateringer:
-          <ulink url="https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip"/>
-        </para>
-      </listitem>
-    </itemizedlist>
-
-    <bridgehead renderas="sect3">pcsx2 Avhengigheter</bridgehead>
+    <bridgehead renderas="sect3">PCSX2 Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
     <para role="required">
@@ -131,11 +121,12 @@ ln -sfv /usr/share/pcsx2/resources/icons/AppIconLarge.png \
 <screen role="root"><userinput>setcap cap_net_admin,cap_net_raw=eip /usr/bin/pcsx2-qt</userinput></screen>
 
     <para>
-      Hvis du lastet ned den anbefalte spilloppdateringssamlingen, installer 
-      den på det forventete stedet som &root; bruker:
+      Hvis du vil ha den anbefalte spilloppdateringssamlingen fra PCSX2, last 
+      den ned og installer den som &root; bruker:
     </para>
 
-<screen role="root"><userinput>cp -v ../../patches.zip /usr/share/pcsx2/resources</userinput></screen>
+<screen role="root"><userinput>wcurl https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip \
+  -O /usr/share/pcsx2/resources/patches.zip</userinput></screen>
 
     <para>
       Til slutt, opprett en skrivebordsfil slik at PCSX2 kan startes med en 
