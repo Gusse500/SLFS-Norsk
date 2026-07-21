@@ -28,5 +28,6 @@
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="ripgrep.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tealdeer.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="tinyxxd.xml"/>
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="waypipe.xml"/>
 
 </chapter>
