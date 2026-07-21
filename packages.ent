@@ -175,6 +175,8 @@ version, so keep this at that. -->
 <!ENTITY fish-version                        "4.8.0">
 <!ENTITY ksh-version                         "1.0.10">
 <!ENTITY mksh-version                        "R59c">
+<!-- Text Editors -->
+<!ENTITY helix-version                       "25.07.1">
 <!-- MM-LIB -->
 <!ENTITY ladspa-sdk-version                  "1.17">
 <!ENTITY noise-suppression-version           "1.21">
