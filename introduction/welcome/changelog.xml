@@ -40,6 +40,20 @@
     -->
 
     <listitem>
+      <para>20. juli 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - Helix: Lagt til. Fikser
+          <ulink url="&slfs-issues;/821">#821</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Waypipe: Lagt til. Fikser
+          <ulink url="&slfs-issues;/823">#823</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>14. juli 2026</para>
       <itemizedlist>
         <listitem>
