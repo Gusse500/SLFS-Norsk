@@ -43,6 +43,15 @@
       <para>20. juli 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - Shaderc: 2026.2 -&gt; 2026.3.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>20. juli 2026</para>
+      <itemizedlist>
+        <listitem>
           <para>[zeckma] - Helix: Lagt til. Fikser
           <ulink url="&slfs-issues;/821">#821</ulink>.</para>
         </listitem>
