@@ -43,6 +43,12 @@
       <para>1. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[Sicarine] - intel-onevpl: 26.2.3 -&gt; 26.2.4.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - asio: 1-38-1 -&gt; 1-38-2.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - SceneFX: 0.4.1 -&gt; 0.5. Fikser
           <ulink url="&slfs-issues;/806">#806</ulink>.</para>
         </listitem>
