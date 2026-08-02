@@ -119,7 +119,7 @@ version, so keep this at that. -->
 <!ENTITY libtree-version                     "3.1.1">
 <!ENTITY limine-version                      "12.4.1">
 <!ENTITY mtools-version                      "4.0.49">
-<!ENTITY ripgrep-version                     "15.1.0">
+<!ENTITY ripgrep-version                     "15.2.0">
 <!ENTITY tealdeer-version                    "1.8.1">
 <!ENTITY tinyxxd-version                     "1.3.16">
 <!ENTITY waypipe-version                     "0.11.0">
