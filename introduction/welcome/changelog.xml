@@ -40,8 +40,12 @@
     -->
 
     <listitem>
-      <para>1. august 2026</para>
+      <para>2. august 2026</para>
       <itemizedlist>
+        <listitem>
+          <para>[tox] - hyprutils: 0.13.1 -&gt; 0.14.0. Fikser
+          <ulink url="&slfs-issues;/837">#837</ulink>.</para>
+        </listitem>
         <listitem>
           <para>[tox] - Glaze: 7.8.4 -&gt; 7.9.1. Fikser
           <ulink url="&slfs-issues;/833">#833</ulink>.</para>
