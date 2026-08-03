@@ -71,7 +71,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D ENABLE_QT4=OFF              \
       -D ENABLE_QT5=OFF              \
       -D ENABLE_QT6=ON               \
-      -Wno-dev .. &amp;&amp;
+      -W no-author ..               &amp;&amp;
 
 make</userinput></screen>
 

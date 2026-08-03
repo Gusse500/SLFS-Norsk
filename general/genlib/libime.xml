@@ -86,7 +86,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D CMAKE_SKIP_INSTALL_RPATH=ON \
       -D BUILD_SHARED_LIBS=ON        \
       -D ENABLE_TEST=OFF             \
-      -Wno-dev .. &amp;&amp;
+      -W no-author ..               &amp;&amp;
 
 make</userinput></screen>
 

@@ -240,7 +240,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
       -D CMAKE_POLICY_VERSION_MINIMUM=3.5 \
       -D ENABLE_TESTS=OFF                 \
       -D USE_SYSTEM_LIBMGBA=OFF           \
-      -G Ninja -W no-dev .. &amp;&amp;
+      -G Ninja -W no-author ..           &amp;&amp;
 
 ninja</userinput></screen>
 

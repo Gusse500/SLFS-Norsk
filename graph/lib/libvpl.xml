@@ -74,7 +74,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr     \
       -D CMAKE_SKIP_INSTALL_RPATH=ON   \
       -D BUILD_EXAMPLES=OFF            \
       -D BUILD_TESTS=ON                \
-      -W no-dev ..                     &amp;&amp;
+      -W no-author ..                 &amp;&amp;
 make</userinput></screen>
 
     <para>

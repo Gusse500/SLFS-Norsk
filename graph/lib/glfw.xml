@@ -71,7 +71,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D BUILD_SHARED_LIBS=ON      \
       -D GLFW_BUILD_EXAMPLES=OFF   \
       -D GLFW_BUILD_TESTS=OFF      \
-      -W no-dev -G Ninja .. &amp;&amp;
+      -W no-author -G Ninja ..    &amp;&amp;
 ninja</userinput></screen>
 
     <para>
