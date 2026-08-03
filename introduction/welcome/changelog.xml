@@ -43,6 +43,10 @@
       <para>1. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - typst: 0.15.0 -&gt; 0.15.1. Fikser
+          <ulink url="&slfs-issues;/852">#852</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - ripgrep: 15.1.0 -&gt; 15.2.0. Fikser
           <ulink url="&slfs-issues;/850">#850</ulink>.</para>
         </listitem>
