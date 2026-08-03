@@ -43,6 +43,10 @@
       <para>2. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - xdg-desktop-portal-hyprland: 1.3.12 -&gt; 1.4.1. Fikser
+          <ulink url="&slfs-issues;/853">#853</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - Hyprland: 0.55.4 -&gt; 0.56.1. Fikser
           <ulink url="&slfs-issues;/839">#839</ulink>.</para>
         </listitem>
