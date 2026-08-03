@@ -43,6 +43,10 @@
       <para>1. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - intel-onevpl: 26.2.4 -&gt; 26.3.1. Fikser
+          <ulink url="&slfs-issues;/858">#858</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - Limine: 12.4.1 -&gt; 12.5.2. Fikser
           <ulink url="&slfs-issues;/841">#841</ulink>.</para>
         </listitem>
