@@ -43,6 +43,10 @@
       <para>2. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - Hyprland: 0.55.4 -&gt; 0.56.1. Fikser
+          <ulink url="&slfs-issues;/839">#839</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - hyprland-guiutils: 0.2.1 -&gt; 0.2.2. Fikser
           <ulink url="&slfs-issues;/838">#838</ulink>.</para>
         </listitem>
