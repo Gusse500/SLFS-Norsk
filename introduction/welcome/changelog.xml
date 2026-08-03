@@ -43,6 +43,10 @@
       <para>1. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - hwinfo: 25.4 -&gt; 25.5. Fikser
+          <ulink url="&slfs-issues;/857">#857</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - fish: 4.8.0 -&gt; 4.8.1. Fikser
           <ulink url="&slfs-issues;/831">#831</ulink>.</para>
         </listitem>
