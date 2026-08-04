@@ -272,7 +272,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr             \
       -D ENABLE_JACK=OFF                       \
       -D ENABLE_NEW_MPEGTS_OUTPUT=OFF          \
       -D OBS_COMPILE_DEPRECATION_AS_WARNING=ON \
-      -G Ninja -Wno-dev .. &amp;&amp;
+      -G Ninja -W no-author ..                &amp;&amp;
 
 ninja</userinput></screen>
 

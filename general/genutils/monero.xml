@@ -158,7 +158,7 @@ cd    build &amp;&amp;
 cmake -D CMAKE_INSTALL_PREFIX=/usr \
       -D CMAKE_BUILD_TYPE=Release  \
       -D BUILD_GUI_DEPS=ON         \
-      -G Ninja -W no-dev .. &amp;&amp;
+      -G Ninja -W no-author ..    &amp;&amp;
 
 ninja</userinput></screen>
 

@@ -66,7 +66,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D ENABLE_GTK2_IM_MODULE=OFF   \
       -D ENABLE_GTK3_IM_MODULE=ON    \
       -D ENABLE_GTK4_IM_MODULE=ON    \
-      -Wno-dev .. &amp;&amp;
+      -W no-author ..               &amp;&amp;
 
 make</userinput></screen>
 

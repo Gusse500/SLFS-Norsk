@@ -81,7 +81,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr   \
       -D ENABLE_OPENCC=OFF           \
       -D ENABLE_BROWSER=OFF          \
       -D ENABLE_CLOUDPINYIN=OFF      \
-      -Wno-dev .. &amp;&amp;
+      -W no-author ..               &amp;&amp;
 
 make</userinput></screen>
 

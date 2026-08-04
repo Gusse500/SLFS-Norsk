@@ -92,7 +92,7 @@ cmake -D CMAKE_INSTALL_PREFIX=/usr        \
       -D ENABLE_WAYLAND=ON                \
       -D ENABLE_X11_DRI3=ON               \
       -D MFX_APPS_DIR=/usr/lib/mfx        \
-      -W no-dev ..                        &amp;&amp;
+      -W no-author ..                    &amp;&amp;
 make</userinput></screen>
 
     <para>
