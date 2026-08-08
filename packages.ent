@@ -7,7 +7,7 @@
 <!ENTITY cjson-version                       "1.7.19">
 <!ENTITY enet-version                        "1.3.18">
 <!ENTITY fuse2-version                       "2.9.9">
-<!ENTITY glaze-version                       "7.9.1">
+<!ENTITY glaze-version                       "8.0.0">
 <!ENTITY hidapi-version                      "0.15.0">
 <!ENTITY iniparser-version                   "4.2.6">
 <!ENTITY jemalloc-version                    "5.3.1">
@@ -115,7 +115,7 @@ version, so keep this at that. -->
 <!ENTITY eza-version                         "0.23.5">
 <!ENTITY fd-version                          "10.4.2">
 <!ENTITY iputils-version                     "20250605">
-<!ENTITY jaq-version                         "3.1.0">
+<!ENTITY jaq-version                         "3.1.1">
 <!ENTITY libtree-version                     "3.1.1">
 <!ENTITY limine-version                      "12.5.2">
 <!ENTITY mtools-version                      "4.0.49">
@@ -248,7 +248,7 @@ version, so keep this at that. -->
 <!ENTITY hyprtoolkit-version                 "0.5.4">
 <!ENTITY hyprland-qt-support-version         "0.1.0">
 <!ENTITY hyprland-guiutils-version           "0.2.2">
-<!ENTITY hyprland-version                    "0.56.1">
+<!ENTITY hyprland-version                    "0.56.2">
 <!ENTITY hypr-udis86-version                 "5336633af70f3917760a6d441ff02d93477b0c86">
 <!-- i3 -->
 <!ENTITY i3-version                          "4.25.1">
