@@ -17,6 +17,7 @@
     konfigurasjonsformål.
   </para>
 
+  <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dmidecode.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="dunst.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="eza.xml"/>
   <xi:include xmlns:xi="http://www.w3.org/2001/XInclude" href="fd.xml"/>

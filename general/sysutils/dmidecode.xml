@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY dmidecode-download-root
+    "https://download.savannah.gnu.org/releases/dmidecode">
+  <!ENTITY dmidecode-download
+    "&dmidecode-download-root;/dmidecode-&dmidecode-version;.tar.xz">
+]>
+
+<sect1 id="dmidecode" xreflabel="dmidecode-&dmidecode-version;">
+  <?dbhtml filename="dmidecode.html"?>
+
+  <title>dmidecode-&dmidecode-version;</title>
+
+  <indexterm zone="dmidecode">
+    <primary sortas="a-dmidecode">dmidecode</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til dmidecode</title>
+
+    <para>
+      dmidecode pakken rapporterer informasjon om systemmaskinvare som 
+      beskrevet i BIOS' programmerte SMBIOS/DMI data. Informasjonen 
+      inneholder detaljer med varierende pålitelighetsnivåer, avhengig 
+      av produsenten.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&dmidecode-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av dmidecode</title>
+
+    <para>
+      Endre dokumentasjonsmappen slik at den er en versjonsbasert mappe:
+    </para>
+
+<screen><userinput>sed -i 's|/doc/dmidecode|&amp;-&dmidecode-version;|' Makefile
+</userinput></screen>
+
+    <para>
+      Installer dmidecode ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>make prefix=/usr</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>make prefix=/usr install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installerte Biblioteker</segtitle>
+      <segtitle>Installert Mappe</segtitle>
+
+      <seglistitem>
+        <seg>
+          biosdecode, dmidecode, ownership, vpddecode
+        </seg>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          /usr/share/doc/dmidecode-&dmidecode-version;
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="biosdecode-bin">
+        <term><command>biosdecode</command></term>
+        <listitem>
+          <para>
+            er et verktøy som skriver ut all BIOS relatert informasjon det kan 
+            finne i /dev/mem
+          </para>
+          <indexterm zone="dmidecode biosdecode-bin">
+            <primary sortas="b-biosdecode-bin">biosdecode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="dmidecode-bin">
+        <term><command>dmidecode</command></term>
+        <listitem>
+          <para>
+            er en DMI tabelldekoder
+          </para>
+          <indexterm zone="dmidecode dmidecode-bin">
+            <primary sortas="b-dmidecode-bin">dmidecode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="ownership-bin">
+        <term><command>ownership</command></term>
+        <listitem>
+          <para>
+            skriver ut «eierskapsmerket» som kan angis på Compaq datamaskiner
+          </para>
+          <indexterm zone="dmidecode ownership-bin">
+            <primary sortas="b-ownership-bin">ownership</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="vpddecode-bin">
+        <term><command>vpddecode</command></term>
+        <listitem>
+          <para>
+            skriver ut innholdet i strukturen «viktige produktdata» slik den 
+            finnes i de fleste IBM og Lenovo datamaskiner
+          </para>
+          <indexterm zone="dmidecode vpddecode-bin">
+            <primary sortas="b-vpddecode-bin">vpddecode</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
