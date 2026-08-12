@@ -111,6 +111,7 @@ version, so keep this at that. -->
 <!ENTITY yt-dlp-version                      "2026.07.04">
 <!ENTITY xmlstarlet-version                  "1.6.1">
 <!-- System Utilities -->
+<!ENTITY dmidecode-version                   "3.7">
 <!ENTITY dunst-version                       "1.13.2">
 <!ENTITY eza-version                         "0.23.5">
 <!ENTITY fd-version                          "10.4.2">
