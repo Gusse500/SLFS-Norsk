@@ -151,7 +151,7 @@ version, so keep this at that. -->
 <!ENTITY platformdirs-version                "4.10.0">
 <!ENTITY pycurl-version                      "7.47.0">
 <!ENTITY toml-version                        "0.10.2">
-<!ENTITY tornado-version                     "6.5.7">
+<!ENTITY tornado-version                     "6.5.8">
 <!-- Python Modules -->
 <!ENTITY nvchecker-version                   "2.20">
 <!-- END PYTHON -->
