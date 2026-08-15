@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>12. august 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - fastfetch: 2.66.0 -&gt; 2.67.0. Fikser
+          <ulink url="&slfs-issues;/879">#879</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>11. august 2026</para>
       <itemizedlist>
         <listitem>
