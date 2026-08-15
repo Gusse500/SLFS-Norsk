@@ -64,7 +64,7 @@
 <!ENTITY btop-version                        "1.4.7">
 <!ENTITY cldr-emoji-annotation-version       "38">
 <!ENTITY cldr-emoji-annotation-tarball-version "&cldr-emoji-annotation-version;-alpha1.0_13.0_0_1">
-<!ENTITY flatpak-version                     "1.18.0">
+<!ENTITY flatpak-version                     "1.18.1">
 <!ENTITY fluidsynth-version                  "2.5.4">
 <!ENTITY fs-gcem                             "012ae73c6d0a2cb09ffe86475f5c6fba3926e200">
 <!ENTITY fs-sf2                              "3.1">

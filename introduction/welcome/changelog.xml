@@ -43,6 +43,10 @@
       <para>12. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - Flatpak: 1.18.0 -&gt; 1.18.1. Fikser
+          <ulink url="&slfs-issues;/876">#876</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - OSTree: 2026.2 -&gt; 2026.3. Fikser
           <ulink url="&slfs-issues;/877">#877</ulink>.</para>
         </listitem>
