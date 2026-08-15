@@ -94,7 +94,7 @@ version, so keep this at that. -->
 <!ENTITY monero-trezor                       "bff7fdfe436c727982cc553bdfb29a9021b423b0">
 <!ENTITY gkermit-version                     "2.01">
 <!ENTITY gkermit-tarball-version             "gku201">
-<!ENTITY ostree-version                      "2026.2">
+<!ENTITY ostree-version                      "2026.3">
 <!ENTITY ncdu-version                        "1.22">
 <!ENTITY ncompress-version                   "5.0">
 <!ENTITY neofetch-version                    "7.1.0">

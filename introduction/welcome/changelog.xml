@@ -43,6 +43,10 @@
       <para>12. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[tox] - OSTree: 2026.2 -&gt; 2026.3. Fikser
+          <ulink url="&slfs-issues;/877">#877</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[tox] - tornado: 6.5.7 -&gt; 6.5.8. Fikser
           <ulink url="&slfs-issues;/878">#878</ulink>.</para>
         </listitem>
