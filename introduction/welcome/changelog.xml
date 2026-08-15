@@ -40,6 +40,117 @@
     -->
 
     <listitem>
+      <para>14. august 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - libbacktrace: b9e400 -&gt; 6f8310. Fikser
+          <ulink url="&slfs-issues;/840">#840</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - m17n-db: 1.8.13 -&gt; 1.8.14. Fikser
+          <ulink url="&slfs-issues;/842">#842</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - htop: 3.5.1 -&gt; 3.5.2. Fikser
+          <ulink url="&slfs-issues;/836">#836</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Monero: 0.18.5.0 -&gt; 0.18.5.1. Fikser
+          <ulink url="&slfs-issues;/844">#844</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - fastfetch: 2.67.0 -&gt; 2.67.1. Fikser
+          <ulink url="&slfs-issues;/887">#887</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Go: 1.26.4 -&gt; 1.26.6 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/834">#834</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - platformdirs: 4.10.0 -&gt; 4.11.3. Fikser
+          <ulink url="&slfs-issues;/849">#849</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - nvchecker: 2.20 -&gt; 2.21. Fikser
+          <ulink url="&slfs-issues;/846">#846</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - samurai: ff9b14 -&gt; 531ba7. Fikser
+          <ulink url="&slfs-issues;/851">#851</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - NGINX: 1.31.2 -&gt; 1.31.3 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/845">#845</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - GLFW: 3.4 -&gt; 3.5.1. Fikser
+          <ulink url="&slfs-issues;/856">#856</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - OBS-Studio: 32.1.2 -&gt; 32.2.1. Fikser
+          <ulink url="&slfs-issues;/847">#847</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 0.14.0 -&gt; 0.14.1. Fikser
+          <ulink url="&slfs-issues;/888">#888</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Mango: 0.15.5 -&gt; 0.16.0. Fikser
+          <ulink url="&slfs-issues;/868">#868</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - FreeBee: b72776 -&gt; 058aef. Fikser
+          <ulink url="&slfs-issues;/832">#832</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - p20-emu: d75a83 -&gt; 6ed08d. Fikser
+          <ulink url="&slfs-issues;/848">#848</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - mGBA: b19b55 -&gt; afd6f1. Fikser
+          <ulink url="&slfs-issues;/843">#843</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Dolphin: 2603a -&gt; 2606a. Fikser
+          <ulink url="&slfs-issues;/830">#830</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - GlideN64: c8ef81 -&gt; 41c7ba.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - heirloom-ex-vi: bd1f88 -&gt; 3f1e97. Fikser
+          <ulink url="&slfs-issues;/835">#835</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
+      <para>12. august 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - Flatpak: 1.18.0 -&gt; 1.18.1. Fikser
+          <ulink url="&slfs-issues;/876">#876</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - OSTree: 2026.2 -&gt; 2026.3. Fikser
+          <ulink url="&slfs-issues;/877">#877</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - tornado: 6.5.7 -&gt; 6.5.8. Fikser
+          <ulink url="&slfs-issues;/878">#878</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - libjuice: 1.7.2 -&gt; 1.7.3. Fikser
+          <ulink url="&slfs-issues;/880">#880</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[tox] - fastfetch: 2.66.0 -&gt; 2.67.0. Fikser
+          <ulink url="&slfs-issues;/879">#879</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>11. august 2026</para>
       <itemizedlist>
         <listitem>
