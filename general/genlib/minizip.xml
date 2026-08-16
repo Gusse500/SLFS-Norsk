@@ -20,9 +20,12 @@
     <title>Introduksjon til minizip</title>
 
     <para>
-      Minizip-pakken tilbyr et bibliotek for 
-      mini zip og unzip, basert på Zlib.
+      Minizip pakken tilbyr et bibliotek for mini zip og unzip, basert på 
+      Zlib.
     </para>
+
+    <note><para>Denne pakken kan ikke installeres i LFS før du har installert 
+    autoconf og automake.</para></note>
 
     <itemizedlist spacing="compact">
       <listitem>
