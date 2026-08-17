@@ -85,8 +85,8 @@
       Først må du sørge for at dokumentasjonsmappen er versjonert:
     </para>
 
-    <screen><userinput>sed -i "s/install_dir: join_paths(get_option('datadir'), 'doc', 'foot'/&amp; + '-' + meson.project_version()/" meson.build</userinput></screen>
-
+<screen><userinput>sed -e "s/install_dir: join_paths(get_option('datadir'), 'doc', 'foot'/&amp; + '-' + meson.project_version()/" \
+    -i meson.build</userinput></screen>
 
     <para>
       Installer foot ved å kjøre følgende kommandoer:
