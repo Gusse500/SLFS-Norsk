@@ -268,7 +268,7 @@ version, so keep this at that. -->
 <!ENTITY musashi-submodule-version           "fc7a6fc602e2fbcd24851670a5242358765feacf">
 <!ENTITY s4-3b1-pc7300-minor-version         "efe55b">
 <!ENTITY s4-3b1-pc7300-version               "efe55b8cc917e3e27bcae9786c5b5dec0469be45">
-<!ENTITY s4-kernel                           "6.19">
+<!ENTITY s4-kernel                           "7.1">
 <!ENTITY p20-emu-minor-version               "6ed08d">
 <!ENTITY p20-emu-version                     "6ed08d6e05c30f75c01803d8acdb7cad274d74da">
 <!-- Game-Emu -->
