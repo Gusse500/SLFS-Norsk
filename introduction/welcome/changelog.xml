@@ -43,6 +43,10 @@
       <para>18. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - htop: 3.5.2 -&gt; 3.5.3 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/890">#890</ulink>.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - hyprutils: 1.14.1 -&gt; 1.13.1.</para>
         </listitem>
         <listitem>
