@@ -48,6 +48,19 @@
       </listitem>
     </itemizedlist>
 
+    <tip><para>
+      Oppdateringen ovenfor er for linux-&s4-kernel;.x. Hvis du har en annen 
+      kjerneversjon, bør du velge riktig oppdatering for den.
+      Se <ulink url="&dl-root;/s4-3b1-pc7300/">patch downloads</ulink> 
+      for en som støtter kjernen din. Kjerner eldre enn 6.18.x støttes ikke. 
+      Hvis du har en ny kjerne, kan det ta litt tid før det kommer en 
+      oppdatering for den. Oppstrøms er avviklet, og SysV fil systemdriveren i 
+      kjernen er borte, mens alle andre filsystemer går videre til nye og 
+      utviklende API-er. Det ser ut til at vi er en av de få offentlige 
+      ressursene, om ikke den eneste offentlige ressursen, som holder dette 
+      prosjektet oppdatert på nåværende API-er og C &amp; GCC standarder.
+    </para></tip>
+
   </sect2>
 
   <sect2 role="installation">
