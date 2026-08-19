@@ -40,6 +40,28 @@
     -->
 
     <listitem>
+      <para>18. august 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - htop: 3.5.2 -&gt; 3.5.3 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/890">#890</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprutils: 1.14.1 -&gt; 1.13.1.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - aquamarine: 0.14.0 -&gt; 0.12.1.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - hyprland-gui-utils: 0.2.2 -&gt; 0.2.1.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - Hyprland: 0.56.2 -&gt; 0.55.4.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>14. august 2026</para>
       <itemizedlist>
         <listitem>
