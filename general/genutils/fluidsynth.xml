@@ -149,6 +149,12 @@ install -vDm644 fluid-soundfont-&fs-sf2;/*.sf2 -t /usr/share/soundfonts/</userin
 
 <screen role="root" remap="nodump"><userinput>ln -svf <replaceable>&lt;SOUNDFONT&gt;</replaceable> /usr/share/soundfonts/default.sf2</userinput></screen>
 
+    <tip><para>
+      Det anbefales å bruke en GM (General MIDI) lydfont. GS (Roland General 
+      Standard) er en utvidelse av GM, men erstatter den ikke. Å prøve å bruke 
+      en GS lydfont vil ofte føre til manglende banker, så bruk GM i stedet.
+    </para></tip>
+
     <important><para>
       Hvis du distribuerer denne pakken som en del av en distribusjon, må du 
       lese lisensene til lydfontene du installerer for å sikre at de kan 
