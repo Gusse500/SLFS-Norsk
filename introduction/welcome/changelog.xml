@@ -43,6 +43,9 @@
       <para>21. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - MIPSel-GCC: 16.1.0 -&gt; 16.2.0.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - MIPSel-Binutils: 2.46 -&gt; 2.47.</para>
         </listitem>
         <listitem>
