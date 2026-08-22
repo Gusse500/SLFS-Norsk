@@ -38,12 +38,7 @@
       <listitem><para><ulink url="&blfs-svn;/general/glycin.html">glycin</ulink>
         (bygger <command>glycin-thumbnailer</command> først, som avhenger av at
         <filename class="libraryfile">libglycin-2</filename> er bygget, som 
-        burde bygges på forhånd, men som ikke er det)</para></listitem>
-      <listitem><para><xref linkend="scenefx"/>
-        (eksempler er deaktivert, så dette problemet kan ikke observeres, 
-        men hvis det er aktivert, kan det ikke inkludere
-        <literal>"xdg-shell-protocol.h"</literal>; vil bli fikset for
-        wlroots-0.20.x)</para></listitem>
+        burde bygges på forhånd, men er ikke det)</para></listitem>
     </itemizedlist></note>
 
     <itemizedlist spacing="compact">

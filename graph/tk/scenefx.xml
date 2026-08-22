@@ -81,11 +81,7 @@ ninja</userinput></screen>
     &meson-buildtype-release;
 
     <para><parameter>-D examples=false</parameter>: Denne parameteren 
-	deaktiverer bygging av eksemplene. På grunn av mulig feilaktige 
-	avhengighetsinstruksjoner, fører dette til at byggingen mislykkes hvis du 
-	bruker <xref linkend="samurai"/> inntil det tredje forsøket på å kjøre. 
-	Eksemplene fører til at protokollgenereringen avsluttes for tidlig, noe som 
-	er nødvendig for hovedbiblioteket og eksemplene. Ninja behandler saken.</para>
+    deaktiverer bygging av eksemplene.</para>
 
   </sect2>
 
