@@ -6,7 +6,7 @@
 
   <!ENTITY binutils-root "https://sourceware.org/pub/binutils/releases">
   <!ENTITY mipsel-binutils-download
-    "&binutils-root;/binutils-with-gold-&mipsel-binutils-version;.tar.xz">
+    "&binutils-root;/binutils-&mipsel-binutils-version;.tar.xz">
   <!ENTITY mipsel-gcc-download
     "&gnu-http;/gcc/gcc-&mipsel-gcc-version;/gcc-&mipsel-gcc-version;.tar.xz">
 ]>
@@ -69,8 +69,7 @@ cd    build-mipsel-binutils &amp;&amp;
              --target=mipsel-linux-gnu                  \
              --infodir=/usr/share/info/mipsel-linux-gnu \
              --disable-nls                              \
-             --disable-werror                           \
-             --with-gold=no &amp;&amp;
+             --disable-werror &amp;&amp;
 
 make</userinput></screen>
 

@@ -64,12 +64,16 @@
 done</userinput></screen>
 
     <para>
-      Legg til og fjern noen filer, og generer deretter autoconf filene:
+      Legg til, fjern og juster noen filer, og generer deretter autoconf filene:
     </para>
 
 <screen><userinput>touch config.rpath &amp;&amp;
 rm -vf missing &amp;&amp;
 rm -vf acconfig.h &amp;&amp;
+
+sed -i 's/use-libtool/external/g' configure.in &amp;&amp;
+sed -i 's/0.10.32/1.0/g'          intl/VERSION &amp;&amp;
+
 autoreconf -fiv -I/usr/share/gettext/m4</userinput></screen>
 
     <para>
@@ -78,13 +82,15 @@ autoreconf -fiv -I/usr/share/gettext/m4</userinput></screen>
     </para>
 
 <screen><userinput>./configure --prefix=/usr --disable-nls &amp;&amp;
-make</userinput></screen>
+make -C lib libzmodem.a &amp;&amp;
+make -C src lrz lsz</userinput></screen>
 
     <para>
       Nå som &root; bruker:
     </para>
 
-<screen role="root"><userinput>make install &amp;&amp;
+<screen role="root"><userinput>install -vDm755 src/l{r,s}z -t /usr/bin/            &amp;&amp;
+install -vDm644 man/*.1    -t /usr/share/man/man1/ &amp;&amp;
 
 for x in {r,s}{b,x,z} ; do
     ln -svf l${x} /usr/bin/${x} &amp;&amp;
