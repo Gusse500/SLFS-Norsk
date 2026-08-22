@@ -43,6 +43,9 @@
       <para>21. august 2026</para>
       <itemizedlist>
         <listitem>
+          <para>[zeckma] - MIPSel-Binutils: 2.46 -&gt; 2.47.</para>
+        </listitem>
+        <listitem>
           <para>[zeckma] - Waypipe: 0.11.0 -&gt; 0.11.1.</para>
         </listitem>
         <listitem>
