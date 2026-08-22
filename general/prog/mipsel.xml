@@ -69,8 +69,7 @@ cd    build-mipsel-binutils &amp;&amp;
              --target=mipsel-linux-gnu                  \
              --infodir=/usr/share/info/mipsel-linux-gnu \
              --disable-nls                              \
-             --disable-werror                           \
-             --with-gold=no &amp;&amp;
+             --disable-werror &amp;&amp;
 
 make</userinput></screen>
 
