@@ -51,11 +51,13 @@
 
     <bridgehead renderas="sect3">libunbound Avhengigheter</bridgehead>
 
+<!--
     <bridgehead renderas="sect4">Anbefalt</bridgehead>
     <para role="recommended">
       <ulink url="&blfs-svn;/postlfs/nss.html">NSS</ulink> og
       <ulink url="&blfs-svn;/general/nspr.html">NSPR</ulink>
     </para>
+-->
 
     <bridgehead renderas="sect4">Valgfri</bridgehead>
     <para role="optional">
@@ -78,35 +80,28 @@
       Installer libunbound ved å kjøre følgende kommandoer:
     </para>
 
-<screen><userinput>CFLAGS+=" -I/usr/include/nss"       \
-CFLAGS+=" -I/usr/include/nspr"      \
-./configure --prefix=/usr           \
-            --sysconfdir=/etc       \
-            --disable-static        \
-            --with-nss              \
-            --with-libunbound-only &amp;&amp;
-make</userinput></screen>
+<screen><userinput>CFLAGS+=" -I/usr/include/nss"  \
+CFLAGS+=" -I/usr/include/nspr" \
+./configure --prefix=/usr      \
+            --sysconfdir=/etc  \
+            --disable-static  &amp;&amp;
+
+make lib &amp;&amp;
+make unbound-anchor</userinput></screen>
 
     <para>
       Nå, som &root; bruker:
     </para>
 
-<screen role="root"><userinput>make install</userinput></screen>
+<screen role="root"><userinput>make install-lib &amp;&amp;
+install -vDm755 .libs/unbound-anchor -t /usr/bin/ &amp;&amp;
+install -vdm755 /etc/unbound &amp;&amp;
+unbound-anchor</userinput></screen>
 
   </sect2>
 
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
-
-    <para>
-      <parameter>--with-nss</parameter>: Dette sikrer at libunbound er bygget 
-      med NSS.
-    </para>
-
-    <para>
-      <parameter>--with-libunbound-only</parameter>: Dette sikrer at bare 
-      biblioteket blir bygget.
-    </para>
 
     <para>
       <option>--with-libevent</option>: Dette alternativet aktiverer støtte for 
@@ -125,7 +120,7 @@ make</userinput></screen>
 
       <seglistitem>
         <seg>
-          Ingen
+          unbound-anchor
         </seg>
         <seg>
           libunbound
@@ -140,6 +135,18 @@ make</userinput></screen>
       <bridgehead renderas="sect3">Korte beskrivelser</bridgehead>
       <?dbfo list-presentation="list"?>
       <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="unbound-anchor">
+        <term><command>unbound-anchor</command></term>
+        <listitem>
+          <para>
+            anchors unbound for DNS- og sertifikatvalidering
+          </para>
+          <indexterm zone="libunbound unbound-anchor">
+            <primary sortas="b-unbound-anchor">unbound-anchor</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
 
       <varlistentry id="lib-libunbound">
         <term><filename class="libraryfile">libunbound</filename></term>
