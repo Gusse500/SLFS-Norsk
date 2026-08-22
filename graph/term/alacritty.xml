@@ -10,7 +10,6 @@
 <sect1 id="alacritty" xreflabel="alacritty-&alacritty-version;">
   <?dbhtml filename="alacritty.html"?>
 
-
   <title>Alacritty-&alacritty-version;</title>
 
   <indexterm zone="alacritty">
@@ -109,6 +108,9 @@ install -vDm644 extra/completions/alacritty.fish -t /usr/share/fish/vendor_compl
       <systemitem class="username">root</systemitem> bruker:
     </para>
 <screen role="root"><userinput>for f in extra/man/*.{1..8}; do
+    if [ ! -f $f ]; then
+        continue
+    fi
     install -vDm644 $f -t /usr/share/man/man${f##*.}/
 done</userinput></screen>
 
