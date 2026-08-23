@@ -84,7 +84,9 @@ ninja</userinput></screen>
     </para>
 
 <screen role="root"><userinput>ninja install &amp;&amp;
-mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;}</userinput></screen>
+mv -v /usr/share/doc/mGBA{,-&mgba-minor-version;} &amp;&amp;
+sed -e 's/Exec=mgba-qt/Exec=env\ QT_QPA_PLATFORM=xcb\ mgba-qt/g' \
+    -i /usr/share/applications/io.mgba.mGBA.desktop</userinput></screen>
 
   </sect2>
 
