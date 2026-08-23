@@ -305,7 +305,7 @@ version, so keep this at that. -->
 <!ENTITY mupen64plus-rsp-hle-version         "&mupen64plus-version;">
 <!ENTITY mupen64plus-video-rice-version      "&mupen64plus-version;">
 <!ENTITY mupen64plus-ui-console-version      "&mupen64plus-version;">
-<!ENTITY gliden64-version                    "41c7ba273a6c9afb43c0574cf3cf5d139182d070">
+<!ENTITY gliden64-version                    "24ef0d8b16063e701e51b41c4ee853b653a35399">
 <!ENTITY pcsx-redux-minor                    "4ad775">
 <!ENTITY pcsx-redux-version                  "4ad775e47d47cc9023aa45a2f439289c5897801a">
 <!ENTITY pcsx-redux-elfio                    "8ae6cec5d60495822ecd57d736f66149da9b1830">
