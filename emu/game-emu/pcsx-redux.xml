@@ -216,7 +216,7 @@ mv -T zep-*                                             \
       Fiks bygging av zep undermodulen med GCC-16:
     </para>
 
-<screen><userinput>sed -i '2i #include &gt;cstdint&lt;' third_party/zep/include/zep/glyph_iterator.h</userinput></screen>
+<screen><userinput>sed -i '2i #include &lt;cstdint&gt;' third_party/zep/include/zep/glyph_iterator.h</userinput></screen>
 
     <para>
       Sørg for at bruken av ImageMagick er riktig:
