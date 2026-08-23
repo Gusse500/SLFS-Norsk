@@ -46,6 +46,7 @@
 <!ENTITY qrcodegencpp-cmake-version          "1.8.0-cmake5">
 <!ENTITY quazip-major                        "1">
 <!ENTITY quazip-version                      "&quazip-major;.7.2">
+<!ENTITY rapidyaml-version                   "0.16.0">
 <!ENTITY re2-version                         "2025-11-05">
 <!ENTITY sdbus-cpp-version                   "2.3.1">
 <!ENTITY sdl2_net-version                    "2.4.0">
@@ -337,7 +338,12 @@ version, so keep this at that. -->
 <!ENTITY pcsx-redux-vixl                     "53ad192b26ddf6edd228a24ae1cffc363b442c01">
 <!ENTITY pcsx-redux-xbyak                    "2fb843c3287918038c8f76276a590c25cc7ec5ee">
 <!ENTITY pcsx-redux-zep                      "86ea3c7019f45ccd4a13503bf7d98a396e8f0193">
+<!--
 <!ENTITY pcsx2-version                       "2.6.3">
+-->
+<!ENTITY pcsx2-minor                         "f2a8a6">
+<!ENTITY pcsx2-version                       "f2a8a659a121b69cb0d8c3c2b0f20abb64427e6a">
+<!ENTITY pcsx2-sub                           "2.6.3">
 
 <!-- GAMING -->
 <!-- Minecraft -->

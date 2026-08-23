@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE sect1 PUBLIC "-//OASIS//DTD DocBook XML V4.5//EN"
+   "http://www.oasis-open.org/docbook/xml/4.5/docbookx.dtd" [
+  <!ENTITY % general-entities SYSTEM "../../general.ent">
+  %general-entities;
+
+  <!ENTITY rapidyaml-download "https://github.com/biojppm/rapidyaml/archive/v&rapidyaml-version;/rapidyaml-&rapidyaml-version;.tar.gz">
+]>
+
+<sect1 id="rapidyaml" xreflabel="RapidYAML-&rapidyaml-version;">
+  <?dbhtml filename="rapidyaml.html"?>
+
+  <title>RapidYAML-&rapidyaml-version;</title>
+
+  <indexterm zone="rapidyaml">
+    <primary sortas="a-rapidyaml">RapidYAML</primary>
+  </indexterm>
+
+  <sect2 role="package">
+    <title>Introduksjon til RapidYAML</title>
+
+    <para>
+      RapidYAML pakken tilbyr en C++ YAML parser.
+    </para>
+
+    <itemizedlist spacing="compact">
+      <listitem>
+        <para>
+          Nedlasting: <ulink url="&rapidyaml-download;"/>
+        </para>
+      </listitem>
+    </itemizedlist>
+
+    <bridgehead renderas="sect3">RapidYAML Avhengigheter</bridgehead>
+
+    <bridgehead renderas="sect4">Påkrevd</bridgehead>
+    <para role="required">
+      <ulink url="&blfs-svn;/general/cmake.html">CMake</ulink>
+    </para>
+
+  </sect2>
+
+  <sect2 role="installation">
+    <title>Installasjon av RapidYAML</title>
+
+    <para>
+      Installer RapidYAML ved å kjøre følgende kommandoer:
+    </para>
+
+<screen><userinput>mkdir build &amp;&amp;
+cd    build &amp;&amp;
+
+cmake -D CMAKE_INSTALL_PREFIX=/usr   \
+      -D CMAKE_BUILD_TYPE=Release    \
+      -D BUILD_SHARED_LIBS=ON        \
+      -G Ninja .. &amp;&amp;
+
+ninja</userinput></screen>
+
+    <para>
+      Nå, som &root; bruker:
+    </para>
+
+<screen role="root"><userinput>ninja install</userinput></screen>
+
+  </sect2>
+
+  <sect2 role="commands">
+    <title>Parameterforklaringer</title>
+
+    <para>
+      <parameter>-D BUILD_SHARED_LIBS=ON</parameter>: Denne parameteren tvinger 
+      byggesystemet å bygge delte biblioteker i stedet for statiske.
+    </para>
+
+  </sect2>
+
+  <sect2 role="content">
+    <title>Innhold</title>
+
+    <segmentedlist>
+      <segtitle>Installerte Programmer</segtitle>
+      <segtitle>Installert Bibliotek</segtitle>
+      <segtitle>Installerte Mapper</segtitle>
+
+      <seglistitem>
+        <seg>
+          Ingen
+        </seg>
+        <seg>
+          libryml
+        </seg>
+        <seg>
+          /usr/include/c4, /usr/lib/cmake/ryml, and /usr/share/ryml
+        </seg>
+      </seglistitem>
+    </segmentedlist>
+
+    <variablelist>
+      <bridgehead renderas="sect3">Korte Beskrivelser</bridgehead>
+      <?dbfo list-presentation="list"?>
+      <?dbhtml list-presentation="table"?>
+
+      <varlistentry id="libryml">
+        <term><filename class="libraryfile">libryml</filename></term>
+        <listitem>
+          <para>
+            tilbyr funksjoner som kan hjelpe med å analysere YAML
+          </para>
+          <indexterm zone="rapidyaml libryml">
+            <primary sortas="c-libryml">libryml</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+    </variablelist>
+
+  </sect2>
+
+</sect1>
