@@ -73,6 +73,12 @@
   <sect2 role="installation">
     <title>Installasjon av CDE</title>
 
+    <tip><para>
+      Bygg denne pakken som en vanlig bruker, ellers vil ikke en låseprosess 
+      som trenger å samhandle med Xorg kunne gjøre det med mindre du 
+      konfigurerer Xserveren for det.
+    </para></tip>
+
 <!-- Not needed now, but commenting for a future patch.
     <para>
       Først, installer en oppdatering med flere oppstrømsrettelser og oppdateringer:

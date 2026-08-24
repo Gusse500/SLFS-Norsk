@@ -60,6 +60,7 @@
 <!ENTITY sources-anduin-http  "https://anduin.linuxfromscratch.org/BLFS">
 <!ENTITY sources-anduin-ftp   "ftp://anduin.linuxfromscratch.org/BLFS">
 
+<!ENTITY advisories           "https://linuxfromscratch.org/glfs/advisories.html">
 <!ENTITY hints-root           "https://www.&lfs-domainname;/hints">
 <!ENTITY patch-downloads      "https://www.lfs.freding.no/patches/downloads">
 <!ENTITY dl-root              "&slfs-website;/download">

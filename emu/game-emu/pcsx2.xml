@@ -4,14 +4,20 @@
   <!ENTITY % general-entities SYSTEM "../../general.ent">
   %general-entities;
 
+<!--
   <!ENTITY pcsx2-download
     "https://github.com/PCSX2/pcsx2/archive/v&pcsx2-version;/pcsx2-&pcsx2-version;.tar.gz">
+-->
+  <!ENTITY pcsx2-download
+    "https://github.com/kamfretoz/pcsx2/archive/&pcsx2-version;/pcsx2-&pcsx2-version;.tar.gz">
 ]>
 
-<sect1 id="pcsx2" xreflabel="PCSX2-&pcsx2-version;">
+<!--<sect1 id="pcsx2" xreflabel="PCSX2-&pcsx2-version;">-->
+<sect1 id="pcsx2" xreflabel="PCSX2-&pcsx2-minor;">
   <?dbhtml filename="pcsx2.html"?>
 
-  <title>PCSX2-&pcsx2-version;</title>
+  <!--<title>PCSX2-&pcsx2-version;</title>-->
+  <title>PCSX2-&pcsx2-minor;</title>
 
   <indexterm zone="pcsx2">
     <primary sortas="a-pcsx2">PCSX2</primary>
@@ -34,6 +40,12 @@
       </listitem>
     </itemizedlist>
 
+    <note><para>
+      Dette er ikke den offisielle kilden for PCSX2 nedlastingen, men den har 
+      støtte for FFmpeg-9.0. Når den er slått sammen, vil nedlastingen gå 
+      tilbake til den offisielle utgivelsen.
+    </para></note>
+
     <bridgehead renderas="sect3">PCSX2 Avhengigheter</bridgehead>
 
     <bridgehead renderas="sect4">Påkrevd</bridgehead>
@@ -48,7 +60,8 @@
       <ulink url="&blfs-svn;/general/libpng.html">libpng</ulink>,
       <ulink url="&blfs-svn;/general/libjpeg.html">libjpeg-turbo</ulink>,
       <ulink url="&blfs-svn;/general/libwebp.html">libwebp</ulink>,
-      <xref linkend="plutosvg"/>, og
+      <xref linkend="plutosvg"/>,
+      <xref linkend="rapidyaml"/>, og
       &sdl3;
     </para>
 
@@ -88,6 +101,18 @@
 <screen remap="pre"><userinput>sed '/CMAKE_INSTALL_FULL_DATADIR/s@/PCSX2\b@/'"pcsx2@" \
   -i pcsx2/CMakeLists.txt cmake/BuildParameters.cmake</userinput></screen>
 
+<!--
+    <para>
+      Sett undermoduler på plass ved hjelp av <ulink
+      url="&blfs-svn;/basicnet/wget.html">Wget</ulink>:
+    </para>
+
+<screen><userinput>wget https://github.com/PCSX2/pcsx2/archive/v&pcsx2-sub;/pcsx2-&pcsx2-sub;.tar.gz &amp;&amp;
+tar -xf pcsx2-&pcsx2-sub;.tar.gz &amp;&amp;
+cp -vR pcsx2-&pcsx2-sub;/3rdparty/* 3rdparty &amp;&amp;
+rm -rf pcsx2-&pcsx2-sub;*</userinput></screen>
+-->
+
     <para>
       Installer PCSX2 ved å kjøre følgende kommandoer:
     </para>
@@ -111,7 +136,7 @@ ninja</userinput></screen>
 
     <screen role="root"><userinput>ninja install                   &amp;&amp;
 ln -sfv pcsx2-qt /usr/bin/pcsx2 &amp;&amp;
-ln -sfv /usr/share/pcsx2/resources/icons/AppIconLarge.png \
+ln -sfv /usr/share/PCSX2/resources/icons/AppIconLarge.png \
         /usr/share/pixmaps/pcsx2.png</userinput></screen>
 
     <para>
@@ -126,7 +151,7 @@ ln -sfv /usr/share/pcsx2/resources/icons/AppIconLarge.png \
     </para>
 
 <screen role="root"><userinput>wcurl https://github.com/PCSX2/pcsx2_patches/releases/download/latest/patches.zip \
-  -O /usr/share/pcsx2/resources/patches.zip</userinput></screen>
+  -O /usr/share/PCSX2/resources/patches.zip</userinput></screen>
 
     <para>
       Til slutt, opprett en skrivebordsfil slik at PCSX2 kan startes med en 

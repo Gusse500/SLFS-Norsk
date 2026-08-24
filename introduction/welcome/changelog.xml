@@ -40,6 +40,21 @@
     -->
 
     <listitem>
+      <para>22. august 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - PCSX2: 2.6.3 -&gt; f2a8a6.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - RapidYAML: Lagt til for PCSX2.</para>
+        </listitem>
+        <listitem>
+          <para>[zeckma] - GLideN64: 41c7ba -&gt; 24ef0d (nedgradering).</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>21. august 2026</para>
       <itemizedlist>
         <listitem>
