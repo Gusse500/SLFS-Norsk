@@ -264,7 +264,6 @@ mv cef_binary_&obs-cef-version;_linux_x86_64 cef-&obs-cef-version;</userinput></
 cd    build &amp;&amp;
 
 cmake -D CMAKE_INSTALL_PREFIX=/usr             \
-      -D CMAKE_SKIP_INSTALL_RPATH=ON           \
       -D OBS_VERSION_OVERRIDE="&obs-studio-version;"         \
       -D ENABLE_BROWSER=ON                     \
       -D CEF_ROOT_DIR=../cef-&obs-cef-version;              \
@@ -294,8 +293,6 @@ ninja</userinput></screen>
 
   <sect2 role="commands">
     <title>Parameterforklaringer</title>
-
-    &cmake-skip-install-rpath;
 
     <para>
       <parameter>-D OBS_VERSION_OVERRIDE="&obs-studio-version;"</parameter>: Denne 
