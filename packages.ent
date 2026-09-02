@@ -115,7 +115,7 @@ version, so keep this at that. -->
 <!ENTITY dmidecode-version                   "3.7">
 <!ENTITY dunst-version                       "1.13.2">
 <!ENTITY eza-version                         "0.23.5">
-<!ENTITY fd-version                          "10.4.2">
+<!ENTITY fd-version                          "10.5.0">
 <!ENTITY iputils-version                     "20250605">
 <!ENTITY jaq-version                         "3.1.1">
 <!ENTITY libtree-version                     "3.1.1">
