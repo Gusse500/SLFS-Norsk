@@ -159,7 +159,7 @@ version, so keep this at that. -->
 <!ENTITY samurai-minor                       "531ba7">
 <!ENTITY samurai-version                     "531ba700c5fbbfd3d8e3ed91226d0c57134a6fb3">
 <!ENTITY shaderc-version                     "2026.3">
-<!ENTITY strace-version                      "7.1">
+<!ENTITY strace-version                      "7.2">
 <!ENTITY socat-version                       "1.8.1.3">
 <!ENTITY unlambda-version                    "2.0.0">
 <!ENTITY xtrace-minor-version                "526c77">
