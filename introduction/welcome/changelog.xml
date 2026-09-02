@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>1. september 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[tox] - tealdeer: 1.8.1 -&gt; 1.9.0. Fikser
+            <ulink url="&slfs-issues;/892">#892</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>31. august 2026</para>
       <itemizedlist>
         <listitem>
