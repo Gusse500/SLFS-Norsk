@@ -73,8 +73,7 @@
     <bridgehead renderas="sect4">Påkrevde Avhengigheter</bridgehead>
     <para role="required">
       En eksisterende binærfil (<xref linkend="java"/> eller en tidligere bygget 
-      versjon av denne pakken. Instruksjonene nedenfor forutsetter at du 
-      bruker <xref linkend="ojdk-conf"/>),
+      versjon av denne pakken),
       <ulink url="&blfs-svn;/multimedia/alsa-lib.html">alsa-lib</ulink>,
       <ulink url="&blfs-svn;/general/cpio.html">cpio</ulink>,
       <ulink url="&blfs-svn;/pst/cups.html">Cups</ulink>,
@@ -115,16 +114,6 @@
 -->
     <note>
       <para>
-        Før du fortsetter, bør du sørge for at miljøet ditt
-        <envar>PATH</envar> variabelen inneholder plasseringen til Java 
-        kompilatoren som brukes til oppstart av OpenJDK. Dette er det eneste 
-        kravet for miljøet. Moderne Java installasjoner trenger 
-        ikke <envar>JAVA_HOME</envar> og
-        <envar>CLASSPATH</envar> brukes ikke her. Videre anbefaler OpenJDK 
-        utviklere å avinstallere <envar>JAVA_HOME</envar>.
-      </para>
-
-      <para>
         Byggesystemet tillater ikke <option>-j</option> bryteren i
         <envar>MAKEFLAGS</envar>. Se parameterforklaringer for kommandoen 
         <option>--with-jobs=</option>
@@ -136,7 +125,8 @@
       Konfigurer og bygg pakken med følgende kommandoer:
     </para>
 
-<screen><userinput>export MAKEFLAGS_HOLD=$MAKEFLAGS           &amp;&amp;
+<screen><userinput>export PATH=$PATH:/opt/jdk/bin             &amp;&amp;
+export MAKEFLAGS_HOLD=$MAKEFLAGS           &amp;&amp;
 unset JAVA_HOME                            &amp;&amp;
 unset CLASSPATH                            &amp;&amp;
 unset MAKEFLAGS                            &amp;&amp;
@@ -334,47 +324,9 @@ EOF</userinput></screen>
       <title>Konfigurasjonsinformasjon</title>
 
       <para>
-        Normalt sett er JAVA miljøet konfigurert etter installasjon av 
-        binærversjonen, og kan også brukes med den nettopp bygde pakken. 
-        Gjennomgå <xref linkend="ojdk-conf"/> i tilfelle du vil endre 
-        noe.
+        Følg <xref linkend="ojdk-conf"/> for JDK konfigurasjon og
+        gjenkjenning.
       </para>
-
-      <para>
-        For å teste om manualsidene er riktig installert, utsted
-        <command>source /etc/profile</command> og <command>man java</command>
-        for å vise den respektive manualsiden.
-      </para>
-
-    </sect3>
-
-    <sect3>
-      <title>
-        Konfigurere JRE sertifikatutsteders sertifikatfil (cacerts)
-      </title>
-
-      <para>
-        Hvis du har kjørt instruksjonene på <ulink
-        url="&blfs-svn;/postlfs/make.html">make-ca</ulink> siden,
-        trenger du bare å opprette en symbollink på standardplasseringen for
-        <filename>cacerts</filename> filen. Som &root; bruker:
-      </para>
-
-<screen role="root"><userinput>ln -sfv /etc/pki/tls/java/cacerts /opt/jdk/lib/security/cacerts</userinput></screen>
-
-      <para>
-        For å sjekke installasjonen, utsted:
-      </para>
-
-<screen role="root"><userinput>/opt/jdk/bin/keytool -list -cacerts</userinput></screen>
-
-    <para>
-      Ved spørsmålet <computeroutput>Enter keystore password:</computeroutput>,
-      skriv <userinput>changeit</userinput> (standard) eller bare trykk på
-      <quote>Retur</quote> tasten. Hvis <filename>cacerts</filename> filen ble 
-      installert riktig, vil du se en liste over sertifikatene med relatert 
-      informasjon for hvert enkelt. Hvis ikke, må du installere dem på nytt.
-    </para>
 
     </sect3>
 
