@@ -40,23 +40,33 @@
     -->
 
     <listitem>
+      <para>2. september 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - OpenJDK: 17.0.18-ga -&gt; 17.0.20.1-ga (sikkerhet).
+          Fixes <ulink url="&slfs-issues;/682">#682</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>1. september 2026</para>
       <itemizedlist>
         <listitem>
           <para>[tox] - strace: 7.1 -&gt; 7.2. Fikser
-            <ulink url="&slfs-issues;/893">#893</ulink>.</para>
+          <ulink url="&slfs-issues;/893">#893</ulink>.</para>
         </listitem>
         <listitem>
           <para>[tox] - fd: 10.4.2 -&gt; 10.5.0. Fikser
-            <ulink url="&slfs-issues;/895">#895</ulink>.</para>
+          <ulink url="&slfs-issues;/895">#895</ulink>.</para>
         </listitem>
         <listitem>
           <para>[tox] - tmux: 3.7b -&gt; 3.7c. Fikser
-            <ulink url="&slfs-issues;/894">#894</ulink>.</para>
+          <ulink url="&slfs-issues;/894">#894</ulink>.</para>
         </listitem>
         <listitem>
           <para>[tox] - tealdeer: 1.8.1 -&gt; 1.9.0. Fikser
-            <ulink url="&slfs-issues;/892">#892</ulink>.</para>
+          <ulink url="&slfs-issues;/892">#892</ulink>.</para>
         </listitem>
       </itemizedlist>
     </listitem>

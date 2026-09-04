@@ -18,6 +18,11 @@
     "&go-arc;/&go1_22-version;/go-&go1_22-version;.tar.gz">
   <!ENTITY go1_24-download
     "&go-arc;/&go1_24-version;/go-&go1_24-version;.tar.gz">
+
+  <!-- make sure to check this process at every Go minor in case a newer
+  version is required to bootstrap it -renodr -->
+  <!-- EDITORS NOTE: Please review src/cmd/dist/README to determine the
+  minimum version of Go required for bootstrapping.-->
 ]>
 
 <sect1 id="go" xreflabel="Go-&go-version;">
@@ -43,8 +48,6 @@
       instruksjonene nedenfor la deg kompilere flere eldre versjoner av Go, og 
       starte med en som ble skrevet i C, og instruksjonene kompilerer nyere 
       versjoner fra det punktet.
-      <!-- make sure to check this process at every Go minor in case a newer
-      version is required to bootstrap it -renodr -->
     </para>
 
     &long-build-time;
@@ -68,9 +71,6 @@
 
   <sect2 role="installation">
     <title>Bootstrapping Go</title>
-
-    <!-- EDITORS NOTE: Please review src/cmd/dist/README to determine the
-    minimum version of Go required for bootstrapping.-->
 
     <para>
       Hvis du ikke har installert Go ennå, må du bootstrappe den. GCC-Go er 

@@ -130,7 +130,7 @@ chown -R root:root /opt/openjdk-&java-version;-bin</userinput></screen>
 <screen role="root"><userinput>ln -sfn openjdk-&java-version;-bin /opt/jdk</userinput></screen>
 
     <para>
-      Du kan nå fortsette til <xref linkend="ojdk-conf"/>, der instruksjonene 
+      Fortsett med byggingen av <xref linkend="ojdk-conf"/>, der instruksjonene
       forutsetter at lenken ovenfor finnes.
     </para>
 
