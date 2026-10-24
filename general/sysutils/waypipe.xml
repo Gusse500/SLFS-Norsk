@@ -37,6 +37,7 @@
       </listitem>
     </itemizedlist>
 
+<!--
     <bridgehead renderas="sect3">Ytterligere nedlastinger</bridgehead>
     <itemizedlist spacing="compact">
       <listitem>
@@ -46,6 +47,7 @@
         </para>
       </listitem>
     </itemizedlist>
+-->
 
     <bridgehead renderas="sect3">Waypipe Avhengigheter</bridgehead>
 
@@ -108,11 +110,13 @@ ninja</userinput></screen>
       &gt; /usr/share/man/man1/waypipe.1</userinput></screen>
     </note>
 
+<!--
     <para>
       Endre koden for å bruke det nye libavutil API-et i FFmpeg-9.0:
     </para>
 
 <screen><userinput>patch -Np1 -i ../waypipe-v&waypipe-version;-ffmpeg-9.0-1.patch</userinput></screen>
+-->
 
     <para>
       Installer Waypipe ved å kjøre følgende kommandoer:

@@ -40,6 +40,16 @@
     -->
 
     <listitem>
+      <para>18. september 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[Sicarine] - Waypipe: 0.11.1 -&gt; 0.11.2.
+            Fikser <ulink url="&slfs-issues;/904">#904</ulink>.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>3. september 2026</para>
       <itemizedlist>
         <listitem>
