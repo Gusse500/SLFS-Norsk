@@ -136,7 +136,7 @@ cp -v /etc/mango/config.conf ~/.config/mango</userinput></screen>
 
       <seglistitem>
         <seg>
-          mango og mmsg
+          mango, mangonag, og mmsg
         </seg>
         <seg>
           Ingen
@@ -160,6 +160,18 @@ cp -v /etc/mango/config.conf ~/.config/mango</userinput></screen>
           </para>
           <indexterm zone="mango-wm mango-bin">
             <primary sortas="a-mango-bin">mango</primary>
+          </indexterm>
+        </listitem>
+      </varlistentry>
+
+      <varlistentry id="mangonag">
+        <term><command>mangonag</command></term>
+        <listitem>
+          <para>
+            viser en linje for varsler, advarsler og feil
+          </para>
+          <indexterm zone="mango-wm mangonag">
+            <primary sortas="a-mangonag">mangonag</primary>
           </indexterm>
         </listitem>
       </varlistentry>
