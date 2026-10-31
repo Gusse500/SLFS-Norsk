@@ -32,14 +32,14 @@
     at et prosjekt prøver å inkludere en header som dette: <literal>#include
     "xdg-shell.h"</literal>, men kan ikke, er det sannsynligvis generert av et 
     mål som ble hoppet over. Du kan prøve å bruke Ninja for å se om det løser 
-    problemet.</para>
+    problemet.</para><!--
     <para>Kjente pakker med det problemet:</para>
     <itemizedlist>
       <listitem><para><ulink url="&blfs-svn;/general/glycin.html">glycin</ulink>
         (bygger <command>glycin-thumbnailer</command> først, som avhenger av at
         <filename class="libraryfile">libglycin-2</filename> er bygget, som 
         burde bygges på forhånd, men er ikke det)</para></listitem>
-    </itemizedlist></note>
+    </itemizedlist>--></note>
 
     <itemizedlist spacing="compact">
       <listitem>
