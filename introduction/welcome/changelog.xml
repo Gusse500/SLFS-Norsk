@@ -40,6 +40,27 @@
     -->
 
     <listitem>
+      <para>17. November 2026</para>
+      <itemizedlist>
+        <listitem>
+          <para>[zeckma] - OpenJDK: 17.0.20.1-ga -&gt; 17.0.21.1-ga (sikkerhet).
+          Fikser <ulink url="&slfs-issues;/968">#968</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - OBS Studio: 32.2.2 -&gt; 33.0.1. Fikser
+          <ulink url="&slfs-issues;/966">#966</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - Go: 1.27.2 -&gt; 1.27.3 (sikkerhet). Fikser
+          <ulink url="&slfs-issues;/964">#964</ulink>.</para>
+        </listitem>
+        <listitem>
+          <para>[Sicarine] - Waypipe: 0.11.2 -&gt; 0.11.3.</para>
+        </listitem>
+      </itemizedlist>
+    </listitem>
+
+    <listitem>
       <para>23. oktober 2026</para>
       <itemizedlist>
         <listitem>
